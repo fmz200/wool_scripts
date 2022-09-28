@@ -1,0 +1,44 @@
+*{padding:0;margin:0}
+body{background-color:#75c473;padding-bottom:2rem;}
+body>.container{width:800px;background:url(https://img.4rz.cn/2022/09/ddfbf58e0d70d.jpg) no-repeat top;background-size:100%;margin-top: -3rem;}
+.box{background-color:#fff;border-radius:2rem;height:100%;top:15rem;position:relative;padding:2rem;box-shadow:0 .4rem 1rem .1rem rgb(0 0 0 / 20%)}
+.box .form-control{border-radius:1rem}
+.box .form-control:focus{border-color:#75c473;box-shadow:0 0 0 .1rem #75c473}
+.box .alert-success{border-radius:1rem;padding: 0.7rem;}
+.box button{border-radius:1rem;height:calc(3.5rem + 2px);line-height:1.25;}
+.box .btn-success{background-color:#75c473;color:#fff;border-color:#75c473}
+.box #jiaocheng .btn svg{margin-top:-2px}
+.box #jiaocheng .btn3{margin-top:1rem}
+.box #jiaocheng .btn3 a{display:inline-flex;font-size:.8rem;background-color:#75c473;color:#fff;border-radius:.25rem;margin-bottom:.2rem;padding:.5rem .5rem}
+
+.box .uid .form-floating{float:left;}
+.box .uid .form-floating .form-control{float:left;}
+.box .uid .btn-secondary{float:left;border-radius:0 1rem 1rem 0}
+.box .uid #uid{border-radius:1rem;}
+.box .uid .btn-success{float:right;}
+@media screen and (max-width:800px){body>.container{width:100%}
+}
+@media screen and (max-width:500px){
+.box{top:8rem;}
+.box .uid .form-floating{width:70%;}
+.box .uid .btn-secondary{width:30%;}
+.box .uid .btn-success{width:100%;margin-top:1rem;}
+}
+@media screen and (max-width:400px){.box{top:7rem}
+}
+.rj-content{
+    position: relative;
+}
+.rj-mask{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
