@@ -46,44 +46,44 @@
 
 function modifyMain(url) {
 
-    // 推测是否成功通关可能与map_md5有关，因此不碰map_md5，而是修改掉map_seed（修改该值不影响游戏开始，但影响卡牌的分布，卡牌会变得更加密集）
-    // 2022.09.27 实测通关以后朋友圈和排行榜都显示未过关，弃用
-    if (url.indexOf("map_info_ex") > -1){
-        console.log('更改地图开始...');
-        let dataModify = JSON.parse($response.body);
-        console.log('更改前的地图为：' + dataModify.data.map_seed);
-        dataModify.data.map_seed = [0, 0, 0, 0];
-        console.log('更改地图结束...');
-        return JSON.stringify(dataModify);
+  // 推测是否成功通关可能与map_md5有关，因此不碰map_md5，而是修改掉map_seed（修改该值不影响游戏开始，但影响卡牌的分布，卡牌会变得更加密集）
+  // 2022.09.27 实测通关以后朋友圈和排行榜都显示未过关，弃用
+  if (url.indexOf("map_info_ex") > -1) {
+    console.log('更改地图开始...');
+    let dataModify = JSON.parse($response.body);
+    console.log('更改前的地图为：' + dataModify.data.map_seed);
+    dataModify.data.map_seed = [0, 0, 0, 0];
+    console.log('更改地图结束...');
+    return JSON.stringify(dataModify);
 
-    }
+  }
 
-/*  // 修改地图破解通关后名片上不显示，朋友圈不显示 放弃
-    if (url.indexOf("map_info_ex") > -1) {
-        let dataModify = JSON.parse($response.body);
-        console.log('更改地图开始...');
-        if (dataModify.data && dataModify.data.map_md5) {
-            let map_md5_new = dataModify.data.map_md5;
-            console.log('更改前的地图id为：' + map_md5_new);
-            map_md5_new[1] = map_md5_new[0];
-            console.log('更改后的地图id为：' + map_md5_new);
-            dataModify.data.map_md5 = map_md5_new;
-            console.log('更改地图结束...');
-            return JSON.stringify(dataModify);
-        }
-        console.log('没有更改地图🧧🧧');
-    }
+  /*  // 修改地图破解通关后名片上不显示，朋友圈不显示 放弃
+      if (url.indexOf("map_info_ex") > -1) {
+          let dataModify = JSON.parse($response.body);
+          console.log('更改地图开始...');
+          if (dataModify.data && dataModify.data.map_md5) {
+              let map_md5_new = dataModify.data.map_md5;
+              console.log('更改前的地图id为：' + map_md5_new);
+              map_md5_new[1] = map_md5_new[0];
+              console.log('更改后的地图id为：' + map_md5_new);
+              dataModify.data.map_md5 = map_md5_new;
+              console.log('更改地图结束...');
+              return JSON.stringify(dataModify);
+          }
+          console.log('没有更改地图🧧🧧');
+      }
 
-    if (url.indexOf("game_over_ex") > -1) {
-        let dataModify = JSON.parse($request.body);
-        console.log('更改通关接口请求参数开始...');
-        dataModify.rank_time = '1203'; // 通关时间 秒
-        dataModify.rank_state = '1'; // 通关时间 秒
-        console.log('更改后的数据为：' + dataModify);
-        console.log('更改通关接口请求参数结束...');
-        return JSON.stringify(dataModify);
-    }
-*/
+      if (url.indexOf("game_over_ex") > -1) {
+          let dataModify = JSON.parse($request.body);
+          console.log('更改通关接口请求参数开始...');
+          dataModify.rank_time = '1203'; // 通关时间 秒
+          dataModify.rank_state = '1'; // 通关时间 秒
+          console.log('更改后的数据为：' + dataModify);
+          console.log('更改通关接口请求参数结束...');
+          return JSON.stringify(dataModify);
+      }
+  */
 
 }
 
