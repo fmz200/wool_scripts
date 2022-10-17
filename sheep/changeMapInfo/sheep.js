@@ -41,7 +41,7 @@
  * 再把type=0类型按blockTypeData结构中的类型和数量顺序修改,最后结果发送到服务器即可过关
  *
  * 配置QX重写：在[rewrite_remote]下填写👇🏻配置
- * https://raw.githubusercontent.com/fmz200/jd_scripts/master/others/sheep/sheep.conf, tag=养了个羊更改地图@fmz200, update-interval=172800, opt-parser=false, enabled=true
+ * https://raw.githubusercontent.com/fmz200/jd_scripts/master/others/sheep/changeMapInfo/sheep.conf, tag=养了个羊更改地图@fmz200, update-interval=172800, opt-parser=false, enabled=true
  */
 
 function modifyMain(url) {

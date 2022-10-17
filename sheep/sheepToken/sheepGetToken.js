@@ -1,7 +1,7 @@
 /* author@fmz200
    羊了个羊获取token
    重写地址:https://cat-match.easygame2021.com/sheep/v1/game/user_info, 触发类型:request-header
-   进入小程序点击"俺的名片"获取
+   进入小程序即可获取
 
    quanX用户直接添加重写：
    https://raw.githubusercontent.com/fmz200/wool_scripts/main/sheep/sheepToken/sheepGetToken.conf, tag=羊了个羊获取token@fmz200, update-interval=172800, opt-parser=false, enabled=true
