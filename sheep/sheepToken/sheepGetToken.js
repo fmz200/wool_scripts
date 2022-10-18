@@ -12,7 +12,7 @@ const $ = new API("sheepGetToken");
       console.log('仅限iOS设备抓包用!');
     } else {
       if ($request.url.indexOf('user_info') > -1) {
-        const token = `${$request.headers['t']};`
+        const token = `${$request.headers['t']}`;
         $.write(token, '#sheepToken');
         $.notify('羊了个羊获取token获取成功', '', '');
         console.log('token：' + token);
