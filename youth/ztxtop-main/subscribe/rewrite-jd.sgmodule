@@ -1,0 +1,9 @@
+#!name=jd_multi_ck
+#!desc=京东多账号CK
+
+[Script]
+#==== 复制 https://bean.m.jd.com/bean/signIndex.action 或 https://home.m.jd.com/myJd/newhome.action 地址到浏览器打开，登录后可自动获取Cookie，没成功就登录后再次访问下之前复制的地址
+Rewrite: jd_multi_ck = type=http-request,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(signBeanIndex|signBeanGroupStageIndex|trade_config), script-path=https://raw.githubusercontent.com/ztxtop/x/main/NE.cookie.js, timeout=120
+
+[MITM]
+hostname = %APPEND% api.m.jd.com

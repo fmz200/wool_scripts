@@ -1,0 +1,125 @@
+{
+  "id": "fmz200.sub",
+  "name": "fmz200 脚本订阅",
+  "author": "@fmz200",
+  "icon": "https://avatars.githubusercontent.com/u/57740735?s=60&v=4",
+  "repo": "https://github.com/fmz200/wool_scripts",
+  "apps": [
+    {
+      "id": "ddgy_ck",
+      "name": "抖音 抖抖果园cookie",
+      "keys": [
+        "ddgyCk"
+      ],
+      "descs_html": [
+        "功能：签到领水滴、肥料，收取水瓶，每日五次水滴，选择及领取挑战，开宝箱，浇水，三餐礼包，戳鸭子。（浏览任务抓不到包，暂时做不了）",
+        "进入小程序浇水后抓一个Cookie"
+      ],
+      "settings": [
+        {
+          "id": "ddgyCk",
+          "name": "抖抖果园cookie",
+          "val": "",
+          "type": "text",
+          "desc": "多个账号用@或者换行分割：ck1@ck2"
+        }
+      ],
+      "author": "@fmz200",
+      "repo": "https://github.com/fmz200/wool_scripts",
+      "script": "https://raw.githubusercontent.com/LinYuanovo/scripts/main/dygy.js",
+      "icons": [
+        "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok_1.png",
+        "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok_1.png"
+      ]
+    },
+    {
+      "id": "ddgyck",
+      "name": "拼多多果园token",
+      "keys": [
+        "ddgyck"
+      ],
+      "descs_html": [
+        "小程序或APP 进果园一圈（批量浇水），在请求头中搜索AccessToken"
+      ],
+      "settings": [
+        {
+          "id": "ddgyck",
+          "name": "拼多多果园token",
+          "val": "",
+          "type": "text",
+          "desc": "多个账号用@分割：tk1@tk2"
+        }
+      ],
+      "author": "@fmz200",
+      "repo": "https://github.com/fmz200/wool_scripts",
+      "script": "https://raw.githubusercontent.com/fmz200/docker_scripts/main/pinduoduo/pdd_guoyuan.js",
+      "icons": [
+        "https://raw.githubusercontent.com/fmz200/icons/master/apps/icons144/pinduoduo.png",
+        "https://raw.githubusercontent.com/fmz200/icons/master/apps/icons144/pinduoduo.png"
+      ]
+    },
+    {
+      "id": "xmSports",
+      "name": "小米运动",
+      "keys": [
+        "xmSportsToken",
+        "xmMinStep",
+        "xmMaxStep"
+      ],
+      "settings": [
+        {
+          "id": "xmSportsToken",
+          "name": "小米运动Token",
+          "val": "",
+          "type": "text",
+          "desc": "小米运动登录时获取的token"
+        },
+        {
+          "id": "xmMinStep",
+          "name": "最小运动步数",
+          "val": "19000",
+          "type": "text",
+          "desc": "需要修改最小的运动步数的数字,例如:19000"
+        },
+        {
+          "id": "xmMaxStep",
+          "name": "最大运动步数",
+          "val": "25000",
+          "type": "text",
+          "desc": "需要修改最小的运动步数的数字,例如:25000"
+        }
+      ],
+      "author": "@lxk0301",
+      "repo": "https://github.com/fmz200/wool_scripts/tree/master/",
+      "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/xiaomiyundong/xmSports.js",
+      "icons": [
+        "https://raw.githubusercontent.com/58xinian/icon/master/xmyd_mini.png",
+        "https://raw.githubusercontent.com/58xinian/icon/master/xmyd.png"
+      ]
+    },
+    {
+      "id": "sheepToken",
+      "name": "养了个羊token",
+      "keys": [
+        "sheepToken"
+      ],
+      "settings": [
+        {
+          "id": "sheepToken",
+          "name": "养了个羊token",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 12,
+          "desc": "进入小程序时获取的token"
+        }
+      ],
+      "author": "@fmz200",
+      "repo": "https://github.com/fmz200/wool_scripts/tree/master/",
+      "icons": [
+        "https://raw.githubusercontent.com/fmz200/icons/master/apps/px108/sheep.png",
+        "https://raw.githubusercontent.com/fmz200/icons/master/apps/px108/sheep.png"
+      ]
+    }
+  ]
+}

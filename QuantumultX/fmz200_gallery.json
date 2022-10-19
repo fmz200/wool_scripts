@@ -1,0 +1,13 @@
+{
+ "name": "fmz200 task",
+ "description": "https://github.com/fmz200/wool_scripts",
+ "task": [
+    "30 1,8,12,17 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/kuaishou/ks_fruit.js, tag=快手果园, img-url=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/task/kuaishou.png, enabled=true",
+    "30 1,7,12,18,22 * * * https://raw.githubusercontent.com/fmz200/docker_scripts/main/pinduoduo/pdd_guoyuan.js, tag=拼多多果园, img-url=https://raw.githubusercontent.com/fmz200/icons/master/apps/icons144/pinduoduo.png, enabled=true",
+    "15 8,10,12,18,20 * * * https://raw.githubusercontent.com/LinYuanovo/scripts/main/dygy.js, tag=抖音果园, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok_1.png, enabled=true",
+    "15 17 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/backUp/xmSports.js, tag=小米运动, img-url=https://raw.githubusercontent.com/58xinian/icon/master/xmyd.png, enabled=true",
+    "8/30 * 1-6 * * * https://raw.githubusercontent.com/fmz200/jd_scripts/master/scripts/youth/youth_read.js, tag=中青阅读, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png, enabled=true",
+    "15/30 * * * * https://raw.githubusercontent.com/fmz200/jd_scripts/master/scripts/youth/youth.js, tag=中青签到、宝箱, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png, enabled=true",
+    "30 6 * * * https://raw.githubusercontent.com/fmz200/jd_scripts/master/scripts/youth/youth_banner.js, tag=中青看看赚, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png, enabled=true"
+  ]
+}

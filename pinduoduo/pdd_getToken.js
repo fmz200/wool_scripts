@@ -1,29 +1,30 @@
-/* author@fmz200
-   羊了个羊获取token
-   重写地址:https://cat-match.easygame2021.com/sheep/v1/game/user_info, 触发类型:request-header
-   进入小程序即可获取
-
-   quanX用户直接添加重写：
-   https://raw.githubusercontent.com/fmz200/wool_scripts/main/sheep/sheepToken/sheepGetToken.conf, tag=羊了个羊获取token@fmz200, update-interval=172800, opt-parser=false, enabled=true
+/*
+    拼多多果园token
+    重写地址:ug-fission.kuaishou.com/rest/n/darwin/orchard/water/watering, 触发类型:request-header
+    https://api.pinduoduo.com/api/rainbow/message/sync
+    小程序或APP 进果园一圈，在请求头request-header中搜索 AccessToken,多账号@隔开
+    MITM添加:api.pinduoduo.com
+    每次获取会覆盖之前的ck,请先用boxjs备份
 */
-const $ = new API("sheepGetToken");
+const $ = new API("pdd_getToken");
 !(async () => {
-    if ($.env.isNode) {
-      console.log('仅限iOS设备抓包用!');
-    } else {
-      if ($request.url.indexOf('user_info') > -1) {
-        const token = `${$request.headers['t']}`;
-        $.write(token, '#sheepToken');
-        $.notify('羊了个羊获取token获取成功', '', '');
-        console.log('token：' + token);
-      }
+        if ($.env.isNode) {
+            console.log('仅限iOS设备抓包用!');
+        } else {
+            if ($request.url.indexOf('rainbow') > -1) {
+                const token = `${$request.headers['AccessToken']};`
+                // const userId = ck.match(/userId=.+?;/)
+                $.write(token, '#ddgyck');
+                $.notify('拼多多果园token获取成功', '', '');
+                console.log('token：' + token);
+            }
+        }
     }
-  }
 )
 ().catch((e) => {
-  console.log('', `❌失败! 原因: ${e}!`, '');
+    console.log('', `❌失败! 原因: ${e}!`, '');
 }).finally(() => {
-  $.done({});
+    $.done({});
 })
 
 /*********************************** API *************************************/
