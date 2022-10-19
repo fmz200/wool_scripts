@@ -3,22 +3,22 @@
 
 [Script]
 #==== 安卓端看看赚
-Rewrite: youth_start = type=http-request,pattern=^https://kandian\.youth\.cn/v5/nameless/adlickstart\.json,script-path=https://raw.githubusercontent.com/fmz200/jd_scripts/master/scripts/youth/youth_banner.js, requires-body=true, timeout=120
+Rewrite: youth_start = type=http-request,pattern=^https://kandian\.youth\.cn/v5/nameless/adlickstart\.json,script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/youth/youth_banner.js, requires-body=true, timeout=120
 #==== 安卓端文章阅读时长
-Rewrite: youth_stay = type=http-request,pattern=^https://kandian\.youth\.cn/v5/user/stay\.json,script-path=https://raw.githubusercontent.com/fmz200/jd_scripts/master/scripts/youth/youth_banner.js, requires-body=true, timeout=120
+Rewrite: youth_stay = type=http-request,pattern=^https://kandian\.youth\.cn/v5/user/stay\.json,script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/youth/youth_banner.js, requires-body=true, timeout=120
 #==== 安卓端领取任务奖励：抓取的奖励数据在任务未完成时也能领取奖励，为避免黑号，奖励手动领取或设置的脚本执行时间是在任务完成后
-Rewrite: youth_reward = type=http-request,pattern=^https://kandian\.youth\.cn/v5/CommonReward/(toGetReward|toDouble)\.json,script-path=https://raw.githubusercontent.com/fmz200/jd_scripts/master/scripts/youth/youth_banner.js, requires-body=true, timeout=120
+Rewrite: youth_reward = type=http-request,pattern=^https://kandian\.youth\.cn/v5/CommonReward/(toGetReward|toDouble)\.json,script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/youth/youth_banner.js, requires-body=true, timeout=120
 #==== 激励视频
-Rewrite: youth_newtask = type=http-request,pattern=^https://kandian\.youth\.cn/v17/NewTask/getTaskList\.json,script-path=https://raw.githubusercontent.com/fmz200/jd_scripts/master/scripts/youth/youth_banner.js, requires-body=false, timeout=120
+Rewrite: youth_newtask = type=http-request,pattern=^https://kandian\.youth\.cn/v17/NewTask/getTaskList\.json,script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/youth/youth_banner.js, requires-body=false, timeout=120
 
 #==== ios端浏览赚
-Rewrite: youth_llz = type=http-request,pattern=^https://ios\.baertt\.com\/v5\/task/browse_start\.json,script-path=https://raw.githubusercontent.com/fmz200/jd_scripts/master/scripts/youth/youth_banner.js, requires-body=true, timeout=120
+Rewrite: youth_llz = type=http-request,pattern=^https://ios\.baertt\.com\/v5\/task/browse_start\.json,script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/youth/youth_banner.js, requires-body=true, timeout=120
 #==== ios端看看赚
-Rewrite: youth_kkz = type=http-request,pattern=^https://ios\.baertt\.com/v5/Nameless/adlickstart\.json,script-path=https://raw.githubusercontent.com/fmz200/jd_scripts/master/scripts/youth/youth_banner.js, requires-body=true, timeout=120
+Rewrite: youth_kkz = type=http-request,pattern=^https://ios\.baertt\.com/v5/Nameless/adlickstart\.json,script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/youth/youth_banner.js, requires-body=true, timeout=120
 #==== ios端转发、看看赚入口
-Rewrite: youth_entrance = type=http-response,pattern=^https://kd\.youth\.cn/WebApi/NewTaskIos/getTaskList,script-path=https://raw.githubusercontent.com/fmz200/jd_scripts/master/scripts/youth/youth_banner.js, requires-body=true, timeout=120
+Rewrite: youth_entrance = type=http-response,pattern=^https://kd\.youth\.cn/WebApi/NewTaskIos/getTaskList,script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/youth/youth_banner.js, requires-body=true, timeout=120
 
-## cron "40 2 * * *" script-path=https://raw.githubusercontent.com/fmz200/jd_scripts/master/scripts/youth/youth_banner.js,timeout=530, wake-system=1, tag=中青看看赚
+## cron "40 2 * * *" script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/youth/youth_banner.js,timeout=530, wake-system=1, tag=中青看看赚
 
 [MITM]
 hostname = %APPEND% kandian.youth.cn, ios.baertt.com, kd.youth.cn

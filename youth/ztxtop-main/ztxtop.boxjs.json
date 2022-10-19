@@ -9,7 +9,7 @@
       "name": "中青数据",
       "keys": ["youthheader_zq", "read_zq", "readtime_zq", "youthheader_zq2", "read_zq2", "readtime_zq2", "youthheader_zq3", "read_zq3", "readtime_zq3", "youthheader_zq4", "read_zq4", "readtime_zq4"],
       "descs_html": [
-        "多账号脚本地址【<a href=\"https://raw.githubusercontent.com/fmz200/jd_scripts/master/scripts/youth/youth.js\">中青看点极速版</a>】",
+        "多账号脚本地址【<a href=\"https://raw.githubusercontent.com/fmz200/wool_scripts/main/youth/youth.js\">中青看点极速版</a>】",
         "中青多账号ck抓取步骤：",
         "1、boxjs中指定抓包账号，如：2",
         "2、NE工具订阅配置【<a href=\"https://raw.githubusercontent.com/ztxtop/x/main/rewrite-zq.plugin\">中青看点</a>】【<a href=\"https://raw.githubusercontent.com/ztxtop/x/main/rewrite-zqkkz.plugin\">中青看看赚、浏览赚</a>】",
@@ -38,15 +38,15 @@
         "type": "text",
         "desc": "设置中青的执行账号，多个账号用半角逗号分隔，如：1,2,4"
       }],
-      "repo": "https://raw.githubusercontent.com/fmz200/jd_scripts/master/scripts/youth/youth.js",
+      "repo": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/youth/youth.js",
       "icons": ["https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/youth.png", "https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png"],
-      "script": "https://raw.githubusercontent.com/fmz200/jd_scripts/master/scripts/youth/youth.js"
+      "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/youth/youth.js"
     },
     {
       "id": "youthNeRead",
       "name": "中青阅读",
       "descs_html": [
-        "中青阅读脚本地址【<a href=\"https://raw.githubusercontent.com/fmz200/jd_scripts/master/scripts/youth/youth_read.js\">中青阅读</a>】",
+        "中青阅读脚本地址【<a href=\"https://raw.githubusercontent.com/fmz200/wool_scripts/main/youth/youth_read.js\">中青阅读</a>】",
         "注意：因此脚本使用的阅读数据存储位置与songyangzz大佬的不同，所以需搭配【<a href=\"https://raw.githubusercontent.com/ztxtop/x/main/rewrite-zqread.plugin\">阅读数据抓包订阅</a>】抓取的阅读数据使用",
         "⚠️：QX阅读数据可通过【<a href=\"https://raw.githubusercontent.com/ztxtop/x/main/zqGaReadData.js\">Http Backend脚本</a>】的方式导出：配置好后浏览器中访问即可获取数据"
       ],
@@ -104,12 +104,12 @@
         "type": "number",
         "desc": "账号4阅读数据总行数"
       }],
-      "repo": "https://raw.githubusercontent.com/fmz200/jd_scripts/master/scripts/youth/youth_read.js",
+      "repo": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/youth/youth_read.js",
       "icons": ["https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/youth.png", "https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png"],
-      "script": "https://raw.githubusercontent.com/fmz200/jd_scripts/master/scripts/youth/youth.js",
+      "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/youth/youth.js",
       "scripts": [{
         "name": "自动阅读",
-        "script": "https://raw.githubusercontent.com/fmz200/jd_scripts/master/scripts/youth/youth_read.js"
+        "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/youth/youth_read.js"
       }]
     },
     {
@@ -135,9 +135,9 @@
           }
         ]
       }],
-      "repo": "https://raw.githubusercontent.com/fmz200/jd_scripts/master/scripts/youth/youth_banner.js",
+      "repo": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/youth/youth_banner.js",
       "icons": ["https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/youth.png", "https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png"],
-      "script": "https://raw.githubusercontent.com/fmz200/jd_scripts/master/scripts/youth/youth_banner.js"
+      "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/youth/youth_banner.js"
     },
     {
       "id": "kuaishou",
