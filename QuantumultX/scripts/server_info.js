@@ -43,6 +43,7 @@ function json2info(data) {
   message += "</br><b><font  color=>城市</font> : </b><font  color=>" + data.country + "</font></br>";
   message += "------------------------------" + "</br>"
   message += "<font color=#6959CD>" + "<b>节点</b> ➟ " + $environment.params + "</font>";
-  message += `<p style="text-align: center; font-family: -apple-system; font-size: large; font-weight: lighter">` + message + `</p>`;
+  message = `<p style="text-align: center; font-family: -apple-system; font-size: large; font-weight: lighter">` + message + `</p>`;
+  console.log("\n" + message);
 }
 
