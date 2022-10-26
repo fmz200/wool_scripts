@@ -9,7 +9,7 @@
  *  使用：配置好以后长按节点执行脚本，如果节点类型是ISP，则是住宅IP
  *
  **/
-
+let message = "";
 const url = "https://api.ip.sb/geoip";
 const opts = {
   policy: $environment.params
@@ -48,7 +48,7 @@ function func(ip) {
     body: ``,
     timeout: 4000
   };
-  let message = "";
+
 
   $task.fetch(myRequest).then(response => {
     console.log(response.statusCode + "\n\n" + response.body);
