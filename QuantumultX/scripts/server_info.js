@@ -65,13 +65,13 @@ function json2info(data) {
   data = JSON.parse(data);
   message = "------------------------------";
   // 组装每一行内容
-  message += "</br><b>IP : </b>" + data.query + "</br>";
-  message += "</br><b>ISP : </b>" + data.isp + "</br>";
-  message += "</br><b>位置 : </b>" + data.country + " " + data.regionName + "</br>";
-  message += "</br><b>经纬度 : </b>" + data.lon + " / " + data.lat + "</br>";
-  message += "</br><b>时区 : </b>" + data.timezone + "</br>";
-  message += "</br><b>蜂窝网络连接 : </b>" + data.mobile ? "是" : "否" + "</br>";
-  message += "</br><b>是否住宅IP : </b>" + data.hosting ? "否" : "是" + "</br>";
+  message += "</br><b><font  color=>IP </font>: </b><font  color=>" + data.query + "</font></br>";
+  message += "</br><b><font  color=>ISP </font>: </b><font  color=>" + data.isp + "</font></br>";
+  message += "</br><b><font  color=>位置 </font>: </b><font  color=>" + data.country + " " + data.regionName + "</font></br>";
+  message += "</br><b><font  color=>经纬度 </font>: </b><font  color=>" + data.lon + " / " + data.lat + "</font></br>";
+  message += "</br><b><font  color=>时区 </font>: </b><font  color=>" + data.timezone + "</font></br>";
+  message += "</br><b><font  color=>蜂窝网络连接 </font>: </b><font  color=>" + data.mobile ? "是" : "否" + "</font></br>";
+  message += "</br><b><font  color=>是否住宅IP </font>: </b><font  color=>" + data.hosting ? "否" : "是" + "</font></br>";
   message += "------------------------------" + "</br>"
   message += "<font color=#6959CD><b>节点</b> ➟ " + $environment.params + "</font>";
   message = `<p style="text-align: center; font-family: -apple-system; font-size: large; font-weight: lighter">` + message + `</p>`;
