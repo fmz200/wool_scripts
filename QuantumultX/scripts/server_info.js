@@ -12,8 +12,21 @@
 
 // const url = "https://api.ip.sb/geoip";
 const url = `http://ip-api.com/json/${$environment.params}?fields=status,message,country,countryCode,region,regionName,city,zip,lat,lon,timezone,isp,org,as,asname,reverse,mobile,proxy,hosting,query&lang=zh-CN`;
+console.log("url：" + url);
+const headers = {
+  'Accept-Encoding': `gzip, deflate`,
+  'Accept': `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`,
+  'Connection': `keep-alive`,
+  'Host': `ip-api.com`,
+  'User-Agent': `Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15`,
+  'Upgrade-Insecure-Requests': `1`,
+  'Accept-Language': `zh-CN,zh-Hans;q=0.9`
+};
 const myRequest = {
   url: url,
+  method: `GET`,
+  headers: headers,
+  body: ``,
   timeout: 4000
 };
 let message = "";
