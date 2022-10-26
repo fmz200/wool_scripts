@@ -63,6 +63,8 @@ function func(ip) {
 
 function json2info(data) {
   data = JSON.parse(data);
+  const mobile = data.mobile ? "是" : "否";
+  const hosting = data.hosting ? "否" : "是";
   message = "------------------------------";
   // 组装每一行内容
   message += "</br><b><font  color=>IP </font>: </b><font  color=>" + data.query + "</font></br>";
@@ -70,8 +72,8 @@ function json2info(data) {
   message += "</br><b><font  color=>位置 </font>: </b><font  color=>" + data.country + " " + data.regionName + "</font></br>";
   message += "</br><b><font  color=>经纬度 </font>: </b><font  color=>" + data.lon + " / " + data.lat + "</font></br>";
   message += "</br><b><font  color=>时区 </font>: </b><font  color=>" + data.timezone + "</font></br>";
-  message += "</br><b><font  color=>蜂窝网络连接 </font>: </b><font  color=>" + data.mobile ? "是" : "否" + "</font></br>";
-  message += "</br><b><font  color=>是否住宅IP </font>: </b><font  color=>" + data.hosting ? "否" : "是" + "</font></br>";
+  message += "</br><b><font  color=>蜂窝网络连接 </font>: </b><font  color=>" + mobile + "</font></br>";
+  message += "</br><b><font  color=>是否住宅IP </font>: </b><font  color=>" + hosting + "</font></br>";
   message += "------------------------------" + "</br>"
   message += "<font color=#6959CD><b>节点</b> ➟ " + $environment.params + "</font>";
   message = `<p style="text-align: center; font-family: -apple-system; font-size: large; font-weight: lighter">` + message + `</p>`;
