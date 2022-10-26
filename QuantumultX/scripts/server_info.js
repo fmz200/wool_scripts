@@ -25,11 +25,11 @@ let message = "";
 $task.fetch(myRequest).then(response => {
   console.log(response.statusCode + "\n\n" + response.body);
   if (response.body) json2info(response.body);
-  $done({"title": "    🔎 节点详情查询", "htmlMessage": message});
+  $done({"title": "    📍 节点详情查询", "htmlMessage": message});
 }, reason => {
   message = "</br></br>🛑 查询超时";
   message = `<p style="text-align: center; font-family: -apple-system; font-size: large; font-weight: bold;">` + message + `</p>`;
-  $done({"title": "🔎 节点详情查询", "htmlMessage": message});
+  $done({"title": "📍 节点详情查询", "htmlMessage": message});
 })
 
 
@@ -39,7 +39,7 @@ function json2info(data) {
   // 组装每一行内容
   message += "</br><b><font  color=>IP</font> : </b><font  color=>" + data.ip + "</font></br>";
   message += "</br><b><font  color=>ISP</font> : </b><font  color=>" + data.isp + "</font></br>";
-  message += "</br><b><font  color=>地区</font> : </b><font  color=>" + " ⟦" + flags.get(data.country_code.toUpperCase()) + "⟧" + "</font></br>";
+  message += "</br><b><font  color=>地区</font> : </b><font  color=>" + data.country_code + " ⟦" + flags.get(data.country_code.toUpperCase()) + "⟧" + "</font></br>";
   message += "</br><b><font  color=>城市</font> : </b><font  color=>" + data.country + "</font></br>";
   message += "------------------------------" + "</br>"
   message += "<font color=#6959CD>" + "<b>节点</b> ➟ " + $environment.params + "</font>";
