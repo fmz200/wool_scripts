@@ -46,7 +46,7 @@ function func(ip) {
     method: `GET`,
     headers: headers,
     body: ``,
-    timeout: 4000
+    timeout: 10000
   };
 
 
