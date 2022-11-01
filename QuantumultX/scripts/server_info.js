@@ -9,57 +9,26 @@
  *  使用：配置好以后长按节点执行脚本，如果节点类型是ISP，则是住宅IP
  *
  **/
-let message = "";
-const url = "https://api.ip.sb/geoip";
+
+const url = `http://ip-api.com/json?lang=zh-CN&fields=status,message,country,countryCode,region,regionName,city,zip,lat,lon,timezone,isp,org,as,asname,reverse,mobile,proxy,hosting,query`;
 const opts = {
   policy: $environment.params
 };
 const myRequest = {
   url: url,
   opts: opts,
-  timeout: 4000
+  timeout: 8000
 };
-
+let message = "";
 $task.fetch(myRequest).then(response => {
   console.log(response.statusCode + "\n\n" + response.body);
-  if (response.body) func(JSON.parse(response.body).ip);
+  if (response.body) json2info(response.body);
+  $done({"title": "    📍 节点详情查询", "htmlMessage": message});
 }, () => {
   message = "</br></br>🛑 查询超时";
   message = `<p style="text-align: center; font-family: -apple-system; font-size: large; font-weight: bold;">` + message + `</p>`;
-  $done({"title": "🔎 节点详情查询", "htmlMessage": message});
+  $done({"title": "    📍 节点详情查询", "htmlMessage": message});
 })
-
-function func(ip) {
-  const url = `http://ip-api.com/json/${ip}?fields=status,message,country,countryCode,region,regionName,city,zip,lat,lon,timezone,isp,org,as,asname,reverse,mobile,proxy,hosting,query&lang=zh-CN`;
-  console.log("url：" + url);
-  const headers = {
-    'Accept-Encoding': `gzip, deflate`,
-    'Accept': `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`,
-    'Connection': `keep-alive`,
-    'Host': `ip-api.com`,
-    'User-Agent': `Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15`,
-    'Upgrade-Insecure-Requests': `1`,
-    'Accept-Language': `zh-CN,zh-Hans;q=0.9`
-  };
-  const myRequest = {
-    url: url,
-    method: `GET`,
-    headers: headers,
-    body: ``,
-    timeout: 10000
-  };
-
-
-  $task.fetch(myRequest).then(response => {
-    console.log(response.statusCode + "\n\n" + response.body);
-    if (response.body) json2info(response.body);
-    $done({"title": "    📍 节点详情查询", "htmlMessage": message});
-  }, () => {
-    message = "</br></br>🛑 查询超时";
-    message = `<p style="text-align: center; font-family: -apple-system; font-size: large; font-weight: bold;">` + message + `</p>`;
-    $done({"title": "📍 节点详情查询", "htmlMessage": message});
-  })
-}
 
 function json2info(data) {
   data = JSON.parse(data);
@@ -67,13 +36,13 @@ function json2info(data) {
   const hosting = data.hosting ? "否" : "是";
   message = "------------------------------";
   // 组装每一行内容
-  message += "</br><b><font  color=>IP </font>: </b><font  color=>" + data.query + "</font></br>";
-  message += "</br><b><font  color=>ISP </font>: </b><font  color=>" + data.isp + "</font></br>";
-  message += "</br><b><font  color=>位置 </font>: </b><font  color=>" + data.country + " " + data.regionName + "</font></br>";
-  message += "</br><b><font  color=>经纬度 </font>: </b><font  color=>" + data.lon + " / " + data.lat + "</font></br>";
-  message += "</br><b><font  color=>时区 </font>: </b><font  color=>" + data.timezone + "</font></br>";
-  message += "</br><b><font  color=>蜂窝网络连接 </font>: </b><font  color=>" + mobile + "</font></br>";
-  message += "</br><b><font  color=>是否住宅IP </font>: </b><font  color=>" + hosting + "</font></br>";
+  message += "</br><b>IP : </b>" + data.query + "</br>";
+  message += "</br><b>ISP : </b>" + data.isp + "</br>";
+  message += "</br><b>位置 : </b>" + data.country + " , " + data.regionName + "</br>";
+  message += "</br><b>经纬度 : </b>" + data.lon + " / " + data.lat + "</br>";
+  message += "</br><b>时区 : </b>" + data.timezone + "</br>";
+  // message += "</br><b>移动蜂窝网络 : </b>" + mobile + "</br>";
+  message += "</br><b>住宅IP : </b>" + hosting + "</br>";
   message += "------------------------------" + "</br>"
   message += "<font color=#6959CD><b>节点</b> ➟ " + $environment.params + "</font>";
   message = `<p style="text-align: center; font-family: -apple-system; font-size: large; font-weight: lighter">` + message + `</p>`;
