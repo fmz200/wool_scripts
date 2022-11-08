@@ -1,6 +1,6 @@
 # > /*  APP开屏广告拦截，APP启动广告拦截！
 # > 某些APP要清除缓存或者重新安装APP，拦截广告才会生效！  
-# > 更新时间  2022.11.05
+# > 更新时间  2022.11.08  18:55
 # > */  
 
 # > 光大银行阳光惠生活
@@ -9692,4 +9692,6 @@ HOST-SUFFIX,gzads.com, reject
 HOST-SUFFIX,gz-data.com, reject
 # > GrowingIO
 HOST-SUFFIX,giocdn.com, reject
+# > 深圳通微信小程序
+HOST-SUFFIX,wxsnsdythumb.wxs.qq.com, reject
 
