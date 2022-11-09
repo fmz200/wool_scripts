@@ -101,7 +101,8 @@
       "id": "sheepToken",
       "name": "养了个羊token",
       "keys": [
-        "sheepToken"
+        "sheepToken_wx",
+        "sheepToken_dy"
       ],
       "settings": [
         {
