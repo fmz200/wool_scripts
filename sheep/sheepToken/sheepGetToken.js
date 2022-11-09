@@ -26,9 +26,9 @@ const $ = new API("sheepGetToken");
           $.write(token, '#sheepToken_wx');
         }
         if (token !== '' && token != null) {
-          $.notify(`羊了个羊获取${source}token获取成功💕💕`, '', '');
+          $.notify(`成功💕💕羊了个羊获取${source}token获取`, '', '');
         } else {
-          $.notify(`羊了个羊获取${source}token获取失败😅😅`, '', '');
+          $.notify(`失败😅😅羊了个羊获取${source}token获取`, '', '');
         }
         console.log('token：' + token);
       }
