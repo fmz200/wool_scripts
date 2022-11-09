@@ -105,8 +105,17 @@
       ],
       "settings": [
         {
-          "id": "sheepToken",
-          "name": "养了个羊token",
+          "id": "sheepToken_wx",
+          "name": "(微信)养了个羊token",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 12,
+          "desc": "进入小程序时获取的token"
+        },
+        {
+          "id": "sheepToken_dy",
+          "name": "(抖音)养了个羊token",
           "val": "",
           "type": "textarea",
           "autoGrow": false,

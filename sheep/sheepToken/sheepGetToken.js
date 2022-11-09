@@ -1,5 +1,5 @@
 /* author@fmz200
-   羊了个羊获取token
+   羊了个羊获取token，支持 微信和抖音小程序
    重写地址:https://cat-match.easygame2021.com/sheep/v1/game/user_info, 触发类型:request-header
    进入小程序即可获取
 
@@ -12,9 +12,24 @@ const $ = new API("sheepGetToken");
       console.log('仅限iOS设备抓包用!');
     } else {
       if ($request.url.indexOf('user_info') > -1) {
-        const token = `${$request.headers['t']}`;
-        $.write(token, '#sheepToken');
-        $.notify('羊了个羊获取token获取成功', '', '');
+        const referer = `${$request.headers['Referer']}`;
+        const source = referer.indexOf("toutiao") > 1 ? "抖音小程序" : "微信小程序";
+        console.log('当前来源：' + source);
+        let token;
+        if (referer.indexOf("toutiao") > 1) {
+          // 抖音获取token
+          token = getQueryString("t");
+          $.write(token, '#sheepToken_dy');
+        } else {
+          // 微信获取token
+          token = `${$request.headers['t']}`;
+          $.write(token, '#sheepToken_wx');
+        }
+        if (token !== '' && token != null) {
+          $.notify(`羊了个羊获取${source}token获取成功💕💕`, '', '');
+        } else {
+          $.notify(`羊了个羊获取${source}token获取失败😅😅`, '', '');
+        }
         console.log('token：' + token);
       }
     }
@@ -25,6 +40,15 @@ const $ = new API("sheepGetToken");
 }).finally(() => {
   $.done({});
 })
+
+function getQueryString(name) {
+  let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+  let r = window.location.search.substr(1).match(reg);
+  if (r != null) {
+    return decodeURIComponent(r[2]);
+  }
+  return null;
+}
 
 /*********************************** API *************************************/
 function ENV(){const isQX=typeof $task!=="undefined";const isLoon=typeof $loon!=="undefined";const isSurge=typeof $httpClient!=="undefined"&&!isLoon;const isJSBox=typeof require=="function"&&typeof $jsbox!="undefined";const isNode=typeof require=="function"&&!isJSBox;const isRequest=typeof $request!=="undefined";const isScriptable=typeof importModule!=="undefined";return{isQX,isLoon,isSurge,isNode,isJSBox,isRequest,isScriptable}}
