@@ -18,7 +18,7 @@ const $ = new API("sheepGetToken");
         let token;
         if (referer.indexOf("toutiao") > 1) {
           // 抖音获取token
-          token = getQueryString("t");
+          token = getQueryString($request.url, "t");
           $.write(token, '#sheepToken_dy');
         } else {
           // 微信获取token
@@ -41,9 +41,9 @@ const $ = new API("sheepGetToken");
   $.done({});
 })
 
-function getQueryString(name) {
+function getQueryString(url, name) {
   let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-  let r = window.location.search.substr(1).match(reg);
+  let r = url.substring(1).match(reg);
   if (r != null) {
     return decodeURIComponent(r[2]);
   }
