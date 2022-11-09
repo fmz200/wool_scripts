@@ -42,10 +42,11 @@ const $ = new API("sheepGetToken");
 })
 
 function getQueryString(url, name) {
-  let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-  let r = url.substring(url.indexOf("?") + 1).match(reg);
-  if (r != null) {
-    return decodeURIComponent(r[2]);
+  const vars = url.substring(url.indexOf('?') + 1).split("&");
+  for (let item of vars) {
+    if (item.split("=")[0] == name) {
+      return item.split("=")[1];
+    }
   }
   return null;
 }
