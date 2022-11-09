@@ -43,7 +43,7 @@ const $ = new API("sheepGetToken");
 
 function getQueryString(url, name) {
   let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-  let r = url.substring(1).match(reg);
+  let r = url.substring(url.indexOf("?") + 1).match(reg);
   if (r != null) {
     return decodeURIComponent(r[2]);
   }
