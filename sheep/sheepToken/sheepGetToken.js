@@ -13,7 +13,7 @@ const $ = new API("sheepGetToken");
     } else {
       if ($request.url.indexOf('user_info') > -1) {
         const referer = `${$request.headers['Referer']}`;
-        const source = referer.indexOf("toutiao") > 1 ? "抖音小程序" : "微信小程序";
+        const source = referer.indexOf("toutiao") > 1 ? "抖音" : "微信";
         console.log('当前来源：' + source);
         let token;
         if (referer.indexOf("toutiao") > 1) {
@@ -26,9 +26,9 @@ const $ = new API("sheepGetToken");
           $.write(token, '#sheepToken_wx');
         }
         if (token !== '' && token != null) {
-          $.notify(`成功💕💕羊了个羊获取${source}token获取`, '', '');
+          $.notify(`成功💕💕羊了个羊获取${source}token`, '', token);
         } else {
-          $.notify(`失败😅😅羊了个羊获取${source}token获取`, '', '');
+          $.notify(`失败😅😅羊了个羊获取${source}token`, '', token);
         }
         console.log('token：' + token);
       }
