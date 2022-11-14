@@ -448,21 +448,21 @@ http:\/\/analytics\.163\.com\/ntes url reject
 # > 哔哩哔哩屏蔽首页右上活动[卸载重装]
 ^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity url reject-dict
 # > 哔哩哔哩启动时开启直连模式[自行启用]
-;^https?:\/\/app\.bilibili\.com\/x\/resource\/domain url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Script/bilibili_startup_direct.js
+;^https?:\/\/app\.bilibili\.com\/x\/resource\/domain url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/bilibili_startup_direct.js
 # > 哔哩哔哩繁体CC字幕转中文简体[自行启用]
-;^https?:\/\/i.\.hdslb\.com\/bfs\/subtitle\/.+\.json$ url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Script/bilibili_cc.js
+;^https?:\/\/i.\.hdslb\.com\/bfs\/subtitle\/.+\.json$ url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/bilibili_cc.js
 # > 哔哩哔哩观影页面去广告
-^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/cinema\/tab\? url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Script/bilibili_json.js
+^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/cinema\/tab\? url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/bilibili_json.js
 # > 哔哩哔哩应用开屏去广告
 ^https://app.bilibili.com/x/v2/splash/show url reject-dict
 # > 哔哩哔哩应用开屏广告预加载
-^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Script/bilibili_json.js
+^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/bilibili_json.js
 # > 哔哩哔哩去除统一设置的皮肤
-^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\? url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Script/bilibili_json.js
+^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\? url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/bilibili_json.js
 # > 哔哩哔哩1080P高码率+4K画质(番剧和影视除外)
-^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\? url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Script/bilibili_json.js
+^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\? url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/bilibili_json.js
 # > 哔哩哔哩热搜发现
-^https://app.bilibili.com/x/v2/search/square url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Script/bilibili_json.js
+^https://app.bilibili.com/x/v2/search/square url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/bilibili_json.js
 # > 哔哩哔哩Defaultword
 ^https://app.bilibili.com/x/v2/search/defaultwords url reject-dict
 # > 哔哩哔哩Material_Ad
@@ -474,15 +474,15 @@ http:\/\/analytics\.163\.com\/ntes url reject
 # > 哔哩哔哩漫画去广告
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash) url reject-dict
 # > 哔哩哔哩推荐去广告
-^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Script/bilibili_json.js
+^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/bilibili_json.js
 # > 哔哩哔哩追番去广告
-^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/bangumi url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Script/bilibili_json.js
+^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/bangumi url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/bilibili_json.js
 # > 哔哩哔哩直播去广告
-^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Script/bilibili_json.js
+^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/bilibili_json.js
 # > 哔哩哔哩标签页处理
-^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Script/bilibili_json.js
+^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/bilibili_json.js
 # > 哔哩哔哩我的页面处理
-^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Script/bilibili_json.js
+^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/bilibili_json.js
 # > 哔哩哔哩Proto去广告
 ^https:\/\/app\.bilibili\.com\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll)$ url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/bilibili-proto.js
 # > 快手
@@ -597,25 +597,25 @@ https?:\/\/t7z\.cupid\.iqiyi\.com\/show url reject
 ^https?:\/\/video\.dispatch\.tc\.qq\.com\/\w+\.p20\d\.1\.mp4 url reject
 # > 人人视频
 # > RRTV_level_info
-^https?:\/\/api\.rr\.tv\/\w{3}\/level\/info url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Script/rrtv_json.js
+^https?:\/\/api\.rr\.tv\/\w{3}\/level\/info url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/rrtv_json.js
 # > RRTV_屏蔽軟件更新
 ^https?:\/\/api\.rr\.tv\/.*?Version url reject
 # > RRTV_去除首頁廣告
-https://api.rr.tv/v3plus/index/channel\?pageNum=1&position=CHANNEL_INDEX url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Script/rrtv_json.js
+https://api.rr.tv/v3plus/index/channel\?pageNum=1&position=CHANNEL_INDEX url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/rrtv_json.js
 # > RRTV_去除廣場tab
-^https?:\/\/api\.rr\.tv\/app\/config\/h5NativeBar url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Script/rrtv_json.js
+^https?:\/\/api\.rr\.tv\/app\/config\/h5NativeBar url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/rrtv_json.js
 # > RRTV_去除商城廣告
-^https?:\/\/api\.rr\.tv\/v3plus\/index\/channel\?pageNum=1&position=CHANNEL_MY url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Script/rrtv_json.js
+^https?:\/\/api\.rr\.tv\/v3plus\/index\/channel\?pageNum=1&position=CHANNEL_MY url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/rrtv_json.js
 # > RRTV_Ad_List
-^https:\/\/api\.rr\.tv\/user\/privilege\/list url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Script/rrtv_json.js
+^https:\/\/api\.rr\.tv\/user\/privilege\/list url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/rrtv_json.js
 # > RRTV_Ad_All
-^https:\/\/api\.rr\.tv\/ad\/getAll url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Script/rrtv_json.js
+^https:\/\/api\.rr\.tv\/ad\/getAll url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/rrtv_json.js
 # > RRTV_Get_Drama
-^https:\/\/api\.rr\.tv\/drama\/app\/get_combined_drama_detail url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Script/rrtv_json.js
+^https:\/\/api\.rr\.tv\/drama\/app\/get_combined_drama_detail url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/rrtv_json.js
 # > RRTV_Watch_V4
-https://api.rr.tv/watch/v4 url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Script/rrtv_json.js
+https://api.rr.tv/watch/v4 url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/rrtv_json.js
 # > RRTV_User_Info
-https://api.rr.tv/user/profile url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Script/rrtv_json.js
+https://api.rr.tv/user/profile url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/rrtv_json.js
 # > RRTV_屏蔽限時彈窗
 https://api.rr.tv/storage/business/rootName/app/homePage\?dataType=JSON url reject-dict
 # > 微店
@@ -661,11 +661,11 @@ https://api.rr.tv/storage/business/rootName/app/homePage\?dataType=JSON url reje
 # > 喜马拉雅_屏蔽ting_Ad
 ^https?:\/\/.*\.xima.*\.com\/ting\/(loading|feed|home)? url reject
 # > 喜马拉雅_屏蔽首页滚动_Ad
-^https?:\/\/.*\.xima.*\.com\/discovery-feed\/v\d\/mix url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Script/xmly_json.js
+^https?:\/\/.*\.xima.*\.com\/discovery-feed\/v\d\/mix url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/xmly_json.js
 # > 喜马拉雅_屏蔽Tab页滚动_Ad
-^https?:\/\/.*\.xima.*\.com\/discovery-category\/v\d/category url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Script/xmly_json.js
+^https?:\/\/.*\.xima.*\.com\/discovery-category\/v\d/category url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/xmly_json.js
 # > 喜马拉雅_去除我的页面Ad_Tag
-^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Script/xmly_json.js
+^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/xmly_json.js
 # > 小红书
 ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config url script-response-body https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/xiaohongshu/xiaohongshu.ad.js
 ^https:\/\/www\.xiaohongshu\.com\/api\/sns\/v1\/ads\/apple\/record* url reject
@@ -678,7 +678,7 @@ https://api.rr.tv/storage/business/rootName/app/homePage\?dataType=JSON url reje
 ^https?:\/\/ptf\.flyertrip\.com\/common\/cf\/.*.jpg url reject-200
 ^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=advis url reject
 ^https?:\/\/47\.100\.65\.202\/api\/mobile\/index\.php\?version=\d&mobile=yes&module=basicdata&type=forumlist url response-body adv response-body ddgksf2013
-^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=threadpost&.+?&page=1 url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Crack/fly.js
+^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=threadpost&.+?&page=1 url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Crack/fly.js
 # > 京东
 ^https?:\/\/m15\.360buyimg\.com\/mobilecms\/jfs\/t1\/202220\/24\/21575\/134711\/625b821bE5d642d73\/77636692989bd2be\.jpg url reject
 ^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs\/t1\/96405\/17\/28473\/168578\/625cd144E7997a990\/8233ce8a10c4e463\.jpg url reject
@@ -790,15 +790,15 @@ https://api.m.jd.com/client.action\?functionId=lite_advertising url reject
 # > 微博国际版_sdkad
 ^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php  url reject
 # > 微博国际版_推荐tab|热门tab去广告
-^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/statuses\/unread_hot_timeline url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Script/weibo_json.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/statuses\/unread_hot_timeline url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/weibo_json.js
 # > 微博国际版_关注tab去广告 
-^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/statuses\/friends_timeline url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Script/weibo_json.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/statuses\/friends_timeline url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/weibo_json.js
 # > 微博国际版_趋势tab 
-^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/cardlist url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Script/weibo_json.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/cardlist url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/weibo_json.js
 # > 微博国际版_屏蔽search_suggest 
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/page\/get_search_suggest url reject-dict
 # > 微博国际版_趋势tab去广告 
-^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=trends url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Script/weibo_json.js
+^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=trends url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/weibo_json.js
 # > 微博国际版_屏蔽searching_info 
 ^ttps?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*user&a=get_searching_info url reject
 # > 微博国际版_屏蔽search_topic 
@@ -1324,7 +1324,7 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 # > 米游社
 ^https?:\/\/upload-bbs\.mihoyo\.com\/upload\/202[2-9]{1}\/[0-9]{2}\/[0-9]{2}\/[a-z0-9]{32}_[a-z0-9]{19}\.(jpg|png)$ url reject-200
 # > 酷安
-^https?:\/\/api\.coolapk\.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList) url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Script/coolapk.js
+^https?:\/\/api\.coolapk\.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList) url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/coolapk.js
 ^https?://api-access\.pangolin-sdk-toutiao\.com/api/ad/union/sdk url reject
 ^https?:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch url reject-dict
 # > 大智慧
@@ -1350,10 +1350,10 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 # > 转转（中间一行小图标被误杀了）
 ^https?:\/\/app\.zhuanzhuan\.com\/zzx\/transfer\/getConfigInfo$ url reject
 ^https?:\/\/pic1\.zhuanstatic\.com\/zhuanzh\/[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}\.png\?t=5&qa=90 url reject-200
-^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/statuses\/unread_hot_timeline url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Script/weibo_json.js
-^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/statuses\/friends_timeline url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Script/weibo_json.js
-^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/cardlist url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Script/weibo_json.js
-^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=trends url script-response-body https://codeberg.org/ddgksf2013/Cuttlefish/raw/branch/master/Script/weibo_json.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/statuses\/unread_hot_timeline url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/weibo_json.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/statuses\/friends_timeline url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/weibo_json.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/cardlist url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/weibo_json.js
+^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=trends url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/weibo_json.js
 # > 大众点评
 ^https?:\/\/img\.meituan\.net\/dpmobile\/.*.(gif|jpg) url reject-200
 # > 麦当劳
