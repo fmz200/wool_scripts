@@ -1,9 +1,0 @@
-
-// 京东Cookie抓包订阅
-
-[MITM]
-hostname = api.m.jd.com
-
-[Script]
-# 复制 https://bean.m.jd.com/bean/signIndex.action 或 https://home.m.jd.com/myJd/newhome.action 地址到浏览器打开，登录后可自动获取Cookie，没成功就登录后再次访问下之前复制的地址
-http-request ^https?://api\.m\.jd\.com/client\.action\?functionId=(signBeanIndex|signBeanGroupStageIndex|trade_config) script-path=https://raw.githubusercontent.com/ztxtop/x/main/NE.cookie.js, tag=京东多账号CK
