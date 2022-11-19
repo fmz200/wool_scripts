@@ -1,19 +1,19 @@
 ### 注意 对于版本号在21.0以上的tiktok已失效
 
-###代码	国家	            中文
+### 代码	国家	            中文
 * AF	Afghanistan	    阿富汗
 * AL	Albania	        阿尔巴尼亚
 * DZ	Algeria	        阿尔及利亚
 * AD	Andorra	        安道尔
-AO	Angola	        安哥拉
-AI	Anguilla	    安圭拉
-AG	Antigua and Barbuda	安提瓜和巴布达岛
-AE	Arab Emirates	阿联酋
-AR	Argentina	    阿根廷
-AM	Armenia	        亚美尼亚
-AW	Aruba	        阿鲁巴
-AU	Australia	澳大利亚
-AT	Austria	奥地利
+* AO	Angola	        安哥拉
+* AI	Anguilla	    安圭拉
+* AG	Antigua and Barbuda	安提瓜和巴布达岛
+* AE	Arab Emirates	阿联酋
+* AR	Argentina	    阿根廷
+* AM	Armenia	        亚美尼亚
+* AW	Aruba	        阿鲁巴
+* AU	Australia	澳大利亚
+* AT	Austria	奥地利
 AZ	Azerbaijan	阿塞拜疆
 BS	Bahamas	巴哈马
 BH	Bahrain	巴林
