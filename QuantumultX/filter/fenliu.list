@@ -1,6 +1,6 @@
 # > /*  APP开屏广告拦截，APP启动广告拦截！
 # > 某些APP要清除缓存或者重新安装APP，拦截广告才会生效！  
-# > 更新时间  2022.11.08  18:55
+# > 更新时间  2022.11.21  20:36
 # > */  
 
 # > 光大银行阳光惠生活
@@ -1137,9 +1137,9 @@ HOST-SUFFIX,cm.adcommon.bilibili.com, reject
 HOST-SUFFIX,cm.game.bilibili.com, reject
 HOST-SUFFIX,cm.track.biligame.bilibili.com, reject
 # > 快手
-HOST-SUFFIX,yximgs.com, reject
+# HOST-SUFFIX,yximgs.com, reject
 HOST-SUFFIX,e.kuaishou.com, reject
-HOST,js-ad.a.yximgs.com, reject
+# HOST,js-ad.a.yximgs.com, reject
 HOST-SUFFIX,cm.downloader.commercial.kuaishou.com, reject
 HOST-SUFFIX,cm.ad.gifshow.com, reject
 HOST-SUFFIX,cm.kwad.com, reject
