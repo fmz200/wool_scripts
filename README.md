@@ -2,33 +2,7 @@
 
 不只是 QuantumultX 脚本
 
-- boxjs订阅：
-```
-https://raw.githubusercontent.com/fmz200/wool_scripts/main/boxjs/fmz200.boxjs.json
-```
-- Quan X用户使用task订阅：
-```
-https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/fmz200_gallery.json
-```
-- 获取cookies**合集**，包含**NobyDa，chavyleung**等：
-```
-https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/fmz200_cookies.conf
-```
-
-- 热心网友收集分享的重写，分流，小白配置：
-```
-https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
-```
-```
-https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/fenliu.list
-```
-```
-https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/fenliuxiuzheng.list
-```
-```
-https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/config/lanren.conf        
-```
-- ### **你可以**[点击这里查看详细使用方法](https://github.com/fmz200/wool_scripts/tree/main/QuantumultX/README.md)
+- QuantumultX用户[点击这里](QuantumultX/README.md)获取详细的配置和教程
 
 ## 🌟 觉得不错 欢迎Star
 
