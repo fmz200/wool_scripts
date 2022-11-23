@@ -6,7 +6,7 @@
  * 抓包url：https://api.weibo.cn/2/search/(finder|container_timeline|container_discover)
  *
  * 配置QX重写：在[rewrite_remote]下填写👇🏻配置
- * https://raw.githubusercontent.com/fmz200/wool_scripts/main/weibo/weibo.conf, tag=微博移除发现页广告@fmz200, update-interval=172800, opt-parser=false, enabled=true
+ * https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/weibo.conf, tag=微博移除发现页广告@fmz200, update-interval=172800, opt-parser=false, enabled=true
  */
 
 const url1 = '/search/finder';
