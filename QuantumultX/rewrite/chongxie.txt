@@ -249,19 +249,7 @@ http:\/\/analytics\.163\.com\/ntes url reject
 ^https?:\/\/cdnfile1\.msstatic\.com\/cdnfile\/appad\/ url reject-img
 # > 熊猫直播
 ^https?:\/\/static\.api\.m\.panda\.tv\/index\.php\?method=clientconf\.firstscreen&__version=(play_cnmb|(\d+\.){0,3}\d+)&__plat=ios&__channel=appstore url reject-img
-# > 抖音去广告, 去水印
-#^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/(feed|aweme\/post|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list)\/ url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Aweme.js
-#^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/(feed|aweme\/post|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list)\/ url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Aweme.js
-^https?:\/\/.*\.(snssdk\.com|musical\.ly|amemv\.com|byteoversea\.com|tiktokv\.com)\/(vapp\/inner_ad|log|location)\/ url reject
-^https?:\/\/x?log.*\.(snssdk\.com|musical\.ly|amemv\.com|byteoversea\.com|tiktokv\.com)\/ url reject
-^https?:\/\/.+?\.(musical|snssdk|tiktokv)\.(com|ly)\/(api|motor)\/ad\/ url reject-200
-^https?:\/\/.+\.musical\.ly\/.+stats url reject-img
-^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/aweme\/stats\/ url reject-img
-^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/device\/update\/ url reject-img
-^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/screen\/ad\/ url reject-img
-^https?:\/\/aweme\.snssdk\.com\/service\/2\/app_log url reject-img
-# > 皮皮虾（*.snssdk.com主机名影响抖音）
-^https?://.*\.snssdk\.com/bds/(feed/stream|comment/cell_reply|cell/cell_comment|cell/detail|ward/list|user/favorite|user/cell_coment|user/cell_userfeed|user/publish_list) url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Super.js
+
 # > 百度地图
 ^https:\/\/dss0.bdstatic.com\/-0U0bnSm1A5BphGlnYG\/ url reject-200
 ^https:\/\/dss0\.bdstatic\.com\/.+/tam-ogel\/.+\.(jpg|mp4) url reject
@@ -717,7 +705,7 @@ https://api.m.jd.com/client.action\?functionId=lite_advertising url reject
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimama\.etao\.config\.query\/.+?etao_advertise url reject
 # > 淘票票
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise\/ url reject
-# > 什么值得买去广告
+
 # > 什么值得买好价详情页
 ^https?:\/\/haojia\.m\.smzdm\.com\/detail_modul\/other_modul url reject
 # > 什么值得买好价详情页红包小助手
@@ -740,15 +728,8 @@ https://api.m.jd.com/client.action\?functionId=lite_advertising url reject
 ^https?:\/\/s-api\.smzdm\.com\/sou\/filter\/tags\/hot_tags url script-response-body https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js
 # > 什么值得买值会员权益中心banner广告
 ^https?:\/\/zhiyou\.m\.smzdm\.com\/user\/vip\/ajax_get_banner url script-response-body https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js
-# >> 新浪微博
-^https?:\/\/adimg\.uve\.weibo\.com\/public\/files\/image url reject
-^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(actionad|sdkad)\.php url reject-200
-^https?:\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad\.lua url reject-200
-^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=get_coopen_ads url reject-200
-^https?:\/\/api\.weibo\.cn\/2\/statuses\/extend\?gsid= url reject
-^https?:\/\/simg\.s\.weibo\.com\/.+?_ios\d{2}\.gif url reject-img
-^https?:\/\/storage\.wax\.weibo\.com\/\w+\.(png|jpg|mp4) url reject-img
-# > 删除微博开屏广告
+
+# > 微博开屏广告
 ^https?:\/\/(sdk|wb)app\.uve\.weibo\.com\/(interface\/sdk\/sdkad.php|wbapplua\/wbpullad.lua) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo/weiboLaunch.js
 # > 微博去广告
 ^https?://m?api\.weibo\.c(n|om)/2/(cardlist|searchall|page|statuses/(unread_)?friends(/|_)timeline|groups/timeline|statuses/(unread_hot_timeline|extend|video_mixtimeline)|profile/(me|statuses)|video/(community_tab|remind_info|tiny_stream_video_list)|checkin/show|\!/live/media_homelist|comments/build_comments|container/get_item) url script-response-body https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_main.js
@@ -756,8 +737,7 @@ https://api.m.jd.com/client.action\?functionId=lite_advertising url reject
 ^https://api.weibo.cn/2/!/client/light_skin url script-response-body https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_main.js
 # > 微博非会员设置tab皮肤
 ^https://new.vip.weibo.cn/littleskin/preview url script-response-body https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_main.js
-# > 微博轻享版（原国际版）去广告
-# > 微博国际版_sdkad
+
 # > 微博国际版_推荐tab|热门tab去广告
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/statuses\/unread_hot_timeline url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Script/weibo_json.js
 # > 微博国际版_关注tab去广告 
@@ -959,7 +939,7 @@ ctier=[A-Z] url 302 ctier=A
 ^https?:\/\/res-release\.wuta-cam\.com\/json\/ads_component_cache\.json url reject
 # > 秒拍
 ^https?:\/\/b-api\.ins\.miaopai\.com\/\d\/ad/ url reject
-# >> 有道词典
+# > 有道词典
 ^https?:\/\/oimage([a-z])([0-9])\.ydstatic\.com\/.+adpublish url reject
 ^https?:\/\/oimage\w\d\.ydstatic\.com\/image\?.+?=adpublish url reject-img
 ^https?+:\/\/dsp-impr2\.youdao\.com\/adload url reject-200
@@ -1354,7 +1334,7 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 # > 东方财富
 ^https?:\/\/emdcadvertise\.eastmoney\.com\/infoService\/v2 url reject-200
 
-#> 简讯
+# > 简讯
 ^https?:\/\/api\.tipsoon\.com\/api\/v1\/top\/ad url reject-img
 
 
