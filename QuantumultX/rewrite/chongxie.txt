@@ -3,7 +3,7 @@
 # 重要提示：某些APP要清除缓存或者重新安装APP，拦截广告才会生效！
 # 项目地址：https://github.com/fmz200/wool_scripts
 # 交流群组：https://t.me/quguanggao
-# 更新时间：2022.11.27 19:25
+# 更新时间：2022.11.27 22:54
 ###############################################################
 # > "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # > "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -460,7 +460,7 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do url rejec
 # > 永辉
 ^https?://image\.yonghuivip\.com/image/shensuan/20-img_fp_full_screen-750x1334 url reject
 # > 12306
-^https?:\/\/ad\.12306\.cn\/ url reject
+^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList url script-response-body https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Script/12306.js
 # > 去哪儿
 https://homefront.qunar.com/front/splash/ad url reject
 ^https?:\/\/source\.qunarzz\.com\/site\/images\/wns\/.*.jpg url reject
