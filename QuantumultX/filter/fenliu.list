@@ -120,8 +120,8 @@ HOST-SUFFIX,wa.kuwo.cn, reject
 HOST-SUFFIX,webstat.kuwo.cn, reject
 HOST-SUFFIX,mobilead.kuwo.cn, reject
 HOST-SUFFIX,rich.kuwo.cn, reject
-# > 向日葵
-host-keyword, upload-cdn.orayimg.com, reject
+# > 向日葵 见重写
+
 # > 小利生活
 host-keyword, mpos-pic.helipay.com, reject
 # > 懂车帝
@@ -1174,7 +1174,7 @@ host-suffix, atrace.chelaile.net.cn, reject
 host, logs.chelaile.net.cn, reject
 host, ad.chelaile.net.cn, reject
 # > 铁路12306
-HOST, ad.12306.cn, REJECT
+
 # > 两步路
 HOST-SUFFIX, admobile.top, REJECT
 # > 抖音
