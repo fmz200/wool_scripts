@@ -742,7 +742,7 @@ https://api.m.jd.com/client.action\?functionId=lite_advertising url reject
 ^https?:\/\/zhiyou\.m\.smzdm\.com\/user\/vip\/ajax_get_banner url script-response-body https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js
 
 # > 微博开屏广告
-^https?:\/\/(sdk|wb)app\.uve\.weibo\.com\/(interface\/sdk\/sdkad.php|wbapplua\/wbpullad.lua) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/splashAds.js
+^https?:\/\/(sdk|wb)app\.uve\.weibo\.com\/(interface\/sdk\/sdkad.php|wbapplua\/wbpullad.lua) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
 # > 微博去广告
 ^https?://m?api\.weibo\.c(n|om)/2/(cardlist|searchall|page|statuses/(unread_)?friends(/|_)timeline|groups/timeline|statuses/(unread_hot_timeline|extend|video_mixtimeline)|profile/(me|statuses)|video/(community_tab|remind_info|tiny_stream_video_list)|checkin/show|\!/live/media_homelist|comments/build_comments|container/get_item) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
 # > 微博自定义tab皮肤
@@ -1333,7 +1333,7 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 # > 华宝智投 主机名 api.touker.com
 ^https?:\/\/api\.touker\.com\/v2\/IAdvertisementAPI\.queryStartAdvertisement url reject-200
 # > 小米商城开屏广告
-^https?:\/\/api\.m\.mi\.com\/v1\/app\/start url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/splashAds.js
+^https?:\/\/api\.m\.mi\.com\/v1\/app\/start url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
 
 # > 去除微信公众号商品推广
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/cps_product_info\?action url reject-dict
