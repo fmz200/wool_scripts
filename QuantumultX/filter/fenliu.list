@@ -1091,6 +1091,10 @@ IP6-CIDR,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,REJECT
 # > 中关村
 HOST,apppv.zol.com.cn, reject
 HOST,pvnapp.zol.com.cn, reject
+
+# > 中国联通
+HOST-SUFFIX, m1.ad.10010.com, reject
+
 # > 淘宝
 HOST-SUFFIX,apoll.m.taobao.com, reject
 HOST-SUFFIX,h-adashx.ut.taobao.com, reject
