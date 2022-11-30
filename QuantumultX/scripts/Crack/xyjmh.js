@@ -1,0 +1,5 @@
+/*
+Unlocks by Cuttlefish 公众号：墨鱼手记
+*/
+var body = $response.body.replace(/\u0066\u0061\u006C\u0073\u0065/g, '\u0074\u0072\u0075\u0065').replace(/\u0065\u006E\u0064\u0022\u003A\u0030/g, '\u0065\u006E\u0064\u0022\u003A\u0031\u0039\u0031\u0037\u0030\u0038\u0033\u0036\u0034\u0031\u0030\u0030\u0030');
+$done({ body });
