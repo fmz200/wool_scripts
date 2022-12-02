@@ -110,6 +110,8 @@ hostname = client-api.oray.com, sdk.alibaba.com, bgw.xinyue.qq.com, api.tipsoon.
 ^https?:\/\/m\.citiccardcdn\.citicbank\.com\/citiccard\/mbk\/dkkjv4\/appspace-img\/icon\/202210101342570458370816\.png url reject-200
 ^https?:\/\/m\.citiccardcdn\.citicbank\.com\/citiccard\/mbk\/dkkjv4\/appspace-img\/icon\/202211141532060390988306\.png url reject-200
 ^https?:\/\/m\.citiccardcdn\.citicbank\.com\/citiccard\/mbk\/dkkjv4\/appspace-img\/icon\/202211141014260877279812\.png url reject-200
+^https?:\/\/m\.citiccardcdn\.citicbank\.com\/citiccard\/mbk\/dkkjv4\/appspace-img\/icon\/202212020942030527138796\.png url reject-200
+^https?:\/\/m\.citiccardcdn\.citicbank\.com\/citiccard\/mbk\/dkkjv4\/appspace-img\/icon\/202212020957470314503186\.png url reject-200
 # > 202205\d{18}\.(png|jpg) url reject-200  202205后面18位数字的jpg和png格式的图片都拦截。
 
 # > 发现精彩
