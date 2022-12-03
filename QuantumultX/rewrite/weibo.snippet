@@ -7,6 +7,5 @@ hostname = api.weibo.cn
 # 1、删除发现页顶部热搜模块的广告条目
 # 2、删除发现页的轮播广告图(对比了广告和正常的数据，没有区别，所以直接删掉轮播图模块)
 # 首次进入：finder    刷新：container_timeline
-^https://api.weibo.cn/2/search/(finder|container_timeline|container_discover) url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/weibo/weibo_removeAds.js
 
-# ^https?://m?api\.weibo\.c(n|om)/2/(cardlist|searchall|page|messageflow|statuses/(unread_)?friends(/|_)timeline|groups/timeline|statuses/(unread_hot_timeline|extend|video_mixtimeline|unread_topic_timeline)|profile/(me|statuses)|video/(community_tab|remind_info|tiny_stream_video_list)|checkin/show|\!/live/media_homelist|comments/build_comments|container/get_item|search/(finder|container_timeline|container_discover))
+^https://api.weibo.cn/2/search/(finder|container_timeline|container_discover) url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/weibo/weibo_removeAds.js

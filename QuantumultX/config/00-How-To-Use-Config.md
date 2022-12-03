@@ -1,6 +1,9 @@
 ## QuantumultX 小白配置
 
-### 使用方法：
+### 全局配置文件使用方法：
+
+> 详细的图文配置请[点击这里](../../QuantumultX/How-To-Use.md)
+
   0.本文「拷贝自Orz-3.conf」
 
   1.点击库中的 **lanren.conf** 文件，点击raw获取真实地址，复制地址备用
