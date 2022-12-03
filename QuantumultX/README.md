@@ -1,6 +1,6 @@
 # QuantumultX
 
->**不会用？ 建议先点击这里的教程看一看 [QuanX 小白配置图文教程](https://github.com/fmz200/wool_scripts/tree/main/QuantumultX/How-To-Use.md)**
+>**不会用？ 建议先点击这里的教程看一看 [QuanX 小白配置图文教程](How-To-Use.md)**
 
 - boxjs订阅：
 ```

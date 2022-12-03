@@ -47,7 +47,7 @@ hostname = wcprd.hilton.com.cn, adx-cn.anythinktech.com, client-api.oray.com, sd
 ^https:\/\/mcc.psbc.com:9090\/mcc\/resources\/[0-9]+\.(jpg|png) url reject-200
 # > [0-9]+\.(jpg|png)只拦截纯数字的jpg和png格式图片
 # > 邮储信用卡
-^https?:\/\/d\.psbc\.com:9091\/mcc\/resources\/[0-9]+\.(jpg|png) url reject-200
+^https?:\/\/d\.psbc\.com:9091\/mcc\/resources\/[0-9]+\.(jpg|png|jpeg) url reject-200
 
 # > 买单吧 （一小部分误杀，应该不影响使用，不用频繁更新）
 ^https?:\/\/creditcard\.bankcomm\.com\/tfimg\/public00\/M00\/3.\/..\/trSc.*\.jpg url reject-200
