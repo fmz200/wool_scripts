@@ -18,7 +18,7 @@
 >>3、认真仔细看图片点的是哪里‼️
 
 ## 配置开始
-### 1、前往配置文件仓库复制全局配置文件raw路径备用，俗称`小白配置/懒人配置`，此处以[@本仓库](https://raw.githubusercontent.com/Orz-3/QuantumultX/master/Orz-3.conf)为例。
+### 1、前往配置文件仓库复制全局配置文件raw路径备用，俗称`小白配置/懒人配置`，此处以[@本仓库](https://github.com/fmz200/wool_scripts/tree/main/QuantumultX)为例。
 > **关于配置文件和脚本都在本地/自己手机里的情况，大同小异，我们有时间再说**
 
 #### 1.1 进入本项目的配置文件目录，点击配置文件，如下图，[点击这里直达](https://github.com/fmz200/wool_scripts/tree/main/QuantumultX/config)
