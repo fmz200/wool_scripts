@@ -95,6 +95,7 @@ hostname = wcprd.hilton.com.cn, adx-cn.anythinktech.com, client-api.oray.com, sd
 ^https?:\/\/mlmdacdn\.spdb\.com\.cn\/oss\/product-mm\/app\/default\/.*.(jpg|gif|JPG|jpeg) url reject-200
 ^https?:\/\/mlmdacdn\.spdb\.com\.cn\/oss\/product-mm\/app\/default\/[a-z0-9]{8}-[0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{20}_[0-9]{4}_[0-9]{4}.+.png url reject-200
 ^https?:\/\/mlmdacdn\.spdb\.com\.cn\/oss\/product-mm\/app\/default\/.+1920.+1920\.png url reject-200
+^https?:\/\/mlmdacdn\.spdb\.com\.cn\/oss\/product-mm\/app\/default\/[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-.{45}\.png url reject-200
 
 # > 建行生活
 ^https?:\/\/yunbusiness\.ccb\.com\/clp_service\/txCtrl\?txcode=A3341A00(6|9) url reject-200
