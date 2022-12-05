@@ -25,3 +25,7 @@
 ## 🧚‍♀️ 觉得不错 欢迎Star 🌟
 
 ![Star](https://api.star-history.com/svg?repos=fmz200/wool_scripts&type=Date)
+
+### 🧚‍♀️ 访问量统计
+![Visitor Count](https://profile-counter.glitch.me/fmz200/count.svg)
+
