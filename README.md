@@ -45,6 +45,6 @@
 
 ![Star](https://api.star-history.com/svg?repos=fmz200/wool_scripts&type=Date)
 
-### 🧚‍♀️ 访问量统计
+### 🧚‍♀️ 访问量统计 开始于2022.12.05
 ![Visitor Count](https://profile-counter.glitch.me/fmz200/count.svg)
 
