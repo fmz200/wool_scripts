@@ -1,5 +1,5 @@
 # wool_scripts
-# 致敬开源精神 举报死户口本
+## 致敬开源精神 举报死户口本
 
 ### 不只是 QuantumultX 脚本
 
@@ -18,11 +18,11 @@
     <img src="pic/logo/wool_logo.png" alt="Logo" width="448" height="180">
   </a>
 
-<h3 align="center">wool scripts</h3>
+<h2 align="center">wool scripts</h2>
 </p>
 
 
-- QuantumultX用户[点击这里](QuantumultX/README.md)获取详细的配置和教程
+#### QuantumultX用户[点击这里](QuantumultX/README.md)获取详细的配置和教程
 
 ## 🧚‍♂️ 特别鸣谢
 * [@chavyleung](https://github.com/chavyleung)
