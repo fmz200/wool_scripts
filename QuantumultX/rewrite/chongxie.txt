@@ -469,9 +469,14 @@ https://homefront.qunar.com/front/splash/ad url reject
 ^https?+:\/\/service\.iciba\.com\/popo\/open\/screens\/v\d\?adjson url reject-200
 ^https?+:\/\/\w+?\.kingsoft-office-service\.com\/ad url reject-200
 ^https?:\/\/.+?\.kingsoft-office-service\.com url reject
+
+
+
+
+# >>>>>>>>>>>>>>>>>>>>>> K <<<<<<<<<<<<<<<<<<<<<<< ✅
 # > 快看
-^https?+:\/\/api\.kkmh\.com\/.+?ad(?:vertisement)?+\/ url reject-200
-^https?:\/\/api\.kkmh\.com\/v\d+\/(ad|advertisement)\/ url reject
+^https?:\/\/api\.kkmh\.com\/v\d\/ad\/show url reject-200
+
 # > 盛趣游戏
 ^https?:\/\/daoyu\.sdo\.com\/api\/userCommon\/getAppStartAd url reject
 # > 腾讯游戏社区
@@ -586,60 +591,7 @@ https://api.rr.tv/user/profile url script-response-body https://raw.githubuserco
 https://api.rr.tv/storage/business/rootName/app/homePage\?dataType=JSON url reject-dict
 # > 微店
 ^https?+:\/\/thor\.weidian\.com\/ares\/home\.splash\/ url reject-200
-# > 迅雷
-^https?+:\/\/images\.client\.vip\.xunlei\.com\/.+?\/advert\/ url reject-200
-# > 迅游加速器
-^https?+:\/\/portal-xunyou\.qingcdn\.com\/api\/v\d\/ios\/ads\/ url reject-200
-^https?+:\/\/portal-xunyou\.qingcdn\.com\/api\/v\d\/ios\/configs\/(?>splash_ad|ad_urls) url reject-200
-# > 喜马拉雅
-# > 喜马拉雅_修复轮播Ad失效Bug
-^https?:\/\/.*\.xima.*\.com\/discovery-feed\/focus\/queryF url reject
-# > 喜马拉雅_播放页_Live
-^https?:\/\/.*\.xima.*\.com\/mobile-playpage\/view\/ url reject
-# > 喜马拉雅_MyInfo红点提醒
-^https?:\/\/.*\.xima.*\.com\/chaos-notice-web\/v1\/message\/preview\/list url reject
-# > 喜马拉雅_屏蔽大红包Tips
-^https?:\/\/.*\.xima.*\.com\/social-web\/bottomTabs\/dynamicEntrance\/status url reject
-# > 喜马拉雅_屏蔽gif弹窗Ad
-^https?:\/\/.*\.xmcdn\.com\/\w{8}\/\w{4}-\w{16}\/.+gif$ url reject
-# > 喜马拉雅_屏蔽Aged请求
-^https?:\/\/.*\.xima.*\.com\/(dog-portal\/checkOld|(child-mobile\/child|aged-mobile\/aged)\/mode\/query) url reject
-# > 喜马拉雅_部分Tab弹窗
-^https?:\/\/.*\.xima.*\.com\/discovery-feed\/isShowUserGiftPendant url reject
-# > 喜马拉雅_屏蔽红点提示
-^https?:\/\/.*\.xima.*\.com\/mobile-user\/unread url reject
-# > 喜马拉雅_屏蔽minor请求
-^https?:\/\/.*\.xima.*\.com/mobile-user/minorProtection/pop url reject
-# > 喜马拉雅_屏蔽隐私搜集
-^https?:\/\/.*\.xima.*\.com\/collector\/xl\/v\d url reject
-# > 喜马拉雅_屏蔽版本更新
-^https?:\/\/.*\.xima.*\.com\/butler-portal\/versionCheck url reject
-# > 喜马拉雅_屏蔽开屏广告
-^https?:\/\/(adse\.wsa|adse|adbehavior|xdcs-collector)\.xima.*\.com\/.* url reject
-# > 喜马拉雅_屏蔽位置请求
-^https?:\/\/.*\.xima.*\.com\/mobile\/discovery\/v\d\/location url reject
-# > 喜马拉雅_屏蔽热搜词
-^https?:\/\/.*\.xima.*\.com\/hotWord url reject
-# > 喜马拉雅_屏蔽搜索框定时_Ad
-^https?:\/\/.*\.xima.*\.com\/guideWord url reject
-# > 喜马拉雅_屏蔽实时Ad请求
-^https?:\/\/.*\.xima.*\.com\/api\/v\d\/adRealTime url reject
-# > 喜马拉雅_屏蔽ting_Ad
-^https?:\/\/.*\.xima.*\.com\/ting\/(loading|feed|home)? url reject
-# > 喜马拉雅_屏蔽首页滚动_Ad
-^https?:\/\/.*\.xima.*\.com\/discovery-feed\/v\d\/mix url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xmly_json.js
-# > 喜马拉雅_屏蔽Tab页滚动_Ad
-^https?:\/\/.*\.xima.*\.com\/discovery-category\/v\d/category url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xmly_json.js
-# > 喜马拉雅_去除我的页面Ad_Tag
-^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xmly_json.js
-# > 小红书
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config url script-response-body https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/xiaohongshu/xiaohongshu.ad.js
-^https:\/\/www\.xiaohongshu\.com\/api\/sns\/v1\/ads\/apple\/record* url reject
-^https:\/\/www\.xiaohongshu\.com\/api\/sns\/v1\/tag\/ads_engage* url reject
-^https:\/\/www\.xiaohongshu\.com\/api\/sns\/v1\/ads\/resource* url reject
-^https:\/\/pages\.xiaohongshu\.com\/data\/native\/matrix_switches* url reject
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/hot_list url response-body items":\[.+\] response-body items":[]
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/trending url response-body queries":\[.+\] response-body queries":[]
+
 # > 飞客茶馆
 ^https?:\/\/ptf\.flyertrip\.com\/common\/cf\/.*.jpg url reject-200
 ^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=advis url reject
@@ -1350,7 +1302,66 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 ^https?:\/\/api\.tipsoon\.com\/api\/v1\/top\/ad url reject-img
 
 
-# >>>>>>>>>>>>>>>>>>>>>> X <<<<<<<<<<<<<<<<<<<<<<<
+
+
+# >>>>>>>>>>>>>>>>>>>>>> X <<<<<<<<<<<<<<<<<<<<<<< ✅
+# > 迅雷
+^https?+:\/\/images\.client\.vip\.xunlei\.com\/.+?\/advert\/ url reject-200
+# > 迅游加速器
+^https?+:\/\/portal-xunyou\.qingcdn\.com\/api\/v\d\/ios\/ads\/ url reject-200
+^https?+:\/\/portal-xunyou\.qingcdn\.com\/api\/v\d\/ios\/configs\/(?>splash_ad|ad_urls) url reject-200
+
+# > 喜马拉雅_修复轮播Ad失效Bug
+^https?:\/\/.*\.xima.*\.com\/discovery-feed\/focus\/queryF url reject
+# > 喜马拉雅_播放页_Live
+^https?:\/\/.*\.xima.*\.com\/mobile-playpage\/view\/ url reject
+# > 喜马拉雅_MyInfo红点提醒
+^https?:\/\/.*\.xima.*\.com\/chaos-notice-web\/v1\/message\/preview\/list url reject
+# > 喜马拉雅_屏蔽大红包Tips
+^https?:\/\/.*\.xima.*\.com\/social-web\/bottomTabs\/dynamicEntrance\/status url reject
+# > 喜马拉雅_屏蔽gif弹窗Ad
+^https?:\/\/.*\.xmcdn\.com\/\w{8}\/\w{4}-\w{16}\/.+gif$ url reject
+# > 喜马拉雅_屏蔽Aged请求
+^https?:\/\/.*\.xima.*\.com\/(dog-portal\/checkOld|(child-mobile\/child|aged-mobile\/aged)\/mode\/query) url reject
+# > 喜马拉雅_部分Tab弹窗
+^https?:\/\/.*\.xima.*\.com\/discovery-feed\/isShowUserGiftPendant url reject
+# > 喜马拉雅_屏蔽红点提示
+^https?:\/\/.*\.xima.*\.com\/mobile-user\/unread url reject
+# > 喜马拉雅_屏蔽minor请求
+^https?:\/\/.*\.xima.*\.com/mobile-user/minorProtection/pop url reject
+# > 喜马拉雅_屏蔽隐私搜集
+^https?:\/\/.*\.xima.*\.com\/collector\/xl\/v\d url reject
+# > 喜马拉雅_屏蔽版本更新
+^https?:\/\/.*\.xima.*\.com\/butler-portal\/versionCheck url reject
+# > 喜马拉雅_屏蔽开屏广告
+^https?:\/\/(adse\.wsa|adse|adbehavior|xdcs-collector)\.xima.*\.com\/.* url reject
+# > 喜马拉雅_屏蔽位置请求
+^https?:\/\/.*\.xima.*\.com\/mobile\/discovery\/v\d\/location url reject
+# > 喜马拉雅_屏蔽热搜词
+^https?:\/\/.*\.xima.*\.com\/hotWord url reject
+# > 喜马拉雅_屏蔽搜索框定时_Ad
+^https?:\/\/.*\.xima.*\.com\/guideWord url reject
+# > 喜马拉雅_屏蔽实时Ad请求
+^https?:\/\/.*\.xima.*\.com\/api\/v\d\/adRealTime url reject
+# > 喜马拉雅_屏蔽ting_Ad
+^https?:\/\/.*\.xima.*\.com\/ting\/(loading|feed|home)? url reject
+# > 喜马拉雅_屏蔽首页滚动_Ad
+^https?:\/\/.*\.xima.*\.com\/discovery-feed\/v\d\/mix url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xmly_json.js
+# > 喜马拉雅_屏蔽Tab页滚动_Ad
+^https?:\/\/.*\.xima.*\.com\/discovery-category\/v\d/category url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xmly_json.js
+# > 喜马拉雅_去除我的页面Ad_Tag
+^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xmly_json.js
+
+# > 小红书
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config url script-response-body https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/xiaohongshu/xiaohongshu.ad.js
+^https:\/\/www\.xiaohongshu\.com\/api\/sns\/v1\/ads\/apple\/record* url reject
+^https:\/\/www\.xiaohongshu\.com\/api\/sns\/v1\/tag\/ads_engage* url reject
+^https:\/\/www\.xiaohongshu\.com\/api\/sns\/v1\/ads\/resource* url reject
+^https:\/\/pages\.xiaohongshu\.com\/data\/native\/matrix_switches* url reject
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/hot_list url response-body items":\[.+\] response-body items":[]
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/trending url response-body queries":\[.+\] response-body queries":[]
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/surprisebox\/(open|get_style)\? url reject-array
+
 # 希尔顿荣誉客会
 ^https?:\/\/wcprd\.hilton\.com\.cn\/app-middleware\/graphql\?type=splashAd url reject-200
 
