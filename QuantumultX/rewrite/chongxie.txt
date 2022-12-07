@@ -3,7 +3,7 @@
 # 重要提示：某些APP要清除缓存或者重新安装APP，拦截广告才会生效！
 # 项目地址：https://github.com/fmz200/wool_scripts
 # 交流群组：https://t.me/quguanggao
-# 更新时间：2022.11.27 22:54
+# 更新时间：2022.12.07 15:33
 ###############################################################
 # > "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # > "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -72,7 +72,7 @@ hostname = wcprd.hilton.com.cn, adx-cn.anythinktech.com, client-api.oray.com, sd
 # > 民生银行
 ^https?+:\/\/www\.cmbc\.com\.cn\/m\/image\/loadingpage\/ url reject-200
 ^https:\/\/www\.cmbc\.com\.cn\/m\/image\/banner\/.*.png url reject-200
-# > .*.png url reject-200 所有png类型图片都拦截
+
 # > 浦大喜奔（倒计时还在）(7.2.5以上版本多了一行 点击了解详情)
 ^https?:\/\/image\.spdbccc\.com\.cn\/group\d\/M00\/[A-Z0-9]{2}\/[A-Z0-9]{2}\/[a-zA-Z]{7}-[a-zA-Z]{11}_[a-zA-Z0-9]{10}\.jpg url reject-200
 ^https?:\/\/image\.spdbccc\.com\.cn\/group\d\/M00\/[0-9]{2}\/[0-9]{2}\/[a-zA-Z0-9]{8}-[a-zA-Z0-9]{21}\.jpg url reject-200
@@ -115,13 +115,11 @@ hostname = wcprd.hilton.com.cn, adx-cn.anythinktech.com, client-api.oray.com, sd
 ^https?:\/\/m\.citiccardcdn\.citicbank\.com\/citiccard\/mbk\/dkkjv4\/appspace-img\/icon\/202212020957470314503186\.png url reject-200
 # > 202205\d{18}\.(png|jpg) url reject-200  202205后面18位数字的jpg和png格式的图片都拦截。
 
-# > 发现精彩
-^https?:\/\/static\.95508\.com\/mmg\/images\/ads url reject-200
-
 # > 广发银行
 ^https?:\/\/static\.95508\.com\/icppweb\/images\/modelMaterial\/advertising\/202\d{5}\/.*.(png|jpg) url reject-200
 ^https?:\/\/mps\.95508\.com\/mps\/club\/cardPortals\/adv\/\d{25}\.(png|jpg) url reject-img
-# > \d{25}\.(png|jpg) url reject-img 只拦截25位纯数字命名的png和jpg格式图片
+# > 发现精彩
+^https?:\/\/static\.95508\.com\/mmg\/images\/ads url reject-200
 
 # > 广州农商银行
 ^https?:\/\/mbank\.grcbank\.com\/ydyh\/resources\/startpage\/.*.(jpg|png) url reject-200
