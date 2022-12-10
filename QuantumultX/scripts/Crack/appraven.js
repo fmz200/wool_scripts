@@ -13,7 +13,7 @@
 [rewrite_local]
 
 # ～ appraven（2022-03-22）@ddgksf2013
-^https?:\/\/appraven\.net\/AppRaven\/(app|social|buy) url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/Crack/appraven.js
+^https?:\/\/appraven\.net\/AppRaven\/(app|social|buy) url script-response-body https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Crack/appraven.js
 
 [mitm] 
 hostname=appraven.net

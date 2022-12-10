@@ -8,7 +8,7 @@
 // @WebURL            https://api.lolicon.app/#/setu
 // @Quota             300次/天
 // @Attention         请在本地使用此脚本，便于填写ApiKey
-// @ScriptURL         https://github.com/ddgksf2013/Scripts/raw/master/setu.js
+// @ScriptURL         https://github.com/ddgksf2013/Scripts/raw/main/setu.js
 // ==/UserScript==
 
 let userApikey   = '' //请在 Telegram 内使用 @loliconApiBot 申请

@@ -16,8 +16,8 @@
 [rewrite_local]
 
 # ～ ScannerPro解鎖會員權限（2022-05-03）@ddgksf2013
-^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/(\$RCAnonymousID\%)?(\w)+$ url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/Crack/scannerpro.js
-^https?:\/\/api\.revenuecat\.com\/v\d\/receipts$ url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/Crack/scannerpro.js
+^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/(\$RCAnonymousID\%)?(\w)+$ url script-response-body https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Crack/scannerpro.js
+^https?:\/\/api\.revenuecat\.com\/v\d\/receipts$ url script-response-body https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Crack/scannerpro.js
 
 [mitm] 
 

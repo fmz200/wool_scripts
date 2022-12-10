@@ -15,7 +15,7 @@
 [rewrite_local]
 
 # ～ Shadow解鎖訂閱（2022-05-14）@ddgksf2013
-^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/Crack/basevpnpro.js
+^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Crack/basevpnpro.js
 
 [mitm] 
 

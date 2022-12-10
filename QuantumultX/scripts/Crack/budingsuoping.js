@@ -13,7 +13,7 @@
 [rewrite_local]
 
 # ～ 布丁鎖屏解鎖會員權限（2022-02-21）@ddgksf2013
-https?:\/\/screen-lock\.51wnl-cq\.com\/userApi\/saveUser url script-echo-response https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/Crack/budingsuoping.js
+https?:\/\/screen-lock\.51wnl-cq\.com\/userApi\/saveUser url script-echo-response https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Crack/budingsuoping.js
 
 [mitm] 
 

@@ -15,7 +15,7 @@
 [rewrite_local]
 
 # ～ 百度文库☆解锁VIP文档阅读权限（2022-10-17）@ddgksf2013
-^https:\/\/appwk\.baidu\.com\/naapi\/user\/getinfo url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/Crack/baidulibrary.js
+^https:\/\/appwk\.baidu\.com\/naapi\/user\/getinfo url script-response-body https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Crack/baidulibrary.js
 
 [mitm]
 

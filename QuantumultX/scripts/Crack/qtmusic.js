@@ -17,7 +17,7 @@
 [rewrite_local]
 
 # ～ 趣听音乐☆自动激活APP（2022-10-26）@ddgksf2013
-^https?:\/\/api\.bspapp\.com\/client$ url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/Crack/qtmusic.js
+^https?:\/\/api\.bspapp\.com\/client$ url script-response-body https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Crack/qtmusic.js
 
 [mitm]
 

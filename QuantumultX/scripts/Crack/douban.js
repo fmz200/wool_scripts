@@ -17,10 +17,10 @@ Author:Neurogram,ddgksf2013
 
 [rewrite_local]
 // 茶杯狐、流媒体
-^https://m.douban.com/movie/subject/.+ url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/douban.js
+^https://m.douban.com/movie/subject/.+ url script-response-body https://github.com/ddgksf2013/Scripts/raw/main/douban.js
 
 // Airtable 收藏
-^https://m.douban.com/movie/subject/.+\?seen=\d url script-request-header https://github.com/ddgksf2013/Scripts/raw/master/douban.js
+^https://m.douban.com/movie/subject/.+\?seen=\d url script-request-header https://github.com/ddgksf2013/Scripts/raw/main/douban.js
 
 [mitm]
 hostname = m.douban.com

@@ -13,27 +13,27 @@
 【QuantumultX】 :
 *************************
 [rewrite_local]
-https://openapi.17usoft.net/maskantactivityapi/memberCenterSign\?.+ url script-request-body https://github.com/ddgksf2013/Scripts/raw/master/tclx.js
+https://openapi.17usoft.net/maskantactivityapi/memberCenterSign\?.+ url script-request-body https://github.com/ddgksf2013/Scripts/raw/main/tclx.js
 [task_local]
-15 7,15 * * * https://github.com/ddgksf2013/Scripts/raw/master/tclx.js, tag=TCLX
+15 7,15 * * * https://github.com/ddgksf2013/Scripts/raw/main/tclx.js, tag=TCLX
 *************************
 【Loon】 :
 *************************
 [Script]
-http-request https://openapi.17usoft.net/maskantactivityapi/memberCenterSign\?.+ tag=TCLXCookie, script-path=https://github.com/ddgksf2013/Scripts/raw/master/tclx.js
-cron "15 7,15 * * *" script-path=https://github.com/ddgksf2013/Scripts/raw/master/tclx.js,tag=TCLX
+http-request https://openapi.17usoft.net/maskantactivityapi/memberCenterSign\?.+ tag=TCLXCookie, script-path=https://github.com/ddgksf2013/Scripts/raw/main/tclx.js
+cron "15 7,15 * * *" script-path=https://github.com/ddgksf2013/Scripts/raw/main/tclx.js,tag=TCLX
 *************************
 【Surge】 :
 *************************
 [Script]
-TCLX = type=cron,cronexp="15 7,15 * * *",wake-system=1,timeout=120,script-path=https://github.com/ddgksf2013/Scripts/raw/master/tclx.js
-TCLXCookie = type=http-request,pattern=https://openapi.17usoft.net/maskantactivityapi/memberCenterSign\?.+,script-path=https://github.com/ddgksf2013/Scripts/raw/master/tclx.js
+TCLX = type=cron,cronexp="15 7,15 * * *",wake-system=1,timeout=120,script-path=https://github.com/ddgksf2013/Scripts/raw/main/tclx.js
+TCLXCookie = type=http-request,pattern=https://openapi.17usoft.net/maskantactivityapi/memberCenterSign\?.+,script-path=https://github.com/ddgksf2013/Scripts/raw/main/tclx.js
 *************************
 【小火箭】 :
 *************************
 [Script]
-TCLX = type=cron,script-path=https://github.com/ddgksf2013/Scripts/raw/master/tclx.js, cronexpr="15 7,15 * * *", timeout=500, enable=true
-TCLXCookie = type=http-request,pattern=https://openapi.17usoft.net/maskantactivityapi/memberCenterSign\?.+,script-path=https://github.com/ddgksf2013/Scripts/raw/master/tclx.js
+TCLX = type=cron,script-path=https://github.com/ddgksf2013/Scripts/raw/main/tclx.js, cronexpr="15 7,15 * * *", timeout=500, enable=true
+TCLXCookie = type=http-request,pattern=https://openapi.17usoft.net/maskantactivityapi/memberCenterSign\?.+,script-path=https://github.com/ddgksf2013/Scripts/raw/main/tclx.js
 *************************
 [mitm]
 hostname = openapi.17usoft.net

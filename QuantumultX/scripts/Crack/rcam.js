@@ -3,7 +3,7 @@ Quantumult X 脚本:
 rcam Unlocks 公众号：墨鱼手记
 [rewrite_local]
 # rcam Unlocks
-^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/Crack/rcam.js
+^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Crack/rcam.js
 [mitm]
 hostname = buy.itunes.apple.com,
 */

@@ -13,7 +13,7 @@
 [rewrite_local]
 
 # ～ FT中文網解鎖會員權限（2022-03-06）@ddgksf2013
-^https?:\/\/user\.ftmailbox\.cn\/ios-receipt-validation\.php.* url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/Crack/ftchinese.js
+^https?:\/\/user\.ftmailbox\.cn\/ios-receipt-validation\.php.* url script-response-body https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Crack/ftchinese.js
 
 [mitm] 
 

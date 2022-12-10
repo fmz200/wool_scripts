@@ -14,7 +14,7 @@
 [rewrite_local]
 
 # ～ Nicegram解鎖會員權限（2022-04-10）@ddgksf2013
-https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\d{5,10} url echo-response text/json echo-response https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/Crack/nicegram_body.js
+https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\d{5,10} url echo-response text/json echo-response https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Crack/nicegram_body.js
 
 [mitm] 
 

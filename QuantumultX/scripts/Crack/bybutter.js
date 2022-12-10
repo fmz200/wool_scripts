@@ -15,7 +15,7 @@
 [rewrite_local]
 
 # ～ 黄油相机最新版锁相片编辑权限（2022-09-05）@ddgksf2013
-^https?:\/\/api4\.bybutter\.com\/v4\/(users\/me$|shop\/me\/privileges$) url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/Crack/bybutter.js
+^https?:\/\/api4\.bybutter\.com\/v4\/(users\/me$|shop\/me\/privileges$) url script-response-body https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Crack/bybutter.js
 
 [mitm]
 

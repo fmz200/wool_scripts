@@ -18,7 +18,7 @@ Widgetsmith、vision、Percento、Airmail、Usage、pdfviewer、Spark、谜底�
 [rewrite_local]
 
 # ～ RevenueCat（2022-11-12）@ddgksf2013
-^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/*) url script-echo-response https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/Crack/revenuecat.js
+^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/*) url script-echo-response https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Crack/revenuecat.js
 
 [mitm]
 

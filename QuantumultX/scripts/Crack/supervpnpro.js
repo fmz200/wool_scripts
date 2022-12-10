@@ -14,7 +14,7 @@
 [rewrite_local]
 
 # ～ VPN-unlimited解鎖訂閱（2022-04-25）@ddgksf2013
-^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/Crack/supervpnpro.js
+^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Crack/supervpnpro.js
 
 [mitm] 
 

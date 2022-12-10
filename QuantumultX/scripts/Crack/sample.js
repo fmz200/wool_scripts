@@ -4,7 +4,7 @@
 // @Tg group          https://t.me/ddgksf2013
 // @WechatID          公众号墨鱼手记
 // @UpdateTime        2022-05-03
-// @ScriptURL         https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/Crack/sample.js
+// @ScriptURL         https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Crack/sample.js
 // ==/UserScript==
 
 // ==KeyExplain==

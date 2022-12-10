@@ -7,33 +7,33 @@
 * @UpdateTime        20210106
 * @Attention         因消息体被加密，故简化通知
 * @ScriptFunction    自动化签到获取喵粮、喵饼、鱼干，及每天五次的免费抽奖
-* @ScriptURL         https://github.com/ddgksf2013/Scripts/raw/master/mmjz.js
+* @ScriptURL         https://github.com/ddgksf2013/Scripts/raw/main/mmjz.js
 * ==/UserScript==
 
 【QuantumultX】 :
 *************************
 [rewrite_local]
-https://meow-api.sxyj.net/api/Member/SignNew url script-request-header https://github.com/ddgksf2013/Scripts/raw/master/mmjz.js
+https://meow-api.sxyj.net/api/Member/SignNew url script-request-header https://github.com/ddgksf2013/Scripts/raw/main/mmjz.js
 [task_local]
-15 7,15 * * * https://github.com/ddgksf2013/Scripts/raw/master/mmjz.js, tag=喵喵记账, img-url=https://github.com/ddgksf2013/Icon/raw/master/mmjz.png
+15 7,15 * * * https://github.com/ddgksf2013/Scripts/raw/main/mmjz.js, tag=喵喵记账, img-url=https://github.com/ddgksf2013/Icon/raw/master/mmjz.png
 *************************
 【Loon】 :
 *************************
 [Script]
-http-request https://meow-api.sxyj.net/api/Member/SignNew tag=喵喵记账Cookie, script-path=https://github.com/ddgksf2013/Scripts/raw/master/mmjz.js
-cron "15 7,15 * * *" script-path=https://github.com/ddgksf2013/Scripts/raw/master/mmjz.js,tag=喵喵记账
+http-request https://meow-api.sxyj.net/api/Member/SignNew tag=喵喵记账Cookie, script-path=https://github.com/ddgksf2013/Scripts/raw/main/mmjz.js
+cron "15 7,15 * * *" script-path=https://github.com/ddgksf2013/Scripts/raw/main/mmjz.js,tag=喵喵记账
 *************************
 【Surge】 :
 *************************
 [Script]
-喵喵记账 = type=cron,cronexp="15 7,15 * * *",wake-system=1,timeout=120,script-path=https://github.com/ddgksf2013/Scripts/raw/master/mmjz.js
-喵喵记账Cookie = type=http-request,pattern=https://meow-api.sxyj.net/api/Member/SignNew,script-path=https://github.com/ddgksf2013/Scripts/raw/master/mmjz.js
+喵喵记账 = type=cron,cronexp="15 7,15 * * *",wake-system=1,timeout=120,script-path=https://github.com/ddgksf2013/Scripts/raw/main/mmjz.js
+喵喵记账Cookie = type=http-request,pattern=https://meow-api.sxyj.net/api/Member/SignNew,script-path=https://github.com/ddgksf2013/Scripts/raw/main/mmjz.js
 *************************
 【小火箭】 :
 *************************
 [Script]
-喵喵记账 = type=cron,script-path=https://github.com/ddgksf2013/Scripts/raw/master/mmjz.js, cronexpr="15 7,15 * * *", timeout=500, enable=true
-喵喵记账Cookie = type=http-request,pattern=https://meow-api.sxyj.net/api/Member/SignNew,script-path=https://github.com/ddgksf2013/Scripts/raw/master/mmjz.js
+喵喵记账 = type=cron,script-path=https://github.com/ddgksf2013/Scripts/raw/main/mmjz.js, cronexpr="15 7,15 * * *", timeout=500, enable=true
+喵喵记账Cookie = type=http-request,pattern=https://meow-api.sxyj.net/api/Member/SignNew,script-path=https://github.com/ddgksf2013/Scripts/raw/main/mmjz.js
 *************************
 
 [mitm]

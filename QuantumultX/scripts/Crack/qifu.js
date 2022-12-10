@@ -13,7 +13,7 @@
 [rewrite_local]
 
 # ～ 起伏解鎖會員權限（2022-02-19）@ddgksf2013
-https?:\/\/api\.risingfalling\.com\/api\/vip\/detail url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/Crack/qifu.js
+https?:\/\/api\.risingfalling\.com\/api\/vip\/detail url script-response-body https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Crack/qifu.js
 
 [mitm] 
 

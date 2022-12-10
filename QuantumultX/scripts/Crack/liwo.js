@@ -12,10 +12,10 @@
 // hostname=api.m.jd.com
 
 // [rewrite_local]
-// ^https:\/\/api\.m\.jd\.com\/api\/v1\/sign\/doSign url script-request-body https://github.com/ddgksf2013/Scripts/raw/master/liwo.js
+// ^https:\/\/api\.m\.jd\.com\/api\/v1\/sign\/doSign url script-request-body https://github.com/ddgksf2013/Scripts/raw/main/liwo.js
 
 // [local_tasK]
-// 5 0 * * * https://github.com/ddgksf2013/Scripts/raw/master/liwo.js, tag=梨涡签到得现金
+// 5 0 * * * https://github.com/ddgksf2013/Scripts/raw/main/liwo.js, tag=梨涡签到得现金
 
 // ----------------------------------------------------------------------------
 // Loon
@@ -24,8 +24,8 @@
 // hostname=api.m.jd.com
 
 // [Script]
-// http-request ^https:\/\/api\.m\.jd\.com\/api\/v1\/sign\/doSign script-path=https://github.com/ddgksf2013/Scripts/raw/master/liwo.js, requires-body=true, timeout=10, tag=梨涡签到Cookie
-// cron "7 0 * * *" script-path=https://github.com/ddgksf2013/Scripts/raw/master/liwo.js,tag=梨涡签到
+// http-request ^https:\/\/api\.m\.jd\.com\/api\/v1\/sign\/doSign script-path=https://github.com/ddgksf2013/Scripts/raw/main/liwo.js, requires-body=true, timeout=10, tag=梨涡签到Cookie
+// cron "7 0 * * *" script-path=https://github.com/ddgksf2013/Scripts/raw/main/liwo.js,tag=梨涡签到
 
 // ----------------------------------------------------------------------------
 

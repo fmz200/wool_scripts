@@ -14,7 +14,7 @@
 [rewrite_local]
 
 # ～ Videoleap解鎖會員權限（2022-03-05）@ddgksf2013
-https?:\/\/api\.lightricks\.com\/subscription\?bundle=com\.lightricks\.Enlight-Video url script-echo-response https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/Crack/videoleap.js
+https?:\/\/api\.lightricks\.com\/subscription\?bundle=com\.lightricks\.Enlight-Video url script-echo-response https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Crack/videoleap.js
 
 [mitm] 
 
