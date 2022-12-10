@@ -753,6 +753,10 @@ https://dl-cu-hz.lechange.cn/oms-online/advertisementPush/* url reject
 ^https?:\/\/mlmdacdn\.spdb\.com\.cn\/oss\/product-mm\/app\/default\/[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-(.{39}|.{45}|.{65}|.{111})\.(jpg|png|JPG) url reject-200
 ^https?:\/\/mlmdacdn\.spdb\.com\.cn\/oss\/product-mm\/app\/default\/.+1920.+1920.+(jpg|png) url reject-200
 
+# > 浦大喜奔
+# 倒计时还在
+^https?:\/\/image\.spdbccc\.com\.cn\/group\d\/M00\/[7-9]{1}[A-Z0-9]{1}\/[A-Z0-9]{2}\/rBsZ.+.\jpg url reject-200
+
 # > 平安好车主
 ^https?:\/\/hcz-member\.pingan\.com\.cn\/micro-api\/homepage\/do\/app\/popbox\/getTopPopBox url reject-200
 
@@ -1423,19 +1427,6 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 
 # 心悦俱乐部
 ^https?:\/\/bgw\.xinyue\.qq\.com\/xyapi\.PageService\/GetIndexPopFlash url reject-200
-
-# > 浦大喜奔（倒计时还在）(7.2.5以上版本多了一行 点击了解详情)
-^https?:\/\/image\.spdbccc\.com\.cn\/group\d\/M00\/[A-Z0-9]{2}\/[A-Z0-9]{2}\/[a-zA-Z]{7}-[a-zA-Z]{11}_[a-zA-Z0-9]{10}\.jpg url reject-200
-^https?:\/\/image\.spdbccc\.com\.cn\/group\d\/M00\/[0-9]{2}\/[0-9]{2}\/[a-zA-Z0-9]{8}-[a-zA-Z0-9]{21}\.jpg url reject-200
-^https?:\/\/image\.spdbccc\.com\.cn\/group\d\/M00\/[0-9]{2}\/[0-9]{2}\/[a-zA-Z0-9]{14}_[a-zA-Z0-9]{15}\.jpg url reject-200
-^https?:\/\/image\.spdbccc\.com\.cn\/group\d\/M00\/[A-Z0-9]{2}\/[0-9]{2}\/[a-zA-Z0-9]{30}\.jpg url reject-200
-^https?:\/\/image\.spdbccc\.com\.cn\/group\d\/M00\/[A-Z0-9]{2}\/[A-Z0-9]{2}\/[a-zA-Z0-9]{30}\.jpg url reject-200
-^https?:\/\/image\.spdbccc\.com\.cn\/group\d\/M00\/[A-Z0-9]{2}\/[A-Z0-9]{2}\/[a-zA-Z0-9]{24}_[a-zA-Z0-9]{5}\.jpg url reject-200
-^https?:\/\/image\.spdbccc\.com\.cn\/group\d\/M00\/[A-Z0-9]{2}\/[A-Z0-9]{2}\/[a-zA-Z0-9]{13}-[a-zA-Z0-9]{11}_[a-zA-Z0-9]{4}\.jpg url reject-200
-#https://image.spdbccc.com.cn/group2/M00/8B/67/rBsZJmJhUzuAYookAAPZXatr3Jc894.jpg url 302 https://gitee.com/a28413761/tupian/raw/master/ssyy1.jpg
-^https?:\/\/image\.spdbccc\.com\.cn\/group\d\/M00\/[0-9]{2}\/[A-Z0-9]{2}\/[a-zA-Z]{8}-[a-zA-Z0-9]{21}\.jpg url reject-200
-^https?:\/\/image\.spdbccc\.com\.cn\/group\d\/M00\/[0-9]{2}\/[A-Z0-9]{2}\/[a-zA-Z0-9]{22}-[a-z0-9]{7}\.jpg url reject-200
-# 误杀很多 ^https?:\/\/image\.spdbccc\.com\.cn\/group\d\/M00\/.+\/.+\/.+.jpg url reject-200
 
 # > 兴业证券
 # 优理宝（3秒倒计时,任意位置点一下即可跳过）
