@@ -24,7 +24,6 @@ function modifyMain(url, data) {
             dataModify.channelInfo.channels[0].payload.items[1].data.group
                 = removeHotSearchAds(dataModify.channelInfo.channels[0].payload.items[1].data.group);
 
-
             // 1.2、下标为2的是轮播图模块
             dataModify.channelInfo.channels[0].payload.items[2] = {};
             console.log('进入发现页，移除轮播模块💕💕');
@@ -38,7 +37,6 @@ function modifyMain(url, data) {
             // 2.1、下标是1的为热搜模块
             console.log('刷新发现页，移除热搜广告🤣🤣');
             dataModify.items[1].data.group = removeHotSearchAds(dataModify.items[1].data.group);
-
 
             // 2.2、下标为2的是轮播图模块
             dataModify.items[2] = {};
@@ -56,7 +54,7 @@ function removeHotSearchAds(groups) {
     let newGroups = [];
     for (let group of groups) {
         // group.item_log.search_flag || group.item_log.nav
-        if (group.item_log.adid) { // 广告没有search_flag字段，只有group.item_log.adid
+        if (group && group.item_log && group.item_log.adid) { // 广告没有search_flag字段，只有group.item_log.adid
             continue;
         }
         newGroups.push(group);
