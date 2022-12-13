@@ -21,8 +21,20 @@
 <h2 align="center">wool scripts</h2>
 </p>
 
+---
 
-#### QuantumultX用户[点击这里](QuantumultX/README.md)获取详细的配置和教程
+## ✅ 一些说明：
+▶️ 由于张军大佬隐退，又恰好我有时间，所以我会及时进行更新张军大佬的配置，故本库中存储的配置就是张军大佬的且是最新的，不要再找了。
+
+▶️ 每个配置文件的开头部分都有使用说明，且每个文件夹中都有相应的以`.md`结尾的教程文件，使用前请先看说明。
+
+▶️ 如果你在使用过程中有问题欢迎提交issue或者进群交流，群链接在本文件上方。
+
+---
+
+### 1️⃣ QuantumultX用户[点击这里](QuantumultX/README.md)获取详细的配置和教程
+
+---
 
 ## 🧚‍♂️ 特别鸣谢
 * [@chavyleung](https://github.com/chavyleung)
