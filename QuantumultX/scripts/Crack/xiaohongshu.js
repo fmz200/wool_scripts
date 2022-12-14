@@ -1,6 +1,6 @@
 /*
-version     v1.0.1
-updatetime  2022-11-04
+version     v1.0.2
+updatetime  2022-12-08
 tgchannel   https://t.me/ddgksf2021
 function    小红书去开屏广告、瀑布流广告、启动广告
 author      ddgksf2013
@@ -11,10 +11,12 @@ if (/^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/splash_
     obj.data.ads_groups.forEach((item) => {
         item.start_time = "2208963661";
         item.end_time = "2209050061";
-        item.ads.forEach((i) => {
-            i.start_time = "2208963661";
-            i.end_time = "2209050061";
-        });
+        if(item.ads){
+            item.ads.forEach((i) => {
+                i.start_time = "2208963661";
+                i.end_time = "2209050061";
+            });
+        }
     });
     $done({
         body: JSON.stringify(obj),

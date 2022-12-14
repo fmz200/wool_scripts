@@ -2,7 +2,7 @@
 Douban Movie Add-ons for Quantumult X by Neurogram
 Douban Movie Adblock for Quantumult X by ddgksf2013
 
-UpdateTime: 2022-11-25
+UpdateTime: 2022-12-09
 Author:Neurogram,ddgksf2013
 
 - 豆瓣电影移动版网页增强
@@ -17,10 +17,10 @@ Author:Neurogram,ddgksf2013
 
 [rewrite_local]
 // 茶杯狐、流媒体
-^https://m.douban.com/movie/subject/.+ url script-response-body https://github.com/ddgksf2013/Scripts/raw/main/douban.js
+^https://m.douban.com/movie/subject/.+ url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/douban.js
 
 // Airtable 收藏
-^https://m.douban.com/movie/subject/.+\?seen=\d url script-request-header https://github.com/ddgksf2013/Scripts/raw/main/douban.js
+^https://m.douban.com/movie/subject/.+\?seen=\d url script-request-header https://github.com/ddgksf2013/Scripts/raw/master/douban.js
 
 [mitm]
 hostname = m.douban.com
@@ -88,7 +88,7 @@ async function douban_addons() {
     //.replace(/link\ href\=\"https?:\/\/img3\.doubanio\.com\/.+\.css\"/, `link href="https://img3.doubanio.com/f/talion/4eddaaed2bec5a0baa663274d47d136c54a2c03c/css/card/base.css"`)
 
     body = body.replace(/\<div\ class\=\"sub\-vendor\"[\s\S]*?\<\/div\>/, `${mweb.join("\n")}`)
-               .replace(/<head>/, '<head><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ddgksf2013/Html/douban.css" type="text/css">')
+               .replace(/<head>/, '<head><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ddgksf2013/Html@main/douban.css" type="text/css">')
 
     $done({ body });
 
