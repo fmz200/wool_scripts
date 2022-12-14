@@ -48,5 +48,6 @@ https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/fmz200_ga
 https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/fmz200_cookies.conf
 ```
 
-- 还不会用？**点击这里查看**[Quantumult X 不完全教程](https://www.notion.so/Quantumult-X-1d32ddc6e61c4892ad2ec5ea47f00917) 
-- 有其他有问题？**点击这里加入**[苹果IOS去广告交流](https://t.me/quguanggao)
+### 📮 答疑解惑
+- **点击这里加入**[苹果IOS去广告交流](https://t.me/quguanggao)
+- **点击这里查看**[Quantumult X 不完全教程](https://www.notion.so/Quantumult-X-1d32ddc6e61c4892ad2ec5ea47f00917) 
