@@ -24,7 +24,7 @@ https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/fe
 ```
 #### 屏蔽苹果系统更新：
 ```
-https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/apple.conf
+https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/apple.snippet
 ```
 
 ### 4️⃣ 分流修正：
