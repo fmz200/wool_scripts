@@ -473,7 +473,7 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 ^https?:\/\/dl[0-9]{1}\.app\.gtja\.com\/dzswem\/kvController url reject-200
 
 # > 广东移动
-^https?:\/\/gd\.10086\.cn\/gmccfile\/file\/image\/preloading703\/pre202[0-9]{20}\.jpg url reject-200
+^https?:\/\/gd\.10086\.cn\/gmccapp\/serv\/\?servicename=GMCCAPP_901_005_001_002 url reject-200
 
 # > 高德地图
 ^https?+:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ url reject-200
