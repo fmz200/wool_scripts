@@ -31,26 +31,37 @@
 ▶️ 如果你在使用过程中有问题欢迎提交issue或者进群交流，群链接在本文件上方。
 
 ---
-
+## 🍑 开始使用
 ### 1️⃣ QuantumultX用户[点击这里](QuantumultX/README.md)获取详细的配置和教程
 
 ---
 
+## 🚸 常见问题
+### 1️⃣ 我为什么指定了抖音的分流到国外，评论视频IP却显示“未知”
+> 答：抖音与其他软件判断IP归属地的方式不同，抖音需要家庭宽带IP才能生效，而现在的大部分机场都是机房的IP，所以评论视频就显示IP未知。
+> 如果你不知道自己抖音分流的IP是不是家宽，可以访问[https://ipinfo.io](https://ipinfo.io/) 查看，在`asn`信息中如果你看到`type:
+"isp"`那就是家庭宽带，其他值都不是家宽，比如hosting，business等。
+
+常见的抖音分流有：
+> https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/DouYin/DouYin.list
+> 
+> https://raw.githubusercontent.com/lwd-temp/anti-ip-attribution/main/generated/quantumultx.list
+> 
+> https://raw.githubusercontent.com/ddgksf2013/Filter/master/anti-ip-attribution.list
+---
+
 ## 🧚‍♂️ 特别鸣谢
-* [@chavyleung](https://github.com/chavyleung)
-
-* [@ddgksf2013](https://github.com/ddgksf2013)
-
-* [@KOP-XIAO](https://github.com/KOP-XIAO)
-
-* [@28413761](https://github.com/fmz200)
-
-* [@NobyDa](https://github.com/NobyDa)
-
-* [@blackmatrix7](https://github.com/blackmatrix7)
-
-* [@app2smile](https://github.com/app2smile)
-
+- [@28413761](https://github.com/fmz200)
+- [@app2smile](https://github.com/app2smile)
+- [@blackmatrix7](https://github.com/blackmatrix7)
+- [@chavyleung](https://github.com/chavyleung)
+- [@DivineEngine](https://github.com/DivineEngine)
+- [@ddgksf2013](https://github.com/ddgksf2013)
+- [@I-am-R-E](https://github.com/I-am-R-E)
+- [@KOP-XIAO](https://github.com/KOP-XIAO)
+- [@NobyDa](https://github.com/NobyDa)
+- [@Orz-3](https://github.com/Orz-3)
+- [@Tartarus2014](https://github.com/Tartarus2014)
 
 
 ## 🧚‍♀️ 觉得不错 欢迎Star 🌟
