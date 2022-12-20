@@ -17,8 +17,8 @@ function modifyMain(url, data) {
     let dataModify = JSON.parse(data);
     // 1、首次点击发现按钮
     if (url.indexOf(url1) > -1) {
-        if (dataModify.channelInfo && dataModify.channelInfo.channels
-            && dataModify.channelInfo.channels[0].payload && dataModify.channelInfo.channels[0].payload.items) {
+        if (dataModify.channelInfo && dataModify.channelInfo.channels && dataModify.channelInfo.channels[0].payload
+          && dataModify.channelInfo.channels[0].payload.items && dataModify.channelInfo.channels[0].payload.items[1].data) {
             // 1.1、下标是1的为热搜模块
             console.log('进入发现页，移除热搜广告💕💕');
             dataModify.channelInfo.channels[0].payload.items[1].data.group
