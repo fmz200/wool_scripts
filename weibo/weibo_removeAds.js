@@ -60,8 +60,10 @@ function modifyMain(url, data) {
   return data;
 }
 
+// 移除“微博热搜”的广告
 function removeHotSearchAds(groups) {
   console.log('移除发现页热搜广告开始💕');
+  groups = JSON.parse(groups);
   // console.log('🤣🤣' + JSON.stringify(groups));
   let newGroups = [];
   for (let group of groups) {
