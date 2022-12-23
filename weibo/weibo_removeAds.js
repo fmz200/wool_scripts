@@ -62,16 +62,19 @@ function modifyMain(url, data) {
 
 // 移除“微博热搜”的广告
 function removeHotSearchAds(groups) {
-  console.log('移除发现页热搜广告开始💕');
   let newGroups = [];
-  for (let group of groups) {
-    // group.item_log.search_flag || group.item_log.nav
-    if (group && group.item_log && group.item_log.adid) { // 广告没有search_flag字段，只有group.item_log.adid
-      continue;
+  // console.log('🤣🤣' + JSON.stringify(groups));
+  if (groups) {
+    console.log('移除发现页热搜广告开始💕');
+    for (let group of groups) {
+      // group.item_log.search_flag || group.item_log.nav
+      if (group && group.item_log && group.item_log.adid) { // 广告没有search_flag字段，只有group.item_log.adid
+        continue;
+      }
+      newGroups.push(group);
     }
-    newGroups.push(group);
+    console.log('移除发现页热搜广告结束💕💕');
   }
-  console.log('移除发现页热搜广告结束💕💕');
   return newGroups;
 }
 
