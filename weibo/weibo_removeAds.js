@@ -33,8 +33,8 @@ function modifyMain(url, data) {
       console.log('移除轮播模块💕💕');
       dataModify.channelInfo.channels[0].payload.items[2] = {};
 
-      // 2.3、items[i].category = "feed" 是热门微博的部分
-      dataModify.channelInfo.channels[0].payload.items = removeHotSearchAds(dataModify.channelInfo.channels[0].payload.items);
+      // 1.3、items[i].category = "feed" 是热门微博的部分
+      dataModify.channelInfo.channels[0].payload.items = removeCategoryFeedAds(dataModify.channelInfo.channels[0].payload.items);
 
       return JSON.stringify(dataModify);
     }
