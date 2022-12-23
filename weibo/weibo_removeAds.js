@@ -62,8 +62,10 @@ function modifyMain(url, data) {
 
 function removeHotSearchAds(groups) {
   console.log('移除发现页热搜广告开始💕');
+  console.log('🤣🤣' + JSON.stringify(groups));
   let newGroups = [];
   for (let group of groups) {
+    console.log('🤣' + JSON.stringify(group));
     // group.item_log.search_flag || group.item_log.nav
     if (group && group.item_log && group.item_log.adid) { // 广告没有search_flag字段，只有group.item_log.adid
       continue;
