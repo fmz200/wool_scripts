@@ -13,8 +13,8 @@ const url1 = '/search/finder';
 const url2 = '/search/container_timeline';
 const url3 = '/search/container_discover';
 
-var body = $response.body;
 var url = $request.url;
+var body = $response.body;
 body = modifyMain(url, body);
 $done({body});
 
@@ -24,30 +24,33 @@ function modifyMain(url, data) {
   if (url.indexOf(url1) > -1) {
     if (dataModify.channelInfo && dataModify.channelInfo.channels && dataModify.channelInfo.channels[0].payload
       && dataModify.channelInfo.channels[0].payload.items && dataModify.channelInfo.channels[0].payload.items[1].data) {
+      console.log('进入发现页...');
       // 1.1、下标是1的为热搜模块
-      console.log('进入发现页，移除热搜广告💕💕');
       dataModify.channelInfo.channels[0].payload.items[1].data.group
         = removeHotSearchAds(dataModify.channelInfo.channels[0].payload.items[1].data.group);
 
       // 1.2、下标为2的是轮播图模块
+      console.log('移除轮播模块💕💕');
       dataModify.channelInfo.channels[0].payload.items[2] = {};
-      console.log('进入发现页，移除轮播模块💕💕');
+
+      // 2.3、items[i].category = "feed" 是热门微博的部分
+      dataModify.channelInfo.channels[0].payload.items = removeHotSearchAds(dataModify.channelInfo.channels[0].payload.items);
+
       return JSON.stringify(dataModify);
     }
   }
 
   // 2、发现页面刷新/再次点击发现按钮
   if (url.indexOf(url2) > -1 || url.indexOf(url3) > -1) {
+    console.log('刷新发现页...');
     // 2.1、下标是1的为热搜模块
-    console.log('刷新发现页，移除微博热搜广告🤣🤣');
     dataModify.items[1].data.group = removeHotSearchAds(dataModify.items[1].data.group);
 
     // 2.2、下标为2的是轮播图模块
-    console.log('刷新发现页，移除轮播图模块🤣🤣');
+    console.log('移除轮播图模块🤣🤣');
     dataModify.items[2] = {};
 
     // 2.3、items[i].category = "feed" 是热门微博的部分
-    console.log('刷新发现页，移除热门微博广告🤣🤣');
     dataModify.items = removeCategoryFeedAds(dataModify.items);
 
     return JSON.stringify(dataModify);
