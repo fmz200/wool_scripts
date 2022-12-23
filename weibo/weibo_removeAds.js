@@ -13,6 +13,11 @@ const url1 = '/search/finder';
 const url2 = '/search/container_timeline';
 const url3 = '/search/container_discover';
 
+var body = $response.body;
+var url = $request.url;
+body = modifyMain(url, body);
+$done({body});
+
 function modifyMain(url, data) {
   let dataModify = JSON.parse(data);
   // 1、首次点击发现按钮
@@ -31,18 +36,21 @@ function modifyMain(url, data) {
     }
   }
 
-  // 2、发现页面刷新，再次点击发现按钮
+  // 2、发现页面刷新/再次点击发现按钮
   if (url.indexOf(url2) > -1 || url.indexOf(url3) > -1) {
-    if (dataModify.items) {
-      // 2.1、下标是1的为热搜模块
-      console.log('刷新发现页，移除热搜广告🤣🤣');
-      dataModify.items[1].data.group = removeHotSearchAds(dataModify.items[1].data.group);
+    // 2.1、下标是1的为热搜模块
+    console.log('刷新发现页，移除微博热搜广告🤣🤣');
+    dataModify.items[1].data.group = removeHotSearchAds(dataModify.items[1].data.group);
 
-      // 2.2、下标为2的是轮播图模块
-      dataModify.items[2] = {};
-      console.log('刷新发现页，移除轮播模块🤣🤣');
-      return JSON.stringify(dataModify);
-    }
+    // 2.2、下标为2的是轮播图模块
+    console.log('刷新发现页，移除轮播图模块🤣🤣');
+    dataModify.items[2] = {};
+
+    // 2.3、items[i].category = "feed" 是热门微博的部分
+    console.log('刷新发现页，移除热门微博广告🤣🤣');
+    dataModify.items = removeCategoryFeedAds(dataModify.items);
+
+    return JSON.stringify(dataModify);
   }
 
   console.log('没有广告数据🧧🧧');
@@ -50,9 +58,6 @@ function modifyMain(url, data) {
 }
 
 function removeHotSearchAds(groups) {
-  if (!groups) {
-    return groups;
-  }
   console.log('移除发现页热搜广告开始💕');
   let newGroups = [];
   for (let group of groups) {
@@ -66,9 +71,16 @@ function removeHotSearchAds(groups) {
   return newGroups;
 }
 
-var body = $response.body;
-var url = $request.url;
-
-body = modifyMain(url, body);
-
-$done({body});
+// 移除“热搜微博”信息流的广告
+function removeCategoryFeedAds(items) {
+  console.log('移除发现页热门微博广告开始💕');
+  let newItems = [];
+  for (let item of items) {
+    if (item.category == "feed" && item.data && item.data.mblogtypename == "广告") {
+      continue;
+    }
+    newItems.push(item);
+  }
+  console.log('移除发现页热门微博广告结束💕💕');
+  return newItems;
+}
