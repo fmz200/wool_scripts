@@ -500,7 +500,7 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 ^https?:\/\/.+\.googlevideo\.com\/.+oad= url reject-img
 ^https?:\/\/.+\.googlevideo\.com\/ptracking url reject-img
 ^https?:\/\/pagead2\.googlesyndication\.com\/pagead\/ url reject-img
-^https?:\/\/[\w-]+\.googlevideo\.com\/.+&(oad|ctier) url reject
+# ^https?:\/\/[\w-]+\.googlevideo\.com\/.+&(oad|ctier) url reject
 ^https?:\/\/.+\.googlevideo\.com\/videogoodput url reject-img
 
 # > 公交云
@@ -1571,7 +1571,7 @@ http:\/\/analytics\.163\.com\/ntes url reject
 ctier=[A-Z] url 302 ctier=A
 ^https://[\s\S]*\.googlevideo\.com/.*&(oad|ctier) url reject-200
 (^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) url 302 $1$2$3
-^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad url reject
+#  ^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad url reject
 ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v\d\/player\/ad_break url reject
 ^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads url reject
 ^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) url reject
