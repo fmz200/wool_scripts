@@ -3,7 +3,7 @@
 # 重要提示：某些APP要清除缓存或者重新安装APP，拦截广告才会生效！
 # 项目地址：https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
 # 交流群组：https://t.me/quguanggao
-# 更新时间：2022.12.31 22:02
+# 更新时间：2022.12.31 22:23
 #############################################
 # > "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # > "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -494,14 +494,14 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 
 # > 谷歌
 ^https?:\/\/.+\.googleapis.com/.+ad_break url reject-img
-^https?:\/\/.+?\.googlevideo\.com\/ptracking\?pltype=adhost url reject-img
 ^https?:\/\/.+\.googleapis.com/.+log_event url reject-img
 ^https?:\/\/.+\.googleapis.com/adsmeasurement url reject-img
-^https?:\/\/.+\.googlevideo\.com\/.+oad= url reject-img
-^https?:\/\/.+\.googlevideo\.com\/ptracking url reject-img
 ^https?:\/\/pagead2\.googlesyndication\.com\/pagead\/ url reject-img
 # ^https?:\/\/[\w-]+\.googlevideo\.com\/.+&(oad|ctier) url reject
-^https?:\/\/.+\.googlevideo\.com\/videogoodput url reject-img
+# ^https?:\/\/.+\.googlevideo\.com\/videogoodput url reject-img
+# ^https?:\/\/.+?\.googlevideo\.com\/ptracking\?pltype=adhost url reject-img
+# ^https?:\/\/.+\.googlevideo\.com\/.+oad= url reject-img
+# ^https?:\/\/.+\.googlevideo\.com\/ptracking url reject-img
 
 # > 公交云
 ^https?:\/\/m\.ibuscloud.com\/v2\/app\/getStartPage url reject
@@ -1568,10 +1568,10 @@ http:\/\/analytics\.163\.com\/ntes url reject
 ^https?:\/\/m\.yap\.yahoo\.com\/v\d{2}\/getAds\.do url reject
 
 # > YouTube
-ctier=[A-Z] url 302 ctier=A
-^https://[\s\S]*\.googlevideo\.com/.*&(oad|ctier) url reject-200
-(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) url 302 $1$2$3
-#  ^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad url reject
+# ctier=[A-Z] url 302 ctier=A
+# ^https://[\s\S]*\.googlevideo\.com/.*&(oad|ctier) url reject-200
+# (^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) url 302 $1$2$3
+# ^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad url reject
 ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v\d\/player\/ad_break url reject
 ^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads url reject
 ^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) url reject
