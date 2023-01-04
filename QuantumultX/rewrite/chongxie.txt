@@ -3,7 +3,7 @@
 # 重要提示：某些APP要清除缓存或者重新安装APP，拦截广告才会生效！
 # 项目地址：https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
 # 交流群组：https://t.me/quguanggao
-# 更新时间：2023.01.03 21:50
+# 更新时间：2023.01.04 20:16
 #############################################
 # > "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # > "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -483,6 +483,7 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 ^https?:\/\/gd\.10086\.cn\/gmccapp\/serv\/\?servicename=GMCCAPP_704_002_001_001 url reject-200
 
 # > 高德地图
+^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/app\/startup\/init\? url reject-dict
 ^https?:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ url reject-200
 ^https?:\/\/m5\.amap\.com\/ws\/valueadded\/ url reject
 ^https?:\/\/optimus-ads\.amap\.com\/uploadimg\/ url reject
@@ -821,9 +822,7 @@ https://dl-cu-hz.lechange.cn/oms-online/advertisementPush/* url reject
 ^https:\/\/j-image\.missfresh\.cn\/img_(.+)\.(jpg|jpeg|gif|png)\?iopcmd=convert&dst=webp&q=85$ url reject
 
 # > 马蜂窝
-^https?:\/\/p1-q\.mafengwo\.net\/s19\/M00\/77\/57\/.*.png url reject-200
-^https?:\/\/mapi\.mafengwo\.cn\/travelguide\/ad\/ url reject-200
-^https?:\/\/mapi\.mafengwo\.cn\/ad\/ url reject
+^https:\/\/mapi\.mafengwo\.cn\/ad\/get_launch_ad_list\/v url reject-200
 
 # > 咪咕
 ^https?:\/\/gg\w+?\.cmvideo\.cn\/v\d\/iflyad\/ url reject-200
