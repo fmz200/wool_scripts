@@ -1,10 +1,10 @@
 ################################################################
 # 分流作用：修正某些被分流到外面的国内网站
 # 重要提示：无
-# 项目地址：https://github.com/fmz200/wool_scripts
+# 项目地址：https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/fenliuxiuzheng.list
 # 交流群组：https://t.me/quguanggao
-# 更新时间：2022.12.11 17:36
-# 策略选择：非reject
+# 更新时间：2023.01.04 22:00
+# 策略选择：直连 direct
 #############################################
 # > "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # > "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
