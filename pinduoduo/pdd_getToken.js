@@ -12,7 +12,7 @@ const $ = new API("pdd_getToken");
             console.log('仅限iOS设备抓包用!');
         } else {
             if ($request.url.indexOf('rainbow') > -1) {
-                const token = `${$request.headers['AccessToken']};`
+                const token = `${$request.headers['AccessToken']}`
                 // const userId = ck.match(/userId=.+?;/)
                 $.write(token, '#ddgyck');
                 $.notify('拼多多果园token获取成功', '', '');
