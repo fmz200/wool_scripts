@@ -22,7 +22,7 @@
           "val": "",
           "type": "textarea",
           "autoGrow": false,
-          "rows": 12,
+          "rows": 4,
           "desc": "多个账号用@或者换行分割：ck1@ck2"
         }
       ],
@@ -50,7 +50,7 @@
           "val": "",
           "type": "textarea",
           "autoGrow": false,
-          "rows": 12,
+          "rows": 4,
           "desc": "多个账号用@分割：tk1@tk2"
         }
       ],
@@ -64,27 +64,28 @@
     },
     {
       "id": "mt_token",
-      "name": "meituan_token",
+      "name": "美团token",
       "keys": [
         "meituanCookie"
       ],
       "descs_html": [
-        "打开美团，在请求头中搜索token"
+        "打开美团，在请求头中搜索token，多账号换行或者@隔开"
       ],
       "settings": [
         {
           "id": "meituanCookie",
           "name": "美团token",
           "val": "",
-          "desc": "",
+          "desc": "举例：userId=12345678&token=tk1@userId=123&token=tk2",
           "type": "textarea",
           "autoGrow": false,
-          "rows": 12
+          "rows": 8
         }
       ],
       "author": "@fmz200",
       "repo": "https://github.com/fmz200/wool_scripts",
       "icons": [
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/meituan.png",
         "https://raw.githubusercontent.com/Orz-3/mini/master/Color/meituan.png"
       ]
     },
