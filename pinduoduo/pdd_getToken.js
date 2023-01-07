@@ -1,30 +1,31 @@
-/*
-    拼多多果园token
-    重写地址:ug-fission.kuaishou.com/rest/n/darwin/orchard/water/watering, 触发类型:request-header
-    https://api.pinduoduo.com/api/rainbow/message/sync
-    小程序或APP 进果园一圈，在请求头request-header中搜索 AccessToken,多账号@隔开
-    MITM添加:api.pinduoduo.com
-    每次获取会覆盖之前的ck,请先用boxjs备份
-*/
+/**
+ * 脚本作用：拼多多果园获取token
+ * 重写地址：暂时没有确定具体是那个请求URL会携带token，因为每次手动抓包获取token的url都不一样
+ * 触发类型：request-header
+ * 获取方式：小程序或APP进果园逛一圈+浇水，在请求头request-header中搜索PDDAccessToken
+ * 注意事项：每次脚本获取会覆盖之前的ck，暂时不支持脚本获取多个token，建议手动抓取然后填到boxjs里面，多账号用@隔开：tk1@tk2
+ * 更新时间：2023.01.07 12:30
+ */
+
 const $ = new API("pdd_getToken");
 !(async () => {
-        if ($.env.isNode) {
-            console.log('仅限iOS设备抓包用!');
-        } else {
-            if ($request.url.indexOf('rainbow') > -1) {
-                const token = `${$request.headers['AccessToken']}`
-                // const userId = ck.match(/userId=.+?;/)
-                $.write(token, '#ddgyck');
-                $.notify('拼多多果园token获取成功', '', '');
-                console.log('token：' + token);
-            }
-        }
+    // 暂时不确定哪个URL会携带PDDAccessToken
+    // Cookie: pdd_vds=xxx; ETag=dKJLmoeS; PDDAccessToken=12HUHDUW; install_token=118E4FCA;
+    if ($request.headers) {
+      var cookieValue = $request.headers["Cookie"] || $request.headers["cookie"];
+      const token = cookieValue.match(/PDDAccessToken=.+?/);
+      // const token = `${$request.headers['PDDAccessToken']}`
+      // const userId = ck.match(/userId=.+?;/)
+      $.write(token, '#ddgyck');
+      $.notify('拼多多果园token获取成功', '', token);
+      console.log('token：' + token);
     }
+  }
 )
 ().catch((e) => {
-    console.log('', `❌失败! 原因: ${e}!`, '');
+  console.log('', `❌失败! 原因: ${e}!`, '');
 }).finally(() => {
-    $.done({});
+  $.done({});
 })
 
 /*********************************** API *************************************/
