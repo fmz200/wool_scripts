@@ -66,7 +66,7 @@
       "id": "jddj_cookie",
       "name": "京东到家cookie",
       "keys": [
-        "ddgyck"
+        "sy_cookie_dj"
       ],
       "descs_html": [
         "打开京东到家获取cookie"
