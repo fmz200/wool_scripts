@@ -63,6 +63,34 @@
       ]
     },
     {
+      "id": "jddj_cookie",
+      "name": "京东到家cookie",
+      "keys": [
+        "ddgyck"
+      ],
+      "descs_html": [
+        "打开京东到家获取cookie"
+      ],
+      "settings": [
+        {
+          "id": "sy_cookie_dj",
+          "name": "京东到家cookie",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 4,
+          "desc": ""
+        }
+      ],
+      "author": "@fmz200",
+      "repo": "https://github.com/fmz200/wool_scripts",
+      "script": "https://raw.githubusercontent.com/Sunert/Script/master/Task/backup/jddj.js",
+      "icons": [
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/jddj.png",
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/jddj.png"
+      ]
+    },
+    {
       "id": "mt_token",
       "name": "美团token",
       "keys": [
