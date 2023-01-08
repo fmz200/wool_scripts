@@ -6,36 +6,63 @@
   "repo": "https://github.com/fmz200/wool_scripts",
   "apps": [
     {
-      "id": "ddgy_ck",
-      "name": "抖音 抖抖果园cookie",
+      "id": "didi_fruit",
+      "name": "滴滴橙心果园",
       "keys": [
-        "ddgyCk"
+        "ddtoken"
       ],
       "descs_html": [
-        "功能：签到领水滴、肥料，收取水瓶，每日五次水滴，选择及领取挑战，开宝箱，浇水，三餐礼包，戳鸭子。（浏览任务抓不到包，暂时做不了）",
-        "进入小程序浇水后抓一个Cookie"
+        "填写token,多账号用英文逗号(,)分开"
       ],
       "settings": [
         {
-          "id": "ddgyCk",
-          "name": "抖抖果园cookie",
+          "id": "ddtoken",
+          "name": "token",
           "val": "",
           "type": "textarea",
-          "autoGrow": false,
-          "rows": 4,
-          "desc": "多个账号用@或者换行分割：ck1@ck2"
+          "autoGrow": true,
+          "rows": 8,
+          "desc": "token"
         }
       ],
-      "author": "@fmz200",
-      "repo": "https://github.com/fmz200/wool_scripts",
-      "script": "https://raw.githubusercontent.com/LinYuanovo/scripts/main/dygy.js",
       "icons": [
-        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/TikTok.png",
-        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/TikTok.png"
-      ]
+        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/task/didi.png",
+        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/task/didi.png"
+      ],
+      "author": "@passerby-b",
+      "repo": "https://github.com/fmz200/wool_scripts",
+      "script": "https://raw.githubusercontent.com/passerby-b/didi_fruit/main/dd_fruit.js"
     },
     {
-      "id": "ddgyck",
+      "id": "ks_fruit",
+      "name": "快手果园",
+      "keys": [
+        "kscookies"
+      ],
+      "descs_html": [
+        "填写cookie,多账号用英文逗号(,)分开"
+      ],
+      "settings": [
+        {
+          "id": "kscookies",
+          "name": "kscookies",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 8,
+          "desc": "kscookies"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/task/kuaishou.png",
+        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/task/kuaishou.png"
+      ],
+      "author": "@passerby-b",
+      "repo": "https://github.com/fmz200/wool_scripts",
+      "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/kuaishou/ks_fruit.js"
+    },
+    {
+      "id": "pddgyck",
       "name": "拼多多果园token",
       "keys": [
         "ddgyck"
@@ -63,32 +90,49 @@
       ]
     },
     {
-      "id": "jddj_cookie",
-      "name": "京东到家cookie",
+      "id": "dygy_ck",
+      "name": "抖音果园cookie",
       "keys": [
-        "sy_cookie_dj"
+        "ddgyCk"
       ],
       "descs_html": [
-        "打开京东到家获取cookie"
+        "功能：签到领水滴、肥料，收取水瓶，每日五次水滴，选择及领取挑战，开宝箱，浇水，三餐礼包，戳鸭子。（浏览任务抓不到包，暂时做不了）",
+        "进入小程序浇水后抓一个Cookie"
       ],
       "settings": [
         {
-          "id": "sy_cookie_dj",
-          "name": "京东到家cookie",
+          "id": "ddgyCk",
+          "name": "抖抖果园cookie",
           "val": "",
           "type": "textarea",
           "autoGrow": false,
           "rows": 4,
-          "desc": ""
+          "desc": "多个账号用@或者换行分割：ck1@ck2"
         }
       ],
       "author": "@fmz200",
       "repo": "https://github.com/fmz200/wool_scripts",
-      "script": "https://raw.githubusercontent.com/Sunert/Script/master/Task/backup/jddj.js",
+      "script": "https://raw.githubusercontent.com/LinYuanovo/scripts/main/dygy.js",
       "icons": [
-        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/jddj.png",
-        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/jddj.png"
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/TikTok.png",
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/TikTok.png"
       ]
+    },
+    {
+      "id": "dyjs",
+      "name": "抖音极速版刷音符",
+      "keys": [
+        "dyheadlist"
+      ],
+      "descs_html": [],
+      "settings": [],
+      "icons": [
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/TikTok.png",
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/TikTok.png"
+      ],
+      "author": "@passerby-b",
+      "repo": "https://github.com/fmz200/wool_scripts",
+      "script": "https://gitee.com/passerby-b/javascript/raw/master/dyjs.js"
     },
     {
       "id": "mt_token",
@@ -191,6 +235,34 @@
       ]
     },
     {
+      "id": "jddj_cookie",
+      "name": "京东到家cookie",
+      "keys": [
+        "sy_cookie_dj"
+      ],
+      "descs_html": [
+        "打开京东到家获取cookie"
+      ],
+      "settings": [
+        {
+          "id": "sy_cookie_dj",
+          "name": "京东到家cookie",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 4,
+          "desc": ""
+        }
+      ],
+      "author": "@fmz200",
+      "repo": "https://github.com/fmz200/wool_scripts",
+      "script": "https://raw.githubusercontent.com/Sunert/Script/master/Task/backup/jddj.js",
+      "icons": [
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/jddj.png",
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/jddj.png"
+      ]
+    },
+    {
       "id": "jddj_fruit",
       "name": "京东到家果园任务",
       "keys": [
@@ -217,6 +289,34 @@
       "author": "@passerby-b",
       "repo": "https://github.com/fmz200/wool_scripts",
       "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/jingdong/jddj_fruit.js"
+    },
+    {
+      "id": "jddj_fruit_collectWater",
+      "name": "京东到家果园水车自动收水滴",
+      "keys": [
+        "jddj_cookies"
+      ],
+      "descs_html": [
+        "多个用逗号分开"
+      ],
+      "settings": [
+        {
+          "id": "jddj_cookies",
+          "name": "CK列表",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 8,
+          "desc": "CK 列表 "
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/jddj.png",
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/jddj.png"
+      ],
+      "author": "@passerby-b",
+      "repo": "https://github.com/fmz200/wool_scripts",
+      "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/jingdong/jddj_fruit_collectWater.js"
     },
     {
       "id": "jddj_bean",
@@ -301,106 +401,6 @@
       "author": "@passerby-b",
       "repo": "https://github.com/fmz200/wool_scripts",
       "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/jingdong/jddj_getPoints.js"
-    },
-    {
-      "id": "jddj_fruit_collectWater",
-      "name": "京东到家果园水车自动收水滴",
-      "keys": [
-        "jddj_cookies"
-      ],
-      "descs_html": [
-        "多个用逗号分开"
-      ],
-      "settings": [
-        {
-          "id": "jddj_cookies",
-          "name": "CK列表",
-          "val": "",
-          "type": "textarea",
-          "autoGrow": true,
-          "rows": 8,
-          "desc": "CK 列表 "
-        }
-      ],
-      "icons": [
-        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/jddj.png",
-        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/jddj.png"
-      ],
-      "author": "@passerby-b",
-      "repo": "https://github.com/fmz200/wool_scripts",
-      "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/jingdong/jddj_fruit_collectWater.js"
-    },
-    {
-      "id": "dyjs",
-      "name": "抖音极速版刷音符",
-      "keys": [
-        "dyheadlist"
-      ],
-      "descs_html": [],
-      "settings": [],
-      "icons": [
-        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/TikTok.png",
-        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/TikTok.png"
-      ],
-      "author": "@passerby-b",
-      "repo": "https://github.com/fmz200/wool_scripts",
-      "script": "https://gitee.com/passerby-b/javascript/raw/master/dyjs.js"
-    },
-    {
-      "id": "didi_fruit",
-      "name": "滴滴橙心果园",
-      "keys": [
-        "ddtoken"
-      ],
-      "descs_html": [
-        "填写token,多账号用英文逗号(,)分开"
-      ],
-      "settings": [
-        {
-          "id": "ddtoken",
-          "name": "token",
-          "val": "",
-          "type": "textarea",
-          "autoGrow": true,
-          "rows": 8,
-          "desc": "token"
-        }
-      ],
-      "icons": [
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/task/didi.png",
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/task/didi.png"
-      ],
-      "author": "@passerby-b",
-      "repo": "https://github.com/fmz200/wool_scripts",
-      "script": "https://raw.githubusercontent.com/passerby-b/didi_fruit/main/dd_fruit.js"
-    },
-    {
-      "id": "ks_fruit",
-      "name": "快手果园",
-      "keys": [
-        "kscookies"
-      ],
-      "descs_html": [
-        "填写cookie,多账号用英文逗号(,)分开"
-      ],
-      "settings": [
-        {
-          "id": "kscookies",
-          "name": "kscookies",
-          "val": "",
-          "type": "textarea",
-          "autoGrow": true,
-          "rows": 8,
-          "desc": "kscookies"
-        }
-      ],
-      "icons": [
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/task/kuaishou.png",
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/task/kuaishou.png"
-      ],
-      "author": "@passerby-b",
-      "repo": "https://github.com/fmz200/wool_scripts",
-      "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/kuaishou/ks_fruit.js"
     }
   ]
 }
