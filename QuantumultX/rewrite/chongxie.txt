@@ -3,7 +3,7 @@
 # 重要提示：某些APP要清除缓存或者重新安装APP，拦截广告才会生效！
 # 项目地址：https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
 # 交流群组：https://t.me/quguanggao
-# 更新时间：2023.01.09 20:58
+# 更新时间：2023.01.10 15:36
 #############################################
 # > "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # > "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -717,7 +717,7 @@ https://api.m.jd.com/client.action\?functionId=lite_advertising url reject
 ^https?:\/\/(?:(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(?:25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/EcomResourceServer\/AdPlayPage\/adinfo url reject-200
 ^https?:\/\/rich\.kuwo\.cn\/AdService\/kaiping\/.+ url reject
 ^https?:\/\/img4\.kwcdn\.kuwo\.cn\/star\/upload\/.+ url reject
-^https?:\/\/.+\.kwcdn\.kuwo\.cn\/star\/upload\/.+ url reject
+# ^https?:\/\/.+\.kwcdn\.kuwo\.cn\/star\/upload\/.+ url reject
 ^https?:\/\/mobilead\.kuwo\.cn\/EcomResourceServer\/adBubble\/.+ url reject
 
 # > keep
