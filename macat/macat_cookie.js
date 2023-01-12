@@ -1,29 +1,30 @@
 /*
-    快手果园获取cookie
-    重写地址:ug-fission.kuaishou.com/rest/n/darwin/orchard/water/watering, 触发类型:request-header
-    进果园浇一次水
-    MITM添加:ug-fission.kuaishou.com
-    每次获取会覆盖之前的ck,请先用boxjs备份
-*/
-const $ = new API("ks_getCookie");
+ * 脚本作用：www.macat.vip获取cookie用于签到
+ * 重写地址：https://www.macat.vip/wp-admin/admin-ajax.php
+ * 触发类型：request-header
+ * 获取方式：签到一次就可以获取cookie
+ * 注意事项：
+ * 更新时间：2023.01.12 21:15
+ */
+
+const $ = new API("macat_cookie");
 !(async () => {
-        if ($.env.isNode) {
-            console.log('仅限iOS设备抓包用!');
-        } else {
-            if ($request.url.indexOf('watering') > -1) {
-                const ck = `${$request.headers['Cookie'] || $request.headers['cookie']}`;
-                // const userId = ck.match(/userId=.+?;/)
-                $.write(ck, '#kscookies');
-                $.notify('快手果园获取cookie成功', '', '');
-                console.log(ck);
-            }
-        }
+    if ($request.url.indexOf('wp-admin/admin-ajax.php') > -1) {
+      const ck = `${$request.headers['Cookie'] || $request.headers['cookie']}`;
+      $.write(ck, '#macat_cookie');
+
+      const body = `${$request.body}`;
+      $.write(body, '#macat_body');
+
+      $.notify('马克喵获取cookie成功', '', ck);
+      console.log('获取到的ck为：' + ck + '\n获取到的body为：' + body);
     }
+  }
 )
 ().catch((e) => {
-    console.log('', `❌失败! 原因: ${e}!`, '');
+  console.log('', `❌失败! 原因: ${e}!`, '');
 }).finally(() => {
-    $.done({});
+  $.done({});
 })
 
 /*********************************** API *************************************/

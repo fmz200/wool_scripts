@@ -119,22 +119,6 @@
       ]
     },
     {
-      "id": "dyjs",
-      "name": "抖音极速版刷音符",
-      "keys": [
-        "dyheadlist"
-      ],
-      "descs_html": [],
-      "settings": [],
-      "icons": [
-        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/TikTok.png",
-        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/TikTok.png"
-      ],
-      "author": "@passerby-b",
-      "repo": "https://github.com/fmz200/wool_scripts",
-      "script": "https://gitee.com/passerby-b/javascript/raw/master/dyjs.js"
-    },
-    {
       "id": "mt_token",
       "name": "美团token",
       "keys": [
@@ -401,6 +385,43 @@
       "author": "@passerby-b",
       "repo": "https://github.com/fmz200/wool_scripts",
       "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/jingdong/jddj_getPoints.js"
+    },
+    {
+      "id": "macat_cookie",
+      "name": "macat.vip签到cookie",
+      "keys": [
+        "macat_cookie",
+        "macat_body"
+      ],
+      "descs_html": [
+        "打开个人中心，点击签到获取cookie"
+      ],
+      "settings": [
+        {
+          "id": "macat_cookie",
+          "name": "macat.vip签到cookie",
+          "val": "",
+          "desc": "",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 8
+        },
+        {
+          "id": "macat_body",
+          "name": "macat.vip签到body",
+          "val": "",
+          "desc": "",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 4
+        }
+      ],
+      "author": "@fmz200",
+      "repo": "https://github.com/fmz200/wool_scripts",
+      "icons": [
+        "https://raw.githubusercontent.com/fmz200/icons/master/apps/macat.png",
+        "https://raw.githubusercontent.com/fmz200/icons/master/apps/macat.png"
+      ]
     }
   ]
 }
