@@ -51,6 +51,7 @@ hostname = app.10099.com.cn, discardrp.umetrip.com, sdk.alibaba.com.ailbaba.me, 
 
 # > 51信用卡管家
 ^https?:\/\/pic\.u51\.com\/sfs-gateway\/api\/v1\/download\/fdee084b34be406bb1dca0b3f95e00ca91eb url reject
+^https?:\/\/api\.u51\.com\/(generic-config-gateway|rs-resys)\/api\/v\d\/(creditpage-config|recommend) url reject-200
 
 # > 58
 ^https?:\/\/.+?\.58cdn\.com\.cn\/brandads\/ url reject-200
