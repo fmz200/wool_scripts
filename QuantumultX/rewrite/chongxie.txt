@@ -3,7 +3,7 @@
 # 重要提示：某些APP要清除缓存或者重新安装APP，拦截广告才会生效！
 # 项目地址：https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
 # 交流群组：https://t.me/quguanggao
-# 更新时间：2023.01.31 21:15
+# 更新时间：2023.02.03 18:56
 #############################################
 # > "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # > "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -50,9 +50,8 @@ hostname = quanguo.mygolbs.com, open.taou.com, api.taou.com, track.mm.taou.com, 
 ^https?:\/\/vip7\.fzwdyy\.cn:8083\/api\/(getAdvertInfo|getGOOGAdvert) url reject-200
 
 # > 51信用卡管家
-^https?:\/\/pic\.u51\.com\/sfs-gateway\/api\/v1\/download\/fdee084b34be406bb1dca0b3f95e00ca91eb url reject
 ^https?:\/\/api\.u51\.com\/(generic-config-gateway|rs-resys)\/api\/v\d\/(creditpage-config|recommend) url reject-200
-^https?:\/\/api\.u51\.com\/liabilitygateway\/api\/v\d\/homepage\/liabilityline url response-body "operationResourceDTO" : \[.*\], response-body "operationResourceDTO" : [],
+^https?:\/\/api\.u51\.com\/liabilitygateway\/api\/v\d\/homepage\/liabilityline url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/51card.js
 ^https?:\/\/api\.u51\.com\/generic-config-gateway\/api\/v\d\/guanjia\/me-tab2\/config url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/51card.js
 
 # > 58

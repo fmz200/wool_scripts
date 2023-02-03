@@ -1,25 +1,21 @@
-let url = $request.url
-let method = $request.method
-let body = null
-let obj = null
+// 去除首页横幅广告，去除我的广告（只保留设置，个人资料）
 
-switch (true) {
-    case url.includes("api.u51.com/generic-config-gateway/api"):
-        obj = JSON.parse($response.body)
-        if (obj.meTabConfigExts) {
-            let reserve = ['设置', '我的账单']
-            obj.meTabConfigExts = obj.meTabConfigExts.filter(item => reserve.includes(item.meTabConfigs[0].title))
-            obj.operationResourceDTO = undefined
-            body = JSON.stringify(obj)
-        }
-        break
-    default:
-        console.log("匹配到其他url：\n" + url)
-        break
+if (!$response.body) {
+  $done({});
+}
+const url = $request.url;
+let obj = JSON.parse($response.body);
+
+if (obj?.operationResourceDTO) {
+  obj.operationResourceDTO = [];
 }
 
-if (body) {
-    $done({body})
-} else {
-    $done({})
+if (url.includes("api.u51.com/generic-config-gateway/api")) {
+  if (obj?.meTabConfigExts) {
+    let reserve = ['设置']
+    obj.meTabConfigExts = obj.meTabConfigExts.filter(item => reserve.includes(item.meTabConfigs[0].title));
+  }
 }
+
+body = JSON.stringify(obj);
+$done({body});
