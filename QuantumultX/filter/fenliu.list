@@ -3,7 +3,7 @@
 # 重要提示：某些APP要清除缓存或者重新安装APP，拦截广告才会生效！
 # 项目地址：https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/fenliu.list
 # 交流群组：https://t.me/quguanggao
-# 更新时间：2023.02.02 09:40
+# 更新时间：2023.02.04 17:20
 # 策略选择：reject
 #############################################
 # > "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
@@ -401,7 +401,7 @@ HOST-SUFFIX,duapps.com, reject
 HOST-SUFFIX,cpro.baidu.com, reject
 HOST-SUFFIX,pos.baidu.com, reject
 HOST,afd.baidu.com, reject
-HOST,als.baidu.com, reject
+# HOST,als.baidu.com, reject
 HOST,duclick.baidu.com, reject
 HOST,mobads.baidu.com, reject
 HOST,mobads-logs.baidu.com, reject
@@ -542,7 +542,7 @@ HOST-SUFFIX,yingxiao.baidu.com, reject
 HOST-SUFFIX,znsv.baidu.com, reject
 HOST-SUFFIX,baidustatic.com, reject
 HOST-SUFFIX,afd.baidu.com, reject
-HOST-SUFFIX,als.baidu.com, reject
+# HOST-SUFFIX,als.baidu.com, reject
 HOST-SUFFIX,duclick.baidu.com, reject
 HOST-SUFFIX,hm.baidu.com, reject
 HOST-SUFFIX,hmma.baidu.com, reject
