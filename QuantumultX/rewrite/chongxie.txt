@@ -3,7 +3,7 @@
 # 重要提示：某些APP要清除缓存或者重新安装APP，拦截广告才会生效！
 # 项目地址：https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
 # 交流群组：https://t.me/quguanggao
-# 更新时间：2023.02.03 22:56
+# 更新时间：2023.02.04 10:36
 #############################################
 # > "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # > "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -1291,6 +1291,8 @@ https://apis.lifeweek.com.cn/api/baseConfig/getIosNewConfig url reject
 ^https?:\/\/iadmusicmat\.music\.126\.net\/.+\.jpg url reject
 ^http:\/\/interface\.music\.163\.com\/eapi\/ad\/config\/get url reject
 ^https?:\//m\.ads\.8le8le\.com\/adShow url reject
+# 会员续费弹窗提醒
+^https:\/\/interface3\.music\.163\.com\/eapi\/vipauth\/app\/auth\/recycle\? url reject-dict
 # > 网易邮箱
 ^https?:\/\/appconf\.mail\.163\.com\/mmad\/ url reject-200
 https:\/\/appconf\.mail\.163\.com\/mmad\/get\.do url reject
