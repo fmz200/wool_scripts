@@ -1141,6 +1141,7 @@ https://apis.lifeweek.com.cn/api/baseConfig/getIosNewConfig url reject
 
 # > 天天基金
 ^https?:\/\/j5\.dfcfw\.com\/WG\/conf\/202[0-9]{5}/.*.(jpg|png) url reject-200
+^https?:\/\/j5\.dfcfw\.com\/WG\/appconf\/202[0-9]{5}/.*.(jpg|png) url reject-200
 
 # > 同花顺
 ^https?:\/\/adm\.10jqka\.com\.cn\/interface\/ad\/recommend url reject-200
