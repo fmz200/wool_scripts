@@ -26,7 +26,7 @@
 ## ✅ 一些说明：
 ▶️ 由于张军大佬隐退，所以我接管进行日常更新，故本库中存储的配置就是张军大佬的且是最新的，不要再找了。
 
-▶️ 每个配置文件的开头部分都有使用说明，且每个文件夹中都有相应的以`.md`结尾的教程文件，使用前请先看说明。
+▶️ 每个配置文件的开头部分都有使用说明，且每个文件夹中都有相应的文件名为`00-How-To-Use-xxx.md`的教程文件，使用前请先看说明。
 
 ▶️ 如果你在使用过程中有问题欢迎提交issue或者进群交流，群链接在本文件上方。
 
@@ -46,8 +46,6 @@
 > https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/DouYin/DouYin.list
 > 
 > https://raw.githubusercontent.com/lwd-temp/anti-ip-attribution/main/generated/quantumultx.list
-> 
-> https://raw.githubusercontent.com/ddgksf2013/Filter/master/anti-ip-attribution.list
 ---
 
 ## 🧚‍♂️ 特别鸣谢
@@ -56,7 +54,6 @@
 - [@blackmatrix7](https://github.com/blackmatrix7)
 - [@chavyleung](https://github.com/chavyleung)
 - [@DivineEngine](https://github.com/DivineEngine)
-- [@ddgksf2013](https://github.com/ddgksf2013)
 - [@I-am-R-E](https://github.com/I-am-R-E)
 - [@KOP-XIAO](https://github.com/KOP-XIAO)
 - [@NobyDa](https://github.com/NobyDa)

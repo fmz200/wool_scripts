@@ -39,13 +39,13 @@ https://raw.githubusercontent.com/fmz200/wool_scripts/main/boxjs/fmz200.boxjs.js
 
 ### 6️⃣ Task订阅：
 ```
-https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/fmz200_gallery.json
+https://raw.githubusercontent.com/fmz200/wool_scripts/main/boxjs/fmz200_gallery.json
 ```
 
 ### 7️⃣ 获取cookie合集
 - 包含**NobyDa，chavyleung，Sunert**等：
 ```
-https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/fmz200_cookies.conf
+https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/cookies.snippet
 ```
 
 ### 📮 答疑解惑
