@@ -8,8 +8,9 @@
  */
 
 const $ = new API("macat_cookie");
+console.log(`当前请求的url: ${$request.url}`);
 !(async () => {
-    if ($request.url.indexOf('wp-admin/admin-ajax.php') > -1) {
+    if ($request.url.indexOf('admin-ajax.php') > -1) {
       const ck = `${$request.headers['Cookie'] || $request.headers['cookie']}`;
       $.write(ck, '#macat_cookie');
 
@@ -23,6 +24,7 @@ const $ = new API("macat_cookie");
 )
 ().catch((e) => {
   console.log('', `❌失败! 原因: ${e}!`, '');
+
 }).finally(() => {
   $.done({});
 })
