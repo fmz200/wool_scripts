@@ -13,8 +13,14 @@ https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/config/la
 
 ### 2️⃣ 重写：
 #### 🔔 使用方法：[点击查看](../QuantumultX/rewrite/00-How-To-Use-Rewrite.md)
+#### 去广告合集，不包含微博
 ```
 https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
+```
+#### 微博去广告，RuCu6包含净化，看个人喜好二选一即可
+```
+https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/weibo.snippet
+https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/weibo.snippet
 ```
 
 ### 3️⃣ 分流：
