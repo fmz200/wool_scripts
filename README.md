@@ -38,7 +38,7 @@
 
 ### 1️⃣ QuantumultX配置
 
-> 📍 配置前建议先看一看 [QuanX 小白配置图文教程](How-To-Use.md)，这里包括了从准备配置到配置完成的详细说明。
+> 📍 配置前建议先看一看 [QuanX 小白配置图文教程](./QuantumultX/How-To-Use.md)，这里包括了从准备配置到配置完成的详细说明。
 >
 > 📍 这里也有**Hell Cell**大佬的[视频教程](https://youtu.be/e8E8dtFaFUk)，强烈建议小白在配置前认真观看几遍！
 
