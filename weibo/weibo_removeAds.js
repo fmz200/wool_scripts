@@ -31,7 +31,7 @@ function modifyMain(url, data) {
       }
       // 1.1、下标是1的为热搜模块
       dataModify.channelInfo.channels[0].payload.items[index].data.group
-        = removeHotSearchAds(dataModify.channelInfo.channels[0].payload.items[1].data.group);
+        = removeHotSearchAds(dataModify.channelInfo.channels[0].payload.items[index].data.group);
 
       // 1.2、下标为2的是轮播图模块
       console.log('移除轮播模块💕💕');
@@ -52,7 +52,7 @@ function modifyMain(url, data) {
     }
 
     // 2.1、下标是1的为热搜模块
-    dataModify.items[index].data.group = removeHotSearchAds(dataModify.items[1].data.group);
+    dataModify.items[index].data.group = removeHotSearchAds(dataModify.items[index].data.group);
 
     // 2.2、下标为2的是轮播图模块
     console.log('移除轮播图模块🤣🤣');
