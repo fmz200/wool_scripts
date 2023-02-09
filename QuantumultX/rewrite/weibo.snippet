@@ -3,7 +3,7 @@
 # 重写配置：https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/weibo.snippet, tag=微博去广告@fmz200, update-interval=172800, opt-parser=false, enabled=true
 # 项目地址：https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/weibo.snippet
 # 交流群组：https://t.me/quguanggao
-# 更新时间：2023.02.08 14:30
+# 更新时间：2023.02.09 10:30
 #############################################
 # > "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # > "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -23,19 +23,5 @@ hostname = *.uve.weibo.com, weibointl.api.weibo.cn, tqt.weibo.cn, mapi.weibo.com
 # > 微博非会员设置tab皮肤
 ^https://new.vip.weibo.cn/littleskin/preview url script-response-body https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_main.js
 
-# > 微博国际版_推荐tab|热门tab去广告
-^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/statuses\/unread_hot_timeline url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/weibo_json.js
-# > 微博国际版_关注tab去广告
-^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/statuses\/friends_timeline url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/weibo_json.js
-# > 微博国际版_趋势tab
-^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/cardlist url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/weibo_json.js
-# > 微博国际版_屏蔽search_suggest
-^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/page\/get_search_suggest url reject-dict
-# > 微博国际版_趋势tab去广告
-^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=trends url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/weibo_json.js
-# > 微博国际版_屏蔽searching_info
-^ttps?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*user&a=get_searching_info url reject
-# > 微博国际版_屏蔽search_topic
-^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=search_topic url reject
-# > 微博国际版_屏蔽开屏广告
-^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*ads url reject
+# > 微博国际版，你需要单独引用下方的链接并打开解析器
+# https://raw.githubusercontent.com/kokoryh/Script/master/Surge/module/weibo_intl.sgmodule
