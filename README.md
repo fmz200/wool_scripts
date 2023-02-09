@@ -26,11 +26,15 @@
 
 ## ✅ 一些说明：
 
-▶️ 由于张军大佬隐退，所以我接管进行日常更新，故本库中存储的配置就是张军大佬的且是最新的，不要再找了。
+▶️ 由于张军大佬隐退，所以我接管进行日常更新，故本库中存储的就是张军大佬的且是最新的配置，不要再问了。
 
-▶️ 每个配置文件的开头部分都有使用说明，且每个文件夹中都有相应的文件名为`00-How-To-Use-xxx.md`的教程文件，使用前请先看说明。
+▶️ 每个配置文件的开头部分都有使用说明，且每个文件夹中都有文件名为`00-How-To-Use-xxx.md`的教程文件，使用前请先看说明。
 
-▶️ 如果你在使用过程中有问题欢迎提交issue或者进群交流，群链接在本文件上方。
+▶️ 如果你在使用过程中有问题欢迎提交pr或issue，也可进群交流，群链接在本页面上方。
+
+▶️ 本库中大部分内容收集于互联网开源项目，在此对原作者表示衷心的感谢。同时，我们谴责将他人内容标注为自己原创的行为。
+
+▶️ 使用本项目中的内容所造成的一切后果，均由使用者承担。
 
 ---
 
@@ -80,13 +84,14 @@
 - [@chavyleung](https://github.com/chavyleung)
 - [@DivineEngine](https://github.com/DivineEngine)
 - [@I-am-R-E](https://github.com/I-am-R-E)
+- [@kokoryh](https://github.com/kokoryh)
 - [@KOP-XIAO](https://github.com/KOP-XIAO)
 - [@NobyDa](https://github.com/NobyDa)
 - [@Orz-3](https://github.com/Orz-3)
 - [@RuCu6](https://github.com/RuCu6)
 - [@Tartarus2014](https://github.com/Tartarus2014)
 
-## 🧚‍♀️ 觉得不错 欢迎Star 🌟
+## 🧚‍♀️ 欢迎星标 🌟
 
 ![Star](https://api.star-history.com/svg?repos=fmz200/wool_scripts&type=Date)
 
