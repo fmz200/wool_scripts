@@ -3,13 +3,14 @@
 # 重要提示：某些APP要清除缓存或者重新安装APP，拦截广告才会生效！
 # 项目地址：https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
 # 交流群组：https://t.me/quguanggao
+# 支持数量：约366款app
 # 更新时间：2023.02.10 09:36
 #############################################
-# > "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
-# > "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
-# > "reject-img"    策略返回 HTTP 状态码 200,同时附带 1px gif
-# > "reject-dict"   策略返回 HTTP 状态码 200,同时附带一个空的 JSON 对象
-# > "reject-array"  策略返回 HTTP 状态码 200,同时附带一个空的 JSON 数组
+# "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
+# "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
+# "reject-img"    策略返回 HTTP 状态码 200,同时附带 1px gif
+# "reject-dict"   策略返回 HTTP 状态码 200,同时附带一个空的 JSON 对象
+# "reject-array"  策略返回 HTTP 状态码 200,同时附带一个空的 JSON 数组
 #############################################
 # 常见问题：
 # 1️⃣：我知道规则，不知道主机名怎么办？
@@ -345,7 +346,6 @@ https?:\/\/.+\.iqiyipic\.com\/image\/20*_100000 url reject
 ^https:\/\/api\.gamer\.com\.tw\/mobile_app\/anime\/v\d/(token|m3u8).php\? url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Bahamut/BahamutAnimeAds.js
 
 # > 滴滴出行
-# 推荐英文版
 https?://res\.xiaojukeji\.com\/resapi\/activity\/mget url reject-dict
 https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNotices) url reject
 # > 滴滴
@@ -526,7 +526,7 @@ https://zone.guiderank-app.com/guiderank-web/app/ad/listLaunchADByCity.do url re
 # 开屏广告
 ^https?:\/\/guanyu\.longfor\.com\/app-server\/api\/v1\/main\/start url reject
 
-#> 广汽本田
+# > 广汽本田
 ^https?:\/\/gha\.ghac\.cn\:8081\/base\/app\/api\/ad\/query\?adType=1 url reject-200
 
 
@@ -1439,13 +1439,13 @@ http:\/\/analytics\.163\.com\/ntes url reject
 ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/trending url response-body queries":\[.+\] response-body queries":[]
 ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/surprisebox\/(open|get_style)\? url reject-array
 
-# 希尔顿荣誉客会
+# > 希尔顿荣誉客会
 ^https?:\/\/wcprd\.hilton\.com\.cn\/app-middleware\/graphql\?type=splashAd url reject-200
 
-# 向日葵
+# > 向日葵
 ^https?:\/\/client-api\.oray\.com\/materials\/SLCC_IOS_STARTUP\?lang=zh-Hans-CN url reject-200
 
-# 心悦俱乐部
+# > 心悦俱乐部
 ^https?:\/\/bgw\.xinyue\.qq\.com\/xyapi\.PageService\/GetIndexPopFlash url reject-200
 
 # > 兴业证券
@@ -1713,8 +1713,4 @@ https://new-app-api.ylyk.com/v1/user/myinfo/adviser url reject
 
 # > 浙里办
 ^https:\/\/portal\.zjzwfw\.gov\.cn\/app_api\/appHome\/selectStartPic url reject-200
-
-
-
-# > 其他广告
 
