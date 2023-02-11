@@ -1712,6 +1712,8 @@ https://new-app-api.ylyk.com/v1/user/myinfo/adviser url reject
 
 # > 转转（中间一行小图标被误杀了）
 ^https?:\/\/app\.zhuanzhuan\.com\/zzx\/transfer\/getConfigInfo url reject-200
+# 转转右下角悬浮广告
+^https?:\/\/app\.zhuanzhuan\.com\/zz\/transfer\/userred\?scene=homePage url reject-200
 
 # > 掌上英雄联盟
 ^https?:\/\/ossweb-img\.qq\.com\/upload\/adw\/image\/[0-9]{3}\/202[0-9]{5}\/[a-z0-9]{32}\.(jpg|jpeg) url reject-200
