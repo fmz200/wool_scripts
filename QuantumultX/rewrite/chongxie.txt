@@ -1506,7 +1506,7 @@ http:\/\/analytics\.163\.com\/ntes url reject
 
 # >>>>>>>>>>>>>>> ✅ Y ✅ <<<<<<<<<<<<<<
 # > 云闪付
-#（默认关闭,只使用分流去云闪付广告）
+# 默认关闭,只使用分流去云闪付广告
 # > ^https:\/\/wallet\.95516\.com\/s\/wl\/icon\/long url reject
 # > ^https?:\/\/(tysdk|ads)\.95516\.com url reject-dict
 
