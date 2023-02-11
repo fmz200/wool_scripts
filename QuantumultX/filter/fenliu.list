@@ -22,12 +22,15 @@ host-keyword, sdk.open.talk.getui.com, reject
 host-keyword, cm-10-35.getui.com, reject
 host-keyword, c-hzgt2.getui.com, reject
 HOST-SUFFIX,sdk.open.talk.igexin.com, reject
+
 # > 云闪付
-host-keyword, switch.cup.com.cn, reject
-host-keyword, sdk.open.talk.getui.net, reject
-host-keyword, sdk-conf.getui.com, reject
-host-keyword, cm-10-138.getui.com, reject
-host-keyword, ads.95516.com, reject
+HOST, ads.95516.com, reject
+HOST, cm-10-138.getui.com, reject
+HOST, sdk.open.talk.getui.net, reject
+HOST, sdk-conf.getui.com, reject
+HOST, switch.cup.com.cn, reject
+HOST, tysdk.95516.com, reject
+
 # > 中信银行
 HOST-SUFFIX,sis.jpush.io, reject
 HOST-SUFFIX,s.jpush.cn, reject
