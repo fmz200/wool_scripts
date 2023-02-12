@@ -11,12 +11,12 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ql_logo.png"
     },
     {
-      "name": "pinduoduo",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/pinduoduo.png"
-    },
-    {
       "name": "sheep",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/sheep.png"
+    },
+    {
+      "name": "pinduoduo",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/pinduoduo.png"
     },
     {
       "name": "Weibo",
@@ -27,12 +27,12 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/weibotalk.png"
     },
     {
-      "name": "macat",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/macat.png"
-    },
-    {
       "name": "aliYunPan",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/aliYunPan.png"
+    },
+    {
+      "name": "macat",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/macat.png"
     },
     {
       "name": "Ads",
@@ -45,6 +45,14 @@
     {
       "name": "OpenAI",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/OpenAI.png"
+    },
+    {
+      "name": "OpenAI-01",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/OpenAI-01.png"
+    },
+    {
+      "name": "OpenAI-02",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/OpenAI-02.png"
     },
     {
       "name": "Quantumult_X",
