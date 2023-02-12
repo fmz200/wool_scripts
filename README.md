@@ -1,6 +1,6 @@
 # wool_scripts
 
-## 致敬开源精神 举报死户口本
+## 致敬开源精神 净化网络环境
 
 ### 不只是 QuantumultX 脚本
 
@@ -52,12 +52,13 @@
 | 2   | 重写      | `去广告合集`      | [chongxie.txt](https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt)              | [fmz200](https://github.com/fmz200) | 去广告合集，不包含微博                 | [点击查看](./QuantumultX/rewrite/00-How-To-Use-Rewrite.md) |
 | 3   | 重写      | `微博去广告`      | [weibo.snippet](https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/weibo.snippet)                          | [RuCu6](https://github.com/RuCu6)   | 包含净化，看个人喜好二选一即可             | [点击查看](./QuantumultX/rewrite/00-How-To-Use-Rewrite.md) |
 | 4   | 重写      | `微博去广告`      | [weibo.snippet](https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/weibo.snippet)            | [fmz200](https://github.com/fmz200) | 从 chongxie.txt 单独提取出来的配置    | [点击查看](./QuantumultX/rewrite/00-How-To-Use-Rewrite.md) |
-| 5   | 重写      | `获取cookie合集` | [cookies.snippet](https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/cookies.snippet)        | [fmz200](https://github.com/fmz200) | 包含NobyDa，chavyleung，Sunert等 | 暂无                                                 |
+| 5   | 重写      | `获取cookie合集` | [cookies.snippet](https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/cookies.snippet)        | [fmz200](https://github.com/fmz200) | 包含NobyDa，chavyleung，Sunert等 | 暂无                                                     |
 | 6   | 分流      | `去广告合集`      | [fenliuxiu.list](https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/fenliuxiu.list)           | [fmz200](https://github.com/fmz200) | 无                           | [点击查看](./QuantumultX/filter/00-How-To-Use-Filter.md)   |
 | 7   | 分流      | `分流修正`       | [fenliuxiuzheng.list](https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/fenliuxiuzheng.list) | [fmz200](https://github.com/fmz200) | 无                           | [点击查看](./QuantumultX/filter/00-How-To-Use-Filter.md)   |
 | 8   | 分流      | `屏蔽苹果系统更新`   | [apple.snippet](https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/apple.snippet)             | [fmz200](https://github.com/fmz200) | 有效性未知                       | [点击查看](./QuantumultX/filter/00-How-To-Use-Filter.md)   |
 | 9   | BoxJS订阅 | `BoxJS订阅`    | [fmz200.boxjs.json](https://raw.githubusercontent.com/fmz200/wool_scripts/main/boxjs/fmz200.boxjs.json)                  | [fmz200](https://github.com/fmz200) | 先查看使用教程                     | [点击查看](https://docs.boxjs.app)                         |
-| 10  | Task订阅  | `Task订阅`     | [fmz200_gallery.json](https://raw.githubusercontent.com/fmz200/wool_scripts/main/boxjs/fmz200_gallery.json)              | [fmz200](https://github.com/fmz200) | 需要先获取cookie或token再运行        | 暂无                                                 |
+| 10  | Task订阅  | `Task订阅`     | [fmz200_gallery.json](https://raw.githubusercontent.com/fmz200/wool_scripts/main/boxjs/fmz200_gallery.json)              | [fmz200](https://github.com/fmz200) | 需要先获取cookie或token再运行        | 暂无                                                     |
+| 11  | icons图标 | `icons图标`    | [icons-all.json](https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/icons-all.json)                        | [fmz200](https://github.com/fmz200) | 包含APP，机场，LPL等               | 暂无                                                     |
 
 ---
 
