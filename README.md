@@ -16,7 +16,7 @@
 
 <p align="center">
   <a href="https://github.com/fmz200/wool_scripts">
-    <img src="pic/logo/wool.png" alt="Logo" width="130" height="130">
+    <img src="pic/logo/wool.png" alt="Logo" width="200" height="200">
   </a>
 
 <h2 align="center">wool scripts</h2>
