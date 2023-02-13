@@ -60,6 +60,26 @@
 | 10  | Task订阅  | `Task订阅`     | [fmz200_gallery.json](https://raw.githubusercontent.com/fmz200/wool_scripts/main/boxjs/fmz200_gallery.json)              | [fmz200](https://github.com/fmz200) | 需要先获取cookie或token再运行        | 暂无                                                     |
 | 11  | icons图标 | `icons图标`    | [icons-all.json](https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/icons-all.json)                        | [fmz200](https://github.com/fmz200) | 包含APP，机场，LPL等               | 暂无                                                     |
 
+
+### 2️⃣ Surge配置
+
+> 📍 你可以借助转换工具将重写和分流添加到Surge中，项目地址如下：[Surge](https://github.com/chengkongyiban/Surge)
+
+
+### 3️⃣ Loon配置
+
+> 📍 你可以借助转换工具将重写和分流添加到Loon中，项目地址如下：[Loon](https://github.com/chengkongyiban/Loon)
+
+
+### 4️⃣ ShadowRocket配置
+
+> 📍 你可以借助转换工具将重写和分流添加到ShadowRocket中，项目地址如下：[ShadowRocket](https://github.com/chengkongyiban/shadowrocket)
+
+
+### 5️⃣ Stash配置
+
+> 📍 你可以借助转换工具将重写和分流添加到Stash中，项目地址如下：[stash](https://github.com/chengkongyiban/stash)
+
 ---
 
 ## 🚸 常见问题
@@ -83,6 +103,7 @@
 - [@app2smile](https://github.com/app2smile)
 - [@blackmatrix7](https://github.com/blackmatrix7)
 - [@chavyleung](https://github.com/chavyleung)
+- [@chengkongyiban](https://github.com/chengkongyiban)
 - [@DivineEngine](https://github.com/DivineEngine)
 - [@I-am-R-E](https://github.com/I-am-R-E)
 - [@kokoryh](https://github.com/kokoryh)
