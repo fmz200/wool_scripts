@@ -29,13 +29,18 @@
     {
       "name": "aliYunPan",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/aliYunPan.png"
-    },    {
+    },
+    {
       "name": "feizhu",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/feizhu.png"
     },
     {
       "name": "xianyu",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/xianyu.png"
+    },
+    {
+      "name": "ximalaya",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ximalaya.png"
     },
     {
       "name": "macat",
