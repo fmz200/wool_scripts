@@ -4,7 +4,7 @@
 # 项目地址：https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
 # 交流群组：https://t.me/quguanggao
 # 支持数量：约366款app
-# 更新时间：2023.02.11 10:26
+# 更新时间：2023.02.14 10:36
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -409,8 +409,8 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 # > 飞客茶馆
 ^https?:\/\/ptf\.flyertrip\.com\/common\/cf\/.*.jpg url reject-200
 ^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=advis url reject
-^https?:\/\/47\.100\.65\.202\/api\/mobile\/index\.php\?version=\d&mobile=yes&module=basicdata&type=forumlist url response-body adv response-body ddgksf2013
-^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=threadpost&.+?&page=1 url script-response-body https://gitlab.com/fmz200/cuttlefish/-/raw/master/Crack/fly.js
+^https?:\/\/47\.100\.65\.202\/api\/mobile\/index\.php\?version=\d&mobile=yes&module=basicdata&type=forumlist url response-body adv response-body random_body
+^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=threadpost&.+?&page=1 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/fly.js
 
 # > 番茄小说
 # 去章末广告
@@ -656,8 +656,8 @@ https://api.m.jd.com/client.action\?functionId=lite_advertising url reject
 ^https?:\/\/m\.360buyimg\.com\/babel\/jfs\/t1\/180291\/5\/23800\/294871\/625f5da2E13ac0ba3\/230238c767c61b6d\.jpg url reject
 # > 京喜
 ^https:\/\/img14.360buyimg.com\/mcoss\/jfs\/t1\/183719\/8\/13358\/190450\/60e82bedE10b64e23\/ url reject-200
-^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising url response-body jdLiteAdvertisingVO response-body ddgksf2013
-^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_SmartPush url response-body pushData response-body ddgksf2013
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising url response-body jdLiteAdvertisingVO response-body random_body
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_SmartPush url response-body pushData response-body random_body
 
 # > 京东金融
 ^https:\/\/m.360buyimg.com\/mobilecms\/s1125x2436_jfs\/ url reject-200
@@ -736,7 +736,7 @@ https://api.m.jd.com/client.action\?functionId=lite_advertising url reject
 ^https?:\/\/pocketuni\.net\/\?app=api&mod=Message&act=ad url reject-200
 
 # > 酷安
-^https?:\/\/api\.coolapk\.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList) url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/coolapk.js
+^https?:\/\/api\.coolapk\.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList) url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/coolapk.js
 ^https?://api-access\.pangolin-sdk-toutiao\.com/api/ad/union/sdk url reject
 ^https?:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch url reject-dict
 
@@ -972,25 +972,25 @@ https://dl-cu-hz.lechange.cn/oms-online/advertisementPush/* url reject
 
 # > 人人视频
 # > RRTV_level_info
-^https?:\/\/api\.rr\.tv\/\w{3}\/level\/info url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/rrtv_json.js
+^https?:\/\/api\.rr\.tv\/\w{3}\/level\/info url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/rrtv_json.js
 # > RRTV_屏蔽軟件更新
 ^https?:\/\/api\.rr\.tv\/.*?Version url reject
 # > RRTV_去除首頁廣告
-https://api.rr.tv/v3plus/index/channel\?pageNum=1&position=CHANNEL_INDEX url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/rrtv_json.js
+https://api.rr.tv/v3plus/index/channel\?pageNum=1&position=CHANNEL_INDEX url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/rrtv_json.js
 # > RRTV_去除廣場tab
-^https?:\/\/api\.rr\.tv\/app\/config\/h5NativeBar url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/rrtv_json.js
+^https?:\/\/api\.rr\.tv\/app\/config\/h5NativeBar url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/rrtv_json.js
 # > RRTV_去除商城廣告
-^https?:\/\/api\.rr\.tv\/v3plus\/index\/channel\?pageNum=1&position=CHANNEL_MY url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/rrtv_json.js
+^https?:\/\/api\.rr\.tv\/v3plus\/index\/channel\?pageNum=1&position=CHANNEL_MY url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/rrtv_json.js
 # > RRTV_Ad_List
-^https:\/\/api\.rr\.tv\/user\/privilege\/list url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/rrtv_json.js
+^https:\/\/api\.rr\.tv\/user\/privilege\/list url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/rrtv_json.js
 # > RRTV_Ad_All
-^https:\/\/api\.rr\.tv\/ad\/getAll url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/rrtv_json.js
+^https:\/\/api\.rr\.tv\/ad\/getAll url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/rrtv_json.js
 # > RRTV_Get_Drama
-^https:\/\/api\.rr\.tv\/drama\/app\/get_combined_drama_detail url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/rrtv_json.js
+^https:\/\/api\.rr\.tv\/drama\/app\/get_combined_drama_detail url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/rrtv_json.js
 # > RRTV_Watch_V4
-https://api.rr.tv/watch/v4 url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/rrtv_json.js
+https://api.rr.tv/watch/v4 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/rrtv_json.js
 # > RRTV_User_Info
-https://api.rr.tv/user/profile url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/rrtv_json.js
+https://api.rr.tv/user/profile url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/rrtv_json.js
 # > RRTV_屏蔽限時彈窗
 https://api.rr.tv/storage/business/rootName/app/homePage\?dataType=JSON url reject-dict
 
@@ -1395,44 +1395,48 @@ http:\/\/analytics\.163\.com\/ntes url reject
 
 # > 喜马拉雅_修复轮播Ad失效Bug
 ^https?:\/\/.*\.xima.*\.com\/discovery-feed\/focus\/queryF url reject
-# > 喜马拉雅_播放页_Live
+# 喜马拉雅_播放页_Live
 ^https?:\/\/.*\.xima.*\.com\/mobile-playpage\/view\/ url reject
-# > 喜马拉雅_MyInfo红点提醒
+# 喜马拉雅_MyInfo红点提醒
 ^https?:\/\/.*\.xima.*\.com\/chaos-notice-web\/v1\/message\/preview\/list url reject
-# > 喜马拉雅_屏蔽大红包Tips
+# 喜马拉雅_屏蔽大红包Tips
 ^https?:\/\/.*\.xima.*\.com\/social-web\/bottomTabs\/dynamicEntrance\/status url reject
-# > 喜马拉雅_屏蔽gif弹窗Ad
+# 喜马拉雅_屏蔽gif弹窗Ad
 ^https?:\/\/.*\.xmcdn\.com\/\w{8}\/\w{4}-\w{16}\/.+gif$ url reject
-# > 喜马拉雅_屏蔽Aged请求
+# 喜马拉雅_gslb
+^https?:\/\/gslb.*\.xima.*\.com\/ url reject
+# 喜马拉雅_屏蔽Aged请求
 ^https?:\/\/.*\.xima.*\.com\/(dog-portal\/checkOld|(child-mobile\/child|aged-mobile\/aged)\/mode\/query) url reject
-# > 喜马拉雅_部分Tab弹窗
+# 喜马拉雅_部分Tab弹窗
 ^https?:\/\/.*\.xima.*\.com\/discovery-feed\/isShowUserGiftPendant url reject
-# > 喜马拉雅_屏蔽红点提示
+# 喜马拉雅_屏蔽红点提示
 ^https?:\/\/.*\.xima.*\.com\/mobile-user\/unread url reject
-# > 喜马拉雅_屏蔽minor请求
+# 喜马拉雅_屏蔽minor请求
 ^https?:\/\/.*\.xima.*\.com/mobile-user/minorProtection/pop url reject
-# > 喜马拉雅_屏蔽隐私搜集
+# 喜马拉雅_屏蔽隐私搜集
 ^https?:\/\/.*\.xima.*\.com\/collector\/xl\/v\d url reject
-# > 喜马拉雅_屏蔽版本更新
+# 喜马拉雅_屏蔽版本更新
 ^https?:\/\/.*\.xima.*\.com\/butler-portal\/versionCheck url reject
-# > 喜马拉雅_屏蔽开屏广告
+# 喜马拉雅_屏蔽开屏广告
 ^https?:\/\/(adse\.wsa|adse|adbehavior|xdcs-collector)\.xima.*\.com\/.* url reject
-# > 喜马拉雅_屏蔽位置请求
+# 喜马拉雅_屏蔽位置请求
 ^https?:\/\/.*\.xima.*\.com\/mobile\/discovery\/v\d\/location url reject
-# > 喜马拉雅_屏蔽热搜词
+# 喜马拉雅_屏蔽热搜词
 ^https?:\/\/.*\.xima.*\.com\/hotWord url reject
-# > 喜马拉雅_屏蔽搜索框定时_Ad
+# 喜马拉雅_屏蔽搜索框定时_Ad
 ^https?:\/\/.*\.xima.*\.com\/guideWord url reject
-# > 喜马拉雅_屏蔽实时Ad请求
+# 喜马拉雅_屏蔽实时Ad请求
 ^https?:\/\/.*\.xima.*\.com\/api\/v\d\/adRealTime url reject
-# > 喜马拉雅_屏蔽ting_Ad
+# 喜马拉雅_屏蔽ting_Ad
 ^https?:\/\/.*\.xima.*\.com\/ting\/(loading|feed|home)? url reject
-# > 喜马拉雅_屏蔽首页滚动_Ad
-^https?:\/\/.*\.xima.*\.com\/discovery-feed\/v\d\/mix url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xmly_json.js
-# > 喜马拉雅_屏蔽Tab页滚动_Ad
-^https?:\/\/.*\.xima.*\.com\/discovery-category\/v\d/category url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xmly_json.js
-# > 喜马拉雅_去除我的页面Ad_Tag
-^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xmly_json.js
+# 喜马拉雅_屏蔽首页横幅_Ad
+^https?:\/\/.*\.xima.*\.com\/focus-mobile\/focusPic url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/xmly_json.js
+# 喜马拉雅_屏蔽首页动态_Ad
+^https?:\/\/.*\.xima.*\.com\/discovery-feed\/v\d\/mix url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/xmly_json.js
+# 喜马拉雅_屏蔽Tab页滚动_Ad
+^https?:\/\/.*\.xima.*\.com\/discovery-category\/v\d/category url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/xmly_json.js
+# 喜马拉雅_去除我的页面Ad_Tag
+^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/xmly_json.js
 
 # > 小红书
 ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config url script-response-body https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/xiaohongshu/xiaohongshu.ad.js

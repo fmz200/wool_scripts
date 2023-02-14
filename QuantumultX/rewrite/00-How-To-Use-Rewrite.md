@@ -43,14 +43,7 @@
 > ⏩ 话不多说，下面以本库中备份的墨鱼脚本[某度网盘倍速](https://github.com/fmz200/wool_scripts/blob/main/QuantumultX/rewrite/Function/BaiduCloud.conf)为例，讲讲怎么一步一步在quanX中配置。
 > 先来看看脚本内容有什么：
 > ```
-> // ==UserScript==
-> // @ScriptName        百度网盘
-> // @Author            @Cuttlefish
-> // @Function          倍速
-> // @ScriptTime        2021-07-05
-> // @ScriptURL         https://github.com/ddgksf2013/Rewrite/raw/master/Function/BaiduCloud.conf
-> // ==/UserScript==
-> # > 百度云 by ddgksf2013
+> # > 百度云
 > https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/Crack/bdcloud.js
 > 
 > hostname = pan.baidu.com
