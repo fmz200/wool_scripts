@@ -3,7 +3,7 @@
 # 重要提示：无
 # 项目地址：https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/fenliuxiuzheng.list
 # 交流群组：https://t.me/quguanggao
-# 更新时间：2023.02.14 21:25
+# 更新时间：2023.02.15 17:10
 # 策略选择：直连 direct
 #############################################
 # > "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
@@ -21,9 +21,9 @@ host, time.apple.com, direct
 # > 苹果天气服务
 host-keyword, weather-edge.apple.com, direct
 host-keyword, weather-adge.apple.com, direct
-host-keyword, weather-data.apple.com, direct
-host-keyword, weather-map.apple.com, direct
-host-keyword, weather-analytics-events.apple.com, direct
+host-suffix, weather-data.apple.com, direct
+host-suffix, weather-map.apple.com, direct
+host-suffix, weather-analytics-events.apple.com, direct
 # > 苹果内购服务
 host-keyword, buy.itunes.apple.com, direct
 # > 苹果icloud
