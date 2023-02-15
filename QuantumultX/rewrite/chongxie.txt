@@ -799,7 +799,7 @@ https://dl-cu-hz.lechange.cn/oms-online/advertisementPush/* url reject
 ^https?:\/\/apimobile\.meituan\.com\/appupdate\/mach\/checkUpdate? url reject
 ^https?:\/\/img\.meituan\.net\/(adunion|display|midas)\/\w+\.(gif|jpg|jpg\.webp)$ url reject
 ^https?:\/\/p\d.meituan.net\/movie\/.*?\?may_covertWebp url reject-img
-^https?:\/\/p\d{1}\.meituan\.net\/(adunion|display|linglong|mmc|wmbanner)\/ url reject
+^https?:\/\/p\d{1}\.meituan\.net\/(adunion|display|mmc|wmbanner)\/ url reject
 # > 美团外卖
 ^https?:\/\/wmapi\.meituan\.com\/api\/v7\/startpicture url reject-200
 ^https?:\/\/img\.meituan\.net\/bizad\/.*.jpg url reject-200
