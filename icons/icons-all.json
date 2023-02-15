@@ -71,6 +71,22 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Quantumult_X.png"
     },
     {
+      "name": "surge",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/surge.png"
+    },
+    {
+      "name": "loon",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/loon.png"
+    },
+    {
+      "name": "stash",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/stash.png"
+    },
+    {
+      "name": "shadowrocket",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/shadowrocket.png"
+    },
+    {
       "name": "brd",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/airport/brd.png"
     },
