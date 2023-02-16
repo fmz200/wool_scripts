@@ -4,7 +4,7 @@
 # 项目地址：https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
 # 交流群组：https://t.me/quguanggao
 # 支持数量：约366款app
-# 更新时间：2023.02.15 15:21
+# 更新时间：2023.02.16 21:15
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -1232,6 +1232,10 @@ https://apis.lifeweek.com.cn/api/baseConfig/getIosNewConfig url reject
 # > 天猫精灵
 ^https:\/\/ossgw.alicdn.com\/creatives-assets\/image\/ url reject-200
 
+# > 天翼云盘
+^https?:\/\/api\.cloud\.189\.cn\/guns\/getOpenscreenBanners url reject-200
+^https?:\/\/api\.cloud\.189\.cn\/guns\/getPageBanners\.action\?clientVersion=.+serviceType=5 url reject-200
+
 # > 途牛
 ^https?:\/\/m\.tuniu\.com\/api\/operation\/splash\/ url reject-200
 
@@ -1657,8 +1661,6 @@ https://new-app-api.ylyk.com/v1/user/myinfo/adviser url reject
 # > 中国电信
 ^https?:\/\/cloud\.189\.cn\/include\/splash\/ url reject
 ^https?:\/\/zt-app\.go189\.cn\/zt-app\/welcome\/.*?Animation url reject-img
-# > 天翼云盘
-^https?:\/\/api\.cloud\.189\.cn\/guns\/getOpenscreenBanners url reject-200
 
 # > 中国广电
 ^https?:\/\/app\.10099\.com\.cn\/contact-web\/api\/version\/getFlashScreenPage url reject-200
