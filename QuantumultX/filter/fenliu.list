@@ -3,7 +3,7 @@
 # 重要提示：某些APP要清除缓存或者重新安装APP，拦截广告才会生效！
 # 项目地址：https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/fenliu.list
 # 交流群组：https://t.me/quguanggao
-# 更新时间：2023.02.11 11:39
+# 更新时间：2023.02.16 13:50
 # 策略选择：reject
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
@@ -1114,7 +1114,7 @@ HOST-KEYWORD,tui.weibo.com,REJECT
 HOST-KEYWORD,wax.weibo.com.cn,REJECT
 HOST-KEYWORD,ad.weibo.com,REJECT
 HOST-KEYWORD,adstrategy.biz.weibo.com,REJECT
-HOST-KEYWORD,s.weibo.com,REJECT
+# HOST-KEYWORD,s.weibo.com,REJECT
 HOST-KEYWORD,vs.biz.weibo.com,REJECT
 # > 网易
 HOST-SUFFIX,dsp.youdao.com, reject
