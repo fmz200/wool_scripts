@@ -56,25 +56,24 @@
 | 6   | 分流      | `去广告合集`      | [fenliuxiu.list](https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/fenliuxiu.list)           | [fmz200](https://github.com/fmz200) | 无                           | [点击查看](./QuantumultX/filter/00-How-To-Use-Filter.md)   |
 | 7   | 分流      | `分流修正`       | [fenliuxiuzheng.list](https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/fenliuxiuzheng.list) | [fmz200](https://github.com/fmz200) | 无                           | [点击查看](./QuantumultX/filter/00-How-To-Use-Filter.md)   |
 | 8   | 分流      | `屏蔽苹果系统更新`   | [apple.snippet](https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/apple.snippet)             | [fmz200](https://github.com/fmz200) | 有效性未知                       | [点击查看](./QuantumultX/filter/00-How-To-Use-Filter.md)   |
-| 9   | BoxJS订阅 | `BoxJS订阅`    | [fmz200.boxjs.json](https://raw.githubusercontent.com/fmz200/wool_scripts/main/boxjs/fmz200.boxjs.json)                  | [fmz200](https://github.com/fmz200) | 先查看使用教程                     | [点击查看](https://docs.boxjs.app)                         |
-| 10  | Task订阅  | `Task订阅`     | [fmz200_gallery.json](https://raw.githubusercontent.com/fmz200/wool_scripts/main/boxjs/fmz200_gallery.json)              | [fmz200](https://github.com/fmz200) | 需要先获取cookie或token再运行        | 暂无                                                     |
-| 11  | icons图标 | `icons图标`    | [icons-all.json](https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/icons-all.json)                        | [fmz200](https://github.com/fmz200) | 包含APP，机场，LPL等               | 暂无                                                     |
-
+| 9   | 分流      | `OpenAI分流`   | [OpenAI.snippet](https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/OpenAI.snippet)           | [fmz200](https://github.com/fmz200) | 初始版本，有问题欢迎反馈                | [点击查看](./QuantumultX/filter/00-How-To-Use-Filter.md)   |
+| 10  | BoxJS订阅 | `BoxJS订阅`    | [fmz200.boxjs.json](https://raw.githubusercontent.com/fmz200/wool_scripts/main/boxjs/fmz200.boxjs.json)                  | [fmz200](https://github.com/fmz200) | 先查看使用教程                     | [点击查看](https://docs.boxjs.app)                         |
+| 11  | Task订阅  | `Task订阅`     | [fmz200_gallery.json](https://raw.githubusercontent.com/fmz200/wool_scripts/main/boxjs/fmz200_gallery.json)              | [fmz200](https://github.com/fmz200) | 需要先获取cookie或token再运行        | 暂无                                                     |
+| 12  | icons图标 | `icons图标`    | [icons-all.json](https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/icons-all.json)                        | [fmz200](https://github.com/fmz200) | 包含APP，机场，LPL等               | 暂无                                                     |
 
 ### 2️⃣ Surge配置
 
 > 📍 你可以借助转换工具将重写和分流添加到Surge中，项目地址如下：[Surge](https://github.com/chengkongyiban/Surge)
 
-
 ### 3️⃣ Loon配置
 
 > 📍 你可以借助转换工具将重写和分流添加到Loon中，项目地址如下：[Loon](https://github.com/chengkongyiban/Loon)
 
-
 ### 4️⃣ ShadowRocket配置
 
-> 📍 你可以借助转换工具将重写和分流添加到ShadowRocket中，项目地址如下：[ShadowRocket](https://github.com/chengkongyiban/shadowrocket)
-
+> 📍
+>
+你可以借助转换工具将重写和分流添加到ShadowRocket中，项目地址如下：[ShadowRocket](https://github.com/chengkongyiban/shadowrocket)
 
 ### 5️⃣ Stash配置
 
@@ -85,6 +84,7 @@
 ## 🚸 常见问题
 
 ### 1️⃣ 我为什么指定了抖音的分流到国外，评论视频却显示“IP未知”
+
 > 答：抖音与其他软件判断IP归属地的方式不同，抖音需要家庭宽带IP（又叫住宅IP）才能生效，而现在的大部分机场都是机房的IP，所以评论视频就显示IP未知。
 > 如果你不知道自己抖音分流的IP是不是家宽，可以访问[https://ipinfo.io](https://ipinfo.io/) 查看，在`asn`
 > 信息中如果你看到`type:
@@ -96,12 +96,15 @@
 > 不建议用这个：https://raw.githubusercontent.com/lwd-temp/anti-ip-attribution/main/generated/quantumultx.list
 
 ### 2️⃣ 为什么有些软件明明很热门，却没有人做去广告的规则
-> 答：对于一些软件，如果整个域名都是广告，则可以直接reject整个域名去广告，但是大部分广告都和非广告内容一起返回，这就需要对响应体(response-body)进行解析来去掉其中的广告内容。
+
+>
+答：对于一些软件，如果整个域名都是广告，则可以直接reject整个域名去广告，但是大部分广告都和非广告内容一起返回，这就需要对响应体(
+response-body)进行解析来去掉其中的广告内容。
 > 解析响应体的前提条件是访问的域名可以MITM（MAN-IN-THE-MIDDLE：中间人攻击），但是有些域名禁止了MITM，所以无法对响应体进行解析去广告。
 
 已知不能或不能完全去广告的app有：
 > 字节系：抖音，今日头条
-> 
+>
 > 阿里系：淘宝
 
 ---
