@@ -14,4 +14,5 @@
 
 hostname = api.weibo.cn
 
-^https://api.weibo.cn/2/search/(finder|container_timeline|container_discover) url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/weibo/weibo_removeAds.js
+^https://api.weibo.cn/2/search/(finder|container_timeline|container_discover) url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/weibo/weibo_ads.js
+^https://api.weibo.cn/2/page url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/weibo/weibo_ads.js
