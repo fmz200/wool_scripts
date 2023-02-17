@@ -85,8 +85,8 @@
       "repo": "https://github.com/fmz200/wool_scripts",
       "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/pinduoduo/pdd_guoyuan.js",
       "icons": [
-        "https://raw.githubusercontent.com/fmz200/icons/master/apps/pinduoduo.png",
-        "https://raw.githubusercontent.com/fmz200/icons/master/apps/pinduoduo.png"
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/pinduoduo.png",
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/pinduoduo.png"
       ]
     },
     {
@@ -175,8 +175,8 @@
       "author": "@fmz200",
       "repo": "https://github.com/fmz200/wool_scripts/tree/master/",
       "icons": [
-        "https://raw.githubusercontent.com/fmz200/icons/master/apps/sheep.png",
-        "https://raw.githubusercontent.com/fmz200/icons/master/apps/sheep.png"
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/sheep.png",
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/sheep.png"
       ]
     },
     {
