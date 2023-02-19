@@ -12,6 +12,7 @@
     "10 0 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/jingdong/jddj_bean.js, tag=京东到家鲜豆任务, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jddj.png, enabled=true",
     "10 0 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/jingdong/jddj_plantBeans.js, tag=京东到家鲜豆庄园, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jddj.png, enabled=true",
     "0 * */1 * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/jingdong/jddj_getPoints.js, tag=京东到家鲜豆庄园收水滴, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jddj.png, enabled=true",
-    "22 7 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/macat/macat_signin.js, tag=马克喵签到, img-url=https://raw.githubusercontent.com/fmz200/icons/master/apps/macat.png, enabled=true"
+    "22 7 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/macat/macat_signin.js, tag=马克喵签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/macat.png, enabled=true",
+    "22 10 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/airport_fetch_notice.js, tag=获取机场公告, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/airport/airport.png, enabled=true"
   ]
 }

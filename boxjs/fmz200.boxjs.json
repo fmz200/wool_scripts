@@ -383,6 +383,54 @@
         "https://raw.githubusercontent.com/fmz200/icons/master/apps/macat.png",
         "https://raw.githubusercontent.com/fmz200/icons/master/apps/macat.png"
       ]
+    },
+    {
+      "id": "airport_fetch_notice",
+      "name": "登录机场并拉取最新的公告",
+      "keys": [
+        "url_airport",
+        "email_airport",
+        "password_airport"
+      ],
+      "descs_html": [
+        "按提示填写机场地址和用户名密码，运行脚本获取机场的通知"
+      ],
+      "settings": [
+        {
+          "id": "url_airport",
+          "name": "你的机场地址，例如 www.brd.life",
+          "val": "",
+          "desc": "",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 1
+        },
+        {
+          "id": "email_airport",
+          "name": "你的邮箱，如果失败把@符号写成%40",
+          "val": "",
+          "desc": "",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 1
+        },
+        {
+          "id": "password_airport",
+          "name": "你的密码",
+          "val": "",
+          "desc": "",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 1
+        }
+      ],
+      "author": "@fmz200",
+      "repo": "https://github.com/fmz200/wool_scripts",
+      "icons": [
+        "https://raw.githubusercontent.com/fmz200/icons/master/apps/macat.png",
+        "https://raw.githubusercontent.com/fmz200/icons/master/apps/macat.png"
+      ],
+      "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/airport_fetch_notice.js"
     }
   ]
 }
