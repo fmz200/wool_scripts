@@ -386,7 +386,7 @@
     },
     {
       "id": "airport_fetch_notice",
-      "name": "登录机场并拉取最新的公告",
+      "name": "获取机场公告",
       "keys": [
         "url_airport",
         "email_airport",

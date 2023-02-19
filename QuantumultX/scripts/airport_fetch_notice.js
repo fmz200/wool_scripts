@@ -1,5 +1,5 @@
 /**
- * 获取机场公告 const body = `email=zfm6633%40126.com&password=gaJvuc-humxut-tipzu7`;
+ * 获取机场公告
  * airport_fetch_notice.js
  * 0 11 * * *
  */
