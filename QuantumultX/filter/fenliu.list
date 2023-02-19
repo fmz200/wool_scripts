@@ -395,8 +395,8 @@ HOST-SUFFIX, u51.me, reject
 
 # >>>>>>>>>>>>>>> ✅ H ✅ <<<<<<<<<<<<<<
 # > HDO
-HOST-SUFFIX, applovin.com,REJECT
-HOST-SUFFIX, applvn.com,REJECT
+# HOST-SUFFIX, applovin.com,REJECT
+# HOST-SUFFIX, applvn.com,REJECT
 # > 湖南卫视
 HOST-SUFFIX,da.mgtv.com, reject
 HOST-SUFFIX,da.hunantv.com, reject
@@ -3870,7 +3870,7 @@ HOST-SUFFIX,d.39.net, reject
 HOST-SUFFIX,d.admx.baixing.com, reject
 HOST-SUFFIX,d.agkn.com, reject
 HOST-SUFFIX,d.annarbor.com, reject
-HOST-SUFFIX,d.applovin.com, reject
+# HOST-SUFFIX,d.applovin.com, reject
 HOST-SUFFIX,d.beigedi.com, reject
 HOST-SUFFIX,d.businessinsider.com, reject
 HOST-SUFFIX,d.clkservice.youdao.com, reject
@@ -7412,7 +7412,7 @@ HOST-SUFFIX,rs.sinajs.cn, reject
 HOST-SUFFIX,rs1.rensheng5.com, reject
 HOST-SUFFIX,rsas.szzek.com, reject
 HOST-SUFFIX,rsccs.com, reject
-HOST-SUFFIX,rt.applovin.com, reject
+# HOST-SUFFIX,rt.applovin.com, reject
 HOST-SUFFIX,rt.funshion.net, reject
 HOST-SUFFIX,rt.gsspat.jp, reject
 HOST-SUFFIX,rtas.videocc.net, reject
@@ -8467,7 +8467,8 @@ HOST-SUFFIX,v-sence.gentags.net, reject
 HOST-SUFFIX,vsnoon.com, reject
 HOST-SUFFIX,vt.bjhdonline.com, reject
 HOST-SUFFIX,vtale.org, reject
-HOST-SUFFIX,vungle.cn, reject
+# HOST-SUFFIX,vungle.cn, reject
+# HOST-SUFFIX,vungle.com, reject
 HOST-SUFFIX,vupload.duowan.com, reject
 HOST-SUFFIX,vvlog.moviebox.baofeng.com, reject
 HOST-SUFFIX,vvv.ieduw.com, reject
@@ -9225,7 +9226,6 @@ HOST-SUFFIX,trafficjunky.net, reject
 HOST-SUFFIX,turn.com, reject
 HOST-SUFFIX,uri6.com, reject
 HOST-SUFFIX,voicefive.com, reject
-HOST-SUFFIX,vungle.com, reject
 HOST-SUFFIX,wedolook.com, reject
 HOST-SUFFIX,xdrig.com, reject
 HOST-SUFFIX,abema-adx.ameba.jp, reject
@@ -9485,8 +9485,7 @@ HOST-SUFFIX,mmstat.com, reject
 HOST-SUFFIX,4paradigm.com, reject
 HOST-SUFFIX,catch.gift, reject
 HOST-SUFFIX,pubnative.net, reject
-HOST-SUFFIX,applovin.com, reject
-HOST-SUFFIX,applvn.com, reject
+# HOST-SUFFIX,applovin.com, reject
 HOST-SUFFIX,inner-active.mobi, reject
 HOST-SUFFIX,mdfull.com, reject
 HOST-SUFFIX,openx.net, reject
