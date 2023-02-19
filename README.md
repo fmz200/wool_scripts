@@ -62,6 +62,8 @@
 | 12  | Task订阅  | `Task订阅`     | [fmz200_gallery.json](https://raw.githubusercontent.com/fmz200/wool_scripts/main/boxjs/fmz200_gallery.json)                 | [fmz200](https://github.com/fmz200) | 需要先获取cookie或token再运行        | 暂无                                                     |
 | 13  | icons图标 | `icons图标`    | [icons-all.json](https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/icons-all.json)                           | [fmz200](https://github.com/fmz200) | 包含APP，机场，LPL等图标             | 暂无                                                     |
 
+> ⚠️ 图标订阅不更新怎么办？当远程图标更新时如果你的图表库更新不到最新的，请手动清理本地图标缓存(打开“文件”应用，依次进入“我的 iPhone 或 iCloud Drive-Quantumult X-Images”，删除Images文件夹内所有缓存文件)，并重启 Quantumult X，远程图标会重新下载并生效。
+
 ### 2️⃣ Surge配置
 
 > 📍 你可以借助转换工具将重写和分流添加到Surge中，项目地址如下：[Surge](https://github.com/chengkongyiban/Surge)
