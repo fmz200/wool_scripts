@@ -4,7 +4,7 @@
 # 项目地址：https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
 # 交流群组：https://t.me/quguanggao
 # 支持数量：约366款app
-# 更新时间：2023.02.18 11:26
+# 更新时间：2023.02.19 10:26
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -1348,7 +1348,8 @@ http:\/\/analytics\.163\.com\/ntes url reject
 
 # > 唯品会
 ^https?:\/\/mapi\.appvipshop\.com\/vips-mobile\/rest\/activity\/advertisement\/get url reject-200
-
+# APP+小程序弹窗广告
+^https?:\/\/mapi\.appvipshop\.com\/vips-mobile\/rest\/layout\/productList\/eventData\/v url reject-200
 
 
 
