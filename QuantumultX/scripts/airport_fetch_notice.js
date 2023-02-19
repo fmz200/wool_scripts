@@ -1,5 +1,5 @@
 /**
- * 获取机场公告
+ * 获取机场公告 const body = `email=zfm6633%40126.com&password=gaJvuc-humxut-tipzu7`;
  * airport_fetch_notice.js
  * 0 11 * * *
  */
@@ -7,7 +7,7 @@ console.log("获取机场公告开始👨‍💻‍👨‍💻‍");
 const url_airport = $prefs.valueForKey('url_airport'); // 你的机场地址，例如 www.brd.life
 const email_airport = $prefs.valueForKey('email_airport'); // email=你的邮箱，如果失败把@符号写成%40
 const password_airport = $prefs.valueForKey('password_airport'); // password=你的密码
-console.log(`你的机场地址：${url_airport}\n你的邮箱：${email_airport}\n你的密码：${password_airport}`);
+console.log(`你的机场地址：${url_airport}\n你的邮箱：${email_airport}\n你的密码：${password_airport}\n`);
 sign();
 
 function sign() {

@@ -380,8 +380,8 @@
       "author": "@fmz200",
       "repo": "https://github.com/fmz200/wool_scripts",
       "icons": [
-        "https://raw.githubusercontent.com/fmz200/icons/master/apps/macat.png",
-        "https://raw.githubusercontent.com/fmz200/icons/master/apps/macat.png"
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/macat.png",
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/macat.png"
       ]
     },
     {
@@ -427,8 +427,8 @@
       "author": "@fmz200",
       "repo": "https://github.com/fmz200/wool_scripts",
       "icons": [
-        "https://raw.githubusercontent.com/fmz200/icons/master/apps/macat.png",
-        "https://raw.githubusercontent.com/fmz200/icons/master/apps/macat.png"
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/airport/airport.png",
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/airport/airport.png"
       ],
       "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/airport_fetch_notice.js"
     }
