@@ -446,7 +446,7 @@ host-keyword, s2.pstatp.com, reject
 host-keyword, s3.pstatp.com, reject
 host-keyword, a3.pstatp.com, reject
 host-keyword, a3.bytecdn.cn, reject
-host-keyword, ichannel.snssdk.com, reject
+# host-keyword, ichannel.snssdk.com, reject
 HOST-SUFFIX,pangolin-sdk-toutiao.com, reject
 HOST-SUFFIX,pangolin-sdk-toutiao-b.com, reject
 HOST-SUFFIX,api-access.pangolin-sdk-toutiao-b.com, reject
@@ -1361,7 +1361,7 @@ HOST-SUFFIX, zhengxiaoliu.top, reject
 
 # >>>>>>>>>>>>>>> ✅ 其他广告 ✅ <<<<<<<<<<<<<<
 host-keyword,extlog.snssdk.com, reject
-host-keyword,is.snssdk.com, reject
+# host-keyword,is.snssdk.com, reject
 host-keyword,mobads.baidu.com, reject
 host-keyword,s3a.pstatp.com, reject
 host-keyword,sdfp.snssdk.com, reject
