@@ -1,0 +1,23 @@
+#############################################
+# 分流作用：对OpenAI相关服务进行分流
+# 重要提示：如果不想新增一个策略组，可以设置策略偏好
+# 项目地址：https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/rule/OpenAI.list
+# 交流群组：https://t.me/quguanggao
+# 更新时间：2023.02.16 16:26
+# 策略选择：选择支持OpenAI的地区
+#############################################
+
+DOMAIN-SUFFIX, ai.com
+DOMAIN-SUFFIX, openai.com
+DOMAIN-SUFFIX, vimeo.com
+DOMAIN-SUFFIX, vimeocdn.com
+DOMAIN-SUFFIX, hcaptcha.com
+DOMAIN-SUFFIX, akamaized.com
+DOMAIN, cdn.auth0.com
+DOMAIN, openaiapi-site.azureedge.net
+# DOMAIN-SUFFIX, googleapis.com
+# DOMAIN-SUFFIX, gstatic.com
+# DOMAIN-SUFFIX, googletagmanager.com
+# DOMAIN-SUFFIX, f7tk.com
+# DOMAIN-SUFFIX, doubleclick.com
+# DOMAIN-SUFFIX, google-analytics.com
