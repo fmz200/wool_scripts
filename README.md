@@ -112,7 +112,7 @@
 
 ## 🧚‍♂️ 特别鸣谢
 
-- [@28413761](https://github.com/28413761)
+- [@28413761](https://github.com/28413761)(张军本人)
 - [@app2smile](https://github.com/app2smile)
 - [@blackmatrix7](https://github.com/blackmatrix7)
 - [@chavyleung](https://github.com/chavyleung)
