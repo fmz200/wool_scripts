@@ -87,8 +87,8 @@ async function operator(proxies) {
           // query ip-api
           const countryCodeAndCountry = await queryIpApi(proxy);
           const countryCode = countryCodeAndCountry.substring(0, countryCodeAndCountry.indexOf("-"));
-
-          proxyName = getFlagEmoji(countryCode) + ' ' + countryCodeAndCountry + ' ' + proxyName;
+          console.log("CCAC = " + countryCodeAndCountry + ", CC = " + countryCode);
+          proxyName = getFlagEmoji(countryCode) + ' ' + countryCodeAndCountry;
           proxy.name = proxyName;
         } catch (err) {
           console.log(err);
@@ -130,6 +130,7 @@ async function queryIpApi(proxy) {
     if (cached) {
       resolve(cached);
     }
+    // http://ip-api.com/json/24.48.0.1?lang=zh-CN
     const url = `http://ip-api.com/json?lang=zh-CN`;
     let node = ProxyUtils.produce([proxy], target);
 
@@ -138,6 +139,7 @@ async function queryIpApi(proxy) {
       const s = node.indexOf("=");
       node = node.substring(s + 1);
     }
+    console.log("node = " + node);
 
     $.http.get({
       url,
