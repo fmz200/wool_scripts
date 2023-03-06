@@ -55,21 +55,19 @@ class ResourceCache {
 }
 
 const resourceCache = new ResourceCache(CACHE_EXPIRATION_TIME_MS);
-
+let nodes = [];
 async function operator(proxies) {
-  console.log("env=" + JSON.stringify($substore.env));
+  console.log("proxies = " + JSON.stringify(proxies));
+  $.write(JSON.stringify(proxies), "#sub-store-proxies");
   const {isLoon, isSurge, isQX} = $substore.env;
-  console.log("isQX=" + isQX);
   let support = false;
-  if (isLoon) {
+  if (isLoon || isQX) {
     support = true;
   } else if (isSurge) {
     const build = $environment['surge-build'];
     if (build && parseInt(build) >= 2407) {
       support = true;
     }
-  } else if (isQX) {
-    support = true;
   }
 
   if (support) {
@@ -88,7 +86,8 @@ async function operator(proxies) {
           const countryCodeAndCountry = await queryIpApi(proxy);
           const countryCode = countryCodeAndCountry.substring(0, countryCodeAndCountry.indexOf("-"));
           console.log("CCAC = " + countryCodeAndCountry + ", CC = " + countryCode);
-          proxyName = getFlagEmoji(countryCode) + ' ' + countryCodeAndCountry;
+          // 节点重命名为：国企+国家代码+国家名+序号
+          proxyName = getFlagEmoji(countryCode) + ' ' + countryCodeAndCountry + "-" + i;
           proxy.name = proxyName;
         } catch (err) {
           console.log(err);
@@ -101,6 +100,7 @@ async function operator(proxies) {
   } else {
     $.error(`IP Flag only supports Loon and Surge!`);
   }
+  $.write(JSON.stringify(nodes), "#sub-store-nodes");
   return proxies;
 }
 
@@ -122,7 +122,7 @@ async function queryIpApi(proxy) {
     target = "Loon";
   } else if (isSurge) {
     target = "Surge";
-  } else {
+  } else if (isQX){
     target = "QX";
   }
   const result = new Promise((resolve, reject) => {
@@ -139,6 +139,7 @@ async function queryIpApi(proxy) {
       const s = node.indexOf("=");
       node = node.substring(s + 1);
     }
+    nodes.push(node);
     console.log("node = " + node);
 
     $.http.get({

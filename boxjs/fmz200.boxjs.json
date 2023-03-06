@@ -431,6 +431,53 @@
         "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/airport/airport.png"
       ],
       "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/airport_fetch_notice.js"
+    },
+    {
+      "id": "sub-store-info",
+      "name": "sub-store 测试",
+      "keys": [
+        "sub-store-cached-resource",
+        "sub-store-proxies",
+        "sub-store-nodes"
+      ],
+      "descs_html": [
+        "测试substore内容"
+      ],
+      "settings": [
+        {
+          "id": "sub-store-cached-resource",
+          "name": "sub-store-cached-resource-",
+          "val": "",
+          "desc": "",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 10
+        },
+        {
+          "id": "sub-store-proxies",
+          "name": "sub-store-proxies-",
+          "val": "",
+          "desc": "",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 10
+        },
+        {
+          "id": "sub-store-nodes",
+          "name": "sub-store-nodes-",
+          "val": "",
+          "desc": "",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 10
+        }
+      ],
+      "author": "@fmz200",
+      "repo": "https://github.com/fmz200/wool_scripts",
+      "icons": [
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/airport/airport.png",
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/airport/airport.png"
+      ]
     }
   ]
 }
