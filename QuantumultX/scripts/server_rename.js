@@ -116,6 +116,7 @@ async function queryIpApi(proxy) {
   const headers = {
     "User-Agent": ua
   };
+
   const {isLoon, isSurge, isQX} = $substore.env;
   let target;
   if (isLoon) {
@@ -142,10 +143,13 @@ async function queryIpApi(proxy) {
     nodes.push(node);
     console.log("node = " + node);
 
+    const opts = {
+      policy: node
+    };
     $.http.get({
       url,
       headers,
-      node
+      opts: opts
     }).then(resp => {
       const body = resp.body;
       const data = JSON.parse(body);
