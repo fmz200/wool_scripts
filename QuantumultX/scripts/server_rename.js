@@ -85,12 +85,13 @@ async function operator(proxies) {
           let proxyName = removeFlag(proxy.name);
 
           // query ip-api
-          const countryCode = await queryIpApi(proxy);
+          const countryCodeAndCountry = await queryIpApi(proxy);
+          const countryCode = countryCodeAndCountry.substring(0, countryCodeAndCountry.indexOf("-"));
 
-          proxyName = getFlagEmoji(countryCode) + ' ' + proxyName;
+          proxyName = getFlagEmoji(countryCode) + ' ' + countryCodeAndCountry + ' ' + proxyName;
           proxy.name = proxyName;
         } catch (err) {
-          // TODO:
+          console.log(err);
         }
       }));
 
@@ -115,14 +116,21 @@ async function queryIpApi(proxy) {
   const headers = {
     "User-Agent": ua
   };
-  const {isLoon} = $substore.env;
-  const target = isLoon ? "Loon" : "Surge";
+  const {isLoon, isSurge, isQX} = $substore.env;
+  let target;
+  if (isLoon) {
+    target = "Loon";
+  } else if (isSurge) {
+    target = "Surge";
+  } else {
+    target = "QX";
+  }
   const result = new Promise((resolve, reject) => {
     const cached = resourceCache.get(id);
     if (cached) {
       resolve(cached);
     }
-    const url = `http://ip-api.com/json`;
+    const url = `http://ip-api.com/json?lang=zh-CN`;
     let node = ProxyUtils.produce([proxy], target);
 
     // Loon 需要去掉节点名字
@@ -139,8 +147,9 @@ async function queryIpApi(proxy) {
       const body = resp.body;
       const data = JSON.parse(body);
       if (data.status === "success") {
-        resourceCache.set(id, data.countryCode);
-        resolve(data.countryCode);
+        const nodeInfo = data.countryCode + "-" + data.country;
+        resourceCache.set(id, nodeInfo);
+        resolve(nodeInfo);
       } else {
         reject(new Error(data.message));
       }

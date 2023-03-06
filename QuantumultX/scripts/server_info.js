@@ -7,6 +7,24 @@
  *  event-interaction https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/server_info.js, tag=节点详情查询, img-url=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Back.png, enabled=true
  *  使用：配置好以后长按节点执行脚本，如果节点类型的ISP进行大致的判断
  *  因为显示详细ISP的网站需要付费（ipinfo.io），所以只能找个替代的网站（www.cz88.net)
+ *
+ * http://ip-api.com/json?lang=zh-CN 返回结果：
+ *  {
+ * "status": "success",
+ * "country": "新加坡",
+ * "countryCode": "SG",
+ * "region": "01",
+ * "regionName": "Central Singapore",
+ * "city": "新加坡",
+ * "zip": "048582",
+ * "lat": 1.28009,
+ * "lon": 103.851,
+ * "timezone": "Asia/Singapore",
+ * "isp": "Amazon Technologies Inc.",
+ * "org": "AWS EC2 (ap-southeast-1)",
+ * "as": "AS16509 Amazon.com, Inc.",
+ * "query": "13.251.43.8"
+ * }
  **/
 
 let message = "";
