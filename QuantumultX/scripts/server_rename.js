@@ -71,7 +71,6 @@ async function operator(proxies) {
   }
 
   if (support) {
-    const batches = [];
     const BATCH_SIZE = 10;
 
     let i = 0;
@@ -80,15 +79,14 @@ async function operator(proxies) {
       await Promise.all(batch.map(async proxy => {
         try {
           // remove the original flag
-          let proxyName = removeFlag(proxy.name);
+          // let proxyName = removeFlag(proxy.name);
 
           // query ip-api
           const countryCodeAndCountry = await queryIpApi(proxy);
           const countryCode = countryCodeAndCountry.substring(0, countryCodeAndCountry.indexOf("-"));
-          console.log("CCAC = " + countryCodeAndCountry + ", CC = " + countryCode);
-          // 节点重命名为：国企+国家代码+国家名+序号
-          proxyName = getFlagEmoji(countryCode) + ' ' + countryCodeAndCountry + "-" + i;
-          proxy.name = proxyName;
+          console.log("地区 = " + countryCodeAndCountry + ", 地区代码 = " + countryCode);
+          // 节点重命名为：旗帜 + 国家代码 + 国家名 + 序号
+          proxy.name = getFlagEmoji(countryCode) + ' ' + countryCodeAndCountry;
         } catch (err) {
           console.log(err);
         }
@@ -106,7 +104,9 @@ async function operator(proxies) {
 
 const tasks = new Map();
 
+let node_index = 0; // 节点顺序
 async function queryIpApi(proxy) {
+  node_index += 1;
   const id = getId(proxy);
   if (tasks.has(id)) {
     return tasks.get(id);
@@ -140,7 +140,7 @@ async function queryIpApi(proxy) {
       const s = node.indexOf("=");
       node = node.substring(s + 1);
     }
-    nodes.push(node);
+    nodes.push(node + "\n");
     console.log("node = " + node);
 
     const opts = {
@@ -154,7 +154,7 @@ async function queryIpApi(proxy) {
       const body = resp.body;
       const data = JSON.parse(body);
       if (data.status === "success") {
-        const nodeInfo = data.countryCode + "-" + data.country;
+        const nodeInfo = data.countryCode + "-" + data.country+ "-" + node_index;
         resourceCache.set(id, nodeInfo);
         resolve(nodeInfo);
       } else {
