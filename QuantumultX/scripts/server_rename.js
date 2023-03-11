@@ -78,6 +78,10 @@ async function operator(proxies) {
       const batch = proxies.slice(i, i + BATCH_SIZE);
       await Promise.all(batch.map(async proxy => {
         try {
+          // 这里最理想的处理方式是只把节点名字中的旗帜和地区名字删除，但保留其他信息
+          // 例如：[🇭🇰香港 专线|3倍率] 只保留👉🏻 [专线|3倍率]
+          // 最后节点重命名为：旗帜 地区代码-地区名称-ip|其他信息
+          // 例如：[🇺🇸US-美国-1.2.3.4|专线|3倍率]
           // remove the original flag
           // let proxyName = removeFlag(proxy.name);
 
@@ -94,6 +98,10 @@ async function operator(proxies) {
 
       await sleep(1000);
       i += BATCH_SIZE;
+    }
+    // 加个序号
+    for (let j = 1; j <= proxies.length; j++) {
+      proxies[j].name = proxies[j].name + "-" + j;
     }
   } else {
     $.error(`IP Flag only supports Loon and Surge!`);
