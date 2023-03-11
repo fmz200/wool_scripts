@@ -85,15 +85,16 @@ async function operator(proxies) {
           // 例如：[🇭🇰香港 专线|3倍率] 只保留👉🏻 [专线|3倍率]
           // 最后节点重命名为：旗帜 地区代码-地区名称-ip|其他信息
           // 例如：[🇺🇸US-美国-1.2.3.4|专线|3倍率]
+
           // remove the original flag
-          // let proxyName = removeFlag(proxy.name);
+          let proxyName = removeFlag(proxy.name).strike();
 
           // query ip-api
           const countryCodeAndCountry = await queryIpApi(proxy);
           const countryCode = countryCodeAndCountry.substring(0, countryCodeAndCountry.indexOf("-"));
           console.log("地区 = " + countryCodeAndCountry + ", 地区代码 = " + countryCode);
           // 节点重命名为：旗帜 地区代码-地区名称-ip
-          proxy.name = getFlagEmoji(countryCode) + ' ' + countryCodeAndCountry;
+          proxy.name = getFlagEmoji(countryCode) + ' ' + countryCodeAndCountry + proxyName;
         } catch (err) {
           console.log(err);
         }
@@ -167,7 +168,7 @@ async function queryIpApi(proxy) {
       const data = JSON.parse(body);
       if (data.status === "success") {
         // 地区代码-地区名称-ip ：SG-新加坡-13.215.162.99
-        const nodeInfo = data.countryCode + "-" + data.country + "-" + data.query;
+        const nodeInfo = data.countryCode + "-" + data.country + "|"/* + data.query*/;
         resourceCache.set(id, nodeInfo);
         resolve(nodeInfo);
       } else {
