@@ -142,21 +142,16 @@ async function queryIpApi(proxy) {
     console.log("node = " + node);
 
     // QX只要tag的名字
-    if (isQX) {
-      const s = node.lastIndexOf("=");
-      node = node.substring(s + 1);
-    }
-
+    const QXTag = node.substring(node.lastIndexOf("=") + 1);
     const opts = {
-      policy: node
+      policy: QXTag
     };
-    const myRequest = {
-      url: url,
+    $.http.get({
+      url,
+      headers,
       opts: opts,
-      timeout: 8000
-    };
-
-    $task.fetch(myRequest).then(resp => {
+      node: node
+    }).then(resp => {
       const body = resp.body;
       const data = JSON.parse(body);
       if (data.status === "success") {
