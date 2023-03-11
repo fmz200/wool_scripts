@@ -86,15 +86,18 @@ async function operator(proxies) {
           // 最后节点重命名为：旗帜 地区代码-地区名称-ip|其他信息
           // 例如：[🇺🇸US-美国-1.2.3.4|专线|3倍率]
 
-          // remove the original flag
-          let proxyName = removeFlag(proxy.name).strike();
+          // remove the original flag 移除旗帜
+          let proxyName = removeFlag(proxy.name);
+          // 反转原来的名字，避免策略组筛选到(有一点作用)，这么做是想保留原来的标签
+          // 例如：香港01|专线 👉🏻 线专|10港香
+          let reverseName = proxyName.split("").reverse().join("");
 
           // query ip-api
           const countryCodeAndCountry = await queryIpApi(proxy);
           const countryCode = countryCodeAndCountry.substring(0, countryCodeAndCountry.indexOf("-"));
           console.log("地区 = " + countryCodeAndCountry + ", 地区代码 = " + countryCode);
           // 节点重命名为：旗帜 地区代码-地区名称-ip
-          proxy.name = getFlagEmoji(countryCode) + ' ' + countryCodeAndCountry + proxyName;
+          proxy.name = getFlagEmoji(countryCode) + ' ' + countryCodeAndCountry + reverseName;
         } catch (err) {
           console.log(err);
         }
