@@ -85,7 +85,7 @@ async function operator(proxies) {
           const countryCodeAndCountry = await queryIpApi(proxy);
           const countryCode = countryCodeAndCountry.substring(0, countryCodeAndCountry.indexOf("-"));
           console.log("地区 = " + countryCodeAndCountry + ", 地区代码 = " + countryCode);
-          // 节点重命名为：旗帜 + 国家代码 + 国家名 + 序号
+          // 节点重命名为：旗帜 地区代码-地区名称-ip
           proxy.name = getFlagEmoji(countryCode) + ' ' + countryCodeAndCountry;
         } catch (err) {
           console.log(err);
@@ -104,9 +104,7 @@ async function operator(proxies) {
 
 const tasks = new Map();
 
-let node_index = 0; // 节点顺序
 async function queryIpApi(proxy) {
-  node_index += 1;
   const id = getId(proxy);
   if (tasks.has(id)) {
     return tasks.get(id);
@@ -140,21 +138,30 @@ async function queryIpApi(proxy) {
       const s = node.indexOf("=");
       node = node.substring(s + 1);
     }
-    nodes.push(node + "\n");
+    nodes.push(node);
     console.log("node = " + node);
+
+    // QX只要tag的名字
+    if (isQX) {
+      const s = node.lastIndexOf("=");
+      node = node.substring(s + 1);
+    }
 
     const opts = {
       policy: node
     };
-    $.http.get({
-      url,
-      headers,
-      opts: opts
-    }).then(resp => {
+    const myRequest = {
+      url: url,
+      opts: opts,
+      timeout: 8000
+    };
+
+    $task.fetch(myRequest).then(resp => {
       const body = resp.body;
       const data = JSON.parse(body);
       if (data.status === "success") {
-        const nodeInfo = data.countryCode + "-" + data.country+ "-" + node_index;
+        // 地区代码-地区名称-ip ：SG-新加坡-13.215.162.99
+        const nodeInfo = data.countryCode + "-" + data.country + "-" + data.query;
         resourceCache.set(id, nodeInfo);
         resolve(nodeInfo);
       } else {
