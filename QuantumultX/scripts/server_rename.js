@@ -1,3 +1,6 @@
+// 原始地址：https://github.com/sub-store-org/Sub-Store/blob/master/scripts/ip-flag.js
+// https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/scripts/ip-flag.js
+
 const RESOURCE_CACHE_KEY = '#sub-store-cached-resource';
 const CACHE_EXPIRATION_TIME_MS = 10 * 60 * 1000;
 const $ = $substore;
@@ -100,7 +103,7 @@ async function operator(proxies) {
       i += BATCH_SIZE;
     }
     // 加个序号
-    for (let j = 1; j <= proxies.length; j++) {
+    for (let j = 0; j < proxies.length; j++) {
       proxies[j].name = proxies[j].name + "-" + j;
     }
   } else {
