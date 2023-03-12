@@ -17,10 +17,11 @@ $task.fetch(myRequest).then(response => {
   const data = JSON.parse(response.body);
   if (data.code == "0") {
     const media_url = "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok_1.png";
-    const link = {"open-url": data.url, "media-url": media_url}
+    // quanX点击通知跳转open-url，长按通知可直接显示media-url内容不用跳转
+    const link = {"open-url": data.url, "media-url": data.url}
     const title = data.dsc;
     console.log(title + "\n\n");
-    $notify("获取抖音小姐姐短视频成功💖\n", "", title, link);
+    $notify("获取抖音小姐姐短视频成功💖\n", "长按直接看，点击可跳转💖\n", title, link);
   }
   console.log("js结束💕💕");
   $done();
