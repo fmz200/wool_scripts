@@ -88,16 +88,17 @@ async function operator(proxies) {
 
           // remove the original flag 移除旗帜
           let proxyName = removeFlag(proxy.name);
+          // 本来想把原来的标签加上删除线或者下划线，但是实现不了
           // 反转原来的名字，避免策略组筛选到(有一点作用)，这么做是想保留原来的标签
           // 例如：香港01|专线 👉🏻 线专|10港香
           let reverseName = proxyName.split("").reverse().join("");
 
           // query ip-api
-          const countryCodeAndCountry = await queryIpApi(proxy);
-          const countryCode = countryCodeAndCountry.substring(0, countryCodeAndCountry.indexOf("-"));
-          console.log("地区 = " + countryCodeAndCountry + ", 地区代码 = " + countryCode);
+          const code_name = await queryIpApi(proxy);
+          const countryCode = code_name.substring(0, code_name.indexOf("-"));
+          console.log("地区 = " + code_name + ", 地区代码 = " + countryCode);
           // 节点重命名为：旗帜 地区代码-地区名称-ip
-          proxy.name = getFlagEmoji(countryCode) + ' ' + countryCodeAndCountry + reverseName;
+          proxy.name = getFlagEmoji(countryCode) + '|' + code_name;
         } catch (err) {
           console.log(err);
         }
@@ -171,7 +172,7 @@ async function queryIpApi(proxy) {
       const data = JSON.parse(body);
       if (data.status === "success") {
         // 地区代码-地区名称-ip ：SG-新加坡-13.215.162.99
-        const nodeInfo = data.countryCode + "-" + data.country + "|"/* + data.query*/;
+        const nodeInfo = data.countryCode + "|" + data.country + "|" + data.query;
         resourceCache.set(id, nodeInfo);
         resolve(nodeInfo);
       } else {
