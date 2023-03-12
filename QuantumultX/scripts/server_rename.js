@@ -1,5 +1,10 @@
+//############################################
 // 原始地址：https://github.com/sub-store-org/Sub-Store/blob/master/scripts/ip-flag.js
-// https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/scripts/ip-flag.js
+// 脚本地址：https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/server_rename.js
+// 脚本作用：在SubStore内对节点重命名为：旗帜|地区代码|地区名称|IP|序号，使用请选择“脚本操作”，然后填写上面的脚本地址
+// 支持平台：目前只支持Loon，Surge
+// 更新时间：2023.03.12 12:59
+//############################################
 
 const RESOURCE_CACHE_KEY = '#sub-store-cached-resource';
 const CACHE_EXPIRATION_TIME_MS = 10 * 60 * 1000;
@@ -59,6 +64,7 @@ class ResourceCache {
 
 const resourceCache = new ResourceCache(CACHE_EXPIRATION_TIME_MS);
 let nodes = [];
+const delimiter = "|"; // 分隔符
 async function operator(proxies) {
   console.log("proxies = " + JSON.stringify(proxies));
   $.write(JSON.stringify(proxies), "#sub-store-proxies");
@@ -95,10 +101,11 @@ async function operator(proxies) {
 
           // query ip-api
           const code_name = await queryIpApi(proxy);
-          const countryCode = code_name.substring(0, code_name.indexOf("-"));
-          console.log("地区 = " + code_name + ", 地区代码 = " + countryCode);
-          // 节点重命名为：旗帜 地区代码-地区名称-ip
-          proxy.name = getFlagEmoji(countryCode) + '|' + code_name;
+          // 地区代码|地区名称|IP
+          const countryCode = code_name.substring(0, code_name.indexOf(delimiter));
+          console.log("地区信息 = " + code_name);
+          // 节点重命名为：旗帜|地区代码|地区名称|IP|序号
+          proxy.name = getFlagEmoji(countryCode) + delimiter + code_name;
         } catch (err) {
           console.log(err);
         }
@@ -109,7 +116,7 @@ async function operator(proxies) {
     }
     // 加个序号
     for (let j = 0; j < proxies.length; j++) {
-      proxies[j].name = proxies[j].name + "-" + j;
+      proxies[j].name = proxies[j].name + delimiter + j;
     }
   } else {
     $.error(`IP Flag only supports Loon and Surge!`);
@@ -162,6 +169,7 @@ async function queryIpApi(proxy) {
     const opts = {
       policy: QXTag
     };
+
     $.http.get({
       url,
       headers,
@@ -172,7 +180,7 @@ async function queryIpApi(proxy) {
       const data = JSON.parse(body);
       if (data.status === "success") {
         // 地区代码-地区名称-ip ：SG-新加坡-13.215.162.99
-        const nodeInfo = data.countryCode + "|" + data.country + "|" + data.query;
+        const nodeInfo = data.countryCode + delimiter + data.country + delimiter + data.query;
         resourceCache.set(id, nodeInfo);
         resolve(nodeInfo);
       } else {
