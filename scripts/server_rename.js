@@ -116,7 +116,8 @@ async function operator(proxies) {
       i += BATCH_SIZE;
     }
     // 去除重复的节点
-    proxies = removeDuplicateName(proxies);
+    const proxies_new = removeDuplicateName(proxies);
+    proxies = proxies_new;
     // 再加个序号
     for (let j = 0; j < proxies.length; j++) {
       proxies[j].name = proxies[j].name + delimiter + (j + 1);
@@ -128,15 +129,7 @@ async function operator(proxies) {
   return proxies;
 }
 
-// JS数组中去除重复元素，方法一
-function unique(arr) {
-  return arr.filter(function (item, index, arr) {
-    //当前元素，在原始数组中的第一个索引==当前索引值，否则返回当前元素
-    return arr.indexOf(item, 0) === index;
-  });
-}
-
-// JS数组中去除重复元素，方法二
+// JS数组中去除重复元素
 function removeDuplicates(arr) {
   return Array.from(new Set(arr));
 }
