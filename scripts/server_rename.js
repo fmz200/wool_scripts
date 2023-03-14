@@ -81,7 +81,7 @@ async function operator(proxies) {
   }
 
   if (support) {
-    const BATCH_SIZE = 10;
+    const BATCH_SIZE = 30;
 
     let i = 0;
     while (i < proxies.length) {
