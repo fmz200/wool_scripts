@@ -4,7 +4,7 @@
 // 脚本作用：在SubStore内对节点重命名为：旗帜|地区代码|地区名称|IP|序号，
 // 使用方法：SubStore内选择“脚本操作”，然后填写上面的脚本地址
 // 支持平台：目前只支持Loon，Surge
-// 更新时间：2023.03.13 22:12
+// 更新时间：2023.03.14 08:27
 //############################################
 
 const RESOURCE_CACHE_KEY = '#sub-store-cached-resource';
@@ -116,7 +116,8 @@ async function operator(proxies) {
       i += BATCH_SIZE;
     }
     // 去除重复的节点，再加个序号
-    proxies = unique(proxies);
+    const proxies_new = unique(proxies);
+    proxies = proxies_new;
     for (let j = 0; j < proxies.length; j++) {
       proxies[j].name = proxies[j].name + delimiter + (j + 1);
     }
