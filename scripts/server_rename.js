@@ -67,7 +67,8 @@ const resourceCache = new ResourceCache(CACHE_EXPIRATION_TIME_MS);
 let nodes = [];
 const delimiter = "|"; // 分隔符
 async function operator(proxies) {
-  console.log("proxies = " + JSON.stringify(proxies));
+  // console.log("✅💕proxies = " + JSON.stringify(proxies));
+  console.log("✅💕初始节点个数 = " + proxies.length);
   $.write(JSON.stringify(proxies), "#sub-store-proxies");
   const {isLoon, isSurge, isQX} = $substore.env;
   let support = false;
@@ -81,8 +82,14 @@ async function operator(proxies) {
   }
 
   if (support) {
-    const BATCH_SIZE = 30;
+    // 第一次去重，如果节点的server和port一样就认为是重复的
+    // 直连节点可以这么做，中转节点入口都一样不适用
+    // const proxies_1 = removeDuplicates(proxies, ["server", "port"]);
+    // 直接写proxies = removeDuplicates(proxies);不生效
+    // proxies = proxies_1;
+    // console.log("✅💕去重后的节点个数① = " + proxies.length);
 
+    const BATCH_SIZE = 20; // 每一次处理的节点个数
     let i = 0;
     while (i < proxies.length) {
       const batch = proxies.slice(i, i + BATCH_SIZE);
@@ -96,19 +103,14 @@ async function operator(proxies) {
           // remove the original flag 移除旗帜
           let proxyName = removeFlag(proxy.name);
           // 本来想把原来的标签加上删除线或者下划线，但是实现不了
-          // 反转原来的名字，避免策略组筛选到(有一点作用)，这么做是想保留原来的标签
-          // 例如：香港01|专线 👉🏻 线专|10港香
-          let reverseName = proxyName.split("").reverse().join("");
-
           // query ip-api
           const code_name = await queryIpApi(proxy);
           // 地区代码|地区名称|IP
           const countryCode = code_name.substring(0, code_name.indexOf(delimiter));
-          console.log("地区信息 = " + code_name);
           // 节点重命名为：旗帜|地区代码|地区名称|IP|序号
           proxy.name = getFlagEmoji(countryCode) + delimiter + code_name;
         } catch (err) {
-          console.log(err);
+          console.log("✅💕err=" + err);
         }
       }));
 
@@ -116,8 +118,10 @@ async function operator(proxies) {
       i += BATCH_SIZE;
     }
     // 去除重复的节点
-    const proxies_new = removeDuplicateName(proxies);
-    proxies = proxies_new;
+    const proxies_2 = removeDuplicateName(proxies);
+    // 直接写proxies = removeDuplicateName(proxies);不生效
+    proxies = proxies_2;
+    console.log("✅💕去重后的节点个数② = " + proxies.length);
     // 再加个序号
     for (let j = 0; j < proxies.length; j++) {
       proxies[j].name = proxies[j].name + delimiter + (j + 1);
@@ -130,7 +134,7 @@ async function operator(proxies) {
 }
 
 // JS数组中去除重复元素
-function removeDuplicates(arr) {
+function removeDuplicatesItem(arr) {
   return Array.from(new Set(arr));
 }
 
@@ -138,13 +142,42 @@ function removeDuplicates(arr) {
 function removeDuplicateName(arr) {
   const names = {};
   const result = [];
-  for (let i = 0; i < arr.length; i++) {
-    if (!names[arr[i].name]) {
-      result.push(arr[i]);
-      names[arr[i].name] = true;
+  for (const e of arr) {
+    if (!names[e.name]) {
+      result.push(e);
+      names[e.name] = true;
     }
   }
   return result;
+}
+
+/**
+ * 假设你有一个包含对象的数组，每个对象中有多个属性，你想根据其中的某一个或多个属性去除重复的元素并返回一个新数组。
+ * 示例用法：
+ * const arr = [
+ *   { name: "John", age: 30, country: "USA" },
+ *   { name: "Jane", age: 25, country: "Canada" },
+ *   { name: "John", age: 40, country: "USA" },
+ *   { name: "Bob", age: 50, country: "UK" },
+ * ];
+ * const uniqueArr = removeDuplicates(arr, ["name", "country"]);
+ * console.log(uniqueArr); // 输出 [{ name: "John", age: 30, country: "USA" }, { name: "Jane", age: 25, country: "Canada" }, { name: "Bob", age: 50, country: "UK" }]
+ *
+ * @param arr 一个对象数组
+ * @param fields 一个字段名数组，表示根据哪些属性去除重复的元素
+ * @returns {*}
+ */
+function removeDuplicates(arr, fields) {
+  const map = new Map();
+  return arr.filter(item => {
+    const key = fields.map(field => item[field]).join("-");
+    if (map.has(key)) {
+      return false;
+    } else {
+      map.set(key, true);
+      return true;
+    }
+  });
 }
 
 const tasks = new Map();
@@ -184,9 +217,8 @@ async function queryIpApi(proxy) {
       node = node.substring(s + 1);
     }
     nodes.push(node);
-    console.log("node = " + node);
 
-    // QX只要tag的名字
+    // QX只要tag的名字，目前QX不支持
     const QXTag = node.substring(node.lastIndexOf("=") + 1);
     const opts = {
       policy: QXTag
@@ -195,13 +227,13 @@ async function queryIpApi(proxy) {
     $.http.get({
       url,
       headers,
-      opts: opts,
+      opts: opts, // QX的写法
       node: node
     }).then(resp => {
       const body = resp.body;
       const data = JSON.parse(body);
       if (data.status === "success") {
-        // 地区代码-地区名称-ip ：SG-新加坡-13.215.162.99
+        // 地区代码|地区名称|IP ：SG|新加坡|13.215.162.99
         const nodeInfo = data.countryCode + delimiter + data.country + delimiter + data.query;
         resourceCache.set(id, nodeInfo);
         resolve(nodeInfo);
