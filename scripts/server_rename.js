@@ -115,9 +115,9 @@ async function operator(proxies) {
       await sleep(1000);
       i += BATCH_SIZE;
     }
-    // 去除重复的节点，再加个序号
-    const proxies_new = unique(proxies);
-    proxies = proxies_new;
+    // 去除重复的节点
+    proxies = removeDuplicateName(proxies);
+    // 再加个序号
     for (let j = 0; j < proxies.length; j++) {
       proxies[j].name = proxies[j].name + delimiter + (j + 1);
     }
@@ -128,12 +128,30 @@ async function operator(proxies) {
   return proxies;
 }
 
-// JS数组中去除重复值
+// JS数组中去除重复元素，方法一
 function unique(arr) {
   return arr.filter(function (item, index, arr) {
     //当前元素，在原始数组中的第一个索引==当前索引值，否则返回当前元素
     return arr.indexOf(item, 0) === index;
   });
+}
+
+// JS数组中去除重复元素，方法二
+function removeDuplicates(arr) {
+  return Array.from(new Set(arr));
+}
+
+// 根据节点名字去除重复的节点
+function removeDuplicateName(arr) {
+  const names = {};
+  const result = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (!names[arr[i].name]) {
+      result.push(arr[i]);
+      names[arr[i].name] = true;
+    }
+  }
+  return result;
 }
 
 const tasks = new Map();
