@@ -885,7 +885,7 @@ https://dl-cu-hz.lechange.cn/oms-online/advertisementPush/* url reject
 
 # >>>>>>>>>>>>>>> ✅ N ✅ <<<<<<<<<<<<<<
 # > NTPlay 去升级弹窗 @Hua alex分享
-^https?:\/\/blog\.nilbt\.com\/static\/api\/update reject-200
+^https?:\/\/blog\.nilbt\.com\/static\/api\/update url reject-200
 
 # > 农业银行
 # 广告就这这个连接里面,但是拦截后大部分功能打不开,记录留待以后再说
