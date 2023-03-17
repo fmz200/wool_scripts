@@ -3,7 +3,7 @@
 # 重要提示：某些APP要清除缓存或者重新安装APP，拦截广告才会生效！
 # 项目地址：https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/fenliu.list
 # 交流群组：https://t.me/quguanggao
-# 更新时间：2023.03.08 20:13
+# 更新时间：2023.03.17 22:40
 # 策略选择：reject
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
@@ -406,6 +406,12 @@ HOST-SUFFIX,v2.hunantv.com, reject
 HOST,adx.hupu.com, reject
 HOST,adx-api.hupu.com, reject
 HOST,goblin.hupu.com, reject
+# > 虎牙直播 开屏广告
+host, pp-cdnfile2pcdn.msstatic.com, reject
+host, livewebbs2pcdn.msstatic.com, reject
+host, huyafile.msstatic.com, reject
+host, livewebbs2.msstatic.com, reject
+host, business.msstatic.com, reject
 # > 哈啰
 host-keyword, assets.51downapp.cn, reject
 
