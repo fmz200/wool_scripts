@@ -4,7 +4,7 @@
 # 项目地址：https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
 # 交流群组：https://t.me/quguanggao
 # 支持数量：约353款app
-# 更新时间：2023.03.17 19:27
+# 更新时间：2023.03.17 21:40
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -278,6 +278,9 @@ https?:\/\/.+\.iqiyipic\.com\/image\/20*_100000 url reject
 ^https?:\/\/atrace\.chelaile\.net\.cn\/adpub\/ url reject-img
 ^https?:\/\/atrace\.chelaile\.net\.cn\/exhibit\?&adv_image url reject-img
 ^https?:\/\/web\.chelaile\.net\.cn\/api\/adpub\/ url reject
+
+# > 超级课程表 开屏广告 由@jinlvei分享
+^http:\/\/182\.92\.244\.70\/d\/json url reject-dict
 
 # > 财经杂志
 ^https?:\/\/api\.caijingmobile\.com\/(ad|advert)\/ url reject
