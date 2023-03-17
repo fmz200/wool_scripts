@@ -97,11 +97,11 @@ async function operator(proxies) {
         try {
           // 这里最理想的处理方式是只把节点名字中的旗帜和地区名字删除，但保留其他信息
           // 例如：[🇭🇰香港 专线|3倍率] 只保留👉🏻 [专线|3倍率]
-          // 最后节点重命名为：旗帜 地区代码-地区名称-ip|其他信息
-          // 例如：[🇺🇸US-美国-1.2.3.4|专线|3倍率]
+          // 最后节点重命名为：旗帜|地区代码|地区名称|ip|其他信息
+          // 例如：[🇺🇸|US|美国|1.2.3.4|专线|3倍率]
 
           // remove the original flag 移除旗帜
-          let proxyName = removeFlag(proxy.name);
+          // let proxyName = removeFlag(proxy.name);
           // 本来想把原来的标签加上删除线或者下划线，但是实现不了
           // query ip-api
           const code_name = await queryIpApi(proxy);
