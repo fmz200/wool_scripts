@@ -4,7 +4,8 @@
 // 脚本作用：在SubStore内对节点重命名为：旗帜|地区代码|地区名称|IP|序号，
 // 使用方法：SubStore内选择“脚本操作”，然后填写上面的脚本地址
 // 支持平台：目前只支持Loon，Surge
-// 更新时间：2023.03.15 22:27
+// 更新时间：2023.03.18 15:20
+// 这个脚本是测试脚本，请使用 server_rename.js
 //############################################
 
 const RESOURCE_CACHE_KEY = '#sub-store-cached-resource';
@@ -65,7 +66,8 @@ class ResourceCache {
 
 const resourceCache = new ResourceCache(CACHE_EXPIRATION_TIME_MS);
 let nodes = [];
-const delimiter = "|"; // 分隔符
+const DELIMITER = "|"; // 分隔符
+
 const {isLoon, isSurge, isQX} = $substore.env;
 async function operator(proxies) {
   // console.log("✅💕proxies = " + JSON.stringify(proxies));
@@ -104,9 +106,9 @@ async function operator(proxies) {
         // query ip-api
         const code_name = await queryIpApi(proxy);
         // 地区代码|地区名称|IP
-        const countryCode = code_name.substring(0, code_name.indexOf(delimiter));
+        const countryCode = code_name.substring(0, code_name.indexOf(DELIMITER));
         // 节点重命名为：旗帜|地区代码|地区名称|IP|序号
-        proxy.name = getFlagEmoji(countryCode) + delimiter + code_name;
+        proxy.name = getFlagEmoji(countryCode) + DELIMITER + code_name;
       } catch (err) {
         console.log("✅💕err=" + err);
       }
@@ -121,7 +123,8 @@ async function operator(proxies) {
   console.log("✅💕去重后的节点个数② = " + proxies.length);
   // 再加个序号
   for (let j = 0; j < proxies.length; j++) {
-    proxies[j].name = proxies[j].name + delimiter + (j + 1);
+    const index = (j + 1).toString().padStart(2, '0');
+    proxies[j].name = proxies[j].name + DELIMITER + index;
   }
 
   $.write(JSON.stringify(nodes), "#sub-store-nodes");
@@ -230,14 +233,14 @@ async function queryIpApi(proxy) {
       const data = JSON.parse(body);
       if (data.status === "success") {
         // 地区代码|地区名称|IP ：SG|新加坡|13.215.162.99
-        const nodeInfo = data.countryCode + delimiter + data.country + delimiter + data.query;
+        const nodeInfo = data.countryCode + DELIMITER + data.country + DELIMITER + data.query;
         resourceCache.set(id, nodeInfo);
         resolve(nodeInfo);
       } else {
         reject(new Error(data.message));
       }
     }).catch(err => {
-      console.log(err);
+      console.log("💕err =" + err);
       reject(err);
     });
   });

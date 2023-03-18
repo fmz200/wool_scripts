@@ -4,7 +4,7 @@
 // 脚本作用：在SubStore内对节点重命名为：旗帜|地区代码|地区名称|IP|序号，
 // 使用方法：SubStore内选择“脚本操作”，然后填写上面的脚本地址
 // 支持平台：目前只支持Loon，Surge
-// 更新时间：2023.03.14 08:27
+// 更新时间：2023.03.18 15:20
 //############################################
 
 const RESOURCE_CACHE_KEY = '#sub-store-cached-resource';
@@ -65,12 +65,14 @@ class ResourceCache {
 
 const resourceCache = new ResourceCache(CACHE_EXPIRATION_TIME_MS);
 let nodes = [];
-const delimiter = "|"; // 分隔符
+const DELIMITER = "|"; // 分隔符
+
+const {isLoon, isSurge, isQX} = $substore.env;
 async function operator(proxies) {
   // console.log("✅💕proxies = " + JSON.stringify(proxies));
   console.log("✅💕初始节点个数 = " + proxies.length);
   $.write(JSON.stringify(proxies), "#sub-store-proxies");
-  const {isLoon, isSurge, isQX} = $substore.env;
+
   let support = false;
   if (isLoon || isQX) {
     support = true;
@@ -81,54 +83,49 @@ async function operator(proxies) {
     }
   }
 
-  if (support) {
-    // 第一次去重，如果节点的server和port一样就认为是重复的
-    // 直连节点可以这么做，中转节点入口都一样不适用
-    // const proxies_1 = removeDuplicates(proxies, ["server", "port"]);
-    // 直接写proxies = removeDuplicates(proxies);不生效
-    // proxies = proxies_1;
-    // console.log("✅💕去重后的节点个数① = " + proxies.length);
-
-    const BATCH_SIZE = 20; // 每一次处理的节点个数
-    let i = 0;
-    while (i < proxies.length) {
-      const batch = proxies.slice(i, i + BATCH_SIZE);
-      await Promise.all(batch.map(async proxy => {
-        try {
-          // 这里最理想的处理方式是只把节点名字中的旗帜和地区名字删除，但保留其他信息
-          // 例如：[🇭🇰香港 专线|3倍率] 只保留👉🏻 [专线|3倍率]
-          // 最后节点重命名为：旗帜|地区代码|地区名称|ip|其他信息
-          // 例如：[🇺🇸|US|美国|1.2.3.4|专线|3倍率]
-
-          // remove the original flag 移除旗帜
-          // let proxyName = removeFlag(proxy.name);
-          // 本来想把原来的标签加上删除线或者下划线，但是实现不了
-          // query ip-api
-          const code_name = await queryIpApi(proxy);
-          // 地区代码|地区名称|IP
-          const countryCode = code_name.substring(0, code_name.indexOf(delimiter));
-          // 节点重命名为：旗帜|地区代码|地区名称|IP|序号
-          proxy.name = getFlagEmoji(countryCode) + delimiter + code_name;
-        } catch (err) {
-          console.log("✅💕err=" + err);
-        }
-      }));
-
-      await sleep(1000);
-      i += BATCH_SIZE;
-    }
-    // 去除重复的节点
-    const proxies_2 = removeDuplicateName(proxies);
-    // 直接写proxies = removeDuplicateName(proxies);不生效
-    proxies = proxies_2;
-    console.log("✅💕去重后的节点个数② = " + proxies.length);
-    // 再加个序号
-    for (let j = 0; j < proxies.length; j++) {
-      proxies[j].name = proxies[j].name + delimiter + (j + 1);
-    }
-  } else {
+  if (!support) {
     $.error(`IP Flag only supports Loon and Surge!`);
+    return proxies;
   }
+
+  const BATCH_SIZE = 10; // 每一次处理的节点个数
+  let i = 0;
+  while (i < proxies.length) {
+    const batch = proxies.slice(i, i + BATCH_SIZE);
+    await Promise.allSettled(batch.map(async proxy => {
+      try {
+        // 这里最理想的处理方式是只把节点名字中的旗帜和地区名字删除，但保留其他信息
+        // 例如：[🇭🇰香港 专线|3倍率] 只保留👉🏻 [专线|3倍率]
+        // 最后节点重命名为：旗帜|地区代码|地区名称|ip|其他信息
+        // 例如：[🇺🇸|US|美国|1.2.3.4|专线|3倍率]
+
+        // remove the original flag 移除旗帜
+        // let proxyName = removeFlag(proxy.name);
+        // 本来想把原来的标签加上删除线或者下划线，但是实现不了
+        // query ip-api
+        const code_name = await queryIpApi(proxy);
+        // 地区代码|地区名称|IP
+        const countryCode = code_name.substring(0, code_name.indexOf(DELIMITER));
+        // 节点重命名为：旗帜|地区代码|地区名称|IP|序号
+        proxy.name = getFlagEmoji(countryCode) + DELIMITER + code_name;
+      } catch (err) {
+        console.log("✅💕err=" + err);
+      }
+    }));
+
+    await sleep(1000);
+    i += BATCH_SIZE;
+  }
+  // 去除重复的节点
+  // 直接写proxies = removeDuplicateName(proxies);不生效
+  proxies = removeDuplicateName(proxies);
+  console.log("✅💕去重后的节点个数② = " + proxies.length);
+  // 再加个序号
+  for (let j = 0; j < proxies.length; j++) {
+    const index = (j + 1).toString().padStart(2, '0');
+    proxies[j].name = proxies[j].name + DELIMITER + index;
+  }
+
   $.write(JSON.stringify(nodes), "#sub-store-nodes");
   return proxies;
 }
@@ -183,6 +180,7 @@ function removeDuplicates(arr, fields) {
 const tasks = new Map();
 
 async function queryIpApi(proxy) {
+  // 如果节点的server和port一样就认为是重复的，这里就不会去重新请求而是直接返回
   const id = getId(proxy);
   if (tasks.has(id)) {
     return tasks.get(id);
@@ -193,7 +191,7 @@ async function queryIpApi(proxy) {
     "User-Agent": ua
   };
 
-  const {isLoon, isSurge, isQX} = $substore.env;
+  // const {isLoon, isSurge, isQX} = $substore.env;
   let target;
   if (isLoon) {
     target = "Loon";
@@ -234,14 +232,14 @@ async function queryIpApi(proxy) {
       const data = JSON.parse(body);
       if (data.status === "success") {
         // 地区代码|地区名称|IP ：SG|新加坡|13.215.162.99
-        const nodeInfo = data.countryCode + delimiter + data.country + delimiter + data.query;
+        const nodeInfo = data.countryCode + DELIMITER + data.country + DELIMITER + data.query;
         resourceCache.set(id, nodeInfo);
         resolve(nodeInfo);
       } else {
         reject(new Error(data.message));
       }
     }).catch(err => {
-      console.log(err);
+      console.log("💕err =" + err);
       reject(err);
     });
   });
