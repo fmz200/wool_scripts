@@ -7699,7 +7699,7 @@ HOST-SUFFIX,shanghaironghua.com, reject
 HOST-SUFFIX,shanglinli.com, reject
 HOST-SUFFIX,shangz99991.com, reject
 HOST-SUFFIX,share.gzdsw.com, reject
-HOST-SUFFIX,shared.youdao.com, reject
+# HOST-SUFFIX,shared.youdao.com, reject
 HOST-SUFFIX,sharedadHOST.com, reject
 HOST-SUFFIX,sharrysweb.com, reject
 HOST-SUFFIX,shbywsd.cn, reject
