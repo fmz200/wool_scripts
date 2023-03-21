@@ -4,7 +4,7 @@
 // 脚本作用：在SubStore内对节点重命名为：旗帜|地区代码|地区名称|IP|序号，
 // 使用方法：SubStore内选择“脚本操作”，然后填写上面的脚本地址
 // 支持平台：目前只支持Loon，Surge
-// 更新时间：2023.03.18 15:20
+// 更新时间：2023.03.21 22:22
 //############################################
 
 const RESOURCE_CACHE_KEY = '#sub-store-cached-resource';
@@ -14,26 +14,25 @@ const $ = $substore;
 class ResourceCache {
   constructor(expires) {
     this.expires = expires;
-    if (!$.read(RESOURCE_CACHE_KEY)) {
-      $.write('{}', RESOURCE_CACHE_KEY);
+    const cachedData = $.read(RESOURCE_CACHE_KEY);
+    if (!cachedData) {
+      this.resourceCache = {};
+      this._persist();
+    } else {
+      this.resourceCache = JSON.parse(cachedData);
     }
-    this.resourceCache = JSON.parse($.read(RESOURCE_CACHE_KEY));
     this._cleanup();
   }
 
   _cleanup() {
     // clear obsolete cached resource
     let clear = false;
-    Object.entries(this.resourceCache).forEach((entry) => {
-      const [id, updated] = entry;
-      if (!updated.time) {
-        // clear old version cache
+    const now = new Date().getTime();
+    Object.keys(this.resourceCache).forEach((id) => {
+      const updated = this.resourceCache[id];
+      if (!updated.time || now - updated.time > this.expires) {
         delete this.resourceCache[id];
         $.delete(`#${id}`);
-        clear = true;
-      }
-      if (new Date().getTime() - updated.time > this.expires) {
-        delete this.resourceCache[id];
         clear = true;
       }
     });
@@ -64,14 +63,24 @@ class ResourceCache {
 }
 
 const resourceCache = new ResourceCache(CACHE_EXPIRATION_TIME_MS);
-let nodes = [];
+// let nodes = [];
 const DELIMITER = "|"; // 分隔符
 
 const {isLoon, isSurge, isQX} = $substore.env;
+
+let target; // 节点转换的目标类型
+if (isLoon) {
+  target = "Loon";
+} else if (isSurge) {
+  target = "Surge";
+} else if (isQX) {
+  target = "QX";
+}
+
 async function operator(proxies) {
   // console.log("✅💕proxies = " + JSON.stringify(proxies));
   console.log("✅💕初始节点个数 = " + proxies.length);
-  $.write(JSON.stringify(proxies), "#sub-store-proxies");
+  // $.write(JSON.stringify(proxies), "#sub-store-proxies");
 
   let support = false;
   if (isLoon || isQX) {
@@ -84,7 +93,7 @@ async function operator(proxies) {
   }
 
   if (!support) {
-    $.error(`IP Flag only supports Loon and Surge!`);
+    $.error(`🚫IP Flag only supports Loon and Surge!`);
     return proxies;
   }
 
@@ -109,7 +118,7 @@ async function operator(proxies) {
         // 节点重命名为：旗帜|地区代码|地区名称|IP|序号
         proxy.name = getFlagEmoji(countryCode) + DELIMITER + code_name;
       } catch (err) {
-        console.log("✅💕err=" + err);
+        console.log(`✅💕err=${err}`);
       }
     }));
 
@@ -119,14 +128,14 @@ async function operator(proxies) {
   // 去除重复的节点
   // 直接写proxies = removeDuplicateName(proxies);不生效
   proxies = removeDuplicateName(proxies);
-  console.log("✅💕去重后的节点个数② = " + proxies.length);
+  console.log(`✅💕去重后的节点个数 = ${proxies.length}`);
   // 再加个序号
   for (let j = 0; j < proxies.length; j++) {
     const index = (j + 1).toString().padStart(2, '0');
     proxies[j].name = proxies[j].name + DELIMITER + index;
   }
 
-  $.write(JSON.stringify(nodes), "#sub-store-nodes");
+  // $.write(JSON.stringify(nodes), "#sub-store-nodes");
   return proxies;
 }
 
@@ -137,12 +146,12 @@ function removeDuplicatesItem(arr) {
 
 // 根据节点名字去除重复的节点
 function removeDuplicateName(arr) {
-  const names = {};
+  const nameSet = new Set();
   const result = [];
   for (const e of arr) {
-    if (!names[e.name]) {
+    if (!nameSet.has(e.name)) {
       result.push(e);
-      names[e.name] = true;
+      nameSet.add(e.name);
     }
   }
   return result;
@@ -191,15 +200,6 @@ async function queryIpApi(proxy) {
     "User-Agent": ua
   };
 
-  // const {isLoon, isSurge, isQX} = $substore.env;
-  let target;
-  if (isLoon) {
-    target = "Loon";
-  } else if (isSurge) {
-    target = "Surge";
-  } else if (isQX){
-    target = "QX";
-  }
   const result = new Promise((resolve, reject) => {
     const cached = resourceCache.get(id);
     if (cached) {
@@ -214,7 +214,7 @@ async function queryIpApi(proxy) {
       const s = node.indexOf("=");
       node = node.substring(s + 1);
     }
-    nodes.push(node);
+    // nodes.push(node);
 
     // QX只要tag的名字，目前QX不支持
     const QXTag = node.substring(node.lastIndexOf("=") + 1);
