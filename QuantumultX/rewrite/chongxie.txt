@@ -4,7 +4,7 @@
 # 项目地址：https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
 # 交流群组：https://t.me/quguanggao
 # 支持数量：约353款app
-# 更新时间：2023.03.21 22:22
+# 更新时间：2023.03.22 19:22
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -956,8 +956,7 @@ https://dl-cu-hz.lechange.cn/oms-online/advertisementPush/* url reject
 ^https?:\/\/image\.spdbccc\.com\.cn\/group\d\/M00\/[7-9]{1}[A-Z0-9]{1}\/[A-Z0-9]{2}\/rBsZ.+\.jpg url reject-200
 
 # > 朴朴超市 #开屏广告 感谢@Ava阿檬分享
-^https?:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v7\?position_types=[A-Z0-9%]+&store_id=[a-z0-9\-]+ url script-response-body https://raw.githubusercontent.com/LimeAroma/Quantumultx/main/Js/PupuSplashAds.js
-
+^https?:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v7\?position_types=2(%[A-Z0-9]+)+&store_id url script-response-body https://raw.githubusercontent.com/LimeAroma/Quantumultx/main/Js/PupuSplashAds.js
 # > 平安好车主
 ^https?:\/\/iobs\.pingan\.com\.cn\/download\/bweb-per-sf-prd\/bweb url reject-200
 ^https?:\/\/iobs\.pingan\.com\.cn\/download\/icore-aops-base-dmz-prd\/(YourSystemName|icore-apps-ad) url reject-200
