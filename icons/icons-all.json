@@ -3,28 +3,8 @@
   "description": "收集一些自己常用的图标，尺寸为108px，144px",
   "icons": [
     {
-      "name": "ql",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ql.png"
-    },
-    {
-      "name": "ql_logo",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ql_logo.png"
-    },
-    {
-      "name": "sheep",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/sheep.png"
-    },
-    {
-      "name": "pinduoduo",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/pinduoduo.png"
-    },
-    {
-      "name": "Weibo",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo.png"
-    },
-    {
-      "name": "weibotalk",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/weibotalk.png"
+      "name": "Ads",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Ads.png"
     },
     {
       "name": "aliYunPan",
@@ -35,24 +15,36 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/feizhu.png"
     },
     {
-      "name": "xianyu",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/xianyu.png"
+      "name": "Fileball",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Fileball.png"
     },
     {
-      "name": "ximalaya",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ximalaya.png"
+      "name": "GiffGaff",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/GiffGaff.jpeg"
+    },
+    {
+      "name": "KakaoTalk",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/KakaoTalk.png"
+    },
+    {
+      "name": "Lianhezaobao",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Lianhezaobao.jpeg"
+    },
+    {
+      "name": "loon",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/loon.png"
     },
     {
       "name": "macat",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/macat.png"
     },
     {
-      "name": "Ads",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Ads.png"
+      "name": "Message",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Message.png"
     },
     {
-      "name": "Fileball",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Fileball.png"
+      "name": "Microsoft",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Microsoft.jpeg"
     },
     {
       "name": "OpenAI",
@@ -67,28 +59,91 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/OpenAI-02.png"
     },
     {
+      "name": "pinduoduo",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/pinduoduo.png"
+    },
+    {
+      "name": "ql",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ql.png"
+    },
+    {
+      "name": "ql_logo",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ql_logo.png"
+    },
+    {
       "name": "Quantumult_X",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Quantumult_X.png"
-    },
-    {
-      "name": "surge",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/surge.png"
-    },
-    {
-      "name": "loon",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/loon.png"
-    },
-    {
-      "name": "stash",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/stash.png"
     },
     {
       "name": "shadowrocket",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/shadowrocket.png"
     },
     {
+      "name": "surge",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/surge.png"
+    },
+    {
+      "name": "stash",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/stash.png"
+    },
+    {
       "name": "Sub-Store",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Sub-Store.png"
+    },
+    {
+      "name": "sheep",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/sheep.png"
+    },
+    {
+      "name": "Udn",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Udn.png"
+    },
+    {
+      "name": "Viu",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Viu.png"
+    },
+    {
+      "name": "Weibo",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo.png"
+    },
+    {
+      "name": "WeiboTalk",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/WeiboTalk.png"
+    },
+    {
+      "name": "WhatsApp",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/WhatsApp.png"
+    },
+    {
+      "name": "White",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/White.png"
+    },
+    {
+      "name": "xianyu",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/xianyu.png"
+    },
+    {
+      "name": "ximalaya",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ximalaya.png"
+    },    {
+      "name": "YouTubeMusic",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/YouTubeMusic.png"
+    },
+    {
+      "name": "Zalo",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Zalo.png"
+    },
+    {
+      "name": "kk",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/daLao/kk.jpeg"
+    },
+    {
+      "name": "Walalala",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/daLao/Walalala.png"
+    },
+    {
+      "name": "zhangjun",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/daLao/zhangjun.jpeg"
     },
     {
       "name": "brd",
