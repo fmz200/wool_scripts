@@ -4,7 +4,7 @@
 # 项目地址：https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
 # 交流群组：https://t.me/quguanggao
 # 支持数量：约353款app
-# 更新时间：2023.03.23 20:22
+# 更新时间：2023.03.26 18:08
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -923,9 +923,8 @@ https://dl-cu-hz.lechange.cn/oms-online/advertisementPush/* url reject
 # > NTPlay 去升级弹窗 @Hua alex分享
 ^https?:\/\/blog\.nilbt\.com\/static\/api\/update url reject-200
 
-# > 农业银行
-# 广告就这这个连接里面,但是拦截后大部分功能打不开,记录留待以后再说
-^https?:\/\/mobilepaas\.abchina\.com\.cn:441\/mgw\.htm url reject-200
+# > 农业银行 #开屏广告
+^https?:\/\/enjoy\.cdn-static\.abchina\.com\/yx-engine-web\/file\/download\/(9ce31|1bf6e) url reject-200
 
 # > 奈菲影视
 ^https?:\/\/www\.nfmovies\.com\/pic\/tu\/ url reject-img
