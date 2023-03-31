@@ -1274,7 +1274,6 @@ HOST-SUFFIX,hudong.pl.youku.com, reject
 HOST-SUFFIX,huodong.pl.youku.com, reject
 HOST-SUFFIX,huodong.vip.youku.com, reject
 HOST-SUFFIX,hz.youku.com, reject
-HOST-SUFFIX,iyes.youku.com, reject
 HOST-SUFFIX,l.ykimg.com, reject
 HOST-SUFFIX,lstat.youku.com, reject
 HOST-SUFFIX,m.yes.youku.com, reject
@@ -9379,7 +9378,6 @@ HOST-SUFFIX,c1wx.lianwangtech.com, reject
 HOST-SUFFIX,apm-track.xiaohongshu.com, reject
 HOST-SUFFIX,t-ads.xiaohongshu.com, reject
 HOST-SUFFIX,ad.mobile.youku.com, reject
-HOST-SUFFIX,iyes.youku.com, reject
 HOST-SUFFIX,apppv.zol.com.cn, reject
 HOST-SUFFIX,pvnapp.zol.com.cn, reject
 HOST-SUFFIX,17gouwuba.com, reject
