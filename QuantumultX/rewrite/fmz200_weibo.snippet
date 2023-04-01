@@ -3,7 +3,7 @@
 # 重写配置：https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/weibo.snippet, tag=微博去广告@fmz200, update-interval=172800, opt-parser=false, enabled=true
 # 项目地址：https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/weibo.snippet
 # 交流群组：https://t.me/quguanggao
-# 更新时间：2023.02.16 16:55
+# 更新时间：2023.04.01 17:55
 #############################################
 # > "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # > "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -20,14 +20,14 @@ hostname = api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, new.vip.weibo.cn
 # 微博热搜页面广告
 ^https://api.weibo.cn/2/page url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/weibo/weibo_ads.js
 
-# 微博去广告以及去除各部分推广模块
-^https?://m?api\.weibo\.c(n|om)/2/(cardlist|searchall|page|messageflow|statuses/(unread_)?friends(/|_)timeline|groups/timeline|statuses/(container_timeline|unread_hot_timeline|extend|video_mixtimeline|unread_topic_timeline)|profile/(me|container_timeline)|video/(community_tab|remind_info|tiny_stream_video_list)|checkin/show|\!/live/media_homelist|comments/build_comments|container/get_item|search/(finder|container_timeline|container_discover)) url script-response-body https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_main.js
+# 微博去广告以及去除各部分推广模块 - cherish
+^https?://m?api\.weibo\.c(n|om)/2/(cardlist|searchall|page|messageflow|statuses/(unread_)?friends(/|_)timeline|groups/timeline|statuses/(container_timeline|unread_hot_timeline|extend|video_mixtimeline)|profile/(me|container_timeline)|video/(community_tab|remind_info|tiny_stream_video_list)|checkin/show|\!/live/media_homelist|comments/build_comments|container/get_item|search/(finder|container_timeline|container_discover)) url script-response-body https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_main.js
 
-# 删除微博开屏广告
+# 删除微博开屏广告 - cherish
 ^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua) url script-response-body https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_launch.js
 
 # 自定义tab皮肤
 ^https://api.weibo.cn/2/!/client/light_skin url script-response-body https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_main.js
 
-# 非会员设置tab皮肤
+# 非会员设置tab皮肤 - cherish
 ^https://new.vip.weibo.cn/littleskin/preview url script-response-body https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_main.js
