@@ -3,7 +3,7 @@
 # 重要提示：某些APP要清除缓存或者重新安装APP，拦截广告才会生效！
 # 项目地址：https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/fenliu.list
 # 交流群组：https://t.me/quguanggao
-# 更新时间：2023.03.17 22:40
+# 更新时间：2023.04.02 09:22
 # 策略选择：reject
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
@@ -751,6 +751,16 @@ HOST-SUFFIX,wxsnsdythumb.wxs.qq.com, reject
 
 
 # >>>>>>>>>>>>>>> ✅ T ✅ <<<<<<<<<<<<<<
+# > TubeMax  感谢@可莉分享
+host-suffix, adjust.com, reject
+host-suffix, applvn.com, reject
+host-suffix, app-measurement.com, reject
+host-suffix, pangle.io, reject
+host-suffix, applovin.com, reject
+host-suffix, appier.net, reject
+host-suffix, adsmoloco.com, reject
+host-suffix, adcanvas.com, reject
+
 # > The Paper
 HOST,admonitor.thepaper.cn, reject
 HOST,adpai.thepaper.cn, reject
@@ -758,8 +768,8 @@ HOST,imgadpai.thepaper.cn, reject
 # > TalkingData
 HOST-SUFFIX,cpatrk.net, reject
 # > 天神
-HOST,track.tenjin.com, reject
-HOST,track.tenjin.io, reject
+HOST, track.tenjin.com, reject
+HOST, track.tenjin.io, reject
 host, errlog.umeng.com, reject
 host, lf9-cdn-tos.bytegecko.com, reject
 host, novel.pangolin-sdk-toutiao.com, reject
