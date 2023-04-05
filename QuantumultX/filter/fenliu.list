@@ -3,7 +3,7 @@
 # 重要提示：某些APP要清除缓存或者重新安装APP，拦截广告才会生效！
 # 项目地址：https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/fenliu.list
 # 交流群组：https://t.me/quguanggao
-# 更新时间：2023.04.02 09:22
+# 更新时间：2023.04.05 21:10
 # 策略选择：reject
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
@@ -1084,6 +1084,12 @@ host-keyword, paradisestatic.vivo.com.cn, reject
 
 
 # >>>>>>>>>>>>>>> ✅ W ✅ <<<<<<<<<<<<<<
+# > 万能钥匙专业版 感谢#All in 梭哈分享
+host-suffix, mi.gdt.qq.com, reject
+host-suffix, p9-be-pack-sign.pglstatp-toutiao.com, reject
+host-suffix, p6-be-pack-sign.pglstatp-toutiao.com, reject
+host-suffix, p3-be-pack-sign.pglstatp-toutiao.com, reject
+
 # > 微博
 HOST-KEYWORD,fastimage.uve.weibo.com, reject
 HOST-KEYWORD,adimg.uve.weibo.com, reject
