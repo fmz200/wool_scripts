@@ -1,4 +1,10 @@
-const version = 'v0330.3';
+/**
+ * 当前仓库：@fmz200
+ * 脚本来源：复制@zmqcherish的脚本
+ * 更新时间：2023.04.11 22：06
+ */
+
+const version = 'v20230411.1';
 
 const $ = new Env("微博去广告");
 let storeMainConfig = $.getdata('mainConfig');
