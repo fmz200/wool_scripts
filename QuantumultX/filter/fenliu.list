@@ -414,6 +414,10 @@ host, livewebbs2.msstatic.com, reject
 host, business.msstatic.com, reject
 # > 哈啰
 host-keyword, assets.51downapp.cn, reject
+# > 黄油相机 #开屏广告 感谢#Dragon分享
+host-suffix, anythinktech.com, reject
+host-suffix, adkwai.com, reject
+host-suffix, mob.com, reject
 
 
 
