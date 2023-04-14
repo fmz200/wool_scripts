@@ -1723,7 +1723,8 @@ http:\/\/analytics\.163\.com\/ntes url reject
 ^https?:\/\/.+?\.(pipi|fuli|xiang(jiao|xiang))apps\.com\/(ucp\/index|getGlobalData|(\/|)vod\/reqplay\/) url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/xjsp.js
 
 # > 小兔充充 #小程序净化 感谢#豆豆分享
-^https:\/\/ad\.xiaotucc\.com\/advert url reject ^https:\/\/mapi\.xiaotucc\.com\/(mall\/main|main_page\/index\/getActivity) url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/xiaotucc.js
+^https:\/\/ad\.xiaotucc\.com\/advert url reject
+^https:\/\/mapi\.xiaotucc\.com\/(mall\/main|main_page\/index\/getActivity) url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/xiaotucc.js
 
 # > 小电充电 微信小程序
 ^https:\/\/smarket\.dian\.so url reject-dict
