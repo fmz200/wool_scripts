@@ -1,5 +1,5 @@
 #############################################
-# 重写作用：针对部分APP、小程序内的广告和冗余模块进行去除
+# 重写作用：App&小程序净化，去除一些冗余的模块
 # 重要提示：某些APP/小程序要清除缓存或者重新安装，拦截才会生效！
 # 项目地址：https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/cleanup.snippet
 # 交流群组：https://t.me/quguanggao
@@ -24,7 +24,7 @@
 
 
 # 去重后的hostname，将对以下域名进行MITM（MAN-IN-THE-MIDDLE：中间人攻击）
-hostname = suyun-user.daojia.com, adsoss.zhinengxiyifang.cn, api-marketing.zhinengxiyifang.cn, ads.zhinengxiyifang.cn, capis*.didapinche.com, conf.diditaxi.com.cn, ad.xiaotucc.com, mapi.xiaotucc.com, aag.enmonster.com, smarket.dian.so, file.dian.so, s.jiediankeji.com, wxs-weixin.sd.zhumanggroup.com, mobile-api.imlaidian.com, api.sodalife.xyz, hdgateway.zto.com, api.ulife.group, common.diditaxi.com.cn, webchatapp.fcbox.com, dsp.fcbox.com, supplier-api.imdada.cn, customer-app.sto.cn, sto-customer-app.oss-cn-shanghai.aliyuncs.co, api.hongyibo.com.cn, res.hongyibo.com.cn
+hostname = qapi.huolala.cn, appuser-static.huolala.cn, apis.alenable.com, suyun-user.daojia.com, adsoss.zhinengxiyifang.cn, api-marketing.zhinengxiyifang.cn, ads.zhinengxiyifang.cn, capis*.didapinche.com, conf.diditaxi.com.cn, ad.xiaotucc.com, mapi.xiaotucc.com, aag.enmonster.com, smarket.dian.so, file.dian.so, s.jiediankeji.com, wxs-weixin.sd.zhumanggroup.com, mobile-api.imlaidian.com, api.sodalife.xyz, hdgateway.zto.com, api.ulife.group, common.diditaxi.com.cn, webchatapp.fcbox.com, dsp.fcbox.com, supplier-api.imdada.cn, customer-app.sto.cn, sto-customer-app.oss-cn-shanghai.aliyuncs.co, api.hongyibo.com.cn, res.hongyibo.com.cn
 
 # >>>>>>>>>>>>>>> ✅ 0 ✅ <<<<<<<<<<<<<<
 
@@ -106,6 +106,14 @@ hostname = suyun-user.daojia.com, adsoss.zhinengxiyifang.cn, api-marketing.zhine
 # >>>>>>>>>>>>>>> ✅ G ✅ <<<<<<<<<<<<<<
 # > 怪兽充电 微信小程序
 ^https:\/\/aag\.enmonster\.com\/apa\/index\/advert\/skin url reject
+# 我的界面广告 支付宝小程序
+^https:\/\/aag\.enmonster\.com\/apa\/advert\/multi\/positions url reject
+# 我的界面广告 微信小程序
+^https:\/\/aag\.enmonster\.com\/apa\/advert\/demand\/home\/poster url reject
+
+# > 广州地铁乘车码 微信小程序净化
+^https:\/\/apis\.alenable\.com\/mall\/v1\/api\/mall\/skin\/user\/get url reject-dict
+^https:\/\/apis\.alenable\.com\/ycx\/v1\/api\/adPut url reject-dict
 
 
 
@@ -113,6 +121,12 @@ hostname = suyun-user.daojia.com, adsoss.zhinengxiyifang.cn, api-marketing.zhine
 # > 花小猪打车 微信小程序净化
 ^https:\/\/api\.hongyibo\.com\.cn url reject-dict
 ^https:\/\/res\.hongyibo\.com\.cn\/os\/gs\/resapi\/activity url reject-dict
+
+# > 货拉拉 微信小程序净化
+^https:\/\/qapi\.huolala\.cn\/ads url reject-dict
+^https:\/\/appuser-static\.huolala\.cn\/imgs url reject-dict
+^https:\/\/qapi\.huolala\.cn\/home_new_user url reject-dict
+^https:\/\/qapi\.huolala\.cn\/get_service_list url reject-dict
 
 
 
