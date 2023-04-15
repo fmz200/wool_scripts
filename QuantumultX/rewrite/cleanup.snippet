@@ -5,7 +5,7 @@
 # 项目地址：https://github.com/fmz200/wool_scripts/blob/main/QuantumultX/rewrite/cleanup.snippet
 # 交流群组：https://t.me/quguanggao
 # 支持数量：28
-# 更新时间：2023.04.15 17:23
+# 更新时间：2023.04.15 20:55
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -25,7 +25,7 @@
 
 
 # 去重后的hostname，将对以下域名进行MITM（MAN-IN-THE-MIDDLE：中间人攻击）
-hostname = apiproxy.zuche.com, miniprogram.ishansong.com,ads.ishansong.com, minicap.caocaokeji.cn, applets.jtexpress.com.cn, ump.ems.com.cn, api.hellobike.coming, api.kuaidihelp.com, wxproj.seeyouyima.com, qapi.huolala.cn, appuser-static.huolala.cn, apis.alenable.com, suyun-user.daojia.com, adsoss.zhinengxiyifang.cn, api-marketing.zhinengxiyifang.cn, ads.zhinengxiyifang.cn, capis*.didapinche.com, conf.diditaxi.com.cn, ad.xiaotucc.com, mapi.xiaotucc.com, aag.enmonster.com, smarket.dian.so, file.dian.so, s.jiediankeji.com, wxs-weixin.sd.zhumanggroup.com, mobile-api.imlaidian.com, api.sodalife.xyz, hdgateway.zto.com, api.ulife.group, common.diditaxi.com.cn, webchatapp.fcbox.com, dsp.fcbox.com, supplier-api.imdada.cn, customer-app.sto.cn, sto-customer-app.oss-cn-shanghai.aliyuncs.co, api.hongyibo.com.cn, res.hongyibo.com.cn
+hostname = res.pizzahut.com.cn, orders.kfc.com.cn, dynamicad.kfc.com.cn, res.kfc.com.cn, api.mcd.cn, 3pp.starbucks.com.cn, wechat-api.i-xiaoma.com.cn, apiproxy.zuche.com, miniprogram.ishansong.com,ads.ishansong.com, minicap.caocaokeji.cn, applets.jtexpress.com.cn, ump.ems.com.cn, api.hellobike.coming, api.kuaidihelp.com, wxproj.seeyouyima.com, qapi.huolala.cn, appuser-static.huolala.cn, apis.alenable.com, suyun-user.daojia.com, adsoss.zhinengxiyifang.cn, api-marketing.zhinengxiyifang.cn, ads.zhinengxiyifang.cn, capis*.didapinche.com, conf.diditaxi.com.cn, ad.xiaotucc.com, mapi.xiaotucc.com, aag.enmonster.com, smarket.dian.so, file.dian.so, s.jiediankeji.com, wxs-weixin.sd.zhumanggroup.com, mobile-api.imlaidian.com, api.sodalife.xyz, hdgateway.zto.com, api.ulife.group, common.diditaxi.com.cn, webchatapp.fcbox.com, dsp.fcbox.com, supplier-api.imdada.cn, customer-app.sto.cn, sto-customer-app.oss-cn-shanghai.aliyuncs.co, api.hongyibo.com.cn, res.hongyibo.com.cn
 
 # >>>>>>>>>>>>>>> ✅ 0 ✅ <<<<<<<<<<<<<<
 
@@ -72,6 +72,8 @@ hostname = apiproxy.zuche.com, miniprogram.ishansong.com,ads.ishansong.com, mini
 
 
 # >>>>>>>>>>>>>>> ✅ B ✅ <<<<<<<<<<<<<<
+# > 必胜客 微信小程序净化
+^https:\/\/res\.pizzahut\.com\.cn\/CRM url reject-dict
 
 
 
@@ -93,6 +95,9 @@ hostname = apiproxy.zuche.com, miniprogram.ishansong.com,ads.ishansong.com, mini
 # > 嘀嗒出行 小程序净化 感谢#豆豆分享
 ^https:\/\/capis(-\d)?\.didapinche\.com\/adbase url reject
 
+# > 石家庄公交乘车码 微信小程序净化
+^https:\/\/wechat-api\.i-xiaoma\.com\.cn\/app\/v1\/bus\/wechat\/content url reject-dict
+
 
 
 # >>>>>>>>>>>>>>> ✅ E ✅ <<<<<<<<<<<<<<
@@ -105,6 +110,12 @@ hostname = apiproxy.zuche.com, miniprogram.ishansong.com,ads.ishansong.com, mini
 # > 丰巢 微信小程序净化
 ^https:\/\/webchatapp\.fcbox\.com\/fcboxactivityweb\/api\/v2\/clientPage url reject-dict
 ^https:\/\/dsp\.fcbox\.com url reject-dict
+
+# > 肯德基 微信小程序净化
+^https:\/\/orders\.kfc\.com\.cn\/preorder-portal\/api\/v2\/coupon url reject-dict
+^https:\/\/dynamicad\.kfc\.com\.cn\/api url reject-dict
+^https:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/custom_v2\/wxapp url reject-dict
+^https:\/\/orders\.kfc\.com\.cn\/preorder-portal\/api\/v2\/activity url reject-dict
 
 
 
@@ -166,6 +177,9 @@ hostname = apiproxy.zuche.com, miniprogram.ishansong.com,ads.ishansong.com, mini
 # >>>>>>>>>>>>>>> ✅ M ✅ <<<<<<<<<<<<<<
 # > 美柚 微信小程序净化
 ^https:\/\/wxproj\.seeyouyima\.com\/data\/today_tips url reject-dict
+
+# > 麦当劳 微信小程序净化
+^https:\/\/api\.mcd\.cn\/bff\/portal\/home\/hotActivity url reject-dict
 
 
 
@@ -244,6 +258,11 @@ hostname = apiproxy.zuche.com, miniprogram.ishansong.com,ads.ishansong.com, mini
 # > 小兔充充 小程序净化 感谢#豆豆分享
 ^https:\/\/ad\.xiaotucc\.com\/advert url reject
 ^https:\/\/mapi\.xiaotucc\.com\/(mall\/main|main_page\/index\/getActivity) url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/xiaotucc.js
+
+# > 星巴克 微信小程序净化
+^https:\/\/3pp\.starbucks\.com\.cn\/wxmem\/popup url reject-dict
+^https:\/\/3pp\.starbucks\.com\.cn\/wxmem\/index\/banner url reject-dict
+^https:\/\/3pp\.starbucks\.com\.cn\/wxmem\/index\/global url reject-dict
 
 
 
