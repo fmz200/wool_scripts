@@ -4,8 +4,8 @@
 # 配置链接：https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/cleanup.snippet
 # 项目地址：https://github.com/fmz200/wool_scripts/blob/main/QuantumultX/rewrite/cleanup.snippet
 # 交流群组：https://t.me/quguanggao
-# 支持数量：20
-# 更新时间：2023.04.15 11:23
+# 支持数量：28
+# 更新时间：2023.04.15 17:23
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -25,7 +25,7 @@
 
 
 # 去重后的hostname，将对以下域名进行MITM（MAN-IN-THE-MIDDLE：中间人攻击）
-hostname = qapi.huolala.cn, appuser-static.huolala.cn, apis.alenable.com, suyun-user.daojia.com, adsoss.zhinengxiyifang.cn, api-marketing.zhinengxiyifang.cn, ads.zhinengxiyifang.cn, capis*.didapinche.com, conf.diditaxi.com.cn, ad.xiaotucc.com, mapi.xiaotucc.com, aag.enmonster.com, smarket.dian.so, file.dian.so, s.jiediankeji.com, wxs-weixin.sd.zhumanggroup.com, mobile-api.imlaidian.com, api.sodalife.xyz, hdgateway.zto.com, api.ulife.group, common.diditaxi.com.cn, webchatapp.fcbox.com, dsp.fcbox.com, supplier-api.imdada.cn, customer-app.sto.cn, sto-customer-app.oss-cn-shanghai.aliyuncs.co, api.hongyibo.com.cn, res.hongyibo.com.cn
+hostname = apiproxy.zuche.com, miniprogram.ishansong.com,ads.ishansong.com, minicap.caocaokeji.cn, applets.jtexpress.com.cn, ump.ems.com.cn, api.hellobike.coming, api.kuaidihelp.com, wxproj.seeyouyima.com, qapi.huolala.cn, appuser-static.huolala.cn, apis.alenable.com, suyun-user.daojia.com, adsoss.zhinengxiyifang.cn, api-marketing.zhinengxiyifang.cn, ads.zhinengxiyifang.cn, capis*.didapinche.com, conf.diditaxi.com.cn, ad.xiaotucc.com, mapi.xiaotucc.com, aag.enmonster.com, smarket.dian.so, file.dian.so, s.jiediankeji.com, wxs-weixin.sd.zhumanggroup.com, mobile-api.imlaidian.com, api.sodalife.xyz, hdgateway.zto.com, api.ulife.group, common.diditaxi.com.cn, webchatapp.fcbox.com, dsp.fcbox.com, supplier-api.imdada.cn, customer-app.sto.cn, sto-customer-app.oss-cn-shanghai.aliyuncs.co, api.hongyibo.com.cn, res.hongyibo.com.cn
 
 # >>>>>>>>>>>>>>> ✅ 0 ✅ <<<<<<<<<<<<<<
 
@@ -76,6 +76,8 @@ hostname = qapi.huolala.cn, appuser-static.huolala.cn, apis.alenable.com, suyun-
 
 
 # >>>>>>>>>>>>>>> ✅ C ✅ <<<<<<<<<<<<<<
+# > 曹操出行 微信小程序净化
+^https:\/\/minicap\.caocaokeji\.cn\/advert-bss\/pullAdvert url reject-dict
 
 
 
@@ -94,6 +96,8 @@ hostname = qapi.huolala.cn, appuser-static.huolala.cn, apis.alenable.com, suyun-
 
 
 # >>>>>>>>>>>>>>> ✅ E ✅ <<<<<<<<<<<<<<
+# > EMS 微信小程序净化 由TEXAS和豆豆提供
+^https:\/\/ump\.ems\.com\.cn\/new-generation-extend\/redis\/pageInfoByChannel url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/ems.js
 
 
 
@@ -130,6 +134,9 @@ hostname = qapi.huolala.cn, appuser-static.huolala.cn, apis.alenable.com, suyun-
 ^https:\/\/qapi\.huolala\.cn\/home_new_user url reject-dict
 ^https:\/\/qapi\.huolala\.cn\/get_service_list url reject-dict
 
+# > 哈啰 微信小程序首页弹窗屏蔽
+^https:\/\/api\.hellobike\.com\/api\?adx url reject-dict
+
 
 
 # >>>>>>>>>>>>>>> ✅ I ✅ <<<<<<<<<<<<<<
@@ -139,6 +146,9 @@ hostname = qapi.huolala.cn, appuser-static.huolala.cn, apis.alenable.com, suyun-
 # >>>>>>>>>>>>>>> ✅ J ✅ <<<<<<<<<<<<<<
 # > 街电 微信小程序
 ^https:\/\/s\.jiediankeji\.com\/adv url reject-dict
+
+# > 极兔快递 微信小程序净化
+^https:\/\/applets\.jtexpress\.com\.cn url reject-dict
 
 
 
@@ -154,6 +164,8 @@ hostname = qapi.huolala.cn, appuser-static.huolala.cn, apis.alenable.com, suyun-
 
 
 # >>>>>>>>>>>>>>> ✅ M ✅ <<<<<<<<<<<<<<
+# > 美柚 微信小程序净化
+^https:\/\/wxproj\.seeyouyima\.com\/data\/today_tips url reject-dict
 
 
 
@@ -193,6 +205,14 @@ hostname = qapi.huolala.cn, appuser-static.huolala.cn, apis.alenable.com, suyun-
 # > 搜电充电 微信小程序
 ^https:\/\/wxs-weixin\.sd\.zhumanggroup\.com\/api\/v2\/ad url reject-dict
 
+# > 神州租车 微信小程序净化
+^https:\/\/apiproxy\.zuche\.com\/resource\/carrctapi\/home\/marketing url reject-dict
+^https:\/\/apiproxy\.zuche\.com\/resource\/carrctapi\/home\/page\/advertising url reject-dict
+
+# > 闪送 微信小程序净化
+^https:\/\/miniprogram\.ishansong\.com\/cms\/faq\/query url reject-dict
+^https:\/\/ads\.ishansong\.com\/advert url reject-dict
+
 
 
 # >>>>>>>>>>>>>>> ✅ T ✅ <<<<<<<<<<<<<<
@@ -211,6 +231,8 @@ hostname = qapi.huolala.cn, appuser-static.huolala.cn, apis.alenable.com, suyun-
 
 
 # >>>>>>>>>>>>>>> ✅ W ✅ <<<<<<<<<<<<<<
+# > 微快递 微信小程序净化
+^https:\/\/api\.kuaidihelp\.com\/g_order_core\/v2\/mina\/User\/getBannerList url reject-dict
 
 
 
