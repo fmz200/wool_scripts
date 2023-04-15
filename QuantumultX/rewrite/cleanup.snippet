@@ -1,10 +1,11 @@
 #############################################
 # 重写作用：App&小程序净化，去除一些冗余的模块
 # 重要提示：某些APP/小程序要清除缓存或者重新安装，拦截才会生效！
-# 项目地址：https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/cleanup.snippet
+# 配置链接：https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/cleanup.snippet
+# 项目地址：https://github.com/fmz200/wool_scripts/blob/main/QuantumultX/rewrite/cleanup.snippet
 # 交流群组：https://t.me/quguanggao
-# 支持数量：
-# 更新时间：2023.04.15 11:06
+# 支持数量：20
+# 更新时间：2023.04.15 11:23
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -106,6 +107,7 @@ hostname = qapi.huolala.cn, appuser-static.huolala.cn, apis.alenable.com, suyun-
 # >>>>>>>>>>>>>>> ✅ G ✅ <<<<<<<<<<<<<<
 # > 怪兽充电 微信小程序
 ^https:\/\/aag\.enmonster\.com\/apa\/index\/advert\/skin url reject
+^https:\/\/aag\.enmonster\.com\/apa\/(index\/)?advert\/(skin|multi\/positions|demand\/home\/poster) url reject
 # 我的界面广告 支付宝小程序
 ^https:\/\/aag\.enmonster\.com\/apa\/advert\/multi\/positions url reject
 # 我的界面广告 微信小程序

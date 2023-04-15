@@ -1,7 +1,7 @@
 #############################################
 # 重写作用：针对部分APP开屏广告，应用内广告进行拦截
 # 重要提示：某些APP要清除缓存或者重新安装APP，拦截广告才会生效！
-# 项目地址：https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
+# 项目地址：https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/chongxie.txt
 # 交流群组：https://t.me/quguanggao
 # 支持数量：约353款app
 # 更新时间：2023.04.14 22:50

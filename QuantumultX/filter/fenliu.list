@@ -1,7 +1,7 @@
 #############################################
 # 分流作用：1️⃣针对部分APP开屏广告，应用内广告进行拦截，2️⃣决定所访问的域名/主机使用哪个地区节点
 # 重要提示：某些APP要清除缓存或者重新安装APP，拦截广告才会生效！
-# 项目地址：https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/fenliu.list
+# 项目地址：https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/fenliu.list
 # 交流群组：https://t.me/quguanggao
 # 更新时间：2023.04.05 21:10
 # 策略选择：reject
