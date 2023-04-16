@@ -4,8 +4,8 @@
 # 配置链接：https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/cleanup.snippet
 # 项目地址：https://github.com/fmz200/wool_scripts/blob/main/QuantumultX/rewrite/cleanup.snippet
 # 交流群组：https://t.me/quguanggao
-# 支持数量：28
-# 更新时间：2023.04.16 12:10
+# 支持数量：44
+# 更新时间：2023.04.16 20:50
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -25,7 +25,7 @@
 
 
 # 去重后的hostname，将对以下域名进行MITM（MAN-IN-THE-MIDDLE：中间人攻击）
-hostname = api-fouth-mem.huazhu.com, wxapp.bestwehotel.com, mystore-gw.watsonsvip.com.cn, app.homeinns.com, wx.bthhotels.com, tm-api.pin-dao.cn, res.pizzahut.com.cn, orders.kfc.com.cn, dynamicad.kfc.com.cn, res.kfc.com.cn, api.mcd.cn, 3pp.starbucks.com.cn, wechat-api.i-xiaoma.com.cn, apiproxy.zuche.com, miniprogram.ishansong.com,ads.ishansong.com, minicap.caocaokeji.cn, applets.jtexpress.com.cn, ump.ems.com.cn, api.hellobike.coming, api.kuaidihelp.com, wxproj.seeyouyima.com, qapi.huolala.cn, appuser-static.huolala.cn, apis.alenable.com, suyun-user.daojia.com, adsoss.zhinengxiyifang.cn, api-marketing.zhinengxiyifang.cn, ads.zhinengxiyifang.cn, capis*.didapinche.com, conf.diditaxi.com.cn, ad.xiaotucc.com, mapi.xiaotucc.com, aag.enmonster.com, smarket.dian.so, file.dian.so, s.jiediankeji.com, wxs-weixin.sd.zhumanggroup.com, mobile-api.imlaidian.com, api.sodalife.xyz, hdgateway.zto.com, api.ulife.group, common.diditaxi.com.cn, webchatapp.fcbox.com, dsp.fcbox.com, supplier-api.imdada.cn, customer-app.sto.cn, sto-customer-app.oss-cn-shanghai.aliyuncs.co, api.hongyibo.com.cn, res.hongyibo.com.cn
+hostname = lawsonapi.yorentown.com, plt.yorentown.com, minifm.maxxipoint.com, htwkop.xiaojukeji.com, htwkop.xiaojukeji.com, mxsa.mxbc.net, go.heytea.com, miniapp.sexytea2013.com, api-fouth-mem.huazhu.com, wxapp.bestwehotel.com, mystore-gw.watsonsvip.com.cn, app.homeinns.com, wx.bthhotels.com, tm-api.pin-dao.cn, res.pizzahut.com.cn, orders.kfc.com.cn, dynamicad.kfc.com.cn, res.kfc.com.cn, api.mcd.cn, 3pp.starbucks.com.cn, wechat-api.i-xiaoma.com.cn, apiproxy.zuche.com, miniprogram.ishansong.com,ads.ishansong.com, minicap.caocaokeji.cn, applets.jtexpress.com.cn, ump.ems.com.cn, api.hellobike.coming, api.kuaidihelp.com, wxproj.seeyouyima.com, qapi.huolala.cn, appuser-static.huolala.cn, apis.alenable.com, suyun-user.daojia.com, adsoss.zhinengxiyifang.cn, api-marketing.zhinengxiyifang.cn, ads.zhinengxiyifang.cn, capis*.didapinche.com, conf.diditaxi.com.cn, ad.xiaotucc.com, mapi.xiaotucc.com, aag.enmonster.com, smarket.dian.so, file.dian.so, s.jiediankeji.com, wxs-weixin.sd.zhumanggroup.com, mobile-api.imlaidian.com, api.sodalife.xyz, hdgateway.zto.com, api.ulife.group, common.diditaxi.com.cn, webchatapp.fcbox.com, dsp.fcbox.com, supplier-api.imdada.cn, customer-app.sto.cn, sto-customer-app.oss-cn-shanghai.aliyuncs.co, api.hongyibo.com.cn, res.hongyibo.com.cn
 
 # >>>>>>>>>>>>>>> ✅ 0 ✅ <<<<<<<<<<<<<<
 
@@ -80,6 +80,9 @@ hostname = api-fouth-mem.huazhu.com, wxapp.bestwehotel.com, mystore-gw.watsonsvi
 # >>>>>>>>>>>>>>> ✅ C ✅ <<<<<<<<<<<<<<
 # > 曹操出行 微信小程序净化
 ^https:\/\/minicap\.caocaokeji\.cn\/advert-bss\/pullAdvert url reject-dict
+
+# > 茶颜悦色 微信小程序净化
+^https:\/\/miniapp\.sexytea2013\.com\/cms\/slot\/queryByCodes url script-response-body https://raw.githubusercontent.com/jizhi0520/QX/main/ccyse.js
 
 
 
@@ -179,6 +182,12 @@ hostname = api-fouth-mem.huazhu.com, wxapp.bestwehotel.com, mystore-gw.watsonsvi
 # > 来电 小程序净化
 ^https:\/\/mobile-api\.imlaidian\.com\/api\/args url reject-dict
 
+# > 罗森点点 微信小程序净化
+^https:\/\/lawsonapi\.yorentown\.com\/area\/sh-lawson\/app\/v1\/mina\/systemSetting url reject-dict
+^https:\/\/plt\.yorentown\.com\/pltapp\/v1\/banner url reject-dict
+^https:\/\/lawsonapi\.yorentown\.com\/area\/sh-lawson\/app\/v1\/home url script-response-body https://raw.githubusercontent.com/jizhi0520/QX/main/lawson.js
+
+
 
 # >>>>>>>>>>>>>>> ✅ M ✅ <<<<<<<<<<<<<<
 # > 美柚 微信小程序净化
@@ -186,6 +195,9 @@ hostname = api-fouth-mem.huazhu.com, wxapp.bestwehotel.com, mystore-gw.watsonsvi
 
 # > 麦当劳 微信小程序净化
 ^https:\/\/api\.mcd\.cn\/bff\/portal\/home\/hotActivity url reject-dict
+
+# > 蜜雪冰城 微信小程序净化
+^https:\/\/mxsa\.mxbc\.net\/api\/v1\/adinfo\/adplace\/query url reject-dict
 
 
 
@@ -207,6 +219,15 @@ hostname = api-fouth-mem.huazhu.com, wxapp.bestwehotel.com, mystore-gw.watsonsvi
 # >>>>>>>>>>>>>>> ✅ Q ✅ <<<<<<<<<<<<<<
 # > 屈臣氏 微信小程序开屏(或许APP也可以干掉)
 ^https:\/\/mystore-gw\.watsonsvip\.com\.cn\/gfu\/popup\/advert\/launch url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/watsons.js
+
+# > 青桔 微信小程序净化
+^https:\/\/htwkop\.xiaojukeji\.com\/gateway\?api=cms\.htw\.delivery url reject-dict
+^https:\/\/htwkop\.xiaojukeji\.com\/gateway\?api=prd\.task url reject-dict
+^https:\/\/htwkop\.xiaojukeji\.com\/gateway\?api=hm\.fa url reject-dict
+^https:\/\/star\.xiaojukeji\.com\/config url reject-dict
+
+# > 全家微会员 微信小程序净化
+^https:\/\/minifm\.maxxipoint\.com\/banner\/list url script-response-body https://raw.githubusercontent.com/jizhi0520/QX/main/FamilyMart.js
 
 
 
@@ -280,6 +301,9 @@ hostname = api-fouth-mem.huazhu.com, wxapp.bestwehotel.com, mystore-gw.watsonsvi
 ^https:\/\/3pp\.starbucks\.com\.cn\/wxmem\/popup url reject-dict
 ^https:\/\/3pp\.starbucks\.com\.cn\/wxmem\/index\/banner url reject-dict
 ^https:\/\/3pp\.starbucks\.com\.cn\/wxmem\/index\/global url reject-dict
+
+# > 喜茶 微信小程序净化
+^https:\/\/go\.heytea\.com\/api\/service-portal\/vip url script-response-body https://raw.githubusercontent.com/jizhi0520/QX/main/heytea.js
 
 
 
