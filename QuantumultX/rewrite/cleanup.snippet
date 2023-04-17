@@ -5,7 +5,7 @@
 # 项目地址：https://github.com/fmz200/wool_scripts/blob/main/QuantumultX/rewrite/cleanup.snippet
 # 交流群组：https://t.me/quguanggao
 # 支持数量：44
-# 更新时间：2023.04.16 20:50
+# 更新时间：2023.04.17 19:50
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -25,7 +25,7 @@
 
 
 # 去重后的hostname，将对以下域名进行MITM（MAN-IN-THE-MIDDLE：中间人攻击）
-hostname = lawsonapi.yorentown.com, plt.yorentown.com, minifm.maxxipoint.com, htwkop.xiaojukeji.com, htwkop.xiaojukeji.com, mxsa.mxbc.net, go.heytea.com, miniapp.sexytea2013.com, api-fouth-mem.huazhu.com, wxapp.bestwehotel.com, mystore-gw.watsonsvip.com.cn, app.homeinns.com, wx.bthhotels.com, tm-api.pin-dao.cn, res.pizzahut.com.cn, orders.kfc.com.cn, dynamicad.kfc.com.cn, res.kfc.com.cn, api.mcd.cn, 3pp.starbucks.com.cn, wechat-api.i-xiaoma.com.cn, apiproxy.zuche.com, miniprogram.ishansong.com,ads.ishansong.com, minicap.caocaokeji.cn, applets.jtexpress.com.cn, ump.ems.com.cn, api.hellobike.coming, api.kuaidihelp.com, wxproj.seeyouyima.com, qapi.huolala.cn, appuser-static.huolala.cn, apis.alenable.com, suyun-user.daojia.com, adsoss.zhinengxiyifang.cn, api-marketing.zhinengxiyifang.cn, ads.zhinengxiyifang.cn, capis*.didapinche.com, conf.diditaxi.com.cn, ad.xiaotucc.com, mapi.xiaotucc.com, aag.enmonster.com, smarket.dian.so, file.dian.so, s.jiediankeji.com, wxs-weixin.sd.zhumanggroup.com, mobile-api.imlaidian.com, api.sodalife.xyz, hdgateway.zto.com, api.ulife.group, common.diditaxi.com.cn, webchatapp.fcbox.com, dsp.fcbox.com, supplier-api.imdada.cn, customer-app.sto.cn, sto-customer-app.oss-cn-shanghai.aliyuncs.co, api.hongyibo.com.cn, res.hongyibo.com.cn
+hostname = triangle.wearemanner.com, triangle.wearemanner.com, cappapi.alittle-tea.com, alittle-tea.oss-cn-shanghai.aliyuncs.com, member.lxjchina.com.cn, cbd-gateway-service-applets.hualala.com, coco-com.e.verystar.net, lawsonapi.yorentown.com, plt.yorentown.com, minifm.maxxipoint.com, htwkop.xiaojukeji.com, mxsa.mxbc.net, go.heytea.com, miniapp.sexytea2013.com, api-fouth-mem.huazhu.com, wxapp.bestwehotel.com, mystore-gw.watsonsvip.com.cn, app.homeinns.com, wx.bthhotels.com, tm-api.pin-dao.cn, res.pizzahut.com.cn, orders.kfc.com.cn, dynamicad.kfc.com.cn, res.kfc.com.cn, api.mcd.cn, 3pp.starbucks.com.cn, wechat-api.i-xiaoma.com.cn, apiproxy.zuche.com, miniprogram.ishansong.com,ads.ishansong.com, minicap.caocaokeji.cn, applets.jtexpress.com.cn, ump.ems.com.cn, api.hellobike.coming, api.kuaidihelp.com, wxproj.seeyouyima.com, qapi.huolala.cn, appuser-static.huolala.cn, apis.alenable.com, suyun-user.daojia.com, adsoss.zhinengxiyifang.cn, api-marketing.zhinengxiyifang.cn, ads.zhinengxiyifang.cn, capis*.didapinche.com, conf.diditaxi.com.cn, ad.xiaotucc.com, mapi.xiaotucc.com, aag.enmonster.com, smarket.dian.so, file.dian.so, s.jiediankeji.com, wxs-weixin.sd.zhumanggroup.com, mobile-api.imlaidian.com, api.sodalife.xyz, hdgateway.zto.com, api.ulife.group, common.diditaxi.com.cn, webchatapp.fcbox.com, dsp.fcbox.com, supplier-api.imdada.cn, customer-app.sto.cn, sto-customer-app.oss-cn-shanghai.aliyuncs.co, api.hongyibo.com.cn, res.hongyibo.com.cn
 
 # >>>>>>>>>>>>>>> ✅ 0 ✅ <<<<<<<<<<<<<<
 
@@ -82,7 +82,13 @@ hostname = lawsonapi.yorentown.com, plt.yorentown.com, minifm.maxxipoint.com, ht
 ^https:\/\/minicap\.caocaokeji\.cn\/advert-bss\/pullAdvert url reject-dict
 
 # > 茶颜悦色 微信小程序净化
-^https:\/\/miniapp\.sexytea2013\.com\/cms\/slot\/queryByCodes url script-response-body https://raw.githubusercontent.com/jizhi0520/QX/main/ccyse.js
+^https:\/\/miniapp\.sexytea2013\.com\/cms\/slot\/queryByCodes\?codes=INDEX_TOP_BANNER url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/cyys.js
+
+# > 茶百道 微信小程序净化
+^https:\/\/cbd-gateway-service-applets\.hualala\.com\/arch\/api\/banner\/QueryBannerImgList url reject-dict
+
+# > COCO点单 微信小程序净化
+^https:\/\/coco-com\.e\.verystar\.net\/v1\/home\/info url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/coco.js
 
 
 
@@ -185,7 +191,10 @@ hostname = lawsonapi.yorentown.com, plt.yorentown.com, minifm.maxxipoint.com, ht
 # > 罗森点点 微信小程序净化
 ^https:\/\/lawsonapi\.yorentown\.com\/area\/sh-lawson\/app\/v1\/mina\/systemSetting url reject-dict
 ^https:\/\/plt\.yorentown\.com\/pltapp\/v1\/banner url reject-dict
-^https:\/\/lawsonapi\.yorentown\.com\/area\/sh-lawson\/app\/v1\/home url script-response-body https://raw.githubusercontent.com/jizhi0520/QX/main/lawson.js
+^https:\/\/lawsonapi\.yorentown\.com\/area\/sh-lawson\/app\/v1\/home url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/lawson.js
+
+# > 老乡鸡 微信小程序净化
+^https:\/\/member\.lxjchina\.com\.cn\/mini-server\/home\/page\/banner url reject-dict
 
 
 
@@ -198,6 +207,9 @@ hostname = lawsonapi.yorentown.com, plt.yorentown.com, minifm.maxxipoint.com, ht
 
 # > 蜜雪冰城 微信小程序净化
 ^https:\/\/mxsa\.mxbc\.net\/api\/v1\/adinfo\/adplace\/query url reject-dict
+
+# > Manner 微信小程序净化(去除首页轮播图以及进入小程序弹窗)
+^https:\/\/triangle\.wearemanner\.com\/mp-api\/v1\/ads url reject-dict
 
 
 
@@ -222,12 +234,13 @@ hostname = lawsonapi.yorentown.com, plt.yorentown.com, minifm.maxxipoint.com, ht
 
 # > 青桔 微信小程序净化
 ^https:\/\/htwkop\.xiaojukeji\.com\/gateway\?api=cms\.htw\.delivery url reject-dict
-^https:\/\/htwkop\.xiaojukeji\.com\/gateway\?api=prd\.task url reject-dict
-^https:\/\/htwkop\.xiaojukeji\.com\/gateway\?api=hm\.fa url reject-dict
-^https:\/\/star\.xiaojukeji\.com\/config url reject-dict
+^https:\/\/htwkop\.xiaojukeji\.com\/gateway\?api=hm\.fa\.combineHomepageInfo url reject-dict
+^https:\/\/htwkop\.xiaojukeji\.com\/gateway\?api=hm\.fa\.mallRecommend url reject-dict
+^https:\/\/htwkop\.xiaojukeji\.com\/gateway\?api=hm\.fa\.homeConfig url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/qingju.js
+
 
 # > 全家微会员 微信小程序净化
-^https:\/\/minifm\.maxxipoint\.com\/banner\/list url script-response-body https://raw.githubusercontent.com/jizhi0520/QX/main/FamilyMart.js
+^https:\/\/minifm\.maxxipoint\.com\/banner\/list url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/FamilyMart.js
 
 
 
@@ -303,7 +316,7 @@ hostname = lawsonapi.yorentown.com, plt.yorentown.com, minifm.maxxipoint.com, ht
 ^https:\/\/3pp\.starbucks\.com\.cn\/wxmem\/index\/global url reject-dict
 
 # > 喜茶 微信小程序净化
-^https:\/\/go\.heytea\.com\/api\/service-portal\/vip url script-response-body https://raw.githubusercontent.com/jizhi0520/QX/main/heytea.js
+^https:\/\/go\.heytea\.com\/api\/service-portal\/vip url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/heytea.js
 
 
 
@@ -314,7 +327,11 @@ hostname = lawsonapi.yorentown.com, plt.yorentown.com, minifm.maxxipoint.com, ht
 ^https:\/\/api\.ulife\.group\/market\/frontEntrance\/getThirdAdvertising\?displayPort=1&type=15 url reject-dict
 ^https:\/\/api\.ulife\.group\/market\/memberCard\/listMemberCard\?isShowSecondaryCard=1 url reject-dict
 ^https:\/\/api\.ulife\.group\/auth\/account\/entrance url reject-dict
-^https:\/\/api\.ulife\.group\/market\/homeIconDetail\/list\/v7 url script-response-body https://raw.githubusercontent.com/jizhi0520/QX/main/yx.js
+^https:\/\/api\.ulife\.group\/market\/homeIconDetail\/list\/v7 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/yx.js
+
+# > 一点点 微信小程序净化
+^https:\/\/cappapi\.alittle-tea\.com\/open\?method=catering\.set\.ad url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/alittle-tea.js
+^https:\/\/alittle-tea\.oss-cn-shanghai\.aliyuncs\.com\/images\/platform\/alittle url reject-dict
 
 
 
