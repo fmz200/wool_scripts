@@ -96,7 +96,7 @@ hostname = wx.mygolbs.com, hkj178.com, ccmsupport-sz.tenpay.com, api.songguo7.co
 ^https:\/\/minicap\.caocaokeji\.cn\/advert-bss\/pullAdvert url reject-dict
 
 # > 乘车码 @jinlvei
-^https:\/\/ccmsupport-sz\.tenpay\.com\/cgi-bin\/common\/ccm_page_element.cgi reject
+^https:\/\/ccmsupport-sz\.tenpay\.com\/cgi-bin\/common\/ccm_page_element.cgi url reject
 
 # > 茶颜悦色 微信小程序净化
 ^https:\/\/miniapp\.sexytea2013\.com\/cms\/slot\/queryByCodes\?codes=INDEX_TOP_BANNER url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/cyys.js
@@ -183,7 +183,7 @@ hostname = wx.mygolbs.com, hkj178.com, ccmsupport-sz.tenpay.com, api.songguo7.co
 ^https:\/\/api-fouth-mem\.huazhu\.com\/api\/rights\/bannerList url reject-dict
 
 # > 黑科技软件
-^https:\/\/hkj178.com/wp-json/mp/v2/advert/wechat reject-200
+^https:\/\/hkj178.com/wp-json/mp/v2/advert/wechat url reject-200
 ^https:\/\/hkj178\.com\/wp\-json\/mp\/v2\/posts url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
 
 # > 黑科技软件源
@@ -329,7 +329,7 @@ hostname = wx.mygolbs.com, hkj178.com, ccmsupport-sz.tenpay.com, api.songguo7.co
 ^https:\/\/app\.homeinns\.com\/api\/v5\/index url reject-dict
 
 # > 松果出行 @keywos
-^https:\/\/api\.songguo7\.com\/(\w{3})?mp\/v2\/misc\/(toast|user_operate_info) reject-dict
+^https:\/\/api\.songguo7\.com\/(\w{3})?mp\/v2\/misc\/(toast|user_operate_info) url reject-dict
 
 # > 森茂小苑
 ^https:\/\/[a-z]+\.smkj33\.top\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
