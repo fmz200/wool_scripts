@@ -88,7 +88,7 @@ async function operator(proxies) {
     support = true;
   } else if (isSurge) {
     const build = $environment['surge-build'];
-    if (build && parseInt(build) >= 2407) {
+    if (build && parseInt(build) >= 2000) {
       support = true;
     }
   }
@@ -228,7 +228,8 @@ async function queryIpApi(proxy) {
       url,
       headers,
       opts: opts, // QX的写法
-      node: node
+      node: node,
+      "policy-descriptor": node
     }).then(resp => {
       const body = resp.body;
       const data = JSON.parse(body);
