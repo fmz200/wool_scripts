@@ -4,7 +4,7 @@
 # 项目地址：https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/chongxie.txt
 # 交流群组：https://t.me/quguanggao
 # 支持数量：约353款app
-# 更新时间：2023.04.14 22:50
+# 更新时间：2023.04.19 21:50
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -1014,7 +1014,7 @@ https://dl-cu-hz.lechange.cn/oms-online/advertisementPush/* url reject
 # > 浦大喜奔
 # 倒计时还在
 ^https?:\/\/image\.spdbccc\.com\.cn\/group\d\/M00\/[7-9]{1}[A-Z0-9]{1}\/[A-Z0-9]{2}\/rBsZ.+g549\.png url reject-200
-^https?:\/\/image\.spdbccc\.com\.cn\/group\d\/M00\/[7-9]{1}[A-Z0-9]{1}\/[A-Z0-9]{2}\/rBsZ.+\.jpg url reject-200
+^https?:\/\/image\.spdbccc\.com\.cn\/group\d\/M00\/[7-9]{1}[A-Z0-9]{1}\/[A-Z0-9]{2}\/rBsZ.+\.(jpg|JPG) url reject-200
 
 # > 朴朴超市 #开屏广告 感谢@Ava阿檬分享
 ^https?:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v7\?position_types=2(%[A-Z0-9]+)+&store_id url script-response-body https://raw.githubusercontent.com/LimeAroma/Quantumultx/main/Js/PupuSplashAds.js
