@@ -879,7 +879,7 @@ https://dl-cu-hz.lechange.cn/oms-online/advertisementPush/* url reject
 ^https?:\/\/app\.aa-ab\.com\/home url reject-200
 
 # > lofter #开屏广告 感谢@林夕分享
-^https?:\/\/ad\.lofter.com\/v1\.1\yitou\madr url reject-200
+^https?:\/\/ad\.lofter.com\/v1\.1\/yitou\/madr url reject-200
 ^http?:\/\/images\.pinduoduo\.com\/marketing\_api url reject-200
 ^https?:\/\/lofter\.lf127\.net\/ad\-material url reject-200
 
