@@ -1,10 +1,10 @@
 //############################################
 // 原始地址：https://github.com/sub-store-org/Sub-Store/blob/master/scripts/ip-flag.js
-// 脚本地址：https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/server_rename.js
+// 脚本地址：https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/rename_simple.js
 // 脚本作用：在SubStore内对节点重命名为：旗帜|地区代码|地区名称|IP|序号，
 // 使用方法：SubStore内选择“脚本操作”，然后填写上面的脚本地址
 // 支持平台：目前只支持Loon，Surge
-// 更新时间：2023.04.18 22:20
+// 更新时间：2023.04.22 22:20
 // 这个脚本是测试脚本，请使用 server_rename.js
 //############################################
 
@@ -24,9 +24,7 @@ if (isLoon) {
 }
 
 async function operator(proxies) {
-  // console.log("✅💕proxies = " + JSON.stringify(proxies));
   console.log("✅💕初始节点个数 = " + proxies.length);
-  // $.write(JSON.stringify(proxies), "#sub-store-proxies");
 
   let support = false;
   if (isLoon || isQX) {
@@ -79,7 +77,7 @@ function removeDuplicateName(arr) {
   for (const e of arr) {
     if (!nameSet.has(e.name) && e.name.endsWith("|QC")) {
       nameSet.add(e.name);
-      e.name = e.name.substring(0, e.name.lastIndexOf(DELIMITER));
+      e.name = e.name.substring(0, e.name.indexOf(DELIMITER));
       result.push(e);
     }
   }
