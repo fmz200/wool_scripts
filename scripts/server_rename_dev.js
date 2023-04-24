@@ -5,7 +5,7 @@
 // 脚本作用：在SubStore内对节点重命名为：旗帜|地区代码|地区名称|IP|序号，
 // 使用方法：SubStore内选择“脚本操作”，然后填写上面的脚本地址
 // 支持平台：目前只支持Loon，Surge
-// 更新时间：2023.04.24 22:40
+// 更新时间：2023.04.25 00:05
 //############################################
 
 const RESOURCE_CACHE_KEY = '#sub-store-cached-resource';
@@ -105,7 +105,7 @@ async function operator(proxies) {
         proxy.name = getFlagEmoji(countryCode) + DELIMITER + in_info.country + "->" + out_info.country;
 
         // 新增一个去重用字段，该字段重复那就是重复节点
-        proxy.qc = in_info.quary + DELIMITER + out_info.quary;
+        proxy.qc = in_info.query + DELIMITER + out_info.query;
       } catch (err) {
         console.log(`✅💕err 02 =${err}`);
       }
