@@ -1,11 +1,11 @@
 //############################################
+// 重要提示：这个脚本是测试脚本，请使用 https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/server_rename.js
 // 原始地址：https://github.com/sub-store-org/Sub-Store/blob/master/scripts/ip-flag.js
-// 脚本地址：https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/rename_simple.js
+// 脚本地址：https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/server_rename_dev.js
 // 脚本作用：在SubStore内对节点重命名为：旗帜|地区代码|地区名称|IP|序号，
 // 使用方法：SubStore内选择“脚本操作”，然后填写上面的脚本地址
 // 支持平台：目前只支持Loon，Surge
-// 更新时间：2023.04.21 22:20
-// 这个脚本是测试脚本，请使用 server_rename.js
+// 更新时间：2023.04.24 22:40
 //############################################
 
 const RESOURCE_CACHE_KEY = '#sub-store-cached-resource';
@@ -66,32 +66,16 @@ class ResourceCache {
 const resourceCache = new ResourceCache(CACHE_EXPIRATION_TIME_MS);
 // let nodes = [];
 const DELIMITER = "|"; // 分隔符
-
 const {isLoon, isSurge, isQX} = $substore.env;
-
-let target; // 节点转换的目标类型
-if (isLoon) {
-  target = "Loon";
-} else if (isSurge) {
-  target = "Surge";
-} else if (isQX) {
-  target = "QX";
-}
+ // 节点转换的目标类型
+const target = isLoon ? "Loon" : isSurge ? "Surge" : isQX ? "QX" : undefined;
 
 async function operator(proxies) {
-  // console.log("✅💕proxies = " + JSON.stringify(proxies));
+  console.log("✅💕proxies = " + JSON.stringify(proxies));
   console.log("✅💕初始节点个数 = " + proxies.length);
   // $.write(JSON.stringify(proxies), "#sub-store-proxies");
 
-  let support = false;
-  if (isLoon || isQX) {
-    support = true;
-  } else if (isSurge) {
-    const build = $environment['surge-build'];
-    if (build && parseInt(build) >= 2000) {
-      support = true;
-    }
-  }
+  const support = (isLoon || isQX || (isSurge && parseInt($environment['surge-build']) >= 2000));
 
   if (!support) {
     $.error(`🚫IP Flag only supports Loon and Surge!`);
@@ -104,31 +88,36 @@ async function operator(proxies) {
     const batch = proxies.slice(i, i + BATCH_SIZE);
     await Promise.allSettled(batch.map(async proxy => {
       try {
-        // 这里最理想的处理方式是只把节点名字中的旗帜和地区名字删除，但保留其他信息
-        // 例如：[🇭🇰香港 专线|3倍率] 只保留👉🏻 [专线|3倍率]
-        // 最后节点重命名为：旗帜|地区代码|地区名称|ip|其他信息
-        // 例如：[🇺🇸|US|美国|1.2.3.4|专线|3倍率]
-
         // remove the original flag 移除旗帜
         // let proxyName = removeFlag(proxy.name);
-        // 本来想把原来的标签加上删除线或者下划线，但是实现不了
-        // query ip-api
-        const code_name = await queryIpApi(proxy);
+
+        // 查询入口IP信息
+        // const in_info = await getIpInfo(proxy.server);
+        const in_info = await queryIpApiInfo(proxy.server);
+        console.log(proxy.server + "✅💕in节点信息 = " + JSON.stringify(in_info));
+
+        // 查询出口IP信息
+        const out_info = await queryIpApi(proxy);
+        console.log(proxy.server + "✅💕out节点信息 = " + JSON.stringify(out_info));
         // 地区代码|地区名称|IP
-        const countryCode = code_name.substring(0, code_name.indexOf(DELIMITER));
-        // 节点重命名为：旗帜|地区代码|地区名称|IP|序号
-        proxy.name = getFlagEmoji(countryCode) + DELIMITER + code_name;
+        const countryCode = out_info.countryCode;
+        // 节点重命名为：旗帜|入口地区名称->出口地区名称|序号
+        proxy.name = getFlagEmoji(countryCode) + DELIMITER + in_info.country + "->" + out_info.country;
+
+        // 新增一个去重用字段，该字段重复那就是重复节点
+        proxy.qc = in_info.quary + DELIMITER + out_info.quary;
       } catch (err) {
-        console.log(`✅💕err=${err}`);
+        console.log(`✅💕err 02 =${err}`);
       }
     }));
 
-    await sleep(1000);
+    // await sleep(300);
     i += BATCH_SIZE;
   }
+  console.log("💰💕去重前的节点信息 = " + JSON.stringify(proxies));
   // 去除重复的节点
-  // 直接写proxies = removeDuplicateName(proxies);不生效
-  proxies = removeDuplicateName(proxies);
+  // proxies = removeDuplicateName(proxies);
+  console.log("✅💕去重后的节点信息 = " + JSON.stringify(proxies));
   console.log(`✅💕去重后的节点个数 = ${proxies.length}`);
   // 再加个序号
   for (let j = 0; j < proxies.length; j++) {
@@ -140,19 +129,13 @@ async function operator(proxies) {
   return proxies;
 }
 
-// JS数组中去除重复元素
-function removeDuplicatesItem(arr) {
-  return Array.from(new Set(arr));
-}
-
 // 根据节点名字去除重复的节点
 function removeDuplicateName(arr) {
   const nameSet = new Set();
   const result = [];
   for (const e of arr) {
-    if (!nameSet.has(e.name) && e.name.endsWith("|QC")) {
-      nameSet.add(e.name);
-      e.name = e.name.substring(0, e.name.lastIndexOf(DELIMITER));
+    if (!nameSet.has(e.qc)) {
+      nameSet.add(e.qc);
       result.push(e);
     }
   }
@@ -197,9 +180,8 @@ async function queryIpApi(proxy) {
     return tasks.get(id);
   }
 
-  const ua = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:78.0) Gecko/20100101 Firefox/78.0";
   const headers = {
-    "User-Agent": ua
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:78.0) Gecko/20100101 Firefox/78.0"
   };
 
   const result = new Promise((resolve, reject) => {
@@ -208,7 +190,7 @@ async function queryIpApi(proxy) {
       resolve(cached);
     }
     // http://ip-api.com/json/24.48.0.1?lang=zh-CN
-    const url = `http://ip-api.com/json?lang=zh-CN`;
+    const url = `http://ip-api.com/json?lang=zh-CN&fields=status,message,country,countryCode,city,query`;
     let node = ProxyUtils.produce([proxy], target);
 
     // Loon 需要去掉节点名字
@@ -235,19 +217,50 @@ async function queryIpApi(proxy) {
       const data = JSON.parse(body);
       if (data.status === "success") {
         // 地区代码|地区名称|IP ：SG|新加坡|13.215.162.99
-        const nodeInfo = data.countryCode + DELIMITER + data.country + DELIMITER + data.query+ "|QC";
-        resourceCache.set(id, nodeInfo);
-        resolve(nodeInfo);
+        // const nodeInfo = data.countryCode + DELIMITER + data.country + DELIMITER + data.query+ "|QC";
+        resourceCache.set(id, data);
+        resolve(data);
       } else {
         reject(new Error(data.message));
       }
     }).catch(err => {
-      console.log("💕err =" + err);
+      console.log("💕err 01 =" + err);
       reject(err);
     });
   });
   tasks.set(id, result);
   return result;
+}
+
+async function queryIpApiInfo(server) {
+  return new Promise((resolve, reject) => {
+    const url = `http://ip-api.com/json/${server}?lang=zh-CN&fields=status,message,country,countryCode,city,query`;
+    $.http.get({
+      url
+    }).then(resp => {
+      const data = JSON.parse(resp.body);
+      if (data.status === "success") {
+        resolve(data);
+      } else {
+        reject(new Error(data.message));
+      }
+    }).catch(err => {
+      console.log("💕err 03 =" + err);
+      reject(err);
+    });
+  });
+}
+
+
+async function getIpInfo(server) {
+  const url = `http://ip-api.com/json/${server}?lang=zh-CN&fields=status,message,country,countryCode,city,query`;
+  const response = await fetch(url);
+  const data = await response.json();
+  if (data.status === 'success') {
+    return data;
+  } else {
+    return {};
+  }
 }
 
 function getId(proxy) {
