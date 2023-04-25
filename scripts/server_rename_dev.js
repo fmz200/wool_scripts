@@ -67,7 +67,7 @@ const resourceCache = new ResourceCache(CACHE_EXPIRATION_TIME_MS);
 // let nodes = [];
 const DELIMITER = "|"; // 分隔符
 const {isLoon, isSurge, isQX} = $substore.env;
- // 节点转换的目标类型
+// 节点转换的目标类型
 const target = isLoon ? "Loon" : isSurge ? "Surge" : isQX ? "QX" : undefined;
 
 async function operator(proxies) {

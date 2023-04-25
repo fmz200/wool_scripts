@@ -14,27 +14,13 @@ let nodes = [];
 const DELIMITER = "|"; // 分隔符
 const {isLoon, isSurge, isQX} = $substore.env;
 
-let target; // 节点转换的目标类型
-if (isLoon) {
-  target = "Loon";
-} else if (isSurge) {
-  target = "Surge";
-} else if (isQX) {
-  target = "QX";
-}
+// 节点转换的目标类型
+const target = isLoon ? "Loon" : isSurge ? "Surge" : isQX ? "QX" : undefined;
 
 async function operator(proxies) {
   console.log("✅💕初始节点个数 = " + proxies.length);
 
-  let support = false;
-  if (isLoon || isQX) {
-    support = true;
-  } else if (isSurge) {
-    const build = $environment['surge-build'];
-    if (build && parseInt(build) >= 2000) {
-      support = true;
-    }
-  }
+  const support = (isLoon || isQX || (isSurge && parseInt($environment['surge-build']) >= 2000));
 
   if (!support) {
     $.error(`🚫IP Flag only supports Loon and Surge!`);
