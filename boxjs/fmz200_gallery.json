@@ -1,5 +1,5 @@
 {
-  "name": "fmz200 task",
+  "name": "fmz200 定时任务",
   "description": "https://github.com/fmz200/wool_scripts",
   "task": [
     "0 0 8-22 * * ? https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/dyGirlVideo.js, tag=抖音小姐姐, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok_2.png, enabled=true",
