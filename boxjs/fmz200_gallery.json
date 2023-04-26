@@ -7,7 +7,6 @@
     "30 1,8,12,17 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/kuaishou/ks_fruit.js, tag=快手果园, img-url=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/task/kuaishou.png, enabled=true",
     "30 1,7,12,18,22 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/pinduoduo/pdd_guoyuan.js, tag=拼多多果园, img-url=https://raw.githubusercontent.com/fmz200/icons/master/apps/pinduoduo.png, enabled=true",
     "15 8,10,12,18,20 * * * https://raw.githubusercontent.com/LinYuanovo/scripts/main/dygy.js, tag=抖音果园, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok_1.png, enabled=true",
-    "26 0,7-21/4 * * * https://raw.githubusercontent.com/leafTheFish/DeathNote/main/meituan.js, tag=美团优惠券, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/meituan.png, enabled=true",
     "10 0 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/jingdong/jddj_fruit.js, tag=京东到家果园任务, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jddj.png, enabled=true",
     "0 */1 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/jingdong/jddj_fruit_collectWater.js, tag=京东到家果园水车自动收水滴, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jddj.png, enabled=true",
     "10 0 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/jingdong/jddj_bean.js, tag=京东到家鲜豆任务, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jddj.png, enabled=true",
