@@ -5,7 +5,7 @@
 // 脚本作用：在SubStore内对节点重命名，并去除ping失败的节点
 // 使用方法：SubStore内选择“脚本操作”，然后填写上面的脚本地址
 // 支持平台：✅Loon，✅Surge，❌QuanX(待QX开发者支持)
-// 更新时间：2023.04.27 22:10
+// 更新时间：2023.04.28 10:10
 //############################################
 
 const $ = $substore;
@@ -102,9 +102,9 @@ async function queryOutInfo(proxy) {
     let node = ProxyUtils.produce([proxy], target);
 
     // Loon 需要去掉节点名字
-    if (isLoon) {
-      node = node.substring(node.indexOf("=") + 1);
-    }
+    // if (isLoon) {
+    //   node = node.substring(node.indexOf("=") + 1);
+    // }
     // QX只要tag的名字，目前QX本身不支持
     const opts = {policy: node.substring(node.lastIndexOf("=") + 1)};
 
