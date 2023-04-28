@@ -121,7 +121,7 @@
 
 | #   | 名称    | 作用                       | 链接（长按可复制链接）                                                                                             | 作者                                  | 特别说明                                                       | 使用教程                                                                            |
 |-----|-------|--------------------------|---------------------------------------------------------------------------------------------------------|-------------------------------------|------------------------------------------------------------|---------------------------------------------------------------------------------|
-| 1   | 节点重命名 | `在SubStore内使用脚本对订阅节点重命名` | [server_rename.js](https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/server_rename.js) | [fmz200](https://github.com/fmz200) | 针对有些机场名称乱写的现象对节点重新命名，使用前查看脚本内使用说明，只支持Loon和Surge，QX本身不支持此功能 | [点击查看](https://pipimiao.notion.site/Sub-Store-aa4e6f7706df4eaba49b458b0e3bf758) |
+| 1   | 节点重命名 | `在SubStore内使用脚本对订阅节点重命名` | [rename_simple.js](https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/rename_simple.js) | [fmz200](https://github.com/fmz200) | 针对有些机场名称乱写的现象对节点重新命名，使用前查看脚本内使用说明，只支持Loon和Surge，QX本身不支持此功能 | [点击查看](https://pipimiao.notion.site/Sub-Store-aa4e6f7706df4eaba49b458b0e3bf758) |
 
 ---
 

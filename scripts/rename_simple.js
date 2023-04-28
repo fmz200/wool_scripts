@@ -5,7 +5,7 @@
 // 脚本作用：在SubStore内对节点重命名，排序，去除ping失败的节点
 // 使用方法：SubStore内选择“脚本操作”，然后填写上面的脚本地址
 // 支持平台：✅Loon，✅Surge，❌QuanX(待QX开发者支持)
-// 更新时间：2023.04.27 22:10
+// 更新时间：2023.04.28 20:20
 //############################################
 
 const $ = $substore;
@@ -101,13 +101,6 @@ async function queryOutInfo(proxy) {
     const url = `http://ip-api.com/json?lang=zh-CN&fields=status,message,country,countryCode,city,query`;
     let node = ProxyUtils.produce([proxy], target);
 
-    // Loon 需要去掉节点名字
-    if (isLoon) {
-      node = node.substring(node.indexOf("=") + 1);
-    }
-    // QX只要tag的名字，目前QX本身不支持
-    const opts = {policy: node.substring(node.lastIndexOf("=") + 1)};
-
     const timeoutPromise = new Promise((_, reject) => {
       setTimeout(() => {
         reject(new Error("请求超时"));
@@ -117,8 +110,8 @@ async function queryOutInfo(proxy) {
     const queryPromise =
       $.http.get({
         url,
-        opts: opts, // QX的写法
-        node: node, // Loon和Surge IOS
+        opts: {policy: node}, // QX的写法，目前QX本身不支持
+        node: node, // Loon，Surge IOS
         "policy-descriptor": node // Surge MAC
       }).then(resp => {
         const body = JSON.parse(resp.body);
