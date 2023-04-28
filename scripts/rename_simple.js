@@ -167,7 +167,7 @@ function rmDupNameAndGroupAndEnumerate(arr) {
     if (groups.hasOwnProperty(groupKey)) {
       const group = groups[groupKey];
       group.forEach((item, index) => {
-        item.name = `${item.name}${DELIMITER}${index < 10 ? '0' : ''}${index + 1}`;
+        item.name = `${item.name}${DELIMITER}${index < 9 ? '0' : ''}${index + 1}`;
       });
     }
   }
