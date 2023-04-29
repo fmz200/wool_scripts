@@ -61,7 +61,7 @@ async function operator(proxies) {
   // 去除重复的节点，排序，再加个序号
   proxies = rmDupNameAndGroupAndEnumerate(proxies);
   // console.log("✅💕去重后的节点信息 = " + JSON.stringify(proxies));
-  console.log(`✅💕去重后节点个数 = ${proxies.length}，共去除 ${server_count} 个节点`);
+  console.log(`✅💕去重后节点个数 = ${proxies.length}，共去除 ${server_count - proxies.length} 个节点`);
 
   const endTime = new Date(); // 获取当前时间作为结束时间
   const timeDiff = endTime.getTime() - startTime.getTime(); // 获取时间差（以毫秒为单位）
@@ -109,7 +109,7 @@ async function queryOutInfo(proxy) {
         opts: {policy: node}, // QX的写法，目前QX本身不支持
         node: node, // Loon，Surge IOS
         "policy-descriptor": node, // Surge MAC
-        timeout: 2000, // 请求超时，单位ms，默认5000ms
+        // timeout: 2000, // 请求超时，单位ms，默认5000ms
       }).then(resp => {
         const body = JSON.parse(resp.body);
         if (body.status === "success") {
