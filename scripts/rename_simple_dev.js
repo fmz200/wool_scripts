@@ -26,8 +26,8 @@ async function operator(proxies) {
   console.log("✅💕去重前节点个数 = " + server_count);
   console.log("✅💕节点超时时间 = " + timeout);
   console.log("✅💕批处理节点个数 = " + batch_size);
-  console.log("✅💕$environment = " + JSON.stringify($environment));
-  console.log("✅💕$arguments = " + JSON.stringify($arguments));
+  // console.log("✅💕$environment = " + JSON.stringify($environment));
+  // console.log("✅💕$arguments = " + JSON.stringify($arguments));
   // console.log("✅💕去重前的节点信息 = " + JSON.stringify(proxies));
 
   const support = (isLoon || isQX || (isSurge && parseInt($environment['surge-build']) >= 2000));
