@@ -29,7 +29,7 @@ async function operator(proxies) {
 
   const support = (isLoon || (isSurge && parseInt($environment['surge-build']) >= 2000));
   if (!support) {
-    $.error(`🚫IP Flag only supports Loon and Surge!`);
+    // $.error(`🚫IP Flag only supports Loon and Surge!`);
     $notification.post("♥♥重命名脚本只支持Loon 和 Surge!", "不支持01", "不支持02");
     return proxies;
   }
