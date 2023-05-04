@@ -35,6 +35,10 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/loon.png"
     },
     {
+      "name": "loon-01",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/loon-01.png"
+    },
+    {
       "name": "macat",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/macat.png"
     },
@@ -49,14 +53,6 @@
     {
       "name": "OpenAI",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/OpenAI.png"
-    },
-    {
-      "name": "OpenAI-01",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/OpenAI-01.png"
-    },
-    {
-      "name": "OpenAI-02",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/OpenAI-02.png"
     },
     {
       "name": "pinduoduo",
@@ -125,7 +121,8 @@
     {
       "name": "ximalaya",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ximalaya.png"
-    },    {
+    },
+    {
       "name": "YouTubeMusic",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/YouTubeMusic.png"
     },
