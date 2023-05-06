@@ -1,6 +1,6 @@
 {
   "id": "fmz200.sub",
-  "name": "fmz200 脚本订阅",
+  "name": "fmz200 boxjs订阅",
   "author": "@fmz200",
   "icon": "https://avatars.githubusercontent.com/u/57740735?s=60&v=4",
   "repo": "https://github.com/fmz200/wool_scripts",
@@ -346,43 +346,6 @@
       "author": "@passerby-b",
       "repo": "https://github.com/fmz200/wool_scripts",
       "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/jingdong/jddj_getPoints.js"
-    },
-    {
-      "id": "macat_cookie",
-      "name": "macat.vip签到cookie",
-      "keys": [
-        "macat_cookie",
-        "macat_body"
-      ],
-      "descs_html": [
-        "打开个人中心，点击签到获取cookie"
-      ],
-      "settings": [
-        {
-          "id": "macat_cookie",
-          "name": "macat.vip签到cookie",
-          "val": "",
-          "desc": "",
-          "type": "textarea",
-          "autoGrow": false,
-          "rows": 8
-        },
-        {
-          "id": "macat_body",
-          "name": "macat.vip签到body",
-          "val": "",
-          "desc": "",
-          "type": "textarea",
-          "autoGrow": false,
-          "rows": 4
-        }
-      ],
-      "author": "@fmz200",
-      "repo": "https://github.com/fmz200/wool_scripts",
-      "icons": [
-        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/macat.png",
-        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/macat.png"
-      ]
     },
     {
       "id": "airport_fetch_notice",
