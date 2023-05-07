@@ -443,7 +443,7 @@
       ]
     },
     	{
-			"id": "testflight",
+			"id": "testflight-",
 			"name": "tf监控",
 			"keys": [
         "appkey",
