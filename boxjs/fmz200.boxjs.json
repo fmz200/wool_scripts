@@ -441,6 +441,42 @@
         "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Sub-Store.png",
         "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Sub-Store.png"
       ]
-    }
+    },
+    	{
+			"id": "testflight",
+			"name": "tf监控",
+			"keys": [
+        "appkey",
+        "testflight_isnotify"
+      ],
+			"settings": [
+				{
+					"id": "appkey",
+					"name": "监控appkey",
+					"val": "",
+					"type": "textarea",
+					"placeholder": "VCIvwk2g,1SyedSId",
+					"autoGrow": true,
+					"rows": 1,
+					"desc": "以英文逗号分隔多个key"
+				},
+				{
+					"id": "testflight_isnotify",
+					"name": "是否静默通知",
+					"val": "",
+					"type": "boolean",
+					"placeholder": "true or false",
+					"autoGrow": true,
+					"rows": 1,
+					"desc": "没有tf位置将不会通知"
+				}
+			],
+			"author": "@syzzzf",
+			"repo": "https://github.com/songyangzz/QuantumultX/blob/master/testflight.js",
+			"icons": [
+				"https://raw.githubusercontent.com/Orz-3/mini/master/testflight.png",
+				"https://raw.githubusercontent.com/Orz-3/task/master/testflight.png"
+			]
+		}
   ]
 }
