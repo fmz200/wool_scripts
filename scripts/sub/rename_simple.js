@@ -1,11 +1,11 @@
 //############################################
 // 脚本作者：@奶茶姐 感谢@key，@sub-store-org
-// 重要提示：该脚本是测试脚本，请使用 https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/rename_simple.js
-// 脚本地址：https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/server_rename_dev.js
-// 脚本作用：在SubStore内对节点重命名，并去除ping失败的节点
+// 重要提示：无缓存版本可能会出现超时现象，建议上传至gist后订阅gist链接
+// 脚本地址：https://github.com/fmz200/wool_scripts/raw/main/scripts/sub/rename_simple.js
+// 脚本作用：在SubStore内对节点重命名，排序，去除ping失败的节点
 // 使用方法：SubStore内选择“脚本操作”，然后填写上面的脚本地址
-// 支持平台：✅Loon，✅Surge，❌QuanX(待QX开发者支持)
-// 更新时间：2023.04.30 16:30
+// 支持平台：✅Loon，✅Surge，❌QuanX(待QX开发者支持)，❌Stash(待开发者支持)，❌ShadowRocket(待开发者支持)
+// 更新时间：2023.04.30 16:10
 //############################################
 
 const $ = $substore;
@@ -29,8 +29,7 @@ async function operator(proxies) {
 
   const support = (isLoon || (isSurge && parseInt($environment['surge-build']) >= 2000));
   if (!support) {
-    // $.error(`🚫IP Flag only supports Loon and Surge!`);
-    $notify("♥♥重命名脚本只支持Loon 和 Surge!", "不支持01", "不支持02");
+    $.error(`🚫IP Flag only supports Loon and Surge!`);
     return proxies;
   }
 
@@ -102,13 +101,6 @@ async function queryOutInfo(proxy) {
     const url = `http://ip-api.com/json?lang=zh-CN&fields=status,message,country,countryCode,city,query`;
     let node = ProxyUtils.produce([proxy], target);
 
-    // Loon 需要去掉节点名字
-    // if (isLoon) {
-    //   node = node.substring(node.indexOf("=") + 1);
-    // }
-    // QX只要tag的名字，目前QX本身不支持
-    const opts = {policy: node.substring(node.lastIndexOf("=") + 1)};
-
     const timeoutPromise = new Promise((_, reject) => {
       setTimeout(() => {
         reject(new Error("请求超时"));
@@ -118,8 +110,8 @@ async function queryOutInfo(proxy) {
     const queryPromise =
       $.http.get({
         url,
-        opts: opts, // QX的写法
-        node: node, // Loon和Surge IOS
+        opts: {policy: node}, // QX的写法，目前QX本身不支持
+        node: node, // Loon，Surge IOS
         "policy-descriptor": node // Surge MAC
       }).then(resp => {
         const body = JSON.parse(resp.body);
@@ -175,7 +167,7 @@ function rmDupNameAndGroupAndEnumerate(arr) {
     if (groups.hasOwnProperty(groupKey)) {
       const group = groups[groupKey];
       group.forEach((item, index) => {
-        item.name = `${item.name}${DELIMITER}${index < 10 ? '0' : ''}${index + 1}`;
+        item.name = `${item.name}${DELIMITER}${index < 9 ? '0' : ''}${index + 1}`;
       });
     }
   }
