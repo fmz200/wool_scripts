@@ -5,7 +5,7 @@
 // 脚本作用：在SubStore内对节点重命名，并去除ping失败的节点
 // 使用方法：SubStore内选择“脚本操作”，然后填写上面的脚本地址
 // 支持平台：✅Loon，✅Surge，❌QuanX(待开发者支持)，❌Stash(待开发者支持)，❌ShadowRocket(待开发者支持)
-// 更新时间：2023.04.30 16:30
+// 更新时间：2023.05.07 20:25
 //############################################
 
 const RESOURCE_CACHE_KEY = '#sub-store-cached-resource';
@@ -85,8 +85,8 @@ async function operator(proxies) {
 
   const support = (isLoon || (isSurge && parseInt($environment['surge-build']) >= 2000));
   if (!support) {
-    // $.error(`🚫IP Flag only supports Loon and Surge!`);
-    $notify("♥♥重命名脚本只支持Loon 和 Surge!", "不支持01", "不支持02");
+    $.error(`🚫该脚本只支持Loon、Surge，其他平台待开发者支持！`);
+    // $notify("♥♥重命名脚本只支持Loon 和 Surge!", "不支持01", "不支持02");
     return proxies;
   }
 

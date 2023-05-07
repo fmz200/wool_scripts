@@ -5,7 +5,7 @@
 // 脚本作用：在SubStore内对节点重命名为：旗帜|地区代码|地区名称|IP|序号，
 // 使用方法：SubStore内选择“脚本操作”，然后填写上面的脚本地址
 // 支持平台：✅Loon，✅Surge，❌QuanX(待开发者支持)，❌Stash(待开发者支持)，❌ShadowRocket(待开发者支持)
-// 更新时间：2023.03.21 22:22
+// 更新时间：2023.05.07 20:25
 //############################################
 
 const RESOURCE_CACHE_KEY = '#sub-store-cached-resource';
@@ -94,7 +94,7 @@ async function operator(proxies) {
   }
 
   if (!support) {
-    $.error(`🚫IP Flag only supports Loon and Surge!`);
+    $.error(`🚫该脚本只支持Loon、Surge，其他平台待开发者支持！`);
     return proxies;
   }
 
