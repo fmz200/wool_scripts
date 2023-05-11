@@ -36,7 +36,7 @@
 
 ▶️ 使用本项目中的内容所造成的一切后果，均由使用者承担。
 
-▶️ 交流群组：张军规则👉🏻[苹果iOS去广告交流群](https://t.me/quguanggao)，墨鱼规则👉🏻[Cuttlefishの自留地|群组](https://t.me/ddgksf2021_chat)。
+▶️ 交流群组：张军配置👉🏻[苹果iOS去广告交流群](https://t.me/quguanggao)，备用群组👉🏻[Cuttlefishの自留地|群组](https://t.me/ddgksf2021_chat)。
 
 ---
 
