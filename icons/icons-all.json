@@ -3,6 +3,30 @@
   "description": "收集一些自己常用的图标，尺寸为108px，144px",
   "icons": [
     {
+      "name": "brd",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/airport/brd.png"
+    },
+    {
+      "name": "EFCloud",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/airport/EFCloud.png"
+    },
+    {
+      "name": "YiYuan",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/airport/YiYuan.png"
+    },
+    {
+      "name": "yiyuan-01",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/airport/YiYuan.png"
+    },
+    {
+      "name": "bigbus",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/airport/bigbus.png"
+    },
+    {
+      "name": "efc",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/airport/efc.png"
+    },
+    {
       "name": "Ads",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Ads.png"
     },
@@ -100,7 +124,7 @@
     },
     {
       "name": "Microsoft",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Microsoft.jpeg"
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Microsoft.png"
     },
     {
       "name": "OpenAI",
@@ -135,8 +159,8 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/stash.png"
     },
     {
-      "name": "Sub-Store",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Sub-Store.png"
+      "name": "SubStore",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/SubStore.png"
     },
     {
       "name": "sheep",
@@ -221,30 +245,6 @@
     {
       "name": "zhangjun",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/zhangjun.jpeg"
-    },
-    {
-      "name": "brd",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/airport/brd.png"
-    },
-    {
-      "name": "EFCloud",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/airport/EFCloud.png"
-    },
-    {
-      "name": "YiYuan",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/airport/YiYuan.png"
-    },
-    {
-      "name": "yiyuan-01",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/airport/yiyuan-01.png"
-    },
-    {
-      "name": "bigbus",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/airport/bigbus.png"
-    },
-    {
-      "name": "efc",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/airport/efc.png"
     },
     {
       "name": "EDG",
