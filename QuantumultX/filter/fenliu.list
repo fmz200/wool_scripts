@@ -327,7 +327,8 @@ HOST,track.tiara.daum.net, reject
 HOST,track.tiara.kakao.com, reject
 # > 朵朵校友圈 微信小程序去广告
 host-suffix, ad.duoduo.link, reject
-
+# > 盯盯拍
+host, pglstatp-toutiao.com, reject
 
 
 # >>>>>>>>>>>>>>> ✅ E ✅ <<<<<<<<<<<<<<
