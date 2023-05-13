@@ -31,6 +31,18 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/aliYunPan.png"
     },
     {
+      "name": "BiliBili",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/BiliBili.png"
+    },
+    {
+      "name": "BoxJS",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/BoxJS.png"
+    },
+    {
+      "name": "CaiYun",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/CaiYun.png"
+    },
+    {
       "name": "feizhu",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/feizhu.png"
     },
@@ -41,6 +53,10 @@
     {
       "name": "GiffGaff",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/GiffGaff.jpeg"
+    },
+    {
+      "name": "Github",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Github.png"
     },
     {
       "name": "KakaoTalk",
