@@ -203,12 +203,16 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/shadowrocket.png"
     },
     {
-      "name": "surge",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/surge.png"
+      "name": "Surge",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Surge.png"
     },
     {
-      "name": "stash",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/stash.png"
+      "name": "Surge_01",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Surge_01.png"
+    },
+    {
+      "name": "Stash",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Stash.png"
     },
     {
       "name": "SubStore",
@@ -301,6 +305,18 @@
     {
       "name": "zhangjun",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/zhangjun.png"
+    },
+    {
+      "name": "GetSomeCats",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/group/GetSomeCats.png"
+    },
+    {
+      "name": "GetSomeFries",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/group/GetSomeFries.png"
+    },
+    {
+      "name": "iBeta",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/group/iBeta.png"
     },
     {
       "name": "EDG",
