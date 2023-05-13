@@ -24,30 +24,30 @@ $done({body});
 function modifyMain(url, data) {
   let data_ = JSON.parse(data);
   // 1、首次点击发现按钮
-  if (url.indexOf(url1) > -1) {
-    if (data_.channelInfo && data_.channelInfo.channels && data_.channelInfo.channels[0].payload
-      && data_.channelInfo.channels[0].payload.items && data_.channelInfo.channels[0].payload.items[1].data) {
+  if (url.includes(url1)) {
+    const channel = data_.channelInfo?.channels?.[0]?.payload;
+    if (channel && channel.items && channel.items[1]?.data) {
       console.log('进入发现页...');
-      if (data_.channelInfo.channels[0].payload.items[1].data.itemid == "hot_search_push") {
+      if (channel.items[1].data.itemid === "hot_search_push") {
         index = 2;
       }
+
       // 1.1、下标是1的为热搜模块
-      data_.channelInfo.channels[0].payload.items[index].data.group
-        = removeHotSearchAds(data_.channelInfo.channels[0].payload.items[index].data.group);
+      channel.items[index].data.group = removeHotSearchAds(channel.items[index].data.group);
 
       // 1.2、下标为2的是轮播图模块
       console.log('移除轮播模块💕💕');
-      data_.channelInfo.channels[0].payload.items[index + 1] = {};
+      channel.items[index + 1] = {};
 
       // 1.3、items[i].category = "feed" 是热门微博的部分
-      data_.channelInfo.channels[0].payload.items = removeCategoryFeedAds(data_.channelInfo.channels[0].payload.items);
+      channel.items = removeCategoryFeedAds(channel.items);
 
       return JSON.stringify(data_);
     }
   }
 
   // 2、发现页面刷新/再次点击发现按钮
-  if (url.indexOf(url2) > -1 || url.indexOf(url3) > -1) {
+  if (url.includes(url2) || url.includes(url3)) {
     console.log('刷新发现页...');
     if (data_.items[1].data.itemid == "hot_search_push") {
       index = 2;
@@ -67,71 +67,37 @@ function modifyMain(url, data) {
   }
 
   // 3、微博热搜页面刷新
-  if (url.indexOf(url4) > -1) {
-    let newGroups = [];
-    let card_group = data_.cards[0].card_group;
-    if (card_group) {
-      console.log('微博热搜页面广告开始💕');
-      for (let group of card_group) {
-        if (group.promotion != null) { // 广告有promotion这个对象
-          continue;
-        }
-        newGroups.push(group);
-      }
-      data_.cards[0].card_group = newGroups;
-      console.log('微博热搜页面广告结束💕💕');
-      return JSON.stringify(data_);
-    }
+  if (url.includes(url4) && data_.cards && data_.cards[0].card_group) {
+    console.log('微博热搜页面广告开始💕');
+    data_.cards[0].card_group = data_.cards[0].card_group.filter(group => group.promotion == null);
+    console.log('微博热搜页面广告结束💕💕');
+    return JSON.stringify(data_);
   }
 
   // 4、微博超话页面
-  if (url.indexOf(url5) > -1) {
-    if (data_.items) {
-      console.log('微博超话页面广告开始💕');
-      let newItems = [];
-      for (let item of data_.items) {
-        if (item && item.data && item.data.mblogtypename == "广告") {
-          continue;
-        }
-        newItems.push(item);
-      }
-      data_.items = newItems;
-      console.log('微博超话页面广告结束💕💕');
-      return JSON.stringify(data_);
-    }
+  if (url.includes(url5) && data_.items) {
+    console.log('微博超话页面广告开始💕');
+    data_.items = data_.items.filter(item => item && item.data && item.data.mblogtypename !== "广告");
+    console.log('微博超话页面广告结束💕💕');
+    return JSON.stringify(data_);
   }
+
   console.log('没有广告数据🧧🧧');
   return data;
 }
 
 // 移除“微博热搜”的广告
 function removeHotSearchAds(groups) {
-  let newGroups = [];
-  // console.log('🤣🤣' + JSON.stringify(groups));
-  if (groups) {
-    console.log('移除发现页热搜广告开始💕');
-    for (let group of groups) {
-      // group.item_log.search_flag || group.item_log.nav
-      if (group && group.item_log && group.item_log.adid) { // 广告没有search_flag字段，只有group.item_log.adid
-        continue;
-      }
-      newGroups.push(group);
-    }
-    console.log('移除发现页热搜广告结束💕💕');
-  }
+  console.log('移除发现页热搜广告开始💕');
+  const newGroups = groups.filter(group => !(group && group.item_log && group.item_log.adid));
+  console.log('移除发现页热搜广告结束💕💕');
   return newGroups;
 }
 
 // 移除“热搜微博”信息流的广告
 function removeCategoryFeedAds(items) {
   console.log('移除发现页热门微博广告开始💕');
-  let newItems = [];
-  for (let item of items) {
-    if (item.category == "feed" && item.data && item.data.mblogtypename == "广告") {
-      continue;
-    }
-    newItems.push(item);
-  }
+  const newItems = items.filter(item => item.category !== "feed" || (item.data && item.data.mblogtypename !== "广告"));
   console.log('移除发现页热门微博广告结束💕💕');
   return newItems;
 }
