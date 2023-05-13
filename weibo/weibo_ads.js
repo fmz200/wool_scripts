@@ -13,6 +13,7 @@ const url1 = '/search/finder';
 const url2 = '/search/container_timeline';
 const url3 = '/search/container_discover';
 const url4 = '/api.weibo.cn/2/page'; // 微博热搜页面url
+const url5 = '/statuses/container_timeline_topicpage'; // 微博超话页面 https://api.weibo.cn/2/statuses/container_timeline_topicpage
 
 let index = 1;
 let url = $request.url;
@@ -25,14 +26,14 @@ function modifyMain(url, data) {
   // 1、首次点击发现按钮
   if (url.indexOf(url1) > -1) {
     if (data_.channelInfo && data_.channelInfo.channels && data_.channelInfo.channels[0].payload
-        && data_.channelInfo.channels[0].payload.items && data_.channelInfo.channels[0].payload.items[1].data) {
+      && data_.channelInfo.channels[0].payload.items && data_.channelInfo.channels[0].payload.items[1].data) {
       console.log('进入发现页...');
       if (data_.channelInfo.channels[0].payload.items[1].data.itemid == "hot_search_push") {
         index = 2;
       }
       // 1.1、下标是1的为热搜模块
       data_.channelInfo.channels[0].payload.items[index].data.group
-          = removeHotSearchAds(data_.channelInfo.channels[0].payload.items[index].data.group);
+        = removeHotSearchAds(data_.channelInfo.channels[0].payload.items[index].data.group);
 
       // 1.2、下标为2的是轮播图模块
       console.log('移除轮播模块💕💕');
@@ -83,6 +84,22 @@ function modifyMain(url, data) {
     }
   }
 
+  // 4、微博超话页面
+  if (url.indexOf(url5) > -1) {
+    if (data_.items) {
+      console.log('微博超话页面广告开始💕');
+      let newItems = [];
+      for (let item of data_.items) {
+        if (item && item.data && item.data.mblogtypename == "广告") {
+          continue;
+        }
+        newItems.push(item);
+      }
+      data_.items = newItems;
+      console.log('微博超话页面广告结束💕💕');
+      return JSON.stringify(data_);
+    }
+  }
   console.log('没有广告数据🧧🧧');
   return data;
 }
