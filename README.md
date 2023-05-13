@@ -90,8 +90,7 @@
 | 13 | icons图标 | `icons图标`     | [icons-all.json](https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/icons-all.json)                           | [fmz200](https://github.com/fmz200) | 包含APP，机场，LPL等图标             | 暂无                                                     |
 | 14 | 重写      | `App&小程序净化合集` | [cleanup.snippet](https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/cleanup.snippet)                      | [fmz200](https://github.com/fmz200) | 常见的微信小程序净化                  | 暂无                                                     |
 
-> ⚠️ 图标订阅不更新怎么办？当远程图标更新时如果你的图表库更新不到最新的，请手动清理本地图标缓存(打开“文件”应用，依次进入“我的
-> iPhone 或 iCloud Drive-Quantumult X-Images”，删除Images文件夹内所有缓存文件)，并重启 Quantumult X，远程图标会重新下载并生效。
+> ⚠️ 当远程图标更新时如果你的图表库不更新多半是缓存的问题，请手动清理图标缓存(`点击右下角风车->划到最下面->选择其他设置->找到资源模块`，选择`删除图片缓存`)，并重启 Quantumult X，远程图标会重新下载并生效。
 
 ### 2️⃣ Surge配置
 
