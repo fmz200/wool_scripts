@@ -15,10 +15,6 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/airport/YiYuan.png"
     },
     {
-      "name": "yiyuan-01",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/airport/YiYuan.png"
-    },
-    {
       "name": "bigbus",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/airport/bigbus.png"
     },
@@ -49,6 +45,10 @@
     {
       "name": "KakaoTalk",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/KakaoTalk.png"
+    },
+    {
+      "name": "kuaishou",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/kuaishou.png"
     },
     {
       "name": "Lianhezaobao",
@@ -105,6 +105,46 @@
     {
       "name": "Loon_12",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Loon_12.png"
+    },
+    {
+      "name": "Loon_16",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Loon_16.png"
+    },
+    {
+      "name": "Loon_18",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Loon_18.png"
+    },
+    {
+      "name": "Loon_19",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Loon_19.png"
+    },
+    {
+      "name": "Loon_20",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Loon_20.png"
+    },
+    {
+      "name": "Loon_21",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Loon_21.png"
+    },
+    {
+      "name": "Loon_22",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Loon_22.png"
+    },
+    {
+      "name": "Loon_23",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Loon_23.png"
+    },
+    {
+      "name": "Loon_24",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Loon_24.png"
+    },
+    {
+      "name": "Loon_25",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Loon_25.png"
+    },
+    {
+      "name": "Loon_26",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Loon_26.png"
     },
     {
       "name": "Loon_13",
