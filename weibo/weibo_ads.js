@@ -77,7 +77,7 @@ function modifyMain(url, data) {
   // 4、微博超话页面
   if (url.includes(url5) && data_.items) {
     console.log('微博超话页面广告开始💕');
-    data_.items = data_.items.filter(item => item && item.data && item.data.mblogtypename !== "广告");
+    data_.items = data_.items.filter(item => !item.data || item.data.mblogtypename !== "广告");
     console.log('微博超话页面广告结束💕💕');
     return JSON.stringify(data_);
   }
