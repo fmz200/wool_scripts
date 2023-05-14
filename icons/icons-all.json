@@ -23,32 +23,336 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/airport/efc.png"
     },
     {
+      "name": "AdGuard",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/AdGuard.png"
+    },
+    {
       "name": "Ads",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Ads.png"
     },
     {
-      "name": "aliYunPan",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/aliYunPan.png"
+      "name": "AliYunDrive",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/AliYunDrive.png"
+    },
+    {
+      "name": "Apple",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Apple.png"
+    },
+    {
+      "name": "Apple_AppleStore",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Apple_AppleStore.png"
+    },
+    {
+      "name": "Apple_Arcade",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Apple_Arcade.png"
+    },
+    {
+      "name": "Apple_Books",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Apple_Books.png"
+    },
+    {
+      "name": "Apple_Classic",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Apple_Classic.png"
+    },
+    {
+      "name": "Apple_FaceTime",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Apple_FaceTime.png"
+    },
+    {
+      "name": "Apple_GameCenter",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Apple_GameCenter.png"
+    },
+    {
+      "name": "Apple_Home",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Apple_Home.png"
+    },
+    {
+      "name": "Apple_iCloud",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Apple_iCloud.png"
+    },
+    {
+      "name": "Apple_iTunesStore",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Apple_iTunesStore.png"
+    },
+    {
+      "name": "Apple_Mail",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Apple_Mail.png"
+    },
+    {
+      "name": "Apple_Messages",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Apple_Messages.png"
+    },
+    {
+      "name": "Apple_Original",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Apple_Original.png"
+    },
+    {
+      "name": "Apple_Safari",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Apple_Safari.png"
+    },
+    {
+      "name": "Apple_SpringLoaded",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Apple_SpringLoaded.png"
+    },
+    {
+      "name": "Apple_Wallet",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Apple_Wallet.png"
+    },
+    {
+      "name": "Apple_Weather",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Apple_Weather.png"
+    },
+    {
+      "name": "AppleMusic",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/AppleMusic.png"
+    },
+    {
+      "name": "AppleNews",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/AppleNews.png"
+    },
+    {
+      "name": "Aws",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Aws.png"
+    },
+    {
+      "name": "Azure",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Azure.png"
+    },
+    {
+      "name": "Baidu",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Baidu.png"
+    },
+    {
+      "name": "BetaHub",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/BetaHub.png"
+    },
+    {
+      "name": "BigBen",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/BigBen.png"
     },
     {
       "name": "BiliBili",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/BiliBili.png"
     },
     {
+      "name": "BiliBili_01",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/BiliBili_01.png"
+    },
+    {
+      "name": "BiliBiliTV",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/BiliBiliTV.png"
+    },
+    {
+      "name": "BlinkLoad",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/BlinkLoad.png"
+    },
+    {
+      "name": "BlinkLoad_01",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/BlinkLoad_01.png"
+    },
+    {
       "name": "BoxJS",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/BoxJS.png"
+    },
+    {
+      "name": "BrandenburgGate",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/BrandenburgGate.png"
     },
     {
       "name": "CaiYun",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/CaiYun.png"
     },
     {
-      "name": "feizhu",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/feizhu.png"
+      "name": "Category_Balloon",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Balloon.png"
     },
     {
-      "name": "Fileball",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Fileball.png"
+      "name": "Category_Bike",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Bike.png"
+    },
+    {
+      "name": "Category_Book",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Book.png"
+    },
+    {
+      "name": "Category_Briefcase",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Briefcase.png"
+    },
+    {
+      "name": "Category_Calculator",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Calculator.png"
+    },
+    {
+      "name": "Category_Catalog",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Catalog.png"
+    },
+    {
+      "name": "Category_Food",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Food.png"
+    },
+    {
+      "name": "Category_Globe",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Globe.png"
+    },
+    {
+      "name": "Category_Lifestyle",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Lifestyle.png"
+    },
+    {
+      "name": "Category_Magazine",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Magazine.png"
+    },
+    {
+      "name": "Category_Medical",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Medical.png"
+    },
+    {
+      "name": "Category_Music",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Music.png"
+    },
+    {
+      "name": "Category_Navigation",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Navigation.png"
+    },
+    {
+      "name": "Category_Networking",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Networking.png"
+    },
+    {
+      "name": "Category_News",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_News.png"
+    },
+    {
+      "name": "Category_Photo",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Photo.png"
+    },
+    {
+      "name": "Category_Pig",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Pig.png"
+    },
+    {
+      "name": "Category_Polygon",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Polygon.png"
+    },
+    {
+      "name": "Category_Popcorn",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Popcorn.png"
+    },
+    {
+      "name": "Category_Productivity",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Productivity.png"
+    },
+    {
+      "name": "Category_Research",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Research.png"
+    },
+    {
+      "name": "Category_Shopping",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Shopping.png"
+    },
+    {
+      "name": "Category_Sports",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Sports.png"
+    },
+    {
+      "name": "Category_Travel",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Travel.png"
+    },
+    {
+      "name": "Category_Weather",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Category_Weather.png"
+    },
+    {
+      "name": "ChiangKai-shekMemorialHall",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ChiangKai-shekMemorialHall.png"
+    },
+    {
+      "name": "ChristTheRedeemer",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ChristTheRedeemer.png"
+    },
+    {
+      "name": "Cisco",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Cisco.png"
+    },
+    {
+      "name": "Cloudflare",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Cloudflare.png"
+    },
+    {
+      "name": "CNTower",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/CNTower.png"
+    },
+    {
+      "name": "Colosseum",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Colosseum.png"
+    },
+    {
+      "name": "DegYax_01",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/DegYax_01.png"
+    },
+    {
+      "name": "DegYax_02",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/DegYax_02.png"
+    },
+    {
+      "name": "DegYax_03",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/DegYax_03.png"
+    },
+    {
+      "name": "DegYax_04",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/DegYax_04.png"
+    },
+    {
+      "name": "DisneyPlus",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/DisneyPlus.png"
+    },
+    {
+      "name": "Dots",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Dots.png"
+    },
+    {
+      "name": "EiffelTower",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/EiffelTower.png"
+    },
+    {
+      "name": "FallBack",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/FallBack.png"
+    },
+    {
+      "name": "FastCloud",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/FastCloud.png"
+    },
+    {
+      "name": "Feizhu",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Feizhu.png"
+    },
+    {
+      "name": "FileBall",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/FileBall.png"
+    },
+    {
+      "name": "FishChips",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/FishChips.png"
+    },
+    {
+      "name": "FishChips_01",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/FishChips_01.png"
+    },
+    {
+      "name": "FishChips_02",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/FishChips_02.png"
+    },
+    {
+      "name": "FishChips_03",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/FishChips_03.png"
+    },
+    {
+      "name": "FishPort",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/FishPort.png"
+    },
+    {
+      "name": "Gcp",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Gcp.png"
     },
     {
       "name": "GiffGaff",
@@ -59,6 +363,38 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Github.png"
     },
     {
+      "name": "GlaDos",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/GlaDos.png"
+    },
+    {
+      "name": "Google",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Google.png"
+    },
+    {
+      "name": "Hulu",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Hulu.png"
+    },
+    {
+      "name": "infiniPort",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/infiniPort.png"
+    },
+    {
+      "name": "ipInfo",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ipInfo.png"
+    },
+    {
+      "name": "iqZone",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/iqZone.png"
+    },
+    {
+      "name": "iRingo",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/iRingo.png"
+    },
+    {
+      "name": "JingFuGong",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/JingFuGong.png"
+    },
+    {
       "name": "KakaoTalk",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/KakaoTalk.png"
     },
@@ -67,8 +403,20 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/kuaishou.png"
     },
     {
+      "name": "LeaningTowerOfPisa",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/LeaningTowerOfPisa.png"
+    },
+    {
       "name": "Lianhezaobao",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Lianhezaobao.jpeg"
+    },
+    {
+      "name": "LoadBalance",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/LoadBalance.png"
+    },
+    {
+      "name": "LondonEye",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/LondonEye.png"
     },
     {
       "name": "Loon",
@@ -171,20 +519,64 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/macat.png"
     },
     {
+      "name": "Merlion",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Merlion.png"
+    },
+    {
       "name": "Message",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Message.png"
+    },
+    {
+      "name": "meta",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/meta.png"
     },
     {
       "name": "Microsoft",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Microsoft.png"
     },
     {
+      "name": "NationalMonument",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/NationalMonument.png"
+    },
+    {
+      "name": "netflix",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/netflix.png"
+    },
+    {
+      "name": "ObeliscoDeBuenosAires",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ObeliscoDeBuenosAires.png"
+    },
+    {
+      "name": "Office",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Office.png"
+    },
+    {
       "name": "OpenAI",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/OpenAI.png"
     },
     {
+      "name": "OpenAI_01",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/OpenAI_01.png"
+    },
+    {
+      "name": "oracle",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/oracle.png"
+    },
+    {
+      "name": "PetronasTowers",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/PetronasTowers.png"
+    },
+    {
       "name": "pinduoduo",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/pinduoduo.png"
+    },
+    {
+      "name": "PlayStation",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/PlayStation.png"
+    },
+    {
+      "name": "PrimeVideo",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/PrimeVideo.png"
     },
     {
       "name": "ql",
@@ -197,6 +589,26 @@
     {
       "name": "Quantumult_X",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Quantumult_X.png"
+    },
+    {
+      "name": "relay",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/relay.png"
+    },
+    {
+      "name": "RiotGames",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/RiotGames.png"
+    },
+    {
+      "name": "RuinsOfSaintPauls",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/RuinsOfSaintPauls.png"
+    },
+    {
+      "name": "SaintBasilsCathedral",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/SaintBasilsCathedral.png"
+    },
+    {
+      "name": "select",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/select.png"
     },
     {
       "name": "shadowrocket",
@@ -215,24 +627,148 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Stash.png"
     },
     {
+      "name": "Stash_01",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Stash_01.png"
+    },
+    {
+      "name": "Stash_02",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Stash_02.png"
+    },
+    {
+      "name": "StatueOfLiberty",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/StatueOfLiberty.png"
+    },
+    {
+      "name": "StoneHenge",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/StoneHenge.png"
+    },
+    {
       "name": "SubStore",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/SubStore.png"
+    },
+    {
+      "name": "SubStore_01",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/SubStore_01.png"
     },
     {
       "name": "sheep",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/sheep.png"
     },
     {
+      "name": "skylines",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/skylines.png"
+    },
+    {
+      "name": "spotify",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/spotify.png"
+    },
+    {
+      "name": "switch",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/switch.png"
+    },
+    {
+      "name": "SydneyOperaHouse",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/SydneyOperaHouse.png"
+    },
+    {
+      "name": "taipei101",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/taipei101.png"
+    },
+    {
+      "name": "tajmahal",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/tajmahal.png"
+    },
+    {
+      "name": "telegram",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/telegram.png"
+    },
+    {
+      "name": "tencent",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/tencent.png"
+    },
+    {
+      "name": "tencentcloud",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/tencentcloud.png"
+    },
+    {
+      "name": "texon",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/texon.png"
+    },
+    {
+      "name": "texonhead",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/texonhead.png"
+    },
+    {
+      "name": "texonslab",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/texonslab.png"
+    },
+    {
+      "name": "TheFederalAssembly",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/TheFederalAssembly.png"
+    },
+    {
+      "name": "TheGreatWall",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/TheGreatWall.png"
+    },
+    {
+      "name": "TheWhiteHouse",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/TheWhiteHouse.png"
+    },
+    {
+      "name": "tiktok",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/tiktok.png"
+    },
+    {
+      "name": "tinder",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/tinder.png"
+    },
+    {
+      "name": "torii",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/torii.png"
+    },
+    {
+      "name": "twitch",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/twitch.png"
+    },
+    {
+      "name": "twitter",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/twitter.png"
+    },
+    {
       "name": "Udn",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Udn.png"
+    },
+    {
+      "name": "UrlTest",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/UrlTest.png"
+    },
+    {
+      "name": "v2tun",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/v2tun.png"
     },
     {
       "name": "Viu",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Viu.png"
     },
     {
+      "name": "warp",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/warp.png"
+    },
+    {
+      "name": "warpcomet",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/warpcomet.png"
+    },
+    {
+      "name": "wechat",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/wechat.png"
+    },
+    {
       "name": "Weibo",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo.png"
+    },
+    {
+      "name": "Weibo_01",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo_01.png"
     },
     {
       "name": "WeiboTalk",
@@ -243,8 +779,20 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/WhatsApp.png"
     },
     {
+      "name": "whatsinstash",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/whatsinstash.png"
+    },
+    {
       "name": "White",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/White.png"
+    },
+    {
+      "name": "wireguard",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/wireguard.png"
+    },
+    {
+      "name": "xbox",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/xbox.png"
     },
     {
       "name": "xianyu",
@@ -259,8 +807,16 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/YouTubeMusic.png"
     },
     {
+      "name": "youtube",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/youtube.png"
+    },
+    {
       "name": "Zalo",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Zalo.png"
+    },
+    {
+      "name": "zhihu",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/zhihu.png"
     },
     {
       "name": "3K",
