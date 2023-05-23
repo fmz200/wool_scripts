@@ -1016,9 +1016,9 @@ https://dl-cu-hz.lechange.cn/oms-online/advertisementPush/* url reject
 
 # > 宁聚
 # 开屏广告
-^https?:\/\/api\.nj\.nbtv\.cn\/v2\/advertise\/advertise-r1\/get-list\?data=u8obKDIrIWt2NR9wBuMwQ5O61eEsP
+^https?:\/\/api\.nj\.nbtv\.cn\/v2\/advertise\/advertise-r1\/get-list\?data=u8obKDIrIWt2NR9wBuMwQ5O61eEsP url reject-200
 # 弹窗广告
-^https?:\/\/api\.nj\.nbtv\.cn\/v\d\/common\/system-boot-inform\/detail
+^https?:\/\/api\.nj\.nbtv\.cn\/v\d\/common\/system-boot-inform\/detail url reject-200
 
 
 
