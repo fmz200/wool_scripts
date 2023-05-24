@@ -9,7 +9,7 @@
 # 项目地址：https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/chongxie.txt
 # 交流群组：https://t.me/quguanggao
 # 支持数量：约413款app
-# 更新时间：2023.05.23 19:31
+# 更新时间：2023.05.25 19:31
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -1736,6 +1736,8 @@ http:\/\/analytics\.163\.com\/ntes url reject
 ^https?:\/\/imeclient\.openspeech\.cn\/adservice\/ url reject-200
 
 # > 携程
+#更新弹窗 APP降级8.40.0版本搭配去开屏广告规则，目前没有出现MITM失败等其他问题
+^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/[0-9]{5}\/json\/getTimeZoneServerIpList\?__gw_os=IOS url reject-200
 # 开屏去广告
 ^https:\/\/ma-adx\.ctrip\.com\/_ma\.gif url reject
 # 8.47.0以上版本会有部分图片加载不出来

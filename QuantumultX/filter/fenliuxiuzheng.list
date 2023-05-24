@@ -8,7 +8,7 @@
 # 重要提示：无
 # 项目地址：https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/fenliuxiuzheng.list
 # 交流群组：https://t.me/quguanggao
-# 更新时间：2023.02.15 17:10
+# 更新时间：2023.05.24 19:17
 # 策略选择：直连 direct
 #############################################
 # > "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
@@ -59,3 +59,7 @@ ip-cidr, 192.168.1.1/24, direct
 host-keyword, anti-ad.net, direct
 
 host, ad.12306.cn, direct
+
+# > 携程
+host-keyword, aw-s.tripcdn.com, direct
+host-keyword, trip.com, direct
