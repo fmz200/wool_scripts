@@ -1864,15 +1864,15 @@ https://ossgw.alicdn.com/creatives-assets/prod/feupload/user* url reject-200
 
 # > YouTube
 # 开启画中画,后台播放
-^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/account\/get_setting\?key url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/youtube.js
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/account\/get_setting\?key url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.js
 # 首页 瀑布流,上传按钮,短视频,反馈
-^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|guide|reel\/reel_watch_sequence)\?key url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/youtube.js
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|guide|reel\/reel_watch_sequence)\?key url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.js
 ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/feedback\?key url reject-200
 # 播放页 插播广告,贴片广告
-^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(next|player)\?key url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/youtube.js
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(next|player)\?key url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.js
 ^https:\/\/[\w-]+\.googlevideo\.com\/initplayback\?.+&oad url reject-200
 # 搜索页
-^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/search\?key url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/youtube.js
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/search\?key url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.js
 
 # > 印象笔记
 ^https?:\/\/app\.yinxiang\.com\/ads\/ url reject-200
