@@ -8,7 +8,7 @@
 # 重要提示：某些APP要清除缓存或者重新安装APP，拦截广告才会生效！
 # 项目地址：https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/fenliu.list
 # 交流群组：https://t.me/quguanggao
-# 更新时间：2023.04.27 20:50
+# 更新时间：2023.05.28 17:36
 # 策略选择：reject
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
@@ -735,7 +735,7 @@ HOST-SUFFIX,ads.sohu.com, reject
 HOST-SUFFIX,aty.sohu.com, reject
 HOST,hui.sohu.com, reject
 # > 搜狗
-host, indivi-cdn.shouji.sogou.com, reject
+;host, indivi-cdn.shouji.sogou.com, reject
 HOST-SUFFIX,epro.sogou.com, reject
 HOST-SUFFIX,golden1.sogou.com, reject
 HOST-SUFFIX,inte.sogou.com, reject
@@ -755,7 +755,7 @@ HOST-SUFFIX,bite.theta.sogoucdn.com, reject
 HOST-SUFFIX,brand.sogou.com, reject
 HOST-SUFFIX,bsiet.husky.sogou.com, reject
 # > 搜狗输入法
-host-keyword, business-cdn.shouji.sogou.com, reject
+;host-keyword, business-cdn.shouji.sogou.com, reject
 # > 深圳通微信小程序
 HOST-SUFFIX,wxsnsdythumb.wxs.qq.com, reject
 
