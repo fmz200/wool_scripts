@@ -51,8 +51,6 @@
 
 常见的抖音分流有：
 > https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/DouYin/DouYin.list
->
-> 不建议用这个：https://raw.githubusercontent.com/lwd-temp/anti-ip-attribution/main/generated/quantumultx.list
 
 ### 2️⃣ 为什么有些软件明明很热门，却没有人做去广告的规则
 
