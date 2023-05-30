@@ -56,11 +56,7 @@ function GetCookie() {
         var CookieName;
         var updateCodkie = CookiesData.find((item, index) => {
           var ck = item.cookie;
-          var Account = ck
-            ? ck.match(/pt_pin=.+?;/)
-              ? ck.match(/pt_pin=([^; ]+)(?=;?)/)[1]
-              : null
-            : null;
+          var Account = ck ? ck.match(/pt_pin=.+?;/) ? ck.match(/pt_pin=([^; ]+)(?=;?)/)[1] : null : null;
           const verify = UserName === Account;
           if (verify) {
             updateIndex = index;
@@ -84,7 +80,7 @@ function GetCookie() {
         $.write(cacheValue, CacheKey);
         $.notify(
           "用户名: " + DecodeName,
-          "",
+          CookieValue,
           tipPrefix + CookieName + "Cookie成功✔✔"
         );
       } else {
