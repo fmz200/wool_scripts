@@ -1,16 +1,16 @@
 ################################################################
 # 重写作用：解锁部分app会员服务
 # 注意事项：当遇到部分软件无法联网时，记得取消勾选该重写
-# 项目地址：https://github.com/fmz200/wool_scripts/raw/main/unlock/unlockVIP.snippet
-# 交流群组：https://t.me/quguanggao
-# 更新时间：2023.05.06 21:50
+# 重写地址：https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/unlock/unlockVIP.snippet
+# 交流群组：https://t.me/lanjieguanggao
+# 更新时间：2023.05.31 21:21
 #############################################
 
-hostname = api.adapty.io, vas.wps.cn, account.wps.cn, *faceu*, *retouchpics*,
+hostname = api.adapty.io, vas.wps.cn, account.wps.cn,
 
 
 # >>>>>>>>>>>>>>> ✅ J ✅ <<<<<<<<<<<<<<
-# > 剪映 解锁VIP
+# > 剪映 解锁VIP hostname=*faceu*
 ^http[s]?:\/\/commerce-api-.*\.faceu\.mobi\/commerce\/v1\/.*$ url script-request-header https://raw.githubusercontent.com/gjwj666/qx/main/jianying.js
 
 

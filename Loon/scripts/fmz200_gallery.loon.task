@@ -3,7 +3,7 @@
 #!author=fmz200
 #!homepage=https://github.com/fmz200/wool_scripts
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
-#!tg-group：https://t.me/quguanggao
+#!tg-group：https://t.me/lanjieguanggao
 #!update：2023.05.13 23：45
 
 cron "0 1 0 * * ?" script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js, timeout=300, tag=阿里云盘签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/aliYunPan.png, enabled=true
