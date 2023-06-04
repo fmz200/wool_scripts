@@ -10,7 +10,7 @@ const $ = new API('ql', true);
 
 const title = '🐉 通知提示';
 
-const sync_keys = JSON.parse($.read('#ql_sync_keys').replace(/\s/g, '').split(',') || '[]');
+const sync_keys = $.read('#ql_sync_keys').replace(/\s/g, '').split(',') || [];
 if (sync_keys.length === 0) {
   $.notify(title, '', `未填写需要同步的keys，请在BoxJS填写正确`);
   $.done();
@@ -50,7 +50,9 @@ async function autoSync(key) {
     $.log(`已清空${key}的数据`);
 
     const addData = [];
-    addData.push({name: key, value: $.read(`#${key}`), remarks: ''});
+    const key_value = $.read(`#${key}`);
+    $.log(`已读取${key}的数据：${key_value}`);
+    addData.push({name: key, value: key_value, remarks: ''});
     if (addData.length) await $.ql.add(addData);
     $.log(`已同步${key}的数据`);
   } catch (e) {
