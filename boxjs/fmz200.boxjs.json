@@ -1,6 +1,6 @@
 {
   "id": "fmz200.sub",
-  "name": "fmz200 boxjs订阅",
+  "name": "fmz200的BoxJS订阅",
   "author": "@fmz200",
   "icon": "https://avatars.githubusercontent.com/u/57740735?s=60&v=4",
   "repo": "https://github.com/fmz200/wool_scripts",
@@ -476,6 +476,100 @@
       "icons": [
         "https://raw.githubusercontent.com/Orz-3/mini/master/testflight.png",
         "https://raw.githubusercontent.com/Orz-3/task/master/testflight.png"
+      ]
+    },
+    {
+      "id": "ql_sync",
+      "name": "BoxJS与青龙数据同步",
+      "keys": [
+        "ql_sync_keys",
+        "ql_sync_notify",
+        "@ql.ip",
+        "@ql.client_id",
+        "@ql.client_secret",
+        "@ql.username",
+        "@ql.password",
+        "@ql.env",
+        "@ql.mute",
+        "@ql.is_pwd"
+      ],
+      "settings": [
+        {
+          "id": "ql_sync_keys",
+          "name": "需要同步的keys",
+          "val": "",
+          "type": "textarea",
+          "placeholder": "",
+          "autoGrow": true,
+          "rows": 2,
+          "desc": "以英文逗号分隔多个key，例如：key1,key2,key3"
+        },
+        {
+          "id": "ql_sync_notify",
+          "name": "是否静默通知",
+          "val": "",
+          "type": "boolean",
+          "placeholder": "true or false",
+          "autoGrow": true,
+          "rows": 1,
+          "desc": "关闭后成功时将不会通知，同步失败会通知（暂时没做）"
+        },
+        {
+          "id": "@ql.is_pwd",
+          "name": "开启密码登陆",
+          "val": false,
+          "type": "boolean",
+          "desc": "同步时，优先使用密码登陆"
+        },
+        {
+          "id": "@ql.ip",
+          "name": "青龙登陆的域名或IP:端口号",
+          "val": "",
+          "type": "text",
+          "placeholder": "111.21.0.32:5700"
+        },
+        {
+          "id": "@ql.client_id",
+          "name": "应用 Client ID",
+          "val": "",
+          "type": "text"
+        },
+        {
+          "id": "@ql.client_secret",
+          "name": "应用 Client Secret",
+          "val": "",
+          "type": "text"
+        },
+        {
+          "id": "@ql.username",
+          "name": "账号",
+          "val": "",
+          "type": "text"
+        },
+        {
+          "id": "@ql.password",
+          "name": "密码",
+          "val": "",
+          "type": "text"
+        }
+      ],
+      "author": "@fmz200",
+      "repo": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/ql_sync.js",
+      "icons": [
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ql.png",
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ql.png"
+      ],
+      "scripts": [
+        {
+          "name": "BoxJS同步到青龙",
+          "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/ql_sync.js"
+        }
+      ],
+      "descs_html": [
+        "青龙 docker 的安装方式请移步 tg 频道",
+        "青龙 docker 作者仓库：【<a href=\"https://github.com/whyour\">github</a>】",
+        "青龙 docker 频道：【<a href=\"https://t.me/jiao_long\",>电报频道</a>】",
+        "应用client_id,client_secret（openapi）方式；请去 设置->应用 中添加相关参数，优先以 openapi 方式同步"
       ]
     }
   ]

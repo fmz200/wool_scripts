@@ -1,5 +1,5 @@
 {
-  "name": "fmz200 定时任务",
+  "name": "fmz200的定时任务订阅",
   "description": "https://github.com/fmz200/wool_scripts",
   "task": [
     "0 1 0 * * ? https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js, tag=阿里云盘签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/aliYunPan.png, enabled=true",
