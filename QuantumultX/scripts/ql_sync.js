@@ -2,7 +2,8 @@
  * 作者：fmz200，修改自dompling的ql_cookie_sync.js
  * 作用：定时同步BoxJS中的数据到青龙环境变量，每日自动同步
  * 配置：40 0 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/ql_sync.js
- * 使用：详见BoxJS页面
+ * 定时：QX导入订阅 https://raw.githubusercontent.com/fmz200/wool_scripts/main/boxjs/fmz200_gallery.json
+ * 使用：详见BoxJS页面 https://raw.githubusercontent.com/fmz200/wool_scripts/main/boxjs/fmz200.boxjs.json
  * 更新：2023-06-04 13:30
  */
 
@@ -29,12 +30,13 @@ let remark = {};
   }
   const keyText = sync_keys.map((item) => item).join(`\n`);
   if ($.read('ql_sync_notify') !== 'true') {
-    $.notify(title, '', `已同步以下keys的数据： ${keyText}`);
+    $.notify(title, '', `已同步以下keys的数据：\n${keyText}`);
   }
   $.done();
 })();
 
 async function autoSync(key_remark) {
+  $.log(`--------------------`);
   try {
     // key可能包含两部分：key@remark
     let key;
@@ -56,8 +58,9 @@ async function autoSync(key_remark) {
     if (addData.length) await $.ql.add(addData);
     $.log(`已同步${key}的数据`);
   } catch (e) {
-    $.log(`同步${key}的数据时发生错误：` + JSON.stringify(e));
+    $.log(`同步${key_remark}的数据时发生错误：` + JSON.stringify(e));
   }
+  $.log(`--------------------`);
 }
 
 async function getScriptUrl() {
