@@ -502,7 +502,7 @@
           "placeholder": "",
           "autoGrow": true,
           "rows": 2,
-          "desc": "以英文逗号分隔多个key，例如：key1,key2,key3"
+          "desc": "以英文逗号分隔多个key，例如：key1,key2,key3 \n 如果要增加注释可以用格式@分隔key和注释，例如：key1@remark1,key2@remark2,key3@remark3 \n 以上两种格式可以混用"
         },
         {
           "id": "ql_sync_notify",

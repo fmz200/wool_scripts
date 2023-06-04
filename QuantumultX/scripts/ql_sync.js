@@ -17,18 +17,13 @@ if (sync_keys.length === 0) {
 }
 
 let remark = {};
-/*try {
-  const _remark = JSON.parse(
-    JSON.parse($.read('#jd_ck_remark') || '{}').remark || '[]'
-  );
 
-  _remark.forEach((item) => {
-    remark[item.username] = item;
-  });
-} catch (e) {
-  console.log(e);
-}*/
 !(async () => {
+  // 只登陆一次
+  const ql_script = (await getScriptUrl()) || '';
+  eval(ql_script);
+  await $.ql.login();
+  // 开始同步数据
   for await (const key of sync_keys) {
     await autoSync(key);
   }
@@ -39,12 +34,17 @@ let remark = {};
   $.done();
 })();
 
-async function autoSync(key) {
+async function autoSync(key_remark) {
   try {
-    const ql_script = (await getScriptUrl()) || '';
-    eval(ql_script);
-    await $.ql.login();
-
+    // key可能包含两部分：key@remark
+    let key;
+    let remark;
+    if (key_remark.includes('@')) {
+      [key, remark] = key_remark.split('@');
+    } else {
+      key = key_remark;
+      remark = 'BoxJS同步的数据'; // 如果没有备注，可以设置为 null 或其他默认值
+    }
     const values = await $.ql.select(key); // 同一个key可能有多个值，暂时只做一个的同步
     await $.ql.delete(values.data.map((item) => item.id));
     $.log(`已清空${key}的数据`);
@@ -52,7 +52,7 @@ async function autoSync(key) {
     const addData = [];
     const key_value = $.read(`#${key}`);
     $.log(`已读取${key}的数据：${key_value}`);
-    addData.push({name: key, value: key_value, remarks: ''});
+    addData.push({name: key, value: key_value, remarks: remark});
     if (addData.length) await $.ql.add(addData);
     $.log(`已同步${key}的数据`);
   } catch (e) {
