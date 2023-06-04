@@ -567,9 +567,10 @@
       ],
       "descs_html": [
         "青龙 docker 的安装方式请移步 tg 频道",
-        "青龙 docker 作者仓库：【<a href=\"https://github.com/whyour\">github</a>】",
+        "青龙 docker 仓库：【<a href=\"https://github.com/whyour\">github</a>】",
         "青龙 docker 频道：【<a href=\"https://t.me/jiao_long\",>电报频道</a>】",
-        "应用client_id,client_secret（openapi）方式；请去 设置->应用 中添加相关参数，优先以 openapi 方式同步"
+        "去广告交流群：【<a href=\"https://t.me/lanjieguanggao\",>去广告交流群</a>】",
+        "应用client_id，client_secret获取请去青龙面板“系统设置->应用设置”中添加相关参数，优先以openapi方式同步"
       ]
     }
   ]

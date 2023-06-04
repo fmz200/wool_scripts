@@ -53,7 +53,7 @@ async function autoSync(key_remark) {
 
     const addData = [];
     const key_value = $.read(`#${key}`);
-    $.log(`已读取${key}的数据：${key_value}`);
+    $.log(`已读取${key}的数据`);
     addData.push({name: key, value: key_value, remarks: remark});
     if (addData.length) await $.ql.add(addData);
     $.log(`已同步${key}的数据`);
