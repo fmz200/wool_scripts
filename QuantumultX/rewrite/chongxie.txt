@@ -1143,7 +1143,7 @@ https://dl-cu-hz.lechange.cn/oms-online/advertisementPush/* url reject
 
 # > 全球购骑士卡 #开屏广告 感谢Kook分享
 ^https:\/\/facade-api\.black-unique\.com\/advertise\/v1\/get\?cityId=102923&positions=mine_popup url reject-dict
-^https:\/\/facade-api\.black-unique\.com\/app\/v1\/startScreen\?cityId=102923&channelId=0&width=1170&height=2532url reject-dict
+^https:\/\/facade-api\.black-unique\.com\/app\/v1\/startScreen\?cityId=102923&channelId=0&width=1170&height=2532 url reject-dict
 
 # > 去哒 首页开屏广告 感谢#德克萨斯分享
 ^http:\/\/iqushangwang\.8quan\.com\/index\.php\/i\/index\/index url script-response-body https://raw.githubusercontent.com/LimeAroma/Script/main/Js/QuDa.js
