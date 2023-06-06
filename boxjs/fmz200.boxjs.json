@@ -12,7 +12,7 @@
         "SMZDM_COOKIE"
       ],
       "descs_html": [
-        "填写token,多账号用英文逗号(,)分开"
+        "填写token,多账号用英文逗号(&)分开"
       ],
       "settings": [
         {
