@@ -6,7 +6,7 @@
   "repo": "https://github.com/fmz200/wool_scripts",
   "apps": [
     {
-      "id": "smzdm",
+      "id": "smzdm_fmz200",
       "name": "什么值得买cookie",
       "keys": [
         "SMZDM_COOKIE"
@@ -21,7 +21,7 @@
           "val": "",
           "type": "textarea",
           "autoGrow": true,
-          "rows": 8,
+          "rows": 16,
           "desc": "什么值得买cookie"
         }
       ],
