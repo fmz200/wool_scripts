@@ -6,6 +6,33 @@
   "repo": "https://github.com/fmz200/wool_scripts",
   "apps": [
     {
+      "id": "smzdm",
+      "name": "什么值得买cookie",
+      "keys": [
+        "SMZDM_COOKIE"
+      ],
+      "descs_html": [
+        "填写token,多账号用英文逗号(,)分开"
+      ],
+      "settings": [
+        {
+          "id": "SMZDM_COOKIE",
+          "name": "什么值得买cookie",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 8,
+          "desc": "什么值得买cookie"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/smzdm.png",
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/smzdm.png"
+      ],
+      "author": "@fmz200",
+      "repo": "https://github.com/fmz200/wool_scripts"
+    },
+    {
       "id": "didi_fruit",
       "name": "滴滴橙心果园",
       "keys": [
