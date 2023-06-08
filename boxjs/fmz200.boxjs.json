@@ -48,7 +48,7 @@
           "val": "",
           "type": "textarea",
           "autoGrow": true,
-          "rows": 2,
+          "rows": 1,
           "desc": "今日油价查询地区"
         }
       ],
