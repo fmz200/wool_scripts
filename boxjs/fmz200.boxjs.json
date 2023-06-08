@@ -34,7 +34,7 @@
     },
     {
       "id": "oil_price_region_fmz200",
-      "name": "今日油价查询地区",
+      "name": "今日油价",
       "keys": [
         "oil_price_region"
       ],
