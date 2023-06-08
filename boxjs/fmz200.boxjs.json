@@ -33,6 +33,33 @@
       "repo": "https://github.com/fmz200/wool_scripts"
     },
     {
+      "id": "oil_price_region_fmz200",
+      "name": "今日油价查询地区",
+      "keys": [
+        "oil_price_region"
+      ],
+      "descs_html": [
+        "填写需要查询的地区"
+      ],
+      "settings": [
+        {
+          "id": "oil_price_region",
+          "name": "今日油价查询地区",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 2,
+          "desc": "今日油价查询地区"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/oil.png",
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/oil.png"
+      ],
+      "author": "@fmz200",
+      "repo": "https://github.com/fmz200/wool_scripts"
+    },
+    {
       "id": "didi_fruit",
       "name": "滴滴橙心果园",
       "keys": [
