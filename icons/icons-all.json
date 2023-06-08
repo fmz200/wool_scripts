@@ -879,6 +879,626 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/group/iBeta.png"
     },
     {
+      "name": "哆啦A梦",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/dlam.png"
+    },
+    {
+      "name": "Quantumult_X",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Quantumult_X.png"
+    },
+    {
+      "name": "Quantumult_X_1",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Quantumult_X_1.png"
+    },
+    {
+      "name": "Quantumult_X_2",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Quantumult_X_2.png"
+    },
+    {
+      "name": "Quantumult_X_3",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Quantumult_X_3.png"
+    },
+    {
+      "name": "Quantumult_X_4",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Quantumult_X_4.png"
+    },
+    {
+      "name": "Quantumult_X_5",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Quantumult_X_5.png"
+    },
+    {
+      "name": "Quantumult_X_6",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Quantumult_X_6.png"
+    },
+    {
+      "name": "Quantumult_X_7",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Quantumult_X_7.png"
+    },
+    {
+      "name": "Loon1",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Loon_1.png"
+    },
+    {
+      "name": "Loon2",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Loon_2.png"
+    },
+    {
+      "name": "Loon3",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Loon_3.png"
+    },
+    {
+      "name": "Loon4",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Loon_4.png"
+    },
+    {
+      "name": "Loon5",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Loon_5.png"
+    },
+    {
+      "name": "Loon6",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Loon_6.png"
+    },
+    {
+      "name": "Loon7",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Loon_7.png"
+    },
+    {
+      "name": "Loon8",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Loon_8.png"
+    },
+    {
+      "name": "Loon9",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Loon_9.png"
+    },
+    {
+      "name": "Loon10",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Loon_10.png"
+    },
+    {
+      "name": "Loon11",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Loon_11.png"
+    },
+    {
+      "name": "stash1",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/stash1.png"
+    },
+    {
+      "name": "stash2",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/stash2.png"
+    },
+    {
+      "name": "boxjs",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/box.png"
+    },
+    {
+      "name": "Google Voice",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/GV.PNG"
+    },
+    {
+      "name": "xbox",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/xbox.png"
+    },
+    {
+      "name": "微博",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/weibo.png"
+    },
+    {
+      "name": "Github",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/github.png"
+    },
+    {
+      "name": "腾讯视频",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/txvideo.png"
+    },
+    {
+      "name": "Microsoft",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/microsoft.png"
+    },
+    {
+      "name": "iCloud",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/iCloud.png"
+    },
+    {
+      "name": "Apple",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Apple.png"
+    },
+    {
+      "name": "ChatGPT1",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/ChatGPT/ChatGPT1.png"
+    },
+    {
+      "name": "ChatGPT2",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/ChatGPT/ChatGPT2.png"
+    },
+    {
+      "name": "ChatGPT3",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/ChatGPT/ChatGPT3.png"
+    },
+    {
+      "name": "ChatGPT4",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/ChatGPT/ChatGPT4.png"
+    },
+    {
+      "name": "ChatGPT5",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/ChatGPT/ChatGPT5.png"
+    },
+    {
+      "name": "ChatGPT6",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/ChatGPT/ChatGPT6.png"
+    },
+    {
+      "name": "AppStore",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/AppStore.png"
+    },
+    {
+      "name": "Safari",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Safari.png"
+    },
+    {
+      "name": "substore",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/substore.png"
+    },
+    {
+      "name": "baidu",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/baidu.png"
+    },
+    {
+      "name": "wechat",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/wechat.png"
+    },
+    {
+      "name": "zhihu",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/zhihu.png"
+    },
+    {
+      "name": "悟空",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/wk.png"
+    },
+    {
+      "name": "TikTok",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/TikTok.png"
+    },
+    {
+      "name": "TikTok_1",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/TikTok_1.png"
+    },
+    {
+      "name": "TikTok_2",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/TikTok_2.png"
+    },
+    {
+      "name": "小红书",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/xiaohongshu.png"
+    },
+    {
+      "name": "smbc",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/smbc.png"
+    },
+    {
+      "name": "tiktok",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/tiktok.png"
+    },
+    {
+      "name": "tiktok(1)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/tiktok(1).png"
+    },
+    {
+      "name": "tiktok(2)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/tiktok((2).png"
+    },
+    {
+      "name": "chatgpt",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/ChatGPT-green.png"
+    },
+    {
+      "name": "ChatGPT",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/ChatGPT.png"
+    },
+    {
+      "name": "onedrive",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/OneDrive.png"
+    },
+    {
+      "name": "shutiao",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/shutiao.png"
+    },
+    {
+      "name": "youtube",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/youtube.png"
+    },
+    {
+      "name": "Youtube",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/Youtube.png"
+    },
+    {
+      "name": "youtube(1)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/youtube(1).png"
+    },
+    {
+      "name": "youtube(2)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/youtube(2).png"
+    },
+    {
+      "name": "youtube(3)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/youtube(3).png"
+    },
+    {
+      "name": "microsoft",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/microsoft.png"
+    },
+    {
+      "name": "microsoft(1)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/microsoft(1).png"
+    },
+    {
+      "name": "microsoft(2)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/microsoft(2).png"
+    },
+    {
+      "name": "netflix",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/netflix.png"
+    },
+    {
+      "name": "netflix(red)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/netflix(red).png"
+    },
+    {
+      "name": "netflix(old)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/netflix(old).png"
+    },
+    {
+      "name": "disney(blue)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/disney(blue).png"
+    },
+    {
+      "name": "disney(black)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/disney(black).png"
+    },
+    {
+      "name": "Hongkong",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/Hongkong.png"
+    },
+    {
+      "name": "Hongkong(1)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/Hongkong(1).png"
+    },
+    {
+      "name": "taiwan",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/taiwan.png"
+    },
+    {
+      "name": "taiwan(1).png",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/taiwan(1).png"
+    },
+    {
+      "name": "taiwan(2)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/taiwan(2).png"
+    },
+    {
+      "name": "Korea",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/Korea.png"
+    },
+    {
+      "name": "singapore(2)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/singapore(2).png"
+    },
+    {
+      "name": "singapore(1).png",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/singapore(1).png"
+    },
+    {
+      "name": "Japan",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/Japan.png"
+    },
+    {
+      "name": "zl-icon-jp-flag",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/zl-icon-jp-flag.png"
+    },
+    {
+      "name": "US",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/US.png"
+    },
+    {
+      "name": "US(1)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/US(1).png"
+    },
+    {
+      "name": "telegram",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/telegram.png"
+    },
+    {
+      "name": "telegram(1)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/telegram(1).png"
+    },
+    {
+      "name": "telegram(blue1)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/telegram(blue1).png"
+    },
+    {
+      "name": "HBO",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/HBO.png"
+    },
+    {
+      "name": "spotify",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/spotify.png"
+    },
+    {
+      "name": "spotify(green)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/spotify(green).png"
+    },
+    {
+      "name": "bilibili(1)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/bilibili(1).png"
+    },
+    {
+      "name": "bilibili(2)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/bilibili(2).png"
+    },
+    {
+      "name": "bilibili(3)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/bilibili(3).png"
+    },
+    {
+      "name": "bilibili(4)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/bilibili(4).png"
+    },
+    {
+      "name": "apple",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/apple.png"
+    },
+    {
+      "name": "apple(1)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/apple(1).png"
+    },
+    {
+      "name": "speedtest",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/speedtest.png"
+    },
+    {
+      "name": "twitter",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/twitter.png"
+    },
+    {
+      "name": "twitter(1)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/twitter(1).png"
+    },
+    {
+      "name": "google",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/google.png"
+    },
+    {
+      "name": "google(1)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/google(1).png"
+    },
+    {
+      "name": "paypal",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/paypal.png"
+    },
+    {
+      "name": "paypal(1)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/paypal(1).png"
+    },
+    {
+      "name": "social-paypal",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/social-paypal.png"
+    },
+    {
+      "name": "direct",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/direct.png"
+    },
+    {
+      "name": "direct(1)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/direct(1).png"
+    },
+    {
+      "name": "blacklist",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/blacklist.png"
+    },
+    {
+      "name": "blacklist(1)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/blacklist(1).png"
+    },
+    {
+      "name": "weibo",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/weibo.png"
+    },
+    {
+      "name": "weibo(1).png",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/weibo(1).png"
+    },
+    {
+      "name": "Googlevoice",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/Googlevoice.png"
+    },
+    {
+      "name": "Googlevoice(black1)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/Googlevoice(black1).png"
+    },
+    {
+      "name": "facebook",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/facebook.png"
+    },
+    {
+      "name": "facebook(1).png",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/facebook(1).png"
+    },
+    {
+      "name": "facebook(2).png",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/facebook(2).png"
+    },
+    {
+      "name": "quanqiu",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/quanqiu.png"
+    },
+    {
+      "name": "quanqiu(1).png",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/quanqiu(1).png"
+    },
+    {
+      "name": "quanqiu(2).png",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/quanqiu(2).png"
+    },
+    {
+      "name": "quanqiu(3).png",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/quanqiu(3).png"
+    },
+    {
+      "name": "ad",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/ad.png"
+    },
+    {
+      "name": "ad(2)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/ad(2).png"
+    },
+    {
+      "name": "ad(3)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/ad(3).png"
+    },
+    {
+      "name": "ad(4)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/ad(4).png"
+    },
+    {
+      "name": "ad(5)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/ad(5).png"
+    },
+    {
+      "name": "ad(6)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/ad(6).png"
+    },
+    {
+      "name": "ad(7)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/ad(7).png"
+    },
+    {
+      "name": "instagram",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/instagram.png"
+    },
+    {
+      "name": "instagram(1)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/instagram(1).png"
+    },
+    {
+      "name": "instagram(2)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/instagram(2).png"
+    },
+    {
+      "name": "lightning",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/lightning.png"
+    },
+    {
+      "name": "lightning(1)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/lightning(1).png"
+    },
+    {
+      "name": "lightning(2)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/lightning(2).png"
+    },
+    {
+      "name": "bing",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/bing.png"
+    },
+    {
+      "name": "bing(1)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/bing(1).png"
+    },
+    {
+      "name": "bing(2)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/bing(2).png"
+    },
+    {
+      "name": "bing(3)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/bing(3).png"
+    },
+    {
+      "name": "whatsapp",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/whatsapp.png"
+    },
+    {
+      "name": "whatsapp(1)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/whatsapp(1).png"
+    },
+    {
+      "name": "whatsapp(2)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/whatsapp(2).png"
+    },
+    {
+      "name": "game",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/game.png"
+    },
+    {
+      "name": "game(1)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/game(1).png"
+    },
+    {
+      "name": "steam",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/steam.png"
+    },
+    {
+      "name": "steam(1)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/steam(1).png"
+    },
+    {
+      "name": "rocket",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/rocket.png"
+    },
+    {
+      "name": "rocket(1)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/rocket(1).png"
+    },
+    {
+      "name": "rocket(2)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/rocket(2).png"
+    },
+    {
+      "name": "rocket(3)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/rocket(3).png"
+    },
+    {
+      "name": "mail",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/mail.png"
+    },
+    {
+      "name": "mail(1)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/mail(1).png"
+    },
+    {
+      "name": "mail(2)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/mail(2).png"
+    },
+    {
+      "name": "mail(3)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/mail(3).png"
+    },
+    {
+      "name": "github(1)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/github(1).png"
+    },
+    {
+      "name": "emby",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/emby.png"
+    },
+    {
+      "name": "emby(1)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/emby(1).png"
+    },
+    {
+      "name": "ip",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/ip.png"
+    },
+    {
+      "name": "play",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/play.png"
+    },
+    {
+      "name": "play(1)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/play(1).png"
+    },
+    {
+      "name": "play(2)",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/play(2).png"
+    },
+    {
       "name": "EDG",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lpl/144px/EDG.png"
     },
