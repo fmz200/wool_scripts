@@ -1909,7 +1909,7 @@ https://ossgw.alicdn.com/creatives-assets/prod/feupload/user* url reject-200
 
 # > YouTube
 ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence)\? url script-request-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/YouTube/youtube.request.beta.proto.js
-^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting)\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/YouTube/youtube.request.beta.proto.js
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting)\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/YouTube/youtube.response.beta.proto.js
 ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad url reject-200
 
 # > 印象笔记
