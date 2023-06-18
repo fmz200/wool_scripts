@@ -103,6 +103,38 @@
 ### 3️⃣ Loon配置
 
 > 📍 你可以借助转换工具将重写和分流添加到Loon中，项目地址如下：[Loon](https://github.com/chengkongyiban/Loon)
+> 
+> 📍 具体步骤为：
+> 
+> 1、安装`QX或Surge重写&规则集转Loon`插件：
+> ```
+> https://raw.githubusercontent.com/chengkongyiban/Loon/main/Loon-Gallery/Rewrite_to_Loon.plugin
+> ```
+> 
+> 2、安装好上面的插件以后，即可把QX的重写和分流安装到Loon上：
+> 
+> ⚠️ 注意：QX重写链接需要在原链接上加上`qx`，分流链接需要加上`r_parser.list`，以便转换插件识别进行解析
+> 
+> 2.1、添加QX的重写：⚠️ 注意，安装到Loon的`插件`模块
+> 
+> 🍒 去广告重写合集
+> ```
+> https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txtqx
+> ```
+> 🍒 微博去广告
+> ```
+> https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/weibo.snippetqx
+> ```
+> 🍒 获取cookie合集
+> ```
+> https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/cookies.snippetqx
+> ```
+> 2.2、添加QX的分流：⚠️ 注意，安装到Loon的`规则`模块
+> 
+> 🍒 去广告分流合集
+> ```
+> https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/fenliu.listr_parser.list
+> ```
 
 | #  | 配置类型   | 配置名称     | 配置链接（长按可复制）                                                                                                                  | 作者                                  | 特别说明                 | 使用教程 |
 |----|--------|----------|------------------------------------------------------------------------------------------------------------------------------|-------------------------------------|----------------------|------|
