@@ -1966,6 +1966,11 @@ https://new-app-api.ylyk.com/v1/user/myinfo/adviser url reject
 # > 易捷加油 开屏广告 #感谢豆豆分享
 ^https:\/\/a\.sinopecsales\.com\/app\/cms url reject-dict
 
+# > 翼支付 #弹窗广告（APP降级10.66.80版本） 启用自行添加主机名 mapi-app.bestpay.com.cn
+^https:\/\/mapi-app\.bestpay\.com\.cn\/gapi\/appclient\/noEnc\/getAppPopup url reject-dict
+# 开屏广告（APP降级10.66.80版本）
+^https:\/\/mapi-app\.bestpay\.com\.cn\/gapi\/appClient\/noEnc\/getHomePageAds url reject-dict
+
 
 
 
