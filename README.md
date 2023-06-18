@@ -138,7 +138,7 @@
 
 | #  | 配置类型   | 配置名称     | 配置链接（长按可复制）                                                                                                                  | 作者                                  | 特别说明                 | 使用教程 |
 |----|--------|----------|------------------------------------------------------------------------------------------------------------------------------|-------------------------------------|----------------------|------|
-| 01 | Task订阅 | `Task订阅` | [fmz200_gallery.loon.task](https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/scripts/fmz200_gallery.loon.task) | [fmz200](https://github.com/fmz200) | 需要先获取cookie或token再运行 | 暂无   |
+| 01 | Task订阅 | `Task订阅` | [fmz200.loon.task.scripts](https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/scripts/fmz200.loon.task.scripts) | [fmz200](https://github.com/fmz200) | 需要先获取cookie或token再运行 | 暂无   |
 
 ### 4️⃣ ShadowRocket配置
 
