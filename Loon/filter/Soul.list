@@ -1,0 +1,18 @@
+#!name=Soul APP分流
+#!desc=可能需要 评论/点赞/发帖 才会修改IP！
+#!author=fmz200
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/filter/Soul.list
+#!tg-group：https://t.me/lanjieguanggao
+#!update：2023.06.23 10：15
+#############################################
+
+DOMAIN-SUFFIX, soulapp.cn
+# DOMAIN-SUFFIX, api.soulapp.cn
+DOMAIN-SUFFIX, soul-ios-cn.akamaized.net
+DOMAIN-SUFFIX, soul-ios.akamaized.net
+DOMAIN-SUFFIX, soul-ios-ssl.akamaized.net
+DOMAIN-SUFFIX, soul-ios-ssl-cn.akamaized.net
+DOMAIN-SUFFIX, soul-ios-ssl-cdn.akamaized.net
+DOMAIN-SUFFIX, soul-ios-ssl-cdn-cn.akamaized.net
