@@ -626,6 +626,76 @@
         "去广告交流群：【<a href=\"https://t.me/lanjieguanggao\",>去广告交流群</a>】",
         "应用client_id，client_secret获取请去青龙面板“系统设置->应用设置”中添加相关参数，优先以openapi方式同步"
       ]
+    },
+    {
+      "id": "macat_cookie",
+      "name": "macat.vip签到cookie",
+      "keys": [
+        "macat_cookie",
+        "macat_body"
+      ],
+      "descs_html": [
+        "打开个人中心，点击签到获取cookie"
+      ],
+      "settings": [
+        {
+          "id": "macat_cookie",
+          "name": "macat.vip签到cookie",
+          "val": "",
+          "desc": "",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 8
+        },
+        {
+          "id": "macat_body",
+          "name": "macat.vip签到body",
+          "val": "",
+          "desc": "",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 4
+        }
+      ],
+      "author": "@fmz200",
+      "repo": "https://github.com/fmz200/wool_scripts",
+      "icons": [
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/macat.png",
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/macat.png"
+      ]
+    },
+    {
+      "id": "freeAppsToday",
+      "name": "今日限免APP",
+      "keys": [
+        "freeAppsTodayKey"
+      ],
+      "descs_html": [
+        "填写key可以使用bark推送，可以对不同平台和更新内容分组推送，不填使用自带通知推送，支持跳转商店"
+      ],
+      "settings": [
+        {
+          "id": "freeAppsTodayKey",
+          "name": "bark的Key",
+          "val": "",
+          "desc": "",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 4
+        }
+      ],
+      "author": "@fmz200",
+      "repo": "https://github.com/fmz200/wool_scripts",
+      "scripts": [
+        {
+          "name": "获取今日限免APP",
+          "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/freeAppsToday.js"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/AppStore.png",
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/AppStore.png"
+      ]
     }
   ]
 }
