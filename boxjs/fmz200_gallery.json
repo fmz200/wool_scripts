@@ -15,6 +15,6 @@
     "22 10 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/airport_fetch_notice.js, tag=获取机场公告, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/airport/airport.png, enabled=true",
     "0 */4 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/ql_sync.js, tag=BoxJS与青龙数据同步, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ql.png, enabled=true",
     "0 8 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/oil_price.js, tag=今日油价, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/oil.png, enabled=true",
-    "2 8 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/freeAppsToday.js, tag=今日限免APP, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/AppStore.png, enabled=true"
+    "2 8 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/freeAppsToday.js, tag=今日限免APP, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/AppStore.png, enabled=true"
   ]
 }
