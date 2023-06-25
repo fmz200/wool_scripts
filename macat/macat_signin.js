@@ -1,6 +1,6 @@
 /**
- * 马克喵，每日签到
- * 自用的，不一定好使
+ * 脚本作用：马克喵，每日签到
+ * 更新时间：2023.06.25 20:55
  */
 
 const cookieVal = $prefs.valueForKey('macat_cookie')
@@ -33,6 +33,12 @@ const myRequest = {
 
 $task.fetch(myRequest).then(response => {
   console.log(response.statusCode + "\n\n马克喵签到结果为：" + response.body);
+  const rsp = JSON.parse(response.body);
+  if (rsp.status === "1") {
+    $.notify('马克喵签到成功', response.msg, '');
+  } else {
+    $.notify('马克喵签到失败', response.msg, '');
+  }
   $done();
 }, reason => {
   console.log(reason.error);
