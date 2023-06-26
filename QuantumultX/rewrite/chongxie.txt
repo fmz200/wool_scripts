@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/chongxie.txt
 #!tg-group：https://t.me/lanjieguanggao
-#!update：2023.06.25 20:55
+#!update：2023.06.26 20:55
 #!support：约424款app
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
@@ -538,7 +538,7 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 ^https?:\/\/static\.95508\.com\/icppweb\/images\/modelMaterial\/advertising\/202\d{5}\/.*.(png|jpg) url reject-200
 ^https?:\/\/mps\.95508\.com\/mps\/club\/cardPortals\/adv\/\d{25}\.(png|jpg) url reject-img
 # > 发现精彩
-^https?:\/\/static\.95508\.com\/mmg\/images\/ads\/.+\/.+1125.+2436 url reject-200
+^https?:\/\/static\.95508\.com\/mmg\/images\/ads\/.+\/(.+1125.+2436|.+60176) url reject-200
 
 # > 广州农商银行
 ^https?:\/\/mbank\.grcbank\.com\/ydyh\/resources\/startpage\/.*.(jpg|png) url reject-200
