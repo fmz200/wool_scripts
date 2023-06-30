@@ -2,7 +2,7 @@
 #!desc=(R)针对部分APP开屏广告，应用内广告进行拦截，某些APP要清除缓存或者重新安装APP，拦截广告才会生效！
 #!author=fmz200
 #!homepage=https://github.com/fmz200/wool_scripts
-#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/chongxie.txt
 #!tg-group：https://t.me/lanjieguanggao
 #!update：2023.06.29 21:55
