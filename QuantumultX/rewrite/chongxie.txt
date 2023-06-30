@@ -1,5 +1,5 @@
-#!name=广告拦截合集
-#!desc=(R)针对部分APP开屏广告，应用内广告进行拦截，某些APP要清除缓存或者重新安装APP，拦截广告才会生效！
+#!name=广告拦截合集-重写
+#!desc=(R)针对部分APP开屏广告，应用内广告进行拦截，某些APP要清除缓存或者重新安装拦截广告才会生效！
 #!author=fmz200
 #!homepage=https://github.com/fmz200/wool_scripts
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/naisi-01.gif
