@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/chongxie.txt
 #!tg-group：https://t.me/lanjieguanggao
-#!update：2023.07.02 17:55
+#!update：2023.07.02 18:55
 #!support：约482款app
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
@@ -1088,10 +1088,9 @@ https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSpl
 ^https?:\/\/p\d{1}\.meituan\.net\/(adunion|display|mmc|wmbanner)\/ url reject
 
 # > 美团外卖
-^https?:\/\/wmapi\.meituan\.com\/api\/v7\/startpicture url reject-200
+^http:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\? url reject-dict
 ^https?:\/\/img\.meituan\.net\/bizad\/.*.jpg url reject-200
 ^https?:\/\/img\.meituan\.net\/(bizad|brandCpt)\/\w+\.(png|jpg) url reject
-^https?:\/\/.*\.meituan\.com\/api\/v\d\/(openscreen\?ad|appstatus\?ad|loadInfo\?|startpicture) url reject
 ^http:\/\/s3plus\.meituan\.net\/.*\/brandcpt-vedio\/.*\?time url reject
 
 # > 美团众包
@@ -1976,7 +1975,7 @@ https:\/\/edu\.seewo\.com\/app\/api\/v1\/startPage\/latest   url reject-dict
 # > 虾米音乐
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit\/ url reject
 
-# > 闲鱼 此域名以无法MITM：gw.alicdn.com
+# > 闲鱼 此域名已无法MITM：gw.alicdn.com
 ^https?:\/\/gw\.alicdn\.com\/tfs\/.+?\d{4}-\d{4}\/[a-z]{3}$ url reject-200
 ^https?:\/\/gw\.alicdn\.com\/tfs\/TB1.+?750-\d{4} url reject-200
 ^https?:\/\/heic\.alicdn\.com\/tps\/i4\/.+?\.jpg_1200x1200q90\.jpg_\.heic$ url reject-200

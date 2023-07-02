@@ -3,13 +3,11 @@
 #!author=fmz200
 #!homepage=https://github.com/fmz200/wool_scripts
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
-#############################################
-# 分流作用：1️⃣针对部分APP开屏广告，应用内广告进行拦截，2️⃣决定所访问的域名/主机使用哪个地区节点
-# 重要提示：某些APP要清除缓存或者重新安装APP，拦截广告才会生效！
-# 项目地址：https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/fenliu.list
-# 交流群组：https://t.me/lanjieguanggao
-# 更新时间：2023.05.28 17:36
-# 策略选择：reject
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/fenliu.list
+#!tg-group：https://t.me/lanjieguanggao
+#!update：2023.07.02 18:55
+#!support：约9373行
+#!proxy-select：reject
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -80,6 +78,13 @@ HOST,tracklog.58.com, reject
 
 
 # >>>>>>>>>>>>>>> ✅ A ✅ <<<<<<<<<<<<<<
+# > Apple
+HOST, api-adservices.apple.com, reject
+HOST-SUFFIX, iadsdk.apple.com, reject
+
+# > 阿里云
+IP-CIDR, 203.107.1.1/24, reject
+
 # > 爱奇艺
 host, cr-status.iqiyi.com, reject
 host-suffix, cupid.iqiyi.com, reject
@@ -240,7 +245,6 @@ HOST-SUFFIX,wm.baidu.com, reject
 HOST-SUFFIX,yingxiao.baidu.com, reject
 HOST-SUFFIX,znsv.baidu.com, reject
 HOST-SUFFIX,baidustatic.com, reject
-HOST-SUFFIX,afd.baidu.com, reject
 HOST-SUFFIX,als.baidu.com, reject
 HOST-SUFFIX,duclick.baidu.com, reject
 HOST-SUFFIX,hm.baidu.com, reject
@@ -250,8 +254,13 @@ HOST-SUFFIX,mobads-logs.baidu.com, reject
 HOST-SUFFIX,nsclick.baidu.com, reject
 HOST,hm.baidu.com, reject
 HOST,hmma.baidu.com, reject
-# > 百度贴吧屏蔽域名dns查询
-IP-CIDR,180.76.76.200/32,REJECT
+# 百度地图
+HOST, afd.baidu.com, reject
+HOST, afdconf.baidu.com, reject
+HOST, httpdns.baidubce.com, reject
+HOST, lc.map.baidu.com, reject
+# > 百度贴吧 屏蔽域名dns查询
+IP-CIDR,180.76.76.200/32,reject
 # > 哔哩哔哩
 HOST-SUFFIX,cm.bilibili.com, reject
 host-keyword, api.sobot.com, reject
@@ -383,15 +392,15 @@ HOST-SUFFIX,www.googleadservices.com, reject
 HOST-SUFFIX,www.google-analytics.com, reject
 HOST,ads.youtube.com, reject
 # > 高德
-HOST-SUFFIX,adiu.amap.com,REJECT
-HOST,aboard.apilocate.amap.com,REJECT
-HOST,apiinit.amap.com,REJECT
-HOST,icloud-amap.com,REJECT
-HOST,logs.amap.com,REJECT
-HOST-SUFFIX,dualstack-logs.amap.com,REJECT
-HOST-SUFFIX,logs.amap.com,REJECT
-HOST-SUFFIX,optimus-ads.amap.com,REJECT
-HOST-SUFFIX,page.amap.com,REJECT
+HOST-SUFFIX,adiu.amap.com,reject
+HOST,aboard.apilocate.amap.com,reject
+HOST,apiinit.amap.com,reject
+HOST,icloud-amap.com,reject
+HOST,logs.amap.com,reject
+HOST-SUFFIX,dualstack-logs.amap.com,reject
+HOST-SUFFIX,logs.amap.com,reject
+HOST-SUFFIX,optimus-ads.amap.com,reject
+HOST-SUFFIX,page.amap.com,reject
 HOST,optimus-ads.amap.com, reject
 HOST,optimus-ads.amap.com.w.alikunlun.com, reject
 HOST-SUFFIX, shouji.sougou.com, reject
@@ -402,8 +411,8 @@ HOST-SUFFIX, u51.me, reject
 
 # >>>>>>>>>>>>>>> ✅ H ✅ <<<<<<<<<<<<<<
 # > HDO
-# HOST-SUFFIX, applovin.com,REJECT
-# HOST-SUFFIX, applvn.com,REJECT
+# HOST-SUFFIX, applovin.com,reject
+# HOST-SUFFIX, applvn.com,reject
 # > 湖南卫视
 HOST-SUFFIX,da.mgtv.com, reject
 HOST-SUFFIX,da.hunantv.com, reject
@@ -505,12 +514,12 @@ host-keyword, c1img.ali.kugou.com, reject
 host-keyword, kgstaticdlbssdlbig.tx.kugou.com, reject
 host-keyword, adsfilebssdlbig.ali.kugou.com, reject
 host-keyword, splashimgbssdl.yun.kugou.com, reject
-HOST-KEYWORD, adservice.kugou.com,REJECT
-HOST-KEYWORD, kgipadstat.kugou.com,REJECT
-HOST-KEYWORD, kgipadstatbak.kugou.com,REJECT
-HOST-KEYWORD, logwebs.kugou.com,REJECT
-HOST-KEYWORD, tracker.kugou.com,REJECT
-HOST-KEYWORD, trackercdnbj.kugou.com,REJECT
+HOST-KEYWORD, adservice.kugou.com,reject
+HOST-KEYWORD, kgipadstat.kugou.com,reject
+HOST-KEYWORD, kgipadstatbak.kugou.com,reject
+HOST-KEYWORD, logwebs.kugou.com,reject
+HOST-KEYWORD, tracker.kugou.com,reject
+HOST-KEYWORD, trackercdnbj.kugou.com,reject
 host-keyword, rich.kuwo.cn, reject
 host-keyword, mobilead.kuwo.cn, reject
 host, adsfile.bssdlbig.kugou.com, reject
@@ -580,7 +589,7 @@ HOST,c1wx.lianwangtech.com, reject
 # > 蓝基因（弹窗还在，需要手动关闭）
 host-keyword,medicine.lanjiyin.com.cn, reject
 # > 两步路
-HOST-SUFFIX, admobile.top, REJECT
+HOST-SUFFIX, admobile.top, reject
 
 
 
@@ -625,7 +634,7 @@ HOST,ggv.cmvideo.cn, reject
 HOST,ggx.cmvideo.cn, reject
 HOST,ggx03.miguvideo.com, reject
 # > 小米米家
-HOST, sdkconfig.ad.xiaomi.com, REJECT
+HOST, sdkconfig.ad.xiaomi.com, reject
 
 
 
@@ -1122,38 +1131,38 @@ HOST-KEYWORD,ads.aws.viber.com, reject
 HOST-SUFFIX,alitui.weibo.com, reject
 HOST,adimg.uve.weibo.com, reject
 HOST,adimg.vue.weibo.com, reject
-HOST-KEYWORD,adimg.uve.weibo.com,REJECT
-HOST-KEYWORD,alitui.weibo.com,REJECT
-HOST-KEYWORD,biz.weibo.com,REJECT
-HOST-KEYWORD,game.weibo.cn,REJECT
-HOST-KEYWORD,game.weibo.com,REJECT
-HOST-KEYWORD,gw5.push.mcp.weibo.cn,REJECT
-HOST-KEYWORD,gw6.push.mcp.weibo.cn,REJECT
-HOST-KEYWORD,promote.biz.weibo.cn,REJECT
-HOST-KEYWORD,s.alitui.weibo.com,REJECT
-HOST-KEYWORD,sdkapp.uve.weibo.com,REJECT
-HOST-KEYWORD,weibomingzi.com,REJECT
-HOST-KEYWORD,zymo.mps.weibo.com,REJECT
-HOST-KEYWORD,adimg.vue.weibo.com,REJECT
-HOST-KEYWORD,dp.im.weibo.cn,REJECT
-HOST-KEYWORD,m.game.weibo.cn,REJECT
-HOST-KEYWORD,c.biz.weibo.com,REJECT
-HOST-KEYWORD,c.wcpt.biz.weibo.com,REJECT
-HOST-KEYWORD,click.uve.weibo.com,REJECT
-HOST-KEYWORD,wax.weibo.com,REJECT
-HOST-KEYWORD,wbapp.uve.weibo.com,REJECT
-HOST-KEYWORD,widget.weibo.com,REJECT
-HOST-KEYWORD,zc.biz.weibo.com,REJECT
-HOST-KEYWORD,dsp.edm.weibo.cn,REJECT
-HOST-KEYWORD,alitui.weibo.com.cn,REJECT
-HOST-KEYWORD,biz.weibo.com.cn,REJECT
-HOST-KEYWORD,game.weibo.com.cn,REJECT
-HOST-KEYWORD,tui.weibo.com,REJECT
-HOST-KEYWORD,wax.weibo.com.cn,REJECT
-HOST-KEYWORD,ad.weibo.com,REJECT
-HOST-KEYWORD,adstrategy.biz.weibo.com,REJECT
-# HOST-KEYWORD,s.weibo.com,REJECT
-HOST-KEYWORD,vs.biz.weibo.com,REJECT
+HOST-KEYWORD,adimg.uve.weibo.com,reject
+HOST-KEYWORD,alitui.weibo.com,reject
+HOST-KEYWORD,biz.weibo.com,reject
+HOST-KEYWORD,game.weibo.cn,reject
+HOST-KEYWORD,game.weibo.com,reject
+HOST-KEYWORD,gw5.push.mcp.weibo.cn,reject
+HOST-KEYWORD,gw6.push.mcp.weibo.cn,reject
+HOST-KEYWORD,promote.biz.weibo.cn,reject
+HOST-KEYWORD,s.alitui.weibo.com,reject
+HOST-KEYWORD,sdkapp.uve.weibo.com,reject
+HOST-KEYWORD,weibomingzi.com,reject
+HOST-KEYWORD,zymo.mps.weibo.com,reject
+HOST-KEYWORD,adimg.vue.weibo.com,reject
+HOST-KEYWORD,dp.im.weibo.cn,reject
+HOST-KEYWORD,m.game.weibo.cn,reject
+HOST-KEYWORD,c.biz.weibo.com,reject
+HOST-KEYWORD,c.wcpt.biz.weibo.com,reject
+HOST-KEYWORD,click.uve.weibo.com,reject
+HOST-KEYWORD,wax.weibo.com,reject
+HOST-KEYWORD,wbapp.uve.weibo.com,reject
+HOST-KEYWORD,widget.weibo.com,reject
+HOST-KEYWORD,zc.biz.weibo.com,reject
+HOST-KEYWORD,dsp.edm.weibo.cn,reject
+HOST-KEYWORD,alitui.weibo.com.cn,reject
+HOST-KEYWORD,biz.weibo.com.cn,reject
+HOST-KEYWORD,game.weibo.com.cn,reject
+HOST-KEYWORD,tui.weibo.com,reject
+HOST-KEYWORD,wax.weibo.com.cn,reject
+HOST-KEYWORD,ad.weibo.com,reject
+HOST-KEYWORD,adstrategy.biz.weibo.com,reject
+# HOST-KEYWORD,s.weibo.com,reject
+HOST-KEYWORD,vs.biz.weibo.com,reject
 # 微博开屏广告预加载
 host, bootpreload.uve.weibo.com, reject
 
@@ -1360,12 +1369,14 @@ host-keyword, sf3-fe-tos.pglstatp-toutiao.com, reject
 # >>>>>>>>>>>>>>> ✅ Z ✅ <<<<<<<<<<<<<<
 # > 知乎
 USER-AGENT,AVOS*, reject
-HOST,appcloud2.in.zhihu.com, reject
-HOST,mqtt.zhihu.com, reject
-HOST,sugar.zhihu.com, reject
+HOST, appcloud.zhihu.com, reject
+HOST, appcloud2.in.zhihu.com, reject
+HOST, mqtt.zhihu.com, reject
+HOST, sugar.zhihu.com, reject
+HOST, crash2.zhihu.com, reject
 HOST,118.89.204.198, reject
 IP-CIDR,118.89.204.198/32, reject
-IP6-CIDR,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,REJECT
+IP6-CIDR,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,reject
 # > 中关村
 HOST,apppv.zol.com.cn, reject
 HOST,pvnapp.zol.com.cn, reject
@@ -1395,7 +1406,9 @@ host-keyword, p26-be-pack-sign.pglstatp-toutiao.com, reject
 # > 真不卡
 HOST-SUFFIX, ttayy.cn, reject
 HOST-SUFFIX, zhengxiaoliu.top, reject
-
+# > 字节跳动
+HOST, ad.zijieapi.com, reject
+HOST-KEYWORD, -ad-sign.byteimg.com, reject
 
 
 
