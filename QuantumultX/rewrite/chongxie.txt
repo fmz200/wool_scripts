@@ -1379,7 +1379,7 @@ https://api.rr.tv/storage/business/rootName/app/homePage\?dataType=JSON url reje
 
 # >>>>>>>>>>>>>>> ✅ S ✅ <<<<<<<<<<<<<<
 # > spotify 音乐
-^https?:\/\/spclient\.wg\.spotify\.com\/(ad-logic|ads|.+ad_slot|.+banners|.+canvases|.+cards|.+crashlytics|.+doubleclick.net|.+enabled-tracks|+event|+sponsored|+promoted|.+promoted_offer) url reject-img
+^https?:\/\/spclient\.wg\.spotify\.com\/(ad-logic|ads|.+ad_slot|.+banners|.+canvases|.+cards|.+crashlytics|.+doubleclick.net|.+enabled-tracks|.+event|.+sponsored|.+promoted|.+promoted_offer) url reject-img
 ^https?:\/\/api\d?\.musical\.ly\/api\/ad\/ url reject-img
 
 # > soul
