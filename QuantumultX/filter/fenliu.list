@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/fenliu.list
 #!tg-group：https://t.me/lanjieguanggao
-#!update：2023.07.02 18:55
+#!update：2023.07.03 21:36
 #!support：约9373行
 #!proxy-select：reject
 #############################################
@@ -798,7 +798,7 @@ HOST-SUFFIX,apoll.m.taobao.com, reject
 HOST-SUFFIX,h-adashx.ut.taobao.com, reject
 HOST-SUFFIX,w.m.taobao.com, reject
 HOST,tunion-api.m.taobao.com, reject
-HOST-SUFFIX,ai.m.taobao.com, reject
+;HOST-SUFFIX,ai.m.taobao.com, reject
 HOST-SUFFIX,re.m.taobao.com, reject
 HOST-SUFFIX,agoodm.m.taobao.com, reject
 HOST-SUFFIX,ai.taobao.com, reject
@@ -1071,7 +1071,7 @@ HOST-SUFFIX, hao.uc.cn, reject
 HOST-SUFFIX, lobmuc.cn, reject
 HOST-SUFFIX, open-uc.cn, reject
 HOST-SUFFIX, puds.test.uae.uc.cn, reject
-HOST-SUFFIX, t.uc.cn, reject
+;HOST-SUFFIX, t.uc.cn, reject
 HOST-SUFFIX, track.uc.cn, reject
 HOST-SUFFIX, wmedia-track.uc.cn, reject
 HOST-SUFFIX, woodpecker.uc.cn, reject
@@ -1517,7 +1517,7 @@ HOST-KEYWORD, dlads, reject
 HOST, dagonghuzhu.com, reject
 HOST-KEYWORD, xxshuyuan, reject
 HOST-KEYWORD, haowanyou, reject
-HOST-KEYWORD, dat8, reject
+;HOST-KEYWORD, dat8, reject
 HOST-KEYWORD, 112wan, reject
 HOST-KEYWORD, dfkj8, reject
 HOST-KEYWORD, mifengv, reject
@@ -1568,7 +1568,7 @@ HOST-KEYWORD, bongacash, reject
 HOST-KEYWORD, bngpt, reject
 HOST-KEYWORD, stunninglover, reject
 HOST-KEYWORD, highwebmedia, reject
-HOST-KEYWORD, jads, reject
+;HOST-KEYWORD, jads, reject
 HOST-KEYWORD, trwl1, reject
 HOST-KEYWORD, vidoza, reject
 HOST-KEYWORD, o333o, reject
