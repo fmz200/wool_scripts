@@ -79,7 +79,7 @@ function GetCookie() {
         const cacheValue = JSON.stringify(updateCookiesData, null, "\t");
         $.write(cacheValue, CacheKey);
         console.log(`获取到${DecodeName}的cookie：${CookieValue}`);
-        $.notify("用户名: " + DecodeName, CookieValue, tipPrefix + CookieName + "Cookie成功✔✔");
+        $.notify("用户名: " + DecodeName, "", tipPrefix + CookieName + "Cookie成功✔✔\n" + CookieValue);
       } else {
         $.notify("♥♥写入京东Cookie失败", "", "请查看脚本内说明, 登录网页获取 ‼️");
       }
