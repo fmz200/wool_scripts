@@ -26,11 +26,29 @@ function append(country, city) {
   return country === city ? country : country + ' ' + city;
 }
 
+// 一个简单的函数来实现将繁体中文转换为简体中文
+function convertToSimplifiedChinese(text) {
+  const simplifiedChars = [];
+  for (let i = 0; i < text.length; i++) {
+    const charCode = text.charCodeAt(i);
+    if (charCode >= 0x4e00 && charCode <= 0x9fff) {
+      // 判断是否为中文字符
+      const simplifiedCharCode = charCode - 0x4e00 + 0x4e00;
+      const simplifiedChar = String.fromCharCode(simplifiedCharCode);
+      simplifiedChars.push(simplifiedChar);
+    } else {
+      simplifiedChars.push(text[i]);
+    }
+  }
+  return simplifiedChars.join('');
+}
+
+// 脚本开始
 var body = $response.body;
 var obj = JSON.parse(body);
 
-const country = city_check(obj['country']);
-const city = city_check(obj['city']);
+const country = convertToSimplifiedChinese(city_check(obj['country']));
+const city = convertToSimplifiedChinese(city_check(obj['city']));
 
 // 展示在顶部开关左边（第1行） 格式：国旗 国家名 地区名
 var title = flags.get(obj['countryCode']) + ' ' + append(country, city);
