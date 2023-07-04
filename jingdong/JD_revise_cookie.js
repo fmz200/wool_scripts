@@ -78,11 +78,8 @@ function GetCookie() {
         }
         const cacheValue = JSON.stringify(updateCookiesData, null, "\t");
         $.write(cacheValue, CacheKey);
-        $.notify(
-          "用户名: " + DecodeName,
-          CookieValue,
-          tipPrefix + CookieName + "Cookie成功✔✔"
-        );
+        console.log(`获取到${DecodeName}的cookie：${CookieValue}`);
+        $.notify("用户名: " + DecodeName, CookieValue, tipPrefix + CookieName + "Cookie成功✔✔");
       } else {
         $.notify("♥♥写入京东Cookie失败", "", "请查看脚本内说明, 登录网页获取 ‼️");
       }
@@ -94,10 +91,10 @@ function GetCookie() {
   } catch (eor) {
     $.write("", CacheKey);
     $.notify("♥♥写入京东Cookie失败", "", "已尝试清空历史Cookie, 请重试 ⚠️");
-    console.log(
-      `\n写入京东Cookie出现错误 ‼️\n${JSON.stringify(
-        eor
-      )}\n\n${eor}\n\n${JSON.stringify($request.headers)}\n`
+    console.log(`\n写入京东Cookie出现错误 ‼️\n
+      ${JSON.stringify(eor)}\n\n
+      ${eor}\n\n
+      ${JSON.stringify($request.headers)}\n`
     );
   }
   $.done();
