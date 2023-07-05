@@ -696,6 +696,49 @@
         "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/AppStore.png",
         "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/AppStore.png"
       ]
+    },
+    {
+      "id": "CCB_life_checkin",
+      "name": "建行生活签到（已失效）",
+      "keys": [
+        "fmz200_ccb_body",
+        "fmz200_ccb_skey"
+      ],
+      "descs_html": [
+        "测试单账号签到"
+      ],
+      "settings": [
+        {
+          "id": "fmz200_ccb_body",
+          "name": "",
+          "val": "",
+          "desc": "",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 4
+        },
+        {
+          "id": "fmz200_ccb_skey",
+          "name": "",
+          "val": "",
+          "desc": "",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 4
+        }
+      ],
+      "author": "@fmz200",
+      "repo": "https://github.com/fmz200/wool_scripts",
+      "scripts": [
+        {
+          "name": "建行生活签到",
+          "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/checkin_ccb.js"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/AppStore.png",
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/AppStore.png"
+      ]
     }
   ]
 }

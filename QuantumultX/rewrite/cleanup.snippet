@@ -1,16 +1,12 @@
 #!name=App&小程序净化合集
-#!desc=App&小程序净化，去除一些冗余的模块
+#!desc=去除一些冗余的模块，遇到异常时关闭此脚本
 #!author=fmz200
 #!homepage=https://github.com/fmz200/wool_scripts
-#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
-#############################################
-# 重写作用：App&小程序净化，去除一些冗余的模块
-# 重要提示：某些APP/小程序要清除缓存或者重新安装，拦截才会生效！
-# 配置链接：https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/cleanup.snippet
-# 项目地址：https://github.com/fmz200/wool_scripts/blob/main/QuantumultX/rewrite/cleanup.snippet
-# 交流群组：https://t.me/lanjieguanggao
-# 支持数量：80
-# 更新时间：2023.04.23 17:52
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/chongxie.txt
+#!tg-group=https://t.me/lanjieguanggao
+#!update-time=2023.07.05 21:36
+#!support=约80款app
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -74,15 +70,15 @@ hostname = hwimg.beingfine.cn, learnywhere.cn, newton.gumingnc.com, gw-passenger
 
 # >>>>>>>>>>>>>>> ✅ A ✅ <<<<<<<<<<<<<<
 # > AShare
-^https:\/\/tan\.ipnas\.ltd\/wp-json\/wp\/v2 url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+^https:\/\/tan\.ipnas\.ltd\/wp-json\/wp\/v2 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/applet.js
 
 # > AppleAndroid 弹框显示内容
-^https:\/\/iosoi\.cn\/wp-json\/wp\/v2\/posts/\d+ url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+^https:\/\/iosoi\.cn\/wp-json\/wp\/v2\/posts/\d+ url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/applet.js
 # 辅助去除页面嵌入式式卡片广告
-^https:\/\/iosoi\.cn\/wp-content\/plugins url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+^https:\/\/iosoi\.cn\/wp-content\/plugins url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/applet.js
 
 # > APP基地
-^https:\/\/wx\.wxqqurl\.cn\/wp-json\/watch-life-net\/v1\/posts url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+^https:\/\/wx\.wxqqurl\.cn\/wp-json\/watch-life-net\/v1\/posts url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/applet.js
 
 
 
@@ -91,7 +87,7 @@ hostname = hwimg.beingfine.cn, learnywhere.cn, newton.gumingnc.com, gw-passenger
 ^https:\/\/res\.pizzahut\.com\.cn\/CRM url reject-dict
 
 # > 不完全指北
-^https:\/\/4thdimension\.top\/wp\-json\/watch\-life\-net\/v1\/posts url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+^https:\/\/4thdimension\.top\/wp\-json\/watch\-life\-net\/v1\/posts url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/applet.js
 
 # > 不背单词 净化
 ^https:\/\/hwimg\.beingfine\.cn\/float_button  url reject-dict
@@ -134,7 +130,7 @@ hostname = hwimg.beingfine.cn, learnywhere.cn, newton.gumingnc.com, gw-passenger
 ^https:\/\/wechat-api\.i-xiaoma\.com\.cn\/app\/v1\/bus\/wechat\/content url reject-dict
 
 # > 电视盒子君
-^https:\/\/tvapp\.guilaile\.cn\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+^https:\/\/tvapp\.guilaile\.cn\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/applet.js
 
 # > 德邦快递 微信小程序净化（删除Top轮播）
 ^https:\/\/www\.deppon\.com\/gwapi\/memberService\/eco\/member\/grade\/commonInterface url reject-dict
@@ -153,7 +149,7 @@ hostname = hwimg.beingfine.cn, learnywhere.cn, newton.gumingnc.com, gw-passenger
 ^https:\/\/dsp\.fcbox\.com url reject-dict
 
 # > free黑科技
-^https:\/\/www\.freeheikeji\.cn\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+^https:\/\/www\.freeheikeji\.cn\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/applet.js
 
 
 
@@ -171,10 +167,10 @@ hostname = hwimg.beingfine.cn, learnywhere.cn, newton.gumingnc.com, gw-passenger
 ^https:\/\/apis\.alenable\.com\/ycx\/v1\/api\/adPut url reject-dict
 
 # > 公子黑科技
-^https:\/\/gz\.gongzijx\.com\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+^https:\/\/gz\.gongzijx\.com\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/applet.js
 
 # > 搞机师兄
-^https:\/\/gjsx\.vip\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+^https:\/\/gjsx\.vip\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/applet.js
 
 # > 古茗 微信小程序净化
 ^https:\/\/newton\.gumingnc\.com\/newton-buyer\/newton\/buyer\/(ump|touch|external\/front) url script-response-body https://raw.githubusercontent.com/jizhi0520/QX/main/ming.js
@@ -200,13 +196,13 @@ hostname = hwimg.beingfine.cn, learnywhere.cn, newton.gumingnc.com, gw-passenger
 
 # > 黑科技软件
 ^https:\/\/hkj178.com/wp-json/mp/v2/advert/wechat url reject-200
-^https:\/\/hkj178\.com\/wp\-json\/mp\/v2\/posts url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+^https:\/\/hkj178\.com\/wp\-json\/mp\/v2\/posts url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/applet.js
 
 # > 黑科技软件源
-^https:\/\/qj\.bpojie\.com\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+^https:\/\/qj\.bpojie\.com\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/applet.js
 
 # > 火箭软件库
-^https:\/\/jt\.jxjt888\.top\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+^https:\/\/jt\.jxjt888\.top\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/applet.js
 
 
 
@@ -237,8 +233,8 @@ hostname = hwimg.beingfine.cn, learnywhere.cn, newton.gumingnc.com, gw-passenger
 ^https:\/\/suyun-guest\.daojia\.com\/api\/kuaigou\/banjia\/review url reject-dict
 
 # > 科技窝
-^https:\/\/www\.benbenfx\.xyz\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
-^https:\/\/www\.bbkj\.work\/wp-json\/watch-life-net\/v1\/posts url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+^https:\/\/www\.benbenfx\.xyz\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/applet.js
+^https:\/\/www\.bbkj\.work\/wp-json\/watch-life-net\/v1\/posts url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/applet.js
 
 
 # >>>>>>>>>>>>>>> ✅ L ✅ <<<<<<<<<<<<<<
@@ -254,10 +250,10 @@ hostname = hwimg.beingfine.cn, learnywhere.cn, newton.gumingnc.com, gw-passenger
 ^https:\/\/member\.lxjchina\.com\.cn\/mini-server\/home\/page\/banner url reject-dict
 
 # > 老胡群英会
-^https:\/\/g\.syshhc\.top\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+^https:\/\/g\.syshhc\.top\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/applet.js
 
 # > 老鬼黑科技
-^https:\/\/www\.laoguikeji\.cn\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+^https:\/\/www\.laoguikeji\.cn\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/applet.js
 
 
 
@@ -275,7 +271,7 @@ hostname = hwimg.beingfine.cn, learnywhere.cn, newton.gumingnc.com, gw-passenger
 ^https:\/\/triangle\.wearemanner\.com\/mp-api\/v1\/ads url reject-dict
 
 # > 漫画台 Lite
-^https?:\/\/comic\.321mh\.com\/app_api\/v\d\/getcomicinfo_body url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/manhuatailite.js
+^https?:\/\/comic\.321mh\.com\/app_api\/v\d\/getcomicinfo_body url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/manhuatailite.js
 
 
 
@@ -353,17 +349,17 @@ hostname = hwimg.beingfine.cn, learnywhere.cn, newton.gumingnc.com, gw-passenger
 ^https:\/\/api\.songguo7\.com\/(\w{3})?mp\/v2\/misc\/(toast|user_operate_info) url reject-dict
 
 # > 森茂小苑
-^https:\/\/[a-z]+\.smkj33\.top\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
-^https:\/\/d\.smkj33\.top\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+^https:\/\/[a-z]+\.smkj33\.top\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/applet.js
+^https:\/\/d\.smkj33\.top\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/applet.js
 
 # > 世颜说
-^https:\/\/d\.syshhc\.top\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+^https:\/\/d\.syshhc\.top\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/applet.js
 
 # > 酸鸡汤、老爷花苑、御花园
-^https:\/\/[a-z]+\.ddly666\.top\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+^https:\/\/[a-z]+\.ddly666\.top\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/applet.js
 
 # > 搜罗好货
-^https:\/\/www\.i3zh\.com\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+^https:\/\/www\.i3zh\.com\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/applet.js
 
 # > 首汽约车 微信小程序净化
 ^https:\/\/gw-passenger-wap\.01zhuanche\.com\/gw-passenger-wap\/zhuanche-passenger-token\/commonSkipToken\/common\/getAdList url reject-dict
@@ -372,14 +368,14 @@ hostname = hwimg.beingfine.cn, learnywhere.cn, newton.gumingnc.com, gw-passenger
 
 # >>>>>>>>>>>>>>> ✅ T ✅ <<<<<<<<<<<<<<
 # > 天书乱谈
-^https:\/\/[a-z]+\.tslt\.xyz\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
-^https:\/\/b\.tslt\.xyz\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+^https:\/\/[a-z]+\.tslt\.xyz\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/applet.js
+^https:\/\/b\.tslt\.xyz\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/applet.js
 
 # > 天泽百宝箱
-^https:\/\/(c|a)\.jxjt888\.top\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+^https:\/\/(c|a)\.jxjt888\.top\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/applet.js
 
 # > 图层黑科技
-^https:\/\/m\.xgjyouhui\.com\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+^https:\/\/m\.xgjyouhui\.com\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/applet.js
 
 # > T3出行 微信小程序净化
 ^https:\/\/passenger\.t3go\.cn\/(solution\-|common\-)?(passenger\-)?(activity\-|app\-)?api\/notoken\/(trip\/)?api\/(home\/|common\/)?(v[1-3]\/)?(ad\/getNegativescreen|solution\/passenger\/open\/getHomeMenu|leftmenu|getHomeInfoGlobal) url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/T3.js
@@ -415,13 +411,13 @@ hostname = hwimg.beingfine.cn, learnywhere.cn, newton.gumingnc.com, gw-passenger
 ^https:\/\/mapi\.xiaotucc\.com\/(mall\/main|main_page\/index\/getActivity) url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/xiaotucc.js
 
 # > 小纸箱助手
-^https:\/\/xcx\.xianbaow\.com\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+^https:\/\/xcx\.xianbaow\.com\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/applet.js
 
 # > 小野分享
-^https:\/\/lysl2020\.com\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+^https:\/\/lysl2020\.com\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/applet.js
 
 # > 小打卡
-^https?:\/\/uranus\.sharedaka\.com\/api\/v3\/user\/info\/get url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xiaodaka.js
+^https?:\/\/uranus\.sharedaka\.com\/api\/v3\/user\/info\/get url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/xiaodaka.js
 
 # > 星巴克 微信小程序净化
 ^https:\/\/3pp\.starbucks\.com\.cn\/wxmem\/popup url reject-dict
@@ -432,7 +428,7 @@ hostname = hwimg.beingfine.cn, learnywhere.cn, newton.gumingnc.com, gw-passenger
 ^https:\/\/go\.heytea\.com\/api\/service-portal\/vip url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/heytea.js
 
 # > 搜罗好货
-^https?:\/\/wp3\.lobdol\.cn\/wp-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/xcx.js
+^https?:\/\/wp3\.lobdol\.cn\/wp-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/applet.js
 
 # > 享道出行 微信小程序净化
 ^https:\/\/passengerapi\.saicmobility\.com\/(ad\/requestAd|pay\/v1\/queryOpenedCouponPackages) url reject-dict
@@ -467,7 +463,7 @@ hostname = hwimg.beingfine.cn, learnywhere.cn, newton.gumingnc.com, gw-passenger
 ^https:\/\/hdgateway\.zto\.com\/listJumperShow url reject-dict
 
 # > 掌上公交
-^https?:\/\/wx\.mygolbs\.com\/WxBusServer\/ApiData\.do url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/zhangshanggongjiao.js
+^https?:\/\/wx\.mygolbs\.com\/WxBusServer\/ApiData\.do url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/zhangshanggongjiao.js
 
 # > 扎比科技资源箱 弹框显示内容
-^https:\/\/jabi\.coding\.net\/p\/xcx\/d\/xcx\/git\/raw\/master\/jabikj\.json url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/jabi.js
+^https:\/\/jabi\.coding\.net\/p\/xcx\/d\/xcx\/git\/raw\/master\/jabikj\.json url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/jabi.js
