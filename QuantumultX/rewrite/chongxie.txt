@@ -788,7 +788,7 @@ https://fbchina.flipchina.cn/v2/ad/query/* url reject
 
 # > 横店电影小程序
 # 开屏广告
-^https:\/\/api\.hengdianfilm\.com\/\/cinema\/queryAvailableBannerInfo\/1 url 302 https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/hengdian.js
+^https:\/\/api\.hengdianfilm\.com\/\/cinema\/queryAvailableBannerInfo\/1 url 302 https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/hengdian.json
 # 顶部横幅广告
 ^https:\/\/api\.hengdianfilm\.com\/\/cinema\/queryAvailableBannerInfo\/2\?cid= url reject-dict
 # 中间横幅广告
