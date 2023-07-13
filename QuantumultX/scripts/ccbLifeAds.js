@@ -21,8 +21,8 @@ if (url.includes(A3341AB03)) {
   if (obj.data.MEBCT_AD_INFO) {
     console.log("去除广告A3341AB03-MEBCT_AD_INFO");
     obj.data.MEBCT_AD_INFO = [];
-  }
-  $done({body: JSON.stringify(obj)});*/
+  }*/
+  $done({body: JSON.stringify(obj)});
 }
 
 //
