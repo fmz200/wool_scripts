@@ -699,17 +699,18 @@
     },
     {
       "id": "CCB_life_checkin",
-      "name": "建行生活签到（已失效）",
+      "name": "建行生活签到",
       "keys": [
-        "fmz200_ccb_body",
-        "fmz200_ccb_skey"
+        "photonmang_signurl_jhsh",
+        "photonmang_signheader_jhsh",
+        "photonmang_signbody_jhsh"
       ],
       "descs_html": [
-        "测试单账号签到"
+        "单账号签到"
       ],
       "settings": [
         {
-          "id": "fmz200_ccb_body",
+          "id": "photonmang_signurl_jhsh",
           "name": "",
           "val": "",
           "desc": "",
@@ -718,7 +719,16 @@
           "rows": 4
         },
         {
-          "id": "fmz200_ccb_skey",
+          "id": "photonmang_signheader_jhsh",
+          "name": "",
+          "val": "",
+          "desc": "",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 4
+        },
+        {
+          "id": "photonmang_signbody_jhsh",
           "name": "",
           "val": "",
           "desc": "",
@@ -732,12 +742,12 @@
       "scripts": [
         {
           "name": "建行生活签到",
-          "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/checkin_ccb.js"
+          "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/ccbLifeSignIn.js"
         }
       ],
       "icons": [
-        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/AppStore.png",
-        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/AppStore.png"
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ccbLife.jpg",
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ccbLife.jpg"
       ]
     }
   ]
