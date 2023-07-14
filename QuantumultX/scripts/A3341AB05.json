@@ -15,6 +15,11 @@
         "IS_DISPLAY" : "1"
       },
       {
+        "STOREY_NM" : "限时抢券",
+        "STOREY_TYPE" : "06",
+        "IS_DISPLAY" : "1"
+      },
+      {
         "STOREY_NM" : "首页专题广告",
         "STOREY_TYPE" : "10",
         "IS_DISPLAY" : "1"
