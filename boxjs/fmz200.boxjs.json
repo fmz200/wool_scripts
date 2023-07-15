@@ -711,7 +711,7 @@
       "settings": [
         {
           "id": "photonmang_signurl_jhsh",
-          "name": "",
+          "name": "签到的url",
           "val": "",
           "desc": "",
           "type": "textarea",
@@ -720,7 +720,7 @@
         },
         {
           "id": "photonmang_signheader_jhsh",
-          "name": "",
+          "name": "签到的header",
           "val": "",
           "desc": "",
           "type": "textarea",
@@ -729,7 +729,7 @@
         },
         {
           "id": "photonmang_signbody_jhsh",
-          "name": "",
+          "name": "签到的Body",
           "val": "",
           "desc": "",
           "type": "textarea",
