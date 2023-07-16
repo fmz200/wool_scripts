@@ -1,16 +1,22 @@
 const cookieName = '建行生活签到';
-const signurlKey = 'photonmang_signurl_jhsh';
-const signheaderKey = 'photonmang_signheader_jhsh';
+const signUrlKey = 'photonmang_signurl_jhsh';
+const signHeaderKey = 'photonmang_signheader_jhsh';
 const signBodyKey = 'photonmang_signbody_jhsh';
 const photonmang = init();
 
 if ($request && $request.method != 'OPTIONS') {
-  const signurlVal = $request.url;
-  const signheaderVal = JSON.stringify($request.headers);
+  const signUrlVal = $request.url;
+  const signHeaderVal = JSON.stringify($request.headers);
   const signBodyVal = JSON.stringify($request.body);
-  if (signurlVal) photonmang.setdata(signurlVal, signurlKey);
-  if (signheaderVal) photonmang.setdata(signheaderVal, signheaderKey);
+
+  console.log(`签到URL：${signUrlVal}`);
+  console.log(`签到header：${signHeaderVal}`);
+  console.log(`签到Body：${signBodyVal}`);
+
+  if (signUrlVal) photonmang.setdata(signUrlVal, signUrlKey);
+  if (signHeaderVal) photonmang.setdata(signHeaderVal, signHeaderKey);
   if (signBodyVal) photonmang.setdata(signBodyVal, signBodyKey);
+
   photonmang.msg(cookieName, `获取Cookie: 成功`, ``);
 }
 

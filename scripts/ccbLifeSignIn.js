@@ -16,33 +16,34 @@
  *****************************************/
 
 
-const cookieName = '建行生活'
+const cookieName = '建行生活签到'
 const signurlKey = 'photonmang_signurl_jhsh'
 const signheaderKey = 'photonmang_signheader_jhsh'
 const signBodyKey = 'photonmang_signbody_jhsh';
+
 const photonmang = init()
+
 const signurlVal = photonmang.getdata(signurlKey)
 const signheaderVal = photonmang.getdata(signheaderKey)
 const signBodyVal = photonmang.getdata(signBodyKey)
+
 sign()
 
 function sign() {
-  const url = {
+  const para = {
     url: `https://yunbusiness.ccb.com/clp_coupon/txCtrl?txcode=A3341A040`,
-    headers: JSON.parse(signheaderVal)
+    headers: JSON.parse(signheaderVal),
+    body: JSON.parse(signBodyVal)
   }
-  //请求体内容复制到下方括号里面over!
-  url.body = JSON.parse(signBodyVal);
-  photonmang.post(url, (error, response, data) => {
+  console.log("签到para：" + JSON.stringify(para));
+  photonmang.post(para, (error, response, data) => {
     photonmang.log(`${cookieName}, data: ${data}`)
     const title = `${cookieName}`
     let subTitle = ''
-    let detail = ''
     const result = JSON.parse(data)
     if (result.Code == 1) {
       subTitle = `签到结果: 签到成功`
-
-    } else if (result.Code == 0) {
+    } else {
       subTitle = `签到结果: ${result.Message}`
     }
     photonmang.msg(title, subTitle)
