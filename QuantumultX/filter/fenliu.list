@@ -392,6 +392,7 @@ HOST-SUFFIX,www.googleadservices.com, reject
 HOST-SUFFIX,www.google-analytics.com, reject
 HOST,ads.youtube.com, reject
 # > 高德
+;host, restapi.amap.com, reject
 HOST-SUFFIX,adiu.amap.com,reject
 HOST,aboard.apilocate.amap.com,reject
 HOST,apiinit.amap.com,reject
@@ -1000,7 +1001,6 @@ host-keyword, editor.sm.cn, reject
 host-keyword, fc-video.cdn.bcebos.com, reject
 host-keyword, vs10.bj2ct.u3.ucweb.com, reject
 host, navigis.uc.cn, reject
-host, restapi.amap.com, reject
 host, order.sm.cn, reject
 host, ucdc-upaas.uc.cn, reject
 host, access.open.uc.cn, reject
