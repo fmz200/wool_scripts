@@ -670,8 +670,12 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/SubStore.png"
     },
     {
-      "name": "SubStore_01",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/SubStore_01.png"
+      "name": "SubStore-01",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/SubStore-01.png"
+    },
+    {
+      "name": "SubStore-02",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/SubStore-02.png"
     },
     {
       "name": "sheep",
