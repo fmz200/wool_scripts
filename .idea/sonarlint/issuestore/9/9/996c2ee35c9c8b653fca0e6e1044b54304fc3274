@@ -1,65 +1,0 @@
-
-Ejavascript:S3504")Unexpected var, use let or const instead.(Ñ‡ş‘
-Jjavascript:S3504")Unexpected var, use let or const instead.(áø±Ğüÿÿÿÿ
-Jjavascript:S3504")Unexpected var, use let or const instead.(Ö’£©üÿÿÿÿ
-Ljavascript:S3504")Unexpected var, use let or const instead.(‹êù„8‚ßöÅ„1
-Ejavascript:S3504")Unexpected var, use let or const instead.(ˆî¿
-Ejavascript:S3504 ")Unexpected var, use let or const instead.(™‹üñ
-Ejavascript:S35043")Unexpected var, use let or const instead.(“¯ò”
-Ejavascript:S35044")Unexpected var, use let or const instead.(Æ¾Ê˜
-Djavascript:S35046")Unexpected var, use let or const instead.(Â¤ÌZ
-Jjavascript:S35047")Unexpected var, use let or const instead.(ŒÇ’æıÿÿÿÿ
-Ejavascript:S35048")Unexpected var, use let or const instead.(ªÙ¢…
-Jjavascript:S35049")Unexpected var, use let or const instead.(Ï­üÏıÿÿÿÿ
-Jjavascript:S3504:")Unexpected var, use let or const instead.(ï©µËüÿÿÿÿ
-Djavascript:S3504;")Unexpected var, use let or const instead.(†ø®
-Ejavascript:S3504<")Unexpected var, use let or const instead.(­à‰—
-Ejavascript:S3504>")Unexpected var, use let or const instead.(“ûÛ¯
-6javascript:S1874A"'name' is deprecated.(ûƒå‚üÿÿÿÿ
-0javascript:S1874B"'name' is deprecated.(ò×ñ
-
-6javascript:S1874D"'name' is deprecated.(çËãÂùÿÿÿÿ
-6javascript:S1874E"'name' is deprecated.(âÔíüÿÿÿÿ
-6javascript:S1874I"'name' is deprecated.(»±º…ùÿÿÿÿ
-6javascript:S1874I"'name' is deprecated.(»±º…ùÿÿÿÿ
-6javascript:S1874L"'name' is deprecated.(´ø²ÿÿÿÿÿ
-6javascript:S1874L"'name' is deprecated.(´ø²ÿÿÿÿÿ
-Wjavascript:S6544Z"4Expected non-Promise value in a boolean conditional.(æ÷‚’8øÍµÅœ1
-qjavascript:S3776Z"URefactor this function to reduce its Cognitive Complexity from 354 to the 15 allowed.(æ÷‚’
-hjavascript:S4138"LExpected a `for-of` loop instead of a `for` loop with this simple iteration.(ÍÜ›Ç
-ijavascript:S4138"LExpected a `for-of` loop instead of a `for` loop with this simple iteration.(µå”š
-njavascript:S4138©"LExpected a `for-of` loop instead of a `for` loop with this simple iteration.(İ¯Œıÿÿÿÿ
-njavascript:S4138º"LExpected a `for-of` loop instead of a `for` loop with this simple iteration.(ï±é—øÿÿÿÿ
-vjavascript:S5843Í"TSimplify this regular expression to reduce its complexity from 34 to the 20 allowed.(„°üÿÿÿÿ
-Cjavascript:S6535Í"!Unnecessary escape character: \-.(„°üÿÿÿÿ
-Fjavascript:S3504Ò")Unexpected var, use let or const instead.(Õêì€
-xjavascript:S2392Ò"[Consider moving declaration of 'noteK' as it is referenced outside current binding context.(Õêì€
-Fjavascript:S3504Ô")Unexpected var, use let or const instead.(Ïê¤’
-8javascript:S2814Ô"'noteK' is already defined.(Ïê¤’
-Fjavascript:S3504Ù")Unexpected var, use let or const instead.(è„ã§
-zjavascript:S2392Ù"]Consider moving declaration of 'noteKn8' as it is referenced outside current binding context.(è„ã§
-Fjavascript:S3504Ú")Unexpected var, use let or const instead.(€ÿäÕ
-zjavascript:S2392Ú"]Consider moving declaration of 'noteKn6' as it is referenced outside current binding context.(€ÿäÕ
-Kjavascript:S3504Û")Unexpected var, use let or const instead.(ëÍ“®ûÿÿÿÿ
-javascript:S2392Û"]Consider moving declaration of 'noteKn4' as it is referenced outside current binding context.(ëÍ“®ûÿÿÿÿ
-Kjavascript:S3504Ü")Unexpected var, use let or const instead.(…ĞÏ÷ûÿÿÿÿ
-~javascript:S2392Ü"\Consider moving declaration of 'noteK4' as it is referenced outside current binding context.(…ĞÏ÷ûÿÿÿÿ
-Fjavascript:S3504İ")Unexpected var, use let or const instead.(úìè€
-yjavascript:S2392İ"\Consider moving declaration of 'noteK2' as it is referenced outside current binding context.(úìè€
-Kjavascript:S3504ß")Unexpected var, use let or const instead.(‘ÚèÙşÿÿÿÿ
-?javascript:S2814ß"'noteKn8' is already defined.(‘ÚèÙşÿÿÿÿ
-Kjavascript:S3504à")Unexpected var, use let or const instead.(×Éâşÿÿÿÿ
-?javascript:S2814à"'noteKn6' is already defined.(×Éâşÿÿÿÿ
-Fjavascript:S3504á")Unexpected var, use let or const instead.(ú÷©
-:javascript:S2814á"'noteKn4' is already defined.(ú÷©
-Ejavascript:S3504â")Unexpected var, use let or const instead.(´Ôši
-8javascript:S2814â"'noteK4' is already defined.(´Ôši
-Kjavascript:S3504ã")Unexpected var, use let or const instead.(¢æµüÿÿÿÿ
->javascript:S2814ã"'noteK2' is already defined.(¢æµüÿÿÿÿ
-2javascript:S1874ô"'name' is deprecated.(î¶á†
-2javascript:S1874…"'name' is deprecated.(î¶á†
-9javascript:S1874”"'name' is deprecated.(î¶á†8¡¾ÂÅ„1
-Jjavascript:S6535¡"!Unnecessary escape character: \,.(íƒÆ±ıÿÿÿÿ8«œÄÅ„1
-9javascript:S1874´"'name' is deprecated.(î¶á†8«œÄÅ„1
-kjavascript:S6326½"BIf multiple spaces are required here, use number quantifier ({6}).(¦ØĞÊøÿÿÿÿ8«œÄÅ„1
-kjavascript:S6326¾"BIf multiple spaces are required here, use number quantifier ({6}).(¯¯Î‰ùÿÿÿÿ8«œÄÅ„1
