@@ -1,0 +1,32 @@
+################################################################
+# 重写作用：解锁部分app会员服务
+# 注意事项：当遇到部分软件无法联网时，记得取消勾选该重写
+# 重写地址：https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/unlock/unlockVIP.snippet
+# 交流群组：https://t.me/lanjieguanggao
+# 更新时间：2023.05.31 21:21
+#############################################
+
+hostname = api.adapty.io, vas.wps.cn, account.wps.cn,
+
+
+# >>>>>>>>>>>>>>> ✅ J ✅ <<<<<<<<<<<<<<
+# > 剪映 解锁VIP hostname=*faceu*
+^http[s]?:\/\/commerce-api-.*\.faceu\.mobi\/commerce\/v1\/.*$ url script-request-header https://raw.githubusercontent.com/gjwj666/qx/main/jianying.js
+
+
+
+# >>>>>>>>>>>>>>> ✅ W ✅ <<<<<<<<<<<<<<
+# > WatchFacesGallery&Widgets 解锁永久订阅
+# 日期:2023.04.11，一定要先试用然后卸载，在开脚本恢复购买，切记！(脚本只需要开一次)
+^https？:\/\/api\.adapty\.io\/api\/v1\/sdk\/in-apps\/apple\/receipt\/validate\/ url script-response-body https://raw.githubusercontent.com/Crazy-Z7/Scrip/main/Watch.js
+
+# > WPS 解锁VIP
+^https:\/\/(vas|account)\.wps\.cn\/(query\/api\/v\d\/list_purchase_info|api\/users\/\d+\/overview) url script-response-body https://raw.githubusercontent.com/510004015/Quantumult_X/Remote/Premium/WPSOffice.js
+
+
+
+# >>>>>>>>>>>>>>> ✅ X ✅ <<<<<<<<<<<<<<
+# > 醒图 解锁VIP
+^https:\/\/commerce-api\.faceu\.mobi\/commerce\/v1\/subscription\/user_info url script-request-header https://raw.githubusercontent.com/gjwj666/qx/main/XT.js
+
+

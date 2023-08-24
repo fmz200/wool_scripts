@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>图片圆角处理并保存</title>
+</head>
+<body>
+    <h1>图片圆角处理并保存</h1>
+    <input type="file" id="imageFileInput">
+    <button onclick="processImage()">处理并保存图片</button>
+
+    <script>
+        function processImage() {
+            var fileInput = document.getElementById('imageFileInput');
+            var file = fileInput.files[0];
+
+            if (file) {
+                var reader = new FileReader();
+                reader.onload = function(event) {
+                    var img = new Image();
+                    img.onload = function() {
+                        var canvas = document.createElement('canvas');
+                        var ctx = canvas.getContext('2d');
+
+                        var width = img.width;
+                        var height = img.height;
+
+                        // 设置canvas大小
+                        canvas.width = width;
+                        canvas.height = height;
+
+                        // 在canvas上绘制图片
+                        ctx.drawImage(img, 0, 0);
+
+                        // 添加圆角
+                        var radius = 20;
+                        ctx.beginPath();
+                        ctx.moveTo(radius, 0);
+                        ctx.lineTo(width - radius, 0);
+                        ctx.quadraticCurveTo(width, 0, width, radius);
+                        ctx.lineTo(width, height - radius);
+                        ctx.quadraticCurveTo(width, height, width - radius, height);
+                        ctx.lineTo(radius, height);
+                        ctx.quadraticCurveTo(0, height, 0, height - radius);
+                        ctx.lineTo(0, radius);
+                        ctx.quadraticCurveTo(0, 0, radius, 0);
+                        ctx.closePath();
+                        ctx.clip();
+
+                        // 将添加圆角后的图片绘制在canvas上
+                        ctx.drawImage(img, 0, 0, width, height);
+
+                        // 将处理后的图片保存到文件夹
+                        var newImageDataUrl = canvas.toDataURL(); // 将canvas转换为DataURL
+
+                        // 创建一个新的a标签用于下载图片
+                        var link = document.createElement('a');
+                        link.href = newImageDataUrl;
+                        link.download = 'processed_image.png'; // 下载的图片文件名
+                        link.click();
+                    };
+                    img.src = event.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
+</body>
+</html>

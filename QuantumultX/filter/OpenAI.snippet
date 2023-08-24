@@ -1,0 +1,25 @@
+#!name=OpenAI分流
+#!desc=对OpenAI相关服务进行分流
+#!author=fmz200
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
+#############################################
+# 分流作用：对OpenAI相关服务进行分流
+# 重要提示：如果不想新增一个策略组，可以设置策略偏好
+# 项目地址：https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/OpenAI.snippet
+# 交流群组：https://t.me/lanjieguanggao
+# 更新时间：2023.05.21 10:38
+# 策略选择：选择支持OpenAI的地区
+#############################################
+
+host, cdn.auth0.com, OpenAI
+HOST, challenges.cloudflare.com,OpenAI
+host, openaiapi-site.azureedge.net, OpenAI
+host-suffix, ai.com, OpenAI
+host-suffix, openai.com, OpenAI
+host-suffix, identrust.com,OpenAI
+
+host-suffix, vimeo.com, OpenAI
+host-suffix, vimeocdn.com, OpenAI
+host-suffix, hcaptcha.com, OpenAI
+host-suffix, akamaized.com, OpenAI

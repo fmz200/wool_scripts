@@ -1,0 +1,27 @@
+#############################################
+# 重写作用：去除微博广告，本规则从重写中单独提取出来
+# 重写配置：https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/weibo.snippet, tag=微博去广告@fmz200, update-interval=172800, opt-parser=false, enabled=true
+# 项目地址：https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/weibo.snippet
+# 交流群组：https://t.me/lanjieguanggao
+# 更新时间：2023.02.09 10:30
+#############################################
+# > "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
+# > "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
+# > "reject-img"    策略返回 HTTP 状态码 200,同时附带 1px gif
+# > "reject-dict"   策略返回 HTTP 状态码 200,同时附带一个空的 JSON 对象
+# > "reject-array"  策略返回 HTTP 状态码 200,同时附带一个空的 JSON 数组
+#############################################
+
+hostname = *.uve.weibo.com, weibointl.api.weibo.cn, tqt.weibo.cn, mapi.weibo.com, sdkapp.uve.weibo.com, new.vip.weibo.cn, adimg.uve.weibo.com, api.weibo.cn, *api.weibo*, wbapp.uve.weibo.com
+
+# > 微博开屏广告
+^https?:\/\/(sdk|wb)app\.uve\.weibo\.com\/(interface\/sdk\/sdkad.php|wbapplua\/wbpullad.lua) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
+# > 微博去广告
+^https?://m?api\.weibo\.c(n|om)/2/(cardlist|searchall|page|statuses/(unread_)?friends(/|_)timeline|groups/timeline|statuses/(unread_hot_timeline|extend|video_mixtimeline)|profile/(me|statuses)|video/(community_tab|remind_info|tiny_stream_video_list)|checkin/show|\!/live/media_homelist|comments/build_comments|container/get_item) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
+# > 微博自定义tab皮肤
+^https://api.weibo.cn/2/!/client/light_skin url script-response-body https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_main.js
+# > 微博非会员设置tab皮肤
+^https://new.vip.weibo.cn/littleskin/preview url script-response-body https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_main.js
+
+# > 微博国际版，你需要单独引用下方的链接并打开解析器
+# https://raw.githubusercontent.com/kokoryh/Script/master/Surge/module/weibo_intl.sgmodule

@@ -1,0 +1,22 @@
+{
+  "name": "fmz200的定时任务订阅",
+  "description": "https://github.com/fmz200/wool_scripts",
+  "task": [
+    "0 1 0 * * ? https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js, tag=阿里云盘签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/aliYunPan.png, enabled=true",
+    "10 0,8,12,18 * * * https://raw.githubusercontent.com/passerby-b/didi_fruit/main/dd_fruit.js, tag=滴滴橙心果园, img-url=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/task/didi.png, enabled=true",
+    "30 1,8,12,17 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/kuaishou/ks_fruit.js, tag=快手果园, img-url=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/task/kuaishou.png, enabled=true",
+    "30 1,7,12,18,22 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/pinduoduo/pdd_guoyuan.js, tag=拼多多果园, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/pinduoduo.png, enabled=true",
+    "15 8,10,12,18,20 * * * https://raw.githubusercontent.com/LinYuanovo/scripts/main/dygy.js, tag=抖音果园, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok_1.png, enabled=true",
+    "10 0 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/jingdong/jddj_fruit.js, tag=京东到家果园任务, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jddj.png, enabled=true",
+    "0 */1 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/jingdong/jddj_fruit_collectWater.js, tag=京东到家果园水车自动收水滴, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jddj.png, enabled=true",
+    "10 0 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/jingdong/jddj_bean.js, tag=京东到家鲜豆任务, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jddj.png, enabled=true",
+    "10 0 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/jingdong/jddj_plantBeans.js, tag=京东到家鲜豆庄园, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jddj.png, enabled=true",
+    "0 * */1 * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/jingdong/jddj_getPoints.js, tag=京东到家鲜豆庄园收水滴, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jddj.png, enabled=true",
+    "22 10 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/airport_fetch_notice.js, tag=获取机场公告, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/airport/airport.png, enabled=true",
+    "0 */4 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/ql_sync.js, tag=BoxJS与青龙数据同步, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ql.png, enabled=true",
+    "0 8 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/oil_price.js, tag=今日油价, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/oil.png, enabled=true",
+    "2 8 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/freeAppsToday.js, tag=今日限免APP, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/AppStore.png, enabled=true",
+    "22 7 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/macat/macat_signin.js, tag=马克喵签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/macat.png, enabled=true",
+    "40 8 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/ccbLifeSignIn.js, tag=建行生活签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ccbLife.jpg, enabled=true"
+  ]
+}

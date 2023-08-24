@@ -1,0 +1,406 @@
+[
+  {
+    "name": ".DS_Store",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/.DS_Store"
+  },
+  {
+    "name": "",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/.png"
+  },
+  {
+    "name": "58同城",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/58同城.png"
+  },
+  {
+    "name": "BOSS直聘",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/BOSS直聘.png"
+  },
+  {
+    "name": "COTTICOFFEE库迪咖啡",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/COTTICOFFEE库迪咖啡.png"
+  },
+  {
+    "name": "ColorfulWidget彩虹组件",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/ColorfulWidget彩虹组件.png"
+  },
+  {
+    "name": "Keep",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/Keep.png"
+  },
+  {
+    "name": "QQ",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/QQ.png"
+  },
+  {
+    "name": "QQ浏览器",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/QQ浏览器.png"
+  },
+  {
+    "name": "QQ邮箱",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/QQ邮箱.png"
+  },
+  {
+    "name": "QQ音乐",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/QQ音乐.png"
+  },
+  {
+    "name": "UC浏览器",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/UC浏览器.png"
+  },
+  {
+    "name": "WPSOffice",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/WPSOffice.png"
+  },
+  {
+    "name": "WiFi万能钥匙",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/WiFi万能钥匙.png"
+  },
+  {
+    "name": "WiFi万能钥匙极速版",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/WiFi万能钥匙极速版.png"
+  },
+  {
+    "name": "luckincoffee瑞幸咖啡",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/luckincoffee瑞幸咖啡.png"
+  },
+  {
+    "name": "七猫小说",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/七猫小说.png"
+  },
+  {
+    "name": "个人所得税",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/个人所得税.png"
+  },
+  {
+    "name": "中国农业银行",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/中国农业银行.png"
+  },
+  {
+    "name": "中国工商银行",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/中国工商银行.png"
+  },
+  {
+    "name": "中国建设银行",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/中国建设银行.png"
+  },
+  {
+    "name": "中国电信",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/中国电信.png"
+  },
+  {
+    "name": "中国移动",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/中国移动.png"
+  },
+  {
+    "name": "中国联通",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/中国联通.png"
+  },
+  {
+    "name": "中国银行",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/中国银行.png"
+  },
+  {
+    "name": "云闪付",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/云闪付.png"
+  },
+  {
+    "name": "交管12123",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/交管12123.png"
+  },
+  {
+    "name": "京东",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/京东.png"
+  },
+  {
+    "name": "企业微信",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/企业微信.png"
+  },
+  {
+    "name": "优酷视频",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/优酷视频.png"
+  },
+  {
+    "name": "作业帮",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/作业帮.png"
+  },
+  {
+    "name": "倒数日",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/倒数日.png"
+  },
+  {
+    "name": "剪映",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/剪映.png"
+  },
+  {
+    "name": "去哪儿旅行",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/去哪儿旅行.png"
+  },
+  {
+    "name": "同程旅行",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/同程旅行.png"
+  },
+  {
+    "name": "哈啰",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/哈啰.png"
+  },
+  {
+    "name": "哔哩哔哩",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/哔哩哔哩.png"
+  },
+  {
+    "name": "国家医保服务平台",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/国家医保服务平台.png"
+  },
+  {
+    "name": "国家反诈中心",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/国家反诈中心.png"
+  },
+  {
+    "name": "大众点评",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/大众点评.png"
+  },
+  {
+    "name": "大麦",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/大麦.png"
+  },
+  {
+    "name": "夸克",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/夸克.png"
+  },
+  {
+    "name": "学信网",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/学信网.png"
+  },
+  {
+    "name": "安居客",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/安居客.png"
+  },
+  {
+    "name": "小红书",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/小红书.png"
+  },
+  {
+    "name": "影视大全",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/影视大全.png"
+  },
+  {
+    "name": "得物",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/得物.png"
+  },
+  {
+    "name": "微信",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/微信.png"
+  },
+  {
+    "name": "微博",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/微博.png"
+  },
+  {
+    "name": "快手",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/快手.png"
+  },
+  {
+    "name": "快手极速版",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/快手极速版.png"
+  },
+  {
+    "name": "懂车帝",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/懂车帝.png"
+  },
+  {
+    "name": "我的桌面",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/我的桌面.png"
+  },
+  {
+    "name": "抖音",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/抖音.png"
+  },
+  {
+    "name": "抖音极速版",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/抖音极速版.png"
+  },
+  {
+    "name": "招商银行",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/招商银行.png"
+  },
+  {
+    "name": "拼多多",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/拼多多.png"
+  },
+  {
+    "name": "携程旅行",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/携程旅行.png"
+  },
+  {
+    "name": "支付宝",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/支付宝.png"
+  },
+  {
+    "name": "数字人民币",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/数字人民币.png"
+  },
+  {
+    "name": "智行火车票",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/智行火车票.png"
+  },
+  {
+    "name": "汽水音乐",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/汽水音乐.png"
+  },
+  {
+    "name": "淘宝",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/淘宝.png"
+  },
+  {
+    "name": "滴滴出行",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/滴滴出行.png"
+  },
+  {
+    "name": "爱奇艺",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/爱奇艺.png"
+  },
+  {
+    "name": "王者营地",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/王者营地.png"
+  },
+  {
+    "name": "番茄小说",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/番茄小说.png"
+  },
+  {
+    "name": "番茄畅听",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/番茄畅听.png"
+  },
+  {
+    "name": "百度",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/百度.png"
+  },
+  {
+    "name": "百度地图",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/百度地图.png"
+  },
+  {
+    "name": "百度极速版",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/百度极速版.png"
+  },
+  {
+    "name": "百度网盘",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/百度网盘.png"
+  },
+  {
+    "name": "知乎",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/知乎.png"
+  },
+  {
+    "name": "空调遥控器",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/空调遥控器.png"
+  },
+  {
+    "name": "网上国网",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/网上国网.png"
+  },
+  {
+    "name": "网易云音乐",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/网易云音乐.png"
+  },
+  {
+    "name": "美团",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/美团.png"
+  },
+  {
+    "name": "美团外卖",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/美团外卖.png"
+  },
+  {
+    "name": "美图秀秀",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/美图秀秀.png"
+  },
+  {
+    "name": "肯德基KFC",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/肯德基KFC.png"
+  },
+  {
+    "name": "腾讯会议",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/腾讯会议.png"
+  },
+  {
+    "name": "腾讯视频",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/腾讯视频.png"
+  },
+  {
+    "name": "芒果TV",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/芒果TV.png"
+  },
+  {
+    "name": "菜鸟",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/菜鸟.png"
+  },
+  {
+    "name": "西瓜视频",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/西瓜视频.png"
+  },
+  {
+    "name": "转转",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/转转.png"
+  },
+  {
+    "name": "轻颜相机",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/轻颜相机.png"
+  },
+  {
+    "name": "邮储银行",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/邮储银行.png"
+  },
+  {
+    "name": "酷狗音乐",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/酷狗音乐.png"
+  },
+  {
+    "name": "醒图",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/醒图.png"
+  },
+  {
+    "name": "钉钉",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/钉钉.png"
+  },
+  {
+    "name": "铁路12306",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/铁路12306.png"
+  },
+  {
+    "name": "闲鱼",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/闲鱼.png"
+  },
+  {
+    "name": "阿里巴巴",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/阿里巴巴.png"
+  },
+  {
+    "name": "韩剧TV",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/韩剧TV.png"
+  },
+  {
+    "name": "韩小圈",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/韩小圈.png"
+  },
+  {
+    "name": "顺丰速运",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/顺丰速运.png"
+  },
+  {
+    "name": "饿了么",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/饿了么.png"
+  },
+  {
+    "name": "驾校一点通",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/驾校一点通.png"
+  },
+  {
+    "name": "驾考宝典",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/驾考宝典.png"
+  },
+  {
+    "name": "高德地图",
+    "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/app-icons-free-cn/高德地图.png"
+  }
+]
