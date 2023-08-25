@@ -22,11 +22,14 @@ hostname = api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, new.vip.weibo.cn
 # 微博移除发现页广告
 ^https?://api.weibo.cn/2/search/(finder|container_timeline|container_discover) url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/weibo/weibo_ads.js
 
-# 微博热搜页面广告，更新后发现与超话内的帖子/精华等tab页同一个接口，暂时注释
+# 微博热搜页面广告
 ^https?://api.weibo.cn/2/page url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/weibo/weibo_ads.js
 
 # 微博超话页面广告
 ^https?://api.weibo.cn/2/statuses/container_timeline_topicpage url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/weibo/weibo_ads.js
+
+# 微博详情页面广告
+^https?://api.weibo.cn/2/statuses/extend url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/weibo/weibo_ads.js
 
 # 微博去广告以及去除各部分推广模块 - cherish
 ^https?://m?api\.weibo\.c(n|om)/2/(cardlist|searchall|page|messageflow|statuses/(unread_)?friends(/|_)timeline|groups/timeline|statuses/(container_timeline|container_timeline_hot|unread_hot_timeline|extend|video_mixtimeline)|profile/(me|container_timeline)|video/(community_tab|remind_info|tiny_stream_video_list)|checkin/show|\!/live/media_homelist|comments/build_comments|container/get_item|search/(finder|container_timeline|container_discover)) url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/weibo/weibo_main.js
