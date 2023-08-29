@@ -22,8 +22,7 @@ const weiboPic = [
   "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo-20.png",
   "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo-27.png",
   "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo-30.png",
-  "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo-32.png",
-  "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo-43.png"
+  "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo-32.png"
 ]
 
 let index = 1;
