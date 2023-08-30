@@ -18,8 +18,6 @@ const url6 = '/statuses/extend'; // 微博详情页面广告
 
 const weiboPic = [
   "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo-01.png",
-  "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo-19.png",
-  "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo-20.png",
   "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo-27.png",
   "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo-30.png",
   "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo-32.png"
@@ -62,6 +60,10 @@ function modifyMain(url, data) {
 
     // 1.4、items[i].category = "feed" 是热门微博的部分
     payload.items = removeCategoryFeedAds(payload.items);
+
+    // 1.5、背景图广告
+    processChannelStyleMap(payload.loadedInfo.headerBack.channelStyleMap);
+
     return JSON.stringify(resp_data);
   }
 
@@ -87,6 +89,9 @@ function modifyMain(url, data) {
 
     // 2.4、items[i].category = "feed" 是热门微博的部分
     resp_data.items = removeCategoryFeedAds(resp_data.items);
+
+    // 2.5、背景图广告
+    processChannelStyleMap(resp_data.loadedInfo.headerBack.channelStyleMap);
 
     return JSON.stringify(resp_data);
   }
@@ -147,6 +152,19 @@ function removeCategoryFeedAds(items) {
   const newItems = items.filter(item => item.category !== "feed" || (item.data && item.data.mblogtypename !== "广告"));
   console.log('移除发现页热门微博广告结束💕💕');
   return newItems;
+}
+
+function processChannelStyleMap(channelStyleMap) {
+  console.log('移除发现页背景图广告开始💕');
+  for (const propertyName in channelStyleMap) {
+    if (channelStyleMap.hasOwnProperty(propertyName) && propertyName.includes('102803')) {
+      const property = channelStyleMap[propertyName];
+      if (property.hasOwnProperty('data') && property.data.hasOwnProperty('backgroundImage')) {
+        property.data.backgroundImage = '';
+      }
+    }
+  }
+  console.log('移除发现页背景图广告结束💕💕');
 }
 
 function getRandomWeiboPic() {
