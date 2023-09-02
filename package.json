@@ -2,6 +2,7 @@
   "dependencies": {
     "axios": "^1.4.0",
     "node-fetch": "^3.3.1",
+    "request": "^2.88.2",
     "sharp": "^0.32.1"
   }
 }
