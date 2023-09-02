@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/fenliuxiuzheng.list
 #!tg-group：https://t.me/lanjieguanggao
-#!update：2023.08.24 10:30
+#!date：2023.08.24 10:30
 #!proxy-select：direct
 #############################################
 # > "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容

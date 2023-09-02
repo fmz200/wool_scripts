@@ -1,7 +1,7 @@
 /**
  * Reddit 过滤推广, 关 subreddit 的 NSFW 提示
  *
- * update-time=2023.07.22 18:50
+ * date=2023.07.22 18:50
  */
 
 const body = JSON.parse($response.body);

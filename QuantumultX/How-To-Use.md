@@ -27,7 +27,7 @@
 #### 1.2 点击raw获取配置文件路径，如下图
 ![img.png](../pic/quanX/how-to-use-00-01.png)
 
-#### 1.3 复制raw地址，如下图，你也可以直接复制 [这个链接](https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/config/lanren.conf)
+#### 1.3 复制raw地址，如下图，你也可以直接复制 [这个链接](https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/config/QuanX.conf)
 ![img.png](../pic/quanX/how-to-use-00-02.png)
 
 ### 2、Quan X主界面，点击`右下角风车`，然后弹出界面下拉至 `配置文件` 区域，点击 `下载配置`，将上一步复制的地址粘贴到弹出窗口，然后点右上角✅确定
