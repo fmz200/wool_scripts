@@ -2231,11 +2231,10 @@ https:\/\/edu\.seewo\.com\/app\/api\/v1\/startPage\/latest   url reject-dict
 ^https:\/\/hz\.yxzq\.com\/news-configserver\/api\/v1\/query\/banner_advertisement url reject-dict
 
 # > 优酷
-^https:\/\/un-acs\.youku\.com\/gw\/mtop\.youku\.play\.ups\.appinfo\.get url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
-^https?:\/\/vali\.cp31\.ott\.cibntv\.net\/youku url reject
-^https?:\/\/.+?\.ott\.cibntv\.net\/[\w\/-]+.mp4\?sid= url reject
-^https?:\/\/[\w-.]+\.ott\.cibntv\.net\/[\w\/-]+.mp4\?ccode=02010101 url reject
-^https?:\/\/[\w-.]+\.ott\.cibntv\.net\/[\w\/-]+.mp4\?sid= url reject
+;^https?:\/\/vali\.cp31\.ott\.cibntv\.net\/youku url reject
+;^https?:\/\/.+?\.ott\.cibntv\.net\/[\w\/-]+.mp4\?sid= url reject
+;^https?:\/\/[\w-.]+\.ott\.cibntv\.net\/[\w\/-]+.mp4\?ccode=02010101 url reject
+;^https?:\/\/[\w-.]+\.ott\.cibntv\.net\/[\w\/-]+.mp4\?sid= url reject
 ^https?:\/\/ups\.youku\.com\/.*?needad=1& url reject
 ^https?:\/\/r\.l\.youku\.com\/rec_at_click url reject-img
 ^https?:\/\/m\.youku\.com\/video\/libs\/iwt\.js url reject-img
