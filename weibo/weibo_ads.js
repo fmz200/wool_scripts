@@ -53,7 +53,7 @@ function modifyMain(url, data) {
 
     // 1.3、下标为3的是热议模块
     console.log('移除finder_channel模块💕💕');
-    if (payload.items[index + 2].data.more_pic.includes('ads')) {
+    if (payload.items[index + 2].data?.more_pic?.includes('ads')) {
       payload.items[index + 2].data.more_pic = getRandomWeiboPic();
     }
     payload.items[index + 2].data.group = removeFinderChannelAds(payload.items[index + 2].data.group);
