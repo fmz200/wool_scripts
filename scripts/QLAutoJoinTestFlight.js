@@ -38,8 +38,13 @@ async function processCollection() {
     addLog(`需要加入的TF_APP_ID = ${ids}`);
     try {
       for (const tf_id of ids) {
-        await autoPost(tf_id.trim());
-        addLog("\n");
+        await new Promise((resolve) => {
+          setTimeout(async () => {
+            await autoPost(tf_id.trim());
+            addLog("\n");
+            resolve(); // 表示异步操作完成
+          }, 1000); // 1000毫秒 = 1秒，这里设置每隔1秒执行一次
+        });
       }
     } catch (error) {
       sendNotify = true;
