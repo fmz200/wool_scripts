@@ -91,7 +91,7 @@ function modifyMain(url, data) {
     resp_data.items = removeCategoryFeedAds(resp_data.items);
 
     // 2.5、背景图广告
-    processChannelStyleMap(resp_data.loadedInfo.headerBack.channelStyleMap);
+    processChannelStyleMap(resp_data.loadedInfo?.headerBack?.channelStyleMap);
 
     return JSON.stringify(resp_data);
   }
@@ -155,6 +155,7 @@ function removeCategoryFeedAds(items) {
 }
 
 function processChannelStyleMap(channelStyleMap) {
+  if (!channelStyleMap) return;
   console.log('移除发现页背景图广告开始💕');
   for (const propertyName in channelStyleMap) {
     if (channelStyleMap.hasOwnProperty(propertyName) && propertyName.includes('102803')) {
