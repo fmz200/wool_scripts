@@ -91,8 +91,9 @@ function modifyMain(url, data) {
     resp_data.items = removeCategoryFeedAds(resp_data.items);
 
     // 2.5、背景图广告
-    processChannelStyleMap(resp_data.loadedInfo?.headerBack?.channelStyleMap);
-
+    if (resp_data.loadedInfo?.headerBack?.channelStyleMap) {
+      processChannelStyleMap(resp_data.loadedInfo.headerBack.channelStyleMap);
+    }
     return JSON.stringify(resp_data);
   }
 
