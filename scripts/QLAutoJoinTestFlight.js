@@ -111,7 +111,9 @@ async function autoPost(tf_id) {
       }
     }
   } catch (error) {
-    sendNotify = true;
+    if (!error.message.includes("Unexpected token < in JSON at position 0")) {
+      sendNotify = true;
+    }
     addLog(`${tf_id} 加入TF时出错：${error.message}`);
   }
 }
