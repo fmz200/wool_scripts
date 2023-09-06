@@ -36,7 +36,7 @@ function setVipLevel(responseBody) {
     // 检查是否存在 "data" 字段，并且其中包含 "is_vip" 字段
     if (responseObject && responseObject.data && responseObject.data.is_vip !== undefined) {
       // 设置 "is_vip" 字段的值为3
-      responseObject.data.is_vip = 3;
+      responseObject.data.is_vip = 4;
 
       // 将修改后的 JSON 对象转换回字符串
       const modifiedResponse = JSON.stringify(responseObject);
@@ -61,7 +61,7 @@ function replaceVipInfo(responseBody) {
     responseObject.data.vip_info = {
       "gif_icon": "https://h5.sinaimg.cn/upload/108/830/2022/10/19/vip7_default.gif",
       "vip_end_date": "2099-11-15 VIP到期，续费即享40+会员特权",
-      "user_type": 3,
+      "user_type": 4,
       "vip_level": "7",
       "isVip": 1,
       "icon": "https://h5.sinaimg.cn/upload/108/1866/2022/11/02/vip_7.png",
