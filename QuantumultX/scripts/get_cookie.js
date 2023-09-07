@@ -28,6 +28,15 @@ console.log(`当前请求的headers: ${current_headers}`);
         console.log(pdd_orchard.msg + '获取到的ck为：' + token);
       }
     }
+
+    // 美团
+    if (current_url.includes(meituan.url)) {
+      const token = current_headers['token'] || current_headers['Token'];
+      $.write(token, '#meituanCookie');
+      $.notify(meituan.msg + '获取成功✅', token, token);
+      console.log(meituan.msg + '获取到的内容为：' + token);
+    }
+
   }
 )
 ().catch((e) => {
@@ -57,4 +66,15 @@ const smzdm = {
 const pdd_orchard = {
   url: "m.pinduoduo.net/proxy/api/api/server/_stm",
   msg: "拼多多果园"
+};
+
+/**
+ * 脚本作用：美团获取token
+ * 触发类型：request-header
+ * 获取方式：点击“我的”-“个人头像”，在请求头request-header中搜索token
+ * 更新时间：2023.09.07 17:30
+ */
+const meituan = {
+  url: "/user/v1/info/audit",
+  msg: "美团获取token"
 };
