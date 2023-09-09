@@ -5,7 +5,7 @@
 // const $ = new API("获取Cookie或Token通用脚本");
 const current_url = `${$request.url}`;
 console.log(`当前请求的url: ${current_url}`);
-const current_headers = `${$request.headers}`;
+const current_headers = JSON.parse(`${$request.headers}`);
 console.log(`当前请求的headers: ${current_headers}`);
 
 !(async () => {
