@@ -65,8 +65,13 @@ async function processCollection() {
 }
 
 async function autoPost(tf_id) {
+  let tf_id_str = tf_id;
+  if (tf_id.includes("#")) {
+    let tfIdfArray = tf_id.split("#");
+    tf_id_str = tfIdfArray[0];
+  }
   addLog(tf_id + " 开始执行...");
-  let url = "https://testflight.apple.com/v3/accounts/" + tf_key + "/ru/" + tf_id;
+  let url = "https://testflight.apple.com/v3/accounts/" + tf_key + "/ru/" + tf_id_str;
   let headers = {
     "X-Session-Id": tf_session_id,
     "X-Session-Digest": tf_session_digest,
