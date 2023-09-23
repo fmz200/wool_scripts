@@ -134,10 +134,11 @@ function removeHotSearchAds(groups) {
 
 // 移除“微博热搜”下面的“热聊，本地等”的广告
 function removeFinderChannelAds(groups) {
+  if (!groups) return;
   console.log('移除发现页finder_channel广告开始💕');
   const newGroups = [];
   for (const group of groups) {
-    if (group.hasOwnProperty('pic') && typeof group.pic === 'string' && group.pic.includes('ads')) {
+    if (group.hasOwnProperty('pic') && group.pic.includes('ads')) {
       group.pic = getRandomWeiboPic();
     }
     newGroups.push(group);
