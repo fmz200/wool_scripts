@@ -162,8 +162,8 @@ function processChannelStyleMap(channelStyleMap) {
     if (channelStyleMap.hasOwnProperty(propertyName) && propertyName.includes('102803')) {
       const property = channelStyleMap[propertyName];
       if (property.hasOwnProperty('data')) {
-        property.data.backgroundImage = 'https://simg.s.weibo.com/20220110_advance_bigday_mask.png';
-        property.data.backgroundDarkImage = 'https://simg.s.weibo.com/20220110_advance_bigday_mask_dark.png';
+        property.data.backgroundImage = '';
+        property.data.backgroundDarkImage = '';
       }
     }
   }
