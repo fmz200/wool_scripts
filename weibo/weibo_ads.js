@@ -6,7 +6,7 @@
  */
 
 const url1 = '/search/finder';
-const url2 = '/search/container_timeline';
+const url2 = '/search/container_timeline'; // 发现页面
 const url3 = '/search/container_discover';
 const url4 = '/api.weibo.cn/2/page'; // 微博热搜页面url
 const url5 = '/statuses/container_timeline_topicpage'; // 微博超话页面
@@ -125,6 +125,7 @@ function modifyMain(url, data) {
 
 // 移除“微博热搜”的广告
 function removeHotSearchAds(groups) {
+  if (!groups) return;
   console.log('移除发现页热搜广告开始💕');
   const newGroups = groups.filter(group => !(group.item_log && group.item_log.adid));
   console.log('移除发现页热搜广告结束💕💕');
@@ -159,8 +160,9 @@ function processChannelStyleMap(channelStyleMap) {
   for (const propertyName in channelStyleMap) {
     if (channelStyleMap.hasOwnProperty(propertyName) && propertyName.includes('102803')) {
       const property = channelStyleMap[propertyName];
-      if (property.hasOwnProperty('data') && property.data.hasOwnProperty('backgroundImage')) {
-        property.data.backgroundImage = '';
+      if (property.hasOwnProperty('data')) {
+        property.data.backgroundImage = 'https://simg.s.weibo.com/20220110_advance_bigday_mask.png';
+        property.data.backgroundDarkImage = 'https://simg.s.weibo.com/20220110_advance_bigday_mask_dark.png';
       }
     }
   }
