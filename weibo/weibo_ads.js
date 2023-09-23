@@ -1,6 +1,6 @@
 /**
  * author:fmz200
- * date:2023-09-09 13:13:13
+ * date:2023-09-23 15:13:13
  * 配置QX重写：在[rewrite_remote]下填写👇🏻配置
  * https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/weibo.snippet, tag=微博移除发现页广告@fmz200, update-interval=172800, opt-parser=false, enabled=true
  */
@@ -17,7 +17,33 @@ const weiboPic = [
   "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo-27.png",
   "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo-30.png",
   "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo-32.png"
-]
+];
+const titleSubPicMap = {
+  '电影': 'https://simg.s.weibo.com/imgtool/20221207_dianying.png',
+  '热议': 'https://simg.s.weibo.com/20220402_hottopic-icon.png',
+  '影像年': 'https://simg.s.weibo.com/ads/1%2Fads_1692185628.png',
+  '本地': 'https://simg.s.weibo.com/20190123154142_tongcheng.png',
+  '亚运电竞': 'https://simg.s.weibo.com/ads/1%2Fads_1694765662.png',
+  '直播': 'https://simg.s.weibo.com/20210705_live0705.png',
+  '财经': 'https://simg.s.weibo.com/20190124150415_caijing.png',
+  '找人': 'https://simg.s.weibo.com/20190125144608_zhaoren.png',
+  '时尚': 'https://simg.s.weibo.com/imgtool/20220928_fashion.png',
+  '长文': 'https://simg.s.weibo.com/20220621_%E9%95%BF%E6%96%87%E5%8F%91%E7%8E%B0%E9%A1%B5icon%403x.png',
+  '赛事': 'https://simg.s.weibo.com/20201030_%E8%B5%9B%E4%BA%8B.png',
+  '教育': 'https://simg.s.weibo.com/20200303_edu0303.png',
+  '音乐': 'https://simg.s.weibo.com/imgtool/20221207_yinyue.png',
+  '房产': 'https://simg.s.weibo.com/20190129182003_house.png',
+  '小游戏': 'https://simg.s.weibo.com/20190118185226_youxi.png',
+  '美食': 'https://simg.s.weibo.com/imgtool/20221207_food.png',
+  '热聊': 'https://simg.s.weibo.com/20220402_reliao.png',
+  '新知': 'https://simg.s.weibo.com/20211105_xinzhi.png',
+  '微公益': 'https://simg.s.weibo.com/ads/1%2Fads_1689323535.png',
+  '大健康': 'https://simg.s.weibo.com/imgtool/20221116_health.png',
+  '活动': 'https://simg.s.weibo.com/20200915_huodong.png',
+  '母婴': 'https://simg.s.weibo.com/20210222_mombaby.png',
+  '珠宝玉石': 'https://simg.s.weibo.com/20210317_yushi.png',
+  '游戏中心': 'https://simg.s.weibo.com/ads/1%2Fads_1687759038.png'
+};
 
 let index = 1;
 let url = $request.url;
@@ -25,7 +51,7 @@ let body = $response.body;
 try {
   body = modifyMain(url, body);
 } catch (e) {
-  console.log('脚本运行出现错误，返回源数据⚠️');
+  console.log('脚本运行出现错误，部分广告未去除⚠️');
   console.log('错误信息：' + e.message);
 }
 $done({body});
@@ -50,7 +76,8 @@ function modifyMain(url, data) {
     // 1.3、下标为3的是热议模块
     console.log('移除finder_channel模块💕💕');
     if (payload.items[index + 2].data?.more_pic?.includes('ads')) {
-      payload.items[index + 2].data.more_pic = getRandomWeiboPic();
+      delete payload.items[index + 2].data.more_pic;
+      // payload.items[index + 2].data.more_pic = getRandomWeiboPic();
     }
     payload.items[index + 2].data.group = removeFinderChannelAds(payload.items[index + 2].data.group);
 
@@ -58,8 +85,9 @@ function modifyMain(url, data) {
     payload.items = removeCategoryFeedAds(payload.items);
 
     // 1.5、背景图广告
-    if (payload.loadedInfo?.headerBack?.channelStyleMap) {
-      processChannelStyleMap(payload.loadedInfo.headerBack.channelStyleMap);
+    if (payload.loadedInfo?.headerBack) {
+      delete payload.loadedInfo.headerBack;
+      // processChannelStyleMap(payload.loadedInfo.headerBack.channelStyleMap);
     }
 
     return JSON.stringify(resp_data);
@@ -80,8 +108,10 @@ function modifyMain(url, data) {
     resp_data.items[index + 1] = {};
 
     // 2.3、下标为3的是热议模块
-    if (resp_data.items[index + 2].data.more_pic?.includes('ads')) {
-      resp_data.items[index + 2].data.more_pic = getRandomWeiboPic();
+    console.log('移除finder_channel模块💕💕');
+    if (resp_data.items[index + 2].data?.more_pic?.includes('ads')) {
+      delete resp_data.items[index + 2].data.more_pic;
+      // resp_data.items[index + 2].data.more_pic = getRandomWeiboPic();
     }
     resp_data.items[index + 2].data.group = removeFinderChannelAds(resp_data.items[index + 2].data.group);
 
@@ -89,8 +119,9 @@ function modifyMain(url, data) {
     resp_data.items = removeCategoryFeedAds(resp_data.items);
 
     // 2.5、背景图广告
-    if (resp_data.loadedInfo?.headerBack?.channelStyleMap) {
-      processChannelStyleMap(resp_data.loadedInfo.headerBack.channelStyleMap);
+    if (resp_data.loadedInfo?.headerBack) {
+      delete resp_data.loadedInfo.headerBack;
+      // processChannelStyleMap(resp_data.loadedInfo.headerBack.channelStyleMap);
     }
     return JSON.stringify(resp_data);
   }
@@ -127,7 +158,7 @@ function modifyMain(url, data) {
 function removeHotSearchAds(groups) {
   if (!groups) return;
   console.log('移除发现页热搜广告开始💕');
-  const newGroups = groups.filter(group => !(group.item_log && group.item_log.adid));
+  const newGroups = groups.filter(group => !(group.item_log?.adid));
   console.log('移除发现页热搜广告结束💕💕');
   return newGroups;
 }
@@ -139,7 +170,7 @@ function removeFinderChannelAds(groups) {
   const newGroups = [];
   for (const group of groups) {
     if (group.hasOwnProperty('pic') && group.pic.includes('ads')) {
-      group.pic = getRandomWeiboPic();
+      group.pic = titleSubPicMap[group.title_sub] || getRandomWeiboPic();
     }
     newGroups.push(group);
   }
