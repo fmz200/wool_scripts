@@ -170,7 +170,8 @@ function removeFinderChannelAds(groups) {
   const newGroups = [];
   for (const group of groups) {
     if (group.hasOwnProperty('pic') && group.pic.includes('ads')) {
-      group.pic = titleSubPicMap[group.title_sub] || getRandomWeiboPic();
+      // https://h5.sinaimg.cn/upload/100/972/2022/06/13/timeline_location_default.png
+      group.pic = titleSubPicMap[group.title_sub] || "https://tvax1.sinaimg.cn/crop.0.0.800.800.180/005T3xyoly8h36u4j3h1mj60m80m874z02.jpg";
     }
     newGroups.push(group);
   }
