@@ -1,6 +1,6 @@
 /**
  * author:fmz200
- * date:2023-09-23 15:13:13
+ * date:2023-09-27 09:13:13
  * 配置QX重写：在[rewrite_remote]下填写👇🏻配置
  * https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/weibo.snippet, tag=微博移除发现页广告@fmz200, update-interval=172800, opt-parser=false, enabled=true
  */
@@ -11,7 +11,7 @@ const url3 = '/search/container_discover';
 const url4 = '/api.weibo.cn/2/page'; // 微博热搜页面url
 const url5 = '/statuses/container_timeline_topicpage'; // 微博超话页面
 const url6 = '/statuses/extend'; // 微博详情页面广告
-
+const url7 = '/groups/allgroups/v2' // 微博首页Tab标签页
 const weiboPic = [
   "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo-01.png",
   "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo-27.png",
@@ -149,6 +149,12 @@ function modifyMain(url, data) {
     console.log('微博详情页面广告结束💕💕');
     return JSON.stringify(resp_data);
   }
+  
+  // 6、移除微博首页的多余tab页
+  if (url.includes(url7)) {
+    resp_data.pageDatas = removePageDatasAds(resp_data.pageDatas);
+    return JSON.stringify(resp_data);
+  }
 
   console.log('没有广告数据🧧🧧');
   return data;
@@ -200,6 +206,14 @@ function processChannelStyleMap(channelStyleMap) {
     }
   }
   console.log('移除发现页背景图广告结束💕💕');
+}
+
+// 移除微博首页的多余tab页
+function removePageDatasAds(items) {
+  console.log('移除微博首页的多余tab页开始💕');
+  const newItems = items.filter(item => item.pageDataType !== "homeExtend");
+  console.log('移除微博首页的多余tab页结束💕💕');
+  return newItems;
 }
 
 function getRandomWeiboPic() {
