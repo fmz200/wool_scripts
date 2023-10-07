@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/fenliu.list
 #!tg-group：https://t.me/lanjieguanggao
-#!date：2023.09.21 19:16
+#!date：2023.10.07 19:36
 #!support：约9392行
 #!proxy-select：reject
 #############################################
@@ -23,7 +23,6 @@
 
 # >>>>>>>>>>>>>>> ✅ 1 ✅ <<<<<<<<<<<<<<
 # > 交管12123
-host, static.122.gov.cn, reject
 host-suffix, v3.fstats.xyz, reject
 host-suffix, wss.haoyundmn.com, reject
 host-suffix, new.xiongzhangad.com, reject
@@ -509,8 +508,8 @@ host, huyafile.msstatic.com, reject
 host, livewebbs2.msstatic.com, reject
 host, business.msstatic.com, reject
 
-# > 哈啰
-host-keyword, assets.51downapp.cn, reject
+# > 哈啰 大部分图片无法正常加载
+;host-keyword, assets.51downapp.cn, reject
 
 # > 黄油相机 #开屏广告 感谢#Dragon分享
 host-suffix, anythinktech.com, reject
@@ -543,14 +542,9 @@ host-keyword, dm.toutiao.com, reject
 host-keyword, dm.pstatp.com, reject
 host-keyword, dm.bytedance.com, reject
 host-keyword, uop.umeng.com, reject
-host-keyword, policy.jd.com, reject
-host-keyword, kepler.jd.com, reject
-host-keyword, bdsp.x.jd.com, reject
-host-keyword, keplerapi.jd.com, reject
 host-keyword, m.suning.com, reject
 host-keyword, adshare.toutiao.com, reject
 host-keyword, tunion-api.m.taobao.com, reject
-host-keyword, mapi.m.jd.com, reject
 host-keyword, s1.pstatp.com, reject
 host-keyword, s2.pstatp.com, reject
 host-keyword, s3.pstatp.com, reject
@@ -564,9 +558,17 @@ host, ad.toutiao.com, reject
 host, dsp.toutiao.com, reject
 host-keyword, pangolin.snssdk.com, reject
 
-# > 屏蔽京东和搜狗收集信息 @jFrecht
-host-suffix, jdqd.jd.com, reject
-host-suffix, shouji.sougou.com, reject
+# > 京东
+host-suffix, jzt.jd.com, reject
+host-suffix, img-x.jd.com, reject
+host-suffix, du.jd.com, reject
+host-suffix, c-nfa.jd.com, reject
+host-suffix, cm.jd.com, reject
+host-keyword, policy.jd.com, reject
+host-keyword, kepler.jd.com, reject
+host-keyword, bdsp.x.jd.com, reject
+host-keyword, keplerapi.jd.com, reject
+host-keyword, mapi.m.jd.com, reject
 
 
 
@@ -676,13 +678,6 @@ host-suffix, rich.kuwo.cn, reject
 
 
 # >>>>>>>>>>>>>>> ✅ L ✅ <<<<<<<<<<<<<<
-# > 乐视
-host-suffix, webp2p.letv.com, reject
-host, ark.letv.com, reject
-host, emma-414870e223.huodonghezi.com, reject
-host, g3.letv.com, reject
-host, n.mark.letv.com, reject
-
 # > LinkWiFi
 host, a.wkanx.com, reject
 host, cwx.lianwangtech.com, reject
@@ -693,6 +688,13 @@ host-keyword, medicine.lanjiyin.com.cn, reject
 
 # > 两步路
 host-suffix, admobile.top, reject
+
+# > 乐视
+host-suffix, webp2p.letv.com, reject
+host, ark.letv.com, reject
+host, emma-414870e223.huodonghezi.com, reject
+host, g3.letv.com, reject
+host, n.mark.letv.com, reject
 
 
 
@@ -917,6 +919,10 @@ host-suffix, bazinga.mse.sogou.com, reject
 host-suffix, bite.theta.sogoucdn.com, reject
 host-suffix, brand.sogou.com, reject
 host-suffix, bsiet.husky.sogou.com, reject
+# 屏蔽京东和搜狗收集信息 @jFrecht
+host-suffix, jdqd.jd.com, reject
+host-suffix, shouji.sougou.com, reject
+
 # > 搜狗输入法
 ;host-keyword, business-cdn.shouji.sogou.com, reject
 
@@ -3836,7 +3842,7 @@ host-suffix, cloudcdn.yousee.com, reject
 host-suffix, cm.adgrx.com, reject
 host-suffix, cm.ctnsnet.com, reject
 host-suffix, cm.eyereturn.com, reject
-host-suffix, cm.jd.com, reject
+
 host-suffix, cm.mct01.com, reject
 host-suffix, cm.netseer.com, reject
 host-suffix, cm.p4p.cn.yahoo.com, reject
@@ -3862,7 +3868,7 @@ host-suffix, cncy8.com, reject
 host-suffix, cndjs-1251973891.coshk.myqcloud.com, reject
 host-suffix, cnetdirectintl.com, reject
 host-suffix, cnetwidget.creativemark.co.uk, reject
-host-suffix, c-nfa.jd.com, reject
+
 host-suffix, cnfanglei.com, reject
 host-suffix, cnhbxx.com, reject
 host-suffix, cnkok.com, reject
@@ -4444,7 +4450,6 @@ host-suffix, dt.adsafeprotected.com, reject
 host-suffix, d-track.send.microad-cn.com, reject
 host-suffix, dtrk.slimcdn.com, reject
 host-suffix, dts.akamai.startappexchange.com, reject
-host-suffix, du.jd.com, reject
 host-suffix, duanat.com, reject
 host-suffix, duapp.com, reject
 host-suffix, dugbvb.com, reject
@@ -5549,7 +5554,7 @@ host-suffix, imgg.marketgid.com, reject
 host-suffix, imgg.mgid.com, reject
 host-suffix, imgp.cymzc.com, reject
 host-suffix, imgsreview.dftoutiao.com, reject
-host-suffix, img-x.jd.com, reject
+
 host-suffix, immob.cn, reject
 host-suffix, imneinei.com, reject
 host-suffix, i-mobile.co.jp, reject
@@ -5950,7 +5955,7 @@ host-suffix, jystea.com, reject
 host-suffix, jyz.fjtzjy.com, reject
 host-suffix, jzkapp.com, reject
 host-suffix, jzm81.com, reject
-host-suffix, jzt.jd.com, reject
+
 host-suffix, k.85wa.cn, reject
 host-suffix, k.ctsywy.com, reject
 host-suffix, k1w5.me, reject
