@@ -1506,7 +1506,7 @@ https://api.rr.tv/storage/business/rootName/app/homePage\?dataType=JSON url reje
 https://data-collector.soulapp.cn/api/data/report/v2 url 302 https://simg.s.weibo.com/20200915_huodong.png
 https://fingerprint.soulapp.cn/fingerprint/iosUpload url 302 https://simg.s.weibo.com/20200915_huodong.png
 https://api-a.soulapp.cn/loveBell/uploadPosition url 302 https://simg.s.weibo.com/20200915_huodong.png
-https://insight.soulapp.cn/mobile/insight/log/upload 302 https://simg.s.weibo.com/20200915_huodong.png
+https://insight.soulapp.cn/mobile/insight/log/upload url 302 https://simg.s.weibo.com/20200915_huodong.png
 
 # > Stay
 ^https?:\/\/api\.shenyin\.name\/stay-fork\/browse\/featured$ url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/stay.js
