@@ -533,6 +533,39 @@
       ]
     },
     {
+      "id": "TestFlightAccount",
+      "name": "TF账户管理",
+      "keys": [
+        "TESTFLIGHT-ACCOUNT"
+      ],
+      "descs_html": [
+        "<h4 align=\"center\">脚本说明以及配置请查看<a href=\"https://raw.githubusercontent.com/NobyDa/Script/master/TestFlight/TestFlightAccount.js\">脚本注释</a></h4>"
+      ],
+      "settings": [
+        {
+          "id": "@TESTFLIGHT-ACCOUNT.Debug",
+          "name": "开发者模式",
+          "val": false,
+          "type": "boolean",
+          "desc": "用于调试脚本, 一般用户请勿开启."
+        },
+        {
+          "id": "TESTFLIGHT-ACCOUNT",
+          "name": "TF账户信息",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 10,
+          "desc": "一般用户请勿修改"
+        }
+      ],
+      "author": "@NobyDa",
+      "repo": "https://github.com/NobyDa/Script/blob/master/TestFlight/TestFlightAccount.js",
+      "icons": [
+        "https://raw.githubusercontent.com/NobyDa/mini/master/Alpha/testflight.png",
+        "https://raw.githubusercontent.com/NobyDa/mini/master/Color/testflight.png"
+      ]
+    },
+    {
       "id": "ql_sync",
       "name": "BoxJS与青龙数据同步",
       "keys": [

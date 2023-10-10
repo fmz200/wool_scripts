@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/chongxie.txt
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2023.10.09 23:10
+#!date=2023-10-10 22:20:00
 #!support=约542款app
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
@@ -1255,7 +1255,6 @@ https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSpl
 ^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/ url reject-200
 ^https?:\/\/sf3-fe-tos\.pglstatp-toutiao\.com\/obj\/ad-pattern\/renderer\/package\.json url reject-200
 ^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/server_bidding\/pre_fetch\/ url reject-200
-&src\=mgtv&suuid\=.*&testversion\=&ticket\=[A-Z0-9]{32} url 302 &src=mgtv&suuid=430bab112551f8b3d4b1fa60b3576f4d&testversion=&ticket=D8DBDC5C65D535DABAAE6484AEB7A90C
 ^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/stats\/batch\/ url reject-200
 ^https?:\/\/mob\.bz\.mgtv\.com\/odin\/c1\/channel\/ads\?_ url reject-200
 ^https?:\/\/mobile\.da\.mgtv\.com\/json\/app\/bdboot url reject-200
@@ -1499,14 +1498,15 @@ https://api.rr.tv/storage/business/rootName/app/homePage\?dataType=JSON url reje
 ^https?:\/\/spclient\.wg\.spotify\.com\/(ad-logic|ads|.+ad_slot|.+banners|.+canvases|.+cards|.+crashlytics|.+doubleclick.net|.+enabled-tracks|.+event|.+sponsored|.+promoted|.+promoted_offer) url reject-img
 ^https?:\/\/api\d?\.musical\.ly\/api\/ad\/ url reject-img
 
-# > soul hostname = , api-account.soulapp.cn, insight.soulapp.cn, data-collector.soulapp.cn, fingerprint.soulapp.cn
+# > Soul
+# hostname = api-account.soulapp.cn, insight.soulapp.cn, data-collector.soulapp.cn, fingerprint.soulapp.cn
 ^https:\/\/ssp\.soulapp\.cn\/api\/q\?bi url reject-200
 ^https:\/\/data-collector\.soulapp\.cn\/api\/data\/report$ url reject
-^https://api-account.soulapp.cn/teenager/config url reject-dict
-https://data-collector.soulapp.cn/api/data/report/v2 url 307 https://simg.s.weibo.com/20200915_huodong.png
-https://fingerprint.soulapp.cn/fingerprint/iosUpload url 307 https://simg.s.weibo.com/20200915_huodong.png
-https://api-a.soulapp.cn/loveBell/uploadPosition url script-request-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/privacy_protection.js
-https://insight.soulapp.cn/mobile/insight/log/upload url script-request-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/privacy_protection.js
+^https://api-account.soulapp.cn/teenager/config url reject
+https://data-collector.soulapp.cn/api/data/report/v2 url 302 https://simg.s.weibo.com/20200915_huodong.png
+https://fingerprint.soulapp.cn/fingerprint/iosUpload url 302 https://simg.s.weibo.com/20200915_huodong.png
+https://api-a.soulapp.cn/loveBell/uploadPosition url 302 https://simg.s.weibo.com/20200915_huodong.png
+https://insight.soulapp.cn/mobile/insight/log/upload 302 https://simg.s.weibo.com/20200915_huodong.png
 
 # > Stay
 ^https?:\/\/api\.shenyin\.name\/stay-fork\/browse\/featured$ url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/stay.js
@@ -1671,8 +1671,8 @@ https://apis.lifeweek.com.cn/api/baseConfig/getIosNewConfig url reject
 
 # >>>>>>>>>>>>>>> ✅ T ✅ <<<<<<<<<<<<<<
 # > TestFlight
-# App更新时, 提示"APP不可用"问题. 解除区域限制
-^https?:\/\/testflight\.apple\.com\/v2\/accounts\/.*\/apps\/\d*\/builds\/\d*\/install$ url request-body "storefrontId"\x20:\x20.*, request-body "storefrontId":"143441-19,29",
+# TF账户管理 App更新时提示"APP不可用"问题，解决部分TF兑换错了区域的问题，例如Loon兑换到了国区
+^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/ url script-analyze-echo-response https://raw.githubusercontent.com/NobyDa/Script/master/TestFlight/TestFlightAccount.js
 
 # > TT语音 #开屏广告 个别图片误杀 #自行添加主机名 ga-album-cdnqn.52tt.com
 ^https:\/\/ga-album-cdnqn\.52tt\.com\/prod-yunying\/.+.jpg url reject-dict
