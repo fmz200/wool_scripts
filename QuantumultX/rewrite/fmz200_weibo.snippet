@@ -17,9 +17,7 @@
 hostname = api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, new.vip.weibo.cn
 
 # 似乎没用的请求
-https://api.weibo.cn/2/push/active url 302 https://simg.s.weibo.com/20200915_huodong.png
-https://api.weibo.cn/2/client/addlog_batch url 302 https://simg.s.weibo.com/20200915_huodong.png
-https://api.weibo.cn/2/ad/preload url 302 https://simg.s.weibo.com/20200915_huodong.png
+https://api\.weibo\.cn/2/(push/active|client/addlog_batch|ad/preload) url script-request-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/privacy_protection.js
 
 # 微博移除发现页广告
 ^https?://api.weibo.cn/2/search/(finder|container_timeline|container_discover) url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/weibo/weibo_ads.js

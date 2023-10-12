@@ -892,6 +892,10 @@ host-suffix, v.gdt.qq.com, reject
 # > soul
 host, soul-ad.soulapp.cn, reject
 host, ad-r.soulapp.cn, reject
+host, ssp.soulapp.cn, reject
+host, insight.soulapp.cn, reject
+host, increase-openapi.soulapp.cn, reject
+host, media-service.soulapp.cn, reject
 
 # > Snapchat
 host, ads.snapchat.com, reject
