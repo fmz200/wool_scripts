@@ -661,33 +661,30 @@
       ]
     },
     {
-      "id": "macat_cookie",
-      "name": "macat.vip签到cookie",
+      "id": "macat_signin",
+      "name": "macat.vip网站签到",
       "keys": [
-        "macat_cookie",
-        "macat_body"
-      ],
-      "descs_html": [
-        "打开个人中心，点击签到获取cookie"
+        "fmz200.macat_username",
+        "fmz200.macat_password"
       ],
       "settings": [
         {
-          "id": "macat_cookie",
-          "name": "macat.vip签到cookie",
+          "id": "fmz200.macat_username",
+          "name": "登录用户名",
           "val": "",
           "desc": "",
           "type": "textarea",
           "autoGrow": false,
-          "rows": 8
+          "rows": 1
         },
         {
-          "id": "macat_body",
-          "name": "macat.vip签到body",
+          "id": "fmz200.macat_password",
+          "name": "登录密码",
           "val": "",
           "desc": "",
           "type": "textarea",
           "autoGrow": false,
-          "rows": 4
+          "rows": 1
         }
       ],
       "author": "@fmz200",
