@@ -35,7 +35,7 @@ async function processCollection() {
     } else {
       ids = [tf_app_ids];
     }
-    addLog(`需要加入的TF_APP_ID = ${ids}`);
+    addLog(`需要加入的TF_APP_ID = ${ids}\n`);
     try {
       for (const tf_id of ids) {
         await new Promise((resolve) => {

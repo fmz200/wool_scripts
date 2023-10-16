@@ -12,6 +12,7 @@ const url4 = '/api.weibo.cn/2/page'; // 微博热搜页面url
 const url5 = '/statuses/container_timeline_topicpage'; // 微博超话页面
 const url6 = '/statuses/extend'; // 微博详情页面广告
 const url7 = '/groups/allgroups/v2' // 微博首页Tab标签页
+
 const weiboPic = [
   "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo-01.png",
   "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo-27.png",
@@ -149,10 +150,11 @@ function modifyMain(url, data) {
     console.log('微博详情页面广告结束💕💕');
     return JSON.stringify(resp_data);
   }
-  
+
   // 6、移除微博首页的多余tab页
   if (url.includes(url7)) {
-    resp_data.pageDatas = removePageDatasAds(resp_data.pageDatas);
+    resp_data.pageDatas = removePageDataAds(resp_data.pageDatas);
+    swapObjectsInArray(resp_data.pageDatas[0].categories[0].pageDatas, 0, 1);
     return JSON.stringify(resp_data);
   }
 
@@ -209,11 +211,20 @@ function processChannelStyleMap(channelStyleMap) {
 }
 
 // 移除微博首页的多余tab页
-function removePageDatasAds(items) {
+function removePageDataAds(items) {
   console.log('移除微博首页的多余tab页开始💕');
   const newItems = items.filter(item => item.pageDataType !== "homeExtend");
   console.log('移除微博首页的多余tab页结束💕💕');
   return newItems;
+}
+
+// 交换集合中两个对象的位置
+function swapObjectsInArray(array, index1, index2) {
+  console.log('交换tab页顺序开始💕');
+  const temp = array[index1];
+  array[index1] = array[index2];
+  array[index2] = temp;
+  console.log('交换tab页顺序结束💕💕');
 }
 
 function getRandomWeiboPic() {
