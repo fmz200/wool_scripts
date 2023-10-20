@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/chongxie.txt
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2023-10-20 20:20:00
+#!date=2023-10-20 21:20:00
 #!support=约542款app
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
@@ -1503,8 +1503,12 @@ https://api.rr.tv/storage/business/rootName/app/homePage\?dataType=JSON url reje
 ^https?:\/\/api\d?\.musical\.ly\/api\/ad\/ url reject-img
 
 # > Soul
-^https://api-account.soulapp.cn/teenager/config url reject-200
+^https://api-account.soulapp.cn/teenager/config url reject-dict
+^https:\/\/ssp\.soulapp\.cn\/api\/q url reject-dict
 https://api-a.soulapp.cn/loveBell/uploadPosition url script-request-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/privacy_protection.js
+https://insight.soulapp.cn/mobile/insight/log/upload url script-request-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/privacy_protection.js
+https://data-collector.soulapp.cn/api/data/report/v2 url script-request-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/privacy_protection.js
+https://fingerprint.soulapp.cn/fingerprint/iosUpload url script-request-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/privacy_protection.js
 
 # > Stay
 ^https?:\/\/api\.shenyin\.name\/stay-fork\/browse\/featured$ url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/stay.js

@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/fenliu.list
 #!tg-group：https://t.me/lanjieguanggao
-#!date：2023.10.08 08:36
+#!date：2023.10.20 21:36
 #!support：约9392行
 #!proxy-select：reject
 #############################################
@@ -892,10 +892,6 @@ host-suffix, v.gdt.qq.com, reject
 # > soul
 host, soul-ad.soulapp.cn, reject
 host, ad-r.soulapp.cn, reject
-host, ssp.soulapp.cn, reject
-host, insight.soulapp.cn, reject
-host, increase-openapi.soulapp.cn, reject
-host, media-service.soulapp.cn, reject
 
 # > Snapchat
 host, ads.snapchat.com, reject
