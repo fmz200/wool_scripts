@@ -360,9 +360,8 @@ hostname = bk.bingo.qq.com, maicai.api.ddxq.mobi, c.zhangle.com, midc.cdn-static
 https://beta-api.crunchyroll.com/cms url response-body offset_ms":\d+ response-body offset_ms":99999999999999
 
 # > 彩云天气
-;^https?:\/\/wrapper\.cyapi\.cn\/v1\/activity? url reject-200
-^https?:\/\/wrapper\.cyapi\.cn\/v1\/activity\?app_name=weather&os_type=ios_pro&type_id=A09 url echo-response application/json echo-response https://raw.githubusercontent.com/Keywos/rule/main/mocks/caiyun.json
-^https?:\/\/api\.caiyunapp\.com\/v1\/activity url echo-response application/json echo-response https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json
+^https?:\/\/wrapper\.cyapi\.cn\/v1\/activity\? url echo-response application/json echo-response https://raw.githubusercontent.com/Keywos/rule/main/mocks/caiyun.json
+^https?:\/\/api\.caiyunapp\.com\/v1\/activity url reject-dict
 
 # > 菜鸟
 ^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.(show|mshow)\.cn\/ url reject
