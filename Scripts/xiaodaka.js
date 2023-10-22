@@ -8,7 +8,7 @@
  
 [rewrite_local]
 # ～ 小打卡(微信小程序)解鎖會員權限（2022-03-12）
-^https?:\/\/uranus\.sharedaka\.com\/api\/v3\/user\/info\/get url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/xiaodaka.js
+^https?:\/\/uranus\.sharedaka\.com\/api\/v3\/user\/info\/get url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaodaka.js
 
 [mitm]
 hostname=uranus.sharedaka.com

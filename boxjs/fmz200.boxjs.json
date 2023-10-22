@@ -113,7 +113,7 @@
       ],
       "author": "@passerby-b",
       "repo": "https://github.com/fmz200/wool_scripts",
-      "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/kuaishou/ks_fruit.js"
+      "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuaishou/ks_fruit.js"
     },
     {
       "id": "pddgyck",
@@ -137,7 +137,7 @@
       ],
       "author": "@fmz200",
       "repo": "https://github.com/fmz200/wool_scripts",
-      "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/pinduoduo/pdd_guoyuan.js",
+      "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/pinduoduo/pdd_guoyuan.js",
       "icons": [
         "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/pinduoduo.png",
         "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/pinduoduo.png"
@@ -287,7 +287,7 @@
       ],
       "author": "@passerby-b",
       "repo": "https://github.com/fmz200/wool_scripts",
-      "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/jingdong/jddj_fruit.js"
+      "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingdong/jddj_fruit.js"
     },
     {
       "id": "jddj_fruit_collectWater",
@@ -315,7 +315,7 @@
       ],
       "author": "@passerby-b",
       "repo": "https://github.com/fmz200/wool_scripts",
-      "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/jingdong/jddj_fruit_collectWater.js"
+      "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingdong/jddj_fruit_collectWater.js"
     },
     {
       "id": "jddj_bean",
@@ -343,7 +343,7 @@
       ],
       "author": "@passerby-b",
       "repo": "https://github.com/fmz200/wool_scripts",
-      "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/jingdong/jddj_bean.js"
+      "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingdong/jddj_bean.js"
     },
     {
       "id": "jddj_plantBeans",
@@ -371,7 +371,7 @@
       ],
       "author": "@passerby-b",
       "repo": "https://github.com/fmz200/wool_scripts",
-      "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/jingdong/jddj_plantBeans.js"
+      "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingdong/jddj_plantBeans.js"
     },
     {
       "id": "jddj_getPoints",
@@ -399,7 +399,7 @@
       ],
       "author": "@passerby-b",
       "repo": "https://github.com/fmz200/wool_scripts",
-      "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/jingdong/jddj_getPoints.js"
+      "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingdong/jddj_getPoints.js"
     },
     {
       "id": "airport_fetch_notice",
@@ -772,7 +772,7 @@
       "scripts": [
         {
           "name": "建行生活签到",
-          "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/ccbLifeSignIn.js"
+          "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ccbLifeSignIn.js"
         }
       ],
       "icons": [

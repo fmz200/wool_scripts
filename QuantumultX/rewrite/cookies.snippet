@@ -41,8 +41,8 @@ https?:\/\/game\.xiaojukeji\.com\/api\/game\/plant\/enter url script-request-hea
 https://open.meituan.com/user/v1/info/audit url script-request-header https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/get_cookie.js
 
 # 京东ck，浏览器登录京东，点击右下角我的页面获取
-^https:\/\/home\.m\.jd\.com\/myJd\/(newhome|home)\.action url script-request-header https://raw.githubusercontent.com/fmz200/wool_scripts/main/jingdong/JD_revise_cookie.js
-;^https:\/\/api\.m\.jd\.com\/client\.action url script-request-header https://raw.githubusercontent.com/fmz200/wool_scripts/main/jingdong/JD_revise_cookie.js
+^https:\/\/home\.m\.jd\.com\/myJd\/(newhome|home)\.action url script-request-header https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingdong/jd_cookie.js
+;^https:\/\/api\.m\.jd\.com\/client\.action url script-request-header https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingdong/jd_cookie.js
 
 # 微博ck
 ^https:\/\/m?api\.weibo\.c(n|om)\/\d\/users\/show url script-request-header https://raw.githubusercontent.com/Sunert/Script/master/Task/weibo.js
@@ -51,24 +51,24 @@ https://open.meituan.com/user/v1/info/audit url script-request-header https://ra
 ^https://minigame.zijieapi.com/ttgame/game_orchard_ecom/polling_info url script-request-header https://raw.githubusercontent.com/LinYuanovo/scripts/main/dygy.js
 
 # 快手果园获取cookie
-^https://ug-fission.kuaishou.com/rest/n/darwin/orchard/water/watering url script-request-header https://raw.githubusercontent.com/fmz200/wool_scripts/main/kuaishou/ks_getCookie.js
+^https://ug-fission.kuaishou.com/rest/n/darwin/orchard/water/watering url script-request-header https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuaishou/ks_getCookie.js
 
 # 拼多多果园token
-https://m.pinduoduo.net/proxy/api/api/server/_stm url script-request-header https://raw.githubusercontent.com/fmz200/wool_scripts/main/pinduoduo/pdd_getToken.js
+https://m.pinduoduo.net/proxy/api/api/server/_stm url script-request-header https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/pinduoduo/pdd_getToken.js
 
 # 小米运动
 # ^https:\/\/account\.huami\.com\/v2\/client\/login url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/xiaomiSports/xmSports.js
 
 # 马克喵cookie
-^https:\/\/www\.macat\.vip\/wp-admin\/admin-ajax url script-request-header https://raw.githubusercontent.com/fmz200/wool_scripts/main/macat/macat_cookie.js
-# https:\/\/www\.macat\.vip\/wp-admin\/admin-ajax\.php url script-request-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/macat/macat_cookie.js
+^https:\/\/www\.macat\.vip\/wp-admin\/admin-ajax url script-request-header https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/macat/macat_cookie.js
+# https:\/\/www\.macat\.vip\/wp-admin\/admin-ajax\.php url script-request-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/macat/macat_cookie.js
 
 # 什么值得买 (APP点击个人头像/个人资料获取)
 ^https:\/\/user-api\.smzdm\.com\/users\/info url script-request-header https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/get_cookie.js
 
 # 建行生活 签到获取cookie
-^https:\/\/yunbusiness\.ccb\.com\/clp_coupon\/txCtrl\?txcode\=A3341A040 url script-request-header https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/ccbLifeCookie.js
-^https:\/\/yunbusiness\.ccb\.com\/clp_coupon\/txCtrl\?txcode\=A3341A040 url script-request-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/ccbLifeCookie.js
+^https:\/\/yunbusiness\.ccb\.com\/clp_coupon\/txCtrl\?txcode\=A3341A040 url script-request-header https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ccbLifeCookie.js
+^https:\/\/yunbusiness\.ccb\.com\/clp_coupon\/txCtrl\?txcode\=A3341A040 url script-request-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ccbLifeCookie.js
 
 # TestFlight账号cookie
 ^https:\/\/testflight\.apple\.com\/v3\/accounts/.*\/apps$ url script-request-header https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/testflight/TF_keys.js

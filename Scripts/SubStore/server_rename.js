@@ -1,7 +1,7 @@
 //############################################
 // 脚本作者：@奶茶姐 感谢@key，@sub-store-org
 // 原始地址：https://github.com/sub-store-org/Sub-Store/blob/master/scripts/ip-flag.js
-// 脚本地址：https://github.com/fmz200/wool_scripts/raw/main/scripts/sub/server_rename.js
+// 脚本地址：https://github.com/fmz200/wool_scripts/raw/main/Scripts/SubStore/server_rename.js
 // 脚本作用：在SubStore内对节点重命名为：旗帜|地区代码|地区名称|IP|序号，
 // 使用方法：SubStore内选择“脚本操作”，然后填写上面的脚本地址
 // 支持平台：✅Loon，✅Surge，❌QuanX(待开发者支持)，❌Stash(待开发者支持)，❌ShadowRocket(待开发者支持)

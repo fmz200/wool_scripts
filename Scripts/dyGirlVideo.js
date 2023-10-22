@@ -3,7 +3,7 @@
  * 作用：定时获取抖音小姐姐的视频链接，点击通知即可跳转
  * 配置：可以订阅task脚本，也可以添加下方配置
  * [task_local]
- * 0 0 8-22 * * ? https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/dyGirlVideo.js, tag=抖音小姐姐视频, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok_2.png, enabled=true
+ * 0 0 8-22 * * ? https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/dyGirlVideo.js, tag=抖音小姐姐视频, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok_2.png, enabled=true
  * 更新：2023.03.12 21:30
  */
 

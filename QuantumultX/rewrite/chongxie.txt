@@ -64,12 +64,12 @@ hostname = bk.bingo.qq.com, maicai.api.ddxq.mobi, c.zhangle.com, midc.cdn-static
 # > 555影视
 ^https?:\/\/vip7\.fzwdyy\.cn:8083\/api\/(getAdvertInfo|getGOOGAdvert) url reject-200
 ^https?:\/\/[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+){1,3}:\d+\/api\/v\d\/advert url reject
-^https?:\/\/[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+){1,3}:\d+\/api\/v\d\/movie\/index_recommend url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/555Ad.js
+^https?:\/\/[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+){1,3}:\d+\/api\/v\d\/movie\/index_recommend url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/555Ad.js
 
 # > 51信用卡管家
 ^https?:\/\/api\.u51\.com\/(generic-config-gateway|rs-resys)\/api\/v\d\/(creditpage-config|recommend) url reject-200
-^https?:\/\/api\.u51\.com\/liabilitygateway\/api\/v\d\/homepage\/liabilityline url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/51card.js
-^https?:\/\/api\.u51\.com\/generic-config-gateway\/api\/v\d\/guanjia\/me-tab2\/config url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/51card.js
+^https?:\/\/api\.u51\.com\/liabilitygateway\/api\/v\d\/homepage\/liabilityline url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/51card.js
+^https?:\/\/api\.u51\.com\/generic-config-gateway\/api\/v\d\/guanjia\/me-tab2\/config url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/51card.js
 
 # > 58
 ^https?:\/\/app\.58\.com\/api\/home\/(advertising|appadv)\/ url reject
@@ -111,7 +111,7 @@ hostname = bk.bingo.qq.com, maicai.api.ddxq.mobi, c.zhangle.com, midc.cdn-static
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv\/ url reject
 
 # > amdc
-^http:\/\/amdc\.m\.taobao\.com url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/amdc.js
+^http:\/\/amdc\.m\.taobao\.com url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/amdc.js
 
 # > 澳觅
 ^https:\/\/interface\.aomiapp\.com\/aomi-ads url reject
@@ -406,7 +406,7 @@ https://beta-api.crunchyroll.com/cms url response-body offset_ms":\d+ response-b
 ^https:\/\/ios-api\.lucklyworld\.com\/v6\/api\/config\/startup url reject-dict
 
 # > 财新
-^https?:\/\/gg\.caixin\.com\/s\?z=caixin&op=1&c=3362 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/caixinAd.js
+^https?:\/\/gg\.caixin\.com\/s\?z=caixin&op=1&c=3362 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/caixinAd.js
 
 # > 财联社
 ^https?:\/\/api3\.cls\.cn\/v1\/boot\/ad url reject
@@ -533,7 +533,7 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 https?://res\.xiaojukeji\.com\/resapi\/activity\/mget url reject
 https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNotices) url reject
 # 微信小程序个人中心净化 由TEXAS和豆豆提供
-^https:\/\/common\.diditaxi\.com\.cn\/common\/v5 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/didi.js
+^https:\/\/common\.diditaxi\.com\.cn\/common\/v5 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi.js
 # > 滴滴青桔
 ^https?:\/\/pt-starimg\.didistatic\.com\/static\/starimg\/node\/.*.(jpg|png|gif) url reject-200
 ^https?:\/\/omgup[0-9]{1}\.xiaojukeji\.com\/api url reject-200
@@ -601,7 +601,7 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 ^https?:\/\/ptf\.flyertrip\.com\/common\/cf\/.*.jpg url reject-200
 ^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=advis url reject
 ^https?:\/\/47\.100\.65\.202\/api\/mobile\/index\.php\?version=\d&mobile=yes&module=basicdata&type=forumlist url response-body adv response-body random_body
-^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=threadpost&.+?&page=1 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/fly.js
+^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=threadpost&.+?&page=1 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/fly.js
 ^https?:\/\/www\.flyert\.com\/source\/plugin\/mobile\/mobile\.php\?module=advis.* url reject
 
 # > 番茄小说
@@ -860,7 +860,7 @@ https://fbchina.flipchina.cn/v2/ad/query/* url reject
 
 # > 横店电影小程序
 # 开屏广告
-^https:\/\/api\.hengdianfilm\.com\/\/cinema\/queryAvailableBannerInfo\/1 url 302 https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/hengdian.json
+^https:\/\/api\.hengdianfilm\.com\/\/cinema\/queryAvailableBannerInfo\/1 url 302 https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/hengdian.json
 # 顶部横幅广告
 ^https:\/\/api\.hengdianfilm\.com\/\/cinema\/queryAvailableBannerInfo\/2\?cid= url reject-dict
 # 中间横幅广告
@@ -946,7 +946,7 @@ https://api.m.jd.com/client.action\?functionId=lite_advertising url reject
 ^https:\/\/img14.360buyimg.com\/mcoss\/jfs\/t1\/183719\/8\/13358\/190450\/60e82bedE10b64e23\/ url reject-200
 ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising url response-body jdLiteAdvertisingVO response-body random_body
 ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_SmartPush url response-body pushData response-body random_body
-^https?:\/\/api\.m\.jd\.com\/api\?functionId=delivery_show url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/jingxiAd.js
+^https?:\/\/api\.m\.jd\.com\/api\?functionId=delivery_show url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingxiAd.js
 
 # > 京东金融
 ^https:\/\/m.360buyimg.com\/mobilecms\/s1125x2436_jfs\/ url reject-200
@@ -1026,7 +1026,7 @@ https://api.m.jd.com/client.action\?functionId=lite_advertising url reject
 ^https:\/\/open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ$ url reject
 
 # > 夸克
-^https?:\/\/open-cms-api\.(uc|quark)\.cn\/open-cms url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/quark.js
+^https?:\/\/open-cms-api\.(uc|quark)\.cn\/open-cms url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/quark.js
 
 # > 酷我音乐
 # 广告
@@ -1062,7 +1062,7 @@ https://open3.vistastory.com/v3/api.*get_popup url reject
 ^https:\/\/cdn\.sdb\.com\.cn\/bron-coms\/bron-coms\/material-image\/.+.jpg url reject-200
 
 # > 酷安
-^https?:\/\/api\.coolapk\.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList) url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/coolapk.js
+^https?:\/\/api\.coolapk\.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList) url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/coolapk.js
 ^https?://api-access\.pangolin-sdk-toutiao\.com/api/ad/union/sdk url reject
 ^https?:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch url reject-dict
 
@@ -1466,7 +1466,7 @@ https://access.mypikpak.com/access_controller/v1/area_accessible url reject
 
 # >>>>>>>>>>>>>>> ✅ R ✅ <<<<<<<<<<<<<<
 # Reddit 过滤推广, 关 subreddit 的 NSFW 提示
-^https?:\/\/gql\.reddit\.com url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/reddit.js
+^https?:\/\/gql\.reddit\.com url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/reddit.js
 
 # > 人民日报
 ^https:\/\/app\.peopleapp\.com\/Api\/\d+/HomeApi\/(adv|getAdvertImage) url reject
@@ -1475,25 +1475,25 @@ https://access.mypikpak.com/access_controller/v1/area_accessible url reject
 
 # > 人人视频
 # > RRTV_level_info
-^https?:\/\/api\.rr\.tv\/\w{3}\/level\/info url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/rrtv_json.js
+^https?:\/\/api\.rr\.tv\/\w{3}\/level\/info url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js
 # > RRTV_屏蔽軟件更新
 ^https?:\/\/api\.rr\.tv\/.*?Version url reject
 # > RRTV_去除首頁廣告
-https://api.rr.tv/v3plus/index/channel\?pageNum=1&position=CHANNEL_INDEX url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/rrtv_json.js
+https://api.rr.tv/v3plus/index/channel\?pageNum=1&position=CHANNEL_INDEX url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js
 # > RRTV_去除廣場tab
-^https?:\/\/api\.rr\.tv\/app\/config\/h5NativeBar url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/rrtv_json.js
+^https?:\/\/api\.rr\.tv\/app\/config\/h5NativeBar url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js
 # > RRTV_去除商城廣告
-^https?:\/\/api\.rr\.tv\/v3plus\/index\/channel\?pageNum=1&position=CHANNEL_MY url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/rrtv_json.js
+^https?:\/\/api\.rr\.tv\/v3plus\/index\/channel\?pageNum=1&position=CHANNEL_MY url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js
 # > RRTV_Ad_List
-^https:\/\/api\.rr\.tv\/user\/privilege\/list url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/rrtv_json.js
+^https:\/\/api\.rr\.tv\/user\/privilege\/list url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js
 # > RRTV_Ad_All
-^https:\/\/api\.rr\.tv\/ad\/getAll url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/rrtv_json.js
+^https:\/\/api\.rr\.tv\/ad\/getAll url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js
 # > RRTV_Get_Drama
-^https:\/\/api\.rr\.tv\/drama\/app\/get_combined_drama_detail url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/rrtv_json.js
+^https:\/\/api\.rr\.tv\/drama\/app\/get_combined_drama_detail url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js
 # > RRTV_Watch_V4
-https://api.rr.tv/watch/v4 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/rrtv_json.js
+https://api.rr.tv/watch/v4 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js
 # > RRTV_User_Info
-https://api.rr.tv/user/profile url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/rrtv_json.js
+https://api.rr.tv/user/profile url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js
 # > RRTV_屏蔽限時彈窗
 https://api.rr.tv/storage/business/rootName/app/homePage\?dataType=JSON url reject-dict
 
@@ -1535,7 +1535,7 @@ https://data-collector.soulapp.cn/api/data/report/v2 url script-request-body htt
 https://fingerprint.soulapp.cn/fingerprint/iosUpload url script-request-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/privacy_protection.js
 
 # > Stay
-^https?:\/\/api\.shenyin\.name\/stay-fork\/browse\/featured$ url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/stay.js
+^https?:\/\/api\.shenyin\.name\/stay-fork\/browse\/featured$ url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/stay.js
 
 # > 苏宁
 ^https?:\/\/mpcs\.suning\.com\/mpcs\/dm\/getDmInfo url reject
@@ -1554,7 +1554,7 @@ https://fingerprint.soulapp.cn/fingerprint/iosUpload url script-request-body htt
 ^https:\/\/szdmobile\.suzhou\.gov\.cn\/thirdapp-center\/appUpdate\/update url reject-dict
 
 # > 苏打校园APP 净化(需要卸载重装）@TEXAS提供
-^https:\/\/api\.sodalife\.xyz\/v1\/posters\?location=SODA_APP%3AHOME%3ATOP url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/soda.js
+^https:\/\/api\.sodalife\.xyz\/v1\/posters\?location=SODA_APP%3AHOME%3ATOP url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soda.js
 ^https:\/\/api\.sodalife\.xyz\/v1\/posters\?location=SODA_APP%3AHOME%3ABOTTOM url reject-dict
 ^https:\/\/api\.sodalife\.xyz\/v1\/posters\?location=SODA_APP%3AHOME%3ACENTER url reject-dict
 ^https:\/\/api\.sodalife\.xyz\/v1\/posters\?location=SODA_APP%3AMINE%3ABOTTOM url reject-dict
@@ -1628,7 +1628,7 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do url rejec
 ^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/ad\/ url reject
 ^https?:\/\/shopic\.sf-express\.com\/crm\/mobile\/common\/flashscreen url reject
 https://ccsp-egmas.sf-express.com/cx-app-base/base/app/ad/queryAdImages url reject
-https://ccsp-egmas.sf-express.com/cx-app-base/base/app/ad/queryInfoFlow url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/shunfeng_json.js
+https://ccsp-egmas.sf-express.com/cx-app-base/base/app/ad/queryInfoFlow url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/shunfeng_json.js
 
 # > 顺丰优选
 ^https://mapi.sfbest.com\/brokerservice-server\/cms\/getPositionById.* url reject
@@ -2089,7 +2089,7 @@ https://b.appsimg.com/upload/momin/ url reject
 
 # > 小兔充充 #小程序净化 感谢#豆豆分享
 ^https:\/\/ad\.xiaotucc\.com\/advert url reject
-^https:\/\/mapi\.xiaotucc\.com\/(mall\/main|main_page\/index\/getActivity) url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/xiaotucc.js
+^https:\/\/mapi\.xiaotucc\.com\/(mall\/main|main_page\/index\/getActivity) url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaotucc.js
 
 # > 小电充电 微信小程序
 ^https:\/\/smarket\.dian\.so url reject-dict
@@ -2176,27 +2176,27 @@ https:\/\/edu\.seewo\.com\/app\/api\/v1\/startPage\/latest   url reject-dict
 
 # > 小红书
 # > 视频播放页商品推广
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/note\/widgets url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/redbook_json.js
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/note\/widgets url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/redbook_json.js
 # > 短视频流去水印+强制开启保存功能
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/note\/redtube\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/redbook_json.js
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/note\/redtube\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/redbook_json.js
 # > 信息流视频去水印+强制开启保存功能
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/note\/videofeed\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/redbook_json.js
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/note\/videofeed\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/redbook_json.js
 # > 信息流图片去水印
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/note\/feed\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/redbook_json.js
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/note\/feed\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/redbook_json.js
 # > 开屏广告
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/splash_config url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/redbook_json.js
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/splash_config url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/redbook_json.js
 # > 首页瀑布流
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/homefeed\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/redbook_json.js
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/homefeed\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/redbook_json.js
 # > 启动处理
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/config\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/redbook_json.js
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/config\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/redbook_json.js
 # > 热搜发现
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/hot_list url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/redbook_json.js
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/hot_list url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/redbook_json.js
 # > 默认填词
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/hint url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/redbook_json.js
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/hint url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/redbook_json.js
 # > 去除购物
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/homefeed\/categories url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/redbook_json.js
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/homefeed\/categories url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/redbook_json.js
 # > 猜你想搜
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/trending url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/redbook_json.js
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/trending url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/redbook_json.js
 # > 通用广告请求
 ^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d\/(tag\/)?ads url reject-dict
 # > 隐私屏蔽
@@ -2210,7 +2210,7 @@ https:\/\/edu\.seewo\.com\/app\/api\/v1\/startPage\/latest   url reject-dict
 
 # > 喜马拉雅
 # 首页顶部去除直播
-^https?:\/\/.*\.xima.*\.com\/discovery-category\/customCategories url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/xmly_json.js
+^https?:\/\/.*\.xima.*\.com\/discovery-category\/customCategories url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xmly_json.js
 # 修复轮播Ad失效Bug
 ^https?:\/\/.*\.xima.*\.com\/discovery-feed\/focus\/queryF url reject
 # 播放页_Live
@@ -2248,9 +2248,9 @@ https:\/\/edu\.seewo\.com\/app\/api\/v1\/startPage\/latest   url reject-dict
 # 屏蔽ting_Ad
 ^https?:\/\/.*\.xima.*\.com\/ting\/(loading|feed|home)? url reject
 # 屏蔽首页横幅_Ad
-^https?:\/\/.*\.xima.*\.com\/focus-mobile\/focusPic url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/xmly_json.js
+^https?:\/\/.*\.xima.*\.com\/focus-mobile\/focusPic url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xmly_json.js
 # 屏蔽首页动态_Ad
-^https?:\/\/.*\.xima.*\.com\/discovery-feed\/v\d\/mix url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/xmly_json.js
+^https?:\/\/.*\.xima.*\.com\/discovery-feed\/v\d\/mix url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xmly_json.js
 # 屏蔽Tab页滚动_Ad
 ^https?:\/\/.*\.xima.*\.com\/discovery-category\/v\d/category url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/xmly_json.js
 # 去除我的页面Ad_Tag

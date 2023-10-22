@@ -8,7 +8,7 @@
  
 [rewrite_local]
 # ～ 漫画台Lite(微信小程序)解鎖會員權限（2022-03-11）
-^https?:\/\/comic\.321mh\.com\/app_api\/v\d\/getcomicinfo_body url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/manhuatailite.js
+^https?:\/\/comic\.321mh\.com\/app_api\/v\d\/getcomicinfo_body url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/manhuatailite.js
 
 [mitm]
 hostname=comic.321mh.com
