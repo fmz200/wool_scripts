@@ -894,7 +894,7 @@ host-suffix, v.gdt.qq.com, reject
 # > soul
 host, soul-ad.soulapp.cn, reject
 host, ad-r.soulapp.cn, reject
-IP-CIDR, 47.99.42.29/32, reject
+;IP-CIDR, 47.99.42.29/32, reject
 IP-CIDR, 47.246.20.231/32, reject
 
 
