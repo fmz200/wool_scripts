@@ -1528,8 +1528,8 @@ https://api.rr.tv/storage/business/rootName/app/homePage\?dataType=JSON url reje
 ^https?:\/\/api\d?\.musical\.ly\/api\/ad\/ url reject-img
 
 # > Soul
-;^https://api-account.soulapp.cn/teenager/config url reject-dict
-;^https:\/\/ssp\.soulapp\.cn\/api\/q url script-request-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/privacy_protection.js
+^https://api-account.soulapp.cn/teenager/config url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js
+^https:\/\/ssp\.soulapp\.cn\/api\/q url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js
 ;https://toblog.volceapplog.com/service/2/app_log url script-request-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/privacy_protection.js
 ;https://api-a.soulapp.cn/loveBell/uploadPosition url script-request-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/privacy_protection.js
 ;https://insight.soulapp.cn/mobile/insight/log/upload url script-request-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/privacy_protection.js
