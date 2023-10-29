@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/fenliu.list
 #!tg-group：https://t.me/lanjieguanggao
-#!date：2023.10.24 21:36
+#!date：2023.10.29 13:24:00
 #!support：约9392行
 #!proxy-select：reject
 #############################################
@@ -85,8 +85,33 @@ host, tracklog.58.com, reject
 host, geo2.adobe.com, reject
 
 # > Apple
+host, advertising.apple.com, reject
 host, api-adservices.apple.com, reject
+host, apple.comscoreresearch.com, reject
+host, banners.itunes.apple.com, reject
+host, iad.apple.com, reject
+host, iadcontent.apple.com, reject
+host, iadctest.qwapi.com, reject
+host, iadmoo.apple.com, reject
+host, iadworkbench.apple.com, reject
+host, launch.apple.com, reject
+host, metrics.apple.com, reject
+host, qwapi.apple.com, reject
+host, securemetrics.apple.com, reject
+host, webproxy-advp.iad-apple.com, reject
+host, webproxy-advp.iad-apple.com.akadns.net, reject
+host-suffix, advp.apple.com, reject
 host-suffix, iadsdk.apple.com, reject
+# 安全浏览限制解除
+host, lookup.api.bsb.baidu.com, reject
+host, proxy.safebrowsing.apple, reject
+host, safebrowsing.g.applimg.com, reject
+host, safebrowsing.googleapis.com, reject
+host, safebrowsing.urlsec.qq.com, reject
+host, token.safebrowsing.apple, reject
+host, vs6.bj2ct.u3.ucweb.com, reject
+host-suffix, safebrowsing.apple, reject
+host-suffix, u3.ucweb.com, reject
 
 # > 阿里云
 IP-CIDR, 203.107.1.1/24, reject
@@ -409,6 +434,39 @@ host, pglstatp-toutiao.com, reject
 
 
 # >>>>>>>>>>>>>>> ✅ F ✅ <<<<<<<<<<<<<<
+# > 番茄小说
+host, p6-ad-sign.byteimg.com, REJECT
+host, p9-ad-sign.byteimg.com, REJECT
+host-suffix, byteimg.com, DIRECT
+host, i.snssdk.com, REJECT
+host, i-lq.snssdk.com, REJECT
+host, dig.bdurl.net, REJECT
+host-keyword, zijieapi, REJECT
+host, activity-ag.awemeughun.com, REJECT
+host, mcs.snssdk.com, REJECT
+host, tnc3-alisc1.snssdk.com, REJECT
+host, security-lq.snssdk.com, REJECT
+host, tnc3-aliec2.snssdk.com, REJECT
+host, is.snssdk.com, REJECT
+host, i.snssdk.com, REJECT
+host, v6-novelapp.ixigua.com, REJECT
+host, *novelapp.ixigua.com, REJECT
+host, *default.ixigua.com, REJECT
+host, msync-im1-vip6-std.easemob.com, REJECT
+host, apd-pcdnwxlogin.teg.tencent-cloud.net, REJECT
+host, api.iegadp.qq.com, REJECT
+host, sf3-ttcdn-tos.pstatp.com, REJECT
+host-suffix, pglstatp-toutiao.com, REJECT
+host-suffix, byteorge.com, REJECT
+host-suffix, bytegoofy.com, REJECT
+host-suffix, bytedance.com, REJECT
+IP-CIDR, 49.71.37.101/32, REJECT, no-resolve
+IP-CIDR, 117.71.105.23/32, REJECT, no-resolve
+IP-CIDR, 218.94.207.205/32, REJECT, no-resolve
+IP-CIDR, 117.92.229.188/32, REJECT, no-resolve
+IP-CIDR, 101.36.166.16/32, REJECT, no-resolve
+IP-CIDR, 180.96.2.114/32, REJECT, no-resolve
+
 # > 凤凰新媒体
 host-suffix, deliver.ifeng.com, reject
 host, api.newad.ifeng.com, reject
@@ -571,6 +629,10 @@ host-keyword, kepler.jd.com, reject
 host-keyword, bdsp.x.jd.com, reject
 host-keyword, keplerapi.jd.com, reject
 host-keyword, mapi.m.jd.com, reject
+# 屏蔽DNS
+host, dns.jd.com, reject
+IP-CIDR, 101.124.19.122/32, reject
+IP6-CIDR, 2402:db40:5100:1011::5/128, reject
 
 
 
@@ -856,6 +918,16 @@ host, ad.qingting.fm, reject
 host, adlaunch.qingting.fm, reject
 host, ad-cdn.qingting.fm, reject
 
+# > 七猫小说
+host, cdn-new-ad.wtzw.com, REJECT
+host, a-remad.qm989.com, REJECT
+host, mobads.baidu.com, REJECT
+host-suffix, pglstatp-toutiao.com, REJECT
+host-suffix, gdt.qq.com, REJECT
+host, qzs.gdtimg.com, REJECT
+host, mobads-pre-config.cdn.bcebos.com, REJECT
+host, pgdt.ugdtimg.com, REJECT
+
 # > 汽车之家
 host-keyword, adm3.autoimg.cn, reject
 ;host-keyword, audid-api.taobao.com, reject
@@ -934,6 +1006,9 @@ host-suffix, shouji.sougou.com, reject
 
 # > 深圳通微信小程序
 host-suffix, wxsnsdythumb.wxs.qq.com, reject
+
+# > 收钱吧 买单小程序去广告
+host, ads-shopping.shouqianba.com, reject
 
 
 
@@ -1104,8 +1179,6 @@ host-suffix, adsmind.tc.qq.com, reject
 host-suffix, pingma.qq.com, reject
 host-suffix, pingtcss.qq.com, reject
 host-suffix, tajs.qq.com, reject
-host-suffix, wxsnsdy.wxs.qq.com, reject
-host-suffix, wxsnsdythumb.wxs.qq.com, reject
 host-suffix, fusion.qq.com, reject
 host-suffix, ios.bugly.qq.com, reject
 host, safebrowsing.urlsec.qq.com, reject
@@ -1118,8 +1191,8 @@ host, pgdt.ugdtimg.com, reject
 host, splashqqlive.gtimg.com, reject
 host, vv.video.qq.com, reject
 host, wa.gtimg.com, reject
-;host, wxsnsdy.wxs.qq.com, reject
-;host, wxsnsdythumb.wxs.qq.com, reject
+host, wxsnsdy.wxs.qq.com, reject
+host, wxsmsdy.video.qq.com, reject
 
 # > 同花顺
 host, adm.10jqka.com.cn, reject

@@ -1,15 +1,58 @@
-const version = 'V1.0.9';
+// 2023-08-08 18:25 @RuCu6
 
-if (-1 != $request.url.indexOf("replyList")) {
-  var t = JSON.parse($response.body);
-  t.data.length && (t.data = t.data.filter(t => t.id)), $done({body: JSON.stringify(t)})
-} else if (-1 != $request.url.indexOf("indexV8")) {
-  var t = JSON.parse($response.body);
-  t.data = t.data.filter(t => !("sponsorCard" == t.entityTemplate || 8639 == t.entityId || 29349 == t.entityId || 33006 == t.entityId || 32557 == t.entityId || -1 != t.title.indexOf("值得买") || -1 != t.title.indexOf("红包"))), $done({body: JSON.stringify(t)})
-} else if (-1 != $request.url.indexOf("dataList")) {
-  var t = JSON.parse($response.body);
-  t.data = t.data.filter(t => !("sponsorCard" == t.entityTemplate || -1 != t.title.indexOf("精选配件"))), $done({body: JSON.stringify(t)})
-} else if (-1 != $request.url.indexOf("detail")) {
-  var t = JSON.parse($response.body);
-  t.data?.hotReplyRows?.length && (t.data.hotReplyRows = t.data.hotReplyRows.filter(t => t.id)), t.data?.topReplyRows?.length && (t.data.topReplyRows = t.data.topReplyRows.filter(t => t.id)), t.data?.include_goods_ids && (t.data.include_goods_ids = []), t.data?.include_goods && (t.data.include_goods = []), t.data?.detailSponsorCard && (t.data.detailSponsorCard = []), $done({body: JSON.stringify(t)})
-} else $done($response);
+const url = $request.url;
+if (!$response.body) $done({});
+let obj = JSON.parse($response.body);
+
+if (url.includes("/feed/detail")) {
+  if (obj.data?.hotReplyRows?.length > 0) {
+    obj.data.hotReplyRows = obj.data.hotReplyRows.filter((item) => item.id);
+  }
+  if (obj.data?.topReplyRows?.length > 0) {
+    obj.data.topReplyRows = obj.data.topReplyRows.filter((item) => item.id);
+  }
+  const item = ["detailSponsorCard", "include_goods", "include_goods_ids"];
+  for (let i of item) {
+    if (obj.data?.[i]) {
+      obj.data[i] = [];
+    }
+  }
+} else if (url.includes("/feed/replyList")) {
+  if (obj.data?.length > 0) {
+    obj.data = obj.data.filter((item) => item.id);
+  }
+} else if (url.includes("/main/dataList")) {
+  if (obj.data?.length > 0) {
+    obj.data = obj.data.filter(
+      (item) =>
+        !(item.entityTemplate === "sponsorCard" || item.title === "精选配件")
+    );
+  }
+} else if (url.includes("/main/indexV8")) {
+  if (obj.data?.length > 0) {
+    obj.data = obj.data.filter(
+      (item) =>
+        !(
+          item.entityTemplate === "sponsorCard" ||
+          item.entityId === 8639 ||
+          item.entityId === 29349 ||
+          item.entityId === 33006 ||
+          item.entityId === 32557 ||
+          item.title.includes("值得买") ||
+          item.title.includes("红包")
+        )
+    );
+  }
+} else if (url.includes("/main/init")) {
+  if (obj.data?.length > 0) {
+    obj.data = obj.data.filter(
+      (item) => ![944, 945, 6390].includes(item?.entityId)
+    );
+  }
+} else if (url.includes("/page/dataList")) {
+  if (obj.data?.length > 0) {
+    obj.data = obj.data.filter((item) => !(item.title === "酷安热搜"));
+  }
+}
+
+$done({ body: JSON.stringify(obj) });
