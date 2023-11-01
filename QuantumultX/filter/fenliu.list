@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/fenliu.list
 #!tg-group：https://t.me/lanjieguanggao
-#!date：2023.10.29 13:24:00
+#!date：2023-11-01 18:24:00
 #!support：约9392行
 #!proxy-select：reject
 #############################################
@@ -327,7 +327,8 @@ host, lc.map.baidu.com, reject
 IP-CIDR, 180.76.76.200/32, reject
 
 # > 哔哩哔哩
-;host-suffix, cm.bilibili.com, reject
+HOST, mall.bilibili.com, REJECT
+HOST, passport.bilibili.com, REJECT
 host-keyword, api.sobot.com, reject
 host-suffix, cm.ad.bilibili.com, reject
 host-suffix, cm.adcommon.bilibili.com, reject

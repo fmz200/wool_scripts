@@ -21,7 +21,7 @@ $done({body: responseBody});
 function process(url, data) {
   let responseData = JSON.parse(data);
 
-  // 1、图片无水印
+  // 1、评论区图片画质增强
   // https://edith.xiaohongshu.com/api/sns/v5/note/comment/list url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaohongshu/xiaohongshu.js
   if (url.includes(targetUrl01)) {
     processComments(responseData.data.comments);
