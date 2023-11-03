@@ -967,6 +967,7 @@ host-suffix, v.gdt.qq.com, reject
 # > soul
 host, soul-ad.soulapp.cn, reject
 host, ad-r.soulapp.cn, reject
+host-suffix, cdn.soulapp.cn, reject
 
 # > Snapchat
 host, ads.snapchat.com, reject

@@ -1,43 +1,38 @@
-/**
+/*******************************
  * @author fmz200
- * @function 小红书
- * @date 2023-11-01 11:50:13
- */
+ * @date 2023-11-03 20:50:13
+ * @function 小红书画质增强：加载2K分辨率的图片
 
-const targetUrl01 = 'api/sns/v5/note/comment/list';
+[rewrite_local]
+https:\/\/edith\.xiaohongshu\.com\/api\/sns\/(v1\/localfeed|v2\/note\/widgets|v2\/note\/feed|v5\/note\/comment\/list|v6\/homefeed) url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaohongshu/xiaohongshu.js
 
-let requestUrl = $request.url;
+[mitm]
+hostname = edith.xiaohongshu.com
+
+*******************************/
+
+let url = $request.url;
 let responseBody = $response.body;
 
 try {
-  responseBody = process(requestUrl, responseBody);
+  process();
 } catch (error) {
-  console.log('脚本运行出现错误，部分广告未去除⚠️');
+  console.log('脚本运行出现错误，部分内容未生效⚠️');
   console.log('错误信息：' + error.message);
 }
 
 $done({body: responseBody});
 
-function process(url, data) {
-  let responseData = JSON.parse(data);
+function process() {
+  let newNumber = 2160;
+  responseBody = JSON.stringify(responseBody);
 
-  // 1、评论区图片画质增强
-  // https://edith.xiaohongshu.com/api/sns/v5/note/comment/list url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaohongshu/xiaohongshu.js
-  if (url.includes(targetUrl01)) {
-    processComments(responseData.data.comments);
-    console.log('评论区图片添加无水印地址💕');
-  }
+  const regex1 = /imageView2\/2\/w\/\d+\/format/g;
+  responseBody = responseBody.replace(regex1, `imageView2/2/w/${newNumber}/format`);
 
-  return JSON.stringify(responseData);
-}
+  const regex2 = /imageView2\/2\/h\/\d+\/format/g;
+  responseBody = responseBody.replace(regex2, `imageView2/2/h/${newNumber}/format`);
 
-function processComments(comments) {
-  comments.forEach(comment => {
-    if (comment.pictures) {
-      comment.pictures.forEach(picture => {
-        picture.origin_url = picture.origin_url + '?imageView2/2/w/2160/format/octet-stream';
-        picture.file_id = picture.file_id + '?imageView2/2/w/2160/format/octet-stream';
-      });
-    }
-  });
+  console.log('图片画质增强完成完成✅');
+  responseBody = JSON.parse(responseBody);
 }

@@ -2175,8 +2175,6 @@ https://b.appsimg.com/upload/momin/ url reject
 
 # > 小红书
 # hostname = edith.xiaohongshu.com, www.xiaohongshu.com, referee.xiaohongshu.com, pages.xiaohongshu.com
-# 评论区图片画质增强
-https://edith.xiaohongshu.com/api/sns/v5/note/comment/list url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaohongshu/xiaohongshu.js
 # > 视频播放页商品推广
 ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/note\/widgets url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaohongshu/xiaohongshu_json.js
 # > 短视频流去水印+强制开启保存功能
@@ -2209,6 +2207,8 @@ https://edith.xiaohongshu.com/api/sns/v5/note/comment/list url script-response-b
 ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/user\/teenager\/status url reject-dict
 # > 启动引导
 ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/guide\/home_guide url reject-dict
+# 画质增强：加载2K分辨率的图片
+https:\/\/edith\.xiaohongshu\.com\/api\/sns\/(v1\/localfeed|v2\/note\/widgets|v2\/note\/feed|v5\/note\/comment\/list|v6\/homefeed) url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaohongshu/xiaohongshu_json.js
 
 # > 喜马拉雅
 # 首页顶部去除直播
