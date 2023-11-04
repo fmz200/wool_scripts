@@ -2174,41 +2174,28 @@ https://b.appsimg.com/upload/momin/ url reject
 ^https?:\/\/.+?\.(pipi|fuli|xiang(jiao|xiang))apps\.com\/(ucp\/index|getGlobalData|(\/|)vod\/reqplay\/) url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/xjsp.js
 
 # > 小红书
-# hostname = edith.xiaohongshu.com, www.xiaohongshu.com, referee.xiaohongshu.com, pages.xiaohongshu.com
-# > 视频播放页商品推广
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/note\/widgets url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaohongshu/xiaohongshu_json.js
-# > 短视频流去水印+强制开启保存功能
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/note\/redtube\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaohongshu/xiaohongshu_json.js
-# > 信息流视频去水印+强制开启保存功能
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/note\/videofeed\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaohongshu/xiaohongshu_json.js
-# > 信息流图片去水印
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/note\/feed\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaohongshu/xiaohongshu_json.js
-# > 开屏广告
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/splash_config url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaohongshu/xiaohongshu_json.js
-# > 首页瀑布流
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/homefeed\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaohongshu/xiaohongshu_json.js
-# > 启动处理
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/config\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaohongshu/xiaohongshu_json.js
-# > 热搜发现
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/hot_list url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaohongshu/xiaohongshu_json.js
-# > 默认填词
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/hint url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaohongshu/xiaohongshu_json.js
-# > 去除购物
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/homefeed\/categories url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaohongshu/xiaohongshu_json.js
-# > 猜你想搜
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/trending url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaohongshu/xiaohongshu_json.js
-# > 通用广告请求
-^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d\/(tag\/)?ads url reject-dict
-# > 隐私屏蔽
-^https?:\/\/referee\.xiaohongshu\.com\/v\d\/stateReport url reject-dict
-# > Switches
-^https?:\/\/pages\.xiaohongshu\.com\/data\/native\/matrix_switches url reject-dict
-# > 青少年请求
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/user\/teenager\/status url reject-dict
-# > 启动引导
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/guide\/home_guide url reject-dict
+# hostname = edith.xiaohongshu.com, www.xiaohongshu.com
+# 惊喜弹窗
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/surprisebox\/(get_style|open|submit_action) url reject-dict
+^https:\/\/www\.xiaohongshu\.com\/api\/marketing\/box\/trigger\? url reject-dict
+# 详情页,小部件
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/note\/widgets url script-response-body https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu_.js
+# 搜索页
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/search\/(banner|hot)_list url script-response-body https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu_.js
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/search\/(hint|trending)\? url script-response-body https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu_.js
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v10\/search\/notes\? url script-response-body https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu_.js
+# 开屏广告
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/system_service\/config\? url script-response-body https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu_.js
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config$ url script-response-body https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu_.js
+# 图片水印,视频水印
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/(v2\/note\/feed|v3\/note\/videofeed)\? url script-response-body https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu_.js
+# 信息流
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v3\/note\/guide\? url reject-dict
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/followfeed\? url script-response-body https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu_.js
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v6\/homefeed\? url script-response-body https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu_.js
+^https:\/\/www\.xiaohongshu\.com\/api\/sns\/v1\/ads\/resource\? url reject-dict
 # 画质增强：加载2K分辨率的图片
-https:\/\/edith\.xiaohongshu\.com\/api\/sns\/(v1\/localfeed|v2\/note\/widgets|v2\/note\/feed|v5\/note\/comment\/list|v6\/homefeed) url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaohongshu/xiaohongshu_json.js
+https:\/\/edith\.xiaohongshu\.com\/api\/sns\/(v1\/localfeed|v4\/node\/user\/posted|v5\/note\/comment\/list) url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaohongshu/xiaohongshu_.js
 
 # > 喜马拉雅
 # 首页顶部去除直播
