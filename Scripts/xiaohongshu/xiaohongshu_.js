@@ -151,4 +151,4 @@ const regex2 = /imageView2\/2\/h\/\d+\/format/g;
 obj = obj.replace(regex2, `imageView2/2/h/2160/format`);
 console.log('图片画质增强完成✅');
 
-$done({body: JSON.parse(obj)});
+$done({body: obj});
