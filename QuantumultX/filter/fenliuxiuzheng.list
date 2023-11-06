@@ -4,9 +4,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/fenliuxiuzheng.list
-#!tg-group：https://t.me/lanjieguanggao
-#!date：2023.08.24 10:30
-#!proxy-select：direct
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2023-11-06 21:30:00
+#!proxy-select=direct
 #############################################
 # > "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # > "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -26,6 +26,10 @@ host, ad.12306.cn, direct
 # >>>>>>>>>>>>>>> ✅ A ✅ <<<<<<<<<<<<<<
 # > anti-ad
 host-keyword, anti-ad.net, direct
+
+# > Alibaba
+host,log.mmstat.com, direct
+host,sycm.mmstat.com, direct
 
 # > 爱影视
 host,static.jssp.tv, direct
@@ -93,10 +97,32 @@ host-keyword, ess.apple.com, direct
 # > 苹果app store
 host, itunes.apple.com, direct
 
+
+
 # >>>>>>>>>>>>>>> ✅ Q ✅ <<<<<<<<<<<<<<
 # > QQ空间
 host-keyword, ctc.qzs.qzone.qq.com, direct
 
+
+# >>>>>>>>>>>>>>> ✅ S ✅ <<<<<<<<<<<<<<
+# > Strava
+host,analytics.strava.com, direct
+
+
+
+# >>>>>>>>>>>>>>> ✅ T ✅ <<<<<<<<<<<<<<
+# > Tencent
+host,fairplay.l.qq.com, direct
+host,livew.l.qq.com, direct
+host,vd.l.qq.com, direct
+host,vi.l.qq.com, direct
+
+
+
+# >>>>>>>>>>>>>>> ✅ U ✅ <<<<<<<<<<<<<<
+# > Umeng
+host,msg.umeng.com, direct
+host,msg.umengcloud.com, direct
 
 
 
