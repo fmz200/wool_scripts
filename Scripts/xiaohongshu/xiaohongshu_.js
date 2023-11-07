@@ -141,17 +141,14 @@ if (url.includes("/v1/search/banner_list")) {
   }
 }
 
-// 小红书画质增强：加载2K分辨率的图片，若要开启请设置环境变量为true
-const improved = $prefs.valueForKey('fmz200.xiaohongshu.imagesImproved');
-if (improved == "true") {
-  console.log('图片画质增强开始♻️');
-  obj = JSON.stringify(obj);
-  const regex1 = /imageView2\/2\/w\/\d+\/format/g;
-  obj = obj.replace(regex1, `imageView2/2/w/2160/format`);
+// 小红书画质增强：加载2K分辨率的图片
+console.log('图片画质增强开始♻️');
+obj = JSON.stringify(obj);
+const regex1 = /imageView2\/2\/w\/\d+\/format/g;
+obj = obj.replace(regex1, `imageView2/2/w/2160/format`);
 
-  const regex2 = /imageView2\/2\/h\/\d+\/format/g;
-  obj = obj.replace(regex2, `imageView2/2/h/2160/format`);
-  console.log('图片画质增强完成✅');
-}
+const regex2 = /imageView2\/2\/h\/\d+\/format/g;
+obj = obj.replace(regex2, `imageView2/2/h/2160/format`);
+console.log('图片画质增强完成✅');
 
 $done({body: obj});

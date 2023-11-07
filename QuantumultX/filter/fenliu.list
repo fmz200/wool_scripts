@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/fenliu.list
 #!tg-group：https://t.me/lanjieguanggao
-#!date：2023-11-01 18:24:00
+#!date：2023-11-07 19:24:00
 #!support：约9392行
 #!proxy-select：reject
 #############################################
@@ -7381,7 +7381,6 @@ host-suffix, pp9899.com, reject
 host-suffix, ppjia55.com, reject
 host-suffix, ppoi.org, reject
 host-suffix, ppurifier.game.xiaomi.com, reject
-host-suffix, ppx.hgo7r.cn, reject
 host-suffix, pr.atwola.com, reject
 host-suffix, pr.da.netease.com, reject
 host-suffix, pr.ybp.yahoo.com, reject
