@@ -51,7 +51,7 @@ http-request https:\/\/wq\.jd\.com\/user_new\/info\/GetJDUserInfoUnion tag=多�
 
 # barrymchen  (m.ctrp.com,*.ctrp.com,m.elong.com,activity.m.duiba.com.cn,activity.m.duiba.com.cn,icbc1.wlphp.com:8444,cn.exflux.io,api.m.jd.com,daojia.jd.com，api.m.jd.com, ms.jr.id.com，wx.17u.cn)
 
-# photonmang （api.tuhu.cn）
+# globalTools （api.tuhu.cn）
 
 # yangtingxiao （operation-api.jimistore.com）
 

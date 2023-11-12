@@ -213,8 +213,8 @@ cron "22 16 0 * * *" script-path=https://raw.githubusercontent.com/XidNDD/2020sc
 # mw418  https://github.com/mw418/QuantumultX
 cron "5 8 * * *" script-path=https://raw.githubusercontent.com/mw418/QuantumultX/master/setu.js, enable=false, tag=每日色图
 
-# photonmang  https://github.com/photonmang/quantumultX
-cron "10 0 8 * * *" script-path=https://raw.githubusercontent.com/photonmang/quantumultX/master/tuhu/tuhu.js, enable=false, tag=途虎养车
+# globalTools  https://github.com/globalTools/quantumultX
+cron "10 0 8 * * *" script-path=https://raw.githubusercontent.com/globalTools/quantumultX/master/tuhu/tuhu.js, enable=false, tag=途虎养车
 
 # whyour
 cron "5 9 * * *" script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/daymatter.js, enable=false, tag=倒数日
