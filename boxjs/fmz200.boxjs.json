@@ -664,27 +664,17 @@
       "id": "macat_signin",
       "name": "macat.vip网站签到",
       "keys": [
-        "fmz200.macat_username",
-        "fmz200.macat_password"
+        "fmz200.macat_loginBody"
       ],
       "settings": [
         {
-          "id": "fmz200.macat_username",
-          "name": "登录用户名",
+          "id": "fmz200.macat_loginBody",
+          "name": "登录网站的body",
           "val": "",
           "desc": "",
           "type": "textarea",
-          "autoGrow": false,
-          "rows": 1
-        },
-        {
-          "id": "fmz200.macat_password",
-          "name": "登录密码",
-          "val": "",
-          "desc": "",
-          "type": "textarea",
-          "autoGrow": false,
-          "rows": 1
+          "autoGrow": true,
+          "rows": 2
         }
       ],
       "author": "@fmz200",
