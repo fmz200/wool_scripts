@@ -17,6 +17,6 @@
     "0 8 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/oil_price.js, tag=今日油价, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/oil.png, enabled=true",
     "2 8 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/freeAppsToday.js, tag=今日限免APP, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/AppStore.png, enabled=true",
     "22 7 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/macat/macat_signin.js, tag=马克喵签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/macat.png, enabled=true",
-    "40 8 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ccbLifeSignIn.js, tag=建行生活签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ccbLife.jpg, enabled=true"
+    "40 8 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ccbLife/ccbLifeSignIn.js, tag=建行生活签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ccbLife.jpg, enabled=true"
   ]
 }

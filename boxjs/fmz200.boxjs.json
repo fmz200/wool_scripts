@@ -772,7 +772,7 @@
       "scripts": [
         {
           "name": "建行生活签到",
-          "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ccbLifeSignIn.js"
+          "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ccbLife/ccbLifeSignIn.js"
         }
       ],
       "icons": [

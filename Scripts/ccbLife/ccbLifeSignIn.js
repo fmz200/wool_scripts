@@ -7,10 +7,10 @@
  3.圈x开抓包手动签到一次，然后关闭抓包搜https://yunbusiness.ccb.com/clp_coupon/txCtrl?txcode=A3341A040，把请求体内容全部复制到url.body='{复制到这个里面}' 然后保存到本地就可以了
  4.关闭Cookie脚本
  [rewrite_local]
- ^https:\/\/yunbusiness\.ccb\.com\/clp_coupon\/txCtrl\?txcode\=A3341A040 url script-request-header https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ccbLifeCookie.js
+ ^https:\/\/yunbusiness\.ccb\.com\/clp_coupon\/txCtrl\?txcode\=A3341A040 url script-request-header https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ccbLife/ccbLifeCookie.js
 
  [task_local]
- 40 8 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ccbLifeSignIn.js, tag=建行生活签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ccbLife.jpg, enabled=true
+ 40 8 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ccbLife/ccbLifeSignIn.js, tag=建行生活签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ccbLife.jpg, enabled=true
  [MITM]
  hostname = yunbusiness.ccb.com
  *****************************************/
