@@ -1,12 +1,8 @@
-/*
- * 自动加入TestFlight
- *
- * QL_AutoJoinTestFlight.js
- * 环境变量：TF_APP_ID，TF_KEY，session_id，session_digest，request_id
- * 参考脚本：
- * https://github.com/DecoAri/JavaScript/blob/main/Surge/Auto_join_TF.js
- * https://github.com/chouchoui/QuanX/blob/master/Scripts/testflight/Auto_join_TF.js
- */
+// 自动加入TestFlight
+// 2023-11-12 12:05:00
+// QL_AutoJoinTestFlight.js
+// 环境变量:TF_APP_ID，TF_KEY，session_id，session_digest，request_id
+// cron */3 * * * * *
 
 const $ = new Env('自动加入TestFlight');
 const notify = $.isNode() ? require('./sendNotify') : '';
