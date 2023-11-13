@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 去除Soul的部分广告
- * @date 2023-10-29 22:50:13
+ * @date 2023-11-13 22:50:13
  */
 
 const targetUrl01 = 'ssp.soulapp.cn/api/q';
@@ -32,9 +32,9 @@ function removeAds(url, data) {
   // 2、青少年模式弹窗
   // https://api-account.soulapp.cn/teenager/config url script-response-body soul_ads.js
   if (url.includes(targetUrl02)) {
-    responseData.data = {};
-    // responseData.data.isTeenageModeSquare = false;
-    // responseData.data.isPopTeenWindow = false;
+    // responseData.data = {};
+    responseData.data.isTeenageModeSquare = false;
+    responseData.data.isPopTeenWindow = false;
     console.log('去除青少年模式弹窗💕');
   }
 
