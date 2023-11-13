@@ -1,6 +1,6 @@
 {
   "name": "fmz200图标订阅",
-  "description": "收集一些自己常用的图标，尺寸为108px，144px，数量约1492个",
+  "description": "收集一些自己常用的图标，尺寸为108px或144px，数量约1499个，更新日期：2023-11-13 19:20:00",
   "icons": [
     {
       "name": "fmz200",
@@ -707,6 +707,10 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/SydneyOperaHouse.png"
     },
     {
+      "name": "Snapchat",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Snapchat.png"
+    },
+    {
       "name": "taipei101",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/taipei101.png"
     },
@@ -1013,6 +1017,10 @@
     {
       "name": "wireguard",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/wireguard.png"
+    },
+    {
+      "name": "wangzherongyao",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/wangzherongyao.png"
     },
     {
       "name": "xbox",
