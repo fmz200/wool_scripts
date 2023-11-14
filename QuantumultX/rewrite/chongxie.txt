@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/chongxie.txt
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2023-11-13 19:20:00
+#!date=2023-11-14 20:57:00
 #!support=约542款app
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
@@ -1524,8 +1524,9 @@ https://api.rr.tv/storage/business/rootName/app/homePage\?dataType=JSON url reje
 
 # > Soul
 # hostname = 47.99.42.29, 47.97.215.55, 120.27.235.201, ssp.soulapp.cn, api-account.soulapp.cn, 多MITM几个IP去广告
-^https://api-account.soulapp.cn/teenager/config url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js
 ^https:\/\/ssp\.soulapp\.cn\/api\/q url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js
+# 青少年模式弹窗暂时去不掉
+;^https://api-account.soulapp.cn/teenager/config url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js
 
 # > Stay
 ^https?:\/\/api\.shenyin\.name\/stay-fork\/browse\/featured$ url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/stay.js
