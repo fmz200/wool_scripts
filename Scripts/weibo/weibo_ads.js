@@ -76,7 +76,6 @@ function modifyMain(url, data) {
     console.log('移除finder_channel模块💕💕');
     if (payload.items[index + 2].data?.more_pic?.includes('ads')) {
       delete payload.items[index + 2].data.more_pic;
-      // payload.items[index + 2].data.more_pic = getRandomWeiboPic();
     }
     payload.items[index + 2].data.group = removeFinderChannelAds(payload.items[index + 2].data.group);
 
@@ -86,7 +85,6 @@ function modifyMain(url, data) {
     // 1.5、背景图广告
     if (payload.loadedInfo?.headerBack) {
       delete payload.loadedInfo.headerBack;
-      // processChannelStyleMap(payload.loadedInfo.headerBack.channelStyleMap);
     }
 
     return JSON.stringify(resp_data);
@@ -110,7 +108,6 @@ function modifyMain(url, data) {
     console.log('移除finder_channel模块💕💕');
     if (resp_data.items[index + 2].data?.more_pic?.includes('ads')) {
       delete resp_data.items[index + 2].data.more_pic;
-      // resp_data.items[index + 2].data.more_pic = getRandomWeiboPic();
     }
     resp_data.items[index + 2].data.group = removeFinderChannelAds(resp_data.items[index + 2].data.group);
 
@@ -120,7 +117,6 @@ function modifyMain(url, data) {
     // 2.5、背景图广告
     if (resp_data.loadedInfo?.headerBack) {
       delete resp_data.loadedInfo.headerBack;
-      // processChannelStyleMap(resp_data.loadedInfo.headerBack.channelStyleMap);
     }
     return JSON.stringify(resp_data);
   }
@@ -164,7 +160,7 @@ function modifyMain(url, data) {
 function removeHotSearchAds(groups) {
   if (!groups) return;
   console.log('移除发现页热搜广告开始💕');
-  const newGroups = groups.filter(group => !(group.item_log?.adid));
+  const newGroups = groups.filter(group => !(group.itemid?.includes("is_ad_pos") || group.promotion));
   console.log('移除发现页热搜广告结束💕💕');
   return newGroups;
 }
@@ -175,8 +171,7 @@ function removeFinderChannelAds(groups) {
   console.log('移除发现页finder_channel广告开始💕');
   const newGroups = [];
   for (const group of groups) {
-    if (group.hasOwnProperty('pic') && group.pic.includes('ads')) {
-      // https://h5.sinaimg.cn/upload/100/972/2022/06/13/timeline_location_default.png
+    if (group.pic?.includes('ads')) {
       group.pic = titleSubPicMap[group.title_sub] || "https://simg.s.weibo.com/20200915_huodong.png";
     }
     newGroups.push(group);
@@ -208,7 +203,7 @@ function swapObjectsInArray(array, index1, index2) {
   array[index1] = array[index2];
   array[index2] = temp;
 
-  array[index2].type = "20";
+  array[index2].type = array[index1].type;
   array[index2].apipath = "statuses/container_timeline_unread";
   delete array[index2].navigation_title;
   console.log('交换tab页顺序结束💕💕');
