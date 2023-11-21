@@ -11,12 +11,6 @@ const url5 = '/statuses/container_timeline_topicpage'; // 微博超话页面
 const url6 = '/statuses/extend'; // 微博详情页面广告
 const url7 = '/groups/allgroups/v2' // 微博首页Tab标签页
 
-const weiboPic = [
-  "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo-01.png",
-  "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo-27.png",
-  "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo-30.png",
-  "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo-32.png"
-];
 const titleSubPicMap = {
   '电影': 'https://simg.s.weibo.com/imgtool/20221207_dianying.png',
   '热议': 'https://simg.s.weibo.com/20220402_hottopic-icon.png',
@@ -209,7 +203,3 @@ function swapObjectsInArray(array, index1, index2) {
   console.log('交换tab页顺序结束💕💕');
 }
 
-function getRandomWeiboPic() {
-  const randomIndex = Math.floor(Math.random() * weiboPic.length);
-  return weiboPic[randomIndex];
-}
