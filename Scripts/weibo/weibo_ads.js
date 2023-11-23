@@ -71,7 +71,9 @@ function modifyMain(url, data) {
     if (payload.items[index + 2].data?.more_pic?.includes('ads')) {
       delete payload.items[index + 2].data.more_pic;
     }
-    payload.items[index + 2].data.group = removeFinderChannelAds(payload.items[index + 2]?.data?.group);
+    if (payload.items[index + 2]?.data?.group) {
+      payload.items[index + 2].data.group = removeFinderChannelAds(payload.items[index + 2]?.data?.group);
+    }
 
     // 1.4、items[i].category = "feed" 是热门微博的部分
     payload.items = removeCategoryFeedAds(payload.items);
