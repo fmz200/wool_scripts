@@ -1,5 +1,6 @@
 /**
  * author:fmz200
+ * @function 微博去广告
  * date:2023-11-23 22:23:00
  */
 
@@ -105,7 +106,9 @@ function modifyMain(url, data) {
     if (resp_data.items[index + 2].data?.more_pic?.includes('ads')) {
       delete resp_data.items[index + 2].data.more_pic;
     }
-    resp_data.items[index + 2].data.group = removeFinderChannelAds(resp_data.items[index + 2].data.group);
+    if (resp_data.items[index + 2]?.data?.group) {
+      resp_data.items[index + 2].data.group = removeFinderChannelAds(resp_data.items[index + 2].data.group);
+    }
 
     // 2.4、items[i].category = "feed" 是热门微博的部分
     resp_data.items = removeCategoryFeedAds(resp_data.items);
@@ -164,7 +167,7 @@ function removeHotSearchAds(groups) {
 // 移除“微博热搜”下面的“热聊，本地等”的广告
 function removeFinderChannelAds(groups) {
   if (!groups) return;
-  console.log('移除发现页finder_channel广告开始💕');
+  console.log('移除发现页热聊，本地广告开始💕');
   const newGroups = [];
   for (const group of groups) {
     if (group.pic?.includes('ads')) {
@@ -172,7 +175,7 @@ function removeFinderChannelAds(groups) {
     }
     newGroups.push(group);
   }
-  console.log('移除发现页finder_channel广告结束💕💕');
+  console.log('移除发现页热聊，本地广告结束💕💕');
   return newGroups;
 }
 
