@@ -1,6 +1,6 @@
 /**
  * author:fmz200
- * date:2023-11-19 10:13:00
+ * date:2023-11-23 22:23:00
  */
 
 const url1 = '/search/finder';
@@ -67,11 +67,11 @@ function modifyMain(url, data) {
     payload.items[index + 1] = {};
 
     // 1.3、下标为3的是热议模块
-    console.log('移除finder_channel模块💕💕');
+    console.log('移除热议热聊模块💕💕');
     if (payload.items[index + 2].data?.more_pic?.includes('ads')) {
       delete payload.items[index + 2].data.more_pic;
     }
-    payload.items[index + 2].data.group = removeFinderChannelAds(payload.items[index + 2].data.group);
+    payload.items[index + 2].data.group = removeFinderChannelAds(payload.items[index + 2]?.data?.group);
 
     // 1.4、items[i].category = "feed" 是热门微博的部分
     payload.items = removeCategoryFeedAds(payload.items);
