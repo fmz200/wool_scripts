@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/fenliu.list
 #!tg-group：https://t.me/lanjieguanggao
-#!date：2023-11-07 19:24:00
+#!date：2023-11-25 21:24:00
 #!support：约9392行
 #!proxy-select：reject
 #############################################
@@ -17,6 +17,18 @@
 # 1.2.3.4/24      /24表示网络的子网掩码长度，即前24位是网络部分，后8位是主机部分。这种表示法常用于描述特定范围内的IP地址
 # 6.7.8.9/32      /32表示整个32位的IP地址都用于表示这一个地址，即单独的一个IP地址
 #############################################
+
+
+# >>>>>>>>>>>>>>> ✅ # ✅ <<<<<<<<<<<<<<
+# 广告联盟
+HOST-SUFFIX, miaozhen.com, REJECT
+HOST-KEYWORD, -ad-sign.byteimg.com, REJECT
+HOST-KEYWORD, -tos.pstatp.com, REJECT
+HOST-KEYWORD, asiad.byteactivity, REJECT
+HOST-KEYWORD, pangolin-sdk-toutiao, REJECT
+HOST-KEYWORD, pangolin.snssdk.com, REJECT
+HOST-KEYWORD, pglstatp-toutiao, REJECT
+HOST-KEYWORD, video-cn.snssdk.com, REJECT
 
 
 # >>>>>>>>>>>>>>> ✅ 0 ✅ <<<<<<<<<<<<<<
@@ -412,7 +424,6 @@ host-keyword, apimg.qunliao.info, reject
 
 # > 抖音
 host-keyword, bds.snssdk.com, reject
-host-keyword, p6-ad-sign.byteimg.com, reject
 host-keyword, p3.pstatp.com, reject
 
 # > 多多视频
@@ -425,8 +436,7 @@ host, track.tiara.kakao.com, reject
 # > 朵朵校友圈 微信小程序去广告
 host-suffix, ad.duoduo.link, reject
 
-# > 盯盯拍
-host, pglstatp-toutiao.com, reject
+# > 盯盯拍 广告联盟已包含
 
 
 
@@ -436,8 +446,6 @@ host, pglstatp-toutiao.com, reject
 
 # >>>>>>>>>>>>>>> ✅ F ✅ <<<<<<<<<<<<<<
 # > 番茄小说
-host, p6-ad-sign.byteimg.com, REJECT
-host, p9-ad-sign.byteimg.com, REJECT
 host-suffix, byteimg.com, DIRECT
 host, i.snssdk.com, REJECT
 host, i-lq.snssdk.com, REJECT
@@ -456,8 +464,6 @@ host, *default.ixigua.com, REJECT
 host, msync-im1-vip6-std.easemob.com, REJECT
 host, apd-pcdnwxlogin.teg.tencent-cloud.net, REJECT
 host, api.iegadp.qq.com, REJECT
-host, sf3-ttcdn-tos.pstatp.com, REJECT
-host-suffix, pglstatp-toutiao.com, REJECT
 host-suffix, byteorge.com, REJECT
 host-suffix, bytegoofy.com, REJECT
 host-suffix, bytedance.com, REJECT
@@ -612,12 +618,8 @@ host-keyword, s3.pstatp.com, reject
 host-keyword, a3.pstatp.com, reject
 host-keyword, a3.bytecdn.cn, reject
 ;host-keyword, ichannel.snssdk.com, reject
-host-suffix, pangolin-sdk-toutiao.com, reject
-host-suffix, pangolin-sdk-toutiao-b.com, reject
-host-suffix, api-access.pangolin-sdk-toutiao-b.com, reject
 host, ad.toutiao.com, reject
 host, dsp.toutiao.com, reject
-host-keyword, pangolin.snssdk.com, reject
 
 # > 京东
 host-suffix, jzt.jd.com, reject
@@ -737,8 +739,7 @@ host-suffix, webstat.kuwo.cn, reject
 host-suffix, mobilead.kuwo.cn, reject
 host-suffix, rich.kuwo.cn, reject
 
-# > 酷安
-;host-keyword, p6-be-pack-sign.pglstatp-toutiao.com, reject
+# > 酷安 广告联盟已包含
 
 
 
@@ -901,7 +902,6 @@ host-keyword, api-access.pangolin-sdk-toutiao.com, reject
 ;host-keyword, api.ribaoapi.com, reject
 ;host-keyword, apps.bytesfield.com, reject
 ;host-keyword, bytesmanager.com, reject
-;host-keyword, pglstatp-toutiao.com, reject
 ;host-keyword, mssdk-bu.bytedance.com, reject
 ;host-keyword, 365yg.com, reject
 ;host-keyword, ppx.byteimg.com, reject
@@ -923,7 +923,6 @@ host, ad-cdn.qingting.fm, reject
 host, cdn-new-ad.wtzw.com, REJECT
 host, a-remad.qm989.com, REJECT
 host, mobads.baidu.com, REJECT
-host-suffix, pglstatp-toutiao.com, REJECT
 host-suffix, gdt.qq.com, REJECT
 host, qzs.gdtimg.com, REJECT
 host, mobads-pre-config.cdn.bcebos.com, REJECT
@@ -1217,12 +1216,10 @@ host-keyword, clickc.admaster.com, reject
 host-keyword, count.atm.youku.com, reject
 host-keyword, ems.youku.com, reject
 host-keyword, fans.m.tmall.com, reject
-host-keyword, ktd.m.cn.miaozhen.com, reject
 host-keyword, r1.ykimg.com, reject
 host-keyword, v.admaster.com, reject
 host-keyword, v2.reachmax.cn, reject
 host-keyword, val.atm.youku.com, reject
-host-keyword, yktd.m.cn.miaozhen.com, reject
 host-keyword, server.m.pp.cn, reject
 host-keyword, puds.ucweb.com, reject
 host-keyword, wgo.mmstat.com, reject
@@ -1271,12 +1268,10 @@ host-suffix, clickc.admaster.com.cn, reject
 host-suffix, count.atm.youku.com, reject
 host-suffix, ems.youku.com, reject
 host-suffix, fans.m.tmall.com, reject
-host-suffix, ktd.m.cn.miaozhen.com, reject
 host-suffix, r1.ykimg.com, reject
 host-suffix, v.admaster.com.cn, reject
 host-suffix, v2.reachmax.cn, reject
 host-suffix, val.atm.youku.com, reject
-host-suffix, yktd.m.cn.miaozhen.com, reject
 host-suffix, server.m.pp.cn, reject
 host-suffix, puds.ucweb.com, reject
 host-suffix, wgo.mmstat.com, reject
@@ -1355,9 +1350,6 @@ host-keyword, paradisestatic.vivo.com.cn, reject
 # >>>>>>>>>>>>>>> ✅ W ✅ <<<<<<<<<<<<<<
 # > 万能钥匙专业版 感谢#All in 梭哈分享
 host-suffix, mi.gdt.qq.com, reject
-host-suffix, p9-be-pack-sign.pglstatp-toutiao.com, reject
-host-suffix, p6-be-pack-sign.pglstatp-toutiao.com, reject
-host-suffix, p3-be-pack-sign.pglstatp-toutiao.com, reject
 
 # > 微博
 host-keyword, fastimage.uve.weibo.com, reject
@@ -1465,18 +1457,7 @@ host-keyword, config.51y5.net, reject
 host-keyword, static.wkanx.com, reject
 host-keyword, config.y5en.com, reject
 
-# > 威锋
-host-keyword, p3-be-pack-sign.pglstatp-toutiao.com, reject
-host-keyword, sf3-be-pack.pglstatp-toutiao.com, reject
-host-keyword, sf1-be-pack.pglstatp-toutiao.com, reject
-host-keyword, sf1-fe-tos.pglstatp-toutiao.com, reject
-host-keyword, sf1-ttcdn-tos.pstatp.com, reject
-host-keyword, sf3-fe-tos.pglstatp-toutiao.com, reject
-host-keyword, sf3-ttcdn-tos.pstatp.com, reject
-host-keyword, sf6-fe-tos.pglstatp-toutiao.com, reject
-host-keyword, s3-fe-scm.pglstatp-toutiao.com, reject
-host-keyword, sf6-be-pack.pglstatp-toutiao.com, reject
-host-keyword, p9-be-pack-sign.pglstatp-toutiao.com, reject
+# > 威锋 广告联盟已包含
 
 
 
@@ -1637,9 +1618,7 @@ host-suffix, mdrecv.app.cntvwb.cn, reject
 host-suffix, sdapprecv.app.cntvwb.cn, reject
 host-suffix, vdapprecv.app.cntvwb.cn, reject
 
-# > 一刻相册
-host-keyword, sf1-be-tos.pglstatp-toutiao.com, reject
-host-keyword, sf3-fe-tos.pglstatp-toutiao.com, reject
+# > 一刻相册 广告联盟已包含
 
 
 
@@ -1690,8 +1669,7 @@ host-keyword, client-dmp.suishenyun.cn, reject
 host-keyword, pc.suishenyun.net, reject
 host-keyword, v0-client-lz.rili.cn, reject
 
-# > 招钱进宝
-host-keyword, p26-be-pack-sign.pglstatp-toutiao.com, reject
+# > 招钱进宝 广告联盟已包含
 
 # > 真不卡
 host-suffix, ttayy.cn, reject
@@ -9495,7 +9473,6 @@ host-suffix, lnk8.cn, reject
 host-suffix, localytics.com, reject
 host-suffix, measurementapi.com, reject
 host-suffix, medialytics.com, reject
-host-suffix, miaozhen.com, reject
 host-suffix, mobclix.com, reject
 host-suffix, mopub.com, reject
 host-suffix, qchannel01.cn, reject
