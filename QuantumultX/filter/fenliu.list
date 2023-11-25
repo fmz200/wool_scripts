@@ -1682,6 +1682,8 @@ host-keyword, ad-sign.byteimg.com, reject
 
 
 # >>>>>>>>>>>>>>> ✅ 其他广告 ✅ <<<<<<<<<<<<<<
+host-keyword, huichuan-mc.sm.cn, reject
+host-keyword, knockout, reject
 host-keyword, extlog.snssdk.com, reject
 ;host-keyword, is.snssdk.com, reject
 host-keyword, mobads.baidu.com, reject
@@ -10007,6 +10009,7 @@ IP-CIDR, 180.166.52.24/32, reject
 IP-CIDR, 211.161.101.106/32, reject
 IP-CIDR, 220.115.251.25/32, reject
 IP-CIDR, 222.73.156.235/32, reject
+ip-cidr, 203.107.1.1/24, reject
 
 # > 运营商劫持
 host-suffix, 189key.com, reject
