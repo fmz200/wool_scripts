@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/fenliu.list
 #!tg-group：https://t.me/lanjieguanggao
-#!date：2023-11-26 10:56:00
+#!date：2023-11-26 20:56:00
 #!support：约9392行
 #!proxy-select：reject
 #############################################
@@ -29,6 +29,8 @@ HOST-KEYWORD, pangolin-sdk-toutiao, REJECT
 HOST-KEYWORD, pangolin.snssdk.com, REJECT
 HOST-KEYWORD, pglstatp-toutiao, REJECT
 HOST-KEYWORD, video-cn.snssdk.com, REJECT
+HOST-KEYWORD, volcvod.com, REJECT
+HOST-KEYWORD, volceapplog.com, REJECT
 
 
 # >>>>>>>>>>>>>>> ✅ 0 ✅ <<<<<<<<<<<<<<
