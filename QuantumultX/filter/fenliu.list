@@ -137,8 +137,6 @@ host, f74f7f7765f8a2f6.ngaa.net.cn, reject
 host, ef-dongfeng.tanx.com, reject
 host, iqiyim.adtrack.enlightent.cn, reject
 host, dig.bdurl.net, reject
-host, ads3-normal-lq.zijieapi.com, reject
-host, ads5-normal-lq.zijieapi.com, reject
 host, t7z.cupid.iqiyi.com, reject
 host, t7z.cupid.ptqy.gitv.tv, reject
 host-suffix, cupid.iqiyi.com, reject
@@ -1678,6 +1676,7 @@ host-suffix, zhengxiaoliu.top, reject
 
 # > 字节跳动
 host, ad.zijieapi.com, reject
+host-suffix, -normal-lq.zijieapi.com, reject
 host-keyword, ad-sign.byteimg.com, reject
 
 
