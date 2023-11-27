@@ -1,7 +1,7 @@
 /**
  * 作者：fmz200，修改自dompling的ql_cookie_sync.js
  * 作用：定时同步BoxJS中的数据到青龙环境变量，每日自动同步
- * 配置：40 0 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/ql_sync.js
+ * 配置：40 0 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/qinglong/ql_sync.js
  * 定时：QX导入订阅 https://raw.githubusercontent.com/fmz200/wool_scripts/main/boxjs/fmz200_gallery.json
  * 使用：详见BoxJS页面 https://raw.githubusercontent.com/fmz200/wool_scripts/main/boxjs/fmz200.boxjs.json
  * 更新：2023-06-04 13:30
@@ -65,7 +65,7 @@ async function autoSync(key_remark) {
 
 async function getScriptUrl() {
   const response = await $.http.get({
-    url: 'https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/ql_api.js',
+    url: 'https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/qinglong/ql_api.js',
   });
   return response.body;
 }

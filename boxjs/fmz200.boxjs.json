@@ -641,7 +641,7 @@
         }
       ],
       "author": "@fmz200",
-      "repo": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/ql_sync.js",
+      "repo": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/qinglong/ql_sync.js",
       "icons": [
         "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ql.png",
         "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ql.png"
@@ -649,7 +649,7 @@
       "scripts": [
         {
           "name": "BoxJS同步到青龙",
-          "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/ql_sync.js"
+          "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/qinglong/ql_sync.js"
         }
       ],
       "descs_html": [
