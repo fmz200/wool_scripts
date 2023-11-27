@@ -1497,7 +1497,7 @@ https://access.mypikpak.com/access_controller/v1/area_accessible url reject
 ^https:\/\/facade-api\.black-unique\.com\/advertise\/v1\/get\?.* url reject-dict
 
 # > 去哒 首页开屏广告 感谢#德克萨斯分享
-^http:\/\/iqushangwang\.8quan\.com\/index\.php\/i\/index\/index url script-response-body https://raw.githubusercontent.com/LimeAroma/Script/main/Js/QuDa.js
+;^http:\/\/iqushangwang\.8quan\.com\/index\.php\/i\/index\/index url script-response-body https://raw.githubusercontent.com/LimeAroma/Script/main/Js/QuDa.js
 
 
 
