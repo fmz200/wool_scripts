@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/fmz200_weibo.snippet
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2023-10-10 22:20:00
+#!date=2023-11-27 12:36:00
 #############################################
 # > "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # > "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -18,6 +18,9 @@ hostname = api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, new.vip.weibo.cn
 
 # 似乎没用的请求
 https://api\.weibo\.cn/2/(push/active|client/addlog_batch|ad/preload) url script-request-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/privacy_protection.js
+
+# 话题按钮🔘的提示
+https://api.weibo.cn/2/!/huati/discovery_home_bottom_getdotinfo url reject
 
 # 微博移除发现页广告
 ^https?://api.weibo.cn/2/search/(finder|container_timeline|container_discover) url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
