@@ -1,0 +1,17 @@
+#!name=抖音功能增强
+#!desc=抖音去广告，解除下载限制，实现无水印高画质下载
+#!author=fmz200
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/douyin.snippet
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2023-11-27 20:36:00
+#############################################
+
+hostname = api*.amemv.com, aweme.snssdk.com
+
+^https?:\/\/(api.*\.amemv|aweme\.snssdk)\.com\/api\/ad\/ url reject-200
+
+^https?:\/\/api.*\.amemv\.com\/aweme\/v\d\/ url 302 https://aweme.snssdk.com/aweme/v1/
+
+^https?:\/\/aweme\.snssdk\.com\/aweme\/v[12]\/((|follow\/|nearby\/)feed|aweme\/post|hot\/search\/video\/list|mix\/aweme|aweme\/detail)\/\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/douyin/douyin.js

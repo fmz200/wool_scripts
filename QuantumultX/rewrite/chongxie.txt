@@ -205,10 +205,13 @@ hostname = alt-r.my.com, ztoread.ziroom.com, m.pvp.xoyo.com, adapi.izuiyou.com, 
 
 
 # >>>>>>>>>>>>>>> ✅ B ✅ <<<<<<<<<<<<<<
-# > 半月谈 开屏广告
-^https?:\/\/www\.banyuetanapp\.com\/byt-api\/ad\/getAdvertList\?adSpaceId=100000002  url reject-200
+# > 半月谈
+# hostname = www.banyuetanapp.com
+# 开屏广告
+^https?:\/\/www\.banyuetanapp\.com\/byt-api\/ad\/getAdvertList\?adSpaceId=100000002 url reject-200
 
 # > 宝宝树孕育
+# hostname = aimg.babytreeimg.com, plough.babytree.com, mapiweb.babytree.com, go.babytree.com
 ^https?:\/\/aimg\.babytreeimg\.com\/group1\/M00\/*\/*\/.*.jpg url reject-200
 # 开屏广告 @alist.choc.ga分享
 ^https?:\/\/plough\.babytree\.com\/plough\.do url reject-200
@@ -218,24 +221,27 @@ hostname = alt-r.my.com, ztoread.ziroom.com, m.pvp.xoyo.com, adapi.izuiyou.com, 
 ^http:\/\/go\.babytree\.com\/go_tool\/api\/feeding_record\/get_home_banner_info url reject-dict
 
 # > 北京银行
+# hostname = cdnmobibank.bankofbeijing.com.cn
 ^https?:\/\/cdnmobibank\.bankofbeijing\.com\.cn\/cdn\/MarketingCloud\/.+\/.+\/99_1\/.+\.jpg url reject-200
 # > 掌上京彩
+# hostname = cdn-xyk-app.bankofbeijing.com.cn
 ^https?:\/\/cdn-xyk-app\.bankofbeijing\.com\.cn\/cdn\/resource\/image\/advertise url reject-200
 
 # > 百度
-^https?:\/\/fcvbjbcebos.baidu.com\/.+.mp4 url reject
-^https?:\/\/cover.baidu.com\/cover\/page\/dspSwitchAds\/ url reject
-^https?:\/\/baichuan.baidu.com\/rs\/adpmobile\/launch url reject
+# hostname = www.baidu.com, fcvbjbcebos.baidu.com, cover.baidu.com, baichuan.baidu.com, api*.tuisong.baidu.com, afd.baidu.com, mobads.baidu.com, issuecdn.baidupcs.com, update.pan.baidu.com, sa*.tuisong.baidu.com
+^https?:\/\/fcvbjbcebos\.baidu\.com\/.+.mp4 url reject
+^https?:\/\/fcvbjbcebos\.baidu\.com\/.+?\.mp4 url reject-img
+^https?:\/\/cover\.baidu\.com\/cover\/page\/dspSwitchAds\/ url reject
+^https?:\/\/baichuan\.baidu\.com\/rs\/adpmobile\/launch url reject
 ^https?:\/\/baichuan\.baidu\.com\/rs\/adpmobile\/launch url reject-img
 ^https?:\/\/api\d\.tuisong\.baidu\.com url reject-img
-^https?:\/\/afd.baidu.com\/afd\/entry url reject
+^https?:\/\/afd\.baidu\.com\/afd\/entry url reject
+^https?:\/\/afd\.baidu\.com\/afd\/entry url reject-img
+^https?:\/\/als\.baidu\.com\/clog\/clog url reject
 ^https?:\/\/mobads\.baidu\.com\/cpro\/ui\/mads.+ url reject
 (ps|sv|offnavi|newvector|ulog.imap|newloc)(.map)?.(baidu|n.shifen).com url reject
 ^https?:\/\/issuecdn\.baidupcs\.com\/issue\/netdisk\/guanggao\/ url reject-200
 ^https?:\/\/[\s\S]*\.baidu\.com/.*?ad[xs]\.php url reject-img
-^https?:\/\/afd\.baidu\.com\/afd\/entry url reject-img
-^https?:\/\/als.baidu.com\/clog\/clog url reject
-^https?:\/\/fcvbjbcebos\.baidu\.com\/.+?\.mp4 url reject-img
 ^https?:\/\/t\d{2}\.baidu\.com url reject-img
 ^https?:\/\/update\.pan\.baidu\.com\/statistics url reject
 ^https?:\/\/log.+?baidu\.com url reject

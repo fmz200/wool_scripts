@@ -1,11 +1,11 @@
-#!name=微博去广告(+净化)
-#!desc=整合了@RuCu6的去广告配置，包含全面净化
+#!name=微博去广告
+#!desc=整合了@zmqcherish的去广告配置，只去广告不做净化
 #!author=fmz200
 #!homepage=https://github.com/fmz200/wool_scripts
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/weibo.snippet
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2023-08-23 16:25
+#!date=2023-11-27 12:36:00
 #############################################
 # > "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # > "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -14,52 +14,41 @@
 # > "reject-array"  策略返回 HTTP 状态码 200,同时附带一个空的 JSON 数组
 #############################################
 
-# 首页 签到,发布按钮,侧边栏,右上角红包,侧边栏提醒,超话tab悬浮,顶部直播
-^https:\/\/api\.weibo\.cn\/2\/(checkin\/show|client\/publisher_list|push\/active)\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
-^https:\/\/api\.weibo\.cn\/2\/(ug\/checkin\/list|push\/daily)\? url reject-dict
-^https:\/\/api\.weibo\.cn\/2\/!\/live\/media_homelist\? url reject-dict
+hostname = api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, new.vip.weibo.cn
 
-# 详情页 超话,评论区,看图界面,个人主页,我的页面,信息流,商品橱窗,视频流,视频号,视频调查,话题卡片
-^https:\/\/api\.weibo\.cn\/2\/(cardlist|page)\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
-^https:\/\/api\.weibo\.cn\/2\/comments\/build_comments\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
-^https:\/\/api\.weibo\.cn\/2\/comments\/bullet_screens\? url reject-dict
-^https:\/\/api\.weibo\.cn\/2\/(container\/asyn|flowlist)\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
-^https:\/\/api\.weibo\.cn\/2\/photo\/info\? url reject-dict
-^https:\/\/api\.weibo\.cn\/2\/profile\/(container_timeline|me)\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
-^https:\/\/api\.weibo\.cn\/2\/statuses\/(container_timeline(_hot|_topic|_topicpage|_unread)?|unread_hot_timeline)\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
-^https:\/\/api\.weibo\.cn\/2\/statuses\/(extend|show)\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
-^https:\/\/api\.weibo\.cn\/2\/statuses\/(container_positive|push_info)\? url reject-dict
-^https:\/\/api\.weibo\.cn\/2\/video\/tiny_stream_video_list\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
-^https:\/\/api\.weibo\.cn\/2\/vote\/get_vote_detail\? url reject-dict
-^https:\/\/api\.weibo\.cn\/2\/!\/huati\/discovery_home_bottom_channels\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
-^https:\/\/api\.weibo\.cn\/2\/!\/huati\/(discovery_home_bottom_getdotinfo|mobile_discovery_searchchange)\? url reject-dict
+# 似乎没用的请求
+https://api\.weibo\.cn/2/(push/active|client/addlog_batch|ad/preload) url script-request-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/privacy_protection.js
 
-# 消息页
-^https:\/\/api\.weibo\.cn\/2\/direct_messages\/user_list\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
-^https:\/\/api\.weibo\.cn\/2\/messageflow\/notice\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
+# 话题按钮🔘的提示
+https://api.weibo.cn/2/!/huati/discovery_home_bottom_getdotinfo url reject
 
-# 发现页 热门微博信息流,搜索列表,热搜提醒,猜你想搜,视频流红包
-^https:\/\/api\.weibo\.cn\/2\/search\/container_discover\? url reject-dict
-^https:\/\/api\.weibo\.cn\/2\/search\/(container_timeline|finder)\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
-^https:\/\/api\.weibo\.cn\/2\/searchall\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
-^https:\/\/api\.weibo\.cn\/2\/hot\/hours_spotlight\? url reject-dict
-^https:\/\/api\.weibo\.cn\/2\/video\/redpacket\? url reject-dict
-^https:\/\/api\.weibo\.cn\/!\/sug\/list\/finderchange\? url reject-dict
+# 微博移除发现页广告
+^https?://api.weibo.cn/2/search/(finder|container_timeline|container_discover) url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
 
-# 开屏广告 //*.uve.weibo.com
+# 微博热搜页面广告
+^https?://api.weibo.cn/2/page url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
+
+# 微博超话页面广告
+^https?://api.weibo.cn/2/statuses/container_timeline_topicpage url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
+
+# 微博详情页面广告
+^https?://api.weibo.cn/2/statuses/extend url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
+
+# 微博最顶部的tab页分组
+^https?://api.weibo.cn/2/groups/allgroups/v2 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
+
+# 微博去广告以及去除各部分推广模块 - cherish
+^https?://m?api\.weibo\.c(n|om)/2/(cardlist|searchall|page|messageflow|statuses/(unread_)?friends(/|_)timeline|groups/timeline|statuses/(container_timeline|container_timeline_hot|unread_hot_timeline|extend|video_mixtimeline)|profile/(me|container_timeline)|video/(community_tab|remind_info|tiny_stream_video_list)|checkin/show|\!/live/media_homelist|comments/build_comments|container/get_item|search/(finder|container_timeline|container_discover)) url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_main.js
+
+# 删除微博开屏广告 - cherish
 ^https:\/\/bootrealtime\.uve\.weibo\.com\/v3\/ad\/realtime url reject-dict
-^https:\/\/bootpreload\.uve\.weibo\.com\/v1\/ad\/preload url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
-^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(get-lbs-cell-info\.php|sdkconfig\.php) url reject
-^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
-^https:\/\/wbapp\.uve\.weibo\.com\/(preload\/get_ad|wbapplua\/wbpullad\.lua)\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
+^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua) url script-response-body https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_launch.js
 
-# 微博长文章推广
-^https:\/\/card\.weibo\.com\/article\/m\/aj\/(reward|uvead)\? url reject-dict
-^https:\/\/weibo\.com\/ttarticle\/x\/m\/aj\/(reward|uvead)\? url reject-dict
+# 自定义tab皮肤
+^https://api.weibo.cn/2/!/client/light_skin url script-response-body https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_main.js
 
-# 跳过重定向页面以直接访问 //weibo.cn, shop.sc.weibo.com, t.cn, sinaurl.cn
-^https:\/\/weibo\.cn\/sinaurl\?(.*&)?(u|toasturl|goto)= url script-echo-response https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/noRedirect.js
-^https:\/\/shop\.sc\.weibo\.com\/h5\/jump\/error\?(.*&)?url= url script-echo-response https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/noRedirect.js
-^https:\/\/(sinaurl|t)\.cn\/ url script-response-header https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/noRedirect.js
+# 非会员设置tab皮肤 - cherish
+^https://new.vip.weibo.cn/littleskin/preview url script-response-body https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_main.js
 
-hostname = api.weibo.cn, *.uve.weibo.com, card.weibo.com, weibo.com, weibo.cn, shop.sc.weibo.com, t.cn, sinaurl.cn
+# 解锁微博会员APP图标
+^https?://new\.vip\.weibo\.cn/aj/appicon/list url script-response-body https://github.com/fmz200/wool_scripts/raw/main/Scripts/weibo/weibo_vip.js
