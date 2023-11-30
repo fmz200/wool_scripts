@@ -1,11 +1,11 @@
 #!name=App&小程序净化合集
-#!desc=去除一些冗余的模块，遇到异常时关闭此脚本
+#!desc=去除一些冗余的模块，遇到异常时关闭此配置
 #!author=fmz200
 #!homepage=https://github.com/fmz200/wool_scripts
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
-#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/chongxie.txt
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/cleanup.snippet
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2023-11-30 11:36:00
+#!date=2023-11-30 19:36:00
 #!support=约88款app
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
@@ -70,14 +70,18 @@ hostname = member.alipan.com, vod-movie.maoyan.com, wx.maoyan.com, api.maoyan.co
 
 # >>>>>>>>>>>>>>> ✅ A ✅ <<<<<<<<<<<<<<
 # > AShare
+# hostname = tan.ipnas.ltd
 ^https:\/\/tan\.ipnas\.ltd\/wp-json\/wp\/v2 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/applet.js
 
-# > AppleAndroid 弹框显示内容
+# > AppleAndroid
+# hostname = iosoi.cn
+# 弹框显示内容
 ^https:\/\/iosoi\.cn\/wp-json\/wp\/v2\/posts/\d+ url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/applet.js
 # 辅助去除页面嵌入式式卡片广告
 ^https:\/\/iosoi\.cn\/wp-content\/plugins url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/applet.js
 
 # > APP基地
+# hostname = wx.wxqqurl.cn
 ^https:\/\/wx\.wxqqurl\.cn\/wp-json\/watch-life-net\/v1\/posts url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/applet.js
 
 # > 阿里云盘
@@ -87,15 +91,17 @@ hostname = member.alipan.com, vod-movie.maoyan.com, wx.maoyan.com, api.maoyan.co
 
 
 
-
 # >>>>>>>>>>>>>>> ✅ B ✅ <<<<<<<<<<<<<<
 # > 必胜客 微信小程序净化
+# hostname = res.pizzahut.com
 ;^https:\/\/res\.pizzahut\.com\.cn\/CRM url reject-dict
 
 # > 不完全指北
+# hostname = 4thdimension.top
 ^https:\/\/4thdimension\.top\/wp\-json\/watch\-life\-net\/v1\/posts url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/applet.js
 
 # > 不背单词 净化
+# hostname = hwimg.beingfine.cn, learnywhere.cn
 ^https:\/\/hwimg\.beingfine\.cn\/float_button  url reject-dict
 ^https:\/\/hwimg\.beingfine\.cn\/card url reject-dict
 ^https:\/\/learnywhere\.cn\/api\/activity\/23\/423dsj\/inapp\/bb\/promote url reject-dict
@@ -104,41 +110,52 @@ hostname = member.alipan.com, vod-movie.maoyan.com, wx.maoyan.com, api.maoyan.co
 
 # >>>>>>>>>>>>>>> ✅ C ✅ <<<<<<<<<<<<<<
 # > 曹操出行 微信小程序净化
+# hostname = minicap.caocaokeji.cn
 ^https:\/\/minicap\.caocaokeji\.cn\/advert-bss\/pullAdvert url reject-dict
 
 # > 乘车码 @jinlvei
+# hostname = ccmsupport-sz.tenpay.com
 ^https:\/\/ccmsupport-sz\.tenpay\.com\/cgi-bin\/common\/ccm_page_element.cgi url reject
 
 # > 茶颜悦色 微信小程序净化
+# hostname = miniapp.sexytea2013.com
 ^https:\/\/miniapp\.sexytea2013\.com\/cms\/slot\/queryByCodes\?codes=INDEX_TOP_BANNER url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cyys.js
 
 # > 茶百道 微信小程序净化
+# hostname = cbd-gateway-service-applets.hualala.com
 ^https:\/\/cbd-gateway-service-applets\.hualala\.com\/arch\/api\/banner\/QueryBannerImgList url reject-dict
 
 # > COCO点单 微信小程序净化
+# hostname = coco-com.e.verystar.net
 ^https:\/\/coco-com\.e\.verystar\.net\/v1\/home\/info url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/coco.js
 
 
 
 # >>>>>>>>>>>>>>> ✅ D ✅ <<<<<<<<<<<<<<
 # > 达达快送 微信小程序净化
+# hostname = supplier-api.imdada.cn
 ^https:\/\/supplier-api\.imdada\.cn\/fe\/public\/ad\/spot\?forwardServiceName=growth-activity url reject-dict
 
 # > 滴滴出行 微信小程序个人中心净化 由TEXAS和豆豆提供
+# hostname = common.diditaxi.com.cn, conf.diditaxi.com.cn
 ^https:\/\/common\.diditaxi\.com\.cn\/common\/v5 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi.js
 # > 滴滴打车 小程序净化 感谢#豆豆分享
 ^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/core url reject-dict
 
 # > 嘀嗒出行 小程序净化 感谢#豆豆分享
+# hostname = capis*.didapinche.com
 ^https:\/\/capis(-\d)?\.didapinche\.com\/adbase url reject
 
 # > 石家庄公交乘车码 微信小程序净化
+# hostname = 
 ^https:\/\/wechat-api\.i-xiaoma\.com\.cn\/app\/v1\/bus\/wechat\/content url reject-dict
 
 # > 电视盒子君
+# hostname = tvapp.guilaile.cn
 ^https:\/\/tvapp\.guilaile\.cn\/wp\-json\/wp\/v2\/posts url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/applet.js
 
 # > 德邦快递 微信小程序净化（删除Top轮播）
+# hostname = www.deppon.com
 ^https:\/\/www\.deppon\.com\/gwapi\/memberService\/eco\/member\/grade\/commonInterface url reject-dict
 
 
