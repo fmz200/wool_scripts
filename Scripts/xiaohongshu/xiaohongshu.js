@@ -33,6 +33,6 @@ function process() {
   const regex2 = /imageView2\/2\/h\/\d+\/format/g;
   responseBody = responseBody.replace(regex2, `imageView2/2/h/${newNumber}/format`);
 
-  console.log('图片画质增强完成完成✅');
+  console.log('图片画质增强完成✅');
   responseBody = JSON.parse(responseBody);
 }
