@@ -25,7 +25,7 @@ function process() {
         // 去掉“我的钱包”
         if (itemGroup.groupType === 15) {
             return null; // 将groupType为15的元素置为null
-        } else if (itemGroup.groupType === 3) { // 推荐工具只保留钱4个
+        } else if (itemGroup.groupType === 3) { // 推荐工具只保留4个
             itemGroup.itemList = itemGroup.itemList.slice(0, 4);
         }
         return itemGroup;

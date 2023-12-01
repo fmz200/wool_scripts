@@ -1,7 +1,7 @@
 /**
- * author:fmz200
+ * @author:fmz200
  * @function 微博去广告
- * date:2023-11-23 22:23:00
+ * @date:2023-12-01 21:23:00
  */
 
 const url1 = '/search/finder';
@@ -43,15 +43,15 @@ let index = 1;
 let url = $request.url;
 let body = $response.body;
 try {
-  body = modifyMain(url, body);
+  body = process();
 } catch (e) {
   console.log('脚本运行出现错误，部分广告未去除⚠️');
   console.log('错误信息：' + e.message);
 }
 $done({body});
 
-function modifyMain(url, data) {
-  let resp_data = JSON.parse(data);
+function process() {
+  let resp_data = JSON.parse(body);
   // 1、首次点击发现按钮
   if (url.includes(url1)) {
     const payload = resp_data.channelInfo?.channels?.[0]?.payload;
@@ -90,6 +90,24 @@ function modifyMain(url, data) {
   // 2、发现页面刷新/再次点击发现按钮
   if (url.includes(url2) || url.includes(url3)) {
     console.log('刷新发现页...');
+    if (resp_data.items[0].items) {
+      for (let i = 0; i < resp_data.items[0].items.length; i++) {
+        if (resp_data.items[0].items[i].data?.card_type === 17) {
+          console.log("处理微博热搜");
+          resp_data.items[0].items[i].data.group = removeHotSearchAds(resp_data.items[0].items[i].data.group);
+        }
+        if (resp_data.items[0].items[i].data?.card_type === 118) {
+          console.log("处理轮播图模块");
+          resp_data.items[0].items[i] = {};
+        }
+      }
+    }
+    if (resp_data.items[1].data?.card_type === 19) {
+      console.log("处理热聊热搜");
+      delete resp_data.items[1].data.more_pic;
+      resp_data.items[1].data.group = removeFinderChannelAds(resp_data.items[1].data.group);
+    }
+
     if (resp_data.items[1].data.itemid === "hot_search_push") {
       index = 2;
     }
@@ -102,7 +120,7 @@ function modifyMain(url, data) {
     resp_data.items[index + 1] = {};
 
     // 2.3、下标为3的是热议模块
-    console.log('移除finder_channel模块💕💕');
+    console.log('移除热聊模块💕💕');
     if (resp_data.items[index + 2].data?.more_pic?.includes('ads')) {
       delete resp_data.items[index + 2].data.more_pic;
     }
