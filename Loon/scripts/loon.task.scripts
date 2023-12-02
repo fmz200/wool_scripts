@@ -4,9 +4,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/scripts/loon.task.scripts
-#!tg-group：https://t.me/lanjieguanggao
-#!update：2023.06.22 16:33
-
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2023-12-02 19:35:00
+#############################################
 
 # fmz200
 cron "0 1 0 * * ?" script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js, timeout=300, tag=阿里云盘签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/AliYunDrive.png, enabled=false
@@ -78,13 +78,13 @@ cron "40 4 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scr
 cron "50 4 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/mihoyo/mihoyo.js, enable=false, tag=米游社
 cron "0 5 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.js, enable=false, tag=中国联通
 cron "10 5 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/maomicd/maomicd.js, enable=false, tag=猫咪音乐
-cron "20 5 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.js, enable=false, tag=中国移动
+;cron "20 5 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.js, enable=false, tag=中国移动
 cron "30 5 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wmmeituan/wmmeituan.js, enable=false, tag= 美团外卖
 cron "40 5 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.js, enable=false, tag=美团
 cron "50 5 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/everphoto/everphoto.js, enable=false, tag=时光相册
-cron "0 6 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bcz/bcz.js, enable=false, tag=百词斩
+;cron "0 6 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bcz/bcz.js, enable=false, tag=百词斩
 cron "10 6 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/mcdd/mcdd.js, enable=false, tag=叮咚买菜
-cron "20 6 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/fenqile/fenqile.js, enable=false, tag=分期乐
+;cron "20 6 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/fenqile/fenqile.js, enable=false, tag=分期乐
 cron "30 6 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/fandeng/fandeng.js, enable=false, tag=樊登读书
 cron "40 6 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qmkg/qmkg.js, enable=false, tag=全民K歌
 cron "50 6 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/hycan/hycan.js, enable=false, tag=合创
@@ -97,13 +97,13 @@ cron "50 7 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scr
 cron "0 8 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/suning/suning.js, enable=false, tag=苏宁易购
 cron "10 8 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zaker/zaker.js, enable=false, tag=Zaker
 cron "20 8 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bubei/bubei.js, enable=false, tag=不背单词
-cron "30 8 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/dbsj/dbsj.js, enable=false, tag=豆瓣时间
+;cron "30 8 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/dbsj/dbsj.js, enable=false, tag=豆瓣时间
 cron "40 8 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/hellobike/hellobike.js, enable=false, tag=哈啰出行
 cron "50 8 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zsfc/zsfc.js, enable=false, tag=掌上飞车
 cron "0 3 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/duokan/duokan.js, enable=false, tag=多看
 cron "3 3 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/noteyoudao/noteyoudao.js, enable=false, tag=有道云笔记
 cron "0 12 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/switcher/box.switcher.js, enable=false, tag=切换会话
-cron "12 3 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.fee.js, enable=false, tag=中国移动-查话费
+;cron "12 3 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.fee.js, enable=false, tag=中国移动-查话费
 cron "12 2 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wanda/wanda.js, enable=false, tag=万达电影
 cron "11 2 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/pagoda/pagoda.js, enable=false, tag=百果园
 cron "11 2 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ithome/ithome.js, enable=false, tag=IT之家
@@ -196,9 +196,9 @@ cron "30 8,13,19 * * *" script-path=https://raw.githubusercontent.com/chouchoui/
 cron "10 0 * * *" script-path=https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/nga/nga.js, enable=false, tag=NGA刮墙
 
 # id77 https://github.com/id77/QuantumultX/tree/master
-cron "17 0 * * *" script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/163GameVip.js, enable=false, tag=网易游戏
+;cron "17 0 * * *" script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/163GameVip.js, enable=false, tag=网易游戏
 cron "10 0 * * *" script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/thg.js, enable=false, tag=太好购
-cron "12 0 * * *" script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/geekhub.js, enable=false, tag=geekhub
+;cron "12 0 * * *" script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/geekhub.js, enable=false, tag=geekhub
 cron "0 12 * * *" script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/jdWuLiu.js, enable=false, tag=京东物流
 
 # XidNDD https://github.com/XidNDD/2020scripts
@@ -211,13 +211,13 @@ cron "24 16 0 * * *" script-path=https://raw.githubusercontent.com/XidNDD/2020sc
 cron "22 16 0 * * *" script-path=https://raw.githubusercontent.com/XidNDD/2020scripts/master/zscdbSign.js, enable=false, tag=追书畅读版
 
 # mw418  https://github.com/mw418/QuantumultX
-cron "5 8 * * *" script-path=https://raw.githubusercontent.com/mw418/QuantumultX/master/setu.js, enable=false, tag=每日色图
+;cron "5 8 * * *" script-path=https://raw.githubusercontent.com/mw418/QuantumultX/master/setu.js, enable=false, tag=每日色图
 
 # globalTools  https://github.com/globalTools/quantumultX
-cron "10 0 8 * * *" script-path=https://raw.githubusercontent.com/globalTools/quantumultX/master/tuhu/tuhu.js, enable=false, tag=途虎养车
+;cron "10 0 8 * * *" script-path=https://raw.githubusercontent.com/globalTools/quantumultX/master/tuhu/tuhu.js, enable=false, tag=途虎养车
 
 # whyour
-cron "5 9 * * *" script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/daymatter.js, enable=false, tag=倒数日
+;cron "5 9 * * *" script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/daymatter.js, enable=false, tag=倒数日
 
 # 京东资产变动通知
 cron "2 9 * * *" script-path=https://raw.githubusercontent.com/ChuheGit/1/main/Script/jd_scripts/jd_bean_change.js, tag=京东资产变动通知
