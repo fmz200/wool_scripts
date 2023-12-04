@@ -36,7 +36,7 @@
 
 ▶️ 本项目中的内容请不要在中国大陆的任何平台传播。
 
-▶️ 交流群组：👉🏻[苹果iOS去广告交流群](https://t.me/lanjieguanggao)，👉🏻[奶思|群组](https://t.me/ddgksf2021_chat)。
+▶️ 交流群组：👉🏻[苹果iOS去广告交流群](https://t.me/lanjieguanggao)，👉🏻[奶思|频道](https://t.me/inaisi)。
 
 ---
 
@@ -50,6 +50,8 @@
 "isp"`那就是家庭宽带，其他值（比如：hosting，business）都不是家宽。
 
 常见的抖音分流有：
+> https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/DouYin.snippet
+>
 > https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/DouYin/DouYin.list
 
 ### 2️⃣ 为什么有些软件明明很热门，却没有人做去广告的规则
@@ -120,7 +122,7 @@
 
 ---
 
-## 🧲 写着玩的
+## 🛺 写着玩的
 
 > 📍 配置前建议先看一看脚本内说明，不要张口就问。
 
@@ -149,11 +151,16 @@
 - [@Tartarus2014](https://github.com/Tartarus2014)
 - [@zmqcherish](https://github.com/zmqcherish)
 
-## 🧚‍♀️ 欢迎星标 🌟
+## ♻️ 项目状态
+
+![Alt](https://repobeats.axiom.co/api/embed/3ed497076151b9b7ba73d5653f7ac9d025314de9.svg "Repobeats analytics image")
+
+
+## 🌟 欢迎星标
 
 ![Star](https://api.star-history.com/svg?repos=fmz200/wool_scripts&type=Date)
 
-### 🧚‍♀️ 访问量统计
+## 💹 访问量统计
 
 ![Visitor Count](https://profile-counter.glitch.me/fmz200/count.svg)
 
