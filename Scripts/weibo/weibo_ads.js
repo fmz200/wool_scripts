@@ -1,7 +1,7 @@
 /**
  * @author:fmz200
  * @function 微博去广告
- * @date:2023-12-01 21:23:00
+ * @date:2023-12-05 21:23:00
  */
 
 const url1 = '/search/finder';
@@ -54,8 +54,27 @@ function process() {
   let resp_data = JSON.parse(body);
   // 1、首次点击发现按钮
   if (url.includes(url1)) {
-    const payload = resp_data.channelInfo?.channels?.[0]?.payload;
     console.log('进入发现页...');
+    if (resp_data.channelInfo.channels[0].payload?.items[0]) {
+      for (let i = 0; i < resp_data.channelInfo.channels[0].payload.items[0].items.length; i++) {
+        if (resp_data.channelInfo.channels[0].payload.items[0].items[i].data?.card_type === 17) {
+          console.log("处理微博热搜");
+          resp_data.channelInfo.channels[0].payload.items[0].items[i].data.group = removeHotSearchAds(resp_data.channelInfo.channels[0].payload.items[0].items[i].data.group);
+        }
+        if (resp_data.channelInfo.channels[0].payload.items[0].items[i].data?.card_type === 118) {
+          console.log("处理轮播图模块");
+          resp_data.channelInfo.channels[0].payload.items[0].items[i] = {};
+        }
+      }
+      
+      if (resp_data.channelInfo.channels[0].payload.items[1].data?.card_type === 19) {
+        console.log("处理热聊热搜");
+        delete resp_data.channelInfo.channels[0].payload.items[1].data.more_pic;
+        resp_data.channelInfo.channels[0].payload.items[1].data.group = removeFinderChannelAds(resp_data.channelInfo.channels[0].payload.items[1].data.group);
+      }
+    }
+    
+    const payload = resp_data.channelInfo?.channels?.[0]?.payload;
     if (payload.items[1].data.itemid === "hot_search_push") {
       index = 2;
     }
