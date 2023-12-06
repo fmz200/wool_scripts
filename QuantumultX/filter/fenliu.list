@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/fenliu.list
 #!tg-group：https://t.me/lanjieguanggao
-#!date：2023-11-26 20:56:00
+#!date：2023-12-06 23:56:00
 #!support：约9392行
 #!proxy-select：reject
 #############################################
@@ -1683,7 +1683,6 @@ host-keyword, ad-sign.byteimg.com, reject
 
 # >>>>>>>>>>>>>>> ✅ 其他广告 ✅ <<<<<<<<<<<<<<
 host-keyword, huichuan-mc.sm.cn, reject
-host-keyword, knockout, reject
 host-keyword, extlog.snssdk.com, reject
 ;host-keyword, is.snssdk.com, reject
 host-keyword, mobads.baidu.com, reject
