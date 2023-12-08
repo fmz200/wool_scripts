@@ -362,7 +362,7 @@ hostname = apio.zhengqi100.com, res.hongyibo.com.cn, misc-api-prd-mx.wandafilm.c
 ^https:\/\/www\.(binance|yingwangtech)\.(com|info|net)\/bapi\/composite\/v1\/public\/market\/holiday-atmosphere url reject-dict
 
 # > 乐刻
-hostname = lens.leoao.com
+# hostname = lens.leoao.com
 # 开屏广告
 ^https:\/\/lens\.leoao\.com\/lens\/conduct\/app\/rpc\/v2\/com\.lefit\.dubbo\.cms\.api\.front\.AppAdvertisingFrontService\/getAppAdvertisingNew url reject-dict
 ^https:\/\/lens\.leoao\.com\/lens\/conduct\/app\/rpc\/v2\/com\.lefit\.dubbo\.cms\.api\.bff\.ClientFrontFacade\/queryHomeMiddleInfo url reject-dict
