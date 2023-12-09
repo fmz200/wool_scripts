@@ -1,7 +1,7 @@
 /**
- * @author:fmz200
+ * @author fmz200
  * @function 微博去广告
- * @date:2023-12-05 21:23:00
+ * @date 2023-12-05 21:23:00
  */
 
 const url1 = '/search/finder';
