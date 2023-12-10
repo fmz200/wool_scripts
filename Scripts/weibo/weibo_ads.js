@@ -54,41 +54,13 @@ function process() {
   // 1、首次点击发现按钮
   if (url.includes(url1)) {
     console.log('进入发现页...');
-    let payload = resp_data.channelInfo.channels[0].payload;
-
-    // 情况1：热搜热聊都封装在items[0]里面
-    if (payload.items[0].items) {
-      removePageData(payload.items[0].items);
-    }
-    
-    // 公共广告
-    removeCommonAds(payload.items);
-
-    // 1.4、items[i].category = "feed" 是热门微博的部分
-    removeCategoryFeedAds(payload.items);
-
-    // 1.5、背景图广告
-    if (payload.loadedInfo?.headerBack) {
-      delete payload.loadedInfo.headerBack;
-    }
+    processPayload(resp_data.channelInfo.channels[0].payload);
   }
 
   // 2、发现页面刷新/再次点击发现按钮
   if (url.includes(url2) || url.includes(url3)) {
     console.log('刷新发现页...');
-    if (resp_data.items[0].items) {
-      removePageData(resp_data.items[0].items);
-    }
-
-    removeCommonAds(resp_data.items);
-
-    // 2.4、items[i].category = "feed" 是热门微博的部分
-    removeCategoryFeedAds(resp_data.items);
-
-    // 2.5、背景图广告
-    if (resp_data.loadedInfo?.headerBack) {
-      delete resp_data.loadedInfo.headerBack;
-    }
+    processPayload(resp_data);
   }
 
   // 3、微博热搜页面刷新
@@ -119,20 +91,20 @@ function process() {
   return JSON.stringify(resp_data);
 }
 
-function removePageData(items) {
-  for (let i = 0; i < items.length; i++) {
-    if (items[i].data?.card_type === 17) {
-      console.log("处理微博热搜");
-      removeHotSearchAds(items[i].data.group);
-    }
-    if (items[i].data?.card_type === 118) {
-      console.log("处理轮播图模块");
-      items[i] = {};
-    }
+function processPayload(payload) {
+  if (payload.items[0].items) {
+    removeCommonAds(payload.items[0].items);
+  }
+
+  removeCommonAds(payload.items);
+  removeCategoryFeedAds(payload.items);
+
+  if (payload.loadedInfo?.headerBack) {
+    delete payload.loadedInfo.headerBack;
   }
 }
 
-function removeCommonAds(items){
+function removeCommonAds(items) {
   for (let i = 0; i < items.length; i++) {
     // 1.1、"微博热搜"模块
     if (items[i].data?.card_type === 17) {
@@ -201,13 +173,14 @@ function removePageDataAds(items) {
 
 // 交换集合中两个对象的位置
 function swapObjectsInArray(array, index1, index2) {
-  // index1：全部微博，index2：最新微博
-  array[index1] = array[index2];
-  array[index1].title = "全部微博";
-  array[index1].apipath = "statuses/container_timeline_unread";
-
   const temp = array[index1];
   array[index1] = array[index2];
   array[index2] = temp;
+  
+  // index1：最新微博，index2：全部微博
+  array[index2] = array[index1];
+  array[index2].title = "全部微博";
+  array[index2].apipath = "statuses/container_timeline_unread";
+
   console.log('交换tab页顺序结束💕💕');
 }
