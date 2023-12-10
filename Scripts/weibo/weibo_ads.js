@@ -10,7 +10,7 @@ const url3 = '/search/container_discover';
 const url4 = '/api.weibo.cn/2/page'; // 微博热搜页面url
 const url5 = '/statuses/container_timeline_topicpage'; // 微博超话页面
 const url6 = '/statuses/extend'; // 微博详情页面广告
-const url7 = '/groups/allgroups/v2' // 微博首页Tab标签页
+const url7 = '/groups/allgroups/v2' // 微博首页Tab标签页 https://api.weibo.cn/2/groups/allgroups/v2
 
 const titleSubPicMap = {
   '电影': 'https://simg.s.weibo.com/imgtool/20221207_dianying.png',
@@ -172,15 +172,14 @@ function removePageDataAds(items) {
 }
 
 // 交换集合中两个对象的位置
-function swapObjectsInArray(array, index1, index2) {
-  const temp = array[index1];
-  array[index1] = array[index2];
-  array[index2] = temp;
-  
-  // index1：最新微博，index2：全部微博
-  array[index2] = array[index1];
-  array[index2].title = "全部微博";
-  array[index2].apipath = "statuses/container_timeline_unread";
+function swapObjectsInArray(array, index0, index1) {
+  array[index0] = {...array[index1]};
+  array[index0].title = "全部微博";
+  array[index0].apipath = "statuses/container_timeline_unread";
+  // array[index0].gid = "10001" + array[index0].uid; // 这个属性用来判断是否全部微博，修改后报错
 
+  const temp = array[index0];
+  array[index0] = array[index1];
+  array[index1] = temp;
   console.log('交换tab页顺序结束💕💕');
 }
