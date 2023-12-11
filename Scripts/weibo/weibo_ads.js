@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 微博去广告
- * @date 2023-12-10 21:23:00
+ * @date 2023-12-11 09:23:00
  */
 
 const url1 = '/search/finder';
@@ -173,9 +173,9 @@ function removePageDataAds(items) {
 
 // 交换集合中两个对象的位置
 function swapObjectsInArray(array, index0, index1) {
-  array[index0] = {...array[index1]};
-  array[index0].title = "全部微博";
-  array[index0].apipath = "statuses/container_timeline_unread";
+  // array[index0] = {...array[index1]};
+  // array[index0].title = "全部微博";
+  // array[index0].apipath = "statuses/container_timeline_unread";
   // array[index0].gid = "10001" + array[index0].uid; // 这个属性用来判断是否全部微博，修改后报错
 
   const temp = array[index0];
