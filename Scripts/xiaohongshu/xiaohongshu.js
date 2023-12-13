@@ -59,8 +59,8 @@ if (url.includes("/v1/search/banner_list")) {
     }
   }
   // 组装请求
-  const myRequest = {url: $request.url, method: `GET`, headers: $request.headers};
-  $.setdata(JSON.stringify(myRequest), "fmz200.xiaohongshu.feed.req");
+  // const myRequest = {url: $request.url, method: `GET`, headers: $request.headers};
+  // $.setdata(JSON.stringify(myRequest), "fmz200.xiaohongshu.feed.req");
   $.setdata(JSON.stringify(obj.data[0].note_list[0].images_list), "fmz200.xiaohongshu.feed.rsp");
   console.log('已存储请求和响应♻️');
 } else if (url.includes("/v3/note/videofeed")) {
