@@ -24,9 +24,10 @@ try {
 function process() {
   console.log('脚本运行开始');
   console.log('原body：\n' + rsp_body);
-  const rspCache = JSON.parse($.getdata("fmz200.xiaohongshu.feed.rsp"));
+  const rsp = $.getdata("fmz200.xiaohongshu.feed.rsp");
   console.log("读取缓存key：fmz200.xiaohongshu.feed.rsp");
-  console.log("读取缓存val：" + JSON.stringify(rspCache));
+  console.log("读取缓存val：" + rsp);
+  const rspCache = JSON.parse(rsp);
   if (!rspCache) {
     console.log('缓存无内容，返回原body');
     $done({rsp_body});
