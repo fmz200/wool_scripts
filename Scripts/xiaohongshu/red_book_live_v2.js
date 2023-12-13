@@ -23,9 +23,10 @@ try {
 
 function process() {
   console.log('脚本运行开始');
-  // console.log('原body：\n' + rsp_body);
+  console.log('原body：\n' + rsp_body);
   const rspCache = JSON.parse($.getdata("fmz200.xiaohongshu.feed.rsp"));
   console.log("读取缓存key：fmz200.xiaohongshu.feed.rsp");
+  console.log("读取缓存val：" + JSON.stringify(rspCache));
   if (!rspCache) {
     console.log('缓存无内容，返回原body');
     $done({rsp_body});
@@ -41,7 +42,7 @@ function process() {
     new_data.push(item);
   }
   replaceUrlContent(mod_body.data.datas, new_data);
-  // console.log('新body：\n' + JSON.stringify(mod_body));
+  console.log('新body：\n' + JSON.stringify(mod_body));
   $done({body: JSON.stringify(mod_body)});
 }
 
