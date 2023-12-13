@@ -35,12 +35,14 @@ function process() {
   let cache_body = rspCache;
   let new_data = [];
   for (const images of cache_body) {
-    const item = {
-      file_id: images.live_photo_file_id,
-      video_id: images.live_photo.media.video_id,
-      url: images.live_photo.media.stream.h265[0].master_url
-    };
-    new_data.push(item);
+    if (images.live_photo_file_id) {
+      const item = {
+        file_id: images.live_photo_file_id,
+        video_id: images.live_photo.media.video_id,
+        url: images.live_photo.media.stream.h265[0].master_url
+      };
+      new_data.push(item);
+    }
   }
   replaceUrlContent(mod_body.data.datas, new_data);
   console.log('新body：\n' + JSON.stringify(mod_body));
