@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/chongxie.txt
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2023-12-12 22:50:10
+#!date=2023-12-13 20:50:10
 #!support=约542款app
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
@@ -2344,8 +2344,8 @@ https://b.appsimg.com/upload/momin/ url reject
 ^https:\/\/www\.xiaohongshu\.com\/api\/sns\/v1\/ads\/resource\? url reject-dict
 # 画质增强：加载2K分辨率的图片
 https:\/\/edith\.xiaohongshu\.com\/api\/sns\/(v1\/localfeed|v4\/node\/user\/posted|v5\/note\/comment\/list) url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaohongshu/xiaohongshu.js
-# live图无水印保存 还不完善 只能保存一张
-;https://edith.xiaohongshu.com/api/sns/v1/note/live_photo/save url script-response-body https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/red_book_live_v2.js
+# live图无水印保存
+https://edith.xiaohongshu.com/api/sns/v1/note/live_photo/save url script-response-body https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/red_book_live_v2.js
 
 # > 喜马拉雅
 # 首页顶部去除直播
