@@ -2,7 +2,7 @@
  * @author fmz200
  * @function 小红书live图无水印保存
  * @description 版本2：请求feed接口时将返回body保存，live接口取出直接用（请求live必先请求feed，每次都是覆盖缓存的内容）
- * @date 2023-12-13 20:23:00
+ * @date 2023-12-14 21:08:00
  */
 
 // 两条重写搭配使用才可以
@@ -27,12 +27,11 @@ function process() {
   const rsp = $.getdata("fmz200.xiaohongshu.feed.rsp");
   console.log("读取缓存key：fmz200.xiaohongshu.feed.rsp");
   console.log("读取缓存val：" + rsp);
-  const rspCache = JSON.parse(rsp);
-  if (!rspCache) {
+  const cache_body = JSON.parse(rsp);
+  if (!cache_body) {
     console.log('缓存无内容，返回原body');
     $done({rsp_body});
   }
-  let cache_body = rspCache;
   let new_data = [];
   for (const images of cache_body) {
     if (images.live_photo_file_id) {
@@ -44,12 +43,18 @@ function process() {
       new_data.push(item);
     }
   }
-  replaceUrlContent(mod_body.data.datas, new_data);
+  if (mod_body.data.datas) {
+    replaceUrlContent(mod_body.data.datas, new_data);
+  } else {
+    mod_body = {"code": 0, "success": true, "msg": "成功", "data": {"datas": new_data}};
+  }
+
   console.log('新body：\n' + JSON.stringify(mod_body));
   $done({body: JSON.stringify(mod_body)});
 }
 
 function replaceUrlContent(collectionA, collectionB) {
+  console.log('替换无水印的URL');
   collectionA.forEach(itemA => {
     const matchingItemB = collectionB.find(itemB => itemB.file_id === itemA.file_id);
     if (matchingItemB) {
