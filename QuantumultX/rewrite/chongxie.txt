@@ -1658,16 +1658,17 @@ https://api.rr.tv/storage/business/rootName/app/homePage\?dataType=JSON url reje
 # 需卸载重新，有缓存
 ^http:\/\/ad\.shunchangzhixing\.com\/getAd url reject-dict
 ^https:\/\/api\.bwton\.com\/bff\/app\/h5\/v1\/station\/goods url reject-dict
-# 开屏广告 感谢@alist.choc.ga分享
+# 开屏广告 感谢【alist.choc.ga】分享
 ^https?:\/\/api\.bwton\.com\/bas\/ad url reject-200
-# 软件内推广广告 感谢@为什么要看头像呢分享
+# 软件内推广广告 感谢【为什么要看头像呢】分享
 ^https:\/\/api\.bwton\.com\/bff\/app\/index\/goods url reject-dict
 ^https:\/\/api\.bwton\.com\/bff\/app\/index\/recommend url reject-dict
 
-# > 苏周到 更新提示 感谢@alist.choc.ga分享
+# > 苏周到 更新提示 感谢【alist.choc.ga】分享
 ^https:\/\/szdmobile\.suzhou\.gov\.cn\/thirdapp-center\/appUpdate\/update url reject-dict
 
-# > 苏打校园APP 净化(需要卸载重装）@TEXAS提供
+# > 苏打校园APP
+# 净化(需要卸载重装）感谢【TEXAS】分享
 ^https:\/\/api\.sodalife\.xyz\/v1\/posters\?location=SODA_APP%3AHOME%3ATOP url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soda.js
 ^https:\/\/api\.sodalife\.xyz\/v1\/posters\?location=SODA_APP%3AHOME%3ABOTTOM url reject-dict
 ^https:\/\/api\.sodalife\.xyz\/v1\/posters\?location=SODA_APP%3AHOME%3ACENTER url reject-dict
@@ -1676,8 +1677,11 @@ https://api.rr.tv/storage/business/rootName/app/homePage\?dataType=JSON url reje
 ^https:\/\/api\.sodalife\.xyz\/v1\/posters\?location=SODA_APP%3AREWARDS%3ACENTER url reject-dict
 
 # > 四季線上影視
+# hostname = service.4gtv.tv
 ^https?:\/\/service\.4gtv\.tv\/4gtv\/Data\/(?>GetAD|ADLog) url reject-200
+
 # > 四川航空
+# hostname = mapi.sichuanair.com
 ^https?:\/\/mapi\.sichuanair\.com\/zt\/tribeport\/encrypt_translate_key url reject-200
 
 # > 搜狐
@@ -1727,14 +1731,15 @@ https://api.rr.tv/storage/business/rootName/app/homePage\?dataType=JSON url reje
 ^https?:\/\/editor\.sm\.cn\/launch_picture url reject
 
 # > 顺丰
+# hostname = ccsp-egmas.sf-express.com, shopic.sf-express.com, 
 ^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/appVersion\/detectionUpgrade url reject-dict
-^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/ad\/ url reject
+^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/ad\/queryInfoFlow url reject-dict url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/shunfeng/shunfeng.js
+^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/ad\/ url reject-dict
 ^https?:\/\/shopic\.sf-express\.com\/crm\/mobile\/common\/flashscreen url reject
-https://ccsp-egmas.sf-express.com/cx-app-base/base/app/ad/queryAdImages url reject
-https://ccsp-egmas.sf-express.com/cx-app-base/base/app/ad/queryInfoFlow url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/shunfeng_json.js
 
 # > 顺丰优选
-^https://mapi.sfbest.com\/brokerservice-server\/cms\/getPositionById.* url reject
+# hostname = mapi.sfbest.com
+^https:\/\/mapi\.sfbest\.com\/brokerservice-server\/cms\/getPositionById.* url reject
 
 # > 顺丰速运小程序
 # hostname = mcs-mimp-web.sf-express.com, ucmp.sf-express.com
@@ -2794,7 +2799,6 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do url rejec
 
 # > 转转
 # hostname = app.zhuanzhuan.com
-# 中间一行小图标被误杀了
 ^https?:\/\/app\.zhuanzhuan\.com\/zzx\/transfer\/getConfigInfo url reject-dict
 # 转转右下角悬浮广告
 ^https?:\/\/app\.zhuanzhuan\.com\/zz\/transfer\/userred\?scene=homePage url reject-dict
@@ -2803,7 +2807,7 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do url rejec
 ^https:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getchoicegoodsinfos url response-body infoData response-body random_body
 
 # > 掌上英雄联盟
-# 开屏广告 #感谢【𝑨梦 𝑪𝒉𝒙𝒎𝟏𝟎𝟐𝟑】分享
+# 开屏广告 感谢【𝑨梦 𝑪𝒉𝒙𝒎𝟏𝟎𝟐𝟑】分享
 ^https?:\/\/us\.l\.qq\.com\/exapp url reject-200
 ^https?:\/\/ossweb-img\.qq\.com\/upload\/adw\/image\/[0-9]{3}\/202[0-9]{5}\/[a-z0-9]{32}\.(jpg|jpeg) url reject-200
 ^https?:\/\/mlol\.qt\.qq\.com\/go\/recommend url reject
@@ -2811,7 +2815,8 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do url rejec
 # > 浙里办
 ^https:\/\/portal\.zjzwfw\.gov\.cn\/app_api\/appHome\/selectStartPic url reject-200
 
-# > 郑好办 去开屏
+# > 郑好办
+# 去开屏
 ^https:\/\/app-izz\.zhengzhou\.gov\.cn:10019\/bizgw\/gateway\.do url response-body "imgUrl19_5x9":".+?" response-body "imgUrl19_5x9":""
 
 # > 住这儿 开屏广告 感谢【Mozart】分享
@@ -2831,7 +2836,7 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do url rejec
 # > 自如
 # hostname = ztoread.ziroom.com
 ^https?:\/\/ztoread\.ziroom\.com\/foka-card-api\/popup\/v2\/get url reject-dict
-^https?:\/\/ztoread\.ziroom\.com\/ymerApi\/v\d\/index\/open url reject
+^https?:\/\/ztoread\.ziroom\.com\/ymerApi\/v\d\/index\/open url reject-dict
 
 # > 追剧达人
 ^https?:\/\/zjdr666\.com\/zjdr\.php\/v\d\/(version|top_notice\?|advert\?position=[^2]+) url reject
