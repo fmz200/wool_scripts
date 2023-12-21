@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 微博去广告
- * @date 2023-12-11 09:23:00
+ * @date 2023-12-21 09:23:00
  */
 
 const url1 = '/search/finder';
@@ -112,7 +112,7 @@ function removeCommonAds(items) {
       removeHotSearchAds(items[i].data.group);
     }
     // 1.2、轮播图模块
-    if (items[i].data?.card_type === 118) {
+    if (items[i].data?.card_type === 118 || items[i].data?.card_type === 247) {
       console.log('移除轮播图模块💕💕');
       items[i] = {};
     }
