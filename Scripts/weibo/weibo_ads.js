@@ -17,7 +17,6 @@ const titleSubPicMap = {
   '热议': 'https://simg.s.weibo.com/20220402_hottopic-icon.png',
   '影像年': 'https://simg.s.weibo.com/ads/1%2Fads_1692185628.png',
   '本地': 'https://simg.s.weibo.com/20190123154142_tongcheng.png',
-  '亚运电竞': 'https://simg.s.weibo.com/ads/1%2Fads_1694765662.png',
   '直播': 'https://simg.s.weibo.com/20210705_live0705.png',
   '财经': 'https://simg.s.weibo.com/20190124150415_caijing.png',
   '找人': 'https://simg.s.weibo.com/20190125144608_zhaoren.png',
@@ -84,7 +83,9 @@ function process() {
   // 6、移除微博首页的多余tab页
   if (url.includes(url7)) {
     removePageDataAds(resp_data.pageDatas);
-    swapObjectsInArray(resp_data.pageDatas[0].categories[0].pageDatas, 0, 1);
+    // 删除恶心人的“全部微博”
+    delete resp_data.pageDatas[0].categories[0].pageDatas[0];
+    // swapObjectsInArray(resp_data.pageDatas[0].categories[0].pageDatas, 0, 1);
   }
 
   console.log('广告数据处理完毕🧧🧧');
