@@ -38,6 +38,9 @@ const titleSubPicMap = {
   '游戏中心': 'https://simg.s.weibo.com/ads/1%2Fads_1687759038.png'
 };
 
+// 模块类型，不在里面的都计划删除
+const cardTypes = ["217", "17", ""];
+
 let url = $request.url;
 let body = $response.body;
 try {
@@ -107,18 +110,26 @@ function processPayload(payload) {
 
 function removeCommonAds(items) {
   for (let i = 0; i < items.length; i++) {
+    const card_type = items[i].data?.card_type;
+    console.log('card_type = ' + card_type);
+    // 白名单模式
+    if (!cardTypes.includes(card_type)) {
+      console.log('移除多余的模块💕💕');
+      // items[i] = {};
+      // continue;
+    }
     // 1.1、"微博热搜"模块
-    if (items[i].data?.card_type === 17) {
+    if (card_type === 17) {
       console.log('处理微博热搜模块💕💕');
       removeHotSearchAds(items[i].data.group);
     }
     // 1.2、轮播图模块
-    if (items[i].data?.card_type === 118 || items[i].data?.card_type === 247) {
+    if (card_type === 118 || card_type === 247) {
       console.log('移除轮播图模块💕💕');
       items[i] = {};
     }
     // 1.3、”热聊、本地、找人“模块
-    if (items[i].data?.card_type === 19) {
+    if (card_type === 19) {
       console.log('处理热聊、本地、找人模块💕💕');
       delete items[i].data.more_pic;
       removeFinderChannelAds(items[i].data.group);
