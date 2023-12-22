@@ -16,7 +16,7 @@
 
 <p align="center">
   <a href="https://github.com/fmz200/wool_scripts">
-    <img src="pic/logo/logo05.png" alt="Logo" width="396" height="109">
+    <img src="pic/logo/logo05.png" alt="Logo" width="400" height="110">
   </a>
 </p>
 
@@ -36,7 +36,11 @@
 
 ▶️ 本项目中的内容请不要在中国大陆的任何平台传播。
 
+▶️ <span style="color: #F44336">Please do not disseminate the content in this project on any platform in mainland China. Thanks!</span>
+
 ▶️ 交流群组：👉🏻[苹果iOS去广告交流群](https://t.me/lanjieguanggao)，👉🏻[奶思|频道](https://t.me/inaisi)。
+
+![#c62828](https://via.placeholder.com/15/c62828/000000?text=+)
 
 ---
 
