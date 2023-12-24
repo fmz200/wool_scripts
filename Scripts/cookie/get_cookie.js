@@ -74,6 +74,7 @@ function getCookieORToken() {
   if (req_url.includes(smzdm.url)) {
     const cookie = req_headers['Cookie'] || req_headers['cookie'];
     $.write(cookie, '#SMZDM_COOKIE');
+    $.write(cookie, '#fmz200.smzdm.cookie');
     $.notify(smzdm.msg + '获取cookie成功✅', cookie, cookie);
     console.log(smzdm.msg + '获取到的ck为：' + cookie);
   }
@@ -85,6 +86,7 @@ function getCookieORToken() {
     const token = cookieValue.match(/PDDAccessToken=.+?/);
     if (token) {
       $.write(token, '#ddgyck');
+      $.write(token, '#fmz200.pdd.token');
       $.notify(pdd_orchard.msg + 'token获取成功', token, token);
       console.log(pdd_orchard.msg + '获取到的ck为：' + token);
     }
@@ -95,6 +97,7 @@ function getCookieORToken() {
     console.log(meituan.msg + '开始');
     const token = req_headers['token'] || req_headers['Token'];
     $.write(token, '#meituanCookie');
+    $.write(token, '#fmz200.meituan.cookie');
     $.notify(meituan.msg + '获取成功✅', token, token);
     console.log(meituan.msg + '获取到的内容为：' + token);
   }
