@@ -36,15 +36,17 @@ https?:\/\/game\.xiaojukeji\.com\/api\/game\/plant\/enter url script-request-hea
 # 美团买菜天天果园获取token
 ^https:\/\/mall\.meituan\.com\/api\/\c\/mallcoin\/game\/fruit\/waterTreeV2 url script-request-header https://raw.githubusercontent.com/passerby-b/mt_fruit/main/mtmc_getToken.js
 
-# 美团
-https://open.meituan.com/user/v1/info/audit url script-request-header https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/get_cookie.js
+# 美团获取token
+https://open.meituan.com/user/v1/info/audit url script-request-header https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cookie/get_cookie.js
+https://gaea.meituan.com/mapi/usercenter url script-request-header https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cookie/get_cookie.js
 
 # 京东ck，浏览器登录京东，点击右下角我的页面获取
 ^https:\/\/home\.m\.jd\.com\/myJd\/(newhome|home)\.action url script-request-header https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingdong/jd_cookie.js
 ;^https:\/\/api\.m\.jd\.com\/client\.action url script-request-header https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingdong/jd_cookie.js
 
 # 微博ck
-^https:\/\/m?api\.weibo\.c(n|om)\/\d\/users\/show url script-request-header https://raw.githubusercontent.com/Sunert/Script/master/Task/weibo.js
+^https:\/\/m?api\.weibo\.c(n|om)\/\d\/users\/show url script-request-header https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cookie/get_cookie.js
+;^https:\/\/m?api\.weibo\.c(n|om)\/\d\/users\/show url script-request-header https://raw.githubusercontent.com/Sunert/Script/master/Task/weibo.js
 
 # 抖音 抖抖果园
 ^https://minigame.zijieapi.com/ttgame/game_orchard_ecom/polling_info url script-request-header https://raw.githubusercontent.com/LinYuanovo/scripts/main/dygy.js
@@ -59,7 +61,7 @@ https://m.pinduoduo.net/proxy/api/api/server/_stm url script-request-header http
 # ^https:\/\/account\.huami\.com\/v2\/client\/login url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/xiaomiSports/xmSports.js
 
 # 什么值得买 (APP点击个人头像/个人资料获取)
-^https:\/\/user-api\.smzdm\.com\/users\/info url script-request-header https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/get_cookie.js
+^https:\/\/user-api\.smzdm\.com\/users\/info url script-request-header https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cookie/get_cookie.js
 
 # TestFlight账号cookie
 ^https:\/\/testflight\.apple\.com\/v3\/accounts/.*\/apps$ url script-request-header https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/testflight/TF_keys.js
