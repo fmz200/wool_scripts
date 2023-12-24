@@ -29,10 +29,11 @@ const pdd_orchard = {
  * 脚本作用：美团获取token
  * 触发类型：request-header
  * 获取方式：点击“我的”-“个人头像”，在请求头request-header中搜索token
- * 更新时间：2023.09.07 17:30
+ * 更新时间：2023.12.24 17:30
  */
 const meituan = {
   url: "/user/v1/info/audit",
+  url1: "/mapi/usercenter",
   msg: "美团获取token"
 };
 
@@ -78,7 +79,7 @@ function getCookieORToken() {
   }
 
   // 美团
-  if (current_url.includes(meituan.url)) {
+  if (current_url.includes(meituan.url) || current_url.includes(meituan.url1)) {
     console.log(meituan.msg + '开始');
     const token = current_headers['token'] || current_headers['Token'];
     $.write(token, '#meituanCookie');
