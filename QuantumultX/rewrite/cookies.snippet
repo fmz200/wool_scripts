@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/cookies.snippet
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2023-11-12 22:03:00
+#!date=2023-12-29 06:03:00
 #############################################
 # 包含内容：
 # chavyleung    https://github.com/chavyleung/scripts/blob/master/QuantumultX_Local_Cookie.conf
@@ -33,9 +33,6 @@ hostname = yunbusiness.ccb.com, home.m.jd.com, api.m.jd.com, ms.jr.jd.com, jdrea
 https?:\/\/game\.xiaojukeji\.com\/api\/game\/plant\/enter url script-request-body https://raw.githubusercontent.com/passerby-b/didi_fruit/main/dd_getToken.js
 https?:\/\/game\.xiaojukeji\.com\/api\/game\/plant\/enter url script-request-header https://raw.githubusercontent.com/leafTheFish/DeathNote/main/ddgy.js
 
-# 美团买菜天天果园获取token
-^https:\/\/mall\.meituan\.com\/api\/\c\/mallcoin\/game\/fruit\/waterTreeV2 url script-request-header https://raw.githubusercontent.com/passerby-b/mt_fruit/main/mtmc_getToken.js
-
 # 美团获取token
 https://open.meituan.com/user/v1/info/audit url script-request-header https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cookie/get_cookie.js
 https://gaea.meituan.com/mapi/usercenter url script-request-header https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cookie/get_cookie.js
@@ -58,7 +55,7 @@ https://gaea.meituan.com/mapi/usercenter url script-request-header https://raw.g
 https://m.pinduoduo.net/proxy/api/api/server/_stm url script-request-header https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/pinduoduo/pdd_getToken.js
 
 # 小米运动
-# ^https:\/\/account\.huami\.com\/v2\/client\/login url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/xiaomiSports/xmSports.js
+;^https:\/\/account\.huami\.com\/v2\/client\/login url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/xiaomiSports/xmSports.js
 
 # 什么值得买 (APP点击个人头像/个人资料获取)
 ^https:\/\/user-api\.smzdm\.com\/users\/info url script-request-header https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cookie/get_cookie.js
