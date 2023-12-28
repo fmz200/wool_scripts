@@ -1,5 +1,5 @@
 #!name=广告拦截合集-分流
-#!desc=(F)针对部分APP开屏广告，应用内广告进行拦截，某些APP要清除缓存或者重新安装APP，拦截广告才会生效！
+#!desc=(F)针对部分APP和小程序广告进行拦截，某些APP要清除缓存或者重新安装APP，拦截广告才会生效！
 #!author=fmz200
 #!homepage=https://github.com/fmz200/wool_scripts
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
@@ -1684,7 +1684,6 @@ host-keyword, ad-sign.byteimg.com, reject
 # >>>>>>>>>>>>>>> ✅ 其他广告 ✅ <<<<<<<<<<<<<<
 host-keyword, huichuan-mc.sm.cn, reject
 host-keyword, extlog.snssdk.com, reject
-;host-keyword, is.snssdk.com, reject
 host-keyword, mobads.baidu.com, reject
 host-keyword, s3a.pstatp.com, reject
 host-keyword, sdfp.snssdk.com, reject

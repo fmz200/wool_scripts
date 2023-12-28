@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 微博去广告
- * @date 2023-12-28 14:23:00
+ * @date 2023-12-28 20:23:00
  */
 
 const url1 = '/search/finder';
@@ -95,7 +95,7 @@ function process() {
   // 7、话题页面
   if (url.includes(url8)) {
     for (let i = 0; i < resp_data.items; i++) {
-      if (resp_data.items[i].data?.mblogtypename === "广告") {
+      if (resp_data.items[i].data?.mblogtypename === "广告" || resp_data.items[i].data?.ad_state === 1) {
         resp_data.items[i] = {};
       }
     }
