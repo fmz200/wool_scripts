@@ -93,7 +93,7 @@ function process() {
   }
 
   // 7、话题页面
-  if (url.includes(url7)) {
+  if (url.includes(url8)) {
     for (let i = 0; i < resp_data.items; i++) {
       if (resp_data.items[i].data?.mblogtypename === "广告") {
         resp_data.items[i] = {};

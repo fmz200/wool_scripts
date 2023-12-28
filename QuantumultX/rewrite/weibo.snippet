@@ -22,7 +22,7 @@ https://api\.weibo\.cn/2/(push/active|client/addlog_batch|ad/preload) url script
 # 屏蔽首页左上角每日的弹窗tips
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d/push/daily url reject-dict
 
-# 话题按钮🔘的提示
+# 超话按钮的提示
 https://api.weibo.cn/2/!/huati/discovery_home_bottom_getdotinfo url reject
 
 # 微博移除发现页广告
@@ -30,6 +30,9 @@ https://api.weibo.cn/2/!/huati/discovery_home_bottom_getdotinfo url reject
 
 # 微博热搜页面广告
 ^https?://api.weibo.cn/2/page url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
+
+# 微博话题页面广告
+https://api.weibo.cn/2/searchall url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
 
 # 微博超话页面广告
 ^https?://api.weibo.cn/2/statuses/container_timeline_topicpage url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
