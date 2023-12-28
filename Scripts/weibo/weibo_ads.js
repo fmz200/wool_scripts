@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 微博去广告
- * @date 2023-12-21 09:23:00
+ * @date 2023-12-28 14:23:00
  */
 
 const url1 = '/search/finder';
@@ -11,6 +11,7 @@ const url4 = '/api.weibo.cn/2/page'; // 微博热搜页面url
 const url5 = '/statuses/container_timeline_topicpage'; // 微博超话页面
 const url6 = '/statuses/extend'; // 微博详情页面广告
 const url7 = '/groups/allgroups/v2' // 微博首页Tab标签页 https://api.weibo.cn/2/groups/allgroups/v2
+const url8 = '/2/searchall' // 微博话题页面 https://api.weibo.cn/2/searchall
 
 const titleSubPicMap = {
   '电影': 'https://simg.s.weibo.com/imgtool/20221207_dianying.png',
@@ -89,6 +90,16 @@ function process() {
     // 删除恶心人的“全部微博”
     delete resp_data.pageDatas[0].categories[0].pageDatas[0];
     // swapObjectsInArray(resp_data.pageDatas[0].categories[0].pageDatas, 0, 1);
+  }
+
+  // 7、话题页面
+  if (url.includes(url7)) {
+    for (let i = 0; i < resp_data.items; i++) {
+      if (resp_data.items[i].data?.mblogtypename === "广告") {
+        resp_data.items[i] = {};
+      }
+    }
+    console.log('处理话题页面广告结束💕💕');
   }
 
   console.log('广告数据处理完毕🧧🧧');
