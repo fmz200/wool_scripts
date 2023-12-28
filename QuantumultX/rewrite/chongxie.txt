@@ -2532,9 +2532,10 @@ https://edith.xiaohongshu.com/api/sns/v1/note/live_photo/save url script-respons
 ^https?:\/\/m\.yap\.yahoo\.com\/v\d{2}\/getAds\.do url reject
 
 # > YouTube
-^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence)\? url script-request-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/YouTube/youtube.request.beta.proto.js
-^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting)\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/YouTube/youtube.response.beta.proto.js
-^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad url reject-200
+# hostname = rr*.googlevideo.com, youtubei.googleapis.com
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence) url script-request-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/YouTube/request.js
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting) url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/YouTube/response.js
+^https:\/\/[\w-]+\.googlevideo\.com\/initplayback\?.+&oad url reject-dict
 
 # > 印象笔记
 ^https?:\/\/app\.yinxiang\.com\/ads\/ url reject-200
