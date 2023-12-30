@@ -465,7 +465,7 @@ https://beta-api.crunchyroll.com/cms url response-body offset_ms":\d+ response-b
 ^https:\/\/ios-api\.lucklyworld\.com\/v6\/api\/config\/startup url reject-dict
 
 # > 财新
-^https?:\/\/gg\.caixin\.com\/s\?z=caixin&op=1&c=3362 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/caixinAd.js
+^https?:\/\/gg\.caixin\.com\/s\?z=caixin&op=1&c=3362 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/caixin/caixinAd.js
 
 # > 财联社
 ^https?:\/\/api3\.cls\.cn\/v1\/boot\/ad url reject

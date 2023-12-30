@@ -465,7 +465,7 @@ host, apd-pcdnwxlogin.teg.tencent-cloud.net, REJECT
 host, api.iegadp.qq.com, REJECT
 host-suffix, byteorge.com, REJECT
 host-suffix, bytegoofy.com, REJECT
-host-suffix, bytedance.com, REJECT
+;host-suffix, bytedance.com, REJECT
 IP-CIDR, 49.71.37.101/32, REJECT, no-resolve
 IP-CIDR, 117.71.105.23/32, REJECT, no-resolve
 IP-CIDR, 218.94.207.205/32, REJECT, no-resolve
