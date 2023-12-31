@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/chongxie.txt
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2023-12-28 20:08:00
+#!date=2023-12-31 17:08:00
 #!support=支持约531款APP/小程序
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
@@ -1651,7 +1651,9 @@ https://api.rr.tv/storage/business/rootName/app/homePage\?dataType=JSON url reje
 ;^https://api-account.soulapp.cn/teenager/config url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js
 
 # > Stay
-^https?:\/\/api\.shenyin\.name\/stay-fork\/browse\/featured$ url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/stay.js
+# hostname = api.shenyin.name
+# 会导致视频下载转码失败
+;^https?:\/\/api\.shenyin\.name\/stay-fork\/browse\/featured$ url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/stay.js
 
 # > 苏宁
 ^https?:\/\/mpcs\.suning\.com\/mpcs\/dm\/getDmInfo url reject
