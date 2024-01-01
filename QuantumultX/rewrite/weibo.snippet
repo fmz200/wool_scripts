@@ -16,8 +16,8 @@
 
 hostname = api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, new.vip.weibo.cn
 
-# 似乎没用的请求
-https://api\.weibo\.cn/2/(push/active|client/addlog_batch|ad/preload) url script-request-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/privacy_protection.js
+# 似乎没用的请求，收集用户信息
+https://api\.weibo\.cn/2/(push/active|client/addlog_batch|ad/preload) url script-request-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/template/req_replace_body.js
 
 # 屏蔽首页左上角每日的弹窗tips
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d/push/daily url reject-dict
