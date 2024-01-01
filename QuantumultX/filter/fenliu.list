@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/fenliu.list
 #!tg-group：https://t.me/lanjieguanggao
-#!date：2023-12-06 23:56:00
+#!date：2024-01-01 09:23:00
 #!support：约9392行
 #!proxy-select：reject
 #############################################
@@ -1799,7 +1799,7 @@ host-suffix, etahub.com, reject
 host-suffix, 22c.in, reject
 host-suffix, imgxxx.shunxincar.cn, reject
 host-suffix, cc58.oss-cn-beijing.aliyuncs.com, reject
-host-suffix, oss-accelerate.aliyuncs.com, reject
+;host-suffix, oss-accelerate.aliyuncs.com, reject
 host-suffix, kk.braincf.com, reject
 host-suffix, run.haireig.com, reject
 host-suffix, d.zxptw.cn, reject
