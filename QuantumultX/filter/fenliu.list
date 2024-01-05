@@ -20,7 +20,7 @@
 
 
 # >>>>>>>>>>>>>>> ✅ # ✅ <<<<<<<<<<<<<<
-# 广告联盟
+# > 广告联盟
 HOST-SUFFIX, miaozhen.com, REJECT
 HOST-KEYWORD, -ad-sign.byteimg.com, REJECT
 HOST-KEYWORD, -tos.pstatp.com, REJECT
@@ -32,6 +32,10 @@ HOST-KEYWORD, video-cn.snssdk.com, REJECT
 HOST-KEYWORD, volcvod.com, REJECT
 HOST-KEYWORD, volceapplog.com, REJECT
 
+# > 收集用户隐私联盟
+host-keyword, volces.com, reject
+host-keyword, volccdn.com, reject
+;host-keyword, volc.com, reject
 
 # >>>>>>>>>>>>>>> ✅ 0 ✅ <<<<<<<<<<<<<<
 
@@ -770,11 +774,15 @@ host-suffix, zryydi.com, reject
 # > 美团
 host, flowplus.meituan.net, reject
 host-suffix, analytics.meituan.net, reject
-host-suffix, meituan.xn--io0a7i, reject
+host-suffix, meituan.xn, reject
 host-suffix, meituan.yoga, reject
 host-suffix, meituangov.cn, reject
 host-suffix, report.meituan.com, reject
 host-suffix, wmlog.meituan.com, reject
+host-suffix, ad.e.waimai.sankuai.com, reject
+host-suffix, mads.meituan.com, reject
+host-suffix, dreport.meituan.net, reject
+host-suffix, d.meituan.net, reject
 
 # > 美颜相机 去首页和轮播广告
 host, adui.tg.meitu.com, reject
@@ -1030,6 +1038,9 @@ host, imgadpai.thepaper.cn, reject
 
 # > TalkingData
 host-suffix, cpatrk.net, reject
+
+# > Talkatone
+host-suffix, tappx.com, reject
 
 # > 天神
 host, track.tenjin.com, reject
@@ -9531,7 +9542,6 @@ host-suffix, track.tiara.daum.net, reject
 host-suffix, track.tiara.kakao.com, reject
 host-suffix, trackapp.guahao.cn, reject
 host-suffix, traffic.mogujie.com, reject
-host-suffix, wmlog.meituan.com, reject
 host-suffix, adshow.58.com, reject
 host-suffix, track.58.com, reject
 host-suffix, tracklog.58.com, reject

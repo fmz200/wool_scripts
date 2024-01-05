@@ -32,9 +32,7 @@ function removeAds(url, data) {
   // 2、青少年模式弹窗
   // https://api-account.soulapp.cn/teenager/config url script-response-body soul_ads.js
   if (url.includes(targetUrl02)) {
-    // responseData.data = {};
-    responseData.data.isTeenageModeSquare = false;
-    responseData.data.isPopTeenWindow = false;
+    // responseData.data.isPopTeenWindow = false;
     console.log('去除青少年模式弹窗💕');
   }
 
