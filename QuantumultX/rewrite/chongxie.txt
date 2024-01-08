@@ -624,7 +624,7 @@ https://beta-api.crunchyroll.com/cms url response-body offset_ms":\d+ response-b
 ^https:\/\/api\.gamer\.com\.tw\/mobile_app\/anime\/v\d/(token|m3u8).php\? url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Bahamut/BahamutAnimeAds.js
 
 # > 滴滴出行
-# hostname = res.xiaojukeji.com, img-ys011.didistatic.com, common.diditaxi.com.cn, hd.xiaojukeji.com, freight.xiaojukeji.com, daijia.kuaidadi.com, ct.xiaojukeji.com, conf.diditaxi.com.cn
+# hostname = res.xiaojukeji.com, common.diditaxi.com.cn, hd.xiaojukeji.com, freight.xiaojukeji.com, daijia.kuaidadi.com, ct.xiaojukeji.com, conf.diditaxi.com.cn
 ^https:\/\/hd\.xiaojukeji\.com\/d url reject-dict
 ^https:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
 ^https:\/\/freight\.xiaojukeji\.com\/gateway url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
@@ -642,8 +642,8 @@ https://beta-api.crunchyroll.com/cms url response-body offset_ms":\d+ response-b
 # > 滴滴青桔
 # hostname = pt-starimg.didistatic.com, omgup*.xiaojukeji.com
 ^https?:\/\/pt-starimg\.didistatic\.com\/static\/starimg\/node\/.*.(jpg|png|gif) url reject-200
-^https?:\/\/omgup[0-9]{1}\.xiaojukeji\.com\/api url reject-200
-^https?:\/\/omgup*\.xiaojukeji\.com\/api url reject-200
+;^https?:\/\/omgup[0-9]{1}\.xiaojukeji\.com\/api url reject-200
+;^https?:\/\/omgup*\.xiaojukeji\.com\/api url reject-200
 
 # > 滴滴代驾小程序
 # hostname = daijia.kuaidadi.com, as.xiaojukeji.com
@@ -725,12 +725,12 @@ https://beta-api.crunchyroll.com/cms url response-body offset_ms":\d+ response-b
 ^https?:\/\/gw\.alicdn\.com\/imgextra\/\w{2}\/[\w!]+-\d-tps-\d{3}-\d{4}\.(jpg|png)$ url reject
 
 # > 飞常准
-# hostname = 
+# hostname = app.variflight.com
 ^https?:\/\/app\.variflight\.com\/ad\/ url reject
 ^https?:\/\/app\.variflight\.com\/v\d\/advert\/ url reject
 
 # > 飞客茶馆
-# hostname = 
+# hostname = ptf.flyertrip.com, 47.100.65.202, www.flyert.com
 ^https?:\/\/ptf\.flyertrip\.com\/common\/cf\/.*.jpg url reject-200
 ^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=advis url reject
 ^https?:\/\/47\.100\.65\.202\/api\/mobile\/index\.php\?version=\d&mobile=yes&module=basicdata&type=forumlist url response-body adv response-body random_body
@@ -755,7 +755,7 @@ https://beta-api.crunchyroll.com/cms url response-body offset_ms":\d+ response-b
 ^http:\/\/.+\.byteimg\.com\/web\.business\.image url reject
 
 # > 樊登读书
-# hostname = 
+# hostname = gateway-api.dushu365.com
 ^https?:\/\/gateway-api\.dushu365\.com\/chief-orch\/config\/config\/v100\/appConfig url reject
 
 # > 丰巢
@@ -2394,9 +2394,9 @@ https://b.appsimg.com/upload/momin/ url reject
 ^https?:\/\/app-api\.niu\.com\/v\d\/advertisement\/ url reject
 
 # > 小桔科技
-^https?:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds url reject
-^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNotices) url reject
-^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget url reject
+;^https?:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds url reject
+;^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNotices) url reject
+;^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget url reject
 
 # > 小艺
 ^https://api.xiaoyi.com\/v5\/app\/mobile\/ads url reject
