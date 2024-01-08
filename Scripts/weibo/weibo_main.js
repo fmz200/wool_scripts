@@ -1,7 +1,8 @@
 /**
- * 当前仓库：@fmz200
- * 脚本来源：复制@zmqcherish的脚本
- * 更新时间：2023.04.11 22：06
+ * @auther @fmz200
+ * @function 微博去广告
+ * @date 2024-01-08 21:00:00
+ * @quote @zmqcherish
  */
 
 const version = 'v20230411.1';
@@ -153,6 +154,21 @@ function removeMain(data) {
 			continue;
 		}
 		if(!isAd(item.data)) {
+			// 无水印图片，但画质较低
+			if (item.data && item.data.pic_infos) {
+				for (let key in item.data.pic_infos) {
+          let picture = item.data.pic_infos[key];
+          let high_url = picture.original.url.replace("orh1080", "oslarge");
+          // console.log('set high_url ' + high_url);
+					picture.largest.url = high_url;
+					picture.thumbnail.url = high_url;
+					picture.large.url = high_url;
+					picture.middleplus.url = high_url;
+					picture.mw2000.url = high_url;
+					picture.bmiddle.url = high_url;
+          // console.log('set high_url success');
+				}
+			}
 			newItems.push(item);
 		}
 	}
