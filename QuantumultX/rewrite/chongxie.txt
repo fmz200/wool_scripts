@@ -589,16 +589,6 @@ https://beta-api.crunchyroll.com/cms url response-body offset_ms":\d+ response-b
 ^https?:\/\/mapi\.dangdang\.com\/index\.php\?action=init url reject
 ^https?:\/\/e\.dangdang\.com\/.+?getDeviceStartPage url reject
 
-# > 嘀嗒出行
-# hostname = capis*.didapinche.com, conf.diditaxi.com.cn, adx-cn.anythinktech.com, www.didapinche.com
-# 小程序净化
-^https?:\/\/capis(-\d)?\.didapinche\.com\/adbase url reject
-^https?:\/\/capis(-\d)?\.didapinche\.com\/ad\/ url reject
-^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/core url reject-dict
-^https?:\/\/adx-cn\.anythinktech\.com\/bid url reject-dict
-^https?:\/\/capis(-?\w*)?\.didapinche\.com\/publish\/api\/upgrade url reject-dict
-^https?:\/\/www\.didapinche\.com\/app\/adstat\/ url reject-200
-
 # > 叮咚买菜
 # hostname = maicai.api.ddxq.mobi
 # 开屏广告
@@ -661,6 +651,15 @@ https://beta-api.crunchyroll.com/cms url response-body offset_ms":\d+ response-b
 ^https:\/\/as\.xiaojukeji\.com\/ep\/as\/conf\?ns=daijia-front&name= url reject-dict
 ^https:\/\/daijia\.kuaidadi\.com\/gateway\?api=prado\.cms\.delivery\.batch&apiVe url reject-dict
 
+# > 嘀嗒出行
+# hostname = capis*.didapinche.com, adx-cn.anythinktech.com, www.didapinche.com
+# 小程序净化
+^https?:\/\/capis(-\d)?\.didapinche\.com\/adbase url reject
+^https?:\/\/capis(-\d)?\.didapinche\.com\/ad\/ url reject
+^https?:\/\/adx-cn\.anythinktech\.com\/bid url reject-dict
+^https?:\/\/capis(-?\w*)?\.didapinche\.com\/publish\/api\/upgrade url reject-dict
+^https?:\/\/www\.didapinche\.com\/app\/adstat\/ url reject-200
+
 # > 得物
 # hostname = app.dewu.com, cdn.poizon.com
 # 开屏广告 【Runestoner】分享
@@ -713,12 +712,12 @@ https://beta-api.crunchyroll.com/cms url response-body offset_ms":\d+ response-b
 
 # >>>>>>>>>>>>>>> ✅ F ✅ <<<<<<<<<<<<<<
 # > Flightradar24
-# hostname = 
+# hostname = mobile.flightradar24.com
 # 解锁
 ^https://mobile.flightradar24.com/mobile/(user-session|subscribe) url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/Flightradar24.js
 
 # > 飞猪 + 阿里巴巴
-# hostname = 
+# hostname = amdc.m.taobao.com, acs.m.taobao.com, gw.alicdn.com
 ^http?:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch %E9%A3%9E%E7%8C%AA%E6%97%85%E8%A1%8C url-and-header reject-dict
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.fliggy\.crm\.screen\.(allresource|predict) url reject-dict
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources\/1\.0\?type=originaljson url reject-img
