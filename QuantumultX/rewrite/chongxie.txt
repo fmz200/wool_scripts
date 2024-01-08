@@ -635,9 +635,6 @@ https://beta-api.crunchyroll.com/cms url response-body offset_ms":\d+ response-b
 
 # > 滴滴出行
 # hostname = res.xiaojukeji.com, img-ys011.didistatic.com, common.diditaxi.com.cn, hd.xiaojukeji.com, freight.xiaojukeji.com, daijia.kuaidadi.com, ct.xiaojukeji.com, conf.diditaxi.com.cn
-;^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget url reject-dict
-^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNotices) url reject
-^https?:\/\/img-ys011\.didistatic\.com\/static\/ad_oss\/.*.jpg url reject
 ^https:\/\/hd\.xiaojukeji\.com\/d url reject-dict
 ^https:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
 ^https:\/\/common\.diditaxi\.com\.cn\/common\/v\d\/usercenter\/me url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js
