@@ -1878,7 +1878,7 @@ host-suffix, mcupdate.gstarcad.com, reject
 host-suffix, adx.open-adx.com, reject
 host-suffix, adservice.sigmob.cn, reject
 host-suffix, gwp.xiaojukeji.com, reject
-host-suffix, ct.xiaojukeji.com, reject
+;host-suffix, ct.xiaojukeji.com, reject
 host-suffix, unidesk.alicdn.com, reject
 host-suffix, idealads.net, reject
 host-suffix, ironsrc.com, reject
