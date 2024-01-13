@@ -1657,7 +1657,7 @@ https://access.mypikpak.com/access_controller/v1/area_accessible url reject
 
 # > 浦大喜奔
 # hostname = image.spdbccc.com.cn
-^https?:\/\/image\.spdbccc\.com\.cn\/group\d\/M00\/[A-Z0-9]{2}\/[A-Z0-9]{2}\/.+(4038|0571|M511|V-008|g549|b0628|fg817|5w501|Jo341|Z4583|oo845|i4905|MY245|YU472) url reject-dict url reject-dict
+^https?:\/\/image\.spdbccc\.com\.cn\/group\d\/M00\/[A-Z0-9]{2}\/[A-Z0-9]{2}\/.+(4038|0571|M511|V-008|g549|b0628|fg817|5w501|Jo341|Z4583|oo845|i4905|MY245|YU472) url reject-dict
 
 # > 朴朴超市
 # hostname = j1.pupuapi.com
