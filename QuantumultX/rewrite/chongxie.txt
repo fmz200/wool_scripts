@@ -2110,6 +2110,7 @@ https://top-widgets-api.xiaozujian.com/api/ad/config url reject
 
 # > 同程旅行 开屏广告 @豆豆分享
 ^https:\/\/wx\.17u\.cn\/xcxhomeapi\/((aggregator\/index)|(home\/(screen|banner|converge)))$ url reject
+^https?:\/\/wx\.17u\.cn\/crapi\/query\/getAdImgUrlByCode url reject-dict
 
 # > 淘票票
 # 开屏广告
