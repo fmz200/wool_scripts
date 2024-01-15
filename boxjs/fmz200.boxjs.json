@@ -554,6 +554,52 @@
         "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ccbLife.jpg",
         "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ccbLife.jpg"
       ]
+    },
+    {
+      "id": "douyuYubaSign",
+      "name": "斗鱼鱼吧签到",
+      "desc_html": "⚠️使用说明</br>详情【<a href='https://github.com/fmz200/wool_scripts/raw/main/Scripts/douyu/yubaSign.js'><font class='red--text'>点我查看</font></a>】",
+      "icons": [
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/douyu.png",
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/douyu.png"
+      ],
+      "keys": [
+        "CookieDY",
+        "GroupDY"
+      ],
+      "settings": [
+        {
+          "id": "lkIsEnableLogDouyuYubaSign",
+          "name": "开启/关闭日志",
+          "val": true,
+          "type": "boolean",
+          "desc": "默认开启"
+        },
+        {
+          "id": "lkNotifyOnlyFailDouyuYubaSign",
+          "name": "只当执行失败才通知",
+          "val": false,
+          "type": "boolean",
+          "desc": "默认关闭"
+        },
+        {
+          "id": "lkIsEnableTgNotifyDouyuYubaSign",
+          "name": "开启/关闭Telegram通知",
+          "val": false,
+          "type": "boolean",
+          "desc": "默认关闭"
+        },
+        {
+          "id": "lkTgNotifyUrlDouyuYubaSign",
+          "name": "Telegram通知地址",
+          "val": "",
+          "type": "text",
+          "desc": "Tg的通知地址，如：https://api.telegram.org/bot-token/sendMessage?chat_id=-100140&parse_mode=Markdown&text="
+        }
+      ],
+      "author": "@demo2099, @lowking, @fmz200",
+      "repo": "https://github.com/fmz200/wool_scripts",
+      "script": "https://github.com/fmz200/wool_scripts/raw/main/Scripts/douyu/yubaSign.js"
     }
   ]
 }
