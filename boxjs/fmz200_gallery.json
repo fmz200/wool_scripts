@@ -1,6 +1,6 @@
 {
-  "name": "fmz200的定时任务订阅",
-  "description": "https://github.com/fmz200/wool_scripts",
+  "name": "fmz200のTasks",
+  "description": "收集一些自用的定时任务，仓库地址 https://github.com/fmz200/wool_scripts",
   "task": [
     "0 1 0 * * ? https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js, tag=阿里云盘签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/aliYunPan.png, enabled=true",
     "10 0,8,12,18 * * * https://raw.githubusercontent.com/passerby-b/didi_fruit/main/dd_fruit.js, tag=滴滴橙心果园, img-url=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/task/didi.png, enabled=true",
