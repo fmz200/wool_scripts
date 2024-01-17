@@ -1865,10 +1865,10 @@ https://api.rr.tv/storage/business/rootName/app/homePage\?dataType=JSON url reje
 # > Soul
 # hostname = 47.99.42.29, 47.97.215.55, 120.27.235.201, ssp.soulapp.cn, api-account.soulapp.cn, api-global.soulapp.me
 # 多MITM几个IP去广告
-;https://ssp.soulapp.cn/api/q url response-body prs response-body random_body
-^https:\/\/ssp\.soulapp\.cn\/api\/q url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js
+^https:\/\/ssp\.soulapp\.cn\/api\/q url response-body prs response-body random_body
+;^https:\/\/ssp\.soulapp\.cn\/api\/q url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js
 # 青少年模式弹窗暂时去不掉
-^https://api-account.soulapp.cn/teenager/config url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js
+;^https://api-account.soulapp.cn/teenager/config url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js
 # 国际版Soul去广告
 https://api-global.soulapp.me/app/open/get url reject
 
