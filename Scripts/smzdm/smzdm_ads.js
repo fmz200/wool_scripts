@@ -9,14 +9,14 @@ let responseBody = $response.body;
 
 let obj = JSON.parse(responseBody);
 
-// https://app-api.smzdm.com/util/update
-if (requestUrl.includes("/util/update")) {
+// https://user-api.smzdm.com/vip/creator_user_center
+if (requestUrl.includes("/vip/creator_user_center")) {
   obj.data = {};
   console.log('去除个人中心广告💕');
 }
 
-// https://user-api.smzdm.com/vip/creator_user_center
-if (requestUrl.includes("/vip/creator_user_center")) {
+// https://app-api.smzdm.com/util/update
+if (requestUrl.includes("/util/update")) {
   obj.data.operation_float = [];
   console.log('去除弹窗图片广告💕');
 }
