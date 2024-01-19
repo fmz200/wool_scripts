@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/fenliu.list
 #!tg-group：https://t.me/lanjieguanggao
-#!date：2024-01-01 09:23:00
+#!date：2024-01-19 20:03:00
 #!support：约9392行
 #!proxy-select：reject
 #############################################
@@ -32,10 +32,12 @@ HOST-KEYWORD, video-cn.snssdk.com, REJECT
 HOST-KEYWORD, volcvod.com, REJECT
 HOST-KEYWORD, volceapplog.com, REJECT
 
-# > 收集用户隐私联盟
-host-keyword, volces.com, reject
-host-keyword, volccdn.com, reject
-;host-keyword, volc.com, reject
+# > 收集用户隐私联盟，若有问题自行设置白名单
+;host-keyword, volces.com, reject
+;host-keyword, volccdn.com, reject
+host-keyword, volc.com, reject
+
+
 
 # >>>>>>>>>>>>>>> ✅ 0 ✅ <<<<<<<<<<<<<<
 
@@ -1017,6 +1019,18 @@ host-suffix, wxsnsdythumb.wxs.qq.com, reject
 
 # > 收钱吧 买单小程序去广告
 host, ads-shopping.shouqianba.com, reject
+
+# > 什么值得买
+host, aaid.uyunad.com, REJECT
+host, acs4baichuan.m.taobao.com, REJECT
+host, adashxgc.ut.taobao.com, REJECT
+host, analytics-api.smzdm.com, REJECT
+host, baichuan-sdk.alicdn.com, REJECT
+host, dgstatic.jd.com, REJECT
+host, msg.umengcloud.com, REJECT
+host, sec.umeng.com, REJECT
+host, ulogs.umeng.com, REJECT
+host, ynuf.aliapp.org, REJECT
 
 
 

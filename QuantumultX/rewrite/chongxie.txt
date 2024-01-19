@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/chongxie.txt
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2024-01-17 22:43:00
+#!date=2024-01-19 20:03:00
 #!support=支持约531款APP/小程序
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
@@ -622,6 +622,11 @@ https://beta-api.crunchyroll.com/cms url response-body offset_ms":\d+ response-b
 # > 丁香园
 # hostname = dq.dxy.cn
 ^https?:\/\/dq\.dxy\.cn\/api\.php\?action=getpostbanners url reject
+
+# > 钉钉
+# hostname = gw.alicdn.com, img.alicdn.com
+# 误杀少 解决阿里系的开屏 目前测试咸鱼/钉钉 感谢【zzzzzz】分享
+^https:\/\/(gw|img)\.alicdn\.com\/imgextra\/.+\/[\w!]+\d+-\d+-.+-\b([8-9]\d{2,}|[1-9]\d{3,})\b-\b([5-9]\d{2,}|[1-9]\d{3,})\b url reject-dict
 
 # > 动画疯
 # hostname = api.gamer.com.tw, api.gamer.com.tw
@@ -2377,6 +2382,12 @@ http:\/\/analytics\.163\.com\/ntes url reject
 ^https:\/\/dict\.youdao\.com\/dictusertask\/system url reject-dict
 # 会员界面横幅广告
 ^https:\/\/dictvip-business\.youdao\.com\/home\/ad url reject-dict
+# 其他
+^https?:\/\/oimage([a-z])([0-9])\.ydstatic\.com\/.+adpublish url reject
+^https?:\/\/oimage\w\d\.ydstatic\.com\/image\?.+?=adpublish url reject-img
+^https?:\/\/dsp-impr2\.youdao\.com\/adload url reject-200
+^https?:\/\/impservice\.dictapp\.youdao\.com\/imp\/request url reject-img
+^https?:\/\/oral\.youdao\.com\/oral\/adInfo url reject-img
 
 # > 威锋
 ^https:\/\/api\.wfdata\.club\/v2\/yesfeng\/(infoCenterAd|yesList) url reject
@@ -2791,13 +2802,6 @@ https://ci.xiaohongshu.com/system_config/watermark url reject-img
 
 # > 印象笔记
 ^https?:\/\/app\.yinxiang\.com\/ads\/ url reject-200
-
-# > 有道词典
-^https?:\/\/oimage([a-z])([0-9])\.ydstatic\.com\/.+adpublish url reject
-^https?:\/\/oimage\w\d\.ydstatic\.com\/image\?.+?=adpublish url reject-img
-^https?:\/\/dsp-impr2\.youdao\.com\/adload url reject-200
-^https?:\/\/impservice\.dictapp\.youdao\.com\/imp\/request url reject-img
-^https?:\/\/oral\.youdao\.com\/oral\/adInfo url reject-img
 
 # > 易车
 ^https?:\/\/api\.ycapp\.yiche\.com\/appnews\/getadlist url reject-img
