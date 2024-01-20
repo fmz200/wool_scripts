@@ -4,10 +4,10 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/fenliu.list
-#!tg-group：https://t.me/lanjieguanggao
-#!date：2024-01-19 20:03:00
-#!support：约9392行
-#!proxy-select：reject
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2024-01-20 11:03:00
+#!support=约9392行
+#!proxy-select=reject
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -29,13 +29,9 @@ HOST-KEYWORD, pangolin-sdk-toutiao, REJECT
 HOST-KEYWORD, pangolin.snssdk.com, REJECT
 HOST-KEYWORD, pglstatp-toutiao, REJECT
 HOST-KEYWORD, video-cn.snssdk.com, REJECT
-HOST-KEYWORD, volcvod.com, REJECT
-HOST-KEYWORD, volceapplog.com, REJECT
 
 # > 收集用户隐私联盟，若有问题自行设置白名单
-;host-keyword, volces.com, reject
-;host-keyword, volccdn.com, reject
-host-keyword, volc.com, reject
+host-keyword, volc, reject
 
 
 
@@ -923,6 +919,9 @@ host-keyword, api-access.pangolin-sdk-toutiao.com, reject
 
 
 # >>>>>>>>>>>>>>> ✅ Q ✅ <<<<<<<<<<<<<<
+# > QQ音乐
+host, us.l.qq.com, reject
+
 # > 蜻蜓FM
 host, ad.qingting.fm, reject
 host, adlaunch.qingting.fm, reject
