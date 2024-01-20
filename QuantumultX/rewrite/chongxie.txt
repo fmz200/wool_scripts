@@ -427,7 +427,7 @@ https://social.blued.cn/users/recommend url reject-dict
 
 # > 哔哩哔哩漫画
 # hostname = manga.bilibili.com, i0.hdslb.com
-^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Recommend|Flash|ListFlash|GetBubbles|GetActivityTab|Banner|GetClassPageHomeBanner).* url reject
+^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Recommend|Flash|ListFlash|GetBubbles|GetActivityTab|GetCommonBanner).* url reject
 ^https?:\/\/i0\.hdslb\.com\/bfs\/manga-static\/\w+.(png|jpg)$ url reject-dict
 
 
