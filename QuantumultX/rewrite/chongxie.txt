@@ -787,6 +787,8 @@ https://beta-api.crunchyroll.com/cms url response-body offset_ms":\d+ response-b
 ^https:\/\/api\.futunn\.com\/v2\/config\/promote-config url reject-dict
 ^https?:\/\/api\d\.futunn\.com\/ad\/ url reject
 ^https?:\/\/api\.futunn\.com\/v\d\/ad\/ url reject
+# 首页右下角角标
+^https?:\/\/api\.futunn\.com\/treasure-chest\/box-data url reject
 
 # > 分期乐
 # hostname = fm.fenqile.com
