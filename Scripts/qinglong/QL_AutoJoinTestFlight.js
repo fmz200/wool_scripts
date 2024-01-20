@@ -79,10 +79,7 @@ async function autoPost(tf_id) {
     "X-Session-Digest": tf_session_digest,
     "X-Request-Id": tf_request_id,
   };
-
   addLog(tf_id + " 参数拼装完成...");
-  // console.log(tf_id + " 请求URL = " + url);
-  // console.log(tf_id + " 请求头 = " + JSON.stringify(headers));
 
   // 发送请求并获取响应的body
   try {
@@ -117,7 +114,6 @@ async function autoPost(tf_id) {
         sendNotify = true;
         // 加入成功后自动删除APP_ID
         let new_ids = ids.filter(item => item !== tf_id);
-        // $.setdata(new_ids.toString(), TFEnvKeyName);
         // await updateEnv(new_ids);
         addLog(`${tf_id} 删除该APPID成功（还不支持，测试中，请自行删除）`);
       }
