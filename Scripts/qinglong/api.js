@@ -21,7 +21,7 @@ async function getToken() {
   return authConfig.token;
 }
 
-module.exports.getEnvsByName = async (searchValue) => {
+module.exports.getEnvsByNameBackUp = async (searchValue) => {
   const token = await getToken();
   const body = await api({
     url: 'api/envs',
@@ -30,11 +30,42 @@ module.exports.getEnvsByName = async (searchValue) => {
       t: Date.now(),
     },
     headers: {
-      Accept: 'application/json',
-      authorization: `Bearer ${token}`,
+      'Accept': 'application/json',
+      'authorization': `Bearer ${token}`,
+      'host': '127.0.0.1',
+      'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1'
     },
   }).json();
   return body.data;
+};
+
+module.exports.getEnvsByName = async (searchValue) => {
+  const token = await getToken();
+  const url = `http://127.0.0.1:5600/api/envs?searchValue=${searchValue}&t=` + Date.now();
+  const headers = {
+    "Accept": "application/json",
+    "authorization": `Bearer ${token}`,
+    "Content-Type": "application/json;charset=UTF-8",
+    "host": "127.0.0.1",
+    "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1"
+  }
+  const request = {
+    method: "get",
+    headers: headers
+  }
+  console.log("url=" + url);
+  console.log("request=" + JSON.stringify(request));
+  fetch(url, request)
+    .then(response => {
+      console.log(response.status + "\n\n" + response.statusText);
+      return response.text();
+    })
+    .then(body => {
+      console.log(body);
+    })
+    .catch(error => {
+      console.log(error);
+    });
 };
 
 module.exports.getEnvsCount = async () => {
@@ -82,9 +113,9 @@ module.exports.updateEnv = async (value, eid, remarks) => {
   return body;
 };
 
-module.exports.updateEnvById = async (name, value, eid, remarks) => {
+module.exports.updateEnvByIdBackUp = async (name, value, eid, remarks) => {
   const token = await getToken();
-  const body = await api({
+  return await api({
     method: 'put',
     url: 'api/envs',
     params: {t: Date.now()},
@@ -100,26 +131,42 @@ module.exports.updateEnvById = async (name, value, eid, remarks) => {
       'Content-Type': 'application/json;charset=UTF-8',
     },
   }).json();
-  return body;
 };
 
-module.exports.updateEnvByName = async (name, value, remarks) => {
+// id是必传字段，否则青龙会报错
+module.exports.updateEnvById = async (id, name, value, remarks) => {
   const token = await getToken();
-  return await api({
-    method: 'put',
-    url: 'api/envs',
-    params: {t: Date.now()},
-    json: {
-      name: name,
-      value: value,
-      remarks,
-    },
-    headers: {
-      Accept: 'application/json',
-      authorization: `Bearer ${token}`,
-      'Content-Type': 'application/json;charset=UTF-8',
-    },
-  }).json();
+  const url = "http://127.0.0.1:5600/api/envs?t=" + Date.now();
+  const headers = {
+    "Accept": "application/json",
+    "authorization": `Bearer ${token}`,
+    "Content-Type": "application/json;charset=UTF-8",
+    "host": "127.0.0.1",
+    "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1"
+  }
+  const body = {
+    "id": id,
+    "name": name,
+    "value": value,
+    "remarks": remarks
+  };
+  const request = {
+    method: "put",
+    headers: headers,
+    body: JSON.stringify(body)
+  }
+  console.log("request=" + JSON.stringify(request));
+  fetch(url, request)
+    .then(response => {
+      console.log(response.status + "\n\n" + response.statusText);
+      return response.text();
+    })
+    .then(body => {
+      console.log(body);
+    })
+    .catch(error => {
+      console.log(error);
+    });
 };
 
 module.exports.DisableCk = async (eid) => {

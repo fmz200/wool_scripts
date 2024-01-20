@@ -9,7 +9,7 @@
 
 const $ = new Env('自动加入TestFlight');
 const notify = $.isNode() ? require('./sendNotify') : '';
-const {getEnvsByName, updateEnvById, updateEnvByName} = require('./ql_api');
+const {getEnvsByName, updateEnvById} = require('./api');
 // 通知封装字符串
 let notifyStr = "";
 // 是否发送通知，默认加入成功或者报错才通知
@@ -114,8 +114,7 @@ async function autoPost(tf_id) {
         sendNotify = true;
         // 加入成功后自动删除APP_ID
         let new_ids = ids.filter(item => item !== tf_id);
-        // await updateEnv(new_ids);
-        addLog(`${tf_id} 删除该APPID成功（还不支持，测试中，请自行删除）`);
+        // await updateEnv(new_ids.toString());
       }
     }
   } catch (error) {
@@ -130,12 +129,19 @@ async function autoPost(tf_id) {
 // 更新环境变量
 async function updateEnv(new_ids) {
   // 不查询了，直接根据名字更新
-/*   const envs = await getEnvsByName(TFEnvKeyName);
-  addLog(`获取环境变量结果：${envs}`);
-  if (envs.length > 0) {
-    let app = envs[0];
-  } */
-  await updateEnvByName(TFEnvKeyName, new_ids, "需要加入TestFlight的ID，对应脚本QL_AutoJoinTestFlight.js");
+  const envs = await getEnvsByName(TFEnvKeyName);
+  addLog("获取环境变量结果：" + JSON.stringify(envs));
+  if (!envs || envs.length < 1) {
+    addLog("获取环境变量结果为空，手动删除吧~");
+    return;
+  }
+  for (const item of envs) {
+    if (item.name === TFEnvKeyName) {
+      await updateEnvById(item.id, TFEnvKeyName, new_ids, "需要加入TestFlight的ID，对应脚本QL_AutoJoinTestFlight.js");
+      addLog("删除指令执行完毕，若没删除就手动删除吧~");
+      break;
+    }
+  }
 }
 
 function addLog(info) {
