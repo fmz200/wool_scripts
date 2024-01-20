@@ -1,5 +1,5 @@
 // 自动加入TestFlight
-// 2023-11-12 12:05:00
+// 更新时间：2024-01-20 18:05:00
 // QL_AutoJoinTestFlight.js
 // 环境变量:TF_APP_ID，TF_KEY，session_id，session_digest，request_id
 // 目前不支持多账号
@@ -120,8 +120,8 @@ async function autoPost(tf_id) {
         // 加入成功后自动删除APP_ID
         let new_ids = ids.filter(item => item !== tf_id);
         // $.setdata(new_ids.toString(), TFEnvKeyName);
-        await updateEnv(new_ids);
-        addLog(`${tf_id} 删除该APPID成功`);
+        // await updateEnv(new_ids);
+        addLog(`${tf_id} 删除该APPID成功（还不支持，测试中，请自行删除）`);
       }
     }
   } catch (error) {

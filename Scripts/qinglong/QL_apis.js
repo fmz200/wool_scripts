@@ -3,17 +3,13 @@
 const got = require('got');
 require('dotenv').config();
 const {readFile} = require('fs/promises');
-const path = require('path');
-
-const qlDir = '/ql';
 const fs = require('fs');
-let Fileexists = fs.existsSync('/ql/data/config/auth.json');
+let fileExists = fs.existsSync('/ql/data/config/auth.json');
 let authFile = "";
-if (Fileexists)
+if (fileExists)
   authFile = "/ql/data/config/auth.json"
 else
   authFile = "/ql/config/auth.json"
-//const authFile = path.join(qlDir, 'config/auth.json');
 
 const api = got.extend({
   prefixUrl: 'http://127.0.0.1:5600',
@@ -42,7 +38,7 @@ module.exports.getEnvsByName = async (searchValue) => {
 };
 
 module.exports.getEnvsCount = async () => {
-  const data = await this.getEnvs();
+  const data = await this.getEnvsByName();
   return data.length;
 };
 
@@ -159,7 +155,7 @@ module.exports.EnableCk = async (eid) => {
 };
 
 module.exports.getStatus = async (eid) => {
-  const envs = await this.getEnvs();
+  const envs = await this.getEnvsByName();
   var tempid = 0;
   for (let i = 0; i < envs.length; i++) {
     tempid = 0;
@@ -177,7 +173,7 @@ module.exports.getStatus = async (eid) => {
 };
 
 module.exports.getEnvById = async (eid) => {
-  const envs = await this.getEnvs();
+  const envs = await this.getEnvsByName();
   var tempid = 0;
   for (let i = 0; i < envs.length; i++) {
     tempid = 0;
@@ -195,7 +191,7 @@ module.exports.getEnvById = async (eid) => {
 };
 
 module.exports.getEnvByPtPin = async (Ptpin) => {
-  const envs = await this.getEnvs();
+  const envs = await this.getEnvsByName();
   for (let i = 0; i < envs.length; i++) {
     var tempptpin = decodeURIComponent(envs[i].value.match(/pt_pin=([^; ]+)(?=;?)/) && envs[i].value.match(/pt_pin=([^; ]+)(?=;?)/)[1]);
     if (tempptpin == Ptpin) {
