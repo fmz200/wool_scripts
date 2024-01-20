@@ -9,7 +9,7 @@
 
 const $ = new Env('自动加入TestFlight');
 const notify = $.isNode() ? require('./sendNotify') : '';
-const {getEnvsByName, updateEnvById, updateEnvByName} = require('./QL_apis');
+const {getEnvsByName, updateEnvById, updateEnvByName} = require('./ql_api');
 // 通知封装字符串
 let notifyStr = "";
 // 是否发送通知，默认加入成功或者报错才通知
@@ -34,8 +34,6 @@ async function processCollection() {
   if (tf_app_ids) {
     if (tf_app_ids.indexOf(',') > -1) {
       ids = tf_app_ids.split(',');
-    } else if (tf_app_ids.indexOf('\n') > -1) {
-      ids = tf_app_ids.split('\n');
     } else {
       ids = [tf_app_ids];
     }
@@ -47,7 +45,7 @@ async function processCollection() {
             await autoPost(tf_id.trim());
             addLog("\n");
             resolve(); // 表示异步操作完成
-          }, 1000); // 1000毫秒 = 1秒，这里设置每隔1秒执行一次
+          }, 1000); // 1000毫秒 = 1秒，这里设置每隔1秒执行一个
         });
       }
     } catch (error) {
@@ -61,7 +59,7 @@ async function processCollection() {
 
   // 发送通知
   if (sendNotify) {
-    notify.sendNotify('自动加入TestFlight', notifyStr);
+    await notify.sendNotify('自动加入TestFlight', notifyStr);
   } else {
     console.log("不发送通知");
   }
@@ -125,10 +123,11 @@ async function autoPost(tf_id) {
       }
     }
   } catch (error) {
-    if (!error.message.includes("Unexpected token < in JSON at position 0")) {
+    const message = error.message;
+    if (!message.includes("Unexpected token")) {
       sendNotify = true;
     }
-    addLog(`${tf_id} 加入TF时出错：${error.message}`);
+    addLog(`${tf_id} 加入TF时出错：${message}`);
   }
 }
 
