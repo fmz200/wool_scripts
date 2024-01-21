@@ -1,11 +1,11 @@
-#!name=微博去广告
-#!desc=整合了@zmqcherish的去广告配置，只去广告不做净化
+#!name=微博&国际版去广告
+#!desc=整合了@zmqcherish和@Keywos的去广告配置，根据UA判断微博版本去广告
 #!author=fmz200
 #!homepage=https://github.com/fmz200/wool_scripts
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/weibo.snippet
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2023-11-27 12:36:00
+#!date=2024-01-21 20:03:00
 #############################################
 # > "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # > "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -14,50 +14,67 @@
 # > "reject-array"  策略返回 HTTP 状态码 200,同时附带一个空的 JSON 数组
 #############################################
 
-hostname = api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, new.vip.weibo.cn
+hostname = api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, new.vip.weibo.cn, *api.weibo.cn, sdkapp.uve.weibo.com
+
+############################################# 微博国际版去广告 #############################################
+# User-Agent: WeiboOverseas/6.3.8 (com.weibo.international; build:6.3.8.1; iOS 17.3.0) Alamofire/6.3.8
+
+# 热门视频 | 热推荐
+^https?:\/\/api\.weibo\.cn\/\d\/(cardlist\?v_f=\d|ad\/weibointl\?) WeiboOverseas url-and-header echo-response text/html echo-response https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/template/reject-dict.json
+^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=hot_search_users WeiboOverseas url-and-header echo-response text/html echo-response https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/template/reject-dict.json
+
+# 趋势页 | 开屏广告 | 用户中心 | 热搜置顶 | 我的页面 尊享专属 | 瀑布流去广告
+^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?(ct=(feed&a=trends|user&a=get_searching_info)|a=(get_coopen_ads|user_center|search_topic|open_app&auth|icon_center)) WeiboOverseas url-and-header script-response-body https://raw.githubusercontent.com/Keywos/rule/main/JS/weibous.js
+^https?:\/\/api\.weibo\.cn\/\d\/statuses\/.*timeline WeiboOverseas url-and-header script-response-body https://raw.githubusercontent.com/Keywos/rule/main/JS/weibous.js
+^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php WeiboOverseas url-and-header script-response-body https://raw.githubusercontent.com/Keywos/rule/main/JS/weibous.js
+
+
+############################################# 微博国内版去广告 #############################################
+# User-Agent: Weibo/83823 (iPhone; iOS 17.2; Scale/3.00)
 
 # 似乎没用的请求，收集用户信息
-https://api\.weibo\.cn/2/(push/active|client/addlog_batch|ad/preload) url script-request-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/template/req_replace_body.js
+https://api\.weibo\.cn/2/(push/active|client/addlog_batch|ad/preload) Weibo url-and-header script-request-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/template/req_replace_body.js
 
 # 屏蔽首页左上角每日的弹窗tips
-^https?:\/\/m?api\.weibo\.c(n|om)\/\d/push/daily url reject-dict
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d/push/daily Weibo url-and-header reject-dict
 
 # 超话按钮的提示
-https://api.weibo.cn/2/!/huati/discovery_home_bottom_getdotinfo url reject
+https://api.weibo.cn/2/!/huati/discovery_home_bottom_getdotinfo Weibo url-and-header reject
 
 # 微博移除发现页广告
-^https?://api.weibo.cn/2/search/(finder|container_timeline|container_discover) url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
+^https?://api.weibo.cn/2/search/(finder|container_timeline|container_discover) Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
 
 # 微博热搜页面广告
-^https?://api.weibo.cn/2/page url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
+^https?://api.weibo.cn/2/page Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
 
 # 微博话题页面广告
-https://api.weibo.cn/2/searchall url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
+https://api.weibo.cn/2/searchall Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
 
 # 微博超话页面广告
-^https?://api.weibo.cn/2/statuses/container_timeline_topicpage url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
+^https?://api.weibo.cn/2/statuses/container_timeline_topicpage Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
 
 # 微博超话tab页净化
-^https?://api.weibo.cn/2/statuses/container_timeline_topic url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
+^https?://api.weibo.cn/2/statuses/container_timeline_topic Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
 
 # 微博详情页面广告
-^https?://api.weibo.cn/2/statuses/extend url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
+^https?://api.weibo.cn/2/statuses/extend Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
 
 # 微博最顶部的tab页分组
-^https?://api.weibo.cn/2/groups/allgroups/v2 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
+^https?://api.weibo.cn/2/groups/allgroups/v2 Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
 
 # 微博去广告以及去除各部分推广模块 - cherish
-^https?://m?api\.weibo\.c(n|om)/2/(cardlist|searchall|page|messageflow|statuses/(unread_)?friends(/|_)timeline|groups/timeline|statuses/(container_timeline|container_timeline_hot|unread_hot_timeline|extend|video_mixtimeline)|profile/(me|container_timeline)|video/(community_tab|remind_info|tiny_stream_video_list)|checkin/show|\!/live/media_homelist|comments/build_comments|container/get_item|search/(finder|container_timeline|container_discover)) url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_main.js
+^https?://m?api\.weibo\.c(n|om)/2/(cardlist|searchall|page|messageflow|statuses/(unread_)?friends(/|_)timeline|groups/timeline|statuses/(container_timeline|container_timeline_hot|unread_hot_timeline|extend|video_mixtimeline)|profile/(me|container_timeline)|video/(community_tab|remind_info|tiny_stream_video_list)|checkin/show|\!/live/media_homelist|comments/build_comments|container/get_item|search/(finder|container_timeline|container_discover)) Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_main.js
 
 # 删除微博开屏广告 - cherish
-^https:\/\/bootrealtime\.uve\.weibo\.com\/v3\/ad\/realtime url reject-dict
-^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua) url script-response-body https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_launch.js
+^https:\/\/bootrealtime\.uve\.weibo\.com\/v3\/ad\/realtime Weibo url-and-header reject-dict
+^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua) Weibo url-and-header script-response-body https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_launch.js
 
 # 自定义tab皮肤
-^https://api.weibo.cn/2/!/client/light_skin url script-response-body https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_main.js
+^https://api.weibo.cn/2/!/client/light_skin Weibo url-and-header script-response-body https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_main.js
 
 # 非会员设置tab皮肤 - cherish
-^https://new.vip.weibo.cn/littleskin/preview url script-response-body https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_main.js
+^https://new.vip.weibo.cn/littleskin/preview Weibo url-and-header script-response-body https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_main.js
 
 # 解锁微博会员APP图标
-^https?://new\.vip\.weibo\.cn/aj/appicon/list url script-response-body https://github.com/fmz200/wool_scripts/raw/main/Scripts/weibo/weibo_vip.js
+^https?://new\.vip\.weibo\.cn/aj/appicon/list Weibo url-and-header script-response-body https://github.com/fmz200/wool_scripts/raw/main/Scripts/weibo/weibo_vip.js
+
