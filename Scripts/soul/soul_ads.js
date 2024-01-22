@@ -1,7 +1,7 @@
 /**
  * @author fmz200
- * @function 去除Soul的部分广告
- * @date 2023-11-13 22:50:13
+ * @function 去除Soul的广告&解锁部分服务
+ * @date 2024-01-22 21:41:00
  */
 
 const targetUrl01 = 'ssp.soulapp.cn/api/q';
@@ -17,7 +17,7 @@ try {
   console.log('错误信息：' + error.message);
 }
 
-$done({ body: responseBody });
+$done({body: responseBody});
 
 function removeAds(url, data) {
   let responseData = JSON.parse(data);
@@ -36,5 +36,19 @@ function removeAds(url, data) {
     console.log('去除青少年模式弹窗💕');
   }
 
+  if (url.includes("/post/homepage/guide/card") ||
+    url.includes("/furion/position/content") ||
+    url.includes("/hot/soul/rank") ||
+    url.includes("/post/gift/list") ||
+    url.includes("/mobile/app/version/queryIos") ||
+    url.includes("/winterfell/v2/getIpByDomain")) {
+    delete responseData.data;
+    console.log('去除各种广告和限制💕');
+  }
+
+  if (url.includes("/chat/limitInfo")) {
+    responseData.data.limit = false;
+    console.log('去除聊天限制💕');
+  }
   return JSON.stringify(responseData);
 }
