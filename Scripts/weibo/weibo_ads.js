@@ -70,6 +70,8 @@ function process() {
       if (subItem.itemId === "hotword") {
         resp_data.items[j].items = subItem.items.filter(group => group.data.promotion == null);
         break;
+      } else if (subItem.items) {
+        resp_data.items[j].items = subItem.items.filter(group => group.data.promotion == null);
       }
     }
   }
