@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/fenliu.list
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2024-01-20 11:03:00
+#!date=2024-01-25 16:43:00
 #!support=约9392行
 #!proxy-select=reject
 #############################################
@@ -575,6 +575,7 @@ host, livewebbs2pcdn.msstatic.com, reject
 host, huyafile.msstatic.com, reject
 host, livewebbs2.msstatic.com, reject
 host, business.msstatic.com, reject
+host-suffix, v1d.szbdyd.com, reject
 
 # > 哈啰 大部分图片无法正常加载
 ;host-keyword, assets.51downapp.cn, reject
@@ -974,6 +975,7 @@ host-suffix, v.gdt.qq.com, reject
 # > soul
 host, soul-ad.soulapp.cn, reject
 host, ad-r.soulapp.cn, reject
+host, ad-reward.soulapp.cn, reject
 host-suffix, cdn.soulapp.cn, reject
 
 # > Snapchat
