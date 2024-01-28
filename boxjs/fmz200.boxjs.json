@@ -6,13 +6,40 @@
   "repo": "https://github.com/fmz200/wool_scripts",
   "apps": [
     {
+      "id": "fmz200_aliyun",
+      "name": "阿里云盘cookie",
+      "keys": [
+        "aliyun_data"
+      ],
+      "descs_html": [
+        "填写cookie,多账号用英文逗号(@)分开"
+      ],
+      "settings": [
+        {
+          "id": "aliyun_data",
+          "name": "阿里云盘cookie",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 16,
+          "desc": "阿里云盘cookie"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/AliYunDrive.png",
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/AliYunDrive.png"
+      ],
+      "author": "@fmz200",
+      "repo": "https://github.com/fmz200/wool_scripts"
+    },
+    {
       "id": "smzdm_fmz200",
       "name": "什么值得买cookie",
       "keys": [
         "SMZDM_COOKIE"
       ],
       "descs_html": [
-        "填写token,多账号用英文逗号(&)分开"
+        "填写cookie,多账号用英文逗号(&)分开"
       ],
       "settings": [
         {
