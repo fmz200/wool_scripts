@@ -9,7 +9,6 @@
 #############################################
 # 包含内容：
 # chavyleung    https://github.com/chavyleung/scripts/blob/master/QuantumultX_Local_Cookie.conf
-# Sunert        https://github.com/Sunert/Profiles/blob/master/QuantumultX/Rewrite/Sunert_Cookie.conf
 # NobyDa        https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Js_Remote_Cookie.conf
 # blackmatrix7  https://github.com/blackmatrix7/ios_rule_script/blob/master/rewrite/QuantumultX/GetCookie/GetCookie.conf
 # iepngs        https://github.com/iepngs/Script/blob/master/Cookie.conf
@@ -42,7 +41,6 @@ https://gaea.meituan.com/mapi/usercenter url script-request-header https://raw.g
 
 # 微博ck
 ^https:\/\/m?api\.weibo\.c(n|om)\/\d\/users\/show url script-request-header https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cookie/get_cookie.js
-;^https:\/\/m?api\.weibo\.c(n|om)\/\d\/users\/show url script-request-header https://raw.githubusercontent.com/Sunert/Script/master/Task/weibo.js
 
 # 抖音 抖抖果园
 ^https://minigame.zijieapi.com/ttgame/game_orchard_ecom/polling_info url script-request-header https://raw.githubusercontent.com/LinYuanovo/scripts/main/dygy.js
@@ -122,61 +120,6 @@ https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login url script-requ
 
 # 快看漫画 cookie
 ^https:\/\/api\.kkmh\.com\/v\d\/passport\/user url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/KuaiKan-DailyBonus/KKMH.js
-
-
-# >>>>>>>>>>>>>>> ✅ Sunert ✅ <<<<<<<<<<<<<<
-# 京东到家
-https:\/\/daojia\.jd\.com\/client\?_jdrandom=\d{13}&functionId=signin url script-request-header https://raw.githubusercontent.com/Sunert/Script/master/Task/backup/jddj.js
-
-# 快手极速版
-https:\/\/nebula\.kuaishou\.com\/nebula\/task\/earning\? url script-request-header https://raw.githubusercontent.com/Sunert/Script/master/Task/kuaishou.js
-
-https:\/\/activity\.m\.kuaishou\.com\/rest\/wd\/taskCenter\/\w+\/module\/list url script-request-header https://raw.githubusercontent.com/Sunert/Script/master/Task/kuaishou.js
-
-# 电视家
-http:\/\/api\.gaoqingdianshi\.com\/api\/v\d\/sign\/signin url script-request-header https://raw.githubusercontent.com/Sunert/Script/master/Task/backup/dianshijia.js
-http:\/\/api\.gaoqingdianshi\.com\/api\/v2\/cash\/withdrawal\? url script-request-header https://raw.githubusercontent.com/Sunert/Script/master/Task/backup/dianshijia.js
-
-# 微信小程序-来客有礼 (By @Macsuny)
-https:\/\/draw\.jdfcloud\.com\/\/api\/bean\/square\/silverBean\/task\/get\? url script-request-header https://raw.githubusercontent.com/Sunert/Script/master/Task/backup/lkyl.js
-
-# 中国电信套餐 (By @uchvk & @Macsuny)
-^https?:\/\/e\.189\.cn\/store\/user\/package_detail\.do url script-request-header https://raw.githubusercontent.com/Sunert/Script/master/Task/telecomInfinity.js
-
-# 腾讯新闻
-https:\/\/api\.inews\.qq\.com\/event\/v1\/user\/event\/report\? url script-request-body https://raw.githubusercontent.com/Sunert/Script/master/Task/backup/txnews.js
-https:\/\/api\.prize\.qq\.com\/v1\/newsapp\/chajianrp\/sendprize url script-request-header https://raw.githubusercontent.com/Sunert/Script/master/Task/backup/txnews.js
-
-# 微博签到
-https:\/\/api\.weibo\.cn\/\d\/users\/show url script-request-header https://raw.githubusercontent.com/Sunert/Script/master/Task/weibo.js
-
-https:\/\/api\.weibo\.cn\/2\/logservice\/service url script-request-header https://raw.githubusercontent.com/Sunert/Script/master/Task/weibo.js
-
-# 中青看点
-https:\/\/kd\.youth\.cn\/WebApi\/NewTaskIos\/getTaskList url script-request-header https://raw.githubusercontent.com/Sunert/Script/master/Task/backup/youth.js
-
-https:\/\/kandian\.wkandian\.com\/v5\/article\/info\.json url script-request-body https://raw.githubusercontent.com/Sunert/Script/master/Task/backup/youth.js
-
-https:\/\/kandian\.wkandian\.com\/v5\/\w+\/withdraw\d?\.json url script-request-body  https://raw.githubusercontent.com/Sunert/Script/master/Task/backup/youth.js
-
-https:\/\/kandian\.wkandian\.com\/v5\/user\/stay\.json url script-request-body https://raw.githubusercontent.com/Sunert/Script/master/Task/backup/youth.js
-
-# 中青看点阅读(和签到脚本有冲突，暂时禁用)
-https:\/\/kandian\.wkandian\.com\/v5\/article\/info\.json - script-request-body https://raw.githubusercontent.com/Sunert/Script/master/Task/backup/Youth_Read.js
-
-https:\/\/kandian\.wkandian\.com\/v5\/user\/stay\.json - script-request-body https://raw.githubusercontent.com/Sunert/Script/master/Task/backup/Youth_Read.js
-
-# 中青看点看看赚
-https:\/\/kandian\.wkandian\.com\/v5\/task\/browse_start\.json url script-request-body https://raw.githubusercontent.com/Sunert/Script/master/Task/backup/youth_gain.js
-
-https:\/\/kandian\.wkandian\.com\/v5\/Nameless\/adlickstart\.json url script-request-body https://raw.githubusercontent.com/Sunert/Script/master/Task/backup/youth_gain.js
-
-# 数码之家
-https:\/\/www\.mydigit\.cn\/plugin\.php\?id=k_misign:sign&operation=qiandao url script-request-header https://raw.githubusercontent.com/Sunert/Script/master/Task/mydigit.js
-
-# 聚看点
-https:\/\/www\.xiaodouzhuan\.cn\/jkd\/newMobileMenu\/infoMe\.action url script-request-body https://raw.githubusercontent.com/Sunert/Script/master/Task/backup/jukan.js
-
 
 
 # >>>>>>>>>>>>>>> ✅ lowking ✅ <<<<<<<<<<<<<<
