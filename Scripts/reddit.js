@@ -1,21 +1,29 @@
 /**
- * Reddit 过滤推广, 关 subreddit 的 NSFW 提示
- *
- * date=2023.07.22 18:50
+ * @author fmz200
+ * @function Reddit过滤推广，关NSFW提示
+ * @date 2024-01-2 17:01:00
+ * @quote xream
  */
 
-const body = JSON.parse($response.body);
-let modified
-if (body.data) {
-  modified = true
-  if (body.data.subredditInfoByName && body.data.subredditInfoByName.elements && body.data.subredditInfoByName.elements.edges) {
-    body.data.subredditInfoByName.elements.edges = body.data.subredditInfoByName.elements.edges.filter(i => i && i.node && (i.node.__typename !== "AdPost"))
-  } else if (body.data.home && body.data.home.elements && body.data.home.elements.edges) {
-    body.data.home.elements.edges = body.data.home.elements.edges.filter(i => i && i.node && (i.node.__typename !== "AdPost"))
-  } else if (body.data.subredditsInfoByNames) {
-    body.data.subredditsInfoByNames = body.data.subredditsInfoByNames.map(i => ({...i, isNsfw: false}))
-  } else {
-    modified = false
+let body;
+try {
+  body = JSON.parse($response.body.replace(/"isNsfw":true/g, '"isNsfw":false'))
+  if (body.data?.children?.commentsPageAds) {
+    body.data.children.commentsPageAds = []
   }
+  for (const [k, v] of Object.entries(body.data)) {
+    if (v?.elements?.edges) {
+      body.data[k].elements.edges = v.elements.edges.filter(
+        i =>
+          !['AdPost'].includes(i?.node?.__typename) &&
+          !i?.node?.cells?.some(j => j?.__typename === 'AdMetadataCell') &&
+          !i?.node?.adPayload
+      );
+    }
+  }
+
+} catch (e) {
+  console.log(e);
+} finally {
+  $done(body ? {body: JSON.stringify(body)} : {});
 }
-$done(modified ? {body: JSON.stringify(body)} : {})
