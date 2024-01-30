@@ -24,9 +24,9 @@ hostname = api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, new.vip.weibo.cn, *api
 ^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=hot_search_users WeiboOverseas url-and-header echo-response text/html echo-response https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/template/reject-dict.json
 
 # 趋势页 | 开屏广告 | 用户中心 | 热搜置顶 | 我的页面 尊享专属 | 瀑布流去广告
-^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?(ct=(feed&a=trends|user&a=get_searching_info)|a=(get_coopen_ads|user_center|search_topic|open_app&auth|icon_center)) WeiboOverseas url-and-header script-response-body https://raw.githubusercontent.com/Keywos/rule/main/JS/weibous.js
-^https?:\/\/api\.weibo\.cn\/\d\/statuses\/.*timeline WeiboOverseas url-and-header script-response-body https://raw.githubusercontent.com/Keywos/rule/main/JS/weibous.js
-^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php WeiboOverseas url-and-header script-response-body https://raw.githubusercontent.com/Keywos/rule/main/JS/weibous.js
+^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?(ct=(feed&a=trends|user&a=get_searching_info)|a=(get_coopen_ads|user_center|search_topic|open_app&auth|icon_center)) WeiboOverseas url-and-header script-response-body https://raw.githubusercontent.com/Keywos/rule/master/script/weibo_us/js/index.js
+^https?:\/\/api\.weibo\.cn\/\d\/statuses\/.*timeline WeiboOverseas url-and-header script-response-body https://raw.githubusercontent.com/Keywos/rule/master/script/weibo_us/js/index.js
+^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php WeiboOverseas url-and-header script-response-body https://raw.githubusercontent.com/Keywos/rule/master/script/weibo_us/js/index.js
 
 
 ############################################# 微博国内版去广告 #############################################
