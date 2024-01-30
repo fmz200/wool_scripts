@@ -286,7 +286,7 @@ https://social.blued.cn/users/recommend url reject-dict
 ^https:\/\/mime\.baidu\.com\/v5\/start_screen_ads\/list url reject
 ^https:\/\/mime\.baidu\.com\/v5\/hotpatch\/check\?hotpatch url reject
 # 净化 个人页随机图片
-^https?:\/\/mime\.baidu\.com\/(imrobot\/v1\/pub\/relation\/get_robot_list|v5\/custom_page\/(layout|getdata)) url script-response-body https://raw.githubusercontent.com/Keywos/rule/main/JS/bdsrf.js
+;^https?:\/\/mime\.baidu\.com\/(imrobot\/v1\/pub\/relation\/get_robot_list|v5\/custom_page\/(layout|getdata)) url script-response-body https://raw.githubusercontent.com/Keywos/rule/main/JS/bdsrf.js
 # 百度输入法开屏
 ^https?:\/\/mime\.baidu\.com\/v5\/start_screen_ads/list url reject-dict
 # 应用内灵感语录 输入页面推荐里语录
