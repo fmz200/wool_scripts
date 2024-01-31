@@ -76,7 +76,7 @@ function process() {
     }
   }
 
-  // 4、微博超话页面
+  // 4、微博超话页面 https://api.weibo.cn/2/statuses/container_timeline_topicpage
   if (url.includes("/statuses/container_timeline_topicpage") && resp_data.items) {
     resp_data.items = resp_data.items.filter(item => !item.data || item.data.mblogtypename !== "广告");
     console.log('处理微博超话页面广告结束💕💕');
