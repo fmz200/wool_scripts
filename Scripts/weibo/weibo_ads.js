@@ -65,13 +65,12 @@ function process() {
 
   // 微博热搜页面 “热搜”tab页 https://api.weibo.cn/2/flowpage
   if (url.includes("/2/flowpage")) {
-    for (let j = 0; j < resp_data.items.length; j++) {
-      const subItem = resp_data.items[j];
+    for (let subItem of resp_data.items) {
       if (subItem.itemId === "hotword") {
-        resp_data.items[j].items = subItem.items.filter(group => group.data.promotion == null);
+        subItem.items = subItem.items.filter(group => group.data.promotion == null);
         break;
       } else if (subItem.items) {
-        resp_data.items[j].items = subItem.items.filter(group => group.data.promotion == null);
+        subItem.items = subItem.items.filter(group => group.data.promotion == null);
       }
     }
   }
