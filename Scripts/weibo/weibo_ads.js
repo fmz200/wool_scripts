@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 微博去广告
- * @date 2024-01-25 21:41:00
+ * @date 2024-01-31 21:18:00
  */
 
 const titleSubPicMap = {
@@ -107,7 +107,7 @@ function process() {
   }
 
   // 8、超话tab页 微博超话tab页 https://api.weibo.cn/2/statuses/container_timeline_topic
-  if (url.includes("/statuses/container_timeline_topic")) {
+  if (url.includes("/statuses/container_timeline_topic?flowId")) {
     let foundFeed = false;
     for (let i = 0; i < resp_data.items.length; i++) {
       const item = resp_data.items[i];
