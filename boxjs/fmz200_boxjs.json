@@ -1,6 +1,6 @@
 {
   "id": "fmz200.sub",
-  "name": "fmz200的BoxJS订阅",
+  "name": "fmz200のBoxJS订阅",
   "author": "@fmz200",
   "icon": "https://avatars.githubusercontent.com/u/57740735?s=60&v=4",
   "repo": "https://github.com/fmz200/wool_scripts",
@@ -21,7 +21,7 @@
           "val": "",
           "type": "textarea",
           "autoGrow": true,
-          "rows": 16,
+          "rows": 32,
           "desc": "阿里云盘cookie"
         }
       ],
@@ -33,7 +33,7 @@
       "repo": "https://github.com/fmz200/wool_scripts"
     },
     {
-      "id": "smzdm_fmz200",
+      "id": "fmz200_smzdm",
       "name": "什么值得买cookie",
       "keys": [
         "SMZDM_COOKIE"
@@ -60,7 +60,7 @@
       "repo": "https://github.com/fmz200/wool_scripts"
     },
     {
-      "id": "oil_price_region_fmz200",
+      "id": "fmz200_oil_price",
       "name": "今日油价",
       "keys": [
         "oil_price_region"
@@ -87,7 +87,7 @@
       "repo": "https://github.com/fmz200/wool_scripts"
     },
     {
-      "id": "didi_fruit",
+      "id": "fmz200_didi_fruit",
       "name": "滴滴橙心果园",
       "keys": [
         "ddtoken"
@@ -115,7 +115,7 @@
       "script": "https://raw.githubusercontent.com/passerby-b/didi_fruit/main/dd_fruit.js"
     },
     {
-      "id": "ks_fruit",
+      "id": "fmz200_ks_fruit",
       "name": "快手果园",
       "keys": [
         "kscookies"
@@ -143,7 +143,7 @@
       "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuaishou/ks_fruit.js"
     },
     {
-      "id": "pddgyck",
+      "id": "fmz200_pdd_fruit",
       "name": "拼多多果园token",
       "keys": [
         "ddgyck"
@@ -171,7 +171,7 @@
       ]
     },
     {
-      "id": "dygy_ck",
+      "id": "fmz200_dygy",
       "name": "抖音果园cookie",
       "keys": [
         "ddgyCk"
@@ -200,7 +200,7 @@
       ]
     },
     {
-      "id": "mt_token",
+      "id": "fmz200_mt_token",
       "name": "美团token",
       "keys": [
         "meituanCookie"
@@ -227,7 +227,7 @@
       ]
     },
     {
-      "id": "sheepToken",
+      "id": "fmz200_sheepToken",
       "name": "养了个羊token",
       "keys": [
         "sheepToken_wx",
@@ -261,7 +261,7 @@
       ]
     },
     {
-      "id": "airport_fetch_notice",
+      "id": "fmz200_airport_notice",
       "name": "获取机场公告",
       "keys": [
         "url_airport",
@@ -309,8 +309,8 @@
       "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/airport_fetch_notice.js"
     },
     {
-      "id": "testflight-",
-      "name": "tf监控",
+      "id": "fmz200_testflight",
+      "name": "TF监控",
       "keys": [
         "appkey",
         "testflight_isnotify"
@@ -378,7 +378,7 @@
       ]
     },
     {
-      "id": "ql_sync",
+      "id": "fmz200_ql_sync",
       "name": "BoxJS与青龙数据同步",
       "keys": [
         "ql_sync_keys",
@@ -473,7 +473,7 @@
       ]
     },
     {
-      "id": "macat_signin",
+      "id": "fmz200_macat_signin",
       "name": "macat.vip网站签到",
       "keys": [
         "fmz200.macat_loginBody"
@@ -497,7 +497,7 @@
       ]
     },
     {
-      "id": "freeAppsToday",
+      "id": "fmz200_freeAppsToday",
       "name": "今日限免APP",
       "keys": [
         "freeAppsTodayKey"
@@ -530,7 +530,7 @@
       ]
     },
     {
-      "id": "CCB_life_checkin",
+      "id": "fmz200_CCB_life",
       "name": "建行生活签到",
       "keys": [
         "photonmang_signurl_jhsh",
@@ -583,7 +583,7 @@
       ]
     },
     {
-      "id": "douyuYubaSign",
+      "id": "fmz200_douyuYubaSign",
       "name": "斗鱼鱼吧签到",
       "desc_html": "⚠️使用说明</br>详情【<a href='https://github.com/fmz200/wool_scripts/raw/main/Scripts/douyu/yubaSign.js'><font class='red--text'>点我查看</font></a>】",
       "icons": [
