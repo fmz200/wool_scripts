@@ -9,7 +9,7 @@ const $ = new API("获取Cookie或Token通用脚本");
 const req_url = $request.url;
 const req_headers = $request.headers;
 const req_body = $request.body;
-const rsp_body = $response.body;
+const rsp_body = $response ? $response.body : "";
 
 console.log(`当前请求的url: ${req_url}`);
 // 遍历头部对象并打印每个字段和值
