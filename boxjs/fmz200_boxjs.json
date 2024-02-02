@@ -41,7 +41,7 @@
         "fmz200_smzdm_cookie"
       ],
       "descs_html": [
-        "填写cookie,多账号用英文逗号(&)分开"
+        "填写cookie，有两种不同的存储方式"
       ],
       "settings": [
         {
@@ -51,16 +51,16 @@
           "type": "textarea",
           "autoGrow": true,
           "rows": 16,
-          "desc": "什么值得买cookie"
+          "desc": "多账号用英文逗号(@)分隔"
         },
         {
           "id": "fmz200_smzdm_cookie",
-          "name": "什么值得买cookie，多账号使用JSON存储",
+          "name": "什么值得买cookie",
           "val": "",
           "type": "textarea",
           "autoGrow": true,
           "rows": 32,
-          "desc": "什么值得买cookie"
+          "desc": "多账号使用JSON存储"
         }
       ],
       "icons": [
