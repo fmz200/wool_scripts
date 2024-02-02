@@ -4,6 +4,7 @@
   "author": "@fmz200",
   "icon": "https://avatars.githubusercontent.com/u/57740735?s=60&v=4",
   "repo": "https://github.com/fmz200/wool_scripts",
+  "desc": "订阅大多都支持多账号，协定数据格式如下：有主键的用JSON，没有主键的拼接用#分割用@。\n例如{\"uid1\": \"token1\", \"uid2\": \"token2\",\"uid3\": \"token3\"}和uid1#token1@uid2#token2@uid3#token3",
   "apps": [
     {
       "id": "fmz200_aliyun",
@@ -36,7 +37,8 @@
       "id": "fmz200_smzdm",
       "name": "什么值得买cookie",
       "keys": [
-        "SMZDM_COOKIE"
+        "SMZDM_COOKIE",
+        "fmz200_smzdm_cookie"
       ],
       "descs_html": [
         "填写cookie,多账号用英文逗号(&)分开"
@@ -49,6 +51,15 @@
           "type": "textarea",
           "autoGrow": true,
           "rows": 16,
+          "desc": "什么值得买cookie"
+        },
+        {
+          "id": "fmz200_smzdm_cookie",
+          "name": "什么值得买cookie，多账号使用JSON存储",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 32,
           "desc": "什么值得买cookie"
         }
       ],
@@ -90,14 +101,24 @@
       "id": "fmz200_didi_fruit",
       "name": "滴滴橙心果园",
       "keys": [
-        "ddtoken"
+        "ddgyToken",
+        "fmz200_didi_fruit"
       ],
       "descs_html": [
-        "填写token,多账号用英文逗号(,)分开"
+        "多账号换行或者@隔开，格式uid&token。uid不可随便填，会根据uid更新数据"
       ],
       "settings": [
         {
-          "id": "ddtoken",
+          "id": "ddgyToken",
+          "name": "token",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 8,
+          "desc": "token"
+        },
+        {
+          "id": "fmz200_didi_fruit",
           "name": "token",
           "val": "",
           "type": "textarea",
@@ -121,7 +142,7 @@
         "kscookies"
       ],
       "descs_html": [
-        "填写cookie,多账号用英文逗号(,)分开"
+        "(正在计划多账号支持)填写cookie,多账号用英文逗号(@)分开"
       ],
       "settings": [
         {
@@ -146,10 +167,11 @@
       "id": "fmz200_pdd_fruit",
       "name": "拼多多果园token",
       "keys": [
-        "ddgyck"
+        "ddgyck",
+        "fmz200_pdd_token"
       ],
       "descs_html": [
-        "小程序或APP 进果园一圈（批量浇水），在请求头中搜索AccessToken"
+        "(正在计划多账号支持)小程序或APP 进果园一圈（批量浇水），在请求头中搜索AccessToken"
       ],
       "settings": [
         {
@@ -159,6 +181,15 @@
           "type": "textarea",
           "autoGrow": false,
           "rows": 4,
+          "desc": "多个账号用@分割：tk1@tk2"
+        },
+        {
+          "id": "fmz200_pdd_token",
+          "name": "拼多多果园token",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 8,
           "desc": "多个账号用@分割：tk1@tk2"
         }
       ],
@@ -203,20 +234,30 @@
       "id": "fmz200_mt_token",
       "name": "美团token",
       "keys": [
-        "meituanCookie"
+        "meituanCookie",
+        "fmz200_meituan_cookie"
       ],
       "descs_html": [
-        "打开美团，在请求头中搜索token，多账号换行或者@隔开"
+        "打开美团查看个人资料，在请求头中搜索token"
       ],
       "settings": [
         {
           "id": "meituanCookie",
           "name": "美团token",
           "val": "",
-          "desc": "举例：userId=12345678&token=tk1@userId=123&token=tk2",
+          "desc": "多账号换行或者@隔开。例如：token1@token2",
           "type": "textarea",
-          "autoGrow": false,
-          "rows": 8
+          "autoGrow": true,
+          "rows": 16
+        },
+        {
+          "id": "fmz200_meituan_cookie",
+          "name": "美团token",
+          "val": "",
+          "desc": "多账号用(@)分隔，账号数据用(#)连接[key#value]格式，例如：123#qazwsx@456#edcrfv",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 16
         }
       ],
       "author": "@fmz200",

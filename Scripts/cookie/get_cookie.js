@@ -1,65 +1,23 @@
-/*
- * 脚本作用：获取应用的cookie或token
- * get_cookie.js
- */
-
 /**
- * 脚本作用：什么值得买，手机APP进入我的页面查看个人资料，即可获取cookie
- * 更新时间：2023.06.06 12:30
+ * @author fmz200
+ * @function 获取应用的cookie或token通用脚本
+ * @date 2024-02-02 19:30:00
  */
-const smzdm = {
-  url: "user-api.smzdm.com/users/info",
-  msg: "什么值得买"
-};
-
-/**
- * 脚本作用：拼多多果园获取token
- * 重写地址：暂时没有确定具体是那个请求URL会携带token，因为每次手动抓包获取token的url都不一样
- * 触发类型：request-header
- * 获取方式：小程序或APP进果园逛一圈+浇水，在请求头request-header中搜索PDDAccessToken
- * 注意事项：每次脚本获取会覆盖之前的ck，暂时不支持脚本获取多个token，建议手动抓取然后填到boxjs里面，多账号用@隔开：tk1@tk2
- * 更新时间：2023.01.07 12:30
- */
-const pdd_orchard = {
-  url: "m.pinduoduo.net/proxy/api/api/server/_stm",
-  msg: "拼多多果园"
-};
-
-/**
- * 脚本作用：美团获取token
- * 触发类型：request-header
- * 获取方式：点击“我的”-“个人头像”，在请求头request-header中搜索token
- * 更新时间：2023.12.24 17:30
- */
-const meituan = {
-  url: "/user/v1/info/audit",
-  url1: "/mapi/usercenter",
-  msg: "美团获取token"
-};
-
-/**
- * 脚本作用：微博获取cookie
- * 触发类型：request-url
- * 获取方式：
- * 更新时间：2023.12.24 17:30
- * https://api.weibo.cn/2/users/show
- */
-const weibo = {
-  url: "/users/show",
-  msg: "微博获取cookie"
-};
 
 ////////////////////////////////
 const $ = new API("获取Cookie或Token通用脚本");
 const req_url = $request.url;
 const req_headers = $request.headers;
+const req_body = $request.body;
+const rsp_body = $response.body;
+
 console.log(`当前请求的url: ${req_url}`);
 // 遍历头部对象并打印每个字段和值
 console.log("遍历头部对象并打印每个字段和值开始❇️");
 for (const headerField in req_headers) {
   console.log(`${headerField}: ${req_headers[headerField]}`);
 }
-console.log("遍历头部对象并打印每个字段和值结束🔴");
+console.log("遍历头部对象并打印每个字段和值结束🍓");
 
 try {
   getCookieORToken();
@@ -70,46 +28,183 @@ $done();
 ////////////////////////////////
 
 function getCookieORToken() {
-  // 什么值得买
-  if (req_url.includes(smzdm.url)) {
+
+  /**
+   * 什么值得买
+   * 手机APP进入我的页面查看个人资料，即可获取cookie
+   * @keyword SMZDM_COOKIE
+   * @keyword fmz200_smzdm_cookie
+   */
+  if (req_url.includes("/user-api.smzdm.com/users/info")) {
     const cookie = req_headers['Cookie'] || req_headers['cookie'];
+    // 使用正则表达式匹配smzdm_id=数字 的模式
+    let regex = /smzdm_id=(\d+)/;
+    // 执行正则表达式匹配
+    let match = cookie.match(regex);
+    // 匹配结果存储在数组的第二个元素中
+    let smzdm_id = match ? match[1] : "";
+    console.log(smzdm_id + "获取到获取到数据：" + cookie);
+
+    let cache = $.read("#fmz200_smzdm_cookie") || "";
+    $.log("读取缓存数据：" + cache);
+    let json_data = JSON.parse(cache);
+    updateToken(smzdm_id, cookie, json_data);
+    const cacheValue = JSON.stringify(json_data, null, "\t");
+    
     $.write(cookie, '#SMZDM_COOKIE');
-    $.write(cookie, '#fmz200.smzdm.cookie');
-    $.notify(smzdm.msg + '获取cookie成功✅', cookie, cookie);
-    console.log(smzdm.msg + '获取到的ck为：' + cookie);
+    $.write(cacheValue, '#fmz200_smzdm_cookie');
+    $.notify('什么值得买 获取cookie成功✅', cookie, cookie);
+    console.log('什么值得买 获取到的ck为：' + cookie);
   }
 
-  // 拼多多果园获取token，暂时不确定哪个URL会携带PDDAccessToken
-  // Cookie: pdd_vds=xxx; ETag=dKJLmoeS; PDDAccessToken=12HUHDUW; install_token=118E4FCA;
-  if (req_url.includes(pdd_orchard.url)) {
+  /**
+   * 拼多多果园
+   * 小程序或APP进果园逛一圈+浇水，在请求头request-header中搜索PDDAccessToken, 多账号用@隔开：tk1@tk2
+   * Cookie: pdd_vds=xxx; ETag=dKJLmoeS; PDDAccessToken=12HUHDUW; install_token=118E4FCA;
+   * @keyword ddgyck
+   * @keyword fmz200_pdd_token
+   */
+  if (req_url.includes("/proxy/api/api/server/_stm")) {
     const cookieValue = req_headers["Cookie"] || req_headers["cookie"];
     const token = cookieValue.match(/PDDAccessToken=.+?/);
     if (token) {
       $.write(token, '#ddgyck');
-      $.write(token, '#fmz200.pdd.token');
-      $.notify(pdd_orchard.msg + 'token获取成功', token, token);
-      console.log(pdd_orchard.msg + '获取到的ck为：' + token);
+      $.write(token, '#fmz200_pdd_token');
+      $.notify('拼多多果园 token获取成功', token, token);
+      console.log('拼多多果园 获取到的ck为：' + token);
     }
   }
 
-  // 美团
-  if (req_url.includes(meituan.url) || req_url.includes(meituan.url1)) {
-    console.log(meituan.msg + '开始');
+  /**
+   * 美团获取token
+   * 点击“我的”-“个人头像”，在请求头request-header中搜索token
+   * @keyword meituanCookie
+   * @keyword fmz200_meituan_cookie
+   */
+  if (req_url.includes("/user/v1/info/audit") || req_url.includes("/mapi/usercenter")) {
+    console.log('美团获取token 开始');
     const token = req_headers['token'] || req_headers['Token'];
     $.write(token, '#meituanCookie');
-    $.write(token, '#fmz200.meituan.cookie');
-    $.notify(meituan.msg + '获取成功✅', token, token);
-    console.log(meituan.msg + '获取到的内容为：' + token);
+    $.write(token, '#fmz200_meituan_cookie');
+    $.notify('美团获取token 获取成功✅', token, token);
+    console.log('美团获取token 获取到的内容为：' + token);
   }
 
-  // 微博
-  if (req_url.includes(weibo.url)) {
-    console.log(weibo.msg + '开始');
-    // const token = req_headers['token'] || req_headers['Token'];
-    $.write(req_url, '#fmz200.weibo.token');
-    $.notify(weibo.msg + '获取成功✅', req_url, req_url);
-    console.log(weibo.msg + '获取到的内容为：' + req_url);
+  /**
+   * 微博获取cookie
+   * 打开APP不定时获取
+   * https://api.weibo.cn/2/users/show
+   * @keyword fmz200_weibo_token
+   */
+  if (req_url.includes("/users/show")) {
+    console.log('微博获取cookie 开始');
+    $.write(req_url, '#fmz200_weibo_token');
+    $.notify('微博获取cookie 获取成功✅', req_url, req_url);
+    console.log('微博获取cookie 获取到的内容为：' + req_url);
   }
+
+  /**
+   * 顺丰速运
+   * 打开小程序或APP-我的-积分, 捉以下几种url之一,把整个url放到变量 sfsyUrl 里,多账号换行分割
+   * @keyword sfsyBee
+   * @keyword fmz200_sf_bee
+   */
+  if (req_url.includes("/mcs-mimp/share/weChat/shareGiftReceiveRedirect") || req_url.includes("/mcs-mimp/share/app/shareRedirect")) {
+    console.log('顺丰速运 开始');
+    $.write(req_url, '#sfsyBee');
+    $.write(req_url, '#fmz200_sf_bee');
+    $.notify('顺丰速运 获取成功✅', req_url, req_url);
+    console.log('顺丰速运 获取到的内容为：' + req_url);
+  }
+
+  /**
+   * 滴滴获取token
+   *
+   * @keyword ddgyToken 多账号换行或者@隔开，格式uid&token。uid不可随便填，根据uid更新数据
+   * @keyword fmz200_didi_fruit 多账号换行或者@隔开，格式uid&token。uid不可随便填，根据uid更新数据
+   */
+  if (req_url.includes("/api/game/plant/enter")) {
+    console.log('滴滴获取token 开始');
+    let data = JSON.parse(req_body);
+    let uid = data.uid;
+    let newToken = data.token;
+    console.log(uid + "获取到token：" + newToken);
+    
+    let cache = $.read("#fmz200_didi_fruit") || "";
+    $.log("读取缓存数据：" + cache);
+    let json_data = parseDataString(cache);
+    updateToken(uid, newToken, json_data);
+    let string_data = convertDataToString(json_data);
+
+    $.write(string_data, '#ddgyToken');
+    $.write(string_data, '#fmz200_didi_fruit');
+    $.notify('滴滴获取token 获取成功✅', string_data, string_data);
+    console.log('滴滴获取token 获取到的内容为：' + string_data);
+  }
+
+  /**
+   * 滴滴打车
+   *
+   * @keyword fmz200_didi_ticket 多账号换行或者@隔开，格式uid&token。uid不可随便填，根据uid更新数据
+   */
+  if (req_url.includes("/login/v5/signInByOpenid")) {
+    console.log('滴滴打车 开始');
+    let data = JSON.parse(rsp_body);
+    let uid = data.uid;
+    let ticket = data.ticket;
+    console.log(uid + "获取到ticket：" + ticket);
+    
+    let cache = $.read("#fmz200_didi_ticket") || "";
+    $.log("读取缓存数据：" + cache);
+    let json_data = parseDataString(cache);
+    updateToken(uid, ticket, json_data);
+    let string_data = convertDataToString(json_data);
+    
+    $.write(string_data, '#fmz200_didi_ticket');
+    $.notify('滴滴打车 获取成功✅', string_data, string_data);
+    console.log('滴滴打车 获取到的内容为：' + string_data);
+  }
+}
+
+// 将数据字符串解析为对象
+function parseDataString(dataString) {
+  let data = {};
+  // 使用正则表达式匹配换行符号和@符号进行拆分
+  let parts = dataString.split(/[\n@]/);
+  parts.forEach(part => {
+    // 对每个部分再根据 "&" 符号拆分为 uid 和 token
+    let [uid, token] = part.split("&");
+    if (uid && token) {
+      data[uid] = token;
+    }
+  });
+  return data;
+}
+
+// 更新数据对象中指定 UID 的 Token
+function updateToken(uidToUpdate, newToken, data) {
+  if (data.hasOwnProperty(uidToUpdate)) {
+    // 如果 UID 存在，则更新其对应的 Token
+    data[uidToUpdate] = newToken;
+    console.log("Token updated successfully for UID: " + uidToUpdate);
+  } else {
+    // 如果 UID 不存在，则新增 UID 和对应的 Token
+    data[uidToUpdate] = newToken;
+    console.log("New UID and Token added successfully: " + uidToUpdate);
+  }
+}
+
+// 将对象转换为 uid&token 格式的字符串
+function convertDataToString(data) {
+  let result = "";
+  for (let uid in data) {
+    if (data.hasOwnProperty(uid)) {
+      result += `${uid}&${data[uid]}@`;
+    }
+  }
+  // 移除末尾的 '@' 符号
+  result = result.slice(0, -1);
+  return result;
 }
 
 /*********************************** API *************************************/
