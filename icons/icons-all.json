@@ -1,6 +1,6 @@
 {
   "name": "fmz200图标订阅",
-  "description": "收集一些自己常用的图标，尺寸为108px或144px，数量约1499个，更新日期：2023-11-13 19:20:00",
+  "description": "收集一些自己常用的图标，尺寸为108px或144px，数量约1499个，更新日期：2024-02-02 12:20:00",
   "icons": [
     {
       "name": "fmz200",
@@ -331,12 +331,24 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/DegYax_04.png"
     },
     {
+      "name": "didi",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/didi.png"
+    },
+    {
+      "name": "Discord",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Discord.png"
+    },
+    {
       "name": "DisneyPlus",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/DisneyPlus.png"
     },
     {
       "name": "Dots",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Dots.png"
+    },
+    {
+      "name": "douyu",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/douyu.png"
     },
     {
       "name": "EiffelTower",
@@ -551,6 +563,10 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/macat.png"
     },
     {
+      "name": "meituan",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/meituan.png"
+    },
+    {
       "name": "Merlion",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Merlion.png"
     },
@@ -701,6 +717,10 @@
     {
       "name": "skylines",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/skylines.png"
+    },
+    {
+      "name": "smzdm",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/smzdm.png"
     },
     {
       "name": "spotify",
@@ -5905,6 +5925,10 @@
     {
       "name": "TestFlight",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/erdongchanyo/TestFlight.png"
+    },
+    {
+      "name": "TestFlight",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/testflight.png"
     },
     {
       "name": "Telegram",

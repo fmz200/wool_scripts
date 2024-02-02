@@ -53,8 +53,8 @@
         }
       ],
       "icons": [
-        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/smzdm.png",
-        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/smzdm.png"
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/smzdm.png",
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/smzdm.png"
       ],
       "author": "@fmz200",
       "repo": "https://github.com/fmz200/wool_scripts"
@@ -107,8 +107,8 @@
         }
       ],
       "icons": [
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/task/didi.png",
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/task/didi.png"
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/didi.png",
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/didi.png"
       ],
       "author": "@passerby-b",
       "repo": "https://github.com/fmz200/wool_scripts",
@@ -135,8 +135,8 @@
         }
       ],
       "icons": [
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/task/kuaishou.png",
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/task/kuaishou.png"
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/kuaishou.png",
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/kuaishou.png"
       ],
       "author": "@passerby-b",
       "repo": "https://github.com/fmz200/wool_scripts",
@@ -195,8 +195,8 @@
       "repo": "https://github.com/fmz200/wool_scripts",
       "script": "https://raw.githubusercontent.com/LinYuanovo/scripts/main/dygy.js",
       "icons": [
-        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/TikTok.png",
-        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/TikTok.png"
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/TikTok.png",
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/TikTok.png"
       ]
     },
     {
@@ -222,42 +222,8 @@
       "author": "@fmz200",
       "repo": "https://github.com/fmz200/wool_scripts",
       "icons": [
-        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/meituan.png",
-        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/meituan.png"
-      ]
-    },
-    {
-      "id": "fmz200_sheepToken",
-      "name": "养了个羊token",
-      "keys": [
-        "sheepToken_wx",
-        "sheepToken_dy"
-      ],
-      "settings": [
-        {
-          "id": "sheepToken_wx",
-          "name": "(微信)养了个羊token",
-          "val": "",
-          "type": "textarea",
-          "autoGrow": false,
-          "rows": 12,
-          "desc": "进入小程序时获取的token"
-        },
-        {
-          "id": "sheepToken_dy",
-          "name": "(抖音)养了个羊token",
-          "val": "",
-          "type": "textarea",
-          "autoGrow": false,
-          "rows": 12,
-          "desc": "进入小程序时获取的token"
-        }
-      ],
-      "author": "@fmz200",
-      "repo": "https://github.com/fmz200/wool_scripts/tree/master/",
-      "icons": [
-        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/sheep.png",
-        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/sheep.png"
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/meituan.png",
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/meituan.png"
       ]
     },
     {
@@ -340,8 +306,8 @@
       "author": "@syzzzf",
       "repo": "https://github.com/songyangzz/QuantumultX/blob/master/testflight.js",
       "icons": [
-        "https://raw.githubusercontent.com/Orz-3/mini/master/testflight.png",
-        "https://raw.githubusercontent.com/Orz-3/task/master/testflight.png"
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/erdongchanyo/TestFlight.png",
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/erdongchanyo/TestFlight.png"
       ]
     },
     {
@@ -373,8 +339,8 @@
       "author": "@NobyDa",
       "repo": "https://github.com/NobyDa/Script/blob/master/TestFlight/TestFlightAccount.js",
       "icons": [
-        "https://raw.githubusercontent.com/NobyDa/mini/master/Alpha/testflight.png",
-        "https://raw.githubusercontent.com/NobyDa/mini/master/Color/testflight.png"
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/testflight.png",
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/testflight.png"
       ]
     },
     {
@@ -586,10 +552,6 @@
       "id": "fmz200_douyuYubaSign",
       "name": "斗鱼鱼吧签到",
       "desc_html": "⚠️使用说明</br>详情【<a href='https://github.com/fmz200/wool_scripts/raw/main/Scripts/douyu/yubaSign.js'><font class='red--text'>点我查看</font></a>】",
-      "icons": [
-        "https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/douyu.png",
-        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/douyu.png"
-      ],
       "keys": [
         "CookieDY",
         "GroupDY"
@@ -626,7 +588,11 @@
       ],
       "author": "@demo2099, @lowking, @fmz200",
       "repo": "https://github.com/fmz200/wool_scripts",
-      "script": "https://github.com/fmz200/wool_scripts/raw/main/Scripts/douyu/yubaSign.js"
+      "script": "https://github.com/fmz200/wool_scripts/raw/main/Scripts/douyu/yubaSign.js",
+      "icons": [
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/douyu.png",
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/douyu.png"
+      ]
     }
   ]
 }
