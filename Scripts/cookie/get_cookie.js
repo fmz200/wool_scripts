@@ -45,8 +45,8 @@ function getCookieORToken() {
     let smzdm_id = match ? match[1] : "";
     console.log(smzdm_id + "获取到获取到数据：" + cookie);
 
-    let cache = $.read("#fmz200_smzdm_cookie") || "";
-    $.log("读取缓存数据：" + cache);
+    let cache = $.read("#fmz200_smzdm_cookie") || {};
+    console.log("读取缓存数据：" + cache);
     let json_data = JSON.parse(cache);
     updateToken(smzdm_id, cookie, json_data);
     const cacheValue = JSON.stringify(json_data, null, "\t");
