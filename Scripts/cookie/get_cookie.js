@@ -11,7 +11,7 @@ const req_headers = $request.headers;
 const req_body = $request.body;
 const rsp_body = $response ? $response.body : "{}";
 
-console.log(`当前请求的url: ${req_url}`);
+// console.log(`当前请求的url: ${req_url}`);
 // 遍历头部对象并打印每个字段和值
 console.log("遍历头部对象并打印每个字段和值开始❇️");
 for (const headerField in req_headers) {
@@ -67,7 +67,7 @@ function getCookieORToken() {
     
     $.write(cookie, '#SMZDM_COOKIE');
     $.write(cacheValue, '#fmz200_smzdm_cookie');
-    $.notify('什么值得买 获取cookie成功✅', cookie, cookie);
+    $.notify('什么值得买 获取cookie成功✅', "", cookie);
     console.log('什么值得买 获取到的ck为：' + cookie);
   }
 

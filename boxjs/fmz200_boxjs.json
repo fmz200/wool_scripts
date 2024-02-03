@@ -46,21 +46,21 @@
       "settings": [
         {
           "id": "SMZDM_COOKIE",
-          "name": "什么值得买cookie",
+          "name": "什么值得买cookie，多账号用英文逗号(@)分隔",
           "val": "",
           "type": "textarea",
-          "autoGrow": true,
-          "rows": 16,
-          "desc": "多账号用英文逗号(@)分隔"
+          "autoGrow": false,
+          "rows": 32,
+          "desc": ""
         },
         {
           "id": "fmz200_smzdm_cookie",
-          "name": "什么值得买cookie",
+          "name": "什么值得买cookie，多账号使用JSON存储",
           "val": "",
           "type": "textarea",
-          "autoGrow": true,
+          "autoGrow": false,
           "rows": 32,
-          "desc": "多账号使用JSON存储"
+          "desc": ""
         }
       ],
       "icons": [
