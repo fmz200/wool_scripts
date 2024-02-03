@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 获取应用的cookie或token通用脚本
- * @date 2024-02-02 19:30:00
+ * @date 2024-02-03 21:30:00
  */
 
 ////////////////////////////////
@@ -9,7 +9,7 @@ const $ = new API("获取Cookie或Token通用脚本");
 const req_url = $request.url;
 const req_headers = $request.headers;
 const req_body = $request.body;
-const rsp_body = $response ? $response.body : "";
+const rsp_body = $response ? $response.body : "{}";
 
 console.log(`当前请求的url: ${req_url}`);
 // 遍历头部对象并打印每个字段和值
@@ -45,10 +45,24 @@ function getCookieORToken() {
     let smzdm_id = match ? match[1] : "";
     console.log(smzdm_id + "获取到获取到数据：" + cookie);
 
-    let cache = $.read("#fmz200_smzdm_cookie") || {};
+    let cache = $.read("#fmz200_smzdm_cookie") || "[]";
     console.log("读取缓存数据：" + cache);
     let json_data = JSON.parse(cache);
-    updateToken(smzdm_id, cookie, json_data);
+    let hasKey = false;
+    // 遍历集合中的每一个对象
+    for (let obj of json_data) {
+      // 如果当前对象的 key 属性值匹配给定的 key
+      if (obj.smzdm_id === smzdm_id) {
+        // 更新该对象的 cookie 值
+        obj.cookie = cookie;
+        hasKey = true;
+        break; // 更新后直接返回，无需继续遍历
+      }
+    }
+    // 如果集合中没有匹配的 key，则新增一个对象
+    if (!hasKey) {
+      json_data.push({smzdm_id: smzdm_id, cookie: cookie});
+    }
     const cacheValue = JSON.stringify(json_data, null, "\t");
     
     $.write(cookie, '#SMZDM_COOKIE');
