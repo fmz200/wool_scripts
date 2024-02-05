@@ -34,12 +34,16 @@ if (url.includes(A3341AB04)) {
 }
 
 //
-if (url.includes(A3341AB05)) {
-  obj.data.STOREY_DISPLAY_INFO.forEach(function (item) {
-    if (item.STOREY_NM.includes("广告")) {
-      item.IS_DISPLAY = "9";
-    }
-  });
+if (url.includes("A3341A120")) {
+  delete obj.data.POP_AD_INFO;
+}
+
+//
+if (url.includes(A3341AB04)) {
+  if (obj.data.ICON_SKIN_INFO) {
+    console.log("去除广告A3341AB04-ICON_SKIN_INFO");
+    obj.data.ICON_SKIN_INFO = {};
+  }
 }
 
 $done({body: JSON.stringify(obj)});
