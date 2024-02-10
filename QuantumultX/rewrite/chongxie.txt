@@ -3402,7 +3402,7 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do url rejec
 
 # > 招财猫直聘 
 # hostname = beehiveapi.58.com
-^https:\/\/beehiveapi\.58\.com\/adplace\/zcm\?position=launch&uid=62274178470162&platform=ios url reject-dict
+^https:\/\/beehiveapi\.58\.com\/adplace\/zcm url reject-dict
 
 
 
