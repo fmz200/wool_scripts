@@ -268,6 +268,39 @@
       ]
     },
     {
+      "id": "fmz200_xxyx_token",
+      "name": "晓晓优选token",
+      "keys": [
+        "fmz200_xxyx_token"
+      ],
+      "descs_html": [
+        "打开APP点击“我的”页面获取，可到代理工具脚本日志中查看token"
+      ],
+      "settings": [
+        {
+          "id": "fmz200_xxyx_token",
+          "name": "",
+          "val": "",
+          "desc": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 16
+        }
+      ],
+      "author": "@fmz200",
+      "repo": "https://github.com/fmz200/wool_scripts",
+      "scripts": [
+        {
+          "name": "晓晓优选签到",
+          "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/Scripts/xxyx/xxyx_signin.js"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/xxyx.jpeg",
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/xxyx.jpeg"
+      ]
+    },
+    {
       "id": "fmz200_airport_notice",
       "name": "获取机场公告",
       "keys": [
@@ -540,17 +573,19 @@
       "id": "fmz200_CCB_life",
       "name": "建行生活签到",
       "keys": [
-        "photonmang_signurl_jhsh",
-        "photonmang_signheader_jhsh",
-        "photonmang_signbody_jhsh"
+        "JHSH_BODY",
+        "JHSH_LOGIN_INFO",
+        "JHSH_SKIPDAY",
+        "JHSH_VERSION",
+        "JHSH_GIFT"
       ],
       "descs_html": [
-        "单账号签到"
+        "单账号签到，使用方法详见脚本内说明"
       ],
       "settings": [
         {
-          "id": "photonmang_signurl_jhsh",
-          "name": "签到的url",
+          "id": "JHSH_BODY",
+          "name": "签到的body",
           "val": "",
           "desc": "",
           "type": "textarea",
@@ -558,8 +593,8 @@
           "rows": 4
         },
         {
-          "id": "photonmang_signheader_jhsh",
-          "name": "签到的header",
+          "id": "JHSH_LOGIN_INFO",
+          "name": "签到的登录信息",
           "val": "",
           "desc": "",
           "type": "textarea",
@@ -567,13 +602,25 @@
           "rows": 4
         },
         {
-          "id": "photonmang_signbody_jhsh",
-          "name": "签到的Body",
+          "id": "JHSH_SKIPDAY",
+          "name": "断签信息",
           "val": "",
           "desc": "",
-          "type": "textarea",
-          "autoGrow": false,
-          "rows": 4
+          "type": "text"
+        },
+        {
+          "id": "JHSH_VERSION",
+          "name": "版本号",
+          "val": "",
+          "desc": "",
+          "type": "text"
+        },
+        {
+          "id": "JHSH_GIFT",
+          "name": "需要领取的奖励，1：打车，2：外卖，3：骑行。默认2",
+          "val": "",
+          "desc": "",
+          "type": "text"
         }
       ],
       "author": "@fmz200",
@@ -581,7 +628,7 @@
       "scripts": [
         {
           "name": "建行生活签到",
-          "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ccbLife/ccbLifeSignIn.js"
+          "script": "https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jhsh_checkIn.js"
         }
       ],
       "icons": [

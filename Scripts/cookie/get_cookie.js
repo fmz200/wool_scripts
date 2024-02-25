@@ -178,6 +178,21 @@ function getCookieORToken() {
     $.notify('滴滴打车 获取成功✅', string_data, string_data);
     console.log('滴滴打车 获取到的内容为：' + string_data);
   }
+
+  /**
+   * 晓晓优选 获取cookie
+   *
+   * @url https://xxyx-client-api.xiaoxiaoyouxuan.com/my?platform=ios
+   * @keyword fmz200_xxyx_token 打开APP点击“我的”页面获取
+   */
+  if (req_url.includes("xxyx-client-api.xiaoxiaoyouxuan.com/my")) {
+    console.log('晓晓优选 开始');
+    const token = req_headers['xx-token'];
+    console.log("获取到token：" + token);
+    
+    $.write(token, '#fmz200_xxyx_token');
+    $.notify('晓晓优选 获取成功✅', '', token);
+  }
 }
 
 // 将数据字符串解析为对象
