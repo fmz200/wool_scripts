@@ -6,7 +6,7 @@
  * 获取token：
  * ^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/my url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cookie/get_cookie.js
  * QX task：
- * 16 7 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/Scripts/xxyx/xxyx_signin.js, tag=晓晓优选签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/xxyx.jpeg, enabled=true
+ * 16 7 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xxyx/xxyx_signin.js, tag=晓晓优选签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/xxyx.jpeg, enabled=true
  */
 
 const $ = new Env('晓晓优选签到');
