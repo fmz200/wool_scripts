@@ -2747,7 +2747,7 @@ https://b.appsimg.com/upload/momin/ url reject
 
 # > 晓晓优选
 # hostname = xxyx-client-api.xiaoxiaoyouxuan.com
-^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/client\/energy\/mall\/getUserEnergy url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/Scripts/xxyx/xxyx.js
+^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/client\/energy\/mall\/getUserEnergy url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xxyx/xxyx.js
 
 # > 希尔顿 荣誉客会
 # hostname = wcprd.hilton.com.cn
