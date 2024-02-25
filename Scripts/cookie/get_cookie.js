@@ -191,7 +191,7 @@ function getCookieORToken() {
     console.log("获取到token：" + token);
     
     $.write(token, '#fmz200_xxyx_token');
-    $.notify('晓晓优选 获取成功✅', '', token);
+    $.notify('晓晓优选token 获取成功✅', '', '');
   }
 }
 
