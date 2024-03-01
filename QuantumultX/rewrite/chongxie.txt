@@ -1597,7 +1597,7 @@ https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSpl
 # > 农业银行
 # hostname = midc.cdn-static.abchina.com.cn, enjoy.cdn-static.abchina.com
 # 开屏广告
-^https？:\/\/midc\.cdn-static\.abchina\.com\.cn\/distributecenterimg\/file\/download\/(bdfb4|86fb9|7aa68|62b87|7c7d7) url reject-dict
+^https?:\/\/midc\.cdn-static\.abchina\.com\.cn\/distributecenterimg\/file\/download\/(bdfb4|86fb9|7aa68|62b87|7c7d7) url reject-dict
 ^https?:\/\/enjoy\.cdn-static\.abchina\.com\/yx-engine-web\/file\/download\/(9ce31|1bf6e|6bd18) url reject-200
 
 # > 奈菲影视
