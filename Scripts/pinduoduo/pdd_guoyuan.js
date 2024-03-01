@@ -1,10 +1,10 @@
 /*
 拼多多果园任务脚本,支持qx,loon,shadowrocket,surge,nodejs
 [task_local]
-30 1,7,12,18,22 * * * https://raw.githubusercontent.com/fmz200/docker_scripts/main/pinduoduo/pdd_guoyuan.js
+30 1,7,12,18,22 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/pinduoduo/pdd_guoyuan.js
 
 [Script]
-cron "30 1,8,12,17 * * *" script-path=https://raw.githubusercontent.com/fmz200/docker_scripts/main/pinduoduo/pdd_guoyuan.js,tag=拼多多果园
+cron "30 1,8,12,17 * * *" script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/pinduoduo/pdd_guoyuan.js,tag=拼多多果园
 
 青龙环境变量 ddgyck ='AccessToken'
 export ddgyck="xxxxx"
