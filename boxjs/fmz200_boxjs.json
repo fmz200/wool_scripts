@@ -254,8 +254,8 @@
           "id": "fmz200_meituan_cookie",
           "name": "美团token",
           "val": "",
-          "desc": "多账号用(@)分隔，账号数据用(#)连接[key#value]格式，例如：123#qazwsx@456#edcrfv",
-          "type": "textarea",
+          "desc": "多账号用JSON格式存储",
+          "type": "json",
           "autoGrow": true,
           "rows": 16
         }
