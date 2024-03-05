@@ -1,0 +1,12 @@
+#!name=HelloTalk分流
+#!desc=HelloTalk是一款外语学习社交应用软件，修改IP可能会被封号
+#!author=fmz200
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/HelloTalk.list
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2024-03-05 22:03:00
+#############################################
+
+host-suffix, hellotalk8.com, HelloTalk
+host-suffix, appsflyersdk.com, HelloTalk
