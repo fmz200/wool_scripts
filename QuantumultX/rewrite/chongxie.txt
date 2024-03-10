@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/chongxie.txt
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2024-03-05 18:07:00
+#!date=2024-03-10 17:07:00
 #!support=支持约511款APP/小程序
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 #############################################
@@ -134,7 +134,7 @@ hostname = delivery-api.imdada.cn, adservice.sigmob.cn, api.u51.com, gateway.36k
 # > Alibaba
 # hostname = acs.m.taobao.com, amdc.m.taobao.com
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv\/ url reject
-^https?:\/\/amdc\.m\.taobao\.com url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/amdc.js
+;^https?:\/\/amdc\.m\.taobao\.com url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/amdc.js
 
 # > 澳觅
 # hostname = interface.aomiapp.com
