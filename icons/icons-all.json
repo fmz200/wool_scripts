@@ -1,6 +1,6 @@
 {
   "name": "fmz200图标订阅",
-  "description": "收集一些自己常用的图标，尺寸为108px或144px，数量约1499个，更新日期：2024-02-25 12:20:00",
+  "description": "收集一些自己常用的图标，尺寸为108px或144px，数量约1499个，更新日期：2024-03-11 20:20:00",
   "icons": [
     {
       "name": "fmz200",
@@ -1069,6 +1069,10 @@
     {
       "name": "xxyx",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/xxyx.jpeg"
+    },
+    {
+      "name": "xxyx_01",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/xxyx_01.jpeg"
     },
     {
       "name": "YouTubeMusic",
