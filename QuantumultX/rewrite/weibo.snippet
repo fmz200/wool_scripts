@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/weibo.snippet
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2024-01-31 21:03:00
+#!date=2024-03-16 21:03:00
 #############################################
 # > "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # > "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -39,28 +39,28 @@ https://api\.weibo\.cn/2/(push/active|client/addlog_batch|ad/preload) Weibo url-
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d/push/daily Weibo url-and-header reject-dict
 
 # 超话按钮的提示
-https://api.weibo.cn/2/!/huati/discovery_home_bottom_getdotinfo Weibo url-and-header reject
+https://m?api.weibo.cn/2/!/huati/discovery_home_bottom_getdotinfo Weibo url-and-header reject
 
 # 微博移除发现页广告
-^https?://api.weibo.cn/2/search/(finder|container_timeline|container_discover) Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
+^https?://m?api.weibo.cn/2/search/(finder|container_timeline|container_discover) Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
 
 # 微博热搜页面广告
-^https?://api.weibo.cn/2/(page|flowpage) Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
+^https?://m?api.weibo.cn/2/(page|flowpage) Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
 
 # 微博话题页面广告
-https://api.weibo.cn/2/searchall Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
+https://m?api.weibo.cn/2/searchall Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
 
 # 微博超话页面广告
-^https:\/\/api\.weibo\.cn\/2\/statuses\/container_timeline_topicpage Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
+^https:\/\/m?api\.weibo\.cn\/2\/statuses\/container_timeline_topicpage Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
 
 # 微博超话tab页净化
-^https:\/\/api\.weibo\.cn\/2\/statuses\/container_timeline_topic\?flowId Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
+^https:\/\/m?api\.weibo\.cn\/2\/statuses\/container_timeline_topic\?flowId Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
 
 # 微博详情页面广告
-^https?://api.weibo.cn/2/statuses/extend Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
+^https?://m?api.weibo.cn/2/statuses/extend Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
 
 # 微博最顶部的tab页分组
-^https?://api.weibo.cn/2/groups/allgroups/v2 Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
+^https?://m?api.weibo.cn/2/groups/allgroups/v2 Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
 
 # 微博去广告以及去除各部分推广模块 - cherish
 ^https?://m?api\.weibo\.c(n|om)/2/(cardlist|searchall|page|messageflow|statuses/(unread_)?friends(/|_)timeline|groups/timeline|statuses/(container_timeline|container_timeline_hot|unread_hot_timeline|extend|video_mixtimeline)|profile/(me|container_timeline)|video/(community_tab|remind_info|tiny_stream_video_list)|checkin/show|\!/live/media_homelist|comments/build_comments|container/get_item|search/(finder|container_timeline|container_discover)) Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_main.js
