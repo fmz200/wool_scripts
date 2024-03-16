@@ -101,7 +101,7 @@ hostname = zlsdk.1rtb.net, delivery-api.imdada.cn, adservice.sigmob.cn, api.u51.
 # hostname = appapi.51job.com, cupid.51job.com
 ^https?:\/\/appapi\.51job\.com\/api\/market\/(adtrace|get_launch|get_prompt) url reject
 ^https?:\/\/cupid\.51job\.com\/open\/index\/recommend-infos url reject
-^https?:\/\/cupid\.51job\.com\/open\/noauth\/recommend\/job-tab-dynamic url script-response-body https://raw.githubusercontent.com/zirawell/app_remove_ads/main/All/response/51job.js
+^https?:\/\/cupid\.51job\.com\/open\/noauth\/recommend\/job-tab-dynamic url script-response-body https://raw.githubusercontent.com/zirawell/app_remove_ads/main/All/js/51job.js
 
 
 
@@ -758,7 +758,7 @@ hostname = zlsdk.1rtb.net, delivery-api.imdada.cn, adservice.sigmob.cn, api.u51.
 ^https?:\/\/47\.100\.65\.202\/api\/mobile\/index\.php\?version=\d&mobile=yes&module=basicdata&type=forumlist url response-body adv response-body random_body
 ^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=threadpost&.+?&page=1 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/fly.js
 ^https?:\/\/www\.flyert\.com\/source\/plugin\/mobile\/mobile\.php\?module=advis.* url reject
-^https?:\/\/www\.flyert\.com\/plugin\.php url script-response-body https://raw.githubusercontent.com/zirawell/app_remove_ads/main/All/response/flyert.js
+^https?:\/\/www\.flyert\.com\/plugin\.php url script-response-body https://raw.githubusercontent.com/zirawell/app_remove_ads/main/All/js/flyert.js
 
 
 # > 番茄小说
@@ -1062,7 +1062,7 @@ https://fbchina.flipchina.cn/v2/ad/query/* url reject
 ^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.render\.querysinglepage url reject-200
 ^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.fc\.recommend\.feedscommondservice url reject-dict
 ^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.render\.querytabfeedstream url reject-200
-^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.render\.query(index|my)page url script-response-body https://raw.githubusercontent.com/zirawell/app_remove_ads/main/All/response/freshippo.js
+^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.render\.query(index|my)page url script-response-body https://raw.githubusercontent.com/zirawell/app_remove_ads/main/All/js/freshippo.js
 
 
 # > 海豚优惠
