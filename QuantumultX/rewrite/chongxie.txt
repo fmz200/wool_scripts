@@ -431,8 +431,9 @@ hostname = zlsdk.1rtb.net, delivery-api.imdada.cn, adservice.sigmob.cn, api.u51.
 # > 哔哩哔哩漫画
 # hostname = manga.bilibili.com, i0.hdslb.com
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Recommend|Flash|ListFlash|GetBubbles|GetActivityTab|GetCommonBanner).* url reject
-^https?:\/\/i0\.hdslb\.com\/bfs\/manga-static\/\w+.(png|jpg)$ url reject-dict
-
+^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Shop\/GetShopItems url reject-dict
+^https?:\/\/i\d\.hdslb\.com\/bfs\/fawkes url reject-dict
+^https?:\/\/i\d\.hdslb\.com\/bfs\/manga-static\/\w+\.(jpg|png)$ url reject-200
 
 # >>>>>>>>>>>>>>> ✅ C ✅ <<<<<<<<<<<<<<
 # > clicli
@@ -1502,7 +1503,8 @@ https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSpl
 # > 买单吧
 # hostname = creditcardapp.bankcomm.cn, creditcard.bankcomm.com
 ^https?:\/\/creditcardapp\.bankcomm\.cn\/mappweb_interface\/common\/(qryPopAds|qryLaunchAds)\.do url reject-200
-^https?:\/\/creditcard\.bankcomm\.com\/tfimg\/public00\/M00\/[A-Z0-9]{2}\/[A-Z0-9]{2}\/[a-zA-Z0-9]{30}\.(jpg|png) url reject-200
+^https?:\/\/creditcard\.bankcomm\.com\/tfimg\/public00\/M00\/4C\/6F url reject-img
+^https?:\/\/creditcardapp\.bankcomm\.com\/rcg\/index\.html\?callbackurl=rcg\/index\.html&orclogin=1& url script-response-body https://raw.githubusercontent.com/zirawell/app_remove_ads/main/All/js/mdb.js
 
 # > 民生银行
 # hostname = www.cmbc.com.cn, rs.creditcard.cmbc.com.cn
