@@ -1,5 +1,8 @@
 #!name=Spotify去广告及解锁
-#!desc=1.去除播放广告 2.歌手/专辑列表正常展示 3.去除随机播放
+#!desc=1.去除播放广告 2.歌手/专辑列表正常展示 3.去除随机播放。
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/spotify.sgmodule
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2024-03-21 18:22:00
 
 # 2023.10.04 部分解锁premium,音质不能设置为超高(建议登录后再打开脚本,重启app等待脚本生效)
 # 仓库地址 https://github.com/app2smile/rules
