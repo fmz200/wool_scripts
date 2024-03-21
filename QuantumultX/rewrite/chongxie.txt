@@ -434,10 +434,10 @@ hostname = zlsdk.1rtb.net, delivery-api.imdada.cn, adservice.sigmob.cn, api.u51.
 ^https?:\/\/i\d\.hdslb\.com\/bfs\/manga-static\/\w+\.(jpg|png)$ url reject-200
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Recommend|Flash|ListFlash|GetBubbles|GetActivityTab|GetCommonBanner|GetComicConfigPicList) url reject-200
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Shop\/GetShopItems url reject-dict
-^https?:\/\/manga\.bilibili\.com\/twirp\/user\.v\d\.User\/UCenterConf url script-response-body https://raw.githubusercontent.com/zirawell/app_remove_ads/main/All/js/bilibiliManga.js
 ^https?:\/\/manga\.bilibili\.com\/twirp\/user\.v\d\.SeasonV\d\/GetSeasonInfo url reject-dict
-^https?:\/\/manga\.bilibili\.com\/twirp\/user\.v\d\.User\/FollowOffcial url reject-200
 ^https?:\/\/manga\.bilibili\.com\/twirp\/user\.v\d\.Read\/ActInfo url reject-200
+^https?:\/\/manga\.bilibili\.com\/twirp\/user\.v\d\.User\/UCenterConf url script-response-body https://raw.githubusercontent.com/zirawell/app_remove_ads/main/All/js/bilibiliManga.js
+^https?:\/\/manga\.bilibili\.com\/twirp\/user\.v\d\.User\/FollowOffcial url script-request-header https://raw.githubusercontent.com/zirawell/app_remove_ads/main/All/js/bilibiliManga.js
 
 # >>>>>>>>>>>>>>> ✅ C ✅ <<<<<<<<<<<<<<
 # > clicli
