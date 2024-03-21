@@ -138,13 +138,13 @@ function getCookieORToken() {
    * @keyword fmz200_didi_fruit 多账号换行或者@隔开，格式uid&token。uid不可随便填，根据uid更新数据
    */
   if (req_url.includes("/api/game/plant/enter")) {
-    console.log('滴滴获取token 开始');
+    console.log('滴滴果园token 开始');
     let data = JSON.parse(req_body);
     let uid = data.uid;
     let newToken = data.token;
     console.log(uid + "获取到token：" + newToken);
     
-    let cache = $.read("#fmz200_didi_fruit") || "";
+    let cache = $.read("#fmz200_didi_fruit") || "{}";
     $.log("读取缓存数据：" + cache);
     let json_data = parseDataString(cache);
     updateToken(uid, newToken, json_data);
@@ -152,8 +152,8 @@ function getCookieORToken() {
 
     $.write(string_data, '#ddgyToken');
     $.write(string_data, '#fmz200_didi_fruit');
-    $.notify('滴滴获取token 获取成功✅', string_data, string_data);
-    console.log('滴滴获取token 获取到的内容为：' + string_data);
+    $.notify('滴滴果园token 获取成功✅', string_data, string_data);
+    console.log('滴滴果园token 获取到的内容为：' + string_data);
   }
 
   /**
