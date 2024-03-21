@@ -252,10 +252,10 @@
         },
         {
           "id": "fmz200_meituan_cookie",
-          "name": "美团token",
+          "name": "美团token-JSON格式",
           "val": "",
           "desc": "多账号用JSON格式存储",
-          "type": "json",
+          "type": "textarea",
           "autoGrow": true,
           "rows": 16
         }
