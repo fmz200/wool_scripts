@@ -1720,8 +1720,8 @@ https://access.mypikpak.com/access_controller/v1/area_accessible url reject
 # > 平安口袋银行
 # hostname = cdn.sdb.com.cn
 ^https?:\/\/cdn\.sdb\.com\.cn\/widget\/magic-module-sprite\/general-banner url reject-200
+^https?:\/\/cdn\.sdb\.com\.cn\/widget\/magic-module-sprite\/dialog-normal url reject-dict
 ^https?:\/\/cdn\.sdb\.com\.cn\/widget\/pb\/pb-plugins-recomend-content url reject-dict
-^https?:\/\/cdn\.sdb\.com\.cn\/mkt\/materiel-issue\/materials\/2024(?!0116\/17471|0124\/17177|0130\/17522|0221\/17602|0228\/17380|0228\/17152|0229\/17631|0301\/17634|0306\/17427|0306\/17626).*\.(jpg|png)$ url reject-img
 # 信用卡-精彩活动模块
 #^https?:\/\/cdn\.sdb\.com\.cn\/widget\/magic-module-sprite\/four-rectangle-grid url reject-dict
 
