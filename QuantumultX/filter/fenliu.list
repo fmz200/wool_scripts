@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/fenliu.list
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2024-01-26 22:22:00
+#!date=2024-03-22 13:22:00
 #!support=约9392行
 #!proxy-select=reject
 #############################################
@@ -1457,7 +1457,8 @@ host, yt-adp.nosdn.127.net, reject
 host, yt-adp.ws.126.net, reject
 
 # > 网易云
-host-keyword, ossgw.alicdn.com, reject
+# 此条会导致"淘宝->成就中心->淘宝人生"进不去
+;host-keyword, ossgw.alicdn.com, reject
 
 # > 微软
 host-suffix, ads.msn.com, reject
