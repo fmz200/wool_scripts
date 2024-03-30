@@ -105,9 +105,28 @@ try {
    */
   if (req_url.includes("/users/show")) {
     console.log('微博获取cookie 开始');
-    $.write(req_url, '#fmz200_weibo_token');
-    $.notify('微博获取cookie 获取成功✅', "", req_url);
-    console.log('微博获取cookie 获取到的内容为：' + req_url);
+    console.log('获取到的内容为：' + req_url);
+    // 使用正则表达式匹配uid参数值
+    let uidPattern = /uid=(\d+)/;
+    let match = req_url.match(uidPattern);
+
+    // 如果匹配到uid参数值，则提取出来并打印
+    if (match) {
+      let uid = match[1];
+      console.log("获取到以下账号的数据："+ uid);
+      let cache = $.read("#fmz200_weibo_token") || "[]";
+      console.log("读取缓存数据：" + cache);
+
+      let json_data = JSON.parse(cache);
+      updateOrAddObject(json_data, "weibo_id", uid, "signin_url", req_url);
+      const cacheValue = JSON.stringify(json_data, null, "\t");
+      
+      $.write(cacheValue, '#fmz200_weibo_token');
+      $.notify('微博获取cookie 成功✅', "你可以在日志中查看本次获取的数据", "");
+    } else {
+      console.log("No uid found in the URL.");
+      $.notify('微博获取cookie 未获取到UID❗️', "你可以在日志中查看本次获取的数据", "");
+    }
   }
 
   /**
