@@ -238,7 +238,7 @@
         "fmz200_meituan_cookie"
       ],
       "descs_html": [
-        "打开美团查看个人资料，在请求头中搜索token"
+        "打开美团查看个人资料，在请求头中搜索token\n如果要获取多账号更新，点击完善资料进入页面获取[不需要真编辑]"
       ],
       "settings": [
         {
@@ -252,7 +252,7 @@
         },
         {
           "id": "fmz200_meituan_cookie",
-          "name": "美团token-JSON格式",
+          "name": "美团token-json格式",
           "val": "",
           "desc": "多账号用JSON格式存储",
           "type": "textarea",

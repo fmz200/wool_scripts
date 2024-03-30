@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 获取应用的cookie或token通用脚本
- * @date 2024-02-03 21:30:00
+ * @date 2024-03-30 10:30:00
  */
 
 ////////////////////////////////
@@ -38,21 +38,7 @@ try {
     let cache = $.read("#fmz200_smzdm_cookie") || "[]";
     console.log("读取缓存数据：" + cache);
     let json_data = JSON.parse(cache);
-    let hasKey = false;
-    // 遍历集合中的每一个对象
-    for (let obj of json_data) {
-      // 如果当前对象的 key 属性值匹配给定的 key
-      if (obj.smzdm_id === smzdm_id) {
-        // 更新该对象的 cookie 值
-        obj.cookie = cookie;
-        hasKey = true;
-        break; // 更新后直接返回，无需继续遍历
-      }
-    }
-    // 如果集合中没有匹配的 key，则新增一个对象
-    if (!hasKey) {
-      json_data.push({smzdm_id: smzdm_id, cookie: cookie});
-    }
+    updateOrAddObject(json_data, "smzdm_id", smzdm_id, "cookie", cookie);
     const cacheValue = JSON.stringify(json_data, null, "\t");
 
     $.write(cookie, '#SMZDM_COOKIE');
@@ -81,17 +67,34 @@ try {
 
   /**
    * 美团获取token
-   * 点击“我的”-“个人头像”，在请求头request-header中搜索token
+   * 点击“我的”-“个人头像”-"完善资料"，在请求头request-header中搜索token
    * @keyword meituanCookie
    * @keyword fmz200_meituan_cookie
    */
-  if (req_url.includes("/user/v1/info/audit") || req_url.includes("/mapi/usercenter")) {
+  if (req_url.includes("/user/v1/info/auditting") || req_url.includes("/mapi/usercenter")) {
     console.log('美团获取token 开始');
     const token = req_headers['token'] || req_headers['Token'];
+    console.log("获取到token：" + token);
     $.write(token, '#meituanCookie');
-    $.write(token, '#fmz200_meituan_cookie');
-    $.notify('美团获取token 获取成功✅', token, token);
-    console.log('美团获取token 获取到的内容为：' + token);
+    $.notify('美团获取token成功✅', "单账号更新成功，多账号更新中", token);
+    
+    console.log("开始更新多账号");
+    let data = JSON.parse(rsp_body);
+    if (data.user) {
+      let uid = data.user.id;
+      let username = data.user.username;
+      console.log(`获取到uid：${uid}，username：${username}`);
+      
+      let cache = $.read("#fmz200_meituan_cookie") || "[]";
+      console.log("读取缓存数据：" + cache);
+      
+      let json_data = JSON.parse(cache);
+      updateOrAddObject(json_data, "meituan_id", uid, "username", username, "token", token);
+      const cacheValue = JSON.stringify(json_data, null, "\t");
+
+      $.write(cacheValue, '#fmz200_meituan_cookie');
+      $.notify('美团多账号更新token成功✅', "", "");
+    }
   }
 
   /**
@@ -205,26 +208,35 @@ function parseDataString(dataString) {
   return data;
 }
 
-// 这个函数接受一个集合（数组）、一个属性id、一个key、一个属性id2以及一个value作为参数。
-// 它会查找集合中是否存在属性id等于key的对象，如果找到了，则更新该对象的属性id2为给定的value；
-// 如果未找到，则创建一个新对象，属性id为key，属性id2为value，并将其添加到集合中。
-// 最后，函数返回更新后的集合。
-function updateOrAddObject(collection, id, key, id2, value) {
-  // 查找集合中是否存在属性id等于key的对象
-  const index = collection.findIndex(obj => obj[id] === key);
-
-  if (index !== -1) {
-    // 如果找到了，则更新属性id2的值为value
-    collection[index][id2] = value;
-  } else {
-    // 如果未找到，则新增一个对象并添加到集合中
-    const newObj = {};
-    newObj[id] = key;
-    newObj[id2] = value;
-    collection.push(newObj);
+// 接受可变数量的参数对（id, key），并使用循环来处理这些参数对。
+// 如果找到了匹配的对象，则在后续参数对中更新对应的属性值；如果未找到，则创建一个新对象并将其添加到集合中。
+function updateOrAddObject(collection, ...args) {
+  if (args.length % 2 !== 0) {
+    throw new Error('Arguments must be provided in pairs.');
   }
 
-  return collection;
+  for (let i = 0; i < args.length; i += 2) {
+    const id = args[i];
+    const key = args[i + 1];
+    const index = collection.findIndex(obj => obj[id] === key);
+
+    if (index !== -1) {
+      // 如果找到了，则更新对应的属性值
+      for (let j = i + 2; j < args.length; j += 2) {
+        const id2 = args[j];
+        const value = args[j + 1];
+        collection[index][id2] = value;
+      }
+    } else {
+      // 如果未找到，则新增一个对象并添加到集合中
+      const newObj = {};
+      for (let j = i; j < args.length; j += 2) {
+        newObj[args[j]] = args[j + 1];
+      }
+      collection.push(newObj);
+      break;
+    }
+  }
 }
 
 // 更新数据对象中指定 UID 的 Token

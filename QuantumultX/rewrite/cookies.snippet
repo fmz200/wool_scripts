@@ -276,9 +276,11 @@ https:\/\/www.hifini.com\/my.htm url script-request-header https://raw.githubuse
 # >>>>>>>>>>>>>>> ✅ M ✅ <<<<<<<<<<<<<<
 # > 美团
 # hostname = open.meituan.com, gaea.meituan.com
-# 获取token，美团APP点击“我的-个人主页”进入“完善资料”，这一步可以获取到用户ID用于更新多账号信息
+# 获取token，美团APP点击“我的-个人主页”
 # 新版本
-https://open.meituan.com/user/v1/info/audit url script-request-header https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cookie/get_cookie.js
+# 进入“完善资料”，这一步可以获取到用户ID用于更新多账号信息
+https://open.meituan.com/user/v1/info/auditting url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cookie/get_cookie.js
+;https://open.meituan.com/user/v1/info/audit url script-request-header https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cookie/get_cookie.js
 # 旧版本
 https://gaea.meituan.com/mapi/usercenter url script-request-header https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cookie/get_cookie.js
 # 小象买菜 每日自动签到cookie, 打开美团App，选择“美团买菜” - “我的” - “天天领钱”
