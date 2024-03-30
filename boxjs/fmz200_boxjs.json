@@ -271,7 +271,8 @@
       "id": "fmz200_xxyx_token",
       "name": "晓晓优选token",
       "keys": [
-        "fmz200_xxyx_token"
+        "fmz200_xxyx_token",
+        "xxyx_data"
       ],
       "descs_html": [
         "打开APP点击“我的”页面获取，可到代理工具脚本日志中查看token"
@@ -279,6 +280,15 @@
       "settings": [
         {
           "id": "fmz200_xxyx_token",
+          "name": "",
+          "val": "",
+          "desc": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 16
+        },
+        {
+          "id": "xxyx_data",
           "name": "",
           "val": "",
           "desc": "",

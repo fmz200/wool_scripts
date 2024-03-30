@@ -11,7 +11,6 @@ const req_headers = $request.headers;
 const req_body = $request.body;
 const rsp_body = $response ? $response.body : "{}";
 
-// console.log(`当前请求的url: ${req_url}`);
 // 遍历头部对象并打印每个字段和值
 console.log("遍历头部对象并打印每个字段和值开始❇️");
 for (const headerField in req_headers) {
@@ -20,15 +19,6 @@ for (const headerField in req_headers) {
 console.log("遍历头部对象并打印每个字段和值结束🍓");
 
 try {
-  getCookieORToken();
-} catch (e) {
-  console.log('脚本运行出现错误，错误信息：' + e.message);
-}
-$done();
-////////////////////////////////
-
-function getCookieORToken() {
-
   /**
    * 什么值得买
    * 手机APP进入我的页面查看个人资料，即可获取cookie
@@ -64,7 +54,7 @@ function getCookieORToken() {
       json_data.push({smzdm_id: smzdm_id, cookie: cookie});
     }
     const cacheValue = JSON.stringify(json_data, null, "\t");
-    
+
     $.write(cookie, '#SMZDM_COOKIE');
     $.write(cacheValue, '#fmz200_smzdm_cookie');
     $.notify('什么值得买 获取cookie成功✅', "", cookie);
@@ -113,7 +103,7 @@ function getCookieORToken() {
   if (req_url.includes("/users/show")) {
     console.log('微博获取cookie 开始');
     $.write(req_url, '#fmz200_weibo_token');
-    $.notify('微博获取cookie 获取成功✅', req_url, req_url);
+    $.notify('微博获取cookie 获取成功✅', "", req_url);
     console.log('微博获取cookie 获取到的内容为：' + req_url);
   }
 
@@ -143,7 +133,7 @@ function getCookieORToken() {
     let uid = data.uid;
     let newToken = data.token;
     console.log(uid + "获取到token：" + newToken);
-    
+
     let cache = $.read("#fmz200_didi_fruit") || "{}";
     $.log("读取缓存数据：" + cache);
     let json_data = parseDataString(cache);
@@ -167,13 +157,13 @@ function getCookieORToken() {
     let uid = data.uid;
     let ticket = data.ticket;
     console.log(uid + "获取到ticket：" + ticket);
-    
+
     let cache = $.read("#fmz200_didi_ticket") || "";
     $.log("读取缓存数据：" + cache);
     let json_data = parseDataString(cache);
     updateToken(uid, ticket, json_data);
     let string_data = convertDataToString(json_data);
-    
+
     $.write(string_data, '#fmz200_didi_ticket');
     $.notify('滴滴打车 获取成功✅', string_data, string_data);
     console.log('滴滴打车 获取到的内容为：' + string_data);
@@ -189,11 +179,16 @@ function getCookieORToken() {
     console.log('晓晓优选 开始');
     const token = req_headers['xx-token'];
     console.log("获取到token：" + token);
-    
+
     $.write(token, '#fmz200_xxyx_token');
     $.notify('晓晓优选token 获取成功✅', '', '');
   }
+
+} catch (e) {
+  console.log('脚本运行出现错误：' + e.message);
+  $.notify('获取Cookie脚本运行出现错误❗️', "", "");
 }
+$.done();
 
 // 将数据字符串解析为对象
 function parseDataString(dataString) {
@@ -208,6 +203,28 @@ function parseDataString(dataString) {
     }
   });
   return data;
+}
+
+// 这个函数接受一个集合（数组）、一个属性id、一个key、一个属性id2以及一个value作为参数。
+// 它会查找集合中是否存在属性id等于key的对象，如果找到了，则更新该对象的属性id2为给定的value；
+// 如果未找到，则创建一个新对象，属性id为key，属性id2为value，并将其添加到集合中。
+// 最后，函数返回更新后的集合。
+function updateOrAddObject(collection, id, key, id2, value) {
+  // 查找集合中是否存在属性id等于key的对象
+  const index = collection.findIndex(obj => obj[id] === key);
+
+  if (index !== -1) {
+    // 如果找到了，则更新属性id2的值为value
+    collection[index][id2] = value;
+  } else {
+    // 如果未找到，则新增一个对象并添加到集合中
+    const newObj = {};
+    newObj[id] = key;
+    newObj[id2] = value;
+    collection.push(newObj);
+  }
+
+  return collection;
 }
 
 // 更新数据对象中指定 UID 的 Token
