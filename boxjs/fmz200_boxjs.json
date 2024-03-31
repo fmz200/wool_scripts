@@ -22,7 +22,7 @@
           "val": "",
           "type": "textarea",
           "autoGrow": true,
-          "rows": 32,
+          "rows": 8,
           "desc": "阿里云盘cookie"
         }
       ],
@@ -50,7 +50,7 @@
           "val": "",
           "type": "textarea",
           "autoGrow": false,
-          "rows": 32,
+          "rows": 8,
           "desc": ""
         },
         {
@@ -59,7 +59,7 @@
           "val": "",
           "type": "textarea",
           "autoGrow": false,
-          "rows": 32,
+          "rows": 8,
           "desc": ""
         }
       ],
@@ -248,7 +248,7 @@
           "desc": "多账号换行或者@隔开。例如：token1@token2",
           "type": "textarea",
           "autoGrow": true,
-          "rows": 16
+          "rows": 8
         },
         {
           "id": "fmz200_meituan_cookie",
@@ -257,7 +257,7 @@
           "desc": "多账号用JSON格式存储",
           "type": "textarea",
           "autoGrow": true,
-          "rows": 16
+          "rows": 8
         }
       ],
       "author": "@fmz200",
@@ -285,7 +285,7 @@
           "desc": "",
           "type": "textarea",
           "autoGrow": true,
-          "rows": 16
+          "rows": 8
         },
         {
           "id": "xxyx_data",
@@ -294,7 +294,7 @@
           "desc": "",
           "type": "textarea",
           "autoGrow": true,
-          "rows": 16
+          "rows": 8
         }
       ],
       "author": "@fmz200",
