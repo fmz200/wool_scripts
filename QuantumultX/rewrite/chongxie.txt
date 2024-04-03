@@ -1550,6 +1550,12 @@ https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSpl
 # > 马蜂窝
 # hostname = mapi.mafengwo.cn
 ^https?:\/\/mapi\.mafengwo\.cn\/(travelguide\/)?ad url reject-200
+^https?:\/\/mapi\.mafengwo\.cn\/widget\/note\/get_widget_note url reject
+^https?:\/\/mapi\.mafengwo\.cn\/system\/config\/mark_alert_config url reject-dict
+^https?:\/\/mapi\.mafengwo\.cn\/system\/config\/get_push_config url reject-dict
+^https?:\/\/mapi\.mafengwo\.cn\/system\/config\/get_alert_config url reject-dict
+^https?:\/\/mapi\.mafengwo\.cn\/system\/update\/check_update url reject-dict
+^https?:\/\/mapi\.mafengwo\.cn\/system\/push\/get_local_push_config url reject
 
 # > 咪咕
 # hostname = *.cmvideo.cn
