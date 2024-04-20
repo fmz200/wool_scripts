@@ -1028,11 +1028,11 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 
 # > 杭州公交
 # hostname = m.ibuscloud.com
-^https?:\/\/m\.ibuscloud\.com\/v2\/app\/getStartPage url reject
+^https?:\/\/m\.ibuscloud\.com\/v\d\/app\/getStartPage url reject
 
 # > 红版报
 # hostname = fbchina.flipchina.cn
-https://fbchina.flipchina.cn/v2/ad/query/* url reject
+^https?:\/\/fbchina\.flipchina\.cn\/v\d\/ad\/query url reject
 
 # > 虎嗅
 # hostname = api-ad-product.huxiu.com
@@ -1059,7 +1059,7 @@ https://fbchina.flipchina.cn/v2/ad/query/* url reject
 # > 和风天气
 # hostname = hfapp-service.qweather.net
 # 感谢【可莉】分享
-^https?:\/\/hfapp-service\.qweather\.net\/v2\.0\/app\/ad\/list\? url reject-dict
+^https?:\/\/hfapp-service\.qweather\.net\/v\d\.\d\/app\/ad\/list\? url reject-dict
 
 # > 合利宝展业通
 # hostname = promote-trx.helipay.com
