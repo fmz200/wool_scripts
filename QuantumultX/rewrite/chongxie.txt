@@ -1141,7 +1141,7 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 
 # > 京东
 # hostname = api.m.jd.com, dns.jd.com
-^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
 # 禁京东DNS解析 感谢@Eula分享
 ^https?:\/\/dns\.jd\.com\/ url reject
 ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(server|basic)Config url response-body "dnsvip"\:".+" response-body "dnsvip":""
@@ -1153,7 +1153,7 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 # > 京东极速版
 # hostname = img11.360buyimg.com, api.m.jd.com
 ^https?:\/\/img11\.360buyimg.com\/dl\/jfs\/t1\/195304\/29\/12317\/268480\/60e6fd21E02a8fb2a\/ url reject-200
-https://api.m.jd.com/client.action\?functionId=lite_advertising url reject
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising url reject
 
 # > 京东健康
 # hostname = m.360buyimg.com
