@@ -54,7 +54,7 @@
 "isp"`那就是家庭宽带，其他值（比如：hosting，business）都不是家宽。
 
 常见的抖音分流有：
-> https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/DouYin.snippet
+> https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/DouYin.list
 >
 > https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/DouYin/DouYin.list
 
