@@ -1360,7 +1360,7 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 # 私享定制广告
 ^https?:\/\/wallet\.lakala\.com\/m\/a\/lama\/mgt\/activity\/biz\/query\/byMerInfo url reject-dict
 # 最新动态广告
-^https?:\/\/wallet\.lakala\.com\/m\/a\/message\/v3\/fetchMsgList url reject-dict
+^https?:\/\/wallet\.lakala\.com\/m\/a\/message\/v\d\/fetchMsgList url reject-dict
 
 # > 懒人听书
 # hostname = 118.178.214.118, dapis.mting.info, display.wting.info
@@ -1393,7 +1393,7 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 
 # > 乐橙
 # hostname = dl-cu-hz.lechange.cn
-https://dl-cu-hz.lechange.cn/oms-online/advertisementPush/* url reject
+^https:\/\/dl-cu-hz\.lechange\.cn\/oms-online\/advertisementPush url reject
 
 # > 乐堡潮玩馆小程序
 # hostname = tbgapplet.carlsberg.asia
@@ -1406,7 +1406,7 @@ https://dl-cu-hz.lechange.cn/oms-online/advertisementPush/* url reject
 
 # > 拦截100
 # hostname = tagit.hyhuo.com
-https://tagit.hyhuo.com/recover/list url reject
+^https?:\/\/tagit\.hyhuo\.com\/recover\/list url reject
 
 # > 旅法师营地
 # hostname = www.iyingdi.cn
@@ -1431,7 +1431,7 @@ https://tagit.hyhuo.com/recover/list url reject
 # hostname = ad.lofter.com, images.pinduoduo.com, lofter.lf127.net
 # 开屏广告 感谢@林夕分享
 ^https?:\/\/ad\.lofter.com\/v1\.1\/yitou\/madr url reject-200
-^http?:\/\/images\.pinduoduo\.com\/marketing\_api url reject-200
+^https?:\/\/images\.pinduoduo\.com\/marketing\_api url reject-200
 ^https?:\/\/lofter\.lf127\.net\/ad\-material url reject-200
 
 # > linxi
