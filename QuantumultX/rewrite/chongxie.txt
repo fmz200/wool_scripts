@@ -1452,7 +1452,7 @@ https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSpl
 # >>>>>>>>>>>>>>> ✅ M ✅ <<<<<<<<<<<<<<
 # > MIX
 # hostname = dispatcher.camera360.com
-^https?:\/\/dispatcher\.camera360\.com\/api\/v1\/list$ url reject
+^https?:\/\/dispatcher\.camera360\.com\/api\/v\d\/list$ url reject
 
 # > 妈妈网孕育
 # hostname = qimg.cdnmama.com
@@ -1597,7 +1597,7 @@ https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSpl
 ^https?:\/\/mob\.mddcloud\.com\.cn\/adApi\/advert\/(first|third)part\/advertList url reject-dict
 ^https?:\/\/t-dsp\.pinduoduo\.com url reject-200
 ^https?:\/\/mobads-pre-config\.cdn\.bcebos\.com\/preload\.php url reject-200
-^http?:\/\/sfo\.mddcloud\.com\.cn\/api\/v2\/sfo\/popup_displays? url reject-dict
+^https?:\/\/sfo\.mddcloud\.com\.cn\/api\/v\d\/sfo\/popup_displays? url reject-dict
 ^https?:\/\/tower\.ubixioe\.com\/mob\/mediation url reject
 ^https?:\/\/toblog\.ctobsnssdk\.com url reject-200
 ^https?:\/\/conf-darwin\.xycdn\.com url reject-dict
