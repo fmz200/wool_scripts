@@ -1514,6 +1514,7 @@ https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSpl
 ^https?:\/\/creditcardapp\.bankcomm\.cn\/mappweb_interface\/common\/(qryPopAds|qryLaunchAds)\.do url reject-200
 ^https?:\/\/creditcard\.bankcomm\.com\/tfimg\/public00\/M00\/4C\/6F url reject-img
 ^https?:\/\/creditcardapp\.bankcomm\.com\/rcg\/index\.html\?callbackurl=rcg\/index\.html&orclogin=1& url script-response-body https://raw.githubusercontent.com/zirawell/app_remove_ads/main/All/js/mdb.js
+^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/mappweb_interaction\/appInfo\/appNewestVersion url reject-200
 
 # > 民生银行
 # hostname = www.cmbc.com.cn, rs.creditcard.cmbc.com.cn
