@@ -1688,7 +1688,7 @@ https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSpl
 # >>>>>>>>>>>>>>> ✅ P ✅ <<<<<<<<<<<<<<
 # > pikpak
 # hostname = access.mypikpak.com
-https://access.mypikpak.com/access_controller/v1/area_accessible url reject
+^https?:\/\/access\.mypikpak\.com\/access_controller\/v\d\/area_accessible url reject
 
 # > PushPlus微信推送广告
 # hostname = image.pushplus.plus, www.pushplus.plus
