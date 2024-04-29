@@ -1892,7 +1892,7 @@ https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSpl
 # > RRTV_屏蔽軟件更新
 ^https?:\/\/api\.rr\.tv\/.*?Version url reject
 # > RRTV_去除首頁廣告
-https://api.rr.tv/v3plus/index/channel\?pageNum=1&position=CHANNEL_INDEX url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js
+^https?:\/\/api\.rr\.tv\/v3plus\/index\/channel\?pageNum=1&position=CHANNEL_INDEX url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js
 # > RRTV_去除廣場tab
 ^https?:\/\/api\.rr\.tv\/app\/config\/h5NativeBar url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js
 # > RRTV_去除商城廣告
@@ -1904,11 +1904,11 @@ https://api.rr.tv/v3plus/index/channel\?pageNum=1&position=CHANNEL_INDEX url scr
 # > RRTV_Get_Drama
 ^https?:\/\/api\.rr\.tv\/drama\/app\/get_combined_drama_detail url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js
 # > RRTV_Watch_V4
-https://api.rr.tv/watch/v4 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js
+^https?:\/\/api\.rr\.tv\/watch\/v\d url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js
 # > RRTV_User_Info
-https://api.rr.tv/user/profile url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js
+^https?:\/\/api\.rr\.tv\/user\/profile url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js
 # > RRTV_屏蔽限時彈窗
-https://api.rr.tv/storage/business/rootName/app/homePage\?dataType=JSON url reject-dict
+^https?:\/\/api\.rr\.tv\/storage\/business\/rootName\/app\/homePage\?dataType=JSON url reject-dict
 
 # > 日日煮
 # hostname = cms.daydaycook.com.cn, api.daydaycook.com.cn
