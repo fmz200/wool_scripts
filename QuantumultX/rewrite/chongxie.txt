@@ -437,7 +437,7 @@ hostname = img01.51jobcdn.com, api5.youonbike.com, mgesq.api.mgtv.com, *.hitv.co
 ^https?:\/\/manga\.bilibili\.com\/twirp\/user\.v\d\.SeasonV\d\/GetSeasonInfo url reject-dict
 ^https?:\/\/manga\.bilibili\.com\/twirp\/user\.v\d\.Read\/ActInfo url reject-200
 ^https?:\/\/manga\.bilibili\.com\/twirp\/user\.v\d\.User\/UCenterConf url script-response-body https://raw.githubusercontent.com/zirawell/app_remove_ads/main/All/js/bilibiliManga.js
-^https?:\/\/manga\.bilibili\.com\/twirp\/user\.v\d\.User\/FollowOffcial url script-request-header https://raw.githubusercontent.com/zirawell/app_remove_ads/main/All/js/bilibiliManga.js
+^https?:\/\/manga\.bilibili\.com\/twirp\/user\.v\d\.User\/GetInitInfo url script-response-body https://raw.githubusercontent.com/zirawell/app_remove_ads/main/All/js/bilibiliManga.js
 
 # >>>>>>>>>>>>>>> ✅ C ✅ <<<<<<<<<<<<<<
 # > clicli
