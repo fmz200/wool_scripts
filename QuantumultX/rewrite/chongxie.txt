@@ -1127,7 +1127,7 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 # 我的页面悬浮广告
 ^https?:\/\/yunbusiness\.ccb\.com\/basic_service\/txCtrl\? url response-body "TAG_AD_INFO" response-body "TAG_AD_INFO0"
 # 内置饿了么外卖弹窗
-^https?:\/\/g\.alicdn\.com\/o2o-ad url reject-dic
+^https?:\/\/g\.alicdn\.com\/o2o-ad url reject-dict
 
 # > 简讯
 # hostname = api.tipsoon.com
