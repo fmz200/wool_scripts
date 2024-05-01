@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/fenliu.list
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2024-03-22 13:22:00
+#!date=2024-05-01 13:50:00
 #!support=约9392行
 #!proxy-select=reject
 #############################################
@@ -638,6 +638,10 @@ host-keyword, mapi.m.jd.com, reject
 host, dns.jd.com, reject
 IP-CIDR, 101.124.19.122/32, reject
 IP6-CIDR, 2402:db40:5100:1011::5/128, reject
+
+# 建行生活
+# 内置饿了么外卖弹窗
+host, o2o-ad-log-gateway.alibaba.com, reject
 
 
 
