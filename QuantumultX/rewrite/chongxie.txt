@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/chongxie.txt
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2024-05-01 13:50:00
+#!date=2024-05-05 13:50:00
 #!support=支持约511款APP/小程序
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 #############################################
@@ -245,26 +245,6 @@ hostname = g.alicdn.com, api.huachenjie.com, open.e.kuaishou.cn, ad.shunchangzhi
 # hostname = cdn-xyk-app.bankofbeijing.com.cn
 ^https?:\/\/cdn-xyk-app\.bankofbeijing\.com\.cn\/cdn\/resource\/image\/advertise url reject-200
 
-# > 百度
-# hostname = www.baidu.com, fcvbjbcebos.baidu.com, cover.baidu.com, baichuan.baidu.com, api*.tuisong.baidu.com, afd.baidu.com, mobads.baidu.com, issuecdn.baidupcs.com, update.pan.baidu.com, sa*.tuisong.baidu.com
-^https?:\/\/fcvbjbcebos\.baidu\.com\/.+.mp4 url reject
-^https?:\/\/fcvbjbcebos\.baidu\.com\/.+?\.mp4 url reject-img
-^https?:\/\/cover\.baidu\.com\/cover\/page\/dspSwitchAds\/ url reject
-^https?:\/\/baichuan\.baidu\.com\/rs\/adpmobile\/launch url reject
-^https?:\/\/baichuan\.baidu\.com\/rs\/adpmobile\/launch url reject-img
-^https?:\/\/api\d\.tuisong\.baidu\.com url reject-img
-^https?:\/\/afd\.baidu\.com\/afd\/entry url reject
-^https?:\/\/afd\.baidu\.com\/afd\/entry url reject-img
-^https?:\/\/als\.baidu\.com\/clog\/clog url reject
-^https?:\/\/mobads\.baidu\.com\/cpro\/ui\/mads.+ url reject
-^https?:\/\/issuecdn\.baidupcs\.com\/issue\/netdisk\/guanggao\/ url reject-200
-^https?:\/\/[\s\S]*\.baidu\.com/.*?ad[xs]\.php url reject-img
-^https?:\/\/t\d{2}\.baidu\.com url reject-img
-^https?:\/\/update\.pan\.baidu\.com\/statistics url reject
-^https?:\/\/log.+?baidu\.com url reject
-^https?:\/\/sa\d\.tuisong\.baidu\.com url reject-img
-^https?:\/\/www.baidu.com\/?action=static&ms=1&version=css_page_2@0.*? url reject
-
 # > 百度地图
 # hostname = dss0.bdstatic.com, tb1.bdstatic.com, tb2.bdstatic.com, ss0.bdstatic.com, gss0.bdstatic.com, newclient.map.baidu.com
 ^https?:\/\/dss0\.bdstatic\.com\/-0U0bnSm1A5BphGlnYG\/ url reject-200
@@ -326,6 +306,26 @@ hostname = g.alicdn.com, api.huachenjie.com, open.e.kuaishou.cn, ad.shunchangzhi
 # > 百度文库
 # hostname = appwk.baidu.com
 ^https?:\/\/appwk\.baidu\.com\/xpage\/interface\/wknaad url reject-200
+
+# > 百度
+# hostname = www.baidu.com, fcvbjbcebos.baidu.com, cover.baidu.com, baichuan.baidu.com, api*.tuisong.baidu.com, afd.baidu.com, mobads.baidu.com, issuecdn.baidupcs.com, update.pan.baidu.com, sa*.tuisong.baidu.com
+^https?:\/\/fcvbjbcebos\.baidu\.com\/.+.mp4 url reject
+^https?:\/\/fcvbjbcebos\.baidu\.com\/.+?\.mp4 url reject-img
+^https?:\/\/cover\.baidu\.com\/cover\/page\/dspSwitchAds\/ url reject
+^https?:\/\/baichuan\.baidu\.com\/rs\/adpmobile\/launch url reject
+^https?:\/\/baichuan\.baidu\.com\/rs\/adpmobile\/launch url reject-img
+^https?:\/\/api\d\.tuisong\.baidu\.com url reject-img
+^https?:\/\/afd\.baidu\.com\/afd\/entry url reject
+^https?:\/\/afd\.baidu\.com\/afd\/entry url reject-img
+^https?:\/\/als\.baidu\.com\/clog\/clog url reject
+^https?:\/\/mobads\.baidu\.com\/cpro\/ui\/mads.+ url reject
+^https?:\/\/issuecdn\.baidupcs\.com\/issue\/netdisk\/guanggao\/ url reject-200
+^https?:\/\/[\s\S]*\.baidu\.com/.*?ad[xs]\.php url reject-img
+^https?:\/\/t\d{2}\.baidu\.com url reject-img
+^https?:\/\/update\.pan\.baidu\.com\/statistics url reject
+^https?:\/\/log.+?baidu\.com url reject
+^https?:\/\/sa\d\.tuisong\.baidu\.com url reject-img
+^https?:\/\/www.baidu.com\/?action=static&ms=1&version=css_page_2@0.*? url reject
 
 # > 百信银行
 # hostname = mres.aibank.com
@@ -1326,11 +1326,9 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 # hostname = www.oschina.net
 ^https?:\/\/www\.oschina\.net\/action\/apiv2\/get_launcher url reject-img
 
-# > 快手联盟,优量汇,穿山甲
-# hostname = api-access.pangolin-sdk-toutiao.com, is.snssdk.com, mi.gdt.qq.com
-^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/get_ads url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/adsense.js
-^https?:\/\/is.snssdk.com/api/ad/union/sdk url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/adsense.js
-^https?:\/\/mi\.gdt\.qq\.com\/gdt_mview url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/adsense.js
+# > 快手联盟,优量汇,穿山甲「广告联盟」
+# hostname = api-access.pangolin-sdk-toutiao.com, mi.gdt.qq.com, open.e.kuaishou.com
+^https:\/\/(api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/get_ads|open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ$|mi\.gdt\.qq\.com\/gdt_mview\.fcg\?) url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/adsense.js
 
 # > 口袋校园
 # hostname = pocketuni.net
