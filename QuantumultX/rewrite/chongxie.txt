@@ -2203,7 +2203,7 @@ https://apis.lifeweek.com.cn/api/baseConfig/getIosNewConfig url reject
 # > TapTap
 # hostname = api.taptapdada.com
 # 开屏广告 感谢【TEXAS】分享
-https?:\/\/api\.taptapdada\.com\/startup\-logo\/v1\/combo\? url reject-dict
+^https?:\/\/api\.taptapdada\.com\/startup-logo\/v\d\/combo\? url reject-dict
 
 # > TubeMax
 # hostname = *.i18n-pglstatp.com
@@ -2212,7 +2212,7 @@ https?:\/\/api\.taptapdada\.com\/startup\-logo\/v1\/combo\? url reject-dict
 
 # > top-widget
 # hostname = top-widgets-api.xiaozujian.com
-https://top-widgets-api.xiaozujian.com/api/ad/config url reject
+^https?:\/\/top-widgets-api\.xiaozujian\.com\/api\/ad\/config url reject
 
 # > 天府市民云
 # hostname = tfsmy.chengdu.gov.cn
