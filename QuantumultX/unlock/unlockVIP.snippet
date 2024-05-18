@@ -1,11 +1,11 @@
 #!name=解锁VIP服务合集
-#!desc=(R)当遇到部分软件无法联网时，记得取消勾选该重写
+#!desc=(R)当遇到部分软件无法联网时，取消勾选该重写
 #!author=fmz200
 #!homepage=https://github.com/fmz200/wool_scripts
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/unlock/unlockVIP.snippet
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2023.09.13 22:21
+#!date=2024-05-18 09:20:00
 #############################################
 
 hostname = appwk.baidu.com, license.enpass.io, mb3admin.com, api.tipsoon.com, biz.cyapi.cn, wrapper.cyapi.cn, api.adapty.io, vas.wps.cn, account.wps.cn, api.revenuecat.com, api.revenuecat.com, api*.faceu.mobi, api3-lq.faceu.mobi, commerce-api-lf.faceu.mobi, commerce-api-lq.faceu.mobi, lv-api-lq.ulikecam.com, lv-api-hl.ulikecam.com
@@ -38,6 +38,11 @@ hostname = appwk.baidu.com, license.enpass.io, mb3admin.com, api.tipsoon.com, bi
 
 
 # >>>>>>>>>>>>>>> ✅ J ✅ <<<<<<<<<<<<<<
+# > JavDB-净化/VIP解锁
+# hostname = api.hechuangxinxi.xyz
+^https?:\/\/api\.hechuangxinxi\.xyz\/api\/v\d\/(users|startup|ads) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/JavDB.js
+;^https?:\/\/api\.hechuangxinxi\.xyz\/api\/v\d\/(movies|startup|logs\/movie_played) url script-request-header https://raw.githubusercontent.com/chxm1023/Rewrite/main/JavDB.js
+
 # > 剪映解锁会员
 ^https?:\/\/commerce-api-.*\.faceu\.mobi\/commerce\/v1\/(subscription\/user_info|purchase\/draft_unlock|effect\/check_effects) url script-request-header https://raw.githubusercontent.com/yqc007/QuantumultX/master/VideoFusionVipCrack.js
 
