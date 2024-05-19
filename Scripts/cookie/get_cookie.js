@@ -74,6 +74,9 @@ try {
   if (req_url.includes("/user/v1/info/auditting") || req_url.includes("/mapi/usercenter")) {
     console.log('美团获取token 开始');
     const token = req_headers['token'] || req_headers['Token'];
+    if (!token) {
+      $.done();
+    }
     console.log("获取到token：" + token);
     $.write(token, '#meituanCookie');
     $.notify('美团获取token成功✅', "单账号更新成功，多账号更新中", token);
@@ -194,16 +197,30 @@ try {
   /**
    * 晓晓优选 获取cookie
    *
-   * @url https://xxyx-client-api.xiaoxiaoyouxuan.com/my?platform=ios
+   * @url https://xxyx-client-api.xiaoxiaoyouxuan.com/my
    * @keyword fmz200_xxyx_token 打开APP点击“我的”页面获取
    */
   if (req_url.includes("xxyx-client-api.xiaoxiaoyouxuan.com/my")) {
     console.log('晓晓优选 开始');
     const token = req_headers['xx-token'];
-    console.log("获取到token：" + token);
+    let rsp_data = JSON.parse(rsp_body).data;
+    if (token && rsp_data) {
+      let mobile = rsp_data.mobile;
+      let username = rsp_data.nick;
+      console.log(`获取到uid：${mobile}，username：${username}`);
 
-    $.write(token, '#fmz200_xxyx_token');
-    $.notify('晓晓优选token 获取成功✅', '', '');
+      let cache = $.read("#fmz200_xxyx_token") || "[]";
+      console.log("读取缓存数据：" + cache);
+
+      let json_data = JSON.parse(cache);
+      updateOrAddObject(json_data, "mobile", mobile, "username", username, "token", token);
+      const cacheValue = JSON.stringify(json_data, null, "\t");
+      
+      $.write(cacheValue, '#fmz200_xxyx_token');
+      $.notify('晓晓优选token 获取成功✅', '', '');
+    } else {
+      $.notify('晓晓优选token 获取失败❗️', '', '');
+    }
   }
 
 } catch (e) {
@@ -229,6 +246,7 @@ function parseDataString(dataString) {
 
 // 接受可变数量的参数对（id, key），并使用循环来处理这些参数对。
 // 如果找到了匹配的对象，则在后续参数对中更新对应的属性值；如果未找到，则创建一个新对象并将其添加到集合中。
+// 第一对数据是主键
 function updateOrAddObject(collection, ...args) {
   if (args.length % 2 !== 0) {
     throw new Error('Arguments must be provided in pairs.');
