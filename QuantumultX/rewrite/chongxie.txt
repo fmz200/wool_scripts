@@ -2472,7 +2472,7 @@ https://apis.lifeweek.com.cn/api/baseConfig/getIosNewConfig url reject
 # > 完美世界电竞
 # hostname = api.wmpvp.com
 # 开屏广告
-^https?:\/\/api\.wmpvp\.com\/api\/v1\/config\/promote url reject
+^https?:\/\/api\.wmpvp\.com\/api\/v\d\/config\/promote url reject
 
 # > 万词王
 # hostname = wanciwangdata.oss-cn-beijing.aliyuncs.com, recite.perfectlingo.com
@@ -2482,9 +2482,9 @@ https://apis.lifeweek.com.cn/api/baseConfig/getIosNewConfig url reject
 # 移除banner广告
 ^https?:\/\/recite\.perfectlingo\.com\/api\/recite\/app-act\/act-list.+ url reject-dict
 # 移除底部广告
-^https?:\/\/recite\.perfectlingo\.com\/api\/recite\/content-recommend\/v1\/get-by-uid.+ url reject-dict
+^https?:\/\/recite\.perfectlingo\.com\/api\/recite\/content-recommend\/v\d\/get-by-uid.+ url reject-dict
 # 移除悬浮广告
-^https?:\/\/recite\.perfectlingo\.com\/api\/recite\/floating-window\/v1\/get-show.+ url reject-dict
+^https?:\/\/recite\.perfectlingo\.com\/api\/recite\/floating-window\/v\d\/get-show.+ url reject-dict
 
 # > 万达电影小程序
 # hostname = misc-api-prd-mx.wandafilm.com
@@ -2533,23 +2533,21 @@ https://support.you.163.com/appversync/check.do url reject
 ^https?:\/\/iadmusicmatvideo\.music\.126\.net url reject
 ^https?:\/\/interface3?\.music\.163\.com\/eapi\/(community\/friends\/fans-group\/artist\/group\/get|user\/sub\/artist|music\/songshare\/text\/recommend\/get|mine\/applet\/redpoint|resniche\/position\/play\/new\/get) url reject-dict
 # (评论区｜评论右上角热评馆｜播放页评论)｜回复
-^https?:\/\/interface3?\.music\.163.com\/eapi\/(comment\/(feed\/inserted|hotcomment\/collect|tips\/v2\/get)|v\d\/content\/exposure\/comment\/banner) url reject-dict
+^https?:\/\/interface3?\.music\.163\.com\/eapi\/(comment\/(feed\/inserted|hotcomment\/collect|tips\/v\d\/get)|v\d\/content\/exposure\/comment\/banner) url reject-dict
 # 播放页live或直播｜(首页免或vip图标｜小提示)
-^https?:\/\/interface3?\.music\.163.com\/eapi\/(mlivestream\/entrance\/playpage|link\/(position\/show\/(strategy|resource)|scene\/show)) url reject-dict
+^https?:\/\/interface3?\.music\.163\.com\/eapi\/(mlivestream\/entrance\/playpage|link\/(position\/show\/(strategy|resource)|scene\/show)) url reject-dict
 # 黑胶弹窗｜会员试用
-^https?:\/\/interface3?\.music\.163.com\/eapi\/(vipcenter\/tspopup\/get|vipauth\/app\/auth|music-vip-membership\/client\/vip\/info|zone\/songplay\/entry\/get) url reject-dict
+^https?:\/\/interface3?\.music\.163\.com\/eapi\/(vipcenter\/tspopup\/get|vipauth\/app\/auth|music-vip-membership\/client\/vip\/info|zone\/songplay\/entry\/get) url reject-dict
 # 搜索页热搜卡片｜猜你喜欢｜我的应用下方提醒
-^https?:\/\/interface3?\.music\.163.com\/w?e?api\/(search\/(chart|default|rcmd\/keyword|specialkeyword)|(resource-exposure\/|middle\/clientcfg\/config)|activity\/bonus\/playpage\/time\/query) url reject-dict
+^https?:\/\/interface3?\.music\.163\.com\/w?e?api\/(search\/(chart|default|rcmd\/keyword|specialkeyword)|(resource-exposure\/|middle\/clientcfg\/config)|activity\/bonus\/playpage\/time\/query) url reject-dict
 # 侧边栏
 ^https?:\/\/interface3?\.music\.163\.com\/eapi\/(side-bar\/mini-program\/music-service\/account|delivery\/batch-deliver) url reject-dict
-^https?:\/\/(ipv4|interface3?)\.music\.163.com\/eapi\/ad url reject-dict
+^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/eapi\/ad url reject-dict
 
 # > 网易邮箱
 # hostname = appconf.mail.163.com, client.mail.163.com, analytics.163.com
 ^https?:\/\/appconf\.mail\.163\.com\/mmad\/ url reject-200
-https:\/\/appconf\.mail\.163\.com\/mmad\/get\.do url reject
-http:\/\/analytics\.163\.com\/ntes url reject
-^https?:\/\/client\.mail\.163.com\/apptrack\/confinfo\/(searchMultiAds.do|showAds.do) url reject
+^https?:\/\/client\.mail\.163\.com\/apptrack\/confinfo\/(searchMultiAds|showAds) url reject
 
 # > 网易
 # hostname = *.music.126.net, img1.126.net, www.icourse163.org, nex.163.com, g1.163.com, client.mail.163.com, c.m.163.com, interface*.music.163.com
@@ -2601,7 +2599,7 @@ http:\/\/analytics\.163\.com\/ntes url reject
 
 # > 威锋
 # hostname = api.wfdata.club
-^https?:\/\/api\.wfdata\.club\/v2\/yesfeng\/(infoCenterAd|yesList) url reject
+^https?:\/\/api\.wfdata\.club\/v\d\/yesfeng\/(infoCenterAd|yesList) url reject
 
 # > 微店
 # hostname = thor.weidian.com
@@ -2627,7 +2625,7 @@ http:\/\/analytics\.163\.com\/ntes url reject
 
 # > 唯品会
 # hostname = b.appsimg.com, mapi.appvipshop.com
-https://b.appsimg.com/upload/momin/ url reject
+^https?:\/\/b\.appsimg\.com\/upload\/momin url reject
 ^https?:\/\/mapi\.appvipshop\.com\/vips-mobile\/rest\/activity\/advertisement\/get url reject-200
 ^https?:\/\/mapi\.appvipshop\.com\/vips-mobile\/rest\/iosAdInfo\/report url reject
 # APP+小程序弹窗广告
