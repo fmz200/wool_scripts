@@ -101,8 +101,7 @@ function login() {
     body: loginBody,
   };
 
-  return $.http.post(options).then(
-    (resp) => {
+  return $.http.post(options).then((resp) => {
       $.log("🟢正在登录...");
       // $.log(resp.body);
       var obj = JSON.parse(resp.body);
