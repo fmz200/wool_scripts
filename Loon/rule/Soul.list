@@ -12,9 +12,9 @@
 
 # User-Agent: Soul_New/5.0.0 (iPhone; iOS 17.1; Scale/3.00; CFNetwork; iPhone15,2) SoulBegin-iOS-5.0.0-WIFI-SoulEnd
 # 用ua匹配规则生效的额外条件是域名/IP可以MITM并且被MITM（需要在host中添加）
-;user-agent
+# user-agent
 
-;host-keyword, soul
+# domain-keyword, soul
 
 ip-cidr, 8.210.3.170/32
 ip-cidr, 43.231.145.10/32
