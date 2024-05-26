@@ -5,7 +5,7 @@
   "icon": "https://avatars.githubusercontent.com/u/57740735?s=60&v=4",
   "repo": "https://github.com/fmz200/wool_scripts",
   "desc": "订阅大多都支持多账号，协定数据格式如下：有主键的用JSON，没有主键的拼接用#分割用@。\n例如{\"uid1\": \"token1\", \"uid2\": \"token2\",\"uid3\": \"token3\"}和uid1#token1@uid2#token2@uid3#token3",
-  "remark": "更新日期：2024-05-19 11:30:00",
+  "date": "更新日期：2024-05-26 19:30:00",
   "apps": [
     {
       "id": "fmz200_aliyun",
@@ -200,35 +200,6 @@
       "icons": [
         "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/pinduoduo.png",
         "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/pinduoduo.png"
-      ]
-    },
-    {
-      "id": "fmz200_dygy",
-      "name": "抖音果园cookie",
-      "keys": [
-        "ddgyCk"
-      ],
-      "descs_html": [
-        "功能：签到领水滴、肥料，收取水瓶，每日五次水滴，选择及领取挑战，开宝箱，浇水，三餐礼包，戳鸭子。（浏览任务抓不到包，暂时做不了）",
-        "进入小程序浇水后抓一个Cookie"
-      ],
-      "settings": [
-        {
-          "id": "ddgyCk",
-          "name": "抖抖果园cookie",
-          "val": "",
-          "type": "textarea",
-          "autoGrow": false,
-          "rows": 4,
-          "desc": "多个账号用@或者换行分割：ck1@ck2"
-        }
-      ],
-      "author": "@fmz200",
-      "repo": "https://github.com/fmz200/wool_scripts",
-      "script": "https://raw.githubusercontent.com/LinYuanovo/scripts/main/dygy.js",
-      "icons": [
-        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/TikTok.png",
-        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/TikTok.png"
       ]
     },
     {
