@@ -1,4 +1,4 @@
-#!name=获取应用cookie或token合集
+#!name=获取cookie&token合集
 #!desc=顺序尽量放到上面，获取到以后取消勾选避免重复大量的MITM
 #!author=fmz200
 #!homepage=https://github.com/fmz200/wool_scripts
@@ -90,10 +90,6 @@ hostname = xxyx-client-api.xiaoxiaoyouxuan.com, yunbusiness.ccb.com, home.m.jd.c
 # hostname = 
 ^https:\/\/rewards\.bing\.com url script-request-header https://raw.githubusercontent.com/lowking/Scripts/master/bing/bingPoint.js
 
-# > 百度签到
-# hostname = 
-^https?:\/\/tieba\.baidu\.com\/?.? url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.cookie.js
-
 # > 百度贴吧 cookie
 # hostname = 
 https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js
@@ -156,10 +152,6 @@ https?:\/\/app.bilibili.com\/x\/v2\/space\/bangumi url script-request-header htt
 # > 斗鱼鱼吧 获取cookie
 # hostname = 
 ^https://yuba.douyu.com/wbapi/web/group/myFollow? url script-request-header https://raw.githubusercontent.com/lowking/Scripts/master/douyu/yubaSign.js
-
-# > 电信营业厅
-# hostname = 
-^https:\/\/wapside.189.cn:9001\/api\/home\/sign url script-request-body https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.cookie.js
 
 # > 懂球帝
 # hostname = 
@@ -418,7 +410,7 @@ https:\/\/qqpet.jwetech.com\/api\/authorizations url script-response-body https:
 
 # >>>>>>>>>>>>>>> ✅ U ✅ <<<<<<<<<<<<<<
 # > umer
-# hostname = s
+# hostname = 
 https?:\/\/api\.umer\.com\.cn\/.*getCurrentUmerSign url script-request-header https://ooxx.be/js/umer.js
 
 
@@ -518,6 +510,18 @@ https:\/\/club\.yili\.com\/MALLIFChe\/MCSWSIAPI\.asmx\/Call url script-request-b
 # > 中国电信 获取Cookie
 # hostname = 
 ^https:\/\/(e\.189\.cn\/store\/user|open\.e\.189\.cn\/api\/logbox\/oauth2\/loginSubmit\.do) url script-request-header https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/get_10000_cookie.js
+^https:\/\/wapside.189.cn:9001\/api\/home\/sign url script-request-body https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.cookie.js
+
+# > 中国联通
+# hostname = 
+^https:\/\/act.10010.com\/SigninApp\/signin\/querySigninActivity.htm url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js
+^https:\/\/act.10010.com\/SigninApp(.*?)\/signin\/daySign url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js
+^https:\/\/m.client.10010.com\/dailylottery\/static\/(textdl\/userLogin|active\/findActivityInfo) url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js
+
+# > 中国移动
+# hostname = 
+;^http:\/\/wx.10086.cn\/website\/taskCenter\/index\? url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.cookie.js
+;^http:\/\/wx.10086.cn\/website\/taskCenter\/sign\? url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.cookie.js
 
 # > 追书畅读版
 # hostname = 
@@ -531,17 +535,6 @@ https:\/\/club\.yili\.com\/MALLIFChe\/MCSWSIAPI\.asmx\/Call url script-request-b
 # hostname = 
 ^https?:\/\/(www\.)?rrys2020\.com\/?.? url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/zimuzu/zimuzu.cookie.js
 ^http:\/\/ios.zmzapi.com\/index.php.*a=(mobile_)?login url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/zimuzu/zimuzu.cookie.js
-
-# > 中国联通
-# hostname = 
-^https:\/\/act.10010.com\/SigninApp\/signin\/querySigninActivity.htm url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js
-^https:\/\/act.10010.com\/SigninApp(.*?)\/signin\/daySign url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js
-^https:\/\/m.client.10010.com\/dailylottery\/static\/(textdl\/userLogin|active\/findActivityInfo) url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js
-
-# > 中国移动
-# hostname = 
-;^http:\/\/wx.10086.cn\/website\/taskCenter\/index\? url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.cookie.js
-;^http:\/\/wx.10086.cn\/website\/taskCenter\/sign\? url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.cookie.js
 
 # > 智行火车
 # hostname = 
