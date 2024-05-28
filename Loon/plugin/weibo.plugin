@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/weibo.plugin
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2024-05-27 17:50:00
+#!date=2024-05-28 21:00:00
 #############################################
 # > "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # > "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -16,8 +16,10 @@
 #############################################
 
 [Rule]
-# 似乎没用的请求，收集用户信息
+# 收集用户信息，上传用户日志的请求
 URL-REGEX, ^https?:\/\/api\.weibo\.cn\/2\/(push\/active|client\/addlog_batch|ad\/preload), REJECT-DROP
+URL-REGEX, ^https?:\/\/api-cloudim\.api\.weibo\.com\/v1\/log\/, REJECT-DROP
+
 
 [Rewrite]
 # 热门视频 | 热推荐
@@ -72,6 +74,7 @@ http-response ^https?:\/\/new\.vip\.weibo\.cn\/littleskin\/preview script-path=h
 
 # 解锁微博会员APP图标
 http-response ^https?:\/\/new\.vip\.weibo\.cn\/aj\/appicon\/list script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/weibo/weibo_vip.js, requires-body=true, timeout=60, tag=解锁微博会员APP图标
+
 
 [MITM]
 hostname = api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, new.vip.weibo.cn, *api.weibo.cn, sdkapp.uve.weibo.com
