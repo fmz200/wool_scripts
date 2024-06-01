@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/Soul.list
 #!tg-group：https://t.me/lanjieguanggao
-#!update：2024-05-09 08:30:00
+#!update：2024-06-01 23:15:00
 #############################################
 # 1.2.3.4/24      /24表示网络的子网掩码长度，即前24位是网络部分，后8位是主机部分。这种表示法常用于描述特定范围内的IP地址
 # 6.7.8.9/32      /32表示整个32位的IP地址都用于表示这一个地址，即单独的一个IP地址
@@ -15,6 +15,13 @@
 # user-agent
 
 # domain-keyword, soul
+
+# 本来是广告，但是拒绝后似乎不能正常使用
+IP-CIDR, 47.56.131.76/32
+IP-CIDR, 47.97.215.55/32
+IP-CIDR, 47.99.42.29/32
+IP-CIDR, 120.27.235.201/32
+IP-CIDR, 121.196.197.147/32
 
 ip-cidr, 8.210.3.170/32
 ip-cidr, 43.231.145.10/32
