@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/fenliu.list
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2024-05-01 13:50:00
+#!date=2024-06-02 00:50:00
 #!support=约9392行
 #!proxy-select=reject
 #############################################
@@ -468,12 +468,12 @@ host, api.iegadp.qq.com, REJECT
 host-suffix, byteorge.com, REJECT
 host-suffix, bytegoofy.com, REJECT
 host-suffix, bytedance.com, REJECT
-IP-CIDR, 49.71.37.101/32, REJECT, no-resolve
-IP-CIDR, 117.71.105.23/32, REJECT, no-resolve
-IP-CIDR, 218.94.207.205/32, REJECT, no-resolve
-IP-CIDR, 117.92.229.188/32, REJECT, no-resolve
-IP-CIDR, 101.36.166.16/32, REJECT, no-resolve
-IP-CIDR, 180.96.2.114/32, REJECT, no-resolve
+IP-CIDR, 49.71.37.101/32, REJECT
+IP-CIDR, 117.71.105.23/32, REJECT
+IP-CIDR, 218.94.207.205/32, REJECT
+IP-CIDR, 117.92.229.188/32, REJECT
+IP-CIDR, 101.36.166.16/32, REJECT
+IP-CIDR, 180.96.2.114/32, REJECT
 
 # > 凤凰新媒体
 host-suffix, deliver.ifeng.com, reject
