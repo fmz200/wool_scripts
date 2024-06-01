@@ -539,6 +539,14 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Lianhezaobao.jpeg"
     },
     {
+      "name": "Line",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Line_01.png"
+    },
+    {
+      "name": "Line",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Line_02.png"
+    },
+    {
       "name": "LoadBalance",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/LoadBalance.png"
     },
@@ -6025,10 +6033,6 @@
     {
       "name": "Whatsapp",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/erdongchanyo/Whatsapp.png"
-    },
-    {
-      "name": "Line",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/erdongchanyo/Line.png"
     },
     {
       "name": "Weibo",
