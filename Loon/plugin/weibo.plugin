@@ -1,11 +1,11 @@
-#!name=微博&国际版去广告
-#!desc=整合了@zmqcherish和@Keywos的去广告配置，根据UA判断微博版本去广告
+#!name=微博去广告
+#!desc=整合了@zmqcherish和@Keywos的去广告配置
 #!author=fmz200
 #!homepage=https://github.com/fmz200/wool_scripts
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/weibo.plugin
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2024-05-28 21:00:00
+#!date=2024-06-02 11:00:00
 #############################################
 # > "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # > "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -20,20 +20,27 @@
 URL-REGEX, ^https?:\/\/api\.weibo\.cn\/2\/(push\/active|client\/addlog_batch|ad\/preload), REJECT-DROP
 URL-REGEX, ^https?:\/\/api-cloudim\.api\.weibo\.com\/v1\/log\/, REJECT-DROP
 
+# 微博开屏广告
+DOMAIN-SUFFIX, biz.weibo.com, REJECT
+DOMAIN, f.video.weibocdn.com, REJECT
 
 [Rewrite]
 # 热门视频 | 热推荐
-^https?:\/\/api\.weibo\.cn\/\d\/(cardlist\?v_f=\d|ad\/weibointl\?) - reject-dict
-^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=hot_search_users - reject-dict
+^https?:\/\/api\.weibo\.cn\/\d\/(cardlist\?v_f=\d|ad\/weibointl\?) reject-dict
+^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=hot_search_users reject-dict
 # 私信中绿洲的擦边诱导推广
-^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=treehole&auth= - reject-dict
+^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=treehole&auth= reject-dict
 # 屏蔽首页左上角每日的弹窗tips
-^https?:\/\/m?api\.weibo\.c(n|om)\/\d/push\/daily - reject-dict
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d/push\/daily reject-dict
 # 超话按钮的提示
-^https?:\/\/m?api\.weibo\.cn\/2\/!/huati\/discovery_home_bottom_getdotinfo - reject
-# 删除微博开屏广告 - cherish
-^https:\/\/bootrealtime\.uve\.weibo\.com\/v3\/ad\/realtime - reject-dict
-
+^https?:\/\/api\.weibo\.cn\/2\/!\/huati\/(discovery_home_bottom_getdotinfo|mobile_discovery_searchchange)\? reject-dict
+# 开屏广告
+^https?:\/\/bootrealtime\.uve\.weibo\.com\/v\d\/ad\/realtime reject-dict
+^https?:\/\/bootpreload\.uve\.weibo\.com\/v\d\/ad\/preload, reject-dict
+^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(get-lbs-cell-info\.php|sdkconfig\.php) reject
+# 微博长文章推广
+^https:\/\/card\.weibo\.com\/article\/m\/aj\/(reward|uvead)\? reject-dict
+^https:\/\/weibo\.com\/ttarticle\/x\/m\/aj\/(reward|uvead)\? reject-dict
 
 [Script]
 # 趋势页 | 开屏广告 | 用户中心 | 热搜置顶 | 我的页面 尊享专属 | 瀑布流去广告
@@ -77,4 +84,5 @@ http-response ^https?:\/\/new\.vip\.weibo\.cn\/aj\/appicon\/list script-path=htt
 
 
 [MITM]
-hostname = api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, new.vip.weibo.cn, *api.weibo.cn, sdkapp.uve.weibo.com
+# hostname = api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, new.vip.weibo.cn, *api.weibo.cn, sdkapp.uve.weibo.com
+hostname = *.weibo.cn, *.weibo.com, weibo.com
