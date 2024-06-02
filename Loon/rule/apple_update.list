@@ -1,0 +1,19 @@
+#!name=Apple系统更新分流
+#!desc=若要屏蔽Apple系统更新规则选择reject
+#!author=fmz200
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/apple_update.list
+#!tg-group=https://t.me/lanjieguanggao
+#!update=2024-06-01 23:15:00
+#############################################
+
+DOMAIN,ns.itunes.apple.com
+DOMAIN,appldnld.apple.com
+DOMAIN,mesu.apple.com
+DOMAIN,xp.apple.com
+DOMAIN,gdmf.apple.com
+DOMAIN-SUFFIX,iadsdk.apple.com
+DOMAIN-SUFFIX,ads.internal.unity3d.com
+DOMAIN-SUFFIX,ads.prd.ie.internal.unity3d.com
+DOMAIN-SUFFIX,unityads.unity3d.com
