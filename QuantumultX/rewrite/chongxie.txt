@@ -2807,10 +2807,6 @@ https://support.you.163.com/appversync/check.do url reject
 # 首页领券悬浮红包
 ^https?:\/\/mall\.meituan\.com\/api\/c\/homepage\/bubble\/operate\/info url reject-dict
 
-# > 小佩宠物
-# hostname = api.petkit.cn
-^https?:\/\/api\.petkit\.cn\/6\/\/device\/relatedProductsInfo url reject-dict
-
 # > 小芒
 # hostname = mgesq.api.mgtv.com, *.hitv.com
 # app去广告 感谢【sliverkiss】分享
@@ -2833,9 +2829,9 @@ https://mgesq.api.mgtv.com/dsl/index.+ url script-response-body https://raw.gith
 # > 晓晓优选
 # hostname = xxyx-client-api.xiaoxiaoyouxuan.com
 # 弹窗广告
-^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/agent_ad url reject
+^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/agent_ad url reject
 # 右下角的悬浮广告
-^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/activity\/show url reject
+^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/activity\/show url reject
 
 # > 希尔顿 荣誉客会
 # hostname = wcprd.hilton.com.cn
