@@ -3075,7 +3075,7 @@ https://ci.xiaohongshu.com/system_config/watermark url reject-img
 ^https?:\/\/api\.ulife\.group\/market\/frontEntrance\/getThirdAdvertising\?displayPort=1&type=15 url reject-dict
 ^https?:\/\/api\.ulife\.group\/market\/memberCard\/listMemberCard\?isShowSecondaryCard=1 url reject-dict
 ^https?:\/\/api\.ulife\.group\/auth\/account\/entrance url reject-dict
-;^https?:\/\/api\.ulife\.group\/market\/homeIconDetail\/list\/v7 url script-response-body https://raw.githubusercontent.com/jizhi0520/QX/main/yx.js
+^https?:\/\/api\.ulife\.group\/market\/homeIconDetail\/list\/v7 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/yx.js
 
 # > 一淘
 # hostname = acs.m.taobao.com
