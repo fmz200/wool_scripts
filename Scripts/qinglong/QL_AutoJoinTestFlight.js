@@ -1,15 +1,21 @@
 // 自动加入TestFlight
-// 2023-11-12 12:05:00
+// 更新时间：2024-01-20 18:05:00
 // QL_AutoJoinTestFlight.js
 // 环境变量:TF_APP_ID，TF_KEY，session_id，session_digest，request_id
+// 目前不支持多账号
+// 多个TF用英文逗号分隔，TF的ID和描述用#分隔，下面的写法都是可以的：app_id_1#描述1,app_id_2#描述2,app_id_3,app_id_4#描述4,app_id_5
+// 默认加入成功或者报错才通知，需要注意的是，加入成功后不会自动删除APP_ID需要手动删除
 // cron */3 * * * * *
 
 const $ = new Env('自动加入TestFlight');
 const notify = $.isNode() ? require('./sendNotify') : '';
+const {getEnvsByName, updateEnvById} = require('./api');
 // 通知封装字符串
 let notifyStr = "";
 // 是否发送通知，默认加入成功或者报错才通知
 let sendNotify = false;
+
+const TFEnvKeyName = "TF_APP_ID";
 
 // 读取环境变量
 let tf_app_ids = process.env.TF_APP_ID;
@@ -18,16 +24,16 @@ let tf_session_id = process.env.session_id;
 let tf_session_digest = process.env.session_digest;
 let tf_request_id = process.env.request_id;
 
+// 需要加入TF的APP_ID
+let ids = [];
+
 // 调用异步方法处理集合中的元素
 processCollection().then(r => console.log('自动加入TestFlight结束...'));
 
 async function processCollection() {
-  let ids = [];
   if (tf_app_ids) {
     if (tf_app_ids.indexOf(',') > -1) {
       ids = tf_app_ids.split(',');
-    } else if (tf_app_ids.indexOf('\n') > -1) {
-      ids = tf_app_ids.split('\n');
     } else {
       ids = [tf_app_ids];
     }
@@ -39,7 +45,7 @@ async function processCollection() {
             await autoPost(tf_id.trim());
             addLog("\n");
             resolve(); // 表示异步操作完成
-          }, 1000); // 1000毫秒 = 1秒，这里设置每隔1秒执行一次
+          }, 1000); // 1000毫秒 = 1秒，这里设置每隔1秒执行一个
         });
       }
     } catch (error) {
@@ -53,7 +59,7 @@ async function processCollection() {
 
   // 发送通知
   if (sendNotify) {
-    notify.sendNotify('自动加入TestFlight', notifyStr);
+    await notify.sendNotify('自动加入TestFlight', notifyStr);
   } else {
     console.log("不发送通知");
   }
@@ -73,10 +79,7 @@ async function autoPost(tf_id) {
     "X-Session-Digest": tf_session_digest,
     "X-Request-Id": tf_request_id,
   };
-
   addLog(tf_id + " 参数拼装完成...");
-  // console.log(tf_id + " 请求URL = " + url);
-  // console.log(tf_id + " 请求头 = " + JSON.stringify(headers));
 
   // 发送请求并获取响应的body
   try {
@@ -107,15 +110,37 @@ async function autoPost(tf_id) {
         const body1 = await response1.text();
         // console.log(`${tf_id} 的响应body1：${body1}`);
         let jsonBody = JSON.parse(body1);
-        addLog(`${tf_id} ${jsonBody.data.name} TestFlight加入成功，请删除该APPID`);
+        addLog(`${tf_id} 💕${jsonBody.data.name} 加入TestFlight成功，将删除该APPID`);
         sendNotify = true;
+        // 加入成功后自动删除APP_ID
+        let new_ids = ids.filter(item => item !== tf_id);
+        // await updateEnv(new_ids.toString());
       }
     }
   } catch (error) {
-    if (!error.message.includes("Unexpected token < in JSON at position 0")) {
+    const message = error.message;
+    if (!message.includes("Unexpected token")) {
       sendNotify = true;
     }
-    addLog(`${tf_id} 加入TF时出错：${error.message}`);
+    addLog(`${tf_id} 加入TF时出错：${message}`);
+  }
+}
+
+// 更新环境变量
+async function updateEnv(new_ids) {
+  // 不查询了，直接根据名字更新
+  const envs = await getEnvsByName(TFEnvKeyName);
+  addLog("获取环境变量结果：" + JSON.stringify(envs));
+  if (!envs || envs.length < 1) {
+    addLog("获取环境变量结果为空，手动删除吧~");
+    return;
+  }
+  for (const item of envs) {
+    if (item.name === TFEnvKeyName) {
+      await updateEnvById(item.id, TFEnvKeyName, new_ids, "需要加入TestFlight的ID，对应脚本QL_AutoJoinTestFlight.js");
+      addLog("删除指令执行完毕，若没删除就手动删除吧~");
+      break;
+    }
   }
 }
 

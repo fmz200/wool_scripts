@@ -1,0 +1,13 @@
+#!name=欧易OKX分流
+#!desc=欧易是一款数字货币交易平台，分流选择支持OKX的地区
+#!author=fmz200
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/rule/OKX.list
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2024-04-16 21:03:00
+#############################################
+
+DOMAIN-SUFFIX, okex.com
+DOMAIN-SUFFIX, oklink.com
+DOMAIN-SUFFIX, okx.com

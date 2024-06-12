@@ -1,0 +1,53 @@
+#!name=Soul分流
+#!desc=可能需要好几天才能成功更改IP
+#!author=fmz200
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/Soul.list
+#!tg-group=https://t.me/lanjieguanggao
+#!update=2024-06-01 23:15:00
+#############################################
+# 1.2.3.4/24      /24表示网络的子网掩码长度，即前24位是网络部分，后8位是主机部分。这种表示法常用于描述特定范围内的IP地址
+# 6.7.8.9/32      /32表示整个32位的IP地址都用于表示这一个地址，即单独的一个IP地址
+# no-resolve 可选: 当设置no-resolve后表示该规则只会对目标地址类型是IP类型的生效，域名类型的目标地址不会进行dns解析后再去匹配这个规则，
+# 为了防止域名类的目标地址做无效的DNS请求，请在给纯IP类型的域名制定的规则中加上no-resolve。
+
+# User-Agent: Soul_New/5.0.0 (iPhone; iOS 17.1; Scale/3.00; CFNetwork; iPhone15,2) SoulBegin-iOS-5.0.0-WIFI-SoulEnd
+# 用ua匹配规则生效的额外条件是域名/IP可以MITM并且被MITM（需要在host中添加）
+# user-agent
+
+# domain-keyword, soul
+
+# 本来是广告，但是拒绝后似乎不能正常使用
+IP-CIDR, 47.56.131.76/32, no-resolve
+IP-CIDR, 47.97.215.55/32, no-resolve
+IP-CIDR, 47.99.42.29/32, no-resolve
+IP-CIDR, 120.27.235.201/32, no-resolve
+IP-CIDR, 121.196.197.147/32, no-resolve
+
+ip-cidr, 8.210.3.170/32, no-resolve
+ip-cidr, 43.231.145.10/32, no-resolve
+ip-cidr, 47.75.72.47/32, no-resolve
+ip-cidr, 47.96.7.91/32, no-resolve
+ip-cidr, 47.96.11.46/32, no-resolve
+ip-cidr, 47.96.20.45/32, no-resolve
+ip-cidr, 47.98.54.106/32, no-resolve
+ip-cidr, 47.98.137.249/32, no-resolve
+ip-cidr, 47.110.187.87/32, no-resolve
+ip-cidr, 114.215.255.94/32, no-resolve
+ip-cidr, 116.62.47.28/32, no-resolve
+ip-cidr, 116.62.97.84/32, no-resolve
+ip-cidr, 116.62.108.43/32, no-resolve
+ip-cidr, 116.62.247.96/32, no-resolve
+ip-cidr, 118.31.7.235/32, no-resolve
+ip-cidr, 118.31.112.221/32, no-resolve
+ip-cidr, 120.55.55.115/32, no-resolve
+ip-cidr, 120.55.62.124/32, no-resolve
+ip-cidr, 120.26.40.187/32, no-resolve
+ip-cidr, 121.40.189.58/32, no-resolve
+ip-cidr, 121.43.161.107/32, no-resolve
+ip-cidr, 121.196.203.183/32, no-resolve
+
+ip-cidr6, 2400:3200:1500::70/32, no-resolve
+ip-cidr6, 2400:3200:1500::169/32, no-resolve
+ip-cidr6, 2400:3200:1500::1fb/32, no-resolve

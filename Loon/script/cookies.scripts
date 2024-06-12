@@ -1,0 +1,495 @@
+#!name=获取cookie&token合集@fmz200
+#!desc=整合大部分获取cookie和token的配置Loon版，获取后禁用该配置
+#!author=fmz200
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/script/cookies.scripts
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2024-03-26 21:30:00
+#############################################
+
+
+# >>>>>>>>>>>>>>> ✅ 0 ✅ <<<<<<<<<<<<<<
+
+
+
+
+# >>>>>>>>>>>>>>> ✅ 1 ✅ <<<<<<<<<<<<<<
+
+
+
+
+# >>>>>>>>>>>>>>> ✅ 2 ✅ <<<<<<<<<<<<<<
+
+
+
+
+# >>>>>>>>>>>>>>> ✅ 3 ✅ <<<<<<<<<<<<<<
+
+
+
+
+# >>>>>>>>>>>>>>> ✅ 4 ✅ <<<<<<<<<<<<<<
+
+
+
+
+# >>>>>>>>>>>>>>> ✅ 5 ✅ <<<<<<<<<<<<<<
+
+
+
+
+# >>>>>>>>>>>>>>> ✅ 6 ✅ <<<<<<<<<<<<<<
+
+
+
+
+# >>>>>>>>>>>>>>> ✅ 7 ✅ <<<<<<<<<<<<<<
+
+
+
+
+# >>>>>>>>>>>>>>> ✅ 8 ✅ <<<<<<<<<<<<<<
+
+
+
+
+# >>>>>>>>>>>>>>> ✅ 9 ✅ <<<<<<<<<<<<<<
+
+
+
+
+# >>>>>>>>>>>>>>> ✅ A ✅ <<<<<<<<<<<<<<
+# > AcFun
+# hostname = 
+http-request ^https:\/\/api\-new\.app\.acfun\.cn\/rest\/app\/user\/personalInfo script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/acfun/acfun.cookie.js, timeout=60, tag=AcFun
+
+# > APK.TW
+# hostname = 
+http-request ^https://apk.tw\/member.php(.*?)action=login script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/apktw/apktw.cookie.js, requires-body=true, timeout=60, tag=APK.TW
+
+# > 阿里云盘
+# hostname = auth.alipan.com, auth.aliyundrive.com
+http-request ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, requires-body=true, timeout=60, tag=阿里云盘@Sliverkiss
+http-response ^https:\/\/auth.aliyundrive.com\/v2\/account\/token script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js, requires-body=true, timeout=60, tag=阿里云盘@lowking
+
+# > 爱奇艺
+# hostname = 
+http-request ^https:\/\/passport\.iqiyi\.com\/apis\/user\/ script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js, timeout=60, tag=爱奇艺
+
+
+
+# >>>>>>>>>>>>>>> ✅ B ✅ <<<<<<<<<<<<<<
+# > bing必应
+# hostname = 
+http-request ^https:\/\/rewards\.bing\.com script-path=https://raw.githubusercontent.com/lowking/Scripts/master/bing/bingPoint.js, timeout=60, tag=bing获取积分cookie
+
+# > 百度贴吧
+# hostname = 
+http-request https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login script-path=https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js, timeout=60, tag=百度贴吧@NobyDa
+# 贴吧 获取cookie1
+http-request https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js, timeout=60, tag=百度贴吧@bm7
+# 贴吧_获取cookie2
+http-request ^https?:\/\/c\.tieba\.baidu\.com\/c\/s\/channelIconConfig script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js, timeout=60, tag=百度贴吧@bm7
+# 贴吧_获取cookie3
+http-request ^https?:\/\/tiebac\.baidu\.com\/c\/u\/follow\/getFoldedMessageUserInfo script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js, timeout=60, tag=百度贴吧@bm7
+
+# > 哔哩哔哩漫画
+# hostname = 
+http-request ^https:\/\/passport\.biligame\.com\/api\/login\/sso.+?version%22%3A%22(3|4|5) script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Bilibili-DailyBonus/Manga.js, timeout=60, tag=哔哩哔哩漫画@NobyDa
+
+# 哔哩哔哩大会员特权领取cookie
+http-request https:\/\/api.bilibili.com\/x\/vip\/privilege\/receive script-path=https://raw.githubusercontent.com/lowking/Scripts/master/bilibili/privilegeReceive.js, timeout=60, tag=哔哩哔哩大会员特权获取cookie@lowking
+
+# 哔哩哔哩番剧监控cookie
+http-request https?:\/\/app.bilibili.com\/x\/v2\/space\/bangumi script-path=https://raw.githubusercontent.com/lowking/Scripts/master/bilibili/bangumiMonitor.js, timeout=60, tag=哔哩哔哩番剧监控cookie@lowking
+
+# 哔哩哔哩
+http-request ^https:\/\/(www|live)\.bilibili\.com\/?.? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.cookie.js, timeout=60, tag=哔哩哔哩@chavyleung
+
+
+
+
+# >>>>>>>>>>>>>>> ✅ C ✅ <<<<<<<<<<<<<<
+# > CSDN
+# hostname = 
+http-request ^https:\/\/passport.csdn.net\/v2\/api\/app\/login\/checkAndRefreshToken script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/csdn/csdn.cookie.js, timeout=60, tag=CSDN
+http-request ^https:\/\/gw.csdn.net\/mini-app\/v2\/lucky_draw\/login\/sign_in\? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/csdn/csdn.cookie.js, timeout=60, tag=CSDN
+
+# > 彩云
+# hostname = 
+http-request ^https?:\/\/api.weather\.com script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/caiyun.js, timeout=60, tag=彩云
+
+
+
+
+# >>>>>>>>>>>>>>> ✅ D ✅ <<<<<<<<<<<<<<
+# > 滴滴出行-滴滴果园 获取token
+# tips = ddgyToken: 必填，账号token，多账号换行或者@隔开，格式uid&token。uid不可随便填，主要是方便区分账号用
+http-request ^https?:\/\/game\.xiaojukeji\.com\/api\/game\/plant\/enter script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cookie/get_cookie.js, requires-body=true, timeout=60, tag=滴滴果园获取token
+
+# > 滴滴打车
+# tips = 微信小程序 -- 滴滴出行, 第一次注册登录后可能需要退出再进一次
+http-response ^https:\/\/epassport\.diditaxi\.com\.cn\/passport\/login\/v5\/signInByOpenid script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cookie/get_cookie.js, requires-body=true, timeout=60, tag=滴滴打车
+
+# > 抖音 抖抖果园
+# hostname = 
+http-request ^https://minigame.zijieapi.com/ttgame/game_orchard_ecom/polling_info script-path=https://raw.githubusercontent.com/LinYuanovo/scripts/main/dygy.js, timeout=60, tag=抖音-抖抖果园
+
+# > 叮咚买菜 获取cookie
+# hostname = 
+http-request ^https?:\/\/maicai\.api\.ddxq\.mobi\/point\/home\?api_version script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/dingdong/dingdong_checkin.js, timeout=60, tag=叮咚买菜
+
+# > 斗鱼鱼吧 获取cookie
+# hostname = 
+http-request ^https://yuba.douyu.com/wbapi/web/group/myFollow? script-path=https://raw.githubusercontent.com/lowking/Scripts/master/douyu/yubaSign.js, timeout=60, tag=斗鱼鱼吧
+
+# > 懂球帝
+# hostname = 
+http-request ^https:\/\/api\.dongqiudi\.com\/v2\/user\/is_login script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/dongqiudi/dongqiudi.cookie.js, timeout=60, tag=懂球帝
+
+# > 叮咚农场
+http-request https:\/\/maicai\.api\.ddxq\.mobi\/user\/checkLogin script-path=https://raw.githubusercontent.com/iepngs/Script/master/dingdong/index.js, timeout=60, tag=叮咚农场
+
+# > 叮咚果园
+http-request https:\/\/farm\.api\.ddxq\.mobi\/api\/v2\/props\/feed script-path=https://raw.githubusercontent.com/iepngs/Script/master/dingdong/ddgy.js, timeout=60, tag=叮咚果园获取Cookie
+
+
+
+# >>>>>>>>>>>>>>> ✅ E ✅ <<<<<<<<<<<<<<
+
+
+
+# >>>>>>>>>>>>>>> ✅ F ✅ <<<<<<<<<<<<<<
+# > Fa米家
+# hostname = 
+http-request ^https?:\/\/fmapp\.chinafamilymart\.com\.cn\/api\/app\/market\/member\/(signin\/usersign|sign\/current) script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/famijia/famijia_checkin.js, timeout=60, tag=Fa米家-获取cookie
+
+# > 飞客茶馆
+# hostname = 
+http-request ^https:\/\/www\.flyertea\.com\/source\/plugin\/mobile\/mobile\.php\?module=getData&.* script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/flyertea/flyertea.cookie.js, timeout=60, tag=飞客茶馆
+
+# > 樊登读书
+# hostname = 
+http-request ^https://api\.dushu\.io/CheckIn script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/fandeng/fandeng.cookie.js, requires-body=true, timeout=60, tag=樊登读书
+
+
+
+
+# >>>>>>>>>>>>>>> ✅ G ✅ <<<<<<<<<<<<<<
+
+
+
+
+# >>>>>>>>>>>>>>> ✅ H ✅ <<<<<<<<<<<<<<
+# > hifini
+# hostname = 
+http-request https:\/\/www.hifini.com\/my.htm script-path=https://raw.githubusercontent.com/lowking/Scripts/master/hifini/hifiniSign.js, timeout=60, tag=hifini-签到cookie
+
+# > 合创
+# hostname = 
+http-request ^https:\/\/wxprdapplet\.gac-nio\.com\/community\/userSignIn\/simpleAuth\/front\/v3\.1\.3\.5\/signV2$ script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/hycan/hycan.cookie.js, timeout=60, tag=合创.cookie
+
+
+
+
+# >>>>>>>>>>>>>>> ✅ I ✅ <<<<<<<<<<<<<<
+
+
+
+
+# >>>>>>>>>>>>>>> ✅ J ✅ <<<<<<<<<<<<<<
+# > 京东
+# 浏览器登录京东，点击右下角我的页面获取
+http-request ^https:\/\/home\.m\.jd\.com\/myJd\/(newhome|home)\.action script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingdong/jd_cookie.js, timeout=60, tag=京东
+
+# > 京东读书
+# hostname = 
+http-request ^https:\/\/jdread-api\.jd\.com\/* script-path=https://raw.githubusercontent.com/XidNDD/2020scripts/master/jddsSign.js, timeout=60, tag=京东读书
+
+# > 京东到家
+# hostname = 
+http-request ^https:\/\/daojia.jd.com/client(.*?)functionId=signin(.*?)userSigninNew script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/jddj/jddj.cookie.js, requires-body=true, timeout=60, tag=京东到家
+
+# > 建行生活
+# hostname = 
+http-request ^https:\/\/yunbusiness\.ccb\.com\/(clp_coupon|clp_service)\/txCtrl\?txcode=(A3341A038|autoLogin) script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jhsh_checkIn.js, requires-body=true, timeout=60, tag=建行生活-签到cookie
+
+# > 柚子快报
+# hostname = 
+http-request ^http?:\/\/hongbao\.youzikuaibao\.com\/youzi\/* script-path=https://raw.githubusercontent.com/XidNDD/2020scripts/master/yzkbSign.js, requires-body=true, timeout=60, tag=柚子快报
+
+# > 加油广东
+# hostname = 
+http-request ^https:\/\/m.gdoil.cn\/webapi\/usersign\/addusersign script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/gdoil/gdoil.cookie.js, timeout=60, tag=加油广东
+
+
+
+
+# >>>>>>>>>>>>>>> ✅ K ✅ <<<<<<<<<<<<<<
+# > 快手果园
+# hostname = 
+http-request ^https://ug-fission.kuaishou.com/rest/n/darwin/orchard/water/watering script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuaishou/ks_getCookie.js, timeout=60, tag=快手果园-获取cookie
+
+# > 快看漫画
+# hostname = 
+http-request ^https:\/\/api\.kkmh\.com\/v\d\/passport\/user script-path=https://raw.githubusercontent.com/NobyDa/Script/master/KuaiKan-DailyBonus/KKMH.js, timeout=60, tag=快看漫画-cookie
+
+
+
+# >>>>>>>>>>>>>>> ✅ L ✅ <<<<<<<<<<<<<<
+# > Luka 获取cookie
+# hostname = 
+http-request ^https?:\/\/luka\-graphql\.ling\.cn\/graphql\/mobile\?operation=UserInfoWithPendingRobotQuery script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/luka/luka_signin.js, timeout=60, tag=Luka-获取cookie
+
+
+
+
+# >>>>>>>>>>>>>>> ✅ M ✅ <<<<<<<<<<<<<<
+# > 美团
+# 进入“完善资料”，这一步可以获取到用户ID用于更新多账号信息
+http-response https://open.meituan.com/user/v1/info/auditting script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cookie/get_cookie.js, requires-body=true, timeout=60, tag=美团token
+# 旧版本
+http-request https://gaea.meituan.com/mapi/usercenter script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cookie/get_cookie.js, timeout=60, tag=美团旧版本token
+
+# > 美团外卖
+# hostname = 
+http-request ^https:\/\/promotion.waimai.meituan.com\/playcenter\/signIn\/entry script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wmmeituan/wmmeituan.cookie.js, timeout=60, tag=美团外卖
+http-request ^https:\/\/promotion.waimai.meituan.com\/playcenter\/signIn\/doaction script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wmmeituan/wmmeituan.cookie.js, requires-body=true, timeout=60, tag=美团外卖
+
+# > 慢慢买
+# hostname = 
+http-request ^https?:\/\/apph5\.manmanbuy\.com\/taolijin\/(login.aspx|logserver.aspx) script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/manmanbuy/manmanbuy_checkin.js, requires-body=true, timeout=60, tag=慢慢买-获取cookie
+
+# > 芒果TV
+# hostname = 
+http-request ^https:\/\/credits.bz.mgtv.com\/user\/creditsTake script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/mgtv/mgtv.cookie.js, timeout=60, tag=芒果TV
+
+# > 米游社
+# hostname = 
+http-request ^https:\/\/api-takumi.mihoyo.com\/apihub\/api\/getGameList script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/mihoyo/mihoyo.cookie.js, timeout=60, tag=米游社
+
+# > 猫咪音乐网
+# hostname = 
+http-request https:\/\/www.maomicd.com\/plugin.php\?id=k_misign:sign&operation=qiandao script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/maomicd/maomicd.cookie.js, timeout=60, tag=猫咪音乐网
+
+
+
+# >>>>>>>>>>>>>>> ✅ N ✅ <<<<<<<<<<<<<<
+# > nga
+# hostname = 
+http-request ^https:\/\/ngabbs.com\/nuke.php\?? script-path=https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/nga/nga.cookie.js, requires-body=true, timeout=60, tag=nga.cookie
+
+
+
+
+# >>>>>>>>>>>>>>> ✅ O ✅ <<<<<<<<<<<<<<
+
+
+
+
+# >>>>>>>>>>>>>>> ✅ P ✅ <<<<<<<<<<<<<<
+# > 拼多多果园
+# hostname = 
+http-request https://m.pinduoduo.net/proxy/api/api/server/_stm script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/pinduoduo/pdd_getToken.js, timeout=60, tag=拼多多果园
+
+# > 朴朴签到cookie
+# hostname = 
+http-request https:\/\/cauth.pupuapi.com\/clientauth\/user\/verify_login script-path=https://raw.githubusercontent.com/lowking/Scripts/master/pupu/pupuCheckIn.js, timeout=60, tag=朴朴签到cookie
+
+
+
+# >>>>>>>>>>>>>>> ✅ Q ✅ <<<<<<<<<<<<<<
+# > QQ VipCheckIn
+# hostname = 
+http-request https:\/\/proxy.vac.qq.com\/cgi-bin\/srfentry.fcgi? script-path=https://raw.githubusercontent.com/lowking/Scripts/master/QQVip/qqVipCheckIn.js, timeout=60, tag=QQ-VipCheckIn
+
+# > QQ萌宠 cookie
+# hostname = 
+http-response https:\/\/qqpet.jwetech.com\/api\/authorizations script-path=https://raw.githubusercontent.com/lowking/Scripts/master/QQPet/lkQQPet.js, requires-body=true, timeout=60, tag=QQ萌宠cookie
+
+# > 汽车之家极速版
+# hostname = 
+http-request ^https:\/\/mobile\.app\.autohome\.com\.cn\/fasthome\/* script-path=https://raw.githubusercontent.com/XidNDD/2020scripts/master/qczjSign.js, requires-body=true, timeout=60, tag=汽车之家极速版
+http-request ^http:\/\/mobile\.app\.autohome\.com\.cn\/fasthome\/coin\/* script-path=https://raw.githubusercontent.com/XidNDD/2020scripts/master/qczjSign.js, requires-body=true, timeout=60, tag=qczjSign
+
+# > 去哪儿
+# hostname = 
+http-request ^https:\/\/user.qunar.com\/webapi\/member\/signIndexV2.htm script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qunar/qunar.cookie.js, timeout=60, tag=去哪儿.cookie
+
+# > 全民K歌
+# hostname = 
+http-request ^https://node\.kg\.qq\.com/webapp/proxy? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qmkg/qmkg.cookie.js, requires-body=true, timeout=60, tag=全民K歌.cookie
+
+
+
+# >>>>>>>>>>>>>>> ✅ R ✅ <<<<<<<<<<<<<<
+# > 人人视频
+# hostname = 
+http-request ^https:\/\/api\.rr\.tv\/user\/profile script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.cookie.js, timeout=60, tag=人人视频.cookie
+
+
+
+# >>>>>>>>>>>>>>> ✅ S ✅ <<<<<<<<<<<<<<
+# > 什么值得买 (APP点击个人头像/个人资料获取)
+# hostname = 
+http-request ^https:\/\/user-api\.smzdm\.com\/users\/info script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cookie/get_cookie.js, timeout=60, tag=什么值得买
+
+# > 顺丰速运
+# tips = 打开小程序或APP-我的-积分, 捉以下几种url之一,把整个url放到变量 sfsyUrl 里,多账号换行分割
+http-request ^https:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/share\/weChat\/shareGiftReceiveRedirect script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cookie/get_cookie.js, timeout=60, tag=顺丰速运顺丰速运
+http-request ^https:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/share\/app\/shareRedirect script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cookie/get_cookie.js, timeout=60, tag=顺丰速运
+
+# > 水滴筹
+# hostname = 
+http-request ^https:\/\/api\.sdbao\.com\/* script-path=https://raw.githubusercontent.com/XidNDD/2020scripts/master/sdcbxscSign.js, requires-body=true, timeout=60, tag=水滴筹
+
+# > 水晶DJ
+# hostname = 
+http-request ^http:\/\/app\.oscaches\.com\/* script-path=https://raw.githubusercontent.com/XidNDD/2020scripts/master/sjdjSign.js, requires-body=true, timeout=60, tag=水晶DJ
+
+# > 时光相册
+# hostname = 
+http-request ^https:\/\/api.everphoto.cn\/users\/self\/checkin\/v2 script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/everphoto/everphoto.cookie.js, timeout=60, tag=时光相册.cookie
+
+# > 苏宁易购
+# hostname = 
+http-request ^https:\/\/passport.suning.com\/ids\/login$ script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/suning/suning.cookie.js, requires-body=true, timeout=60, tag=苏宁易购.cookie
+http-request ^https:\/\/luckman.suning.com\/luck-web\/sign\/api\/clock_sign.do script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/suning/suning.cookie.js, timeout=60, tag=苏宁易购.cookie
+http-request ^https:\/\/sign.suning.com\/sign-web\/m\/promotion\/sign\/doSign.do script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/suning/suning.cookie.js, timeout=60, tag=苏宁易购.cookie
+http-request ^https:\/\/gameapi.suning.com\/sngame-web\/(api\/signin\/private\/customerSignOperation.do|gateway\/api\/queryPrize.do) script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/suning/suning.cookie.js, timeout=60, tag=苏宁易购.cookie
+
+
+
+# >>>>>>>>>>>>>>> ✅ T ✅ <<<<<<<<<<<<<<
+# > 太好购
+# hostname = 
+http-request ^https:\/\/cxdng\.cpic\.com\.cn\/taieshop\/api\/CustomerFansInfo\/GetFansInfo script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/thg.cookie.js, timeout=60, tag=太好购
+
+# > 天天挖矿
+# hostname = 
+http-request ^https:\/\/operation-api\.jimistore\.com\/* script-path=https://raw.githubusercontent.com/XidNDD/2020scripts/master/ttwbxcxSign.js, requires-body=true, timeout=60, tag=天天挖矿
+
+# > 腾讯视频
+# hostname = 
+http-request ^https:\/\/access.video.qq.com\/user\/auth_refresh script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/videoqq/videoqq.cookie.js, timeout=60, tag=腾讯视频.cookie
+
+
+
+# >>>>>>>>>>>>>>> ✅ U ✅ <<<<<<<<<<<<<<
+# > umer
+http-request https?:\/\/api\.umer\.com\.cn\/.*getCurrentUmerSign script-path=https://ooxx.be/js/umer.js, timeout=60, tag=umer
+
+
+
+
+# >>>>>>>>>>>>>>> ✅ V ✅ <<<<<<<<<<<<<<
+# > V2EX
+# hostname = 
+http-request ^https:\/\/www\.v2ex\.com\/mission\/daily script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/v2ex/quanx/v2ex.cookie.js, timeout=60, tag=v2ex.cookie
+
+
+
+
+# >>>>>>>>>>>>>>> ✅ W ✅ <<<<<<<<<<<<<<
+# > WPS
+# hostname = 
+http-request ^https:\/\/zt.wps.cn\/2018\/docer_check_in\/api\/act_list script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wps/wps.cookie.js, timeout=60, tag=wps.cookie
+
+# > 微博 获取cookie
+# hostname = 
+http-request ^https:\/\/m?api\.weibo\.c(n|om)\/\d\/users\/show script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cookie/get_cookie.js, timeout=60, tag=微博-获取cookie
+http-request ^https:\/\/api\.weibo\.cn\/\d\/users\/show script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/weibo_sign.js, timeout=60, tag=微博-获取cookie
+http-request ^https:\/\/api\.weibo\.cn\/2\/logservice\/attach script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/weibo_sign.js, timeout=60, tag=微博-获取cookie
+http-request https:\/\/weibo\.com\/p\/aj\/general\/button\?ajwvr=6&api=http:\/\/i\.huati\.weibo\.com\/aj\/super\/checkin script-path=https://raw.githubusercontent.com/lowking/Scripts/master/weibo/weiboSTCookie.js, timeout=60, tag=微博-获取cookie
+
+# > 吾爱破解 cookie
+# hostname = 
+http-request https:\/\/www\.52pojie\.cn\/home\.php\? script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js, timeout=60, tag=吾爱破解cookie
+
+# > 网易云音乐
+# hostname = 
+http-request ^https:\/\/music.163.com\/weapi\/user\/level script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/quanx/neteasemusic.cookie.js, requires-body=true, timeout=60, tag=网易云音乐.cookie
+
+# > 网易新闻
+# hostname = 
+http-request ^https:\/\/(.*?)c\.m\.163\.com\/uc\/api\/sign\/v3\/commit script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasenews/neteasenews.cookie.js, requires-body=true, timeout=60, tag=网易新闻.cookie
+
+# > 网易考拉
+# hostname = 
+http-request ^https:\/\/m-bean\.kaola\.com/m/point/sign\.html script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wykl/wykl.cookie.js, requires-body=true, timeout=60, tag=网易考拉.cookie
+
+# > 微商星球
+# hostname = 
+http-request ^https:\/\/api\.momosyb\.com\/(v6|v1)\/(fans|user)\/* script-path=https://raw.githubusercontent.com/XidNDD/2020scripts/master/wsxqSign.js, requires-body=true, timeout=60, tag=微商星球
+
+# > 无忧行
+# hostname = 
+http-response https?:\/\/app.*\.jegotrip\.com\.cn\/.*getUser\? script-path=https://ooxx.be/js/jegotrip.js, requires-body=true, timeout=60, tag=无忧行
+http-response https?:\/\/task\.jegotrip\.com\.cn\:8080\/app\/tasks\?userid script-path=https://ooxx.be/js/jegotrip.js, requires-body=true, timeout=60, tag=无忧行
+
+# > 蔚来
+# hostname = 
+http-request ^https:\/\/app\.nio\.com\/api\/1\/app\/daily_checkin script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/nio/nio.cookie.js, timeout=60, tag=蔚来.cookie
+
+
+
+# >>>>>>>>>>>>>>> ✅ X ✅ <<<<<<<<<<<<<<
+# > 携程
+# hostname = 
+http-request ^https:\/\/m\.ctrip\.com\/restapi\/soa2\/14946\/json\/userBaseInfo script-path=https://raw.githubusercontent.com/barrym-chen/Script/master/ctrip/ctrip_cookie.js, timeout=60, tag=携程
+
+# > 喜马拉雅
+# hostname = 
+http-request ^https?:\/\/.*\/mobile\-user\/(v1\/)?homePage\/.* script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ximalaya/ximalaya.cookie.js, timeout=60, tag=喜马拉雅.cookie
+
+# > 晓晓优选
+# hostname = xxyx-client-api.xiaoxiaoyouxuan.com
+http-response ^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/my script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cookie/get_cookie.js, requires-body=true, timeout=60, tag=晓晓优选
+
+
+
+# >>>>>>>>>>>>>>> ✅ Y ✅ <<<<<<<<<<<<<<
+# > 伊利
+# hostname = 
+http-request https:\/\/club\.yili\.com\/MALLIFChe\/MCSWSIAPI\.asmx\/Call script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.cookie.js, requires-body=true, timeout=60, tag=伊利.cookie
+
+
+
+
+# >>>>>>>>>>>>>>> ✅ Z ✅ <<<<<<<<<<<<<<
+# > 中国电信
+# hostname = e.dlife.cn, e.189.cn, wapside.189.cn
+http-request ^https:\/\/(e\.189\.cn\/store\/user|open\.e\.189\.cn\/api\/logbox\/oauth2\/loginSubmit\.do) script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/get_10000_cookie.js, timeout=60, tag=中国电信@FoKit
+http-request ^https:\/\/wapside\.189\.cn:9001\/api\/home\/sign script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.cookie.js, requires-body=true, timeout=60, tag=电信营业厅@chavyleung
+http-request ^https:\/\/e\.dlife\.cn\/user\/loginMiddle script-path=https://raw.githubusercontent.com/dompling/Script/master/10000/index.js, tag=电信登录地址@dompling
+
+# > 中国联通
+# hostname = act.10010.com, m.client.10010.com
+http-request ^https:\/\/act.10010.com\/SigninApp\/signin\/querySigninActivity.htm script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js, timeout=60, tag=中国联通.cookie
+http-request ^https:\/\/act.10010.com\/SigninApp(.*?)\/signin\/daySign script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js, timeout=60, tag=中国联通.cookie
+http-request ^https:\/\/m.client.10010.com\/dailylottery\/static\/(textdl\/userLogin|active\/findActivityInfo) script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js, timeout=60, tag=中国联通.cookie
+# 打开中国联通app --> 首页的流量查询获取Cookie
+http-request ^https?:\/\/m\.client\.10010\.com\/serviceimportantbusiness\/smart\/smartwisdomCommonNew script-path=https://raw.githubusercontent.com/dompling/Script/master/10010/index.js, timeout=60, tag=中国联通.cookie@dompling
+
+# > 追书畅读版
+# hostname = 
+http-request ^https:\/\/.+zhuishushenqi\.com\/* script-path=https://raw.githubusercontent.com/XidNDD/2020scripts/master/zscdbSign.js, requires-body=true, timeout=60, tag=追书畅读版
+
+# > 知音漫客
+# hostname = 
+http-request ^https:\/\/getconfig-globalapi\.zymk\.cn\/app_api\/* script-path=https://raw.githubusercontent.com/XidNDD/2020scripts/master/zymkSign.js, requires-body=true, timeout=60, tag=知音漫客
+
+# > 字幕组
+# hostname = 
+http-request ^https?:\/\/(www\.)?rrys2020\.com\/?.? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zimuzu/zimuzu.cookie.js, timeout=60, tag=字幕组.cookie
+http-request ^http:\/\/ios.zmzapi.com\/index.php.*a=(mobile_)?login script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zimuzu/zimuzu.cookie.js, timeout=60, tag=字幕组.cookie
+
+# > 智行火车
+# hostname = 
+http-request ^https:\/\/m\.ctrip\.com/restapi/soa2/14593/json/attendanceDay? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zxhc/zxhc.cookie.js, requires-body=true, timeout=60, tag=智行火车.cookie
+
+
+
+# 去重后的hostname，将对以下域名进行MITM（MAN-IN-THE-MIDDLE：中间人攻击）
+hostname = xxyx-client-api.xiaoxiaoyouxuan.com, yunbusiness.ccb.com, home.m.jd.com, api.m.jd.com, ms.jr.jd.com, jdread-api.jd.com, me-api.jd.com, wq.jd.com, daojia.jd.com, testflight.apple.com, farm.api.ddxq.mobi, user-api.smzdm.com, luka-graphql.ling.cn, fmapp.chinafamilymart.com.cn, apph5.manmanbuy.com, www.hifini.com, cauth.pupuapi.com, qqpet.jwetech.com, rewards.bing.com, auth.alipan.com, auth.aliyundrive.com, draw.jdfcloud.com, api.momosyb.com, passport.iqiyi.com, account.huami.com, api.dongqiudi.com, act.10010.com, wox2019.woxshare.com, www.52pojie.cn, api.prize.qq.com, eventv3.reader.qq.com, api.tuhu.cn, gameapi.hellobike.com, xiaoshuo.qm989.com, passport.biligame.com, cxdng.cpic.com.cn, teacherapi.zmlearn.com, luckman.suning.com, api.dushu.io, api.xiaoheihe.cn, api.inews.qq.com, zt.wps.cn, m.client.10010.com, m.ctrp.com, activity.m.duiba.com.cn, as.xiaojukeji.com, www.maomicd.com, h5.youzan.com, node.kg.qq.com, manga.bilibili.com, ios.baertt.com, www.mydigit.cn, proxy.vac.qq.com, wx-mini.pagoda.com.cn, m.weibo.cn, *.acfun.cn, *.rrys2019.com, *.bilibili.com, club.yili.com, *.y.qq.com, marketappapi.biyao.com, commontgw6.reader.qq.com, *.ctrp.com, *.csdn.net, www.duokan.com, ngabbs.com, note.youdao.com, h5.bianlifeng.com, kd.youth.cn, activity-1.m.duiba.com.cn, cloud.umetrip.com, hongbao.youzikuaibao.com, air.tb.ele.me, *.xmcimg.com, m.ctrip.com, user.qunar.com, mcs-mimp-web.sf-express.com, tb.ele.me, dominos0724.shjimang.com, h5.ele.me, my.ruanmei.com, promotion.waimai.meituan.com, api.umer.com.cn, www.2xtj7.cn, mall.oclean.com, apk.tw, task.jegotrip.com.cn, i.snssdk.com, user-api-prd-mx.wandafilm.com, *.youth.cn, wq.02gk.com, iphone.myzaker.com, apiwz.midukanshu.com, api.1sapp.com, nebula.kuaishou.com, api.weibo.cn, yuba.douyu.com, *.ximalaya.com, *.zhuishushenqi.com, sf-integral-sign-in.weixinjia.net, epassport.diditaxi.com.cn, *.m.163.com, e.dlife.cn, open.e.189.cn, e.189.cn, wapside.189.cn, api.kkmh.com, *.rr.tv, gameapi.suning.com, *.you.163.com, app.oscaches.com, exp.angelalign.com, getconfig-globalapi.zymk.cn, mall.meituan.com, game.xiaojukeji.com, api.infzm.com, is.snssdk.com, *.v2ex.com, *.rrys2020.com, pay.sc.weibo.com, app.nio.com, music.163.com, studygolang.com, kandian.wkandian.com, ifac*.iqiyi.com, ug-fission.kuaishou.com, passport.suning.com, tncj.hortorgames.com, credits.bz.mgtv.com, c.tieba.baidu.com, api.sdbao.com, 113.96.156.178, wxavip-up.ezrpro.cn, *.video.qq.com, j1.pupuapi.com, app*.jegotrip.com.cn, tieba.baidu.com, wx.17u.cn, www.baimaa.com, frodo.douban.com, m-bean.kaola.com, 110.43.90.61, newsapi.sina.cn, i.meituan.com, wxprdapplet.gac-nio.com, icbc1.wlphp.com:8444, ios-fenqu11.lxsjgo.com, sapi.beingfine.cn, *.feng.com, www.hnmiaosu.cc, clientaccess.10086.cn, mobile.app.autohome.com.cn, ph0001.hezyq.com, api.everphoto.cn, api-takumi.mihoyo.com, sports.lifesense.com, superapp.kiwa-tech.com, api.weather.com, sign.suning.com, qqpet.jwetech.com, m.elong.com, webapi.qmai.cn, mwegame.qq.com, activity.m.kuaishou.com, mobwsa.ximalaya.com, proapi.115.com, youhui.95516.com, www.xiaodouzhuan.cn, *.smzdm.com, app.ymatou.com, operation-api.jimistore.com, www.flyertea.com, api.cashtoutiao.com, choujiang-server.deering.cn, maicai.api.ddxq.mobi, minigame.zijieapi.com, appsmall.rtmap.com, m.gdoil.cn, weibo.com, ios.zmzapi.com

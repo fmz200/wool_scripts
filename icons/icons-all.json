@@ -1,6 +1,6 @@
 {
   "name": "fmz200图标订阅",
-  "description": "收集一些自己常用的图标，尺寸为108px或144px，数量约1499个，更新日期：2023-11-13 19:20:00",
+  "description": "收集一些自己常用的图标，尺寸为108px或144px，数量约1503个，更新日期：2024-06-01 22:00:00",
   "icons": [
     {
       "name": "fmz200",
@@ -17,6 +17,10 @@
     {
       "name": "fmz200",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/fmz200-04.png"
+    },
+    {
+      "name": "hot_search",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/others/hot_search.png"
     },
     {
       "name": "brd",
@@ -183,6 +187,10 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/BrandenburgGate.png"
     },
     {
+      "name": "cainiao",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/cainiao.png"
+    },
+    {
       "name": "CaiYun",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/CaiYun.png"
     },
@@ -327,12 +335,24 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/DegYax_04.png"
     },
     {
+      "name": "didi",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/didi.png"
+    },
+    {
+      "name": "Discord",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Discord.png"
+    },
+    {
       "name": "DisneyPlus",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/DisneyPlus.png"
     },
     {
       "name": "Dots",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Dots.png"
+    },
+    {
+      "name": "douyu",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/douyu.png"
     },
     {
       "name": "EiffelTower",
@@ -375,6 +395,10 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/FishPort.png"
     },
     {
+      "name": "GaodeMap",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/GaodeMap.jpg"
+    },
+    {
       "name": "Gcp",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Gcp.png"
     },
@@ -384,7 +408,79 @@
     },
     {
       "name": "Github",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Github.png"
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/github_00.png"
+    },
+    {
+      "name": "Github",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/github_01.png"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/github_02.png"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/github_03.png"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/github_04.png"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/github_05.png"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/github_06.png"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/github_07.png"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/github_08.png"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/github_09.png"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/github_10.png"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/github_11.png"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/github_12.png"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/github_13.png"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/github_14.png"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/github_15.png"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/github_16.png"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/github_17.png"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/github_18.png"
     },
     {
       "name": "GlaDos",
@@ -433,6 +529,14 @@
     {
       "name": "Lianhezaobao",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Lianhezaobao.jpeg"
+    },
+    {
+      "name": "Line",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Line_01.png"
+    },
+    {
+      "name": "Line",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Line_02.png"
     },
     {
       "name": "LoadBalance",
@@ -543,6 +647,10 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/macat.png"
     },
     {
+      "name": "meituan",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/meituan.png"
+    },
+    {
       "name": "Merlion",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Merlion.png"
     },
@@ -557,6 +665,10 @@
     {
       "name": "Microsoft",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Microsoft.png"
+    },
+    {
+      "name": "mixuebingcheng",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/mxbc.png"
     },
     {
       "name": "NationalMonument",
@@ -695,6 +807,10 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/skylines.png"
     },
     {
+      "name": "smzdm",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/smzdm.png"
+    },
+    {
       "name": "spotify",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/spotify.png"
     },
@@ -709,6 +825,10 @@
     {
       "name": "Snapchat",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Snapchat.png"
+    },
+    {
+      "name": "Soul",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Soul.png"
     },
     {
       "name": "taipei101",
@@ -828,7 +948,7 @@
     },
     {
       "name": "Weibo",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo.png"
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo-00.png"
     },
     {
       "name": "Weibo-01",
@@ -1035,6 +1155,14 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ximalaya.png"
     },
     {
+      "name": "xxyx",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/xxyx.jpeg"
+    },
+    {
+      "name": "xxyx_01",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/xxyx_01.jpeg"
+    },
+    {
       "name": "YouTubeMusic",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/YouTubeMusic.png"
     },
@@ -1227,12 +1355,8 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/xbox.png"
     },
     {
-      "name": "微博",
+      "name": "weibo",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/weibo.png"
-    },
-    {
-      "name": "Github",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/github.png"
     },
     {
       "name": "腾讯视频",
@@ -1701,10 +1825,6 @@
     {
       "name": "mail(3)",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/mail(3).png"
-    },
-    {
-      "name": "github(1)",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/github(1).png"
     },
     {
       "name": "emby",
@@ -5895,16 +6015,16 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/erdongchanyo/TestFlight.png"
     },
     {
+      "name": "TestFlight",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/testflight.png"
+    },
+    {
       "name": "Telegram",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/erdongchanyo/Telegram.png"
     },
     {
       "name": "Whatsapp",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/erdongchanyo/Whatsapp.png"
-    },
-    {
-      "name": "Line",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/erdongchanyo/Line.png"
     },
     {
       "name": "Weibo",

@@ -28,21 +28,14 @@ if (url.includes("/v1/search/banner_list")) {
       delete obj.data[i];
     }
   }
-} else if (url.includes("/v2/note/widgets")) {
-  const item = ["generic"];
-  if (obj?.data) {
-    for (let i of item) {
-      delete obj.data[i];
-    }
-  }
-} else if (url.includes("/v2/note/feed")) {
+} else if (url.includes("/v1/note/imagefeed") || url.includes("/v2/note/feed")) {
   // 信息流 图片
   if (obj?.data?.length > 0) {
     let data0 = obj.data[0];
     if (data0?.note_list?.length > 0) {
       for (let item of data0.note_list) {
         if (item?.media_save_config) {
-          // 水印
+          // 水印开关
           item.media_save_config.disable_save = false;
           item.media_save_config.disable_watermark = true;
           item.media_save_config.disable_weibo_cover = true;
@@ -58,13 +51,48 @@ if (url.includes("/v1/search/banner_list")) {
         }
       }
     }
+
+    const images_list = obj.data[0].note_list[0].images_list;
+    obj.data[0].note_list[0].images_list = imageEnhance(JSON.stringify(images_list));
+
+    // 保存无水印信息
+    $.setdata(JSON.stringify(images_list), "fmz200.xiaohongshu.feed.rsp");
+    console.log('已存储无水印信息♻️');
   }
-  const images_list = obj.data[0].note_list[0].images_list;
-  obj.data[0].note_list[0].images_list = imageEnhance(JSON.stringify(images_list));
-  
-  // 保存无水印信息
-  $.setdata(JSON.stringify(images_list), "fmz200.xiaohongshu.feed.rsp");
-  console.log('已存储无水印信息♻️');
+} else if (url.includes("/v1/note/live_photo/save")) {
+  console.log('原body：' + rsp_body);
+  const rsp = $.getdata("fmz200.xiaohongshu.feed.rsp");
+  console.log("读取缓存key：fmz200.xiaohongshu.feed.rsp");
+  // console.log("读取缓存val：" + rsp);
+  if (rsp == null || rsp.length === 0) {
+    console.log('缓存无内容，返回原body');
+    $done({body: rsp_body});
+  }
+  const cache_body = JSON.parse(rsp);
+  let new_data = [];
+  for (const images of cache_body) {
+    if (images.live_photo_file_id) {
+      const item = {
+        file_id: images.live_photo_file_id,
+        video_id: images.live_photo.media.video_id,
+        url: images.live_photo.media.stream.h265[0].master_url
+      };
+      new_data.push(item);
+    }
+  }
+  if (obj.data.datas) {
+    replaceUrlContent(obj.data.datas, new_data);
+  } else {
+    obj = {"code": 0, "success": true, "msg": "成功", "data": {"datas": new_data}};
+  }
+  console.log('新body：' + JSON.stringify(obj));
+} else if (url.includes("/v2/note/widgets")) {
+  const item = ["cooperate_binds", "generic", "note_next_step"];
+  if (obj?.data) {
+    for (let i of item) {
+      delete obj.data[i];
+    }
+  }
 } else if (url.includes("/v3/note/videofeed")) {
   // 信息流 视频
   if (obj?.data?.length > 0) {
@@ -90,23 +118,27 @@ if (url.includes("/v1/search/banner_list")) {
   // 开屏广告
   if (obj?.data?.ads_groups?.length > 0) {
     for (let i of obj.data.ads_groups) {
-      i.start_time = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
-      i.end_time = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
+      i.start_time = 3818332800; // Unix 时间戳 2090-12-31 00:00:00
+      i.end_time = 3818419199; // Unix 时间戳 2090-12-31 23:59:59
       if (i?.ads?.length > 0) {
         for (let ii of i.ads) {
-          ii.start_time = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
-          ii.end_time = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
+          ii.start_time = 3818332800; // Unix 时间戳 2090-12-31 00:00:00
+          ii.end_time = 3818419199; // Unix 时间戳 2090-12-31 23:59:59
         }
       }
     }
+  }
+} else if (url.includes("/v2/user/followings/followfeed")) {
+  // 关注页信息流 可能感兴趣的人
+  if (obj?.data?.items?.length > 0) {
+    // 白名单
+    obj.data.items = obj.data.items.filter((i) => i?.recommend_reason === "friend_post");
   }
 } else if (url.includes("/v4/followfeed")) {
   // 关注列表
   if (obj?.data?.items?.length > 0) {
     // recommend_user 可能感兴趣的人
-    obj.data.items = obj.data.items.filter(
-      (i) => !["recommend_user"].includes(i.recommend_reason)
-    );
+    obj.data.items = obj.data.items.filter((i) => !["recommend_user"].includes(i.recommend_reason));
   }
 } else if (url.includes("/v4/search/trending")) {
   // 搜索栏
@@ -120,6 +152,11 @@ if (url.includes("/v1/search/banner_list")) {
   // 搜索栏填充词
   if (obj?.data?.hint_words?.length > 0) {
     obj.data.hint_words = [];
+  }
+} else if (url.includes("/v5/recommend/user/follow_recommend")) {
+  // 用户详情页 你可能感兴趣的人
+  if (obj?.data?.title === "你可能感兴趣的人" && obj?.data?.rec_users?.length > 0) {
+    obj.data = {};
   }
 } else if (url.includes("/v6/homefeed")) {
   if (obj?.data?.length > 0) {
@@ -152,33 +189,6 @@ if (url.includes("/v1/search/banner_list")) {
   if (obj?.data?.items?.length > 0) {
     obj.data.items = obj.data.items.filter((i) => i.model_type === "note");
   }
-} else if (url.includes("/v1/note/live_photo/save")) {
-  console.log('原body：' + rsp_body);
-  const rsp = $.getdata("fmz200.xiaohongshu.feed.rsp");
-  console.log("读取缓存key：fmz200.xiaohongshu.feed.rsp");
-  // console.log("读取缓存val：" + rsp);
-  if (rsp == null || rsp.length === 0) {
-    console.log('缓存无内容，返回原body');
-    $done({body: rsp_body});
-  }
-  const cache_body = JSON.parse(rsp);
-  let new_data = [];
-  for (const images of cache_body) {
-    if (images.live_photo_file_id) {
-      const item = {
-        file_id: images.live_photo_file_id,
-        video_id: images.live_photo.media.video_id,
-        url: images.live_photo.media.stream.h265[0].master_url
-      };
-      new_data.push(item);
-    }
-  }
-  if (obj.data.datas) {
-    replaceUrlContent(obj.data.datas, new_data);
-  } else {
-    obj = {"code": 0, "success": true, "msg": "成功", "data": {"datas": new_data}};
-  }
-  console.log('新body：' + JSON.stringify(obj));
 }
 
 $done({body: JSON.stringify(obj)});

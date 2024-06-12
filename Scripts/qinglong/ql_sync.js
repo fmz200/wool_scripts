@@ -9,7 +9,7 @@
 
 const $ = new API('ql', true);
 
-const title = '🐉 通知提示';
+const title = '🐉 同步通知';
 
 const sync_keys = $.read('#ql_sync_keys').replace(/\s/g, '').split(',') || [];
 if (sync_keys.length === 0) {

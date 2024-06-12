@@ -1,0 +1,25 @@
+{
+  "name": "fmz200のTasks",
+  "description": "收集一些自用的定时任务，更新日期：2024-05-26 19:30:00",
+  "task": [
+    "0 7,11,17 * * * https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, tag=阿里云盘签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/AliYunDrive.png, enabled=true",
+    "10 0,8,12,18 * * * https://raw.githubusercontent.com/passerby-b/didi_fruit/main/dd_fruit.js, tag=滴滴橙心果园, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/didi.png, enabled=true",
+    "30 1,8,12,17 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuaishou/ks_fruit.js, tag=快手果园, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/kuaishou.png, enabled=true",
+    "30 1,7,12,18,22 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/pinduoduo/pdd_guoyuan.js, tag=拼多多果园, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/pinduoduo.png, enabled=true",
+    "22 7 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/macat/macat_signin.js, tag=马克喵签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/macat.png, enabled=true",
+    "17 7 * * * https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jhsh_checkIn.js, tag=建行生活签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ccbLife.jpg, enabled=true",
+    "15 7 * * * https://github.com/fmz200/wool_scripts/raw/main/Scripts/douyu/yubaSign.js, tag=斗鱼鱼吧签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/douyu.png, enabled=true",
+    "15 7 * * * https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/weibo_sign.js, tag=新浪微博签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo-00.png, enabled=true",
+    "16 7 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xxyx/xxyx_signin.js, tag=晓晓优选每日任务, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/xxyx_01.jpeg, enabled=true",
+    "25 7-12/1 * * * https://raw.githubusercontent.com/WowYiJiu/Personal/main/Script/qqMusic.js, tag=QQ音乐任务, img-url=https://raw.githubusercontent.com/WowYiJiu/Personal/main/icon/Color/qqMusic.png, enabled=true",
+    "0 0/2 * * * https://github.com/ChinaTelecomOperators/ChinaTelecom/releases/download/Prerelease-Alpha/Tele_Cellular_Auto.js, tag=电信余量, img-url=https://raw.githubusercontent.com/LikeGEM/TuBiao/main/Icons/zhongguodianxin.png, enabled=false",
+    "0 6-23/3 * * * https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/top.js, tag=热搜榜单, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/others/hot_search.png, enabled=true",
+    "10 9 * * ? https://raw.githubusercontent.com/chxm1023/Task/main/hljk.js, tag=汇率监控, img-url=https://raw.githubusercontent.com/chxm1023/Task/main/icon/hljk.png, enabled=true",
+    "30 8 * * * https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/60s.js, tag=每天60s读懂世界, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/friDay.png, enabled=true",
+    "0 8 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/oil_price.js, tag=今日油价, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/oil.png, enabled=true",
+    "2 8 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/freeAppsToday.js, tag=今日限免APP, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/AppStore.png, enabled=true",
+    "22 10 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/airport_fetch_notice.js, tag=获取机场公告, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/airport/airport.png, enabled=true",
+    "1 0 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/qinglong/ql_sync.js, tag=BoxJS与青龙数据同步, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ql.png, enabled=true",
+    "0 0 * * * https://github.com/sub-store-org/Sub-Store/releases/latest/download/cron-sync-artifacts.min.js, tag=Sub-Store Sync, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/SubStore.png, enabled=true"
+  ]
+}

@@ -1,10 +1,13 @@
 /**
- * 解锁微博会员图标
- *
+ * @author fmz200
+ * @function 解锁微博会员图标
+ * @date 2023-09-06 21:18:00
+ * 
+ * [MITM]
  * hostname=new.vip.weibo.cn
+ * 
  * [rewrite_local]
  * ^https?://new\.vip\.weibo\.cn/aj/appicon/list url script-response-body https://github.com/fmz200/wool_scripts/raw/main/Scripts/weibo/weibo_vip.js
- *
  */
 
 var body = $response.body;

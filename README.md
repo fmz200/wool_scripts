@@ -54,7 +54,7 @@
 "isp"`那就是家庭宽带，其他值（比如：hosting，business）都不是家宽。
 
 常见的抖音分流有：
-> https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/DouYin.snippet
+> https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/DouYin.list
 >
 > https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/DouYin/DouYin.list
 
@@ -87,38 +87,45 @@
 | # | 重写      | `获取cookie合集`  | [cookies.snippet](https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/cookies.snippet)        | [fmz200](https://github.com/fmz200) | 包含NobyDa，chavyleung，Sunert等 | 暂无                                                     |
 | # | 分流      | `去广告合集`       | [fenliuxiu.list](https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/fenliuxiu.list)           | [fmz200](https://github.com/fmz200) | 无                           | [点击查看](./QuantumultX/filter/00-How-To-Use-Filter.md)   |
 | # | 分流      | `分流修正`        | [fenliuxiuzheng.list](https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/fenliuxiuzheng.list) | [fmz200](https://github.com/fmz200) | 无                           | [点击查看](./QuantumultX/filter/00-How-To-Use-Filter.md)   |
-| # | 分流      | `屏蔽苹果系统更新`    | [apple.snippet](https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/apple.snippet)             | [fmz200](https://github.com/fmz200) | 有效性未知                       | [点击查看](./QuantumultX/filter/00-How-To-Use-Filter.md)   |
+| # | 分流      | `屏蔽苹果系统更新`    | [apple.snippet](https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/apple.snippet)             | [fmz200](https://github.com/fmz200) | 有效                          | [点击查看](./QuantumultX/filter/00-How-To-Use-Filter.md)   |
 | # | 分流      | `OpenAI分流`    | [OpenAI.snippet](https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/OpenAI.snippet)           | [fmz200](https://github.com/fmz200) | 初始版本，有问题欢迎反馈                | [点击查看](./QuantumultX/filter/00-How-To-Use-Filter.md)   |
-| # | BoxJS订阅 | `BoxJS订阅`     | [fmz200.boxjs.json](https://raw.githubusercontent.com/fmz200/wool_scripts/main/boxjs/fmz200.boxjs.json)                  | [fmz200](https://github.com/fmz200) | 先查看使用教程                     | [点击查看](https://docs.boxjs.app)                         |
-| # | Task订阅  | `Task订阅`      | [fmz200_gallery.json](https://raw.githubusercontent.com/fmz200/wool_scripts/main/boxjs/fmz200_gallery.json)              | [fmz200](https://github.com/fmz200) | 需要先获取cookie或token再运行        | 暂无                                                     |
+| # | BoxJS订阅 | `BoxJS订阅`     | [fmz200_boxjs.json](https://raw.githubusercontent.com/fmz200/wool_scripts/main/boxjs/fmz200_boxjs.json)                  | [fmz200](https://github.com/fmz200) | 先查看使用教程                     | [点击查看](https://docs.boxjs.app)                         |
+| # | Task订阅  | `Task订阅`      | [fmz200_tasks.json](https://raw.githubusercontent.com/fmz200/wool_scripts/main/boxjs/fmz200_tasks.json)                  | [fmz200](https://github.com/fmz200) | 需要先获取cookie或token再运行        | 暂无                                                     |
 | # | icons图标 | `icons图标`     | [icons-all.json](https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/icons-all.json)                        | [fmz200](https://github.com/fmz200) | 包含APP，机场，LPL等大量图标           | 暂无                                                     |
 | # | 重写      | `App&小程序净化合集` | [cleanup.snippet](https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/cleanup.snippet)                   | [fmz200](https://github.com/fmz200) | 常见的微信小程序净化                  | 暂无                                                     |
 
 > ⚠️ 当远程图标更新时如果你的图表库不更新多半是缓存的问题，请手动清理图标缓存(`点击右下角风车->划到最下面->选择其他设置->找到资源模块`，选择`删除图片缓存`)，并重启 Quantumult X，远程图标会重新下载并生效。
 
+
 ### 2️⃣ Loon配置
 
-> 📍 你可以借助 [Script-Hub：重写 & 规则集转换](https://github.com/Script-Hub-Org/Script-Hub) 工具将上方的QX重写和分流添加到Loon中。
+> 📍 除下方已经转为Loon的配置，你可以借助 [Script-Hub：重写 & 规则集转换](https://github.com/Script-Hub-Org/Script-Hub) 工具将上方的QX重写和分流添加到Loon中。
 
-| #  | 配置类型   | 配置名称     | 配置链接                                                                                                | 作者                                  | 特别说明                 | 使用教程 |
-|----|--------|----------|-----------------------------------------------------------------------------------------------------|-------------------------------------|----------------------|------|
-| 01 | Task订阅 | `Task订阅` | [loon.task.scripts](https://github.com/fmz200/wool_scripts/raw/main/Loon/scripts/loon.task.scripts) | [fmz200](https://github.com/fmz200) | 需要先获取cookie或token再运行 | 暂无   |
+| # | 配置类型 | 配置名称               | 配置链接                                                                                           | 作者                                  | 特别说明                               | 使用教程 |
+|---|------|--------------------|------------------------------------------------------------------------------------------------|-------------------------------------|------------------------------------|------|
+| # | 订阅脚本 | `Task订阅`           | [tasks.scripts](https://github.com/fmz200/wool_scripts/raw/main/Loon/script/tasks.scripts)     | [fmz200](https://github.com/fmz200) | 需要先获取cookie或token再运行               | 暂无   |
+| # | 订阅脚本 | `获取cookie&token合集` | [cookies.scripts](https://github.com/fmz200/wool_scripts/raw/main/Loon/script/cookies.scripts) | [fmz200](https://github.com/fmz200) | 包含fmz200/NobyDa/chavyleung/Sunert等 | 暂无   |
+
 
 ### 3️⃣ Surge配置
 
-> 📍 你可以借助 [Script-Hub：重写 & 规则集转换](https://github.com/Script-Hub-Org/Script-Hub) 工具将上方的QX重写和分流添加到Surge中。
+> 📍 除下方已经转为Surge的配置，你可以借助 [Script-Hub：重写 & 规则集转换](https://github.com/Script-Hub-Org/Script-Hub) 工具将上方的QX重写和分流添加到Surge中。
 
-| #  | 配置类型 | 配置名称       | 配置链接                                                                                             | 作者                                  | 特别说明         | 使用教程 |
-|----|------|------------|--------------------------------------------------------------------------------------------------|-------------------------------------|--------------|------|
-| 01 | 分流   | `OpenAI分流` | [OpenAI.list](https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/rule/OpenAI.list) | [fmz200](https://github.com/fmz200) | 初始版本，有问题欢迎反馈 | 无    |
+| # | 配置类型 | 配置名称       | 配置链接                                                                                             | 作者                                  | 特别说明              | 使用教程 |
+|---|------|------------|--------------------------------------------------------------------------------------------------|-------------------------------------|-------------------|------|
+| # | 代理规则 | `OpenAI分流` | [OpenAI.list](https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/rule/OpenAI.list) | [fmz200](https://github.com/fmz200) | 只有OpenAI，有问题欢迎反馈  | 无    |
+| # | 代理规则 | `AI分流规则合集` | [AI.list](https://github.com/fmz200/wool_scripts/raw/main/Surge/rule/AI.list)                    | [fmz200](https://github.com/fmz200) | 汇集常用的AI模型，有问题欢迎反馈 | 无    |
+
 
 ### 4️⃣ ShadowRocket配置
 
 > 📍 你可以借助 [Script-Hub：重写 & 规则集转换](https://github.com/Script-Hub-Org/Script-Hub) 工具将上方的QX重写和分流添加到ShadowRocket中。
 
+
 ### 5️⃣ Stash配置
 
 > 📍 你可以借助 [Script-Hub：重写 & 规则集转换](https://github.com/Script-Hub-Org/Script-Hub) 工具将上方的QX重写和分流添加到Stash中。
+
 
 ### 6️⃣ Egern，LanceX配置
 

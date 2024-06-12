@@ -1,0 +1,145 @@
+#!name=ByteDance分流
+#!desc=字节跳动系列产品分流(备份)
+#!author=fmz200
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/ByteDance.list
+#!tg-group：https://t.me/lanjieguanggao
+#!date：2024-04-22 21:00:00
+#############################################
+
+HOST-SUFFIX, amemv.com, ByteDance
+HOST-SUFFIX, douyinpic.com, ByteDance
+HOST-SUFFIX, douyinstatic.com, ByteDance
+HOST-SUFFIX, douyinvod.com, ByteDance
+HOST-SUFFIX, idouyinvod.com, ByteDance
+HOST-SUFFIX, ixigua.com, ByteDance
+HOST-SUFFIX, ixiguavideo.com, ByteDance
+HOST-SUFFIX, pstatp.com, ByteDance
+HOST-SUFFIX, snssdk.com, ByteDance
+HOST-SUFFIX, toutiao.com, ByteDance
+
+HOST-SUFFIX, zijieapi.com, ByteDance
+HOST-SUFFIX, awemeughun.com, ByteDance
+HOST-SUFFIX, fanqiesdk.com, ByteDance
+HOST-SUFFIX, doupay.com, ByteDance
+HOST-SUFFIX, qishui.com, ByteDance
+HOST-SUFFIX, xuelangapp.com, ByteDance
+HOST-SUFFIX, tangdou.com, ByteDance
+HOST-SUFFIX, ecombdapi.com, ByteDance
+HOST-SUFFIX, awemeugsoul.com, ByteDance
+HOST-SUFFIX, bdxiguaimg.com, ByteDance
+HOST-SUFFIX, byteactivity.com, ByteDance
+HOST-SUFFIX, byteactivity12.com, ByteDance
+HOST-SUFFIX, ulpay.com, ByteDance
+HOST-SUFFIX, center.html, ByteDance
+HOST-SUFFIX, dcarapi.com, ByteDance
+HOST-SUFFIX, bdurl.net, ByteDance
+HOST-SUFFIX, zjurl.cn, ByteDance
+HOST-SUFFIX, doubo03.com, ByteDance
+HOST-SUFFIX, douyin.com, ByteDance
+HOST-SUFFIX, byte-test.com, ByteDance
+HOST-SUFFIX, ecombdimg.com, ByteDance
+HOST-SUFFIX, ecombdpage.com, ByteDance
+
+HOST-SUFFIX, iaoligame.com, ByteDance
+HOST-SUFFIX, bytedance.com, ByteDance
+HOST-SUFFIX, nvsgames.cn, ByteDance
+HOST-SUFFIX, huoshan.com, ByteDance
+HOST-SUFFIX, jinritemai.com, ByteDance
+HOST-SUFFIX, baohuaxia.com, ByteDance
+HOST-SUFFIX, jishitailai.com, ByteDance
+HOST-SUFFIX, juliangyinqing.com, ByteDance
+HOST-SUFFIX, bytegecko.com, ByteDance
+HOST-SUFFIX, bytetos.com, ByteDance
+HOST-SUFFIX, baike.com, ByteDance
+HOST-SUFFIX, byteimg.com, ByteDance
+HOST-SUFFIX, huoshanimg.com, ByteDance
+HOST-SUFFIX, toutiaoapi.com, ByteDance
+HOST-SUFFIX, toutiaoimg.com, ByteDance
+HOST-SUFFIX, xsgtvacct.com, ByteDance
+HOST-SUFFIX, ugapk.com, ByteDance
+HOST-SUFFIX, ugditui.cn, ByteDance
+HOST-SUFFIX, ndcpp.com, ByteDance
+HOST-SUFFIX, feishu.cn, ByteDance
+HOST-SUFFIX, xingtu.cn, ByteDance
+HOST-SUFFIX, activity04.com, ByteDance
+HOST-SUFFIX, dcdapp.com, ByteDance
+HOST-SUFFIX, linzihy.com, ByteDance
+HOST-SUFFIX, zlinkurl.cn, ByteDance
+
+HOST-SUFFIX, ibytedapm.com, ByteDance
+HOST-SUFFIX, zijieimg.com, ByteDance
+HOST-SUFFIX, ipstatp.com, ByteDance
+HOST-SUFFIX, ibytedtos.com, ByteDance
+HOST-SUFFIX, huoshanzhibo.com, ByteDance
+HOST-SUFFIX, huoshanxiaoshipin.cn, ByteDance
+HOST-SUFFIX, huoshanxiaoshipin.net, ByteDance
+HOST-SUFFIX, huoshanvideo.cn, ByteDance
+HOST-SUFFIX, huoshanvideo.net, ByteDance
+HOST-SUFFIX, ieshuodong.cn, ByteDance
+HOST-SUFFIX, ieshuodong.net, ByteDance
+HOST-SUFFIX, byteoversea.com, ByteDance
+HOST-SUFFIX, toutiaocloud.com, ByteDance
+HOST-SUFFIX, chengzijianzhan.com, ByteDance
+HOST-SUFFIX, ribaoapi.com, ByteDance
+HOST-SUFFIX, bytexservice.com, ByteDance
+HOST-SUFFIX, oceanengine.com, ByteDance
+HOST-SUFFIX, dyvideotape.com, ByteDance
+HOST-SUFFIX, iesdouyin.com, ByteDance
+HOST-SUFFIX, bdxiguastatic.com, ByteDance
+HOST-SUFFIX, bytegoofy.com, ByteDance
+HOST-SUFFIX, unpkg.com, ByteDance
+HOST-SUFFIX, byted-static.com, ByteDance
+HOST-SUFFIX, draftstatic.com, ByteDance
+HOST-SUFFIX, bytetcc.com, ByteDance
+HOST-SUFFIX, byted.org, ByteDance
+HOST-SUFFIX, feiliao.com, ByteDance
+HOST-SUFFIX, 365yg.com, ByteDance
+HOST-SUFFIX, bytedance.net, ByteDance
+HOST-SUFFIX, bytescm.com, ByteDance
+HOST-SUFFIX, bytednsdoc.com, ByteDance
+
+# CDN
+HOST-SUFFIX, douyincdn.com, ByteDance
+HOST-SUFFIX, hypstarcdn.com, ByteDance
+HOST-SUFFIX, topbuzzcdn.com, ByteDance
+HOST-SUFFIX, muscdn.com, ByteDance
+HOST-SUFFIX, tiktokcdn.com, ByteDance
+HOST-SUFFIX, bytecdn.cn, ByteDance
+HOST-SUFFIX, zjcdn.com, ByteDance
+HOST-SUFFIX, zijiecdn.com, ByteDance
+HOST-SUFFIX, zijiecdn.net, ByteDance
+
+IP-CIDR, 101.36.166.16/32, ByteDance
+IP-CIDR, 101.36.166.17/32, ByteDance
+IP-CIDR, 101.36.166.18/32, ByteDance
+IP-CIDR, 101.36.166.19/32, ByteDance
+IP-CIDR, 122.14.229.102/32, ByteDance
+IP-CIDR, 122.14.229.103/32, ByteDance
+IP-CIDR, 122.14.229.140/32, ByteDance
+IP-CIDR, 122.14.229.141/32, ByteDance
+IP-CIDR, 122.14.229.179/32, ByteDance
+IP-CIDR, 122.14.229.7/32, ByteDance
+IP-CIDR, 122.14.229.72/32, ByteDance
+IP-CIDR, 122.14.230.128/32, ByteDance
+IP-CIDR, 122.14.236.30/32, ByteDance
+IP-CIDR, 122.14.236.35/32, ByteDance
+IP-CIDR, 122.14.236.37/32, ByteDance
+IP-CIDR, 122.14.236.46/32, ByteDance
+IP-CIDR, 122.14.236.48/32, ByteDance
+IP-CIDR, 122.14.236.74/32, ByteDance
+IP-CIDR, 122.14.236.75/32, ByteDance
+IP-CIDR, 123.58.9.84/32, ByteDance
+IP-CIDR, 123.58.9.90/32, ByteDance
+IP-CIDR, 220.243.141.131/32, ByteDance
+IP-CIDR, 220.243.141.205/32, ByteDance
+IP-CIDR, 220.243.141.206/32, ByteDance
+IP-CIDR, 220.243.141.215/32, ByteDance
+IP-CIDR, 220.243.141.216/32, ByteDance
+IP-CIDR, 220.243.141.217/32, ByteDance
+IP-CIDR, 220.243.190.68/32, ByteDance
+IP-CIDR, 220.243.190.72/32, ByteDance
+IP-CIDR, 220.243.190.73/32, ByteDance
+IP-CIDR, 220.243.190.74/32, ByteDance
+IP-CIDR, 220.243.190.79/32, ByteDance
