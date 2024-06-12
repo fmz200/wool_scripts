@@ -1,7 +1,8 @@
 /**
  * @author fmz200
  * @function 去除Soul的广告&解锁部分服务
- * @date 2024-05-31 23:00:00
+ * @date 2024-06-13 00:20:00
+ * @quote ZenmoFeiShi
  */
 
 const $ = new Env("soul去广告");
@@ -13,78 +14,69 @@ if (typeof $response !== 'undefined' && $response !== null) {
   rsp_body = $response.body;
 }
 
-let responseData = rsp_body;
+let mod_rsp = rsp_body;
 try {
-  responseData = JSON.parse(rsp_body);
+  mod_rsp = JSON.parse(rsp_body);
 
-  // 1、信息流广告
-  // https://ssp.soulapp.cn/api/q url script-response-body soul_ads.js
-  if (req_url.includes("/api/q")) {
-    responseData.data.prs = [];
-    console.log('去除信息流广告💕');
+  const shouldDeleteData =
+    req_url.includes("/post/homepage/guide/card") ||
+    req_url.includes("/furion/position/content") ||
+    req_url.includes("/hot/soul/rank") ||
+    req_url.includes("/post/gift/list") ||
+    req_url.includes("/mobile/app/version/queryIos") ||
+    req_url.includes("/teenager/config") ||
+    req_url.includes("/winterfell/v2/getIpByDomain") ||
+    req_url.includes("/official/scene/module");
+
+  const shouldModifyLimitInfo = req_url.includes("/chat/limitInfo") && mod_rsp.data && mod_rsp.data.limit !== undefined;
+
+  // 删除响应体中的data
+  if (mod_rsp.data && shouldDeleteData) {
+    delete mod_rsp.data;
   }
 
-  // 2、青少年模式弹窗
-  // https://api-account.soulapp.cn/teenager/config url script-response-body soul_ads.js
-  if (req_url.includes("/teenager/config")) {
-    // responseData.data.isPopTeenWindow = false;
-    console.log('去除青少年模式弹窗💕');
+  // 解除限制
+  if (shouldModifyLimitInfo) {
+    mod_rsp.data.limit = false;
   }
 
-  if (req_url.includes("/post/homepage/guide/card") || req_url.includes("/furion/position/content") || req_url.includes("/hot/soul/rank") ||
-    req_url.includes("/post/gift/list") || req_url.includes("/mobile/app/version/queryIos") || req_url.includes("/winterfell/v2/getIpByDomain") ||
-    req_url.includes("/official/scene/module")) {
-    delete responseData.data;
-    console.log('去除各种广告和限制💕');
-  }
+  if (req_url.includes("/v6/planet/config")) {
+    const gamesToRemove = [
+      "异世界回响", "狼人魅影", "梦想海岛王", "幻想星球", "爆弹喵", "星球实验室", "兴趣群组", "群聊派对"
+    ];
 
-  if (req_url.includes("/chat/limitInfo")) {
-    responseData.data.limit = false;
-    console.log('去除聊天限制💕');
-  }
+    if (mod_rsp.data?.gameInfo && Array.isArray(mod_rsp.data.gameInfo.gameCards)) {
+      mod_rsp.data.gameInfo.gameCards = mod_rsp.data.gameInfo.gameCards.filter(card => !gamesToRemove.includes(card.title));
+    }
 
-  if (req_url.includes("/vip/meet/userInfo")) {
-    if (responseData.data.superStarDTO?.superVIP !== undefined) {
-      responseData.data.superStarDTO.superVIP = true;
-      responseData.data.superStarDTO.validTime = 9887893999000;
-      responseData.data.flyPackageDTO.hasFlyPackage = true;
+    if (mod_rsp.data && Array.isArray(mod_rsp.data.coreCards)) {
+      mod_rsp.data.coreCards = mod_rsp.data.coreCards.filter(card => !gamesToRemove.includes(card.title));
+      mod_rsp.data.coreCards.forEach(card => {
+        if (card.secondCards && Array.isArray(card.secondCards)) {
+          card.secondCards = card.secondCards.filter(sc => !gamesToRemove.includes(sc.title));
+        }
+      });
     }
   }
 
-  if (req_url.includes("/privilege/supervip/status")) {
-    if (responseData.data.superVIP !== undefined) {
-      responseData.data.superVIP = true;
-      responseData.data.remainDay = 9887893999000;
-      responseData.data.hasCancelVIPSubscription = false;
-      responseData.data.hasCancelVIPSubOfIAP = false;
-      responseData.data.hasFlyPackage = true;
+  if (mod_rsp.data?.coreCards && Array.isArray(mod_rsp.data.coreCards)) {
+    mod_rsp.data.coreCards = mod_rsp.data.coreCards.map(card => {
+      if (card.style === 2) {
+        card.style = 1;
+      }
+      return card;
+    });
+  }
+
+  if (req_url.includes("/chatroom/chatClassifyRoomList")) {
+    if (mod_rsp.data?.roomList) {
+      mod_rsp.data.roomList = [];
     }
   }
 
-  // https://api-pay.soulapp.cn/mall/avatar/product/new/recommend url script-response-body soul_ads.js
-  if (req_url.includes("/mall/avatar/product/new/recommend")) {
-    const avatarList = responseData.data.data;
-    for (const element of avatarList) {
-      element.price = 1;
-    }
-    console.log('设置头像金币价格💕');
+  if (req_url.includes("/post/recSquare/subTabs")) {
+    mod_rsp.data = mod_rsp.data.filter(item => [7, 6, 2].includes(item.tabType));
   }
-
-  // https://api-pay.soulapp.cn/personalizeMall/purchase url script-response-body soul_ads.js
-  if (req_url.includes("/personalizeMall/purchase")) {
-    responseData.data = {
-      "putAvatarResultDesc": "successfully",
-      "purchasePrivilegeDetailResponse": true,
-      "purchaseSuccess": true,
-      "mallPurchaseResultResponse": "mall purchase success",
-      "putAvatarResultCode": 10001,
-      "purchaseResultCode": 10001,
-      "purchaseResultDesc": "购买成功了哦~",
-      "putAvatarSuccess": true
-    };
-    console.log('设置头像购买结果💕');
-  }
-
 } catch (error) {
   console.log('脚本运行出现错误，部分广告未去除⚠️');
   console.log('错误信息：' + error.message);
@@ -96,7 +88,7 @@ $done()方法参数说明：
   $done({}): 空js对象，请求继续，任何请求参数不会有任何变化
   $done({   status:200,   headers:{},   body:"xxx" })
  */
-$.done({body: JSON.stringify(responseData)});
+$.done({body: JSON.stringify(mod_rsp)});
 
 
 /*********************************** ENV *************************************/
