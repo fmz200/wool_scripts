@@ -1,0 +1,20 @@
+name: Merge upstream branches
+on:
+  schedule:
+    - cron:  '0 */12 * * *'
+  workflow_dispatch:
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Merge upstream
+        run: |
+          git config --global user.name 'someone'
+          git config --global user.email 'someone@example.com'
+          git config --global credential.helper store
+          git clone https://${{ secrets.PAT_TOKEN }}@github.com/0xlane/wool_scripts.git tmp
+          cd tmp
+          git remote add upstream https://${{ secrets.PAT_TOKEN }}@github.com/fmz200/wool_scripts.git
+          git fetch upstream
+          git merge upstream/main
+          git push origin main          
