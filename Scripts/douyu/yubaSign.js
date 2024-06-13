@@ -2,9 +2,9 @@
  * @auther @fmz200
  * @function 斗鱼鱼吧签到
  * @date 2024-01-15 21:00:00
- * @quote @lowking
+ * @quote lowking
  * @source https://raw.githubusercontent.com/lowking/Scripts/master/douyu/yubaSign.js
- * @instructions 打开https://yuba.douyu.com/homepage/hotwbs并登陆，打开获取cookie，刷新页面，提示获取鱼吧关注列表成功🎉
+ * @tips 打开https://yuba.douyu.com/homepage/hotwbs并登陆，打开获取cookie，刷新页面，提示获取鱼吧关注列表成功🎉
  */
 
 const lk = new ToolKit(`斗鱼鱼吧签到`, `DouyuYubaSign`)
@@ -20,8 +20,7 @@ const config = {
     signUrl: `https://yuba.douyu.com/ybapi/topic/sign?timestamp=${Math.random()}`
   },
   headers: {
-    "User-Agent":
-      "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36",
+    "User-Agent": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36",
     referer: "https://yuba.https://yuba.douyu.com/homepage/group.com",
     origin: "https://yuba.douyu.com"
   },

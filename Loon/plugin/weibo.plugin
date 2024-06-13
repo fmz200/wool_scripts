@@ -36,7 +36,7 @@ DOMAIN, f.video.weibocdn.com, REJECT
 ^https?:\/\/api\.weibo\.cn\/2\/!\/huati\/(discovery_home_bottom_getdotinfo|mobile_discovery_searchchange)\? reject-dict
 # 开屏广告
 ^https?:\/\/bootrealtime\.uve\.weibo\.com\/v\d\/ad\/realtime reject-dict
-^https?:\/\/bootpreload\.uve\.weibo\.com\/v\d\/ad\/preload, reject-dict
+^https?:\/\/bootpreload\.uve\.weibo\.com\/v\d\/ad\/preload reject-dict
 ^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(get-lbs-cell-info\.php|sdkconfig\.php) reject
 # 微博长文章推广
 ^https:\/\/card\.weibo\.com\/article\/m\/aj\/(reward|uvead)\? reject-dict
