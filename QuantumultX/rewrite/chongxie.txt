@@ -1532,10 +1532,10 @@ https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSpl
 ^https?:\/\/j-image\.missfresh\.cn\/img_(.+)\.(jpg|jpeg|gif|png)\?iopcmd=convert&dst=webp&q=85$ url reject
 
 # > 买单吧
-# hostname = creditcardapp.bankcomm.cn, creditcardapp.bankcomm.com, creditcard.bankcomm.com
-^https?:\/\/creditcardapp\.bankcomm\.cn\/mappweb_interface\/common\/(qryPopAds|qryLaunchAds)\.do url reject-200
-^https?:\/\/creditcard\.bankcomm\.com\/tfimg\/public00\/M00\/4C\/6F url reject-img
-^https?:\/\/creditcardapp\.bankcomm\.com\/rcg\/index\.html\?callbackurl=rcg\/index\.html&orclogin=1& url script-response-body https://raw.githubusercontent.com/zirawell/Ad-Cleaner/main/Collection/js/mdb.js
+# hostname = creditcardapp.bankcomm.cn, creditcardapp.bankcomm.com, creditcard.bankcomm.cn, creditcard.bankcomm.com
+^https?:\/\/creditcard\.bankcomm\.(com|cn)\/tfimg\/public00\/M00\/[a-zA-Z0-9]{2}\/[a-zA-Z0-9]{2}\/[a-zA-Z0-9-]{30}\.(jpg|jpeg) url reject
+^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/mappweb_interface\/common\/(qryPopAds|qryLaunchAds)\.do url reject-200
+^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/rcg\/index\.html\?callbackurl=rcg\/index\.html&orclogin=1& url script-response-body https://raw.githubusercontent.com/zirawell/Ad-Cleaner/main/Collection/js/mdb.js
 ^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/mappweb_interaction\/appInfo\/appNewestVersion url reject-200
 
 # > 民生银行
@@ -1978,7 +1978,8 @@ https://api.rr.tv/storage/business/rootName/app/homePage\?dataType=JSON url reje
 # 信息流，帖子详情页等各种广告
 ^https?:\/\/ssp\.soulapp\.cn\/api\/q url reject-dict
 ^https?:\/\/ssp\.soulapp\.cn\/api\/ad\/config url reject-dict
-^https:\/\/chat-live\.soulapp\.cn\/live\/planet\/recListV2 url reject-200
+^https?:\/\/chat-live\.soulapp\.cn\/live\/planet\/recListV2 url reject-200
+^https?:\/\/api-chat\.soulapp\.cn\/chat\/entrance\/first url reject-dict
 # 青少年模式弹窗
 ^https?:\/\/api-account\.soulapp\.cn\/teenager\/config url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js
 ^https?:\/\/api-a\.soulapp\.cn\/v2\/post\/gift\/list url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js
