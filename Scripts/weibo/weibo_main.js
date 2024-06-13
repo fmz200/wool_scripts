@@ -2,7 +2,7 @@
  * @auther @fmz200
  * @function 微博去广告
  * @date 2024-06-08 21:00:00
- * @quote @zmqcherish
+ * @quote zmqcherish
  */
 
 const version = 'v20230411.1';

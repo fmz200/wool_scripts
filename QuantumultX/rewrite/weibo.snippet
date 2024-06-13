@@ -69,8 +69,9 @@ https://m?api.weibo.cn/2/searchall Weibo url-and-header script-response-body htt
 ^https?://m?api\.weibo\.c(n|om)/2/(cardlist|searchall|page|messageflow|statuses/(unread_)?friends(/|_)timeline|groups/timeline|statuses/(container_timeline|container_timeline_hot|unread_hot_timeline|extend|video_mixtimeline)|profile/(me|container_timeline)|video/(community_tab|remind_info|tiny_stream_video_list)|checkin/show|\!/live/media_homelist|comments/build_comments|container/get_item|search/(finder|container_timeline|container_discover)) Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_main.js
 
 # 删除微博开屏广告 - cherish
-^https:\/\/bootrealtime\.uve\.weibo\.com\/v3\/ad\/realtime Weibo url-and-header reject-dict
-^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua) Weibo url-and-header script-response-body https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_launch.js
+^https?:\/\/bootrealtime\.uve\.weibo\.com\/v\d\/ad\/realtime Weibo url-and-header reject-dict
+^https?:\/\/bootpreload\.uve\.weibo\.com\/v\d\/ad\/preload Weibo url-and-header reject-dict
+^https?:\/\/(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua) Weibo url-and-header script-response-body https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_launch.js
 
 # 自定义tab皮肤
 ^https://api.weibo.cn/2/!/client/light_skin Weibo url-and-header script-response-body https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_main.js
