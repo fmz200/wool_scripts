@@ -8,6 +8,6 @@
 #!date=2024-06-01 23:15:00
 #############################################
 
-DOMAIN-SUFFIX, okex.com, OKX
-DOMAIN-SUFFIX, oklink.com, OKX
-DOMAIN-SUFFIX, okx.com, OKX
+DOMAIN-SUFFIX, okex.com
+DOMAIN-SUFFIX, oklink.com
+DOMAIN-SUFFIX, okx.com
