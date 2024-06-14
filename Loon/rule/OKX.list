@@ -8,9 +8,6 @@
 #!date=2024-06-01 23:15:00
 #############################################
 
-DOMAIN-SUFFIX, tktn.be
-DOMAIN, mfx.mobilefuse.co
-IP-CIDR, 50.117.27.0/24, no-resolve
-IP-CIDR, 69.46.75.0/24, no-resolve
-IP-CIDR, 205.164.56.29/24, no-resolve
-IP-CIDR, 63.251.124.0/24, no-resolve
+DOMAIN-SUFFIX, okex.com, OKX
+DOMAIN-SUFFIX, oklink.com, OKX
+DOMAIN-SUFFIX, okx.com, OKX

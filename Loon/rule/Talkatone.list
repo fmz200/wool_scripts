@@ -8,7 +8,7 @@
 #!date=2024-06-01 23:15:00
 #############################################
 
-DOMAIN, mfx.mobilefuse.co
+DOMAIN-SUFFIX, mfx.mobilefuse.co
 DOMAIN-SUFFIX, tktn.be
 
 IP-CIDR, 50.117.27.0/24, no-resolve
