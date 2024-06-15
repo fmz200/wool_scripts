@@ -1,11 +1,11 @@
 #!name=广告拦截合集-规则
-#!desc=(F)针对部分APP和小程序广告进行拦截，某些APP要清除缓存或者重新安装APP，拦截广告才会生效！
+#!desc=(F)针对部分APP和小程序广告进行拦截，某些APP要清除缓存或者重新安装APP，拦截广告才会生效！可以配置到规则或者插件
 #!author=fmz200
 #!homepage=https://github.com/fmz200/wool_scripts
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/rejectAd.list
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2024-06-02 00:50:00
+#!date=2024-06-16 00:10:00
 #!support=约9392行
 #!proxy-select=reject
 #############################################
@@ -29,28 +29,36 @@ DOMAIN-KEYWORD,pangolin-sdk-toutiao,REJECT
 DOMAIN-KEYWORD,pangolin.snssdk.com,REJECT
 DOMAIN-KEYWORD,pglstatp-toutiao,REJECT
 DOMAIN-KEYWORD,video-cn.snssdk.com,REJECT
+DOMAIN-SUFFIX, getui.com, reject
+DOMAIN-SUFFIX, igexin.com, reject
 # > 收集用户隐私联盟，若有问题自行设置白名单
 DOMAIN-KEYWORD,volc,REJECT
+
 # > 交管12123
 DOMAIN-SUFFIX,v3.fstats.xyz,REJECT
 DOMAIN-SUFFIX,wss.haoyundmn.com,REJECT
 DOMAIN-SUFFIX,new.xiongzhangad.com,REJECT
 DOMAIN-SUFFIX,alexametrics.com,REJECT
 DOMAIN-KEYWORD,in-page-push,REJECT
+
 # > 51wnl
 DOMAIN,ad.51wnl-cq.com,REJECT
 DOMAIN,adextra.51wnl-cq.com,REJECT
 DOMAIN,log.51wnl-cq.com,REJECT
 DOMAIN,r.51wnl-cq.com,REJECT
+
 # > 51.LA
 DOMAIN,js.users.51.la,REJECT
 DOMAIN,mc.51.la,REJECT
 DOMAIN,wc.51.la,REJECT
+
 # > 58同城
 DOMAIN,track.58.com,REJECT
 DOMAIN,tracklog.58.com,REJECT
+
 # > Adobe Flash China Special Edition
 DOMAIN,geo2.adobe.com,REJECT
+
 # > Apple
 DOMAIN,advertising.apple.com,REJECT
 DOMAIN,api-adservices.apple.com,REJECT
@@ -79,8 +87,10 @@ DOMAIN,token.safebrowsing.apple,REJECT
 DOMAIN,vs6.bj2ct.u3.ucweb.com,REJECT
 DOMAIN-SUFFIX,safebrowsing.apple,REJECT
 DOMAIN-SUFFIX,u3.ucweb.com,REJECT
+
 # > 阿里云
 IP-CIDR,203.107.1.1/24,REJECT, no-resolve
+
 # > 爱奇艺
 DOMAIN,api.iqiyi.com,REJECT
 DOMAIN,cr-status.iqiyi.com,REJECT
@@ -127,6 +137,7 @@ IP-CIDR,101.227.97.240/32,REJECT, no-resolve
 IP-CIDR,101.227.200.11/32,REJECT, no-resolve
 IP-CIDR,101.227.200.28/32,REJECT, no-resolve
 IP-CIDR,124.192.153.42/32,REJECT, no-resolve
+
 # > 百度
 DOMAIN-SUFFIX,duapps.com,REJECT
 DOMAIN-SUFFIX,cpro.baidu.com,REJECT
