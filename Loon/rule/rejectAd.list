@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/rejectAd.list
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2024-06-16 00:10:00
+#!date=2024-06-16 20:10:00
 #!support=约9392行
 #!proxy-select=reject
 #############################################
@@ -1266,6 +1266,8 @@ DOMAIN,tracking.intl.miui.com,REJECT
 DOMAIN,39d83s.com,REJECT
 # > 小利生活
 DOMAIN-KEYWORD,mpos-pic.helipay.com,REJECT
+# > 晓晓优选
+DOMAIN-SUFFIX,api-htp.beizi.biz, REJECT
 # > 新浪
 DOMAIN-SUFFIX,beacon.sina.com.cn,REJECT
 DOMAIN,u1.img.mobile.sina.cn,REJECT
