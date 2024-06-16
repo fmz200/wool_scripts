@@ -23,7 +23,7 @@ const mainConfig = storeMainConfig ? JSON.parse(storeMainConfig) : {
 	removeGood: true,			//微博主好物种草
 	removeFollow: true,			//关注博主
 	modifyMenus: true,			//编辑上下文菜单
-	removeRelateItem: false,	//评论区相关内容
+	removeRelateItem: true,	//评论区相关内容
 	removeRecommendItem: true,	//评论区推荐内容
 	removeRewardItem: false,	//微博详情页打赏模块
 
@@ -133,15 +133,20 @@ function getModifyMethod(url) {
 	return null;
 }
 
-
 function isAd(data) {
 	if (!data) {
 		return false;
 	}
-	if (data.mblogtypename === '广告' || data.mblogtypename === '热推') {
+	if (data.mblogtypename?.includes('广告') || data.mblogtypename?.includes('热推')) {
 		return true;
 	}
-	if (data.promotion && data.promotion.type === 'ad') {
+	if (data.promotion?.type === 'ad') {
+		return true;
+	}
+	if (data.content_auth_info?.content_auth_title?.includes("广告")) {
+		return true;
+	}
+	if (data.ads_material_info?.is_ads) {
 		return true;
 	}
 	return false;
@@ -602,13 +607,25 @@ function removeMediaHomelist(data) {
 //评论区相关和推荐内容
 function removeComments(data) {
 	let delType = ['广告'];
-	if (mainConfig.removeRelateItem) delType.push('相关内容');
+	if (mainConfig.removeRelateItem) delType.push('相关内容', '相关评论');
 	if (mainConfig.removeRecommendItem) delType.push(...['推荐', '热推']);
 	// if(delType.length === 0) return;
 	let items = data.datas || [];
 	if (items.length === 0) return;
 	let newItems = [];
 	for (const item of items) {
+		if (isAd(item.data)) {
+			continue;
+		}
+		if (item.data?.user) {
+			if (["超话社区", "微博开新年", "微博热搜", "微博视频"].includes(item.data.user.name)) {
+				continue;
+			}
+		}
+		// 6为你推荐更多精彩内容 15过滤提示
+		if (item.type === 6 || item.type === 15) {
+			continue;
+		}
 		let adType = item.adType || '';
 		if (delType.indexOf(adType) === -1) {
 			newItems.push(item);
