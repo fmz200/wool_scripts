@@ -756,18 +756,27 @@ DOMAIN,adm0.autoimg.cn,REJECT
 DOMAIN,adm1.autoimg.cn,REJECT
 DOMAIN,adm2.autoimg.cn,REJECT
 DOMAIN,adm3.autoimg.cn,REJECT
+
 # > QQ音乐广告
-DOMAIN,tmeadcomm.y.qq.com,REJECT
-DOMAIN,ad.tencentmusic.com,REJECT
-DOMAIN,adstats.tencentmusic.com,REJECT
-DOMAIN,tmead.y.qq.com,REJECT
-DOMAIN-SUFFIX,rqd.qq.com,REJECT
-DOMAIN-SUFFIX,wup.imtt.qq.com,REJECT
-DOMAIN-SUFFIX,gdt.qq.com,REJECT
-DOMAIN-SUFFIX,android.rqd.qq.com,REJECT
-DOMAIN-SUFFIX,e.qq.com,REJECT
-DOMAIN-SUFFIX,beacon.qq.com,REJECT
-DOMAIN-SUFFIX,v.gdt.qq.com,REJECT
+DOMAIN, adstats.tencentmusic.com, REJECT
+DOMAIN, ad.tencentmusic.com, REJECT
+DOMAIN, adcdn.tencentmusic.com, REJECT
+DOMAIN, adcdn6.tencentmusic.com, REJECT
+DOMAIN, adexpo.tencentmusic.com, REJECT
+DOMAIN, adclick.tencentmusic.com, REJECT
+DOMAIN, otheve.beacon.qq.com, REJECT
+DOMAIN, monitor.music.qq.com, REJECT
+DOMAIN, stat.y.qq.com, REJECT
+DOMAIN, tmead.y.qq.com, REJECT-NO-DROP
+DOMAIN, oth.str.mdt.qq.com, REJECT
+DOMAIN, h.trace.qq.com, REJECT
+DOMAIN, sdk.e.qq.com, REJECT
+DOMAIN, p.l.qq.com, REJECT
+DOMAIN, us.l.qq.com, REJECT
+DOMAIN, tangram.e.qq.com, REJECT
+DOMAIN, tmeadbak.y.qq.com, REJECT-NO-DROP
+DOMAIN-SUFFIX, imtmp.net, REJECT
+
 # > soul
 DOMAIN,soul-ad.soulapp.cn,REJECT
 DOMAIN,ad-r.soulapp.cn,REJECT
