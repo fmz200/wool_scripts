@@ -149,7 +149,7 @@ function processPayload(payload) {
 function removeCommonAds(items) {
   for (let i = 0; i < items.length; i++) {
     const card_type = items[i].data?.card_type;
-    console.log('card_type = ' + card_type);
+    console.log(`card_type = ${card_type}`);
     // 白名单模式
     if (!cardTypes.includes(card_type)) {
       console.log('移除多余的模块💕💕');
@@ -161,16 +161,17 @@ function removeCommonAds(items) {
       console.log('处理微博热搜模块💕💕');
       removeHotSearchAds(items[i].data.group);
     }
-    // 1.2、轮播图模块
-    if (card_type === 118 || card_type === 247) {
-      console.log('移除轮播图模块💕💕');
+    // 1.2、轮播图模块 // 118横版广告图片 182热议话题 217错过了热词 247横版视频广告
+    if ([118, 182, 217, 247].includes(card_type)) {
+      console.log('移除轮播图，实况热聊等模块💕💕');
       items[i] = {};
     }
     // 1.3、”热聊、本地、找人“模块
-    if (card_type === 19) {
+    if ([19, 118, 206, 208, 217, 249].includes(card_type)) {
       console.log('处理热聊、本地、找人模块💕💕');
-      delete items[i].data.more_pic;
-      removeFinderChannelAds(items[i].data.group);
+      items[i] = {};
+      // delete items[i].data.more_pic;
+      // removeFinderChannelAds(items[i].data.group);
     }
   }
 }
