@@ -7,7 +7,7 @@
 #!tg-group=https://t.me/lanjieguanggao
 #!date=2024-06-16 20:10:00
 #!support=约9392行
-#!proxy-select=reject
+#!proxy-select=REJECT
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -29,8 +29,8 @@ DOMAIN-KEYWORD,pangolin-sdk-toutiao,REJECT
 DOMAIN-KEYWORD,pangolin.snssdk.com,REJECT
 DOMAIN-KEYWORD,pglstatp-toutiao,REJECT
 DOMAIN-KEYWORD,video-cn.snssdk.com,REJECT
-DOMAIN-SUFFIX, getui.com, reject
-DOMAIN-SUFFIX, igexin.com, reject
+DOMAIN-SUFFIX, getui.com, REJECT
+DOMAIN-SUFFIX, igexin.com, REJECT
 # > 收集用户隐私联盟，若有问题自行设置白名单
 DOMAIN-KEYWORD,volc,REJECT
 
