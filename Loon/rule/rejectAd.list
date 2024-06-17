@@ -5,9 +5,9 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/rejectAd.list
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2024-06-16 00:10:00
+#!date=2024-06-16 20:10:00
 #!support=约9392行
-#!proxy-select=reject
+#!proxy-select=REJECT
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -29,8 +29,8 @@ DOMAIN-KEYWORD,pangolin-sdk-toutiao,REJECT
 DOMAIN-KEYWORD,pangolin.snssdk.com,REJECT
 DOMAIN-KEYWORD,pglstatp-toutiao,REJECT
 DOMAIN-KEYWORD,video-cn.snssdk.com,REJECT
-DOMAIN-SUFFIX, getui.com, reject
-DOMAIN-SUFFIX, igexin.com, reject
+DOMAIN-SUFFIX, getui.com, REJECT
+DOMAIN-SUFFIX, igexin.com, REJECT
 # > 收集用户隐私联盟，若有问题自行设置白名单
 DOMAIN-KEYWORD,volc,REJECT
 
@@ -756,18 +756,27 @@ DOMAIN,adm0.autoimg.cn,REJECT
 DOMAIN,adm1.autoimg.cn,REJECT
 DOMAIN,adm2.autoimg.cn,REJECT
 DOMAIN,adm3.autoimg.cn,REJECT
+
 # > QQ音乐广告
-DOMAIN,tmeadcomm.y.qq.com,REJECT
-DOMAIN,ad.tencentmusic.com,REJECT
-DOMAIN,adstats.tencentmusic.com,REJECT
-DOMAIN,tmead.y.qq.com,REJECT
-DOMAIN-SUFFIX,rqd.qq.com,REJECT
-DOMAIN-SUFFIX,wup.imtt.qq.com,REJECT
-DOMAIN-SUFFIX,gdt.qq.com,REJECT
-DOMAIN-SUFFIX,android.rqd.qq.com,REJECT
-DOMAIN-SUFFIX,e.qq.com,REJECT
-DOMAIN-SUFFIX,beacon.qq.com,REJECT
-DOMAIN-SUFFIX,v.gdt.qq.com,REJECT
+DOMAIN, adstats.tencentmusic.com, REJECT
+DOMAIN, ad.tencentmusic.com, REJECT
+DOMAIN, adcdn.tencentmusic.com, REJECT
+DOMAIN, adcdn6.tencentmusic.com, REJECT
+DOMAIN, adexpo.tencentmusic.com, REJECT
+DOMAIN, adclick.tencentmusic.com, REJECT
+DOMAIN, otheve.beacon.qq.com, REJECT
+DOMAIN, monitor.music.qq.com, REJECT
+DOMAIN, stat.y.qq.com, REJECT
+DOMAIN, tmead.y.qq.com, REJECT-NO-DROP
+DOMAIN, oth.str.mdt.qq.com, REJECT
+DOMAIN, h.trace.qq.com, REJECT
+DOMAIN, sdk.e.qq.com, REJECT
+DOMAIN, p.l.qq.com, REJECT
+DOMAIN, us.l.qq.com, REJECT
+DOMAIN, tangram.e.qq.com, REJECT
+DOMAIN, tmeadbak.y.qq.com, REJECT-NO-DROP
+DOMAIN-SUFFIX, imtmp.net, REJECT
+
 # > soul
 DOMAIN,soul-ad.soulapp.cn,REJECT
 DOMAIN,ad-r.soulapp.cn,REJECT
@@ -1266,6 +1275,8 @@ DOMAIN,tracking.intl.miui.com,REJECT
 DOMAIN,39d83s.com,REJECT
 # > 小利生活
 DOMAIN-KEYWORD,mpos-pic.helipay.com,REJECT
+# > 晓晓优选
+DOMAIN-SUFFIX,api-htp.beizi.biz, REJECT
 # > 新浪
 DOMAIN-SUFFIX,beacon.sina.com.cn,REJECT
 DOMAIN,u1.img.mobile.sina.cn,REJECT
