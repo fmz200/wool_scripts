@@ -2,10 +2,10 @@
 #!desc=(F)针对部分APP和小程序广告进行拦截，某些APP要清除缓存或者重新安装APP，拦截广告才会生效！
 #!author=fmz200
 #!homepage=https://github.com/fmz200/wool_scripts
-#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/fenliu.list
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2024-06-16 20:10:00
+#!date=2024-06-17 22:10:00
 #!support=约9392行
 #!proxy-select=reject
 #############################################
@@ -927,7 +927,25 @@ host-keyword, api-access.pangolin-sdk-toutiao.com, reject
 
 # >>>>>>>>>>>>>>> ✅ Q ✅ <<<<<<<<<<<<<<
 # > QQ音乐
-host, us.l.qq.com, reject
+host, adstats.tencentmusic.com, REJECT
+host, ad.tencentmusic.com, REJECT
+host, adcdn.tencentmusic.com, REJECT
+host, adcdn6.tencentmusic.com, REJECT
+host, adexpo.tencentmusic.com, REJECT
+host, adclick.tencentmusic.com, REJECT
+host, otheve.beacon.qq.com, REJECT
+host, monitor.music.qq.com, REJECT
+host, stat.y.qq.com, REJECT
+host, tmead.y.qq.com, REJECT-NO-DROP
+host, oth.str.mdt.qq.com, REJECT
+host, h.trace.qq.com, REJECT
+host, sdk.e.qq.com, REJECT
+host, p.l.qq.com, REJECT
+host, us.l.qq.com, REJECT
+host, tangram.e.qq.com, REJECT
+host, tmeadbak.y.qq.com, REJECT
+host-suffix, imtmp.net, REJECT
+
 
 # > 蜻蜓FM
 host, ad.qingting.fm, reject
