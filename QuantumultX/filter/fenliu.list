@@ -936,7 +936,7 @@ host, adclick.tencentmusic.com, REJECT
 host, otheve.beacon.qq.com, REJECT
 host, monitor.music.qq.com, REJECT
 host, stat.y.qq.com, REJECT
-host, tmead.y.qq.com, REJECT-NO-DROP
+host, tmead.y.qq.com, REJECT
 host, oth.str.mdt.qq.com, REJECT
 host, h.trace.qq.com, REJECT
 host, sdk.e.qq.com, REJECT
