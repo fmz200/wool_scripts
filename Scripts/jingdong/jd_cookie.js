@@ -81,6 +81,7 @@ function GetCookie() {
       if (req_url.includes("/cgi-bin/app/appjmp") || req_url.includes("/todo/modifyLoginName")) {
         let username = "";
         let cookie = "";
+        console.log("遍历头部对象并打印每个字段和值开始❇️");
         for (const headerField in $request.headers) {
           const headerValue = $request.headers[headerField];
           console.log(`${headerField}: ${headerValue}`);
@@ -91,6 +92,7 @@ function GetCookie() {
             cookie = headerValue.substring(headerValue.indexOf("=") + 1);
           }
         }
+        console.log("遍历头部对象并打印每个字段和值结束🍓");
         if (username && cookie) {
           console.log(`获取到username：${username}，cookie：${cookie}`);
           let unionCookie = `${cookie};${username};`; // pt_key=xxx;pt_pin=yyy;
@@ -100,8 +102,11 @@ function GetCookie() {
 
           $.write(cacheValue, CacheKey);
           $.notify(`京东获取${username}的cookie成功✅`, "", "");
+          $.done();
+        } else {
+          $.notify(`京东匹配到URL但未获取到cookie❗️`, "你可以在脚本日志中查看详情", "");
+          $.done();
         }
-        $.done();
       } else { // 原来的代码
         let CV = $request.headers["Cookie"] || $request.headers["cookie"];
         if (CV.match(/(pt_key=.+?pt_pin=|pt_pin=.+?pt_key=)/)) {
