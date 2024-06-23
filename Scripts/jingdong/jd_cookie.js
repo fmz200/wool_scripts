@@ -81,8 +81,8 @@ function GetCookie() {
       if (req_url.includes("/cgi-bin/app/appjmp") || req_url.includes("/todo/modifyLoginName")) {
         let username = "";
         let cookie = "";
-        for (const headerField in req_headers) {
-          const headerValue = req_headers[headerField];
+        for (const headerField in $request.headers) {
+          const headerValue = $request.headers[headerField];
           console.log(`${headerField}: ${headerValue}`);
           if (headerValue?.startsWith("pt_pin=")) {
             username = headerValue.substring(headerValue.indexOf("=") + 1);
