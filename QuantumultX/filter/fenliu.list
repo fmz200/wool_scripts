@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/fenliu.list
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2024-06-17 22:10:00
+#!date=2024-06-26 17:10:00
 #!support=约9392行
 #!proxy-select=reject
 #############################################
@@ -461,8 +461,8 @@ host, tnc3-aliec2.snssdk.com, REJECT
 host, is.snssdk.com, REJECT
 host, i.snssdk.com, REJECT
 host, v6-novelapp.ixigua.com, REJECT
-host, *novelapp.ixigua.com, REJECT
-host, *default.ixigua.com, REJECT
+host-suffix, novelapp.ixigua.com, REJECT
+host-suffix, default.ixigua.com, REJECT
 host, msync-im1-vip6-std.easemob.com, REJECT
 host, apd-pcdnwxlogin.teg.tencent-cloud.net, REJECT
 host, api.iegadp.qq.com, REJECT

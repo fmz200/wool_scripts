@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/cookies.plugin
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2024-06-23 09:30:00
+#!date=2024-06-26 19:30:00
 #############################################
 
 
@@ -127,7 +127,7 @@ http-request ^https?:\/\/api.weather\.com script-path=https://raw.githubusercont
 # >>>>>>>>>>>>>>> ✅ D ✅ <<<<<<<<<<<<<<
 # > 滴滴出行-滴滴果园 获取token
 # tips = ddgyToken: 必填，账号token，多账号换行或者@隔开，格式uid&token。uid不可随便填，主要是方便区分账号用
-http-request ^https?:\/\/game\.xiaojukeji\.com\/api\/game\/plant\/enter script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cookie/get_cookie.js, requires-body=true, timeout=60, tag=滴滴果园获取token
+http-request ^https?:\/\/game\.xiaojukeji\.com\/api\/game\/plant\/newWatering\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cookie/get_cookie.js, requires-body=true, timeout=60, tag=滴滴果园获取token
 
 # > 滴滴打车
 # tips = 微信小程序 -- 滴滴出行, 第一次注册登录后可能需要退出再进一次

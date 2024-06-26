@@ -157,7 +157,7 @@ try {
    * @keyword ddgyToken 多账号换行或者@隔开，格式uid&token。uid不可随便填，根据uid更新数据
    * @keyword fmz200_didi_fruit 多账号换行或者@隔开，格式uid&token。uid不可随便填，根据uid更新数据
    */
-  if (req_url.includes("/api/game/plant/enter")) {
+  if (req_url.includes("/api/game/plant/newWatering")) {
     console.log('滴滴果园token 开始');
     let data = JSON.parse(req_body);
     let uid = data.uid;
