@@ -80,8 +80,8 @@ function GetCookie() {
     if ($request.headers) {
       let tryAgain = true;
       if (req_url.includes("/cgi-bin/app/appjmp") || req_url.includes("/todo/modifyLoginName")) {
-        let username = "";
-        let cookie = "";
+        let username = null;
+        let cookie = null;
         console.log("遍历头部对象并打印每个字段和值开始❇️");
         for (const headerField in $request.headers) {
           const headerValue = $request.headers[headerField];
@@ -113,7 +113,7 @@ function GetCookie() {
 
       if (tryAgain) { // 原来的代码
         let CV = $request.headers["Cookie"] || $request.headers["cookie"];
-        if (CV.match(/(pt_key=.+?pt_pin=|pt_pin=.+?pt_key=)/)) {
+        if (CV?.match(/(pt_key=.+?pt_pin=|pt_pin=.+?pt_key=)/)) {
           let CookieValue = CV.match(/pt_key=.+?;/) + CV.match(/pt_pin=.+?;/);
           let UserName = CookieValue.match(/pt_pin=([^; ]+)(?=;?)/)[1];
           let DecodeName = decodeURIComponent(UserName);
@@ -147,18 +147,11 @@ function GetCookie() {
           $.write(cacheValue, CacheKey);
           console.log(`获取到${DecodeName}的cookie：${CookieValue}`);
           $.notify("用户名: " + DecodeName, "", tipPrefix + CookieName + "Cookie成功✔✔\n" + CookieValue);
-        } else {
-          $.notify("♥♥写入京东Cookie失败", "", "请查看脚本内说明, 登录网页获取 ‼️");
         }
-        $.done();
-        return;
       }
-    } else {
-      $.notify("♥♥写入京东Cookie失败", "", "请检查匹配URL或配置内脚本类型 ‼️");
     }
   } catch (eor) {
-    $.write("", CacheKey);
-    $.notify("♥♥写入京东Cookie失败", "", "已尝试清空历史Cookie, 请重试 ⚠️");
+    $.notify("♥♥写入京东Cookie失败, 请重试 ⚠️", "", "");
     console.log(`\n写入京东Cookie出现错误 ‼️\n
       ${JSON.stringify(eor)}\n\n
       ${eor}\n\n
