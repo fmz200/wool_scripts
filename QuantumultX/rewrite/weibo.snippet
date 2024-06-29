@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/weibo.snippet
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2024-06-16 17:50:00
+#!date=2024-06-29 12:50:00
 #############################################
 # > "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # > "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -72,6 +72,7 @@ hostname = *.weibo.cn, *.weibo.com, weibo.com
 # 删除微博开屏广告 - cherish
 ^https?:\/\/bootrealtime\.uve\.weibo\.com\/v\d\/ad\/realtime Weibo url-and-header reject-dict
 ^https?:\/\/bootpreload\.uve\.weibo\.com\/v\d\/ad\/preload Weibo url-and-header reject-dict
+^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(get-lbs-cell-info\.php|sdkconfig\.php) Weibo url-and-header reject-dict
 ^https?:\/\/(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua) Weibo url-and-header script-response-body https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_launch.js
 
 # 自定义tab皮肤
