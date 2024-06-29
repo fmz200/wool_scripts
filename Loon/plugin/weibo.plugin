@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/weibo.plugin
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2024-06-02 11:00:00
+#!date=2024-06-26 11:00:00
 #############################################
 # > "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # > "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -22,7 +22,37 @@ URL-REGEX, ^https?:\/\/api-cloudim\.api\.weibo\.com\/v1\/log\/, REJECT-DROP
 
 # 微博开屏广告
 DOMAIN-SUFFIX, biz.weibo.com, REJECT
+DOMAIN, bootpreload.uve.weibo.com, reject
+# 其他广告
 DOMAIN, f.video.weibocdn.com, REJECT
+DOMAIN-SUFFIX, fastimage.uve.weibo.com, reject
+DOMAIN-SUFFIX, adimg.vue.weibo.com, reject
+DOMAIN-SUFFIX, zymo.mps.weibo.com, reject
+DOMAIN-SUFFIX, weibomingzi.com, reject
+DOMAIN-SUFFIX, sdkapp.uve.weibo.com, reject
+DOMAIN-SUFFIX, promote.biz.weibo.cn, reject
+DOMAIN-SUFFIX, gw5.push.mcp.weibo.cn, reject
+DOMAIN-SUFFIX, gw6.push.mcp.weibo.cn, reject
+DOMAIN-SUFFIX, game.weibo.cn, reject
+DOMAIN-SUFFIX, adimg.uve.weibo.com, reject
+DOMAIN-SUFFIX, game.weibo.com, reject
+DOMAIN-SUFFIX, ads.viber.com, reject
+DOMAIN-SUFFIX, ads-d.viber.com, reject
+DOMAIN-SUFFIX, ads.aws.viber.com, reject
+DOMAIN-SUFFIX, alitui.weibo.com, reject
+DOMAIN-SUFFIX, dp.im.weibo.cn, reject
+DOMAIN-SUFFIX, biz.weibo.com.cn, reject
+DOMAIN-SUFFIX, biz.weibo.com, reject
+DOMAIN-SUFFIX, click.uve.weibo.com, reject
+DOMAIN-SUFFIX, wax.weibo.com, reject
+DOMAIN-SUFFIX, wbapp.uve.weibo.com, reject
+DOMAIN-SUFFIX, widget.weibo.com, reject
+DOMAIN-SUFFIX, dsp.edm.weibo.cn, reject
+DOMAIN-SUFFIX, alitui.weibo.com.cn, reject
+DOMAIN-SUFFIX, tui.weibo.com, reject
+DOMAIN-SUFFIX, wax.weibo.com.cn, reject
+DOMAIN-SUFFIX, ad.weibo.com, reject
+
 
 [Rewrite]
 # 热门视频 | 热推荐

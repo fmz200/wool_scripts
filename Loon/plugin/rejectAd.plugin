@@ -1236,59 +1236,7 @@ DOMAIN-KEYWORD,paradisestatic.vivo.com.cn, REJECT
 DOMAIN-SUFFIX,mi.gdt.qq.com, REJECT
 
 # > 微博
-DOMAIN-KEYWORD,fastimage.uve.weibo.com, REJECT
-DOMAIN-KEYWORD,adimg.uve.weibo.com, REJECT
-DOMAIN-SUFFIX,adimg.vue.weibo.com, REJECT
-DOMAIN-SUFFIX,zymo.mps.weibo.com, REJECT
-DOMAIN-SUFFIX,weibomingzi.com, REJECT
-DOMAIN-SUFFIX,sdkapp.uve.weibo.com, REJECT
-DOMAIN-SUFFIX,s.alitui.weibo.com, REJECT
-DOMAIN-SUFFIX,promote.biz.weibo.cn, REJECT
-DOMAIN-SUFFIX,gw5.push.mcp.weibo.cn, REJECT
-DOMAIN-SUFFIX,game.weibo.cn, REJECT
-DOMAIN-SUFFIX,biz.weibo.com, REJECT
-DOMAIN-SUFFIX,adimg.uve.weibo.com, REJECT
-DOMAIN-SUFFIX,game.weibo.com, REJECT
-DOMAIN-SUFFIX,gw6.push.mcp.weibo.cn, REJECT
-DOMAIN-KEYWORD,ads.viber.com, REJECT
-DOMAIN-KEYWORD,ads-d.viber.com, REJECT
-DOMAIN-KEYWORD,ads.aws.viber.com, REJECT
-DOMAIN-SUFFIX,alitui.weibo.com, REJECT
-DOMAIN, adimg.uve.weibo.com, REJECT
-DOMAIN, adimg.vue.weibo.com, REJECT
-DOMAIN-KEYWORD,adimg.uve.weibo.com, REJECT
-DOMAIN-KEYWORD,alitui.weibo.com, REJECT
-DOMAIN-KEYWORD,biz.weibo.com, REJECT
-DOMAIN-KEYWORD,game.weibo.cn, REJECT
-DOMAIN-KEYWORD,game.weibo.com, REJECT
-DOMAIN-KEYWORD,gw5.push.mcp.weibo.cn, REJECT
-DOMAIN-KEYWORD,gw6.push.mcp.weibo.cn, REJECT
-DOMAIN-KEYWORD,promote.biz.weibo.cn, REJECT
-DOMAIN-KEYWORD,s.alitui.weibo.com, REJECT
-DOMAIN-KEYWORD,sdkapp.uve.weibo.com, REJECT
-DOMAIN-KEYWORD,weibomingzi.com, REJECT
-DOMAIN-KEYWORD,zymo.mps.weibo.com, REJECT
-DOMAIN-KEYWORD,adimg.vue.weibo.com, REJECT
-DOMAIN-KEYWORD,dp.im.weibo.cn, REJECT
-DOMAIN-KEYWORD,m.game.weibo.cn, REJECT
-DOMAIN-KEYWORD,c.biz.weibo.com, REJECT
-DOMAIN-KEYWORD,c.wcpt.biz.weibo.com, REJECT
-DOMAIN-KEYWORD,click.uve.weibo.com, REJECT
-DOMAIN-KEYWORD,wax.weibo.com, REJECT
-DOMAIN-KEYWORD,wbapp.uve.weibo.com, REJECT
-DOMAIN-KEYWORD,widget.weibo.com, REJECT
-DOMAIN-KEYWORD,zc.biz.weibo.com, REJECT
-DOMAIN-KEYWORD,dsp.edm.weibo.cn, REJECT
-DOMAIN-KEYWORD,alitui.weibo.com.cn, REJECT
-DOMAIN-KEYWORD,biz.weibo.com.cn, REJECT
-DOMAIN-KEYWORD,game.weibo.com.cn, REJECT
-DOMAIN-KEYWORD,tui.weibo.com, REJECT
-DOMAIN-KEYWORD,wax.weibo.com.cn, REJECT
-DOMAIN-KEYWORD,ad.weibo.com, REJECT
-DOMAIN-KEYWORD,adstrategy.biz.weibo.com, REJECT
-DOMAIN-KEYWORD,vs.biz.weibo.com, REJECT
-# 微博开屏广告预加载
-DOMAIN, bootpreload.uve.weibo.com, REJECT
+# 迁移到weibo.plugin
 
 # > 网易
 DOMAIN-SUFFIX,dsp.youdao.com, REJECT
