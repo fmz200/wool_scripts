@@ -2,8 +2,6 @@
 
 ## 致敬开源精神 净化网络环境
 
-### 不只是 QuantumultX 脚本
-
 ![GitHub contributors](https://img.shields.io/github/contributors/fmz200/wool_scripts?style=for-the-badge)
 ![GitHub stars](https://img.shields.io/github/stars/fmz200/wool_scripts?color=ffd700&style=for-the-badge)
 ![GitHub forks](https://img.shields.io/github/forks/fmz200/wool_scripts?color=60c5ba&style=for-the-badge)
