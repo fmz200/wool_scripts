@@ -22,36 +22,36 @@ URL-REGEX, ^https?:\/\/api-cloudim\.api\.weibo\.com\/v1\/log\/, REJECT-DROP
 
 # 微博开屏广告
 DOMAIN-SUFFIX, biz.weibo.com, REJECT
-DOMAIN, bootpreload.uve.weibo.com, reject
+DOMAIN, bootpreload.uve.weibo.com, REJECT
 # 其他广告
 DOMAIN, f.video.weibocdn.com, REJECT
-DOMAIN-SUFFIX, fastimage.uve.weibo.com, reject
-DOMAIN-SUFFIX, adimg.vue.weibo.com, reject
-DOMAIN-SUFFIX, zymo.mps.weibo.com, reject
-DOMAIN-SUFFIX, weibomingzi.com, reject
-DOMAIN-SUFFIX, sdkapp.uve.weibo.com, reject
-DOMAIN-SUFFIX, promote.biz.weibo.cn, reject
-DOMAIN-SUFFIX, gw5.push.mcp.weibo.cn, reject
-DOMAIN-SUFFIX, gw6.push.mcp.weibo.cn, reject
-DOMAIN-SUFFIX, game.weibo.cn, reject
-DOMAIN-SUFFIX, adimg.uve.weibo.com, reject
-DOMAIN-SUFFIX, game.weibo.com, reject
-DOMAIN-SUFFIX, ads.viber.com, reject
-DOMAIN-SUFFIX, ads-d.viber.com, reject
-DOMAIN-SUFFIX, ads.aws.viber.com, reject
-DOMAIN-SUFFIX, alitui.weibo.com, reject
-DOMAIN-SUFFIX, dp.im.weibo.cn, reject
-DOMAIN-SUFFIX, biz.weibo.com.cn, reject
-DOMAIN-SUFFIX, biz.weibo.com, reject
-DOMAIN-SUFFIX, click.uve.weibo.com, reject
-DOMAIN-SUFFIX, wax.weibo.com, reject
-DOMAIN-SUFFIX, wbapp.uve.weibo.com, reject
-DOMAIN-SUFFIX, widget.weibo.com, reject
-DOMAIN-SUFFIX, dsp.edm.weibo.cn, reject
-DOMAIN-SUFFIX, alitui.weibo.com.cn, reject
-DOMAIN-SUFFIX, tui.weibo.com, reject
-DOMAIN-SUFFIX, wax.weibo.com.cn, reject
-DOMAIN-SUFFIX, ad.weibo.com, reject
+DOMAIN-SUFFIX, fastimage.uve.weibo.com, REJECT
+DOMAIN-SUFFIX, adimg.vue.weibo.com, REJECT
+DOMAIN-SUFFIX, zymo.mps.weibo.com, REJECT
+DOMAIN-SUFFIX, weibomingzi.com, REJECT
+DOMAIN-SUFFIX, sdkapp.uve.weibo.com, REJECT
+DOMAIN-SUFFIX, promote.biz.weibo.cn, REJECT
+DOMAIN-SUFFIX, gw5.push.mcp.weibo.cn, REJECT
+DOMAIN-SUFFIX, gw6.push.mcp.weibo.cn, REJECT
+DOMAIN-SUFFIX, game.weibo.cn, REJECT
+DOMAIN-SUFFIX, adimg.uve.weibo.com, REJECT
+DOMAIN-SUFFIX, game.weibo.com, REJECT
+DOMAIN-SUFFIX, ads.viber.com, REJECT
+DOMAIN-SUFFIX, ads-d.viber.com, REJECT
+DOMAIN-SUFFIX, ads.aws.viber.com, REJECT
+DOMAIN-SUFFIX, alitui.weibo.com, REJECT
+DOMAIN-SUFFIX, dp.im.weibo.cn, REJECT
+DOMAIN-SUFFIX, biz.weibo.com.cn, REJECT
+DOMAIN-SUFFIX, biz.weibo.com, REJECT
+DOMAIN-SUFFIX, click.uve.weibo.com, REJECT
+DOMAIN-SUFFIX, wax.weibo.com, REJECT
+DOMAIN-SUFFIX, wbapp.uve.weibo.com, REJECT
+DOMAIN-SUFFIX, widget.weibo.com, REJECT
+DOMAIN-SUFFIX, dsp.edm.weibo.cn, REJECT
+DOMAIN-SUFFIX, alitui.weibo.com.cn, REJECT
+DOMAIN-SUFFIX, tui.weibo.com, REJECT
+DOMAIN-SUFFIX, wax.weibo.com.cn, REJECT
+DOMAIN-SUFFIX, ad.weibo.com, REJECT
 
 
 [Rewrite]
@@ -67,7 +67,7 @@ DOMAIN-SUFFIX, ad.weibo.com, reject
 # 开屏广告
 ^https?:\/\/bootrealtime\.uve\.weibo\.com\/v\d\/ad\/realtime reject-dict
 ^https?:\/\/bootpreload\.uve\.weibo\.com\/v\d\/ad\/preload reject-dict
-^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(get-lbs-cell-info\.php|sdkconfig\.php) reject
+^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(get-lbs-cell-info\.php|sdkconfig\.php) REJECT
 # 微博长文章推广
 ^https:\/\/card\.weibo\.com\/article\/m\/aj\/(reward|uvead)\? reject-dict
 ^https:\/\/weibo\.com\/ttarticle\/x\/m\/aj\/(reward|uvead)\? reject-dict
