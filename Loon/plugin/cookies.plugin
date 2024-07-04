@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/cookies.plugin
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2024-06-26 19:30:00
+#!date=2024-07-06 23:30:00
 #############################################
 
 
@@ -204,10 +204,11 @@ http-request ^https:\/\/wxprdapplet\.gac-nio\.com\/community\/userSignIn\/simple
 # hostname = home.m.jd.com, un.m.jd.com, sec.m.jd.com
 # 浏览器登录京东，点击右下角我的页面获取
 http-request ^https:\/\/home\.m\.jd\.com\/myJd\/(newhome|home)\.action script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingdong/jd_cookie.js, timeout=60, tag=获取京东网页Cookie
+http-request ^https:\/\/my\.m\.jd\.com script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingdong/jd_cookie.js, timeout=60, tag=获取京东网页Cookie
 # 打开京东APP-右上角齿轮设置-点击个人资料
-http-request ^https:\/\/un\.m\.jd\.com\/cgi-bin\/app\/appjmp\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingdong/jd_cookie.js, tag=获取京东APP-Cookie
+# http-request ^https:\/\/un\.m\.jd\.com\/cgi-bin\/app\/appjmp\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingdong/jd_cookie.js, tag=获取京东APP-Cookie
 # 打开京东APP-右上角齿轮设置-点击个人资料-点击账号名
-http-request ^https:\/\/sec\.m\.jd\.com\/todo\/modifyLoginName\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingdong/jd_cookie.js, tag=获取京东APP-Cookie
+# http-request ^https:\/\/sec\.m\.jd\.com\/todo\/modifyLoginName\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingdong/jd_cookie.js, tag=获取京东APP-Cookie
 
 # > 京东读书
 # hostname = 
