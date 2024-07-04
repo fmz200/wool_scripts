@@ -8,15 +8,6 @@ let url = $request.url;
 let responseBody = $response.body;
 
 try {
-    process();
-} catch (error) {
-    console.log('脚本运行出现错误，部分内容未生效⚠️');
-    console.log('错误信息：' + error.message);
-}
-
-$done({body: JSON.stringify(responseBody)});
-
-function process() {
     responseBody = JSON.parse(responseBody);
     // 删除“测一测，你的手机能卖多少钱”
     delete responseBody.respData.bmNewInfo;
@@ -30,6 +21,11 @@ function process() {
         }
         return itemGroup;
     }).filter(Boolean); // 过滤掉为null的元素
-    
     console.log('转转APP处理完成✅');
+} catch (error) {
+    console.log('脚本运行出现错误，部分内容未生效⚠️');
+    console.log('错误信息：' + error.message);
 }
+
+$done({body: JSON.stringify(responseBody)});
+

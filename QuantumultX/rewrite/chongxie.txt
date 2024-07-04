@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/chongxie.txt
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2024-07-03 22:20:00
+#!date=2024-07-04 22:00:00
 #!support=支持约511款APP/小程序
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 #############################################
@@ -457,7 +457,7 @@ hostname = res1.hubcloud.com.cn, vapp.tmuyun.com, api2.yaduo.com, api.gongkaolei
 ^https?:\/\/bohe\.sfo-tx-shanghai-01\.saas\.sensorsdata\.cn\/api\/v2\/sfo\/user_popup_configs url reject-dict
 ^https?:\/\/api\.boohee\.com\/meta-interface\/v1\/index\/(discover_chosen|page_float_bubbles) url reject-dict
 ^https?:\/\/api\.boohee\.com\/app-interface\/v1\/record\/record_tool(_pop)?_ad url reject-dict
-^https?:\/\/api\.boohee\.com\/meta-interface\/v1\/index\/record_index url response-body articles response-body random_body
+^https?:\/\/api\.boohee\.com\/meta-interface\/v1\/index\/record_index url response-body articles response-body fmz200
 
 
 
@@ -793,7 +793,7 @@ http:\/\/ad\.myfriday\.cn\/d\/json\/1\.1 url reject
 # hostname = ptf.flyertrip.com, 47.100.65.202, www.flyert.com
 ^https?:\/\/ptf\.flyertrip\.com\/common\/cf\/.*.jpg url reject-200
 ^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=advis url reject
-^https?:\/\/47\.100\.65\.202\/api\/mobile\/index\.php\?version=\d&mobile=yes&module=basicdata&type=forumlist url response-body adv response-body random_body
+^https?:\/\/47\.100\.65\.202\/api\/mobile\/index\.php\?version=\d&mobile=yes&module=basicdata&type=forumlist url response-body adv response-body fmz200
 ^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=threadpost&.+?&page=1 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/fly.js
 ^https?:\/\/www\.flyert\.com\/.*\.php\?module=advis url reject-dict
 ^https?:\/\/www\.flyert\.com\/.*plugin url script-response-body https://raw.githubusercontent.com/zirawell/Ad-Cleaner/main/Collection/js/flyert.js
@@ -1138,7 +1138,7 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 # > i3
 # hostname = www.i3zh.com
 # 如开启可自行添加主机名
-^https?:\/\/www\.i3zh\.com url response-body cm-pop-up-banners response-body random_body
+^https?:\/\/www\.i3zh\.com url response-body cm-pop-up-banners response-body fmz200
 
 # > IT之家
 # hostname = napi.ithome.com
@@ -1188,8 +1188,8 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 
 # > 京喜
 # hostname = api.m.jd.com
-^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising url response-body jdLiteAdvertisingVO response-body random_body
-^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_SmartPush url response-body pushData response-body random_body
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising url response-body jdLiteAdvertisingVO response-body fmz200
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_SmartPush url response-body pushData response-body fmz200
 ^https?:\/\/api\.m\.jd\.com\/api\?functionId=delivery_show url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingxiAd.js
 
 # > 京东金融
@@ -2501,7 +2501,7 @@ https://apis.lifeweek.com.cn/api/baseConfig/getIosNewConfig url reject
 # > 微信
 # hostname = mp.weixin.qq.com, weixin110.qq.com, security.wechat.com
 # 公众号文章下方广告
-^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad url response-body advertisement response-body random_body
+^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad url response-body advertisement response-body fmz200
 # 微信跳过中间界面，支付宝链接、被封禁链接进行通知弹窗跳转，在微信中用快照显示被封禁的链接（可选），在微信中进行强制重定向（可选），群聊 / 扫码均可使用，可选项可在脚本 2、3 行更改，也可在 BoxJs 中更改。
 ^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\? url script-response-body https://raw.githubusercontent.com/zZPiglet/Task/master/asset/UnblockURLinWeChat.js
 # 微信公众号去除商品推广
@@ -3488,11 +3488,14 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do url rejec
 # > 转转
 # hostname = app.zhuanzhuan.com
 ^https?:\/\/app\.zhuanzhuan\.com\/zzx\/transfer\/getConfigInfo url reject-dict
+^https?:\/\/app\.zhuanzhuan\.com\/zzopen\/popwindow\/getallpopwin\? url reject-dict
+^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzlogic\/getOpenScreen url reject-dict
 # 转转右下角悬浮广告
 ^https?:\/\/app\.zhuanzhuan\.com\/zz\/transfer\/userred\?scene=homePage url reject-dict
+^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getfeedflowinfo\? url response-body userRed response-body fmz200
 # “我的”页面去除冗余的模块
 ^https?:\/\/app\.zhuanzhuan\.com\/zz\/transfer\/getmyprofilev3 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/zhuanzhuan/zhuanzhuan.js
-^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getchoicegoodsinfos url response-body infoData response-body random_body
+^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getchoicegoodsinfos url response-body infoData response-body fmz200
 
 # > 掌上英雄联盟
 # hostname = us.l.qq.com, ossweb-img.qq.com, mlol.qt.qq.com
