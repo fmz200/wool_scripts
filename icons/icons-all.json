@@ -1,6 +1,6 @@
 {
   "name": "fmz200图标订阅",
-  "description": "收集一些自己常用的图标，尺寸为108px或144px，数量约1503个，更新日期：2024-06-01 22:00:00",
+  "description": "收集一些自己常用的图标，尺寸为108px或144px，数量约1535个，更新日期：2024-07-04 22:00:00",
   "icons": [
     {
       "name": "fmz200",
@@ -599,6 +599,10 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Loon_12.png"
     },
     {
+      "name": "Loon_13",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Loon_13.png"
+    },
+    {
       "name": "Loon_16",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Loon_16.png"
     },
@@ -639,8 +643,16 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Loon_26.png"
     },
     {
-      "name": "Loon_13",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Loon_13.png"
+      "name": "Loon_27",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Loon_27.png"
+    },
+    {
+      "name": "Loon_28",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Loon_28.png"
+    },
+    {
+      "name": "Loon_29",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Loon_29.png"
     },
     {
       "name": "macat",
