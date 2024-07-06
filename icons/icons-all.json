@@ -511,6 +511,10 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/iRingo.png"
     },
     {
+      "name": "jingdong",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/jd.png"
+    },
+    {
       "name": "JingFuGong",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/JingFuGong.png"
     },
@@ -537,6 +541,10 @@
     {
       "name": "Line",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Line_02.png"
+    },
+    {
+      "name": "Line",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Line_03.png"
     },
     {
       "name": "LoadBalance",
