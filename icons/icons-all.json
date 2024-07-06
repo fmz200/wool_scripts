@@ -51,8 +51,24 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/airport/EdNovas.png"
     },
     {
+      "name": "1Password",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/1Password.png"
+    },
+    {
+      "name": "AdblockPlus",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/AdblockPlus.png"
+    },
+    {
       "name": "AdGuard",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/AdGuard.png"
+    },
+    {
+      "name": "AdGuard",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/AdGuard_01.png"
+    },
+    {
+      "name": "AdGuard",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/AdGuard_02.png"
     },
     {
       "name": "Ads",
@@ -311,6 +327,10 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Cloudflare.png"
     },
     {
+      "name": "Cloudflare",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/CloudflareWARP.png"
+    },
+    {
       "name": "CNTower",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/CNTower.png"
     },
@@ -353,6 +373,10 @@
     {
       "name": "douyu",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/douyu.png"
+    },
+    {
+      "name": "Download",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Download.png"
     },
     {
       "name": "EiffelTower",
@@ -491,6 +515,14 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Google.png"
     },
     {
+      "name": "GoogleBard",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/GoogleBard.png"
+    },
+    {
+      "name": "HeartRate",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/HeartRate.png"
+    },
+    {
       "name": "Hulu",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Hulu.png"
     },
@@ -527,6 +559,10 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/kuaishou.png"
     },
     {
+      "name": "LastPass",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/LastPass.png"
+    },
+    {
       "name": "LeaningTowerOfPisa",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/LeaningTowerOfPisa.png"
     },
@@ -545,6 +581,10 @@
     {
       "name": "Line",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Line_03.png"
+    },
+    {
+      "name": "Line",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Line_04.png"
     },
     {
       "name": "LoadBalance",
@@ -687,6 +727,10 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Microsoft.png"
     },
     {
+      "name": "Movist",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Movist.png"
+    },
+    {
       "name": "mixuebingcheng",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/mxbc.png"
     },
@@ -747,12 +791,28 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ql_logo.png"
     },
     {
+      "name": "QQMusic",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/QQMusic.png"
+    },
+    {
+      "name": "QuarkDrive",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/QuarkDrive.png"
+    },
+    {
       "name": "relay",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/relay.png"
     },
     {
+      "name": "Riot",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Riot.png"
+    },
+    {
       "name": "RiotGames",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/RiotGames.png"
+    },
+    {
+      "name": "RiotGames",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/RiotGames_02.png"
     },
     {
       "name": "RuinsOfSaintPauls",
@@ -769,6 +829,10 @@
     {
       "name": "select",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/select.png"
+    },
+    {
+      "name": "Sensei",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Sensei.png"
     },
     {
       "name": "shadowrocket",
@@ -823,6 +887,10 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/sheep.png"
     },
     {
+      "name": "Shortcuts",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Shortcuts.png"
+    },
+    {
       "name": "skylines",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/skylines.png"
     },
@@ -831,8 +899,24 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/smzdm.png"
     },
     {
-      "name": "spotify",
+      "name": "Spotify",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/spotify.png"
+    },
+    {
+      "name": "Spotify",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/spotify.png"
+    },
+    {
+      "name": "Spotify",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/spotify(green).png"
+    },
+    {
+      "name": "Spotify",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/erdongchanyo/Spotify.png"
+    },
+    {
+      "name": "Spotify",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/erdongchanyo/Spotify_05.png"
     },
     {
       "name": "switch",
@@ -845,6 +929,10 @@
     {
       "name": "Snapchat",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Snapchat.png"
+    },
+    {
+      "name": "Snapchat",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Snapchat_02.png"
     },
     {
       "name": "Soul",
@@ -861,6 +949,10 @@
     {
       "name": "telegram",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/telegram.png"
+    },
+    {
+      "name": "telegram",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Telegram_02.png"
     },
     {
       "name": "tencent",
@@ -893,6 +985,10 @@
     {
       "name": "TheWhiteHouse",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/TheWhiteHouse.png"
+    },
+    {
+      "name": "Thunder",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Thunder.png"
     },
     {
       "name": "tiktok",
@@ -1601,14 +1697,6 @@
     {
       "name": "HBO",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/HBO.png"
-    },
-    {
-      "name": "spotify",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/spotify.png"
-    },
-    {
-      "name": "spotify(green)",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/spotify(green).png"
     },
     {
       "name": "bilibili(1)",
@@ -5969,10 +6057,6 @@
     {
       "name": "PrimeVideo",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/erdongchanyo/PrimeVideo.png"
-    },
-    {
-      "name": "Spotify",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/erdongchanyo/Spotify.png"
     },
     {
       "name": "SSport+",

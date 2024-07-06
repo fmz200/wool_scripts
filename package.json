@@ -8,7 +8,17 @@
     "node-fetch": "^3.3.1",
     "node-schedule": "^2.1.1",
     "request": "^2.88.2",
-    "sharp": "^0.32.1",
+    "sharp": "^0.32.6",
     "terser": "^5.26.0"
-  }
+  },
+  "name": "wool_scripts",
+  "description": "## 致敬开源精神 净化网络环境",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
