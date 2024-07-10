@@ -36,7 +36,7 @@
 
 ▶️ <span style="color: #F44336">Please do not disseminate the content in this project on any platform in mainland China. Thanks!</span>
 
-▶️ 交流群组：👉🏻[苹果iOS去广告交流群](https://t.me/lanjieguanggao)，👉🏻[奶思|频道](https://t.me/inaisi)。
+▶️ 交流群组：👉🏻[苹果iOS去广告交流群](https://t.me/lanjieguanggao)，👉🏻[奶思资源分享|频道](https://t.me/inaisi)。
 
 ![#c62828](https://via.placeholder.com/15/c62828/000000?text=+)
 
@@ -54,7 +54,7 @@
 常见的抖音分流有：
 > https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/DouYin.list
 >
-> https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/DouYin/DouYin.list
+> https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/QuantumultX/DouYin/DouYin.list
 
 ### 2️⃣ 为什么有些软件明明很热门，却没有人做去广告的规则
 
