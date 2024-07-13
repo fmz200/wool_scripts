@@ -643,9 +643,10 @@ http:\/\/ad\.myfriday\.cn\/d\/json\/1\.1 url reject
 # > 叮咚买菜
 # hostname = maicai.api.ddxq.mobi
 # 开屏广告
-^https?:\/\/maicai\.api\.ddxq\.mobi\/advert\/getAd\?ad_id url reject-dict
+^https?:\/\/maicai\.api\.ddxq\.mobi\/advert\/ url reject
 # 新人弹窗
-^https?:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/getHomeAdPop url reject-dict
+^https?:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/getHomeAdPop url reject
+^https?:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/newDetails url response-body suspension response-body random_body
 
 # > 叮嗒出行
 # hostname = img.admobile.top, webcdn.m.qq.com
