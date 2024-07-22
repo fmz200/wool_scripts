@@ -1,41 +1,15 @@
 /**
  * @author fmz200
  * @function 微博去广告
- * @date 2024-06-08 21:18:00
+ * @date 2024-07-22 08:18:00
  */
-
-const titleSubPicMap = {
-  '电影': 'https://simg.s.weibo.com/imgtool/20221207_dianying.png',
-  '热议': 'https://simg.s.weibo.com/20220402_hottopic-icon.png',
-  '影像年': 'https://simg.s.weibo.com/ads/1%2Fads_1692185628.png',
-  '本地': 'https://simg.s.weibo.com/20190123154142_tongcheng.png',
-  '直播': 'https://simg.s.weibo.com/20210705_live0705.png',
-  '财经': 'https://simg.s.weibo.com/20190124150415_caijing.png',
-  '找人': 'https://simg.s.weibo.com/20190125144608_zhaoren.png',
-  '时尚': 'https://simg.s.weibo.com/imgtool/20220928_fashion.png',
-  '长文': 'https://simg.s.weibo.com/20220621_%E9%95%BF%E6%96%87%E5%8F%91%E7%8E%B0%E9%A1%B5icon%403x.png',
-  '赛事': 'https://simg.s.weibo.com/20201030_%E8%B5%9B%E4%BA%8B.png',
-  '教育': 'https://simg.s.weibo.com/20200303_edu0303.png',
-  '音乐': 'https://simg.s.weibo.com/imgtool/20221207_yinyue.png',
-  '房产': 'https://simg.s.weibo.com/20190129182003_house.png',
-  '小游戏': 'https://simg.s.weibo.com/20190118185226_youxi.png',
-  '美食': 'https://simg.s.weibo.com/imgtool/20221207_food.png',
-  '热聊': 'https://simg.s.weibo.com/20220402_reliao.png',
-  '新知': 'https://simg.s.weibo.com/20211105_xinzhi.png',
-  '微公益': 'https://simg.s.weibo.com/ads/1%2Fads_1689323535.png',
-  '大健康': 'https://simg.s.weibo.com/imgtool/20221116_health.png',
-  '活动': 'https://simg.s.weibo.com/20200915_huodong.png',
-  '母婴': 'https://simg.s.weibo.com/20210222_mombaby.png',
-  '珠宝玉石': 'https://simg.s.weibo.com/20210317_yushi.png',
-  '游戏中心': 'https://simg.s.weibo.com/ads/1%2Fads_1687759038.png'
-};
-
-// 模块类型，不在里面的都计划删除
-const cardTypes = ["217", "17", ""];
 
 let url = $request.url;
 let body = $response.body;
 let resp_data = JSON.parse(body);
+
+// 模块类型，不在里面的都计划删除
+const cardTypes = ["217", "17", ""];
 
 try {
     // 1、首次点击发现按钮
@@ -166,8 +140,8 @@ function removeCommonAds(items) {
       console.log('移除轮播图，实况热聊等模块💕💕');
       items[i] = {};
     }
-    // 1.3、”热聊、本地、找人“模块
-    if ([19, 118, 206, 208, 217, 249].includes(card_type)) {
+    // 1.3、”热聊、本地、找人“模块，236微博趋势
+    if ([19, 118, 206, 208, 217, 236, 249].includes(card_type)) {
       console.log('处理热聊、本地、找人模块💕💕');
       items[i] = {};
       // delete items[i].data.more_pic;
@@ -187,17 +161,6 @@ function removeHotSearchAds(groups) {
     }
   }
   console.log('移除发现页热搜广告结束💕💕');
-}
-
-// 移除“微博热搜”下面的“热聊，本地等”的广告
-function removeFinderChannelAds(groups) {
-  if (!groups) return;
-  console.log('移除发现页热聊，本地广告💕');
-  for (const group of groups) {
-    if (group.pic?.includes('ads')) {
-      group.pic = titleSubPicMap[group.title_sub] || "https://simg.s.weibo.com/20200915_huodong.png";
-    }
-  }
 }
 
 // 移除“热搜微博”信息流的广告
