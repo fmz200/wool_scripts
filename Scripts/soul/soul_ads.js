@@ -70,16 +70,15 @@ try {
 
   if (req_url.includes("/chatroom/chatClassifyRoomList")) {
     if (mod_rsp.data?.roomList) {
-      mod_rsp.data.roomList = [];
+      // mod_rsp.data.roomList = [];
     }
   }
 
   if (req_url.includes("/post/recSquare/subTabs")) {
-    mod_rsp.data = mod_rsp.data.filter(item => [7, 6, 2].includes(item.tabType));
+    // mod_rsp.data = mod_rsp.data.filter(item => [7, 6, 2].includes(item.tabType));
   }
 } catch (error) {
-  console.log('脚本运行出现错误，部分广告未去除⚠️');
-  console.log('错误信息：' + error.message);
+  console.log('脚本运行出现错误，部分广告未去除⚠️错误信息：' + error.message);
 }
 
 /*
