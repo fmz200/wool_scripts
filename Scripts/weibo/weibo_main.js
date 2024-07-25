@@ -1,11 +1,11 @@
 /**
  * @auther @fmz200
  * @function 微博去广告
- * @date 2024-06-08 21:00:00
+ * @date 2024-07-24 21:00:00
  * @quote zmqcherish
  */
 
-const version = 'v20230411.1';
+const version = 'v20240515.1';
 
 const $ = new Env("微博去广告");
 let storeMainConfig = $.getdata('mainConfig');
@@ -13,7 +13,7 @@ let storeItemMenusConfig = $.getdata('itemMenusConfig');
 
 //主要的选项配置
 const mainConfig = storeMainConfig ? JSON.parse(storeMainConfig) : {
-	isDebug: false,						//开启调试，会打印运行中部分日志
+	isDebug: true,						//开启调试，会打印运行中部分日志
 	//个人中心配置，其中多数是可以直接在更多功能里直接移除
 	removeHomeVip: true,				//个人中心的vip栏
 	removeHomeCreatorTask: true,		//个人中心创作者中心下方的轮播图
@@ -98,20 +98,20 @@ const otherUrls = {
 	'/statuses/container_timeline?': 'removeMain',	//首页
 	'/statuses/container_timeline_unread': 'removeMain',	//首页
 	'/statuses/container_timeline_hot': 'removeMain',	//推荐页，fmz200
+	'/statuses/repost_timeline': 'removeRepost',	//转发流
 }
 
 let url = $request.url;
 let body = $response.body;
 let method = getModifyMethod(url);
 log("匹配方法：" + method);
+let data = JSON.parse(body);
 if (method) {
-	let data = JSON.parse(body);
 	let func = eval(method);
 	new func(data);
-	body = JSON.stringify(data);
 }
 
-$.done({body});
+$.done({body: JSON.stringify(data)});
 
 
 function getModifyMethod(url) {
@@ -158,12 +158,36 @@ function checkJunkTopic(item) {
 		return false;
 	}
 	try {
-		if (item.items[0]['data']['title'] === '关注你感兴趣的超话') {
+		if(['super_topic_recommend_card', 'recommend_video_card'].indexOf(item.trend_name) > -1) {
 			return true;
 		}
 	} catch (error) {
 	}
 	return false;
+}
+
+function removeRepost(data) {
+	if (data.reposts) {
+		let newItems = [];
+		for (let item of data.reposts) {
+			if (!isAd(item)) {
+				newItems.push(item);
+			}
+		}
+		data.reposts = newItems;
+	}
+
+	if (data.hot_reposts) {
+		let newItems = [];
+		for (let item of data.hot_reposts) {
+			if (!isAd(item)) {
+				newItems.push(item);
+			}
+		}
+		data.hot_reposts = newItems;
+	}
+	log('removeRepost success');
+	return data;
 }
 
 function removeMain(data) {
@@ -234,7 +258,7 @@ function topicHandler(data) {
 				let newSubItems = [];
 				for (let sub of subItems) {
 					let anchorId = sub?.itemExt?.anchorId;
-					if (!anchorId || ['sg_bottom_tab_search_input', 'multi_feed_entrance', 'bottom_mix_activity', 'cats_top_content', 'chaohua_home_readpost_samecity_title', 'chaohua_discovery_banner_1', 'chaohua_home_readpost_samecity_content'].indexOf(anchorId) == -1) {
+					if (!anchorId || ['sg_bottom_tab_search_input', 'multi_feed_entrance', 'bottom_mix_activity', 'cats_top_content', 'chaohua_home_readpost_samecity_title', 'chaohua_discovery_banner_1', 'chaohua_home_readpost_samecity_content'].indexOf(anchorId) === -1) {
 						newSubItems.push(sub);
 					}
 				}
@@ -244,6 +268,8 @@ function topicHandler(data) {
 				if (cData?.top?.title === '正在活跃') {
 					addFlag = false;
 				} else if (cData.card_type === 200 && cData.group) {
+					addFlag = false;
+				} else if (cData?.itemid.indexOf('infeed_may_interest_in') > -1) {
 					addFlag = false;
 				}
 			}
@@ -256,7 +282,6 @@ function topicHandler(data) {
 	log('topicHandler success');
 	return data;
 }
-
 
 function removeSearchMain(data) {
 	let channels = data.channelInfo.channels;
@@ -274,15 +299,13 @@ function removeSearchMain(data) {
 	return data;
 }
 
-
 function checkSearchWindow(item) {
 	if (!mainConfig.removeSearchWindow) return false;
 	if (item.category !== 'card') return false;
 	return item.data?.itemid === 'finder_window' || item.data?.itemid === 'more_frame';
 }
 
-
-//发现页
+// 发现页
 function removeSearch(data) {
 	if (!data.items) {
 		return data;
