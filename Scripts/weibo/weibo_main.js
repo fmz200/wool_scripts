@@ -104,7 +104,7 @@ const otherUrls = {
 let url = $request.url;
 let body = $response.body;
 let method = getModifyMethod(url);
-log("匹配方法：" + method);
+console.log("匹配方法：" + method);
 let data = JSON.parse(body);
 if (method) {
 	let func = eval(method);
@@ -125,11 +125,13 @@ function getModifyMethod(url) {
 			return 'removeTimeLine';
 		}
 	}
-	for (const [path, method] of Object.entries(otherUrls)) {
-		if (url.indexOf(path) > -1) {
+	// 其他URL
+	const path = Object.keys(otherUrls).find(path => url.includes(path));
+ if (path) {
+   const method = otherUrls[path];
+   console.log(method);
 			return method;
-		}
-	}
+ }
 	return null;
 }
 
