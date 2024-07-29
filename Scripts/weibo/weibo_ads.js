@@ -33,11 +33,7 @@ try {
     // 微博热搜页面 “热搜”tab页 https://api.weibo.cn/2/flowpage
     if (url.includes("/2/flowpage")) {
       // 删掉Banner图
-      if (resp_data.pageHeader?.data) {
-        resp_data.pageHeader.data.banners_fold = [];
-        resp_data.pageHeader.data.banners = [];
-        // resp_data.pageHeader = {};
-      }
+      resp_data.pageHeader = {};
       for (let subItem of resp_data.items) {
         if (subItem.itemId === "hotword") {
           subItem.items = subItem.items.filter(group => group.data.promotion == null);
