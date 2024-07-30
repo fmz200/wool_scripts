@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 微博去广告
- * @date 2024-07-22 08:18:00
+ * @date 2024-07-28 21:18:00
  */
 
 let url = $request.url;
@@ -32,6 +32,8 @@ try {
 
     // 微博热搜页面 “热搜”tab页 https://api.weibo.cn/2/flowpage
     if (url.includes("/2/flowpage")) {
+      // 删掉Banner图
+      resp_data.pageHeader = {};
       for (let subItem of resp_data.items) {
         if (subItem.itemId === "hotword") {
           subItem.items = subItem.items.filter(group => group.data.promotion == null);

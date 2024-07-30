@@ -5,7 +5,7 @@
   "icon": "https://avatars.githubusercontent.com/u/57740735?s=60&v=4",
   "repo": "https://github.com/fmz200/wool_scripts",
   "desc": "订阅大多都支持多账号，协定数据格式如下：有主键的用JSON，没有主键的拼接用#分割用@。\n例如{\"uid1\": \"token1\", \"uid2\": \"token2\",\"uid3\": \"token3\"}和uid1#token1@uid2#token2@uid3#token3",
-  "date": "更新日期：2024-05-26 19:30:00",
+  "date": "更新日期：2024-07-29 21:00:00",
   "apps": [
     {
       "id": "fmz200_aliyun",
@@ -654,6 +654,24 @@
           "val": "",
           "type": "text",
           "desc": "Tg的通知地址，如：https://api.telegram.org/bot-token/sendMessage?chat_id=-100140&parse_mode=Markdown&text="
+        },
+        {
+          "id": "CookieDY",
+          "name": "Cookie",
+          "val": "",
+          "desc": "",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 4
+        },
+        {
+          "id": "GroupDY",
+          "name": "签到分组",
+          "val": "",
+          "desc": "",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 4
         }
       ],
       "author": "@demo2099, @lowking, @fmz200",
@@ -662,6 +680,118 @@
       "icons": [
         "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/douyu.png",
         "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/douyu.png"
+      ]
+    },
+    {
+      "id": "fmz200_weibo_talk",
+      "name": "微博超话签到",
+      "desc_html": "⚠️使用说明</br>详情【<a href='https://github.com/toulanboy/scripts/blob/master/weibo/weibotalk.js'><font class='red--text'>点我查看</font></a>】",
+      "keys": [
+        "wb_delete_cookie",
+        "wb_msg_max_num",
+        "wb_request_time",
+        "evil_tokenurl",
+        "evil_tokenheaders",
+        "evil_tokencheckinurl",
+        "evil_tokencheckinheaders",
+        "evil_tokenurl2",
+        "evil_tokenheaders2",
+        "evil_tokencheckinurl2",
+        "evil_tokencheckinheaders2"
+      ],
+      "settings": [
+        {
+          "id": "wb_delete_cookie",
+          "name": "是否清空cookie",
+          "val": false,
+          "type": "boolean",
+          "desc": "默认关闭"
+        },
+        {
+          "id": "wb_msg_max_num",
+          "name": "一个通知显示30个超话的签到情况",
+          "val": "",
+          "type": "text",
+          "desc": ""
+        },
+        {
+          "id": "wb_request_time",
+          "name": "签到间隔",
+          "val": "",
+          "type": "text",
+          "desc": "【签到间隔，单位ms】，若超话过多，建议填1000ms以上。"
+        },
+        {
+          "id": "evil_tokenurl",
+          "name": "账号1的token",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 4
+        },
+        {
+          "id": "evil_tokenheaders",
+          "name": "账号1的headers",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 4
+        },
+        {
+          "id": "evil_tokencheckinurl",
+          "name": "账号1的签到url",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 4
+        },
+        {
+          "id": "evil_tokencheckinheaders",
+          "name": "账号1的签到headers",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 4
+        },
+        {
+          "id": "evil_tokenurl2",
+          "name": "账号2的token",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 4
+        },
+        {
+          "id": "evil_tokenheaders2",
+          "name": "账号2的headers",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 4
+        },
+        {
+          "id": "evil_tokencheckinurl2",
+          "name": "账号2的签到url",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 4
+        },
+        {
+          "id": "evil_tokencheckinheaders2",
+          "name": "账号2的签到headers",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 4
+        }
+      ],
+      "author": "@toulanboy, @fmz200",
+      "repo": "https://github.com/fmz200/wool_scripts",
+      "script": "https://github.com/toulanboy/scripts/raw/master/weibo/weibotalk.js",
+      "icons": [
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/WeiboTalk.png",
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/WeiboTalk.png"
       ]
     }
   ]
