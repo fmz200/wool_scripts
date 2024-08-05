@@ -1712,7 +1712,6 @@ host-suffix, zhengxiaoliu.top, reject
 # > 字节跳动
 host, ad.zijieapi.com, reject
 host-suffix, -normal-lq.zijieapi.com, reject
-host-keyword, ad-sign.byteimg.com, reject
 
 
 
