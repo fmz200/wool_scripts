@@ -1481,7 +1481,7 @@ DOMAIN-SUFFIX,zhengxiaoliu.top, REJECT
 # > 字节跳动
 DOMAIN, ad.zijieapi.com, REJECT
 DOMAIN-SUFFIX,-normal-lq.zijieapi.com, REJECT
-DOMAIN-KEYWORD,ad-sign.byteimg.com, REJECT
+
 
 
 # >>>>>>>>>>>>>>> ✅ 其他广告 ✅ <<<<<<<<<<<<<<
