@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/weibo.plugin
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2024-08-03 17:33:00
+#!date=2024-08-07 07:33:00
 #############################################
 # > "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # > "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -52,7 +52,9 @@ DOMAIN-SUFFIX, alitui.weibo.com.cn, REJECT
 DOMAIN-SUFFIX, tui.weibo.com, REJECT
 DOMAIN-SUFFIX, wax.weibo.com.cn, REJECT
 DOMAIN-SUFFIX, ad.weibo.com, REJECT
-
+# 屏蔽信息收集
+DOMAIN, datacollection.uve.weibo.com, REJECT
+DOMAIN, adpinpai.video.weibocdn.com, REJECT
 
 [Rewrite]
 # 热门视频 | 热推荐
