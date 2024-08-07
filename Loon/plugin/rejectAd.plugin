@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/rejectAd.plugin
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2024-08-07 07:35:00
+#!date=2024-08-07 20:35:00
 #!support=约9392行
 #!proxy-select=REJECT
 #############################################
@@ -30,14 +30,17 @@ DOMAIN-KEYWORD, pglstatp-toutiao, REJECT
 DOMAIN-KEYWORD, pangolin.snssdk.com, REJECT
 DOMAIN-KEYWORD, video-cn.snssdk.com, REJECT
 DOMAIN-SUFFIX, getui.com, REJECT
-DOMAIN-SUFFIX, getui.com, REJECT
 DOMAIN-SUFFIX, getui.net, REJECT
+DOMAIN-SUFFIX, gepush.com, REJECT
 DOMAIN-SUFFIX, igexin.com, REJECT
 DOMAIN-SUFFIX, log.aliyuncs.com, REJECT
 # > 收集用户隐私联盟，若有问题自行设置白名单
 DOMAIN-KEYWORD, volc, REJECT
 DOMAIN-KEYWORD, umeng, REJECT
 
+# > 其他
+DOMAIN, ad.mcloud.139.com, REJECT
+DOMAIN, api.liquidlink.cn, REJECT
 
 # > 交管12123
 DOMAIN-SUFFIX, v3.fstats.xyz, REJECT
@@ -1484,6 +1487,7 @@ DOMAIN-SUFFIX,zhengxiaoliu.top, REJECT
 
 # > 字节跳动
 DOMAIN, ad.zijieapi.com, REJECT
+DOMAIN, applog.zijieapi.com, REJECT
 DOMAIN-SUFFIX,-normal-lq.zijieapi.com, REJECT
 
 
