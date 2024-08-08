@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/weibo.snippet
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2024-08-03 17:30:00
+#!date=2024-08-07 20:30:00
 #############################################
 # > "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # > "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -35,6 +35,9 @@ hostname = *.weibo.cn, *.weibo.com, weibo.com
 
 ############################################# 微博国内版去广告 #############################################
 # User-Agent: Weibo/83823 (iPhone; iOS 17.2; Scale/3.00)
+
+^https:\/\/api\.weibo\.cn\/2\/!\/huati\/discovery_home_bottom_channels Weibo url-and-header reject-dict
+^https:\/\/api\.weibo\.cn\/2\/!\/chaohua\/discovery\/home_bottom\/switch Weibo url-and-header reject-dict
 
 # 似乎没用的请求，收集用户信息
 ^https?:\/\/api\.weibo\.c(n|om)\/2\/(push\/active|client\/addlog_batch|ad\/preload) Weibo url-and-header script-request-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/template/req_replace_body.js
