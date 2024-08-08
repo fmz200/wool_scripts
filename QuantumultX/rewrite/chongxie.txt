@@ -2017,7 +2017,7 @@ https://api.rr.tv/storage/business/rootName/app/homePage\?dataType=JSON url reje
 # > Soul
 # hostname = 47.110.187.87, ssp.soulapp.cn, chat-live.soulapp.cn, api-account.soulapp.cn, api-global.soulapp.me, api-a.soulapp.cn, api-pay.soulapp.cn, gateway-mobile-gray.soulapp.cn, api-chat.soulapp.cn, post.soulapp.cn, api-user.soulapp.cn, ssp.soulapp.cn
 # 替换信息收集
-^https:\/\/data-collector\.soulapp\.cn\/api\/data\/report\/v\d script-request-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/template/req_replace_body.js
+^https:\/\/data-collector\.soulapp\.cn\/api\/data\/report\/v\d url script-request-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/template/req_replace_body.js
 # 信息流，帖子详情页等各种广告
 ^https?:\/\/ssp\.soulapp\.cn\/api\/q url reject-dict
 ^https?:\/\/ssp\.soulapp\.cn\/api\/ad\/config url reject-dict
