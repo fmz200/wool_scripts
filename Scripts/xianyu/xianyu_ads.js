@@ -6,10 +6,18 @@ let obj = JSON.parse($response.body);
 if (url.includes("/gw/mtop.taobao.idlehome.home.nextfresh")) {
   if (obj.data && obj.data.sections) {
     obj.data.sections = obj.data.sections.filter(section => {
-      if (section.template && section.template.name === "fish_home_advertise_card_d4") {
+      if (section.template && (section.template.name === "fish_home_advertise_card_d4" || section.data.bizType === "AD")) {
         return false; // 删除该数组项
       }
       return true; // 保留该数组项
+    });
+  }
+}
+
+if (url.includes("/gw/mtop.taobao.idle.local.home")) {
+  if (obj.data?.sections) {
+    obj.data.sections = obj.data.sections.filter(section => {
+      return !(section.data && section.data.bizType === "AD");
     });
   }
 }
