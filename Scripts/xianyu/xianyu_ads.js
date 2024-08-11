@@ -1,12 +1,15 @@
 /**
  * 闲鱼 去广告+净化
- * 2024-08-10 22:33:37
+ * 2024-08-11 13:00:37
  */
 const url = $request.url;
 if (!$response.body) $done({});
 let obj = JSON.parse($response.body);
 
 if (url.includes("/gw/mtop.taobao.idlehome.home.nextfresh")) {
+  // 可能存在的首页标签
+  delete obj.data.widgetReturnDO;
+  // 信息流广告
   if (obj.data?.sections) {
     obj.data.sections = obj.data.sections.filter(section => {
       return !(section.data && (section.data.bizType === "AD" || section.data.bizType === "homepage"));
