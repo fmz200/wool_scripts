@@ -1,15 +1,26 @@
-// 2024-08-10 22:33:37
+/**
+ * 闲鱼 去广告+净化
+ * 2024-08-11 13:00:37
+ */
 const url = $request.url;
 if (!$response.body) $done({});
 let obj = JSON.parse($response.body);
 
 if (url.includes("/gw/mtop.taobao.idlehome.home.nextfresh")) {
-  if (obj.data && obj.data.sections) {
+  // 可能存在的首页标签
+  delete obj.data.widgetReturnDO;
+  // 信息流广告
+  if (obj.data?.sections) {
     obj.data.sections = obj.data.sections.filter(section => {
-      if (section.template && section.template.name === "fish_home_advertise_card_d4") {
-        return false; // 删除该数组项
-      }
-      return true; // 保留该数组项
+      return !(section.data && (section.data.bizType === "AD" || section.data.bizType === "homepage"));
+    });
+  }
+}
+
+if (url.includes("/gw/mtop.taobao.idle.local.home")) {
+  if (obj.data?.sections) {
+    obj.data.sections = obj.data.sections.filter(section => {
+      return !(section.data && section.data.bizType === "AD");
     });
   }
 }
