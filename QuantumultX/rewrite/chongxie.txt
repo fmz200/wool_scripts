@@ -1133,7 +1133,7 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 # 汇来米
 # hostname = saas-ad.cloudpnr.com
 # 感谢【可莉】分享
-^https:\/\/saas-ad\.cloudpnr\.com\/huifuad-base-api\/api\/tactics\/ad url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/WexinMiniPrograms/huifu/huifu_remove_ads.js
+;^https:\/\/saas-ad\.cloudpnr\.com\/huifuad-base-api\/api\/tactics\/ad url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/WexinMiniPrograms/huifu/huifu_remove_ads.js
 
 
 
