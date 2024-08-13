@@ -1158,6 +1158,7 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 
 # > 江苏银行
 # hostname = mbank5.jsbchina.cn
+# 可能导致登录验证码不显示
 ^https?:\/\/mbank5\.jsbchina\.cn:443 url reject-dict
 
 # > 建行生活
