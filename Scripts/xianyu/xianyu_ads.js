@@ -15,7 +15,7 @@ if (url.includes("/gw/mtop.taobao.idlehome.home.nextfresh")) {
       return !(section.data && (section.data.bizType === "AD" || section.data.bizType === "homepage"));
     });
     
-    var excludeNames = ['fish_home_yunying_card_d3'];
+    var excludeNames = ['fish_home_yunying_card_d3', 'idlefish_seafood_market'];
     obj.data.sections = obj.data.sections.filter(function(section) {  
       return !excludeNames.includes(section.template.name);  
     });
