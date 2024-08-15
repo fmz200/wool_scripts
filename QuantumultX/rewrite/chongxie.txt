@@ -1820,8 +1820,8 @@ https://access.mypikpak.com/access_controller/v1/area_accessible url reject
 # > 皮皮虾
 # hostname = *.pipix.com
 # 净化 配合图层效果极佳 首页Tap精简 我的页面去除无用模块 感谢【怎么肥事】分享
-^https?:\/\/.+\.pipix\.com\/bds\/feed\/channel_list\/ url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/PPX.js
-^https?:\/\/.+\.pipix\.com\/bds\/user\/check_in\/ url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/PPX.js
+#^https?:\/\/.+\.pipix\.com\/bds\/feed\/channel_list\/ url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/PPX.js
+#^https?:\/\/.+\.pipix\.com\/bds\/user\/check_in\/ url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/PPX.js
 
 # > 皮皮搞笑评论区
 # hostname = adapi.izuiyou.com
