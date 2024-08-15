@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/fenliu.list
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2024-08-07 20:10:00
+#!date=2024-08-15 19:10:00
 #!support=约9392行
 #!proxy-select=reject
 #############################################
@@ -648,7 +648,7 @@ host, dns.jd.com, reject
 IP-CIDR, 101.124.19.122/32, reject
 IP6-CIDR, 2402:db40:5100:1011::5/128, reject
 
-# 建行生活
+# > 建行生活
 # 内置饿了么外卖弹窗
 host, o2o-ad-log-gateway.alibaba.com, reject
 
@@ -953,7 +953,17 @@ host, us.l.qq.com, REJECT
 host, tangram.e.qq.com, REJECT
 host, tmeadbak.y.qq.com, REJECT
 host-suffix, imtmp.net, REJECT
-
+host, tmeadcomm.y.qq.com, reject
+host, ad.tencentmusic.com, reject
+host, adstats.tencentmusic.com, reject
+host, tmead.y.qq.com, reject
+host-suffix, rqd.qq.com, reject
+host-suffix, wup.imtt.qq.com, reject
+host-suffix, gdt.qq.com, reject
+host-suffix, android.rqd.qq.com, reject
+host-suffix, e.qq.com, reject
+host-suffix, beacon.qq.com, reject
+host-suffix, v.gdt.qq.com, reject
 
 # > 蜻蜓FM
 host, ad.qingting.fm, reject
@@ -984,18 +994,6 @@ host, adm1.autoimg.cn, reject
 host, adm2.autoimg.cn, reject
 host, adm3.autoimg.cn, reject
 
-# > QQ音乐广告
-host, tmeadcomm.y.qq.com, reject
-host, ad.tencentmusic.com, reject
-host, adstats.tencentmusic.com, reject
-host, tmead.y.qq.com, reject
-host-suffix, rqd.qq.com, reject
-host-suffix, wup.imtt.qq.com, reject
-host-suffix, gdt.qq.com, reject
-host-suffix, android.rqd.qq.com, reject
-host-suffix, e.qq.com, reject
-host-suffix, beacon.qq.com, reject
-host-suffix, v.gdt.qq.com, reject
 
 
 
@@ -1410,8 +1408,31 @@ host-keyword, paradisestatic.vivo.com.cn, reject
 
 
 # >>>>>>>>>>>>>>> ✅ W ✅ <<<<<<<<<<<<<<
-# > 万能钥匙专业版 感谢#All in 梭哈分享
+# > 万能钥匙专业版
+# 感谢【All in 梭哈】分享
 host-suffix, mi.gdt.qq.com, reject
+# 去除导航栏免费短剧
+host, taichi.51y5.net, reject
+
+# > WiFi万能钥匙
+host-keyword, app.51y5.net, reject
+host-keyword, apiinit.amap.com, reject
+host-keyword, c.51y5.net, reject
+host-keyword, msg.push.51y5.net, reject
+host-keyword, a.wkanx.com, reject
+host-keyword, c.wkanx.com, reject
+host-keyword, c1.wkanx.com, reject
+host-keyword, ap.51y5.net, reject
+host-keyword, dc.51y5.net, reject
+host-keyword, push-dc.51y5.net, reject
+host-keyword, news-log.51y5.net, reject
+host-keyword, login.push.51y5.net, reject
+host-keyword, news.51y5.net, reject
+host-keyword, cds.51y5.net, reject
+host-keyword, insurance.lianwifi.com, reject
+host-keyword, config.51y5.net, reject
+host-keyword, static.wkanx.com, reject
+host-keyword, config.y5en.com, reject
 
 # > 微博
 host-suffix, fastimage.uve.weibo.com, reject
@@ -1474,26 +1495,6 @@ host-suffix, ads2.msn.com, reject
 host-suffix, bingads.microsoft.com, reject
 host-suffix, rads.msn.com, reject
 host, mobileads.msn.com, reject
-
-# > WiFi万能钥匙
-host-keyword, app.51y5.net, reject
-host-keyword, apiinit.amap.com, reject
-host-keyword, c.51y5.net, reject
-host-keyword, msg.push.51y5.net, reject
-host-keyword, a.wkanx.com, reject
-host-keyword, c.wkanx.com, reject
-host-keyword, c1.wkanx.com, reject
-host-keyword, ap.51y5.net, reject
-host-keyword, dc.51y5.net, reject
-host-keyword, push-dc.51y5.net, reject
-host-keyword, news-log.51y5.net, reject
-host-keyword, login.push.51y5.net, reject
-host-keyword, news.51y5.net, reject
-host-keyword, cds.51y5.net, reject
-host-keyword, insurance.lianwifi.com, reject
-host-keyword, config.51y5.net, reject
-host-keyword, static.wkanx.com, reject
-host-keyword, config.y5en.com, reject
 
 # > 威锋 广告联盟已包含
 

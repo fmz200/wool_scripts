@@ -8,9 +8,6 @@ let url = $request.url;
 let body = $response.body;
 let resp_data = JSON.parse(body);
 
-// 模块类型，不在里面的都计划删除
-const cardTypes = ["217", "17", ""];
-
 try {
     // 1、首次点击发现按钮
     if (url.includes("/search/finder")) {
@@ -123,32 +120,36 @@ function processPayload(payload) {
 }
 
 function removeCommonAds(items) {
+  // 模块类型，不在里面的都计划删除
+  // 17微博热搜，101热门微博
+  const cardTypes = ["17", "101"];
+  
   for (let i = 0; i < items.length; i++) {
     const card_type = items[i].data?.card_type;
     console.log(`card_type = ${card_type}`);
     // 白名单模式
-    if (!cardTypes.includes(card_type)) {
+    if (card_type && !cardTypes.includes(card_type)) {
       console.log('移除多余的模块💕💕');
-      // items[i] = {};
-      // continue;
+      items[i] = {};
+      continue;
     }
     // 1.1、"微博热搜"模块
     if (card_type === 17) {
       console.log('处理微博热搜模块💕💕');
       removeHotSearchAds(items[i].data.group);
     }
-    // 1.2、轮播图模块 // 118横版广告图片 182热议话题 217错过了热词 247横版视频广告
-    if ([118, 182, 217, 247].includes(card_type)) {
-      console.log('移除轮播图，实况热聊等模块💕💕');
-      items[i] = {};
-    }
-    // 1.3、”热聊、本地、找人“模块，236微博趋势
-    if ([19, 118, 206, 208, 217, 236, 249].includes(card_type)) {
-      console.log('处理热聊、本地、找人模块💕💕');
-      items[i] = {};
-      // delete items[i].data.more_pic;
-      // removeFinderChannelAds(items[i].data.group);
-    }
+    // // 1.2、轮播图模块 // 118横版广告图片 182热议话题 217错过了热词 247横版视频广告
+    // if ([118, 182, 217, 247].includes(card_type)) {
+    //   console.log('移除轮播图，实况热聊等模块💕💕');
+    //   items[i] = {};
+    // }
+    // // 1.3、”热聊、本地、找人“模块，236微博趋势
+    // if ([19, 118, 206, 208, 217, 236, 249].includes(card_type)) {
+    //   console.log('处理热聊、本地、找人模块💕💕');
+    //   items[i] = {};
+    //   // delete items[i].data.more_pic;
+    //   // removeFinderChannelAds(items[i].data.group);
+    // }
   }
 }
 
