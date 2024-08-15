@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/chongxie.txt
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2024-08-12 19:00:00
+#!date=2024-08-15 06:00:00
 #!support=支持约511款APP/小程序
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 #############################################
@@ -624,7 +624,7 @@ http:\/\/ad\.myfriday\.cn\/d\/json\/1\.1 url reject
 # > 斗鱼直播
 # hostname = daoyu.sdo.com, rtbapi.douyucdn.cn, staticlive.douyucdn.cn, capi.douyucdn.cn, douyucdn.cn
 ^https?:\/\/daoyu\.sdo\.com\/api\/userCommon\/getAppStartAd url reject
-^https?:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo url reject-200
+^https?:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo url reject-dict
 ^https?:\/\/staticlive\.douyucdn\.cn\/upload\/signs\/ url reject
 ^https?:\/\/staticlive\.douyucdn\.cn\/.+\/getStartSend url reject
 ^https?:\/\/staticlive\.douyucdn\.cn\/.+?\/getStartSend url reject-img
