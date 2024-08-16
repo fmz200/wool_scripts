@@ -159,7 +159,7 @@ function removeHotSearchAds(groups) {
   console.log('移除发现页热搜广告开始💕');
   for (let i = groups.length - 1; i >= 0; i--) {
     const group = groups[i];
-    if (group.itemid?.includes("is_ad_pos") || group.itemid?.includes("search_flag") || group.promotion) {
+    if (group.itemid?.includes("is_ad_pos") || group.icon?.includes("8_0_small.png") || group.promotion) {
       groups.splice(i, 1);
     }
   }
