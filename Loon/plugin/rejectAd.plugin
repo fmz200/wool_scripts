@@ -39,6 +39,7 @@ DOMAIN-SUFFIX, getui.net, REJECT
 DOMAIN-SUFFIX, gepush.com, REJECT
 DOMAIN-SUFFIX, igexin.com, REJECT
 DOMAIN-SUFFIX, log.aliyuncs.com, REJECT
+DOMAIN-SUFFIX, zlsdk.1rtb.net, REJECT
 # > 收集用户隐私联盟，若有问题自行设置白名单
 DOMAIN-KEYWORD, volc, REJECT
 DOMAIN-KEYWORD, umeng, REJECT
