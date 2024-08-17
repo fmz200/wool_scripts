@@ -1,6 +1,6 @@
 /**
  * 闲鱼 去广告+净化
- * 2024-08-15 11:09:37
+ * 2024-08-17 11:36:37
  */
 const url = $request.url;
 if (!$response.body) $done({});
@@ -14,8 +14,8 @@ if (url.includes("/gw/mtop.taobao.idlehome.home.nextfresh")) {
     obj.data.sections = obj.data.sections.filter(section => {
       return !(section.data && (section.data.bizType === "AD" || section.data.bizType === "homepage"));
     });
-    
-    var excludeNames = ['fish_home_yunying_card_d3', 'idlefish_seafood_market'];
+
+    let excludeNames = ['fish_home_yunying_card_d3', 'idlefish_seafood_market', 'fish_home_chat_room'];
     obj.data.sections = obj.data.sections.filter(function(section) {  
       return !excludeNames.includes(section.template.name);  
     });
