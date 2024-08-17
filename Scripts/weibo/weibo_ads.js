@@ -121,8 +121,8 @@ function processPayload(payload) {
 
 function removeCommonAds(items) {
   // 模块类型，不在里面的都计划删除
-  // 17微博热搜，101热门微博
-  const cardTypes = ["17", "101"];
+  // 17：微博热搜，101：热门微博
+  const cardTypes = [17, 101];
   
   for (let i = 0; i < items.length; i++) {
     const card_type = items[i].data?.card_type;
@@ -159,7 +159,7 @@ function removeHotSearchAds(groups) {
   console.log('移除发现页热搜广告开始💕');
   for (let i = groups.length - 1; i >= 0; i--) {
     const group = groups[i];
-    if (group.itemid?.includes("is_ad_pos") || group.promotion) {
+    if (group.itemid?.includes("is_ad_pos") || group.icon?.includes("8_0_small.png") || group.promotion) {
       groups.splice(i, 1);
     }
   }
