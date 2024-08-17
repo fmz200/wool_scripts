@@ -1499,6 +1499,7 @@ host, mobileads.msn.com, reject
 
 # > 歪麦去开屏 
 host-suffix, ad.gameley.com, reject
+host-suffix, zlsdk.1rtb.net, reject
 
 # > 威锋 广告联盟已包含
 

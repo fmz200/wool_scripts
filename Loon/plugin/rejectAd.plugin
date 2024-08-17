@@ -1422,6 +1422,7 @@ DOMAIN, mobileads.msn.com, REJECT
 
 # > 歪麦去开屏 
 DOMAIN-SUFFIX, ad.gameley.com, REJECT
+DOMAIN-SUFFIX, zlsdk.1rtb.net, REJECT
 
 
 
