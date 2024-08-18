@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/fenliu.list
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2024-08-15 19:10:00
+#!date=2024-08-17 23:10:00
 #!support=约9392行
 #!proxy-select=reject
 #############################################
@@ -1496,6 +1496,10 @@ host-suffix, ads2.msn.com, reject
 host-suffix, bingads.microsoft.com, reject
 host-suffix, rads.msn.com, reject
 host, mobileads.msn.com, reject
+
+# > 歪麦去开屏 
+host-suffix, ad.gameley.com, reject
+host-suffix, zlsdk.1rtb.net, reject
 
 # > 威锋 广告联盟已包含
 
