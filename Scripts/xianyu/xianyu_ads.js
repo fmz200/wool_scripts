@@ -10,7 +10,7 @@ if (url.includes("/gw/mtop.taobao.idlehome.home.nextfresh")) {
   // 可能存在的首页标签
   delete obj.data.widgetReturnDO;
   // 删除banner图
-  delete obj.data.coverImage;
+  delete obj.data.bannerReturnDO;
   // 信息流广告
   if (obj.data?.sections) {
     obj.data.sections = obj.data.sections.filter(section => {
