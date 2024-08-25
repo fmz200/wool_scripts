@@ -1708,8 +1708,8 @@ https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSpl
 ^https?:\/\/sdk1xyajs\.data\.kuiniuca\.com url reject
 
 # > 脉脉
-# 感谢【可莉】分享
 # hostname = open.taou.com, h3.open.taou.com
+# 感谢【可莉】分享
 # 开屏广告、职位页面横幅
 ^https:\/\/(h3\.)?open\.taou\.com\/maimai\/adshow\? url reject-dict
 # 赠送礼物 - 横幅
