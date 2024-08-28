@@ -961,7 +961,6 @@ http:\/\/ad\.myfriday\.cn\/d\/json\/1\.1 url reject
 # hostname = m*.amap.com, optimus-ads.amap.com
 ^https?:\/\/m5\.amap\.com\/ws\/shield\/dsp\/app\/startup\/init\? url reject-dict
 ^https?:\/\/m5\.amap\.com\/ws\/valueadded\/ url reject
-^https?:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ url reject-200
 ^https?:\/\/optimus-ads\.amap\.com\/uploadimg\/ url reject
 
 # > 国家地理
@@ -2570,7 +2569,7 @@ https://apis.lifeweek.com.cn/api/baseConfig/getIosNewConfig url reject
 # >>>>>>>>>>>>>>> ✅ W ✅ <<<<<<<<<<<<<<
 # > Weico(微博客户端)
 # hostname = overseas.weico.cc
-^https?:\/\/overseas.weico.cc\/portal.php\?a=get_coopen_ads url reject
+^https?:\/\/overseas\.weico\.cc\/portal\.php\?a=get_coopen_ads url reject-200
 
 # > WPS
 # hostname = ios.wps.cn, mobile-pic.cache.iciba.com
@@ -2861,7 +2860,7 @@ https://support.you.163.com/appversync/check.do url reject
 
 # > 小睡眠
 # hostname = api.psy-1.com
-^https?:\/\/api.psy-1.com\/cosleep\/startup url reject
+^https?:\/\/api\.psy-1\.com\/cosleep\/startup url reject
 
 # > 小特- 首选特斯拉中文社区
 # hostname = lcen.xiaote.net
