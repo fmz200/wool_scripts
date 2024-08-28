@@ -32,13 +32,15 @@
 
 ▶️ 使用本项目中的内容所造成的一切后果，均由使用者承担。
 
-▶️ 本项目中的内容请不要在中国大陆的任何平台传播。
-
 ▶️ 交流群组：👉🏻[苹果iOS去广告交流群](https://t.me/lanjieguanggao)，👉🏻[奶思资源分享|频道](https://t.me/inaisi)。
 
-▶️ <span style="color: #F44336">Please do not disseminate the content in this project on any platform in mainland China. Thanks!</span>
 
-![#c62828](https://via.placeholder.com/15/c62828/000000?text=+)
+## ⚠️ 一些提示：
+
+▶️ 本项目中的任何内容请不要在中国大陆的任何平台传播。否则你可能会被开盒或收到大量举报。
+
+▶️ Please do not disseminate the content in this project on any platform in mainland China. Thanks!
+
 
 ---
 
