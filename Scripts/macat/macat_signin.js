@@ -3,7 +3,7 @@
   更新时间：2023.10.14 20:55
   参考脚本：https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/macat.js
   [task_local]
-  22 7 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/macat/macat_signin.js, tag=马克喵签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/macat.png, enabled=true
+  22 7 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/macat/macat_signin.js, tag=马克喵签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Macat.png, enabled=true
   @params:"fmz200.macat_loginBody" (boxjs自行填入,包含账号密码信息等)
   格式: `action=user_login&username=xxx%40gmail.com&password=xxx&rememberme=1`
 */
