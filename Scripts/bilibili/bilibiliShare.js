@@ -3,9 +3,9 @@
  > 软件版本：7.63.0
  > 解锁说明：解锁VIP番剧和影视
  > 更新时间：2024-09-03
- 使用方法：
-   
+ 使用方法：https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/bilibiliShare.cookie.js
 
+ QX配置：
  [rewrite_local]
  # Bilibili大会员（2024-01-14）
  ^https?:\/\/((app|api)\.(\w{2,15})?\.(com|cn)).*player.*\.(v3|v2|v1).*Play(URL|View|Conf).*$ url script-request-header https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/bilibiliShare.js

@@ -7,7 +7,8 @@
  1、找一个有大会员的账号，将本脚本加入重写用于获取共享cookie
  2、打开B站随便播放一个视频，提示“B站会员获取共享cookie成功”即可【可能会疯狂获取】，此时关闭这个脚本！！
  3、在脚本日志中会打印获取到的数据Key和Value，按照BoxJS对应的Key填入，点击保存
- 4、打开自己的B站，测试可用性。
+ 4、将脚本https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/bilibiliShare.js加入重写
+ 5、打开自己的B站，测试可用性。
    
  QX配置：
  [rewrite_local]
