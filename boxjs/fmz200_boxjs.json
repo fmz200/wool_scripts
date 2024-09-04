@@ -793,6 +793,109 @@
         "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/WeiboTalk.png",
         "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/WeiboTalk.png"
       ]
+    },
+    {
+      "id": "fmz200_bilibili_share",
+      "name": "哔哩哔哩共享会员模板",
+      "desc_html": "⚠️使用说明：有会员的用户获取headers发给你后填入下面对应的内容里，点击保存，打开B站测试可用性\n</br>【<a href='https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/bilibiliShare.js'><font class='red--text'>点我查看使用说明</font></a>】",
+      "keys": [
+        "Cookie",
+        "x-bili-device-bin",
+        "wb_request_time",
+        "Authorization",
+        "User-Agent",
+        "buvid",
+        "x-bili-metadata-bin",
+        "x-bili-locale-bin",
+        "x-bili-network-bin",
+        "x-bili-fawkes-req-bin",
+        "x-bili-trace-id"
+      ],
+      "settings": [
+        {
+          "id": "Cookie",
+          "name": "Cookie",
+          "val": false,
+          "type": "text",
+          "desc": ""
+        },
+        {
+          "id": "x-bili-device-bin",
+          "name": "x-bili-device-bin",
+          "val": "",
+          "type": "text",
+          "desc": ""
+        },
+        {
+          "id": "Authorization",
+          "name": "Authorization",
+          "val": "",
+          "type": "text",
+          "desc": ""
+        },
+        {
+          "id": "User-Agent",
+          "name": "User-Agent",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 4
+        },
+        {
+          "id": "buvid",
+          "name": "buvid",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 4
+        },
+        {
+          "id": "x-bili-metadata-bin",
+          "name": "x-bili-metadata-bin",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 4
+        },
+        {
+          "id": "x-bili-locale-bin",
+          "name": "x-bili-locale-bin",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 4
+        },
+        {
+          "id": "x-bili-network-bin",
+          "name": "x-bili-network-bin",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 4
+        },
+        {
+          "id": "x-bili-fawkes-req-bin",
+          "name": "x-bili-fawkes-req-bin",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 4
+        },
+        {
+          "id": "x-bili-trace-id",
+          "name": "x-bili-trace-id",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 4
+        }
+      ],
+      "author": "@fmz200",
+      "repo": "https://github.com/fmz200/wool_scripts",
+      "icons": [
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/BiliBili.png",
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/BiliBili.png"
+      ]
     }
   ]
 }
