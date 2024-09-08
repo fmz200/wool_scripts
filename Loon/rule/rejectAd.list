@@ -9,7 +9,7 @@
 #!system = iOS, iPadOS
 #!system_version =
 #!loon_version =
-#!date=2024-08-17 23:10:00
+#!date=2024-09-09 00:10:00
 #!support=约9392行
 #!proxy-select=REJECT
 #############################################
@@ -544,14 +544,14 @@ DOMAIN-SUFFIX,u51.me, REJECT
 
 # > 广州地铁乘车码
 # 多个广告 感谢CtrlMusic🐓分享
-host, apis.alenable.com, reject
+DOMAIN, apis.alenable.com, reject
 
 
 
 # >>>>>>>>>>>>>>> ✅ H ✅ <<<<<<<<<<<<<<
 # > HDO
-#host-suffix, applovin.com, reject
-#host-suffix, applvn.com, reject
+#DOMAIN-suffix, applovin.com, reject
+#DOMAIN-suffix, applvn.com, reject
 
 # > Huawei AspiegelBot
 IP-CIDR, 114.119.160.0/21, REJECT, no-resolve
