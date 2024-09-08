@@ -3,7 +3,7 @@
 #!author=fmz200
 #!homepage=https://github.com/fmz200/wool_scripts
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
-#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/rejectAd.plugin
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/rejectAd.list
 #!tg-group=https://t.me/lanjieguanggao
 #!tag = 去广告, fmz200
 #!system = iOS, iPadOS
@@ -23,7 +23,7 @@
 #############################################
 
 
-[Rule]
+#[Rule]
 # >>>>>>>>>>>>>>> ✅ # ✅ <<<<<<<<<<<<<<
 # > 广告联盟
 DOMAIN-SUFFIX, miaozhen.com, REJECT
