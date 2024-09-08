@@ -5280,7 +5280,7 @@ DOMAIN-SUFFIX, g.aligames.com, REJECT
 DOMAIN-SUFFIX, optimus-ads.amap.com.w.alikunlun.com, REJECT
 DOMAIN-SUFFIX, osfota.cdn.aliyun.com, REJECT
 DOMAIN-SUFFIX, oa-panther.data.aliyun.com, REJECT
-;DOMAIN-SUFFIX, oss-accelerate.aliyuncs.com, REJECT
+#DOMAIN-SUFFIX, oss-accelerate.aliyuncs.com, REJECT
 DOMAIN-SUFFIX, dressimage.img-cn-beijing.aliyuncs.com, REJECT
 DOMAIN-SUFFIX, adash.man.aliyuncs.com, REJECT
 DOMAIN-SUFFIX, ooss.oss.aliyuncs.com, REJECT
