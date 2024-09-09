@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/script/tasks.scripts
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2024-07-22 12:35:00
+#!date=2024-09-09 23:35:00
 #############################################
 # 配置语法 脚本默认执行超时时间200s
 # cron "0 8 * * *" script-path=cron.js,tag = cronScript,timeout = 300,argument = "1234",enable=true
@@ -22,6 +22,7 @@ cron "15 7 * * *" script-path=https://github.com/fmz200/wool_scripts/raw/main/Sc
 cron "19 7 * * *" script-path=https://raw.githubusercontent.com/toulanboy/scripts/master/weibo/weibotalk.js, timeout=300, tag=微博超话, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/WeiboTalk.png, enable=true
 cron "1 0 * * *" script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, timeout=300, tag=高德地图打车签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/GaodeMap.jpg, enable=false
 #cron "25 7-12/1 * * *" script-path=https://raw.githubusercontent.com/WowYiJiu/Personal/main/Script/qqMusic.js, timeout=300, tag=QQ音乐任务, img-url=https://raw.githubusercontent.com/WowYiJiu/Personal/main/icon/Color/qqMusic.png, enable=false
+cron "18 0 8-22 * * ?" script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/douyin/my_girl_video.js, timeout=300, tag=小姐姐视频, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/others/18Plus.png, enable=false
 cron "0 8 * * *" script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/oil_price.js, timeout=300, tag=今日油价, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/oil.png, enable=false
 cron "0 0/2 * * *" script-path=https://github.com/ChinaTelecomOperators/ChinaTelecom/releases/download/Prerelease-Alpha/Tele_Cellular_Auto.js, timeout=300, tag=电信余量, img-url=https://raw.githubusercontent.com/LikeGEM/TuBiao/main/Icons/zhongguodianxin.png, enable=false
 cron "0 6-23/3 * * *" script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/top.js, timeout=300, tag=热搜榜单, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/others/hot_search.png, enable=false
