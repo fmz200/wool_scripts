@@ -13,6 +13,7 @@
     "17 7 * * * https://github.com/fmz200/wool_scripts/raw/main/Scripts/weibo/weibotalk.js, tag=新浪超话签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/WeiboTalk.png, enabled=true",
     "16 7 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xxyx/xxyx_signin.js, tag=晓晓优选每日任务, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/xxyx_01.jpeg, enabled=true",
     "25 7-12/1 * * * https://raw.githubusercontent.com/WowYiJiu/Personal/main/Script/qqMusic.js, tag=QQ音乐任务, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/QQMusic_01.png, enabled=true",
+    "18 0 8-22 * * ? https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/douyin/my_girl_video.js, tag=小姐姐视频, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/others/18Plus.png, enabled=true",
     "0 0/2 * * * https://github.com/ChinaTelecomOperators/ChinaTelecom/releases/download/Prerelease-Alpha/Tele_Cellular_Auto.js, tag=电信余量, img-url=https://raw.githubusercontent.com/LikeGEM/TuBiao/main/Icons/zhongguodianxin.png, enabled=false",
     "0 6-23/3 * * * https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/top.js, tag=热搜榜单, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/others/hot_search.png, enabled=true",
     "10 9 * * ? https://raw.githubusercontent.com/chxm1023/Task/main/hljk.js, tag=汇率监控, img-url=https://raw.githubusercontent.com/chxm1023/Task/main/icon/hljk.png, enabled=true",
