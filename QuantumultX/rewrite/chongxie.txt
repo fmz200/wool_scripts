@@ -9,7 +9,7 @@
 #!system = iOS, iPadOS
 #!system_version = 
 #!loon_version = 
-#!date=2024-09-03 18:20:00
+#!date=2024-09-12 13:20:00
 #!support=支持约511款APP/小程序
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 #############################################
@@ -1649,7 +1649,7 @@ https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSpl
 ^https?:\/\/mapi\.mafengwo\.cn\/system\/update\/check_update url reject-dict
 ^https?:\/\/mapi\.mafengwo\.cn\/system\/config\/(get|mark)_(push|alert)_config url reject-dict
 ^https?:\/\/mapi\.mafengwo\.cn\/system\/push\/get_local_push_config url reject
-^https?:\/\/mapi\.mafengwo\.cn\/user\/profile\/get_(list|profile) url script-response-body https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/mafengwo.js
+^https?:\/\/mapi\.mafengwo\.cn\/user\/profile\/get_(list|profile) url script-response-body https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/mafengwo.js
 
 # > 马达出行
 # hostname = mada-travel.17u.cn, ebk.17u.cn
