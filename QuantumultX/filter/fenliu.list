@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/fenliu.list
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2024-08-17 23:10:00
+#!date=2024-09-15 11:10:00
 #!support=约9392行
 #!proxy-select=reject
 #############################################
@@ -467,7 +467,7 @@ host, mcs.snssdk.com, REJECT
 host, tnc3-alisc1.snssdk.com, REJECT
 host, security-lq.snssdk.com, REJECT
 host, tnc3-aliec2.snssdk.com, REJECT
-host, is.snssdk.com, REJECT
+#host, is.snssdk.com, REJECT
 host, i.snssdk.com, REJECT
 host, v6-novelapp.ixigua.com, REJECT
 host-suffix, novelapp.ixigua.com, REJECT
@@ -477,7 +477,7 @@ host, apd-pcdnwxlogin.teg.tencent-cloud.net, REJECT
 host, api.iegadp.qq.com, REJECT
 host-suffix, byteorge.com, REJECT
 host-suffix, bytegoofy.com, REJECT
-host-suffix, bytedance.com, REJECT
+#host-suffix, bytedance.com, REJECT
 IP-CIDR, 49.71.37.101/32, REJECT
 IP-CIDR, 117.71.105.23/32, REJECT
 IP-CIDR, 218.94.207.205/32, REJECT
