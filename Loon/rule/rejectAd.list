@@ -9,7 +9,7 @@
 #!system = iOS, iPadOS
 #!system_version =
 #!loon_version =
-#!date=2024-09-09 00:10:00
+#!date=2024-09-15 11:10:00
 #!support=约9392行
 #!proxy-select=REJECT
 #############################################
@@ -461,7 +461,7 @@ DOMAIN, mcs.snssdk.com, REJECT
 DOMAIN, tnc3-alisc1.snssdk.com, REJECT
 DOMAIN, security-lq.snssdk.com, REJECT
 DOMAIN, tnc3-aliec2.snssdk.com, REJECT
-DOMAIN, is.snssdk.com, REJECT
+#DOMAIN, is.snssdk.com, REJECT
 DOMAIN, i.snssdk.com, REJECT
 DOMAIN, v6-novelapp.ixigua.com, REJECT
 DOMAIN, msync-im1-vip6-std.easemob.com, REJECT
@@ -471,7 +471,7 @@ DOMAIN-SUFFIX, novelapp.ixigua.com, REJECT
 DOMAIN-SUFFIX, default.ixigua.com, REJECT
 DOMAIN-SUFFIX, byteorge.com, REJECT
 DOMAIN-SUFFIX, bytegoofy.com, REJECT
-DOMAIN-SUFFIX, bytedance.com, REJECT
+#DOMAIN-SUFFIX, bytedance.com, REJECT
 IP-CIDR, 49.71.37.101/32, REJECT, no-resolve
 IP-CIDR, 117.71.105.23/32, REJECT, no-resolve
 IP-CIDR, 218.94.207.205/32, REJECT, no-resolve
