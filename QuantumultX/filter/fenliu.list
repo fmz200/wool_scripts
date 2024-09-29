@@ -659,6 +659,7 @@ host, o2o-ad-log-gateway.alibaba.com, reject
 # > keep
 host, apm.gotokeep.com, reject
 host, kad.gotokeep.com, reject
+host, hc-ssp.sm.cn, reject
 
 # > 快乐广播
 host, ad.hpplay.cn, reject
