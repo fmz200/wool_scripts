@@ -1,8 +1,8 @@
 #!name=微博去广告&净化
-#!desc=整合了@zmqcherish的去广告配置
-#!author=fmz200
+#!desc=整合了@zmqcherish的去广告配置，可能不全面
+#!author=奶思[https://github.com/fmz200]
 #!homepage=https://github.com/fmz200/wool_scripts
-#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo-00.png
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/weibo.plugin
 #!tg-group=https://t.me/lanjieguanggao
 #!tag = 去广告, 微博, fmz200
