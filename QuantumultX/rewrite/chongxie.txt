@@ -1,6 +1,6 @@
 #!name=广告拦截合集-重写
 #!desc=(R)针对部分APP和小程序广告进行拦截，某些APP要清除缓存或者重新安装拦截广告才会生效！
-#!author=fmz200
+#!author=奶思
 #!homepage=https://github.com/fmz200/wool_scripts
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/chongxie.txt
@@ -35,6 +35,7 @@ hostname = patient-api.suh.cn, userpms-api.suh.cn, se-api.djiits.com, a.line.me,
 
 
 # >>>>>>>>>>>>>>> ✅ 0 ✅ <<<<<<<<<<<<<<
+
 
 
 # >>>>>>>>>>>>>>> ✅ 1 ✅ <<<<<<<<<<<<<<
@@ -148,8 +149,8 @@ hostname = patient-api.suh.cn, userpms-api.suh.cn, se-api.djiits.com, a.line.me,
 ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources url reject-dict
 ^https:\/\/heic\.alicdn\.com\/imgextra\/i\d\/\d*\/?[\w!]+-\d-(octopus|tps-1125-1602|tps-1080-1920)\.(jp|pn)g_(1\d{3}|9\d{2})x(1\d{3}|9\d{2})q[59]0 url reject-dict
 ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.adx\.flyad\.getad url reject-dict
-^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.mshow url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js
 ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(volvo\.secondfloor\.getconfig|wireless\.home\.newface\.awesome\.get) url reject-dict
+^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.mshow url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js
 ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
 ^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
 
@@ -456,13 +457,6 @@ hostname = patient-api.suh.cn, userpms-api.suh.cn, se-api.djiits.com, a.line.me,
 ^https?:\/\/bodianimgcdn\.kuwo\.cn\/images\/198c0b313fe9e53b03240c7b30b4acc9 url reject-dict
 
 # > 薄荷健康
-# hostname = bohe.sfo-tx-shanghai-01.saas.sensorsdata.cn, api.boohee.com
-^https?:\/\/api\.boohee\.com\/shop-interface\/api\/v1\/home\/index url reject-dict
-^https?:\/\/bohe\.sfo-tx-shanghai-01\.saas\.sensorsdata\.cn\/api\/v2\/sfo\/user_popup_configs url reject-dict
-^https?:\/\/api\.boohee\.com\/meta-interface\/v1\/index\/(discover_chosen|page_float_bubbles) url reject-dict
-^https?:\/\/api\.boohee\.com\/app-interface\/v1\/record\/record_tool(_pop)?_ad url reject-dict
-^https?:\/\/api\.boohee\.com\/meta-interface\/v1\/index\/record_index url response-body articles response-body fmz200
-
 # hostname = api.boohee.com, bohe.sfo-tx-shanghai-01.saas.sensorsdata.cn, lego.boohee.com, status.boohee.com
 # 感谢【可莉】分享
 # 记录 - 大家都在看data.recom_cards / 底部按钮data.recom_btns
@@ -483,7 +477,6 @@ hostname = patient-api.suh.cn, userpms-api.suh.cn, se-api.djiits.com, a.line.me,
 ^https:\/\/api\.boohee\.com\/open-interface\/v1\/string\/market_page\?title=metabolism_config$ url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bohe/bohe_ads.js
 # 绑定设备 - 横幅推广
 ^https:\/\/api\.boohee\.com\/meta-interface\/v1\/index\/sensor-banners\? url reject-dict
-
 
 
 
@@ -588,8 +581,8 @@ http:\/\/ad\.myfriday\.cn\/d\/json\/1\.1 url reject
 
 # >>>>>>>>>>>>>>> ✅ D ✅ <<<<<<<<<<<<<<
 # > DJI Store (大疆商城)
-# 去开屏广告
 # hostname = se-api.djiits.com
+# 去开屏广告
 ^https:\/\/se-api\.djiits\.com\/api\/components\/launch_ad\.json\?abbrv_url=1&country=cn&language=zh-CN url reject-dict
 
 # > 大麦
@@ -676,8 +669,6 @@ http:\/\/ad\.myfriday\.cn\/d\/json\/1\.1 url reject
 # hostname = maicai.api.ddxq.mobi
 # 开屏广告
 ^https?:\/\/maicai\.api\.ddxq\.mobi\/advert\/ url reject
-#^https?:\/\/maicai\.api\.ddxq\.mobi\/advert\/startUpScreen url reject-dict
-#^https?:\/\/maicai\.api\.ddxq\.mobi\/advert\/getPreloadAd\?ad_id url reject-dict
 ^https?:\/\/maicai\.api\.ddxq\.mobi\/vip\/getVipAd url reject-dict
 # 新人弹窗
 ^https?:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/getHomeAdPop url reject
@@ -840,9 +831,6 @@ http:\/\/ad\.myfriday\.cn\/d\/json\/1\.1 url reject
 # 开屏 需要卸载重装
 ^https:\/\/api\.flydigi\.com\/android\/v2\/ad url reject-dict
 
-
-
-
 # > 番茄小说
 # hostname = *.pangolin-sdk-toutiao.com, *.pangolin-sdk-toutiao.*, *.pstatp.com, *.pstatp.com.*, *.pglstatp-toutiao.com.*, *.pglstatp-toutiao.com, gurd.snssdk.com, gurd.snssdk.com.*, i-lq.snssdk.com, i-lq.snssdk.com.*, *default.ixigua.com
 # 去章末广告
@@ -953,8 +941,9 @@ http:\/\/ad\.myfriday\.cn\/d\/json\/1\.1 url reject
 ^https?:\/\/dl\.app\.gtja\.com\/dzswem\/kvController url reject-200
 #^https?:\/\/dl[0-9]{1}\.app\.gtja\.com\/dzswem\/kvController url reject-200
 
-# > 国家医保服务平台 开屏广告
+# > 国家医保服务平台
 # hostname = fuwu.nhsa.gov.cn
+# 开屏广告
 ^https?:\/\/fuwu\.nhsa\.gov\.cn\/ebus\/fuwu\/api\/base\/cms\/iep\/web\/cms\/hmpgcfg\/queryAppHmpgCfgByApp url reject
 
 # > 高德地图
@@ -1113,7 +1102,7 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 ^https?:\/\/api\.touker\.com\/v2\/IAdvertisementAPI\.queryStartAdvertisement url reject-200
 
 # > 航旅纵横
-# > hostname = home.umetrip.com, discardrp.umetrip.com, startup.umetrip.com,
+# > hostname = home.umetrip.com, discardrp.umetrip.com, startup.umetrip.com
 ^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native url reject
 ^http?:\/\/(114\.115\.217\.129)|(home\.umetrip\.com)\/gateway\/api\/umetrip\/native$ url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Umetrip/Umetrip_remove_ads.js
 
@@ -1139,7 +1128,6 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 ^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.fc\.recommend\.feedscommondservice url reject-dict
 ^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.render\.querytabfeedstream url reject-200
 ^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.render\.query(index|my)page url script-response-body https://raw.githubusercontent.com/zirawell/Ad-Cleaner/main/Collection/js/freshippo.js
-
 
 # > 海豚优惠
 # hostname = *.townmalls.cn
@@ -1172,6 +1160,7 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 # > 海马爸比
 # hostname = 39.98.135.211
 ^https?:\/\/39\.98\.135\.211\/admin\/filter\/crowdFunding\/getNewProductData url reject-dict
+
 
 
 # >>>>>>>>>>>>>>> ✅ I ✅ <<<<<<<<<<<<<<
@@ -1549,13 +1538,13 @@ https:\/\/nelo2-col\.linecorp\.com\/_store$ url reject
 
 # > 两步路
 # hostname = helper.2bulu.com
-# host-suffix, admobile.top, reject
 https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSplashFrequencyStatistics|getPopInfo|getAppEntranceConfig|promote\/list|getSplash|outing\/reqFoundNewList|outing\/reqIndex) url reject
 
 # > 猎聘
 # hostname = api-ac.liepin.com, api-wanda.liepin.com
 ^https?:\/\/api-ac\.liepin\.com\/api\/com\.liepin\.cyclops\.live\.get-ad-cards url reject-dict
 ^https?:\/\/api-wanda\.liepin\.com\/api\/com\.liepin\.cbp\.baizhong\.op\.v2-show-4app url reject-200
+
 
 
 # >>>>>>>>>>>>>>> ✅ M ✅ <<<<<<<<<<<<<<
@@ -1854,8 +1843,7 @@ https://access.mypikpak.com/access_controller/v1/area_accessible url reject
 # > 拼多多
 # hostname = api.pinduoduo.com, api.yangkeduo.com, mobile.yangkeduo.com
 ^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash url reject
-# 多多买菜
-# 开屏广告
+# 多多买菜 开屏广告
 ^https?:\/\/mobile\.yangkeduo\.com\/proxy\/api\/api\/express\/post\/waybill\/red_packet\/goods_list$ url response-body "list":\[.+\] response-body "list":[]
 
 # > 票根
@@ -2006,7 +1994,7 @@ https://access.mypikpak.com/access_controller/v1/area_accessible url reject
 
 
 # >>>>>>>>>>>>>>> ✅ R ✅ <<<<<<<<<<<<<<
-# Reddit
+# > Reddit
 # hostname = gql.reddit.com, gql-fed.reddit.com
 # 过滤推广 关NSFW提示 感谢【xream】分享
 ^https?:\/\/gql(-fed)?\.reddit\.com url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/reddit.js
@@ -2794,14 +2782,6 @@ https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/user\/follow\/users\/mix
 # > 小米运动
 # hostname = api-mifit*.huami.com
 ^https?:\/\/api-mifit.+?\.huami\.com\/discovery\/mi\/discovery\/.+?_ad\? url reject-200
-#^https?:\/\/(api-mifit|api-mifit-\w+)\.huami\.com\/discovery\/mi\/discovery\/\w+_ad\? url reject
-#^https?:\/\/api-mifit-cn2\.huami\.com\/discovery\/mi\/cards\/startpage_ad url reject
-#^https?:\/\/api-mifit\.huami\.com\/discovery\/mi\/discovery\/homepage_ad\? url reject-img
-#^https?:\/\/api-mifit\.huami\.com\/discovery\/mi\/discovery\/sleep_ad\? url reject-img
-#^https?:\/\/api-mifit\.huami\.com\/discovery\/mi\/discovery\/sport_summary_ad\? url reject-img
-#^https?:\/\/api-mifit\.huami\.com\/discovery\/mi\/discovery\/sport_training_ad\? url reject-img
-#^https?:\/\/api-mifit\.huami\.com\/discovery\/mi\/discovery\/step_detail_ad\? url reject-img
-#^https?:\/\/api-mifit\.huami\.com\/discovery\/mi\/discovery\/training_video_ad\? url reject-img
 
 # > 小米打印
 # hostname = api-miprint.hannto.com, api.indeedpower.com
@@ -3050,8 +3030,9 @@ https://mgesq.api.mgtv.com/dsl/index.+ url script-response-body https://raw.gith
 # hostname = acs.m.taobao.com
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit\/ url reject
 
-# > 下厨房去开屏
+# > 下厨房
 # hostname = *.pglstatp-toutiao.com, res1.hubcloud.com.cn
+# 去开屏
 ^http?:\/\/.*\.pglstatp-toutiao\.com url reject-200
 ^http:\/\/res1\.hubcloud\.com\.cn url reject-200
 
@@ -3718,7 +3699,7 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do url rejec
 # 去主界面广告
 ^https?:\/\/apio\.zhengqi100\.com\/forum\/thread\/listsHome url reject-dict
 
-# > 招财猫直聘 
+# > 招财猫直聘
 # hostname = beehiveapi.58.com
 ^https?:\/\/beehiveapi\.58\.com\/adplace\/zcm url reject-dict
 
