@@ -5,7 +5,8 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/chongxie.txt
 #!tg-group=https://t.me/lanjieguanggao
-#!tag = 去广告, fmz200
+#!category=奶思的模块
+#!tag = 去广告, 奶思
 #!system = iOS, iPadOS
 #!system_version = 
 #!loon_version = 
