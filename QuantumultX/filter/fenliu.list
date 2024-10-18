@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/fenliu.list
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2024-09-15 11:10:00
+#!date=2024-10-18 23:10:00
 #!support=约9392行
 #!proxy-select=reject
 #############################################
@@ -476,7 +476,8 @@ host, msync-im1-vip6-std.easemob.com, REJECT
 host, apd-pcdnwxlogin.teg.tencent-cloud.net, REJECT
 host, api.iegadp.qq.com, REJECT
 host-suffix, byteorge.com, REJECT
-host-suffix, bytegoofy.com, REJECT
+# 下面两条误杀严重导致懂车帝无法正常使用
+#host-suffix, bytegoofy.com, REJECT
 #host-suffix, bytedance.com, REJECT
 IP-CIDR, 49.71.37.101/32, REJECT
 IP-CIDR, 117.71.105.23/32, REJECT
