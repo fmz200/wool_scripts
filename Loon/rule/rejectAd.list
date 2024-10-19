@@ -9,7 +9,7 @@
 #!system = iOS, iPadOS
 #!system_version =
 #!loon_version =
-#!date=2024-09-15 11:10:00
+#!date=2024-10-18 23:10:00
 #!support=约9392行
 #!proxy-select=REJECT
 #############################################
@@ -469,7 +469,8 @@ DOMAIN, api.iegadp.qq.com
 DOMAIN-SUFFIX, novelapp.ixigua.com
 DOMAIN-SUFFIX, default.ixigua.com
 DOMAIN-SUFFIX, byteorge.com
-DOMAIN-SUFFIX, bytegoofy.com
+# 下面两条误杀严重导致懂车帝无法正常使用
+#DOMAIN-SUFFIX, bytegoofy.com
 #DOMAIN-SUFFIX, bytedance.com
 IP-CIDR, 49.71.37.101/32, no-resolve
 IP-CIDR, 117.71.105.23/32, no-resolve
