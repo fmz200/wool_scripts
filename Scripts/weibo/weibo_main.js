@@ -230,6 +230,7 @@ function topicHandler(data) {
 	const items = data.items;
 	if (!items) return data;
 	if (!mainConfig.removeUnfollowTopic && !mainConfig.removeUnusedPart) return data;
+	log('topicHandler process');
 	let newItems = [];
 	for (let c of items) {
 		let addFlag = true;

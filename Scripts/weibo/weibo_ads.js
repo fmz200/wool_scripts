@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 微博去广告
- * @date 2024-10-20 17:18:00
+ * @date 2024-10-20 19:00:00
  */
 
 let url = $request.url;
@@ -82,6 +82,7 @@ try {
         }
         
         const category = item.category;
+        // 第一条微博往下的内容只要不是微博（分类、推广等），全部删除
         if (foundFeed && category !== "feed") {
           resp_data.items[i] = {};
         }
