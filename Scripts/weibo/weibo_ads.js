@@ -76,6 +76,11 @@ try {
       let foundFeed = false;
       for (let i = 0; i < resp_data.items.length; i++) {
         const item = resp_data.items[i];
+        if (item.is_ad === 1 || item.mblogtypename === "广告") {
+          resp_data.items[i] = {};
+          continue;
+        }
+        
         const category = item.category;
         if (foundFeed && category !== "feed") {
           resp_data.items[i] = {};
