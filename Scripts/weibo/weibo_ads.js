@@ -72,7 +72,7 @@ try {
     }
 
     // 8、超话tab页 微博超话tab页 https://api.weibo.cn/2/statuses/container_timeline_topic
-    if (url.includes("/statuses/container_timeline_topic?flowId")) {
+    if (url.includes("/statuses/container_timeline_topic?")) {
       let foundFeed = false;
       for (let i = 0; i < resp_data.items.length; i++) {
         const item = resp_data.items[i];
