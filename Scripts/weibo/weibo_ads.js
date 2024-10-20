@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 微博去广告
- * @date 2024-07-28 21:18:00
+ * @date 2024-10-20 17:18:00
  */
 
 let url = $request.url;
@@ -10,25 +10,25 @@ let resp_data = JSON.parse(body);
 
 try {
     // 1、首次点击发现按钮
-    if (url.includes("/search/finder")) {
+    if (url.includes("/search/finder?")) {
       console.log('进入发现页...');
       processPayload(resp_data.channelInfo.channels[0].payload);
     }
 
     // 2、发现页面刷新/再次点击发现按钮
-    if (url.includes("/search/container_timeline") || url.includes("/search/container_discover")) {
+    if (url.includes("/search/container_timeline?") || url.includes("/search/container_discover?")) {
       console.log('刷新发现页...');
       processPayload(resp_data);
     }
 
     // 3、微博热搜页面刷新
-    if (url.includes("/2/page") && resp_data.cards && resp_data.cards[0].card_group) {
+    if (url.includes("/2/page?") && resp_data.cards && resp_data.cards[0].card_group) {
       resp_data.cards[0].card_group = resp_data.cards[0].card_group.filter(group => group.promotion == null);
       console.log('处理微博热搜页面广告结束💕💕');
     }
 
     // 微博热搜页面 “热搜”tab页 https://api.weibo.cn/2/flowpage
-    if (url.includes("/2/flowpage")) {
+    if (url.includes("/2/flowpage?")) {
       // 删掉Banner图
       resp_data.pageHeader = {};
       for (let subItem of resp_data.items) {
@@ -42,13 +42,13 @@ try {
     }
 
     // 4、微博超话页面 https://api.weibo.cn/2/statuses/container_timeline_topicpage
-    if (url.includes("/statuses/container_timeline_topicpage") && resp_data.items) {
+    if (url.includes("/statuses/container_timeline_topicpage?") && resp_data.items) {
       resp_data.items = resp_data.items.filter(item => !item.data || item.data.mblogtypename !== "广告");
       console.log('处理微博超话页面广告结束💕💕');
     }
 
     // 5、微博详情页面
-    if (url.includes("/statuses/extend")) {
+    if (url.includes("/statuses/extend?")) {
       resp_data.head_cards = [];
       console.log('处理微博详情页面广告结束💕💕');
     }
@@ -61,7 +61,7 @@ try {
     }
 
     // 7、话题页面 微博话题页面 https://api.weibo.cn/2/searchall
-    if (url.includes("/2/searchall")) {
+    if (url.includes("/2/searchall?")) {
       for (let i = 0; i < resp_data.items.length; i++) {
         if (resp_data.items[i].data?.mblogtypename === "广告" || resp_data.items[i].data?.ad_state === 1) {
           console.log('处理话题页面广告');
