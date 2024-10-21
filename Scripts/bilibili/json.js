@@ -1,15 +1,10 @@
-// 2023-12-11 19:20
+// 2024-10-19 12:35
 
 const url = $request.url;
 if (!$response.body) $done({});
 let obj = JSON.parse($response.body);
 
-if (url.includes("/x/resource/show/skin")) {
-  // 皮肤推送
-  if (obj?.data?.common_equip) {
-    delete obj.data.common_equip;
-  }
-} else if (url.includes("/x/resource/show/tab/v2")) {
+if (url.includes("/x/resource/show/tab/v2")) {
   // 底部选项卡
   if (obj?.data?.bottom?.length > 0) {
     const sortLists = ["首页", "动态", "我的"];
@@ -31,9 +26,6 @@ if (url.includes("/x/resource/show/skin")) {
       obj.data.top[0].pos = 1;
     }
   }
-} else if (url.includes("/x/resource/top/activity")) {
-  // 首页右上角活动
-  obj = { code: -404, message: "啥都木有", ttl: 1, data: null };
 } else if (url.includes("/x/v2/account/mine?")) {
   // 我的页面
   const del = ["rework_v1", "vip_section", "vip_section_v2"];
@@ -44,9 +36,7 @@ if (url.includes("/x/resource/show/skin")) {
   if (obj?.data?.sections_v2?.length > 0) {
     let newSects = [];
     for (let item of obj.data.sections_v2) {
-      if (item?.button) {
-        delete item.button;
-      }
+      delete item.button;
       if (item?.style) {
         if (item?.style === 1 || item?.style === 2) {
           if (item?.title) {
@@ -104,10 +94,7 @@ if (url.includes("/x/resource/show/skin")) {
   }
 } else if (url.includes("/x/v2/account/mine/ipad")) {
   // ipad我的页面
-  if (obj?.data?.ipad_upper_sections) {
-    // 投稿 创作首页 稿件管理 有奖活动
-    delete obj.data.ipad_upper_sections;
-  }
+  delete obj.data.ipad_upper_sections; // 投稿 创作首页 稿件管理 有奖活动
   if (obj?.data?.ipad_recommend_sections?.length > 0) {
     // 789我的关注 790我的消息 791我的钱包 792直播中心 793大会员 794我的课程 2542我的游戏
     const itemList = [789, 790];
@@ -131,24 +118,30 @@ if (url.includes("/x/resource/show/skin")) {
 } else if (url.includes("/x/v2/feed/index?")) {
   // 首页推荐信息流
   if (obj?.data?.items?.length > 0) {
-    obj.data.items = obj.data.items.filter(
-      (i) =>
-        !(i.hasOwnProperty("ad_info") || ["ad_", "bangumi", "banner", "game", "ketang", "live", "pgc"]?.includes(i?.card_goto))
-    );
+    // 白名单
+    obj.data.items = obj.data.items.filter((i) => i?.card_goto === "av");
+  }
+  if (obj?.data?.config?.toast?.has_toast) {
+    obj.data.config.toast.has_toast = false;
   }
 } else if (url.includes("/x/v2/feed/index/story")) {
   // 竖屏模式信息流
   if (obj?.data?.items?.length > 0) {
     // vertical_live 直播内容
     // vertical_pgc 大会员专享
-    obj.data.items = obj.data.items.filter(
-      (i) =>
-        !(
-          i.hasOwnProperty("ad_info") ||
-          i.hasOwnProperty("story_cart_icon") ||
-          ["ad", "vertical_live", "vertical_pgc"]?.includes(i?.card_goto)
-        )
-    );
+    let newItems = [];
+    for (let item of obj.data.items) {
+      if (item?.hasOwnProperty("ad_info")) {
+        continue;
+      } else if (["vertical_ad_av", "vertical_live", "vertical_pgc"]?.includes(item?.card_goto)) {
+        continue;
+      } else {
+        delete item.creative_entrance; // 推荐话题搜索框
+        delete item.story_cart_icon; // 相关话题图标
+        newItems.push(item);
+      }
+    }
+    obj.data.items = newItems;
   }
 } else if (url.includes("/x/v2/search/square")) {
   // 搜索框
@@ -205,9 +198,7 @@ if (url.includes("/x/resource/show/skin")) {
   }
 } else if (url.includes("/xlive/app-room/v1/index/getInfoByRoom")) {
   // 直播
-  if (obj?.data?.activity_banner_info) {
-    delete obj.data.activity_banner_info;
-  }
+  delete obj.data.activity_banner_info;
   if (obj?.data?.shopping_info) {
     obj.data.shopping_info = { is_show: 0 };
   }
