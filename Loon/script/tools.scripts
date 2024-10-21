@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/script/tools.scripts
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2024-09-30 23:00:00
+#!date=2024-10-21 19:00:00
 #############################################
 
 generic script-path=https://raw.githubusercontent.com/MCdasheng/Loon/main/Streaming/ChatGPT.js, timeout=10, tag=GPT解锁查询, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/ChatGPT3.png
@@ -14,5 +14,5 @@ generic script-path=https://raw.githubusercontent.com/Loon0x00/LoonScript/main/M
 generic script-path=https://raw.githubusercontent.com/getsomecat/Loon/main/Net_Speedlite.js, tag=网络延迟测试, timeout=10,img-url=bolt.system
 generic script-path=https://github.com/Keywos/rule/raw/main/loon/ipapi2.js, timeout=10, tag=测试位置查询, img-url=location.circle
 generic script-path=https://raw.githubusercontent.com/Loon0x00/LoonExampleConfig/master/Script/generic_example.js, timeout=10, tag=GeoLocation, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ipInfo.png
-generic script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Node_detection_tool/LocationDetection.js, timeout = 10, tag = 地理位置查询, img-url = location.circle.system
-generic script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Node_detection_tool/NodeUnlockDetection.js, timeout = 20, tag = 节点解锁查询, img-url = play.circle.system
+generic script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/tools/LocationDetection.js, timeout = 10, tag = 地理位置查询, img-url = location.circle.system
+generic script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/tools/NodeUnlockDetection.js, timeout = 20, tag = 节点解锁查询, img-url = play.circle.system

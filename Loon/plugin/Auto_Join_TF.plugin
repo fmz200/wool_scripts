@@ -1,0 +1,18 @@
+#!name = 自动加入TestFlight
+#!desc = 自动监控TestFlight名额，一旦有新的名额即刻加入。
+#!author = DecoAri xream
+#!icon = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/erdongchanyo/TestFlight.png
+#!raw-url = https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/Auto_Join_TF.plugin
+#!input = APP_ID
+#!date = 2024-03-07 22:10:30
+
+[Rule]
+DOMAIN, testflight.apple.com, PROXY
+
+[Script]
+http-request ^https?:\/\/testflight\.apple\.com\/v3\/accounts\/.*\/apps$ script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/TestFlight/TF_keys.js, tag = TF信息获取
+http-request ^https://testflight.apple.com/join/(.*) script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/TestFlight/TF_keys.js, tag = APP_ID获取
+cron "*/1 * * * * *" script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/TestFlight/Auto_join_TF.js, tag = 自动加入TF, timeout = 180
+
+[Mitm]
+hostname = testflight.apple.com

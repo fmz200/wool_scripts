@@ -9,7 +9,7 @@
 #!system=iOS, iPadOS
 #!system_version = 
 #!loon_version = 
-#!date=2024-10-18 19:30:00
+#!date=2024-10-21 19:10:00
 #!support=支持约511款APP/小程序
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 #############################################
@@ -3505,37 +3505,37 @@ http-response ^https?:\/\/cupid\.51job(app)?\.com\/open\/noauth\/recommend\/job-
 # >>>>>>>>>>>>>>> ✅ A ✅ <<<<<<<<<<<<<<
 # > 阿里巴巴
 http-response ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.mshow script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cainiao/cainiao.js, requires-body=true, timeout=60, tag=阿里巴巴广告
-http-response ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get) script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body=true, timeout=60, tag=阿里巴巴广告
-http-response ^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body=true, timeout=60, tag=myBlockAds
+http-response ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get) script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/myBlockAds.js, requires-body=true, timeout=60, tag=阿里巴巴广告
+http-response ^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/myBlockAds.js, requires-body=true, timeout=60, tag=myBlockAds
 
 # > 阿里云盘
-http-response ^https:\/\/api\.alipan\.com\/apps\/v2\/users\/home\/(news|widgets) script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/adrive.js, requires-body=true, timeout=60, tag=阿里云盘
-http-response ^https:\/\/member\.alipan\.com\/v1\/users\/onboard_list script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/adrive.js, requires-body=true, timeout=60, tag=阿里云盘
+http-response ^https:\/\/api\.alipan\.com\/apps\/v2\/users\/home\/(news|widgets) script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/adrive/adrive.js, requires-body=true, timeout=60, tag=阿里云盘
+http-response ^https:\/\/member\.alipan\.com\/v1\/users\/onboard_list script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/adrive/adrive.js, requires-body=true, timeout=60, tag=阿里云盘
 
 # > 爱奇艺
 # 首页信息流广告
-http-response ^https?:\/\/[\d\.]+\/3f1\/cards\.iqiyi\.com\/(views_home\/3\.0\/qy_home|waterfall\/3\.0\/feed)\? script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=爱奇艺首页信息流广告
-http-response ^https?:\/\/access\.if\.iqiyi\.com\/3f1\/cards\.iqiyi\.com\/(views_category\/3\.0\/category_home|views_home\/3\.0\/qy_home|waterfall\/3\.0\/feed)\? script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=爱奇艺首页信息流广告
-http-response ^https?:\/\/cards\.iqiyi\.com\/views_category\/3\.0\/(category_home|categorylib_content|film_hybrid)\? script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=爱奇艺首页信息流广告
-http-response ^https?:\/\/cards\.iqiyi\.com\/(views_home\/3\.0\/qy_home|waterfall\/3\.0\/feed)\? script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=爱奇艺首页信息流广告
+http-response ^https?:\/\/[\d\.]+\/3f1\/cards\.iqiyi\.com\/(views_home\/3\.0\/qy_home|waterfall\/3\.0\/feed)\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=爱奇艺首页信息流广告
+http-response ^https?:\/\/access\.if\.iqiyi\.com\/3f1\/cards\.iqiyi\.com\/(views_category\/3\.0\/category_home|views_home\/3\.0\/qy_home|waterfall\/3\.0\/feed)\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=爱奇艺首页信息流广告
+http-response ^https?:\/\/cards\.iqiyi\.com\/views_category\/3\.0\/(category_home|categorylib_content|film_hybrid)\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=爱奇艺首页信息流广告
+http-response ^https?:\/\/cards\.iqiyi\.com\/(views_home\/3\.0\/qy_home|waterfall\/3\.0\/feed)\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=爱奇艺首页信息流广告
 # 播放详情页
-http-response ^https?:\/\/cards\.iqiyi\.com\/views_plt\/3\.0\/player_tabs_v2\? script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=爱奇艺播放详情页广告
+http-response ^https?:\/\/cards\.iqiyi\.com\/views_plt\/3\.0\/player_tabs_v2\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=爱奇艺播放详情页广告
 # 搜索页列表
-http-response ^https?:\/\/cards\.iqiyi\.com\/views_search\/3\.0\/(hot_query_)?search\? script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=爱奇艺搜索页列表广告
+http-response ^https?:\/\/cards\.iqiyi\.com\/views_search\/3\.0\/(hot_query_)?search\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=爱奇艺搜索页列表广告
 # 评论区
-http-response ^https?:\/\/comment-card\.iqiyi\.com\/views_comment\/3\.0\/long_video_comments\? script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=爱奇艺评论区
+http-response ^https?:\/\/comment-card\.iqiyi\.com\/views_comment\/3\.0\/long_video_comments\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=爱奇艺评论区
 # 我的页面菜单
-http-response ^https?:\/\/iface2\.iqiyi\.com\/aggregate\/3\.0\/getMyMenus\? script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=爱奇艺我的页面菜单
+http-response ^https?:\/\/iface2\.iqiyi\.com\/aggregate\/3\.0\/getMyMenus\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=爱奇艺我的页面菜单
 # 首页左上角天气
-http-response ^https?:\/\/iface2\.iqiyi\.com\/control\/3\.0\/init_proxy\? script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=爱奇艺首页左上角天气
+http-response ^https?:\/\/iface2\.iqiyi\.com\/control\/3\.0\/init_proxy\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=爱奇艺首页左上角天气
 # 通用控制,各tab页二楼
-http-response ^https?:\/\/iface2\.iqiyi\.com\/fusion\/3\.0\/common_switch\? script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=爱奇艺通用控制,各tab页二楼
+http-response ^https?:\/\/iface2\.iqiyi\.com\/fusion\/3\.0\/common_switch\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=爱奇艺通用控制,各tab页二楼
 # 底部tab,顶部tab
-http-response ^https?:\/\/iface2\.iqiyi\.com\/views\/3\.0\/(bottom_theme|home_top_menu)\? script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=爱奇艺底部tab,顶部tab
+http-response ^https?:\/\/iface2\.iqiyi\.com\/views\/3\.0\/(bottom_theme|home_top_menu)\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=爱奇艺底部tab,顶部tab
 # 搜索框填充词
-http-response ^https?:\/\/search\.video\.iqiyi\.com\/q\? script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=爱奇艺搜索框填充词
+http-response ^https?:\/\/search\.video\.iqiyi\.com\/q\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=爱奇艺搜索框填充词
 # 开屏广告,播放广告
-http-response ^https?:\/\/(kjp|t7z)\.cupid\.iqiyi\.com\/mixer\? script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=爱奇艺开屏广告,播放广告
+http-response ^https?:\/\/(kjp|t7z)\.cupid\.iqiyi\.com\/mixer\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=爱奇艺开屏广告,播放广告
 
 # > Blued
 # 登录后个人界面广告
@@ -3604,7 +3604,7 @@ http-response ^https:\/\/api\.boohee\.com\/open-interface\/v1\/string\/market_pa
 http-request ^https?:\/\/wrapper\.cyapi\.cn\/v1\/activity\? script-path=http://script.hub/convert/_start_/https://raw.githubusercontent.com/Keywos/rule/main/mocks/caiyun.json/_end_/caiyun.json?type=mock&target-app=loon-plugin, timeout=60, tag=彩云天气
 
 # > 菜鸟裹裹
-http-response ^https?:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$ script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js, timeout=60, tag=菜鸟裹裹
+http-response ^https?:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$ script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/header.js, timeout=60, tag=菜鸟裹裹
 http-response ^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.m?show\.cn script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cainiao/cainiao.js, requires-body=true, timeout=60, tag=菜鸟裹裹
 http-response ^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.(pickup\.empty\.page|protocol\.homepage)\.get\.cn script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cainiao/cainiao.js, requires-body=true, timeout=60, tag=菜鸟裹裹
 # 消息中心
@@ -3657,7 +3657,7 @@ http-response ^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\
 http-response ^https?:\/\/www\.flyert\.com(\.cn)?\/.*plugin script-path=https://raw.githubusercontent.com/zirawell/Ad-Cleaner/main/Collection/js/flyert.js, requires-body=true, timeout=60, tag=飞客茶馆
 
 # > 粉笔
-http-response ^https?:\/\/tiku\.fenbi\.com\/activity\/app\/launcher\? script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/fenbi.js, requires-body=true, timeout=60, tag=粉笔开屏广告
+http-response ^https?:\/\/tiku\.fenbi\.com\/activity\/app\/launcher\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/fenbi.js, requires-body=true, timeout=60, tag=粉笔开屏广告
 
 
 
@@ -3667,7 +3667,7 @@ http-response ^https?:\/\/tiku\.fenbi\.com\/activity\/app\/launcher\? script-pat
 
 # >>>>>>>>>>>>>>> ✅ H ✅ <<<<<<<<<<<<<<
 # > 航旅纵横
-http-response ^http?:\/\/(114\.115\.217\.129)|(home\.umetrip\.com)\/gateway\/api\/umetrip\/native$ script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Umetrip/Umetrip_remove_ads.js, requires-body=true, timeout=60, tag=航旅纵横
+http-response ^http?:\/\/(114\.115\.217\.129)|(home\.umetrip\.com)\/gateway\/api\/umetrip\/native$ script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/Umetrip_remove_ads.js, requires-body=true, timeout=60, tag=航旅纵横
 
 # > 盒马
 http-response ^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.render\.query(index|my)page script-path=https://raw.githubusercontent.com/zirawell/Ad-Cleaner/main/Collection/js/freshippo.js, requires-body=true, timeout=60, tag=盒马
@@ -3682,7 +3682,7 @@ http-response ^https:\/\/saas-ad\.cloudpnr\.com\/huifuad-base-api\/api\/tactics\
 # >>>>>>>>>>>>>>> ✅ I ✅ <<<<<<<<<<<<<<
 # > IT之家
 # 移除 轮播图 置顶文章 信息流广告
-http-response ^https?:\/\/napi\.ithome\.com\/api\/(news\/index|topmenu\/getfeeds) script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/ithome.js, requires-body=true, timeout=60, tag=ithome
+http-response ^https?:\/\/napi\.ithome\.com\/api\/(news\/index|topmenu\/getfeeds) script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ithome/ithome.js, requires-body=true, timeout=60, tag=ithome
 
 
 
@@ -3695,7 +3695,7 @@ http-request ^https?:\/\/yunbusiness\.ccb\.com\/basic_service\/txCtrl\?txcode=A3
 http-response ^https?:\/\/g\.alicdn\.com\/.*o2o-ad script-path=https://raw.githubusercontent.com/zirawell/Ad-Cleaner/main/Collection/js/alicdn.js, requires-body=true, timeout=60, tag=建行生活内置饿了么
 
 # > 京东
-http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome) script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/jingdong.js, requires-body=true, timeout=60, tag=京东
+http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome) script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingdong/jingdong.js, requires-body=true, timeout=60, tag=京东
 
 # > 京喜
 http-response ^https?:\/\/api\.m\.jd\.com\/api\?functionId=delivery_show script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingxiAd.js, requires-body=true, timeout=60, tag=京喜
@@ -3722,12 +3722,12 @@ http-response ^https?:\/\/open\.e\.kuaishou\.com\/rest\/e\/v\d\/open\/univ$ scri
 http-response ^https?:\/\/open-cms-api\.(uc|quark)\.cn\/open-cms script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/quark.js, requires-body=true, timeout=60, tag=夸克
 
 # > 酷我音乐
-http-response ^https?:\/\/(mgxhtj|nmobi|searchrecterm)\.kuwo\.cn\/(mgxh|mobi|recterm)\.s script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js, requires-body=true, timeout=60, tag=酷我音乐
+http-response ^https?:\/\/(mgxhtj|nmobi|searchrecterm)\.kuwo\.cn\/(mgxh|mobi|recterm)\.s script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuwo/kuwo.js, requires-body=true, timeout=60, tag=酷我音乐
 # 会员
-http-response ^https?:\/\/audiobookpay\.kuwo\.cn\/a\.p script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js, requires-body=true, timeout=60, tag=酷我音乐
-http-response ^https?:\/\/musicpay\.kuwo\.cn\/music\.pay script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js, requires-body=true, timeout=60, tag=酷我音乐
-http-response ^https?:\/\/vip1\.kuwo\.cn\/vip\/(enc\/user\/vip\?op=ui|v\d\/theme\?op=gd) script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js, requires-body=true, timeout=60, tag=酷我音乐
-http-response ^https?:\/\/vip1\.kuwo\.cn\/vip\/v\d\/user\/vip\?op=ui script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js, requires-body=true, timeout=60, tag=酷我音乐
+http-response ^https?:\/\/audiobookpay\.kuwo\.cn\/a\.p script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuwo/kuwo.js, requires-body=true, timeout=60, tag=酷我音乐
+http-response ^https?:\/\/musicpay\.kuwo\.cn\/music\.pay script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuwo/kuwo.js, requires-body=true, timeout=60, tag=酷我音乐
+http-response ^https?:\/\/vip1\.kuwo\.cn\/vip\/(enc\/user\/vip\?op=ui|v\d\/theme\?op=gd) script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuwo/kuwo.js, requires-body=true, timeout=60, tag=酷我音乐
+http-response ^https?:\/\/vip1\.kuwo\.cn\/vip\/v\d\/user\/vip\?op=ui script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuwo/kuwo.js, requires-body=true, timeout=60, tag=酷我音乐
 
 # > 快手联盟,优量汇,穿山甲「广告联盟」
 http-response ^https:\/\/(api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/get_ads|open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ$|mi\.gdt\.qq\.com\/gdt_mview\.fcg\?) script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/adsense.js, requires-body=true, timeout=60, tag=快手联盟,优量汇,穿山甲「广告联盟」
@@ -3745,17 +3745,17 @@ http-response ^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/rcg\/index\.html\?c
 
 # > 芒果TV
 # 我的页面
-http-response ^https?:\/\/me\.bz\.mgtv\.com\/v3\/module\/list\? script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=芒果TV我的页面
+http-response ^https?:\/\/me\.bz\.mgtv\.com\/v3\/module\/list\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=芒果TV我的页面
 # 首页信息流,顶部tab
-http-response ^https?:\/\/mob-st\.bz\.mgtv\.com\/odin\/c1\/channel\/index\? script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=芒果TV首页信息流,顶部tab
-http-response ^https?:\/\/dc2?\.bz\.mgtv\.com\/dynamic\/v1\/channel\/(index|vrsList)\/\w script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=芒果TV
+http-response ^https?:\/\/mob-st\.bz\.mgtv\.com\/odin\/c1\/channel\/index\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=芒果TV首页信息流,顶部tab
+http-response ^https?:\/\/dc2?\.bz\.mgtv\.com\/dynamic\/v1\/channel\/(index|vrsList)\/\w script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=芒果TV
 # 底部tab
-http-response ^https?:\/\/mobile\.api\.mgtv\.com\/mobile\/config\? script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=芒果TV底部tab
+http-response ^https?:\/\/mobile\.api\.mgtv\.com\/mobile\/config\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=芒果TV底部tab
 # 播放详情页
-http-response ^https?:\/\/mobile\.api\.mgtv\.com\/v10\/video\/info\? script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=芒果TV播放详情页
-http-response ^https?:\/\/mobile-thor\.api\.mgtv\.com\/v1\/vod\/info\? script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=芒果TV播放详情页
+http-response ^https?:\/\/mobile\.api\.mgtv\.com\/v10\/video\/info\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=芒果TV播放详情页
+http-response ^https?:\/\/mobile-thor\.api\.mgtv\.com\/v1\/vod\/info\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=芒果TV播放详情页
 # 搜索框填充词
-http-response ^https?:\/\/mobileso\.bz\.mgtv\.com\/mobile\/recommend\/v2\? script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=芒果TV搜索框填充词
+http-response ^https?:\/\/mobileso\.bz\.mgtv\.com\/mobile\/recommend\/v2\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=芒果TV搜索框填充词
 
 # > 马蜂窝
 http-response ^https?:\/\/mapi\.mafengwo\.cn\/user\/profile\/get_(list|profile) script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/mafengwo.js, requires-body=true, timeout=60, tag=马蜂窝
@@ -3866,8 +3866,8 @@ http-response ^https?:\/\/www\.1314zhilv\.com\/ltsstnew\/(common\/getJGQIconNew|
 http-request ^https?:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/ script-path=https://raw.githubusercontent.com/NobyDa/Script/master/TestFlight/TestFlightAccount.js, requires-body=true, timeout=60, tag=TestFlight账户管理
 
 # > 淘宝
-http-response ^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get) script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body=true, timeout=60, tag=淘宝
-http-response ^https?:\/\/poplayer\.template\.alibaba\.com\/\w+\.json script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body=true, timeout=60, tag=淘宝
+http-response ^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get) script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/myBlockAds.js, requires-body=true, timeout=60, tag=淘宝
+http-response ^https?:\/\/poplayer\.template\.alibaba\.com\/\w+\.json script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/myBlockAds.js, requires-body=true, timeout=60, tag=淘宝
 
 # > 腾讯新闻
 http-response ^https?:\/\/(news\.ssp\.qq\.com\/app|r\.inews\.qq\.com\/(get(QQNewsUnreadList|TagFeedList)|gw\/page\/event_detail|news_feed\/hot_module_list)) script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/qq-news.js, requires-body=true, timeout=60, tag=腾讯新闻
@@ -3907,7 +3907,7 @@ http-response ^https:\/\/vue3-api\.zhixiny\.cn\/v1\/initui\?key=index script-pat
 
 # >>>>>>>>>>>>>>> ✅ X ✅ <<<<<<<<<<<<<<
 # > 小米商城
-http-response ^https?:\/\/api\.m\.mi\.com\/v1\/app\/start script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body=true, timeout=60, tag=小米商城
+http-response ^https?:\/\/api\.m\.mi\.com\/v1\/app\/start script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/myBlockAds.js, requires-body=true, timeout=60, tag=小米商城
 
 # > 小兔充充
 http-response ^https?:\/\/mapi\.xiaotucc\.com\/(mall\/main|main_page\/index\/getActivity) script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaotucc.js, requires-body=true, timeout=60, tag=小兔充充
@@ -3969,17 +3969,17 @@ http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(account\/get_
 
 # > 优酷
 # 播放详情页,首页信息流,顶部tab,我的页面,评论区
-http-response ^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.columbus\.(gateway\.new\.execute|home\.feed|home\.query|uc\.query|ycp\.query) script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=优酷
+http-response ^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.columbus\.(gateway\.new\.execute|home\.feed|home\.query|uc\.query|ycp\.query) script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=优酷
 # 底部tab
-http-response ^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.haidai\.lantern\.appconfig\.get script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=优酷底部tab
+http-response ^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.haidai\.lantern\.appconfig\.get script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=优酷底部tab
 # 青少年模式弹窗
-http-response ^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.huluwa\.dispatcher\.youthmode\.config2 script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=优酷青少年模式弹窗
+http-response ^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.huluwa\.dispatcher\.youthmode\.config2 script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=优酷青少年模式弹窗
 # 搜索列表
-http-response ^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.soku\.yksearch script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=优酷搜索列表
+http-response ^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.soku\.yksearch script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=优酷搜索列表
 # 热剧弹窗
-http-response ^https?:\/\/push\.m\.youku\.com\/collect-api\/get_push_interval_config_wx\? script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=优酷热剧弹窗
+http-response ^https?:\/\/push\.m\.youku\.com\/collect-api\/get_push_interval_config_wx\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=优酷热剧弹窗
 # 开屏广告
-http-response ^https?:\/\/un-acs\.youku\.com\/gw\/mtop\.youku\.play\.ups\.appinfo\.get script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=优酷开屏广告
+http-response ^https?:\/\/un-acs\.youku\.com\/gw\/mtop\.youku\.play\.ups\.appinfo\.get script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=优酷开屏广告
 
 # > 悠洗APP
 http-response ^https?:\/\/api\.ulife\.group\/market\/homeIconDetail\/list\/v7 script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/yx.js, requires-body=true, timeout=60, tag=悠洗APP
@@ -3992,21 +3992,21 @@ http-response ^https?:\/\/zgrb\.epicc\.com\.cn\/G-HAPP\/mpageconfig\/myPageConfi
 
 # > 知乎
 # 首页 - 悬浮图标、顶部横幅、开屏广告、关注页推荐、推荐信息流、热榜信息流、热榜直播、回答底部卡片、精简顶部标签
-http-response ^https:\/\/(?:api|page-info)\.zhihu\.com\/(?:answers|articles)\/v2\/\d+ script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/zhihu.js, requires-body = true, tag = 知乎移除首页推广
-http-response ^https:\/\/api\.zhihu\.com\/commercial_api\/app_float_layer script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/zhihu.js, requires-body = true, tag = 知乎移除首页推广
-http-response ^https:\/\/api\.zhihu\.com\/feed\/render\/tab\/config\? script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/zhihu.js, requires-body = true, tag = 知乎移除首页推广
-http-response ^https:\/\/api\.zhihu\.com\/(?:moments_v3|topstory\/hot-lists\/total|topstory\/recommend) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/zhihu.js, requires-body = true, tag = 知乎移除首页推广
-http-response ^https:\/\/api\.zhihu\.com\/root\/tab script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/zhihu.js, requires-body = true, tag = 知乎精简顶部标签
-http-response ^https:\/\/api\.zhihu\.com\/v2\/topstory\/hot-lists\/everyone-seeing\? script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/zhihu.js, requires-body = true, tag = 知乎移除首页推广
+http-response ^https:\/\/(?:api|page-info)\.zhihu\.com\/(?:answers|articles)\/v2\/\d+ script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/zhihu/zhihu.js, requires-body = true, tag = 知乎移除首页推广
+http-response ^https:\/\/api\.zhihu\.com\/commercial_api\/app_float_layer script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/zhihu/zhihu.js, requires-body = true, tag = 知乎移除首页推广
+http-response ^https:\/\/api\.zhihu\.com\/feed\/render\/tab\/config\? script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/zhihu/zhihu.js, requires-body = true, tag = 知乎移除首页推广
+http-response ^https:\/\/api\.zhihu\.com\/(?:moments_v3|topstory\/hot-lists\/total|topstory\/recommend) script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/zhihu/zhihu.js, requires-body = true, tag = 知乎移除首页推广
+http-response ^https:\/\/api\.zhihu\.com\/root\/tab script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/zhihu/zhihu.js, requires-body = true, tag = 知乎精简顶部标签
+http-response ^https:\/\/api\.zhihu\.com\/v2\/topstory\/hot-lists\/everyone-seeing\? script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/zhihu/zhihu.js, requires-body = true, tag = 知乎移除首页推广
 # 会员页面 - 弹窗、悬浮动图
-http-response ^https:\/\/api\.zhihu\.com\/bazaar\/vip_tab\/header\? script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/zhihu.js, requires-body = true, tag = 知乎移除会员页面推广
+http-response ^https:\/\/api\.zhihu\.com\/bazaar\/vip_tab\/header\? script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/zhihu/zhihu.js, requires-body = true, tag = 知乎移除会员页面推广
 # 回答详情页 - 评论区顶部、下一个回答
-http-response ^https:\/\/api\.zhihu\.com\/next-(?:bff|data|render) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/zhihu.js, requires-body = true, tag = 知乎移除回答详情页推广
-http-response ^https:\/\/api\.zhihu\.com\/questions\/\d+(?:\/answers|\/feeds|\?include=) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/zhihu.js, requires-body = true, tag = 知乎移除回答详情页推广
-http-response ^https:\/\/www\.zhihu\.com\/api\/v4\/(?:articles|answers)\/\d+\/recommendations?\? script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/zhihu.js, requires-body = true, tag = 知乎移除回答详情页推广
+http-response ^https:\/\/api\.zhihu\.com\/next-(?:bff|data|render) script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/zhihu/zhihu.js, requires-body = true, tag = 知乎移除回答详情页推广
+http-response ^https:\/\/api\.zhihu\.com\/questions\/\d+(?:\/answers|\/feeds|\?include=) script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/zhihu/zhihu.js, requires-body = true, tag = 知乎移除回答详情页推广
+http-response ^https:\/\/www\.zhihu\.com\/api\/v4\/(?:articles|answers)\/\d+\/recommendations?\? script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/zhihu/zhihu.js, requires-body = true, tag = 知乎移除回答详情页推广
 # 其他 - 服务器推送配置
-http-response ^https:\/\/appcloud2\.zhihu\.com\/v3\/config script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/zhihu.js, requires-body = true, tag = 知乎拦截服务器推送配置
-http-response ^https:\/\/m-cloud\.zhihu\.com\/api\/cloud\/config\/all\? script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/zhihu.js, requires-body = true, tag = 知乎拦截服务器推送配置
+http-response ^https:\/\/appcloud2\.zhihu\.com\/v3\/config script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/zhihu/zhihu.js, requires-body = true, tag = 知乎拦截服务器推送配置
+http-response ^https:\/\/m-cloud\.zhihu\.com\/api\/cloud\/config\/all\? script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/zhihu/zhihu.js, requires-body = true, tag = 知乎拦截服务器推送配置
 
 # > 掌上公交
 http-response ^https?:\/\/wx\.mygolbs\.com\/WxBusServer\/ApiData\.do script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/zhangshanggongjiao.js, requires-body=true, timeout=60, tag=掌上公交小程序广告
