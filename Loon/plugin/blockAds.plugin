@@ -3504,7 +3504,7 @@ http-response ^https?:\/\/cupid\.51job(app)?\.com\/open\/noauth\/recommend\/job-
 
 # >>>>>>>>>>>>>>> ✅ A ✅ <<<<<<<<<<<<<<
 # > 阿里巴巴
-http-response ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.mshow script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js, requires-body=true, timeout=60, tag=阿里巴巴广告
+http-response ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.mshow script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cainiao/cainiao.js, requires-body=true, timeout=60, tag=阿里巴巴广告
 http-response ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get) script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body=true, timeout=60, tag=阿里巴巴广告
 http-response ^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body=true, timeout=60, tag=myBlockAds
 
@@ -3550,40 +3550,40 @@ http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|t
 
 # > 哔哩哔哩
 # 移除动态页面广告
-http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.dynamic\.v2\.Dynamic\/DynAll$ script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/bilibili/protoC.js, requires-body = true, binary-body-mode = true, tag = 哔哩哔哩移除动态页面广告
+http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.dynamic\.v2\.Dynamic\/DynAll$ script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/protoC.js, requires-body = true, binary-body-mode = true, tag = 哔哩哔哩移除动态页面广告
 # 移除青少年模式弹窗
-http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.interface\.v1\.Teenagers\/ModeStatus script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/bilibili/protoC.js, requires-body = true, binary-body-mode = true, tag = 哔哩哔哩移除青少年模式弹窗
+http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.interface\.v1\.Teenagers\/ModeStatus script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/protoC.js, requires-body = true, binary-body-mode = true, tag = 哔哩哔哩移除青少年模式弹窗
 # 移除热门话题
-http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.show\.v1\.Popular\/Index$ script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/bilibili/protoC.js, requires-body = true, binary-body-mode = true, tag = 哔哩哔哩移除热门话题
+http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.show\.v1\.Popular\/Index$ script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/protoC.js, requires-body = true, binary-body-mode = true, tag = 哔哩哔哩移除热门话题
 # 移除播放页面视频列表广告
-http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.(?:view|viewunite)\.v1\.View\/(?:View|ViewProgress)$ script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/bilibili/protoC.js, requires-body = true, binary-body-mode = true, tag = 哔哩哔哩移除播放页面视频列表广告
+http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.(?:view|viewunite)\.v1\.View\/(?:View|ViewProgress)$ script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/protoC.js, requires-body = true, binary-body-mode = true, tag = 哔哩哔哩移除播放页面视频列表广告
 # 会员特效弹幕处理
-http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.community\.service\.dm\.v1\.DM\/DmSegMobile script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/bilibili/protoC.js, requires-body = true, binary-body-mode = true, tag = 哔哩哔哩会员特效弹幕处理
+http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.community\.service\.dm\.v1\.DM\/DmSegMobile script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/protoC.js, requires-body = true, binary-body-mode = true, tag = 哔哩哔哩会员特效弹幕处理
 # 移除交互式弹幕
-http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.community\.service\.dm\.v1\.DM\/DmView script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/bilibili/protoC.js, requires-body = true, binary-body-mode = true, tag = 哔哩哔哩移除交互式弹幕
+http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.community\.service\.dm\.v1\.DM\/DmView script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/protoC.js, requires-body = true, binary-body-mode = true, tag = 哔哩哔哩移除交互式弹幕
 # 移除评论区广告
-http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.main\.community\.reply\.v1\.Reply\/MainList script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/bilibili/protoC.js, requires-body = true, binary-body-mode = true, tag = 哔哩哔哩移除评论区广告
+http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.main\.community\.reply\.v1\.Reply\/MainList script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/protoC.js, requires-body = true, binary-body-mode = true, tag = 哔哩哔哩移除评论区广告
 # 移除搜索结果广告
-http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.polymer\.app\.search\.v1\.Search\/SearchAll$ script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/bilibili/protoC.js, requires-body = true, binary-body-mode = true, tag = 哔哩哔哩移除搜索结果广告
+http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.polymer\.app\.search\.v1\.Search\/SearchAll$ script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/protoC.js, requires-body = true, binary-body-mode = true, tag = 哔哩哔哩移除搜索结果广告
 # 上部为Proto处理,下部为JSON配置处理
 # 移除开屏广告
-http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/(?:brand\/list|event\/list2|list|show) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/bilibili/json.js, requires-body = true, tag = 哔哩哔哩移除开屏广告
+http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/(?:brand\/list|event\/list2|list|show) script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/json.js, requires-body = true, tag = 哔哩哔哩移除开屏广告
 # 移除首页推荐广告
-http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index(\/story)?\? script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/bilibili/json.js, requires-body = true, tag = 哔哩哔哩移除首页推荐广告
+http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index(\/story)?\? script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/json.js, requires-body = true, tag = 哔哩哔哩移除首页推荐广告
 # 移除右上角活动入口
-http-response ^https:\/\/app\.bilibili\.com\/x\/resource\/top\/activity\? script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/bilibili/json.js, requires-body = true, tag = 哔哩哔哩移除右上角活动入口
+http-response ^https:\/\/app\.bilibili\.com\/x\/resource\/top\/activity\? script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/json.js, requires-body = true, tag = 哔哩哔哩移除右上角活动入口
 # 精简首页顶部标签
-http-response ^https:\/\/app\.bilibili\.com\/x\/resource\/show\/tab\/v2\? script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/bilibili/json.js, requires-body = true, tag = 哔哩哔哩精简首页顶部标签
+http-response ^https:\/\/app\.bilibili\.com\/x\/resource\/show\/tab\/v2\? script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/json.js, requires-body = true, tag = 哔哩哔哩精简首页顶部标签
 # 移除热搜广告
-http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/search\/square script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/bilibili/json.js, requires-body = true, tag = 哔哩哔哩移除热搜广告
+http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/search\/square script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/json.js, requires-body = true, tag = 哔哩哔哩移除热搜广告
 # 移除观影页广告
-http-response ^https:\/\/api\.bilibili\.com\/pgc\/page\/(?:bangumi|cinema\/tab) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/bilibili/json.js, requires-body = true, tag = 哔哩哔哩移除观影页广告
+http-response ^https:\/\/api\.bilibili\.com\/pgc\/page\/(?:bangumi|cinema\/tab) script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/json.js, requires-body = true, tag = 哔哩哔哩移除观影页广告
 # 移除直播间广告
-http-response ^https:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom\? script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/bilibili/json.js, requires-body = true, tag = 哔哩哔哩移除直播间广告
+http-response ^https:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom\? script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/json.js, requires-body = true, tag = 哔哩哔哩移除直播间广告
 # 移除皮肤推送
-http-response ^https:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\? script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/bilibili/json.js, requires-body = true, tag = 哔哩哔哩移除皮肤推送
+http-response ^https:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\? script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/json.js, requires-body = true, tag = 哔哩哔哩移除皮肤推送
 # 精简我的页面
-http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/(?:mine(\/ipad)?|myinfo) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/bilibili/json.js, requires-body = true, tag = 哔哩哔哩精简我的页面
+http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/(?:mine(\/ipad)?|myinfo) script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/json.js, requires-body = true, tag = 哔哩哔哩精简我的页面
 
 # > 哔哩哔哩漫画
 http-response ^https?:\/\/manga\.bilibili\.com\/twirp\/user\.v\d\.User\/UCenterConf script-path=https://raw.githubusercontent.com/zirawell/Ad-Cleaner/main/Collection/js/bilibiliManga.js, requires-body=true, timeout=60, tag=哔哩哔哩漫画
@@ -3605,10 +3605,10 @@ http-request ^https?:\/\/wrapper\.cyapi\.cn\/v1\/activity\? script-path=http://s
 
 # > 菜鸟裹裹
 http-response ^https?:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$ script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js, timeout=60, tag=菜鸟裹裹
-http-response ^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.m?show\.cn script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js, requires-body=true, timeout=60, tag=菜鸟裹裹
-http-response ^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.(pickup\.empty\.page|protocol\.homepage)\.get\.cn script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js, requires-body=true, timeout=60, tag=菜鸟裹裹
+http-response ^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.m?show\.cn script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cainiao/cainiao.js, requires-body=true, timeout=60, tag=菜鸟裹裹
+http-response ^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.(pickup\.empty\.page|protocol\.homepage)\.get\.cn script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cainiao/cainiao.js, requires-body=true, timeout=60, tag=菜鸟裹裹
 # 消息中心
-http-response ^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.nbfriend\.message\.conversation\.list\.cn script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js, requires-body=true, timeout=60, tag=菜鸟裹裹
+http-response ^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.nbfriend\.message\.conversation\.list\.cn script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cainiao/cainiao.js, requires-body=true, timeout=60, tag=菜鸟裹裹
 
 # > 财新
 http-response ^https?:\/\/gg\.caixin\.com\/s\?z=caixin&op=1&c=3362 script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/caixin/caixinAd.js, requires-body=true, timeout=60, tag=财新广告
