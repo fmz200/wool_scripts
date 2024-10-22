@@ -1110,7 +1110,7 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 ^https?:\/\/api\.touker\.com\/v2\/IAdvertisementAPI\.queryStartAdvertisement reject-200
 
 # > 航旅纵横
-# > hostname = home.umetrip.com, discardrp.umetrip.com, startup.umetrip.com
+# hostname = home.umetrip.com, discardrp.umetrip.com, startup.umetrip.com
 ^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native reject
 
 # > 汇丰汇选
@@ -1930,9 +1930,9 @@ https://access.mypikpak.com/access_controller/v1/area_accessible reject
 
 # > 人人视频
 # hostname = api.rr.tv
-# > RRTV_屏蔽軟件更新
+# RRTV_屏蔽軟件更新
 ^https?:\/\/api\.rr\.tv\/.*?Version reject
-# > RRTV_屏蔽限時彈窗
+# RRTV_屏蔽限時彈窗
 https://api.rr.tv/storage/business/rootName/app/homePage\?dataType=JSON reject-dict
 
 # > 日日煮
