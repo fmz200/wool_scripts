@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 微博去广告
- * @date 2024-10-20 19:00:00
+ * @date 2024-10-23 21:40:00
  */
 
 let url = $request.url;
@@ -74,14 +74,21 @@ try {
     // 8、超话tab页 微博超话tab页 https://api.weibo.cn/2/statuses/container_timeline_topic
     if (url.includes("/statuses/container_timeline_topic?")) {
       let foundFeed = false;
+      const cardTypes = [19, 179]; // 19：热帖/必刷/分类，31：热搜词，179：关注的超话
       for (let i = 0; i < resp_data.items.length; i++) {
         const item = resp_data.items[i];
-        if (item.is_ad === 1 || item.mblogtypename === "广告") {
+        if (item.data?.is_ad === 1 || item.data?.mblogtypename === "广告") {
           resp_data.items[i] = {};
           continue;
         }
         
-        const category = item.category;
+        const category = item.category; // feed/card/group
+        const cardType = item.data?.card_type || "";
+        if (cardTypes.includes(cardType)) {
+          console.log(`保留的card_type = ${cardType}`);
+          continue;
+        }
+        
         // 第一条微博往下的内容只要不是微博（分类、推广等），全部删除
         if (foundFeed && category !== "feed") {
           resp_data.items[i] = {};
