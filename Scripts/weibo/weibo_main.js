@@ -34,6 +34,7 @@ const mainConfig = storeMainConfig ? JSON.parse(storeMainConfig) : {
 
 	removeInterestFriendInTopic: false,		//超话：超话里的好友
 	removeInterestTopic: false,				//超话：可能感兴趣的超话 + 好友关注
+	removeUnfollowTopic: true,				//超话：未关注的超话
 	removeInterestUser: false,				//用户页：可能感兴趣的人
 
 	removeLvZhou: false,					//绿洲模块
