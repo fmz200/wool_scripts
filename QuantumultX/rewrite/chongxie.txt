@@ -1312,6 +1312,10 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 # hostname = explorer.tratao.com
 ^https?:\/\/explorer\.tratao\.com\/api\/client\/v4\/xtransfer\/ad\/ url reject
 
+# > 锦江荟APP
+# hostname = booking.bestwehotel.com
+^https:\/\/booking\.bestwehotel\.com\/proxy\/trip-hotel-banner\/activity\/getActivityInfo url reject-200
+
 
 
 # >>>>>>>>>>>>>>> ✅ K ✅ <<<<<<<<<<<<<<
