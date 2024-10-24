@@ -3660,7 +3660,7 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do url rejec
 # 开屏广告 感谢【𝑨梦 𝑪𝒉𝒙𝒎𝟏𝟎𝟐𝟑】分享
 ^https?:\/\/us\.l\.qq\.com\/exapp url reject-200
 ^https?:\/\/ossweb-img\.qq\.com\/upload\/adw\/image\/[0-9]{3}\/202[0-9]{5}\/[a-z0-9]{32}\.(jpg|jpeg) url reject-200
-^https?:\/\/mlol\.qt\.qq\.com\/go\/recommend url reject
+^https?:\/\/mlol\.qt\.qq\.com\/go\/recommend\/(?!v2\/platactivity.*) url reject
 
 # > 浙里办
 # hostname = portal.zjzwfw.gov.cn
