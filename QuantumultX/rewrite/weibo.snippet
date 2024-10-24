@@ -54,22 +54,22 @@ hostname = *.weibo.cn, *.weibo.com, weibo.com
 ^https?:\/\/m?api\.weibo\.c(n|om)\/2\/!\/huati\/discovery_home_bottom_getdotinfo Weibo url-and-header reject
 
 # 微博移除发现页广告
-^https?:\/\/m?api\.weibo\.c(n|om)\/2\/search\/(finder|container_timeline|container_discover) Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/2\/search\/(finder|container_timeline|container_discover)\? Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
 
 # 微博热搜页面广告
-^https?:\/\/m?api\.weibo\.c(n|om)\/2\/(page|flowpage) Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/2\/(page|flowpage)\? Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
 
 # 微博话题页面广告
-^https?:\/\/m?api\.weibo\.c(n|om)\/2\/searchall Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/2\/searchall\? Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
 
 # 微博超话页面广告
-^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/container_timeline_topicpage Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/container_timeline_topicpage\? Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
 
 # 微博超话tab页净化
-^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/container_timeline_topic\?flowId Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/container_timeline_topic\? Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
 
 # 微博详情页面广告
-^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/extend Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/extend\? Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
 
 # 微博最顶部的tab页分组
 ^https?:\/\/m?api\.weibo\.c(n|om)\/2\/groups\/allgroups\/v2 Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
