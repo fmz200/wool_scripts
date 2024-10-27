@@ -135,6 +135,7 @@
 
 | # | 配置类型 | 配置名称               | 配置链接                                                                                             | 作者                                  | 特别说明                               | 使用教程 |
 |---|------|--------------------|--------------------------------------------------------------------------------------------------|-------------------------------------|------------------------------------|------|
+| # | 全局配置 | `懒人配置`             | [Loon.conf](https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/config/Loon.conf)    | [fmz200](https://github.com/fmz200) | 下载此文件会覆盖原本所有配置，小白慎用                | 暂无   |
 | # | 插件   | `微博去广告`            | [weibo.plugin](https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/weibo.plugin)         | [fmz200](https://github.com/fmz200) | 可能有遗漏                              | 暂无   |
 | # | 插件   | `去广告合集`            | [blockAds.plugin](https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/blockAds.plugin)   | [fmz200](https://github.com/fmz200) | (支持约538款APP/小程序)针对部分APP和小程序广告进行拦截  | 暂无   |
 | # | 插件   | `获取cookie&token合集` | [cookies.plugin](https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/cookies.plugin)     | [fmz200](https://github.com/fmz200) | 包含fmz200/NobyDa/chavyleung/Sunert等 | 暂无   |
