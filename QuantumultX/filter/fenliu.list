@@ -640,6 +640,7 @@ host-suffix, img-x.jd.com, reject
 host-suffix, du.jd.com, reject
 host-suffix, c-nfa.jd.com, reject
 host-suffix, cm.jd.com, reject
+host-suffix, jddebug.com, reject
 host-keyword, policy.jd.com, reject
 host-keyword, kepler.jd.com, reject
 host-keyword, bdsp.x.jd.com, reject
