@@ -10,7 +10,7 @@
 #!system = iOS, iPadOS
 #!system_version = 
 #!loon_version = 
-#!date=2024-10-25 20:10:00
+#!date=2024-10-28 12:30:00
 #!support=支持约511款APP/小程序
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 #############################################
@@ -634,6 +634,8 @@ http:\/\/ad\.myfriday\.cn\/d\/json\/1\.1 url reject
 ^https?:\/\/appdmkj\.5idream\.net\/appPic\/homepage url reject-dict
 # 更新弹窗 感谢【企鹅】分享
 ^https?:\/\/appdmkj\.5idream\.net\/v2\/login\/message\/tip url reject-dict
+# 我的页面广告
+^https?:\/\/appdmkj\.5idream\.net\/v3\/user\/advertising\/list url reject-dict
 
 # > 低端影视
 # hostname = img.ddrk.me, ddrk.me
