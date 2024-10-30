@@ -9,7 +9,7 @@
 #!system=iOS, iPadOS
 #!system_version = 
 #!loon_version = 
-#!date=2024-10-28 12:30:00
+#!date=2024-10-29 21:30:00
 #!support=支持约511款APP/小程序
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 #############################################
@@ -3632,18 +3632,18 @@ http-response ^https?:\/\/img\.meituan\.net\/dpmobile\/ script-path=https://raw.
 http-response ^https?:\/\/api\.gamer\.com\.tw\/mobile_app\/anime\/v\d/(token|m3u8).php\? script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Bahamut/BahamutAnimeAds.js, requires-body=true, timeout=60, tag=动画疯
 
 # > 滴滴出行
-http-response ^https?:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, timeout=60, tag=滴滴出行
-http-response ^https?:\/\/freight\.xiaojukeji\.com\/gateway script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, timeout=60, tag=滴滴出行
-http-response ^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/xpget script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, timeout=60, tag=滴滴出行
-http-response ^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, timeout=60, tag=滴滴出行
-http-response ^https?:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/other\/fast script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, timeout=60, tag=滴滴出行
-http-response ^https?:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/core script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, timeout=60, tag=滴滴出行
-http-response ^https?:\/\/conf\.diditaxi\.com\.cn\/dynamic\/conf script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, timeout=60, tag=滴滴出行
-http-response ^https?:\/\/common\.diditaxi\.com\.cn\/common\/v\d\/usercenter\/me script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, timeout=60, tag=滴滴出行
-http-response ^https?:\/\/daijia\.kuaidadi\.com\/gateway script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, timeout=60, tag=滴滴出行
-http-response ^https?:\/\/daijia\.kuaidadi\.com:443\/gateway script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body=true, timeout=60, tag=滴滴出行
+http-response ^https?:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, timeout=60, tag=滴滴出行
+http-response ^https?:\/\/freight\.xiaojukeji\.com\/gateway script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, timeout=60, tag=滴滴出行
+http-response ^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/xpget script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, timeout=60, tag=滴滴出行
+http-response ^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, timeout=60, tag=滴滴出行
+http-response ^https?:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/other\/fast script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, timeout=60, tag=滴滴出行
+#http-response ^https?:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/core script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, timeout=60, tag=滴滴出行
+http-response ^https?:\/\/conf\.diditaxi\.com\.cn\/dynamic\/conf script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, timeout=60, tag=滴滴出行
+http-response ^https?:\/\/common\.diditaxi\.com\.cn\/common\/v\d\/usercenter\/me script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, timeout=60, tag=滴滴出行
+http-response ^https?:\/\/daijia\.kuaidadi\.com\/gateway script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, timeout=60, tag=滴滴出行
+http-response ^https?:\/\/daijia\.kuaidadi\.com:443\/gateway script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, timeout=60, tag=滴滴出行
 # 微信小程序个人中心净化 感谢【TEXAS】分享
-http-response ^https?:\/\/common\.diditaxi\.com\.cn\/common\/v5 script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didi.js, requires-body=true, timeout=60, tag=微信小程序个人中心净化
+http-response ^https?:\/\/common\.diditaxi\.com\.cn\/common\/v5 script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, timeout=60, tag=微信小程序个人中心净化
 
 # > 电影猎手
 # hostname = app-v1.ecoliving168.com
