@@ -1,7 +1,7 @@
 /**
  * @auther @fmz200
  * @function 微博去广告
- * @date 2024-07-24 21:00:00
+ * @date 2024-10-31 11:00:00
  * @quote zmqcherish
  */
 
@@ -95,10 +95,10 @@ const otherUrls = {
 	'/search/container_discover': 'removeSearch',
 	'/2/messageflow': 'removeMsgAd',
 	'/2/page?': 'removePage',	//超话签到的按钮 /2/page/button 加?区别
-	'/statuses/container_timeline_topic': 'topicHandler',	//超话tab
+	'/statuses/container_timeline_topic?': 'topicHandler',	//超话tab
 	'/statuses/container_timeline?': 'removeMain',	//首页
 	'/statuses/container_timeline_unread': 'removeMain',	//首页
-	'/statuses/container_timeline_hot': 'removeMain',	//推荐页，fmz200
+	'/statuses/container_timeline_hot?': 'removeMain',	//推荐页，fmz200
 	'/statuses/repost_timeline': 'removeRepost',	//转发流
 }
 
