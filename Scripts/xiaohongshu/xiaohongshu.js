@@ -193,7 +193,7 @@ if (url.includes("/v4/note/videofeed")) {
     $.setdata(JSON.stringify(newDatas), "redBookVideoFeed"); // 普通视频 写入持久化存储
   }
   let cache = $.getdata("redBookVideoFeedUnlock");
-  let videoFeedUnlock = cache ? JSON.parse(cache) : {}; // 禁止保存的视频 读取持久化存储
+  let videoFeedUnlock = {notSave: "fmz200"}; // 禁止保存的视频 读取持久化存储
   if (videoFeedUnlock?.notSave === "fmz200") {
     if (obj?.data?.length > 0) {
       for (let item of obj.data) {
