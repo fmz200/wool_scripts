@@ -166,6 +166,7 @@ if (url.includes("/v4/note/videofeed")) {
   if (obj?.data?.length > 0) {
     for (let item of obj.data) {
 // 检查function_entries中的每一个元素的type属性是否等于"video_download"
+console.log("检查是否有下载按钮")
 let found = false;
 for (let entry of item.share_info.function_entries) {
     if (entry.type === "video_download") {
@@ -176,6 +177,7 @@ for (let entry of item.share_info.function_entries) {
 
 // 如果没有匹配到，则添加一个新的元素
 if (!found) {
+  console.log("添加下载按钮")
     item.share_info.function_entries.push({
         "type": "video_download"
     });
@@ -191,7 +193,7 @@ if (!found) {
     }
     $.setdata(JSON.stringify(newDatas), "redBookVideoFeed"); // 普通视频 写入持久化存储
   }
-  let videoFeedUnlock = JSON.parse($.getdata("redBookVideoFeedUnlock")); // 禁止保存的视频 读取持久化存储
+  let videoFeedUnlock = JSON.parse($.getdata("redBookVideoFeedUnlock") || { notSave: "fmz200" }); // 禁止保存的视频 读取持久化存储
   if (videoFeedUnlock?.notSave === "fmz200") {
     if (obj?.data?.length > 0) {
       for (let item of obj.data) {
