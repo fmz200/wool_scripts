@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/script/tasks.scripts
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2024-09-09 23:35:00
+#!date=2024-11-10 15:00:00
 #############################################
 # 配置语法 脚本默认执行超时时间200s
 # cron "0 8 * * *" script-path=cron.js,tag = cronScript,timeout = 300,argument = "1234",enable=true
@@ -18,6 +18,7 @@ cron "30 1,7,12,18,22 * * *" script-path=https://raw.githubusercontent.com/fmz20
 cron "22 7 * * *" script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/macat/macat_signin.js, timeout=10, tag=马克喵签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Macat.png, enable=false
 cron "17 7 * * *" script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jhsh_checkIn.js, timeout=300, tag=建行生活签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ccbLife.jpg, enable=false
 cron "17 7 * * *" script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xxyx/xxyx_signin.js, timeout=300, tag=晓晓优选每日任务, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/xxyx_01.jpeg, enable=false
+cron "17 7 * * *" script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/chery/cheryAppSignin.js, timeout=300, tag=奇瑞汽车App签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/chery.png, enable=false
 cron "15 7 * * *" script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/douyu/yubaSign.js, timeout=300, tag=斗鱼鱼吧签到, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/douyu.png, enable=false
 cron "19 7 * * *" script-path=https://raw.githubusercontent.com/toulanboy/scripts/master/weibo/weibotalk.js, timeout=300, tag=微博超话, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/WeiboTalk.png, enable=true
 cron "1 0 * * *" script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, timeout=300, tag=高德地图打车签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/GaodeMap.jpg, enable=false
