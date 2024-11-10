@@ -5,7 +5,7 @@
   "icon": "https://avatars.githubusercontent.com/u/57740735?s=60&v=4",
   "repo": "https://github.com/fmz200/wool_scripts",
   "desc": "订阅大多都支持多账号，协定数据格式如下：有主键的用JSON，没有主键的拼接用#分割用@。\n例如{\"uid1\": \"token1\", \"uid2\": \"token2\",\"uid3\": \"token3\"}和uid1#token1@uid2#token2@uid3#token3",
-  "date": "更新日期：2024-07-29 21:00:00",
+  "date": "更新日期：2024-11-10 15:00:00",
   "apps": [
     {
       "id": "fmz200_aliyun",
@@ -280,6 +280,39 @@
       "icons": [
         "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/xxyx.jpeg",
         "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/xxyx.jpeg"
+      ]
+    },
+    {
+      "id": "fmz200_chery_account",
+      "name": "奇瑞汽车App签到",
+      "keys": [
+        "fmz200_chery_account"
+      ],
+      "descs_html": [
+        "打开APP点击“我的”页面获取，可到代理工具脚本日志中查看token"
+      ],
+      "settings": [
+        {
+          "id": "fmz200_chery_account",
+          "name": "",
+          "val": "",
+          "desc": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 8
+        }
+      ],
+      "author": "@fmz200",
+      "repo": "https://github.com/fmz200/wool_scripts",
+      "scripts": [
+        {
+          "name": "奇瑞汽车App签到",
+          "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/chery/cheryAppSignin.js"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/chery.png",
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/chery.png"
       ]
     },
     {
