@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 小红书去广告、净化、解除下载限制、画质增强等
- * @date 2024-11-09 18:08:00
+ * @date 2024-11-09 23:00:00
  * @quote @RuCu6
  */
 
@@ -165,24 +165,23 @@ if (url.includes("/v4/note/videofeed")) {
   let unlockDatas = [];
   if (obj?.data?.length > 0) {
     for (let item of obj.data) {
-// 检查function_entries中的每一个元素的type属性是否等于"video_download"
-console.log("检查是否有下载按钮")
-let found = false;
-for (let entry of item.share_info.function_entries) {
-    if (entry.type === "video_download") {
-        found = true;
-        break;
-    }
-}
-
-// 如果没有匹配到，则添加一个新的元素
-if (!found) {
-  console.log("添加下载按钮")
-    item.share_info.function_entries.push({
-        "type": "video_download"
-    });
-}
-
+      // 检查function_entries中的每一个元素的type属性是否等于"video_download"
+      console.log("检查是否有下载按钮")
+      let found = false;
+      for (let entry of item.share_info.function_entries) {
+        if (entry.type === "video_download") {
+          found = true;
+          break;
+        }
+      }
+      // 如果没有匹配到，则添加一个新的元素
+      if (!found) {
+        console.log("添加下载按钮")
+        item.share_info.function_entries.push({
+          "type": "video_download"
+        });
+      }
+      // 存储无水印视频链接
       if (item?.id !== "" && item?.video_info_v2?.media?.stream?.h265?.[0]?.master_url !== "") {
         let myData = {
           id: item.id,
@@ -193,7 +192,8 @@ if (!found) {
     }
     $.setdata(JSON.stringify(newDatas), "redBookVideoFeed"); // 普通视频 写入持久化存储
   }
-  let videoFeedUnlock = JSON.parse($.getdata("redBookVideoFeedUnlock") || { notSave: "fmz200" }); // 禁止保存的视频 读取持久化存储
+  let cache = $.getdata("redBookVideoFeedUnlock");
+  let videoFeedUnlock = {notSave: "fmz200"}; // 禁止保存的视频 读取持久化存储
   if (videoFeedUnlock?.notSave === "fmz200") {
     if (obj?.data?.length > 0) {
       for (let item of obj.data) {
