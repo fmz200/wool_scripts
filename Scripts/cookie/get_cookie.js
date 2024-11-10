@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 获取应用的cookie或token通用脚本
- * @date 2024-03-30 10:30:00
+ * @date 2024-11-10 15:00:00
  */
 
 ////////////////////////////////
@@ -24,6 +24,37 @@ for (const headerField in req_headers) {
 console.log("遍历头部对象并打印每个字段和值结束🍓");
 
 try {
+  /**
+   * 奇瑞汽车App
+   * 手机APP进入"我的"页面，即可获取cookie
+   * @keyword fmz200_chery_account
+   */
+  if (req_url.includes("/web/user/current/details?")) {
+    // 使用正则表达式匹配
+    const regex = /access_token=([^&]*)/;
+    // 执行正则表达式匹配
+    let match = req_url.match(regex);
+    // 匹配结果存储在数组的第二个元素中
+    const access_token = match ? match[1] : "";
+    console.log(`获取到access_token：${access_token}`);
+    let rsp_data = JSON.parse(rsp_body);
+    if (rsp_data.data?.accountId) {
+      let accountId = rsp_data.data.accountId;
+      let avatarUrl = rsp_data.data.avatarUrl;
+      let displayName = rsp_data.data.displayName;
+      console.log(accountId + "获取到获取到数据：" + access_token);
+      
+      let cache = $.read("#fmz200_chery_account") || "[]";
+      console.log("读取到缓存数据：" + cache);
+      let json_data = JSON.parse(cache);
+      updateOrAddObject(json_data, "accountId", accountId, "access_token", access_token, "displayName", displayName, "avatarUrl", avatarUrl);
+      const cacheValue = JSON.stringify(json_data, null, "\t");
+
+      $.write(cacheValue, '#fmz200_chery_account');
+      $.notify('奇瑞汽车App 获取token成功✅', "", access_token);
+    }
+  }  
+  
   /**
    * 什么值得买
    * 手机APP进入我的页面查看个人资料，即可获取cookie
