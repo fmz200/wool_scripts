@@ -76,20 +76,22 @@ function completeSignTask(item) {
 }
 
 async function getArticleList(item) {
-  const myRequest = {
-    url: `https://mobile-consumer-sapp.chery.cn/web/community/recommend/contents?pageNo=1&pageSize=10&access_token=${item.access_token}&terminal=3`,
-    headers: {
-      "user-agent": `${user_agent}`,
-      "accept": "application/json, text/plain, */*",
-      "appversion": `2.17.6 (stable) (Tue Jul 12 12:54:37 2022 +0200) on "android_arm64"`,
-      "accept-language": "zh-CN,zh;q=0.9",
-      "accept-encoding": "gzip, deflate",
-      "host": "mobile-consumer-sapp.chery.cn",
-      "content-type": "application/json; charset=UTF-8",
-      "agent": "android",
-      "request-channel": "app",
-    },
+  const url = `https://mobile-consumer-sapp.chery.cn/web/community/recommend/contents?pageNo=1&pageSize=10&access_token=${item.access_token}&terminal=3`;
+  const method = `POST`;
+  const headers = {
+    "user-agent": `${user_agent}`,
+    "accept": "application/json, text/plain, */*",
+    "appversion": `2.17.6 (stable) (Tue Jul 12 12:54:37 2022 +0200) on "android_arm64"`,
+    "accept-language": "zh-CN,zh;q=0.9",
+    "accept-encoding": "gzip, deflate",
+    "host": "mobile-consumer-sapp.chery.cn",
+    "content-type": "application/json; charset=UTF-8",
+    "agent": "android",
+    "request-channel": "app",
   };
+  const body = ``;
+
+  const myRequest = {url, method, headers, body};
   return $.http.post(myRequest).then(response => {
     const username = item.displayName;
     console.log("解析响应体：" + response.body);
@@ -109,21 +111,22 @@ async function getArticleList(item) {
 }
 
 async function shareArticleList(item, articleId) {
-  const myRequest = {
-    url: `https://mobile-consumer-sapp.chery.cn//web/community/contents/${articleId}/share?access_token=${item.access_token}&terminal=3`,
-    headers: {
-      "user-agent": `${user_agent}`,
-      "accept": "application/json, text/plain, */*",
-      "appversion": `2.17.6 (stable) (Tue Jul 12 12:54:37 2022 +0200) on "android_arm64"`,
-      "accept-language": "zh-CN,zh;q=0.9",
-      "accept-encoding": "gzip, deflate",
-      "host": "mobile-consumer-sapp.chery.cn",
-      "content-type": "application/json; charset=UTF-8",
-      "agent": "android",
-      "request-channel": "app",
-    },
-    body: JSON.stringify({"contentId": articleId})
+  const url = `https://mobile-consumer-sapp.chery.cn//web/community/contents/${articleId}/share?access_token=${item.access_token}&terminal=3`;
+  const method = `POST`;
+  const headers = {
+    "user-agent": `${user_agent}`,
+    "accept": "application/json, text/plain, */*",
+    "appversion": `2.17.6 (stable) (Tue Jul 12 12:54:37 2022 +0200) on "android_arm64"`,
+    "accept-language": "zh-CN,zh;q=0.9",
+    "accept-encoding": "gzip, deflate",
+    "host": "mobile-consumer-sapp.chery.cn",
+    "content-type": "application/json; charset=UTF-8",
+    "agent": "android",
+    "request-channel": "app",
   };
+  const body = JSON.stringify({"contentId": articleId})
+
+  const myRequest = {url, method, headers, body};
   return $.http.post(myRequest).then(response => {
     const username = item.displayName;
     console.log("解析响应体：" + response.body);
