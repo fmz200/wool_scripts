@@ -77,7 +77,7 @@ function completeSignTask(item) {
 
 async function getArticleList(item) {
   const url = `https://mobile-consumer-sapp.chery.cn/web/community/recommend/contents?pageNo=1&pageSize=10&access_token=${item.access_token}&terminal=3`;
-  const method = `POST`;
+  const method = `GET`;
   const headers = {
     "user-agent": `${user_agent}`,
     "accept": "application/json, text/plain, */*",
