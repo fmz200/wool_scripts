@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 奇瑞汽车App签到
- * @date 2024-11-10 15:00:00
+ * @date 2024-11-11 19:00:00
  */
 const notifyMsg = "奇瑞汽车App签到";
 const $ = new Env(notifyMsg);
@@ -22,28 +22,12 @@ async function process() {
   // 创建一个 Promise 数组来存储每个异步任务
   const tasks = json_data.map(async (item) => {
     index += 1;
-    const url = `https://mobile-consumer-sapp.chery.cn/web/task/record/sign-in/daily?taskCode=SignUp01&access_token=${item.access_token}`;
-    const method = `GET`;
-    const headers = {
-      'Sec-Fetch-Dest': `empty`,
-      'Connection': `keep-alive`,
-      'Accept-Encoding': `gzip, deflate, br`,
-      'Content-Type': `application/json`,
-      'Sec-Fetch-Site': `same-site`,
-      'Origin': `https://hybrid-sapp.chery.cn`,
-      'User-Agent': `${user_agent}`,
-      'Authorization': `Bearer ${item.access_token}`,
-      'Sec-Fetch-Mode': `cors`,
-      'Host': `mobile-consumer-sapp.chery.cn`,
-      'Referer': `https://hybrid-sapp.chery.cn/`,
-      'Accept-Language': `zh-CN,zh`,
-      'Accept': `*/*`
-    };
-    const body = ``;
-    const myRequest = {url, method, headers, body};
-
-    // 调用 completeTask 并等待完成
-    await completeTask(item, myRequest);
+    // 调用 completeSignTask 并等待完成
+    await completeSignTask(item); // 签到
+    const articleIdList = await getArticleList(item);
+    for (let articleId of articleIdList) {
+      await shareArticleList(item, articleId);
+    }
   });
 
   // 等待所有任务完成
@@ -53,19 +37,104 @@ async function process() {
   $.done();
 }
 
-function completeTask(item, myRequest) {
-  return $.http.get(myRequest).then(response => {
-    let username = item.displayName;
+function completeSignTask(item) {
+  const url = `https://mobile-consumer-sapp.chery.cn/web/event/trigger?access_token=${item.access_token}`;
+  const method = `POST`;
+  const headers = {
+    'Sec-Fetch-Dest': `empty`,
+    'Connection': `keep-alive`,
+    'Accept-Encoding': `gzip, deflate, br`,
+    'Content-Type': `application/json`,
+    'Sec-Fetch-Site': `same-site`,
+    'Origin': `https://hybrid-sapp.chery.cn`,
+    'User-Agent': `${user_agent}`,
+    'Authorization': `Bearer ${item.access_token}`,
+    'Sec-Fetch-Mode': `cors`,
+    'Host': `mobile-consumer-sapp.chery.cn`,
+    'Referer': `https://hybrid-sapp.chery.cn/`,
+    'Accept-Language': `zh-CN,zh`,
+    'Accept': `*/*`
+  };
+  const body = `{"eventCode":"SJ10002"}`;
+  const myRequest = {url, method, headers, body};
+
+  return $.http.post(myRequest).then(response => {
+    const username = item.displayName;
+    console.log("解析响应体：" + response.body);
+    const authData = JSON.parse(response.body);
+    if (authData.status === 200) {
+      $.msg(notifyMsg, `[${username}]签到成功`, '', {'open-url': '', 'media-url': item.avatarUrl});
+    } else {
+      $.msg(notifyMsg, `[${username}]签到失败`, `失败原因：${authData.message}`, {
+        'open-url': '',
+        'media-url': item.avatarUrl
+      });
+    }
+  }, reason => {
+    console.log(reason.error);
+  });
+}
+
+async function getArticleList(item) {
+  const myRequest = {
+    url: `https://mobile-consumer-sapp.chery.cn/web/community/recommend/contents?pageNo=1&pageSize=10&access_token=${item.access_token}&terminal=3`,
+    headers: {
+      "user-agent": `${user_agent}`,
+      "accept": "application/json, text/plain, */*",
+      "appversion": `2.17.6 (stable) (Tue Jul 12 12:54:37 2022 +0200) on "android_arm64"`,
+      "accept-language": "zh-CN,zh;q=0.9",
+      "accept-encoding": "gzip, deflate",
+      "host": "mobile-consumer-sapp.chery.cn",
+      "content-type": "application/json; charset=UTF-8",
+      "agent": "android",
+      "request-channel": "app",
+    },
+  };
+  return $.http.post(myRequest).then(response => {
+    const username = item.displayName;
     console.log("解析响应体：" + response.body);
     let authData = JSON.parse(response.body);
     if (authData.status === 200) {
-      if (authData.data.todayCompleted) {
-        $.msg(notifyMsg, `[${username}]今日已签到`, `已连续签到${authData.data.continualDays}天`, {'open-url': '', 'media-url': item.avatarUrl});
-      } else {
-        $.msg(notifyMsg, `[${username}]签到成功`, '', {'open-url': '', 'media-url': item.avatarUrl});
-      }
+      console.log(`[${username}]获取文章[${authData.message}]🎉`);
+      return [authData.data.data[0].content.id, authData.data.data[1].content.id];
     } else {
-      $.msg(notifyMsg, `[${username}]签到失败`, `失败原因：${authData.message}`, {'open-url': '', 'media-url': item.avatarUrl});
+      $.msg(notifyMsg, `[${username}]获取文章失败`, `失败原因：${authData.message}`, {
+        'open-url': '',
+        'media-url': item.avatarUrl
+      });
+    }
+  }, reason => {
+    console.log(reason.error);
+  });
+}
+
+async function shareArticleList(item, articleId) {
+  const myRequest = {
+    url: `https://mobile-consumer-sapp.chery.cn//web/community/contents/${articleId}/share?access_token=${item.access_token}&terminal=3`,
+    headers: {
+      "user-agent": `${user_agent}`,
+      "accept": "application/json, text/plain, */*",
+      "appversion": `2.17.6 (stable) (Tue Jul 12 12:54:37 2022 +0200) on "android_arm64"`,
+      "accept-language": "zh-CN,zh;q=0.9",
+      "accept-encoding": "gzip, deflate",
+      "host": "mobile-consumer-sapp.chery.cn",
+      "content-type": "application/json; charset=UTF-8",
+      "agent": "android",
+      "request-channel": "app",
+    },
+    body: JSON.stringify({"contentId": articleId})
+  };
+  return $.http.post(myRequest).then(response => {
+    const username = item.displayName;
+    console.log("解析响应体：" + response.body);
+    let authData = JSON.parse(response.body);
+    if (authData.status === 200) {
+      console.log(`[${username}]分享文章[${authData.message}]🎉`);
+    } else {
+      $.msg(notifyMsg, `[${username}]分享文章失败`, `失败原因：${authData.message}`, {
+        'open-url': '',
+        'media-url': item.avatarUrl
+      });
     }
   }, reason => {
     console.log(reason.error);
