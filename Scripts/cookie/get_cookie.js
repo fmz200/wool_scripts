@@ -42,7 +42,7 @@ try {
       let accountId = rsp_data.data.accountId;
       let avatarUrl = rsp_data.data.avatarUrl;
       let displayName = rsp_data.data.displayName;
-      console.log(accountId + "获取到获取到数据：" + access_token);
+      console.log("账号[" + accountId + "]获取到获取到数据：" + access_token);
       
       let cache = $.read("#fmz200_chery_account") || "[]";
       console.log("读取到缓存数据：" + cache);
