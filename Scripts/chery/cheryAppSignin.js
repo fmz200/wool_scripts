@@ -94,7 +94,7 @@ async function getArticleList(item) {
   const myRequest = {url, method, headers, body};
   return $.http.post(myRequest).then(response => {
     const username = item.displayName;
-    console.log("解析响应体：" + response.body);
+    // console.log("解析响应体：" + response.body);
     let authData = JSON.parse(response.body);
     if (authData.status === 200) {
       console.log(`[${username}]获取文章[${authData.message}]🎉`);
