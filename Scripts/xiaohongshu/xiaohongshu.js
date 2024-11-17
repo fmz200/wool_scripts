@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 小红书去广告、净化、解除下载限制、画质增强等
- * @date 2024-11-09 23:00:00
+ * @date 2024-11-16 23:00:00
  * @quote @RuCu6
  */
 
@@ -87,14 +87,14 @@ if (url.includes("/note/imagefeed?") || url.includes("/note/feed?")) {
           }
         }
       }
+
+      const images_list = obj.data[0].note_list[0].images_list;
+      // 画质增强
+      obj.data[0].note_list[0].images_list = imageEnhance(JSON.stringify(images_list));
+      // 保存无水印信息
+      $.setdata(JSON.stringify(images_list), "fmz200.xiaohongshu.feed.rsp");
+      console.log('已存储无水印信息♻️');
     }
-
-    const images_list = obj.data[0].note_list[0].images_list;
-    obj.data[0].note_list[0].images_list = imageEnhance(JSON.stringify(images_list));
-
-    // 保存无水印信息
-    $.setdata(JSON.stringify(images_list), "fmz200.xiaohongshu.feed.rsp");
-    console.log('已存储无水印信息♻️');
   }
 } 
 
@@ -299,6 +299,9 @@ function imageEnhance(jsonStr) {
   const regex2 = /imageView2\/2\/h\/\d+\/format/g;
   jsonStr = jsonStr.replace(regex2, `imageView2/2/h/2160/format`);
   console.log('图片画质增强完成✅');
+  
+  // 原始分辨率，PNG格式的图片，占用空间比较大
+  // jsonStr = jsonStr.replace(/\?imageView2\/2[^&]*(?:&redImage\/frame\/0)/, "?imageView2/0/format/png&redImage/frame/0");
   return JSON.parse(jsonStr);
 }
 
