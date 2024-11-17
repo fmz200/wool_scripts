@@ -5,8 +5,54 @@
   "icon": "https://avatars.githubusercontent.com/u/57740735?s=60&v=4",
   "repo": "https://github.com/fmz200/wool_scripts",
   "desc": "订阅大多都支持多账号，协定数据格式如下：有主键的用JSON，没有主键的拼接用#分割用@。\n例如{\"uid1\": \"token1\", \"uid2\": \"token2\",\"uid3\": \"token3\"}和uid1#token1@uid2#token2@uid3#token3",
-  "date": "更新日期：2024-11-10 15:00:00",
+  "date": "更新日期：2024-11-17 14:00:00",
   "apps": [
+    {
+      "id": "fmz200_xiaohongshu",
+      "name": "小红书功能增强",
+      "keys": [
+        "fmz200.xiaohongshu.imageQuality",
+        "fmz200.xiaohongshu.feed.rsp",
+        "redBookVideoFeed",
+        "redBookVideoFeedUnlock"
+      ],
+      "descs_html": [
+        "可选图片质量，保存无水印图片和视频"
+      ],
+      "settings": [
+        {
+          "id": "fmz200.xiaohongshu.imageQuality",
+          "name": "小红书无水印图片保存质量",
+          "val": "highPixels",
+          "type": "selects",
+          "items": [
+            {
+              "key": "original",
+              "label": "原始分辨率 (图片占用空间大)"
+            },
+            {
+              "key": "highPixels",
+              "label": "高像素输出 (图片占用空间小)"
+            },
+            {
+              "key": "highQuality",
+              "label": "高质量压缩"
+            },
+            {
+              "key": "medium",
+              "label": "平衡配置"
+            }
+          ],
+          "desc": "图片质量可选：原始分辨率PNG，高像素输出HEIF，高质量压缩，平衡配置"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/xiaohongshu.png",
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/xiaohongshu.png"
+      ],
+      "author": "@fmz200",
+      "repo": "https://github.com/fmz200/wool_scripts"
+    },
     {
       "id": "fmz200_aliyun",
       "name": "阿里云盘cookie",
