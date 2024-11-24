@@ -9,7 +9,7 @@
 #!system=iOS, iPadOS
 #!system_version = 
 #!loon_version = 
-#!date=2024-11-24 09:30:00
+#!date=2024-11-24 22:30:00
 #!support=支持约511款APP/小程序
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 #############################################
@@ -3979,10 +3979,8 @@ http-response ^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage script-pat
 
 # >>>>>>>>>>>>>>> ✅ Y ✅ <<<<<<<<<<<<<<
 # > YouTube
-# 请求体
-http-request ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|get_watch|next|player|reel\/reel_watch_sequence) script-path=https://github.com/Maasea/sgmodule/raw/master/Script/Youtube/dist/youtube.request.preview.js, requires-body=true, binary-body-mode=true, timeout=60, tag=YouTube请求体
 # 响应体
-http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(account\/get_setting|browse|get_watch|guide|next|player|reel\/reel_watch_sequence|search) script-path=https://github.com/Maasea/sgmodule/raw/master/Script/Youtube/dist/youtube.response.preview.js, requires-body=true, binary-body-mode=true, timeout=60, tag=YouTube响应体
+http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch) script-path=https://github.com/Maasea/sgmodule/raw/master/Script/Youtube/dist/youtube.response.preview.js, requires-body=true, binary-body-mode=true, timeout=60, tag=YouTube响应体
 
 # > 优酷
 # 播放详情页,首页信息流,顶部tab,我的页面,评论区
