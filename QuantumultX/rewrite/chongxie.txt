@@ -3187,10 +3187,8 @@ https://mgesq.api.mgtv.com/dsl/index.+ url script-response-body https://raw.gith
 # >>>>>>>>>>>>>>> ✅ Y ✅ <<<<<<<<<<<<<<
 # > YouTube
 # hostname = rr*.googlevideo.com, youtubei.googleapis.com
-# 请求体
-^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|get_watch|next|player|reel\/reel_watch_sequence) url script-request-body https://github.com/Maasea/sgmodule/raw/master/Script/Youtube/dist/youtube.request.preview.js
 # 响应体
-^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(account\/get_setting|browse|get_watch|guide|next|player|reel\/reel_watch_sequence|search) url script-response-body https://github.com/Maasea/sgmodule/raw/master/Script/Youtube/dist/youtube.response.preview.js
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch) url script-response-body https://github.com/Maasea/sgmodule/raw/master/Script/Youtube/dist/youtube.response.preview.js
 # 播放页广告
 ^https:\/\/rr[\w-]+\.googlevideo\.com\/initplayback\? url reject-dict
 
