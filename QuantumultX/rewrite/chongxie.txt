@@ -1782,8 +1782,8 @@ https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSpl
 
 # > 牛听听
 # hostname = gateway.benewtech.cn, ntt-app.benewtech.cn
-^https:\/\/gateway\.benewtech\.cn\/resources-app\/app\/startup\/prepage reject-dict
-^https:\/\/ntt-app\.benewtech\.cn\/v6\/user\/\d+\/messages\/event reject-dict
+^https:\/\/gateway\.benewtech\.cn\/resources-app\/app\/startup\/prepage url reject-dict
+^https:\/\/ntt-app\.benewtech\.cn\/v6\/user\/\d+\/messages\/event url reject-dict
 
 
 
@@ -2940,7 +2940,7 @@ https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/user\/follow\/users\/mix
 
 # > 小熊艺术
 # hostname = www.xiaoxiongmeishu.com
-^https:\/\/www\.xiaoxiongmeishu\.com\/api\/(home\/v1\/config\/appInit|s\/v1\/popup\/createCouponPopup) reject
+^https:\/\/www\.xiaoxiongmeishu\.com\/api\/(home\/v1\/config\/appInit|s\/v1\/popup\/createCouponPopup) url reject
 
 # > 小佩宠物
 # hostname = api.petkit.cn
