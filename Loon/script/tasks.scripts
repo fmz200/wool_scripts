@@ -5,14 +5,13 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/script/tasks.scripts
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2024-11-10 15:00:00
+#!date=2024-12-09 12:15:00
 #############################################
 # 配置语法 脚本默认执行超时时间200s
 # cron "0 8 * * *" script-path=cron.js,tag = cronScript,timeout = 300,argument = "1234",enable=true
 
 # fmz200
 cron "0 7,11,17 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, timeout=300, tag=阿里云盘签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/AliYunDrive.png, enable=false
-cron "10 0,8,12,18 * * *" script-path=https://raw.githubusercontent.com/passerby-b/didi_fruit/main/dd_fruit.js, timeout=300, tag=滴滴橙心果园, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/didi.png, enable=false
 cron "30 1,8,12,17 * * *" script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuaishou/ks_fruit.js, timeout=300, tag=快手果园, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/kuaishou.png, enable=false
 cron "30 1,7,12,18,22 * * *" script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/pinduoduo/pdd_guoyuan.js, timeout=300, tag=拼多多果园, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/pinduoduo.png, enable=false
 cron "22 7 * * *" script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/macat/macat_signin.js, timeout=10, tag=马克喵签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Macat.png, enable=false
