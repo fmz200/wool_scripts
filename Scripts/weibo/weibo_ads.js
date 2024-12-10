@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 微博去广告
- * @date 2024-10-23 21:40:00
+ * @date 2024-12-09 20:40:00
  */
 
 let url = $request.url;
@@ -138,6 +138,12 @@ function removeCommonAds(items) {
   const cardTypes = [17, 101];
   
   for (let i = 0; i < items.length; i++) {
+    if (items[i].type === "vertical") {
+      console.log('移除内嵌的模块💕💕');
+      items[i] = {};
+      continue;
+    }
+    
     const card_type = items[i].data?.card_type;
     console.log(`card_type = ${card_type}`);
     // 白名单模式
