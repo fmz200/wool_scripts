@@ -968,7 +968,7 @@ http:\/\/ad\.myfriday\.cn\/d\/json\/1\.1 url reject
 # hostname = m*.amap.com, optimus-ads.amap.com
 ^https?:\/\/m5\.amap\.com\/ws\/shield\/dsp\/app\/startup\/init\? url reject-dict
 ^https?:\/\/m5\.amap\.com\/ws\/valueadded\/ url reject
-^https?://optimus-ads.amap.com/uploadimg/[a-zA-Z0-9]+.gif reject-200
+^https?://optimus-ads.amap.com/uploadimg/[a-zA-Z0-9]+.gif url reject-200
 
 # > 国家地理
 # hostname = dili.bdatu.com, wap.ngchina.cn
