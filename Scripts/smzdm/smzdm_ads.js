@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 什么值得买去广告
- * @date 2024-01-17 22:50:13
+ * @date 2024-12-13 20:50:13
  */
 
 let requestUrl = $request.url;
@@ -19,6 +19,11 @@ if (requestUrl.includes("/vip/creator_user_center")) {
 if (requestUrl.includes("/util/update")) {
   obj.data.operation_float = [];
   console.log('去除弹窗图片广告💕');
+}
+
+if (requestUrl.includes("/ranking_list/articles?")) {
+  obj.data.rows = obj.data.rows.filter(item => item.model_type !== "ads");
+  console.log('去除排行榜广告💕');
 }
 
 $done({body: JSON.stringify(obj)});
