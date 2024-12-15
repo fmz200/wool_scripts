@@ -1139,25 +1139,25 @@ host-suffix, m-adash.m.taobao.com, reject
 host-suffix, adashbc.m.taobao.com, reject
 
 # > 腾讯视频
-host, adsmind.gdtimg.com, reject
-host, btrace.qq.com, reject
-host, btrace.video.qq.com, reject
-host, info4.video.qq.com, reject
-host, info6.video.qq.com, reject
-host, ios.video.mpush.qq.com, reject
-host, mtrace.qq.com, reject
-host, p.l.qq.com, reject
-host, pgdt.gtimg.cn, reject
-host, rpt.gdt.qq.com, reject
-host-suffix, trace.qq.com, reject
-host-suffix, tetrack.qq.com, reject
-host-suffix, tpns.tencent.com, reject
-host-suffix, api.poll.video.qq.com, reject
-host-suffix, static-res.qq.com, reject
-host-suffix, stat.tpns.tencent.com, reject
-host, h.trace.qq.com, reject
-host-keyword, omgmta.qq.com, reject
-host-keyword, omgmta1.qq.com, reject
+# host, adsmind.gdtimg.com, reject
+# host, btrace.qq.com, reject
+# host, btrace.video.qq.com, reject
+# host, info4.video.qq.com, reject
+# host, info6.video.qq.com, reject
+# host, ios.video.mpush.qq.com, reject
+# host, mtrace.qq.com, reject
+# host, p.l.qq.com, reject
+# host, pgdt.gtimg.cn, reject
+# host, rpt.gdt.qq.com, reject
+# host-suffix, trace.qq.com, reject
+# host-suffix, tetrack.qq.com, reject
+# host-suffix, tpns.tencent.com, reject
+# host-suffix, api.poll.video.qq.com, reject
+# host-suffix, static-res.qq.com, reject
+# host-suffix, stat.tpns.tencent.com, reject
+# host, h.trace.qq.com, reject
+# host-keyword, omgmta.qq.com, reject
+# host-keyword, omgmta1.qq.com, reject
 
 # >  腾讯
 host-suffix, news.ssp.qq.com, reject
@@ -4242,7 +4242,6 @@ host-suffix, noberlmall.com, reject
 host-suffix, nongsalei.com, reject
 host-suffix, nowskip.com, reject
 host-suffix, nr1234.com, reject
-host-suffix, ntalker.com, reject
 host-suffix, nterbx.com, reject
 host-suffix, nthyn.com, reject
 host-suffix, nvrentao8.com, reject
@@ -5616,7 +5615,6 @@ host-suffix, b1.c1km4.com, reject
 host-suffix, ad.cacafly.com, reject
 host-suffix, vip.cainiaofx.com, reject
 host-suffix, apollo.caixin.com, reject
-host-suffix, gg.caixin.com, reject
 host-suffix, logstat.caixin.com, reject
 host-suffix, promote.caixin.com, reject
 host-suffix, ad.caiyunapp.com, reject

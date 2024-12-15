@@ -1093,25 +1093,25 @@ DOMAIN-SUFFIX,m-adash.m.taobao.com
 DOMAIN-SUFFIX,adashbc.m.taobao.com
 
 # > 腾讯视频
-DOMAIN, adsmind.gdtimg.com
-DOMAIN, btrace.qq.com
-DOMAIN, btrace.video.qq.com
-DOMAIN, info4.video.qq.com
-DOMAIN, info6.video.qq.com
-DOMAIN, ios.video.mpush.qq.com
-DOMAIN, mtrace.qq.com
-DOMAIN, p.l.qq.com
-DOMAIN, pgdt.gtimg.cn
-DOMAIN, rpt.gdt.qq.com
-DOMAIN-SUFFIX,trace.qq.com
-DOMAIN-SUFFIX,tetrack.qq.com
-DOMAIN-SUFFIX,tpns.tencent.com
-DOMAIN-SUFFIX,api.poll.video.qq.com
-DOMAIN-SUFFIX,static-res.qq.com
-DOMAIN-SUFFIX,stat.tpns.tencent.com
-DOMAIN, h.trace.qq.com
-DOMAIN-KEYWORD,omgmta.qq.com
-DOMAIN-KEYWORD,omgmta1.qq.com
+# DOMAIN, adsmind.gdtimg.com
+# DOMAIN, btrace.qq.com
+# DOMAIN, btrace.video.qq.com
+# DOMAIN, info4.video.qq.com
+# DOMAIN, info6.video.qq.com
+# DOMAIN, ios.video.mpush.qq.com
+# DOMAIN, mtrace.qq.com
+# DOMAIN, p.l.qq.com
+# DOMAIN, pgdt.gtimg.cn
+# DOMAIN, rpt.gdt.qq.com
+# DOMAIN-SUFFIX,trace.qq.com
+# DOMAIN-SUFFIX,tetrack.qq.com
+# DOMAIN-SUFFIX,tpns.tencent.com
+# DOMAIN-SUFFIX,api.poll.video.qq.com
+# DOMAIN-SUFFIX,static-res.qq.com
+# DOMAIN-SUFFIX,stat.tpns.tencent.com
+# DOMAIN, h.trace.qq.com
+# DOMAIN-KEYWORD,omgmta.qq.com
+# DOMAIN-KEYWORD,omgmta1.qq.com
 
 # >  腾讯
 DOMAIN-SUFFIX,news.ssp.qq.com
@@ -4148,7 +4148,6 @@ DOMAIN-SUFFIX, noberlmall.com
 DOMAIN-SUFFIX, nongsalei.com
 DOMAIN-SUFFIX, nowskip.com
 DOMAIN-SUFFIX, nr1234.com
-DOMAIN-SUFFIX, ntalker.com
 DOMAIN-SUFFIX, nterbx.com
 DOMAIN-SUFFIX, nthyn.com
 DOMAIN-SUFFIX, nvrentao8.com
@@ -5522,7 +5521,6 @@ DOMAIN-SUFFIX, b1.c1km4.com
 DOMAIN-SUFFIX, ad.cacafly.com
 DOMAIN-SUFFIX, vip.cainiaofx.com
 DOMAIN-SUFFIX, apollo.caixin.com
-DOMAIN-SUFFIX, gg.caixin.com
 DOMAIN-SUFFIX, logstat.caixin.com
 DOMAIN-SUFFIX, promote.caixin.com
 DOMAIN-SUFFIX, ad.caiyunapp.com
