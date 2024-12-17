@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 微博去广告
- * @date 2024-12-09 20:40:00
+ * @date 2024-12-16 20:40:00
  */
 
 let url = $request.url;
@@ -13,6 +13,7 @@ try {
     if (url.includes("/search/finder?")) {
       console.log('进入发现页...');
       processPayload(resp_data.channelInfo.channels[0].payload);
+      removeChannelsTabs(resp_data.channelInfo.channels);
     }
 
     // 2、发现页面刷新/再次点击发现按钮
@@ -132,13 +133,29 @@ function processPayload(payload) {
   }
 }
 
+function removeChannelsTabs(channels) {
+  // 1001：发现，1015：趋势，1016：榜单
+  const channelIds = [1001, 1015, 1016];
+  for (let i = 0; i < channels.length; i++) {
+    if (!channelIds.includes(channels[i].id)) {
+      channels[i] = {};
+      console.log('移除多余的channel💕💕');
+    }
+  }
+}
+
 function removeCommonAds(items) {
   // 模块类型，不在里面的都计划删除
   // 17：微博热搜，101：热门微博
   const cardTypes = [17, 101];
   
+  let firstVerticalFound = false;
   for (let i = 0; i < items.length; i++) {
     if (items[i].type === "vertical") {
+      if (!firstVerticalFound) {
+        firstVerticalFound = true;
+        continue;
+      }
       console.log('移除内嵌的模块💕💕');
       items[i] = {};
       continue;
