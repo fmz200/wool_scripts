@@ -2381,7 +2381,7 @@ https://apis.lifeweek.com.cn/api/baseConfig/getIosNewConfig reject
 
 # > 腾讯手机管家
 # hostname = otheve.beacon.qq.com
-^https?://otheve.beacon.qq.com\/analytics\/upload\?sid=.* reject
+# ^https?://otheve.beacon.qq.com\/analytics\/upload\?sid=.* reject
 
 # > 腾讯地图
 # hostname = 4gimg.map.qq.com
