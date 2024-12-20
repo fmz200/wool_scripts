@@ -2381,7 +2381,7 @@ https://apis.lifeweek.com.cn/api/baseConfig/getIosNewConfig reject
 
 # > 腾讯手机管家
 # hostname = otheve.beacon.qq.com
-^https?://otheve.beacon.qq.com\/analytics\/upload\?sid=.* reject
+# ^https?://otheve.beacon.qq.com\/analytics\/upload\?sid=.* reject
 
 # > 腾讯地图
 # hostname = 4gimg.map.qq.com
@@ -2401,7 +2401,6 @@ https://apis.lifeweek.com.cn/api/baseConfig/getIosNewConfig reject
 # hostname = btrace.qq.com, api2.helper.qq.com, *.beacon.qq.com, mi.gdt.qq.com, lives.l.qq.com, imgcache.qq.com, mtteve.beacon.qq.com, vv.video.qq.com, ssl.kohsocialapp.qq.com, qt.qq.com, 3gimg.qq.com, y.gtimg.cn, splashqqlive.gtimg.com, qzonestyle.gtimg.cn, discuz.gtimg.cn, bla.gtimg.com, mmgr.gtimg.com, bk.bingo.qq.com
 ^https?:\/\/btrace\.qq\.com reject-200
 ^https?:\/\/api2\.helper\.qq\.com\/game\/buttons reject-img
-^https?:\/\/\w+\.beacon\.qq\.com reject
 ^https?:\/\/lives\.l\.qq\.com\/livemsg\?sdtfrom= reject-img
 ^https?:\/\/imgcache\.qq\.com\/qqlive\/ reject-img
 ^https?:\/\/mtteve\.beacon\.qq\.com\/analytics reject-img
