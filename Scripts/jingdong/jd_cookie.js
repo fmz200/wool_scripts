@@ -1,20 +1,14 @@
 /*
 ===================
-特别说明：
-1.获取多个京东cookie的脚本，不和NobyDa的京东cookie冲突。注：如与NobyDa的京东cookie重复，建议在BoxJs处删除重复的cookie
-===================
-===================
-使用方式：在代理软件配置好下方配置后，复制 https://home.m.jd.com/myJd/newhome.action 到浏览器打开 ，在个人中心刷新自动获取 cookie，
-若弹出成功则正常使用。否则继续再此页面继续刷新一下试试。
-
-注：建议通过脚本去获取cookie，若要在BoxJs处手动修改，请按照JSON格式修改（注：可使用此JSON校验 https://www.bejson.com/json/format）
+更新日期：2025-01-12 10:00:00
+特别说明：获取多个京东cookie的脚本，不和NobyDa的京东cookie冲突。注：如与NobyDa的京东cookie重复，建议在BoxJs处删除重复的cookie
+使用方式：在代理软件配置好下方配置后，复制 https://home.m.jd.com/myJd/newhome.action 到浏览器打开，在个人中心刷新自动获取 cookie，若弹出成功则正常使用。否则继续再此页面继续刷新一下试试。
+注意事项：建议通过脚本去获取cookie，若要在BoxJs处手动修改，请按照JSON格式修改（注：可使用此JSON校验 https://www.bejson.com/json/format）
 示例：[{"userName":"jd_xxx","cookie":"pt_key=AAJ;pt_pin=jd_xxx;"},{"userName":"jd_66","cookie":"pt_key=AAJ;pt_pin=jd_66;"}]
-===================
-new Env('获取多账号京东Cookie');//此处忽略即可，为自动生成iOS端软件配置文件所需
+
 ===================
 [MITM]
-hostname = home.m.jd.com, un.m.jd.com, sec.m.jd.com
-
+hostname = home.m.jd.com
 ===================Quantumult X=====================
 [rewrite_local]
 # 获取多账号京东Cookie
@@ -23,8 +17,6 @@ hostname = home.m.jd.com, un.m.jd.com, sec.m.jd.com
 ===================Loon===================
 [Script]
 http-request ^https:\/\/home\.m\.jd\.com\/myJd\/home\.action script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingdong/jd_cookie.js, tag=获取多账号京东Cookie
-http-request ^https:\/\/un\.m\.jd\.com\/cgi-bin\/app\/appjmp\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingdong/jd_cookie.js, tag=获取多账号京东Cookie
-http-request ^https:\/\/sec\.m\.jd\.com\/todo\/modifyLoginName\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingdong/jd_cookie.js, tag=获取多账号京东Cookie
 
 ===================Surge===================
 [Script]
@@ -75,6 +67,21 @@ function updateOrAddObject(collection, ...args) {
   }
 }
 
+function hasMatchingUser(collection, userName, cookie) {
+  // 如果集合为空或为null，直接返回false
+  if (!collection || collection.length === 0) {
+    return false;
+  }
+  // 遍历集合，判断是否存在匹配的userName和cookie
+  for (let obj of collection) {
+    if (obj.userName === userName && obj.cookie === cookie) {
+      return true;
+    }
+  }
+  // 如果遍历完成没有找到匹配项，返回false
+  return false;
+}
+
 function GetCookie() {
   try {
     if ($request.headers) {
@@ -99,6 +106,10 @@ function GetCookie() {
           console.log(`获取到username：${username}，cookie：${cookie}`);
           let unionCookie = `${cookie};${username};`; // pt_key=xxx;pt_pin=yyy;
           let json_data = getCache();
+          if (hasMatchingUser(json_data, username, unionCookie)) {
+            console.log("cookie已存在，直接结束🍓");
+            $.done();
+          }
           updateOrAddObject(json_data, "userName", username, "cookie", unionCookie);
           const cacheValue = JSON.stringify(json_data);
 
@@ -118,6 +129,10 @@ function GetCookie() {
           let UserName = CookieValue.match(/pt_pin=([^; ]+)(?=;?)/)[1];
           let DecodeName = decodeURIComponent(UserName);
           let CookiesData = getCache();
+          if (hasMatchingUser(CookiesData, UserName, CookieValue)) {
+            console.log("cookie已存在，直接结束🍓");
+            $.done();
+          }
           let updateCookiesData = [...CookiesData];
           let updateIndex;
           let CookieName;
