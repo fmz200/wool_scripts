@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 微博去广告
- * @date 2024-12-16 20:40:00
+ * @date 2025-02-08 10:40:00
  */
 
 let url = $request.url;
@@ -82,14 +82,14 @@ try {
           resp_data.items[i] = {};
           continue;
         }
-        
+
         const category = item.category; // feed/card/group
         const cardType = item.data?.card_type || "";
         if (cardTypes.includes(cardType)) {
           console.log(`保留的card_type = ${cardType}`);
           continue;
         }
-        
+
         // 第一条微博往下的内容只要不是微博（分类、推广等），全部删除
         if (foundFeed && category !== "feed") {
           resp_data.items[i] = {};
@@ -136,9 +136,11 @@ function processPayload(payload) {
 function removeChannelsTabs(channels) {
   // 1001：发现，1015：趋势，1016：榜单
   const channelIds = [1001, 1015, 1016];
-  for (let i = 0; i < channels.length; i++) {
+  // 反向遍历数组
+  for (let i = channels.length - 1; i >= 0; i--) {
     if (!channelIds.includes(channels[i].id)) {
-      channels[i] = {};
+      // 如果当前元素的id不在channelIds中，则从原数组中删除该元素
+      channels.splice(i, 1);
       console.log('移除多余的channel💕💕');
     }
   }
@@ -148,7 +150,7 @@ function removeCommonAds(items) {
   // 模块类型，不在里面的都计划删除
   // 17：微博热搜，101：热门微博
   const cardTypes = [17, 101];
-  
+
   let firstVerticalFound = false;
   for (let i = 0; i < items.length; i++) {
     if (items[i].type === "vertical") {
@@ -160,7 +162,7 @@ function removeCommonAds(items) {
       items[i] = {};
       continue;
     }
-    
+
     const card_type = items[i].data?.card_type;
     console.log(`card_type = ${card_type}`);
     // 白名单模式
