@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 微博去广告
- * @date 2025-02-08 10:40:00
+ * @date 2025-02-08 21:00:00
  */
 
 let url = $request.url;
@@ -14,6 +14,9 @@ try {
       console.log('进入发现页...');
       processPayload(resp_data.channelInfo.channels[0].payload);
       removeChannelsTabs(resp_data.channelInfo.channels);
+      if (resp_data.header?.data?.items) {
+        removeHeaderAds(resp_data.header.data.items);
+      }
     }
 
     // 2、发现页面刷新/再次点击发现按钮
@@ -142,6 +145,18 @@ function removeChannelsTabs(channels) {
       // 如果当前元素的id不在channelIds中，则从原数组中删除该元素
       channels.splice(i, 1);
       console.log('移除多余的channel💕💕');
+    }
+  }
+}
+
+function removeHeaderAds(headerItems) {
+  for (let i = 0; i < headerItems.length; i++) {
+    if (headerItems[i].items) {
+      removeCommonAds(headerItems[i].items);
+    }
+    // 亚运排行榜
+    if (headerItems[i].data?.card_type === 196) {
+      headerItems[i] = {};
     }
   }
 }
