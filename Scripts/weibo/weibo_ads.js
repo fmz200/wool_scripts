@@ -23,6 +23,9 @@ try {
     if (url.includes("/search/container_timeline?") || url.includes("/search/container_discover?")) {
       console.log('刷新发现页...');
       processPayload(resp_data);
+      if (resp_data.header?.data?.items) {
+        removeHeaderAds(resp_data.header.data.items);
+      }
     }
 
     // 3、微博热搜页面刷新
