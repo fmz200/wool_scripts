@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 微博去广告
- * @date 2025-02-08 21:00:00
+ * @date 2025-02-14 16:37:00
  */
 
 let url = $request.url;
@@ -73,6 +73,21 @@ try {
         if (resp_data.items[i].data?.mblogtypename === "广告" || resp_data.items[i].data?.ad_state === 1) {
           console.log('处理话题页面广告');
           resp_data.items[i] = {};
+          continue;
+        } else {
+          deleteSemanticBrandParams(resp_data.items[i]);
+        }
+
+        if (resp_data.items[i].items) {
+          for (let j = 0; j < resp_data.items[i].items.length; j++) {
+            if (resp_data.items[i].items[j].data?.card_type === 22
+                || resp_data.items[i].items[j].data?.ad_state === 1
+                || resp_data.items[i].items[j].data?.content_auth_info?.content_auth_title === "广告") {
+              resp_data.items[i].items[j] = {};
+            } else {
+              deleteSemanticBrandParams(resp_data.items[i].items[j]);
+            }
+          }
         }
       }
       console.log('处理话题页面广告结束💕💕');
@@ -153,13 +168,10 @@ function removeChannelsTabs(channels) {
 }
 
 function removeHeaderAds(headerItems) {
+  removeCommonAds(headerItems);
   for (let i = 0; i < headerItems.length; i++) {
     if (headerItems[i].items) {
       removeCommonAds(headerItems[i].items);
-    }
-    // 亚运排行榜
-    if (headerItems[i].data?.card_type === 196) {
-      headerItems[i] = {};
     }
   }
 }
@@ -185,7 +197,7 @@ function removeCommonAds(items) {
     console.log(`card_type = ${card_type}`);
     // 白名单模式
     if (card_type && !cardTypes.includes(card_type)) {
-      console.log('移除多余的模块💕💕');
+      console.log(`移除多余的模块：${card_type}💕💕`);
       items[i] = {};
       continue;
     }
@@ -230,5 +242,13 @@ function removePageDataAds(items) {
     if (item.pageDataType === "homeExtend") {
       items.splice(i, 1);
     }
+  }
+}
+
+// 删除一条微博下面的图片广告
+function deleteSemanticBrandParams(item) {
+  if (item.data?.semantic_brand_params) {
+    console.log('删除一条微博下面的图片广告💕');
+    delete item.data.semantic_brand_params;
   }
 }
