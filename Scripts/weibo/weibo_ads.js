@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 微博去广告
- * @date 2025-02-08 21:00:00
+ * @date 2025-02-14 14:30:00
  */
 
 let url = $request.url;
@@ -153,13 +153,10 @@ function removeChannelsTabs(channels) {
 }
 
 function removeHeaderAds(headerItems) {
+  removeCommonAds(headerItems);
   for (let i = 0; i < headerItems.length; i++) {
     if (headerItems[i].items) {
       removeCommonAds(headerItems[i].items);
-    }
-    // 亚运排行榜
-    if (headerItems[i].data?.card_type === 196) {
-      headerItems[i] = {};
     }
   }
 }
@@ -185,7 +182,7 @@ function removeCommonAds(items) {
     console.log(`card_type = ${card_type}`);
     // 白名单模式
     if (card_type && !cardTypes.includes(card_type)) {
-      console.log('移除多余的模块💕💕');
+      console.log(`移除多余的模块：${card_type}💕💕`);
       items[i] = {};
       continue;
     }
