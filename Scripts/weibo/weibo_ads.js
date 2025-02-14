@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 微博去广告
- * @date 2025-02-14 14:57:00
+ * @date 2025-02-14 15:57:00
  */
 
 let url = $request.url;
@@ -74,14 +74,22 @@ try {
           console.log('处理话题页面广告');
           resp_data.items[i] = {};
           continue;
+        } else {
+          deleteSemanticBrandParams(resp_data.items[i]);
         }
 
         if (resp_data.items[i].items) {
           for (let j = 0; j < resp_data.items[i].items.length; j++) {
-            if (resp_data.items[i].items[j].data?.card_type === 22 || resp_data.items[i].items[j].data?.ad_state === 1) {
+            if (resp_data.items[i].items[j].data?.card_type === 22
+                || resp_data.items[i].items[j].data?.ad_state === 1
+                || resp_data.items[i].items[j].data?.content_auth_info?.content_auth_title === "广告") {
               resp_data.items[i].items[j] = {};
+            } else {
+              semantic_brand_params
             }
           }
+        } else {
+          deleteSemanticBrandParams(resp_data.items[i]);
         }
       }
       console.log('处理话题页面广告结束💕💕');
@@ -237,4 +245,9 @@ function removePageDataAds(items) {
       items.splice(i, 1);
     }
   }
+}
+
+// 删除一条微博下面的图片广告
+function deleteSemanticBrandParams(item) {
+  delete item.semantic_brand_params;
 }
