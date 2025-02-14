@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 微博去广告
- * @date 2025-02-14 14:30:00
+ * @date 2025-02-14 14:57:00
  */
 
 let url = $request.url;
@@ -73,6 +73,15 @@ try {
         if (resp_data.items[i].data?.mblogtypename === "广告" || resp_data.items[i].data?.ad_state === 1) {
           console.log('处理话题页面广告');
           resp_data.items[i] = {};
+          continue;
+        }
+
+        if (resp_data.items[i].items) {
+          for (let j = 0; j < resp_data.items[i].items.length; j++) {
+            if (resp_data.items[i].items[j].data?.card_type === 22 || resp_data.items[i].items[j].data?.ad_state === 1) {
+              resp_data.items[i].items[j] = {};
+            }
+          }
         }
       }
       console.log('处理话题页面广告结束💕💕');
