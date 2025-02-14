@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 微博去广告
- * @date 2025-02-14 16:16:00
+ * @date 2025-02-14 16:37:00
  */
 
 let url = $request.url;
@@ -85,7 +85,7 @@ try {
                 || resp_data.items[i].items[j].data?.content_auth_info?.content_auth_title === "广告") {
               resp_data.items[i].items[j] = {};
             } else {
-              deleteSemanticBrandParams(resp_data.items[i]);
+              deleteSemanticBrandParams(resp_data.items[i].items[j]);
             }
           }
         }
