@@ -1,7 +1,7 @@
 /**
  * @auther @fmz200
  * @function 微博去广告
- * @date 2025-02-14 15:57:00
+ * @date 2025-02-14 16:16:00
  * @quote zmqcherish
  */
 
@@ -219,7 +219,10 @@ function removeMain(data) {
 				}
 			}
 			// 删除一条微博下面的图片广告（测试功能）
-			delete item.semantic_brand_params;
+			if (item.data?.semantic_brand_params) {
+				console.log('删除一条微博下面的图片广告💕');
+				delete item.data.semantic_brand_params;
+			}
 			newItems.push(item);
 		}
 	}
