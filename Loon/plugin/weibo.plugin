@@ -10,7 +10,7 @@
 #!system = iOS, iPadOS
 #!system_version = 
 #!loon_version = 
-#!date=2025-02-08 21:00:00
+#!date=2025-02-15 21:00:00
 #############################################
 # > "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # > "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -46,7 +46,6 @@ DOMAIN-SUFFIX, ads.aws.viber.com, REJECT
 DOMAIN-SUFFIX, alitui.weibo.com, REJECT
 DOMAIN-SUFFIX, dp.im.weibo.cn, REJECT
 DOMAIN-SUFFIX, biz.weibo.com.cn, REJECT
-DOMAIN-SUFFIX, biz.weibo.com, REJECT
 DOMAIN-SUFFIX, click.uve.weibo.com, REJECT
 DOMAIN-SUFFIX, wax.weibo.com, REJECT
 DOMAIN-SUFFIX, wbapp.uve.weibo.com, REJECT
@@ -80,6 +79,7 @@ DOMAIN, adpinpai.video.weibocdn.com, REJECT
 # 微博
 ^https:\/\/api\.weibo\.cn\/2\/!\/huati\/discovery_home_bottom_channels reject-dict
 ^https:\/\/api\.weibo\.cn\/2\/!\/chaohua\/discovery\/home_bottom\/switch reject-dict
+^https:\/\/api\.weibo\.cn\/2\/!\/was\/finder\/searchbarchange\? reject-dict
 
 [Script]
 # 微博移除发现页广告
