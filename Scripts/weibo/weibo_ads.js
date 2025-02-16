@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 微博去广告
- * @date 2025-02-14 16:37:00
+ * @date 2025-02-16 16:37:00
  */
 
 let url = $request.url;
@@ -56,7 +56,10 @@ try {
 
     // 5、微博详情页面
     if (url.includes("/statuses/extend?")) {
-      resp_data.head_cards = [];
+      delete resp_data.head_cards;
+      delete resp_data.top_cards;
+      delete resp_data.extend_info;
+      delete resp_data.semantic_brand_params;
       console.log('处理微博详情页面广告结束💕💕');
     }
 
@@ -216,7 +219,7 @@ function removeHotSearchAds(groups) {
   console.log('移除发现页热搜广告开始💕');
   for (let i = groups.length - 1; i >= 0; i--) {
     const group = groups[i];
-    if (group.itemid?.includes("is_ad_pos") || group.icon?.includes("8_0_small.png") || group.promotion) {
+    if (group.itemid?.includes("is_ad_pos") || group.itemid?.includes("c_type:51") || group.promotion) {
       groups.splice(i, 1);
     }
   }
