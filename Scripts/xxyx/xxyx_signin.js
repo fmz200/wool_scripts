@@ -42,11 +42,11 @@ async function startTasks() {
 
         // 2：去分享 每日一次
         // 3：去观看 每日20次
-        $.log("🟢开始每日任务...");
         if (task.taskId === 2 || task.taskId === 3) {
+          $.log(`🟢开始[${task.taskName}]...`);
           // 还需要完成的次数
           let remainTasks = task.dailyCount - task.completedTimes;
-          console.log(`当前任务类型[${task.taskId}:${$task.taskName}]待完成数量：${remainTasks}`);
+          console.log(`当前任务类型[${task.taskId}]待完成数量：${remainTasks}`);
           if (remainTasks > 0) {
             for (let i = 0; i < remainTasks; i++) {
               // 执行任务
