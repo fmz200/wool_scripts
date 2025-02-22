@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 微博去广告
- * @date 2025-02-16 16:37:00
+ * @date 2025-02-22 09:37:00
  */
 
 let url = $request.url;
@@ -145,6 +145,9 @@ $done({body:JSON.stringify(resp_data)});
 /***************************方法主体end*********************************/
 
 function processPayload(payload) {
+  if (!payload) {
+    return;
+  }
   if (payload.items[0].items) {
     removeCommonAds(payload.items[0].items);
   }
