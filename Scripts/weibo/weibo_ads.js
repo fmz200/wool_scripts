@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 微博去广告
- * @date 2025-02-16 16:37:00
+ * @date 2025-02-22 10:00:00
  */
 
 let url = $request.url;
@@ -34,21 +34,21 @@ try {
       console.log('处理微博热搜页面广告结束💕💕');
     }
 
-    // 微博热搜页面 “热搜”tab页 https://api.weibo.cn/2/flowpage
+    // 微博热搜页面 “热搜”tab页
     if (url.includes("/2/flowpage?")) {
       // 删掉Banner图
       resp_data.pageHeader = {};
       for (let subItem of resp_data.items) {
         if (subItem.itemId === "hotword") {
-          subItem.items = subItem.items.filter(group => group.data.promotion == null);
+          subItem.items = subItem.items.filter(group => group.data.promotion == null && !group.data.itemid.includes("c_type:51")); 
           break;
         } else if (subItem.items) {
-          subItem.items = subItem.items.filter(group => group.data.promotion == null);
+          subItem.items = subItem.items.filter(group => group.data.promotion == null && !group.data.itemid.includes("c_type:51"));
         }
       }
     }
 
-    // 4、微博超话页面 https://api.weibo.cn/2/statuses/container_timeline_topicpage
+    // 4、微博超话页面
     if (url.includes("/statuses/container_timeline_topicpage?") && resp_data.items) {
       resp_data.items = resp_data.items.filter(item => !item.data || item.data.mblogtypename !== "广告");
       console.log('处理微博超话页面广告结束💕💕');
@@ -63,14 +63,14 @@ try {
       console.log('处理微博详情页面广告结束💕💕');
     }
 
-    // 6、移除微博首页的多余tab页 微博首页Tab标签页 https://api.weibo.cn/2/groups/allgroups/v2
+    // 6、移除微博首页的多余tab页 微博首页Tab标签页
     if (url.includes("/groups/allgroups/v2")) {
       removePageDataAds(resp_data.pageDatas);
       // 删除恶心人的“全部微博”
       delete resp_data.pageDatas[0].categories[0].pageDatas[0];
     }
 
-    // 7、话题页面 微博话题页面 https://api.weibo.cn/2/searchall
+    // 7、话题页面 微博话题页面
     if (url.includes("/2/searchall?")) {
       for (let i = 0; i < resp_data.items.length; i++) {
         if (resp_data.items[i].data?.mblogtypename === "广告" || resp_data.items[i].data?.ad_state === 1) {
@@ -96,7 +96,7 @@ try {
       console.log('处理话题页面广告结束💕💕');
     }
 
-    // 8、超话tab页 微博超话tab页 https://api.weibo.cn/2/statuses/container_timeline_topic
+    // 8、超话tab页 微博超话tab页
     if (url.includes("/statuses/container_timeline_topic?")) {
       let foundFeed = false;
       const cardTypes = [19, 179]; // 19：热帖/必刷/分类，31：热搜词，179：关注的超话
@@ -145,6 +145,9 @@ $done({body:JSON.stringify(resp_data)});
 /***************************方法主体end*********************************/
 
 function processPayload(payload) {
+  if (!payload) {
+    return;
+  }
   if (payload.items[0].items) {
     removeCommonAds(payload.items[0].items);
   }
@@ -219,7 +222,7 @@ function removeHotSearchAds(groups) {
   console.log('移除发现页热搜广告开始💕');
   for (let i = groups.length - 1; i >= 0; i--) {
     const group = groups[i];
-    if (group.itemid?.includes("is_ad_pos") || group.itemid?.includes("c_type:51") || group.promotion) {
+    if (group.itemid?.includes("is_ad_pos") || group.itemid?.includes("cate_type:tongcheng") || group.promotion) {
       groups.splice(i, 1);
     }
   }

@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 晓晓优选每日任务
- * @date 2024-05-19 11:30:00
+ * @date 2025-02-22 10:30:00
  * 
  * 获取token：
  * ^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/my url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cookie/get_cookie.js
@@ -33,7 +33,7 @@ async function startTasks() {
       for (const task of taskList) {
         // 1、每日签到
         if (task.taskId === 1) {
-          $.log("🟢开始签到...");
+          $.log(`🟢开始[${task.taskName}]...`);
           const successSign = await singIn(token);
           if (successSign) {
             energy += task.energyBase;
@@ -42,8 +42,8 @@ async function startTasks() {
 
         // 2：去分享 每日一次
         // 3：去观看 每日20次
-        $.log("🟢开始每日任务...");
         if (task.taskId === 2 || task.taskId === 3) {
+          $.log(`🟢开始[${task.taskName}]...`);
           // 还需要完成的次数
           let remainTasks = task.dailyCount - task.completedTimes;
           console.log(`当前任务类型[${task.taskId}]待完成数量：${remainTasks}`);
@@ -76,9 +76,9 @@ function singIn(token) {
     headers: {
       'xx-time': `${currentTimeStamp}`,
       'xx-token': `${token}`,
-      'xx-version': `20127`,
+      'xx-version': `20480`,
       'xx-platform': `ios`,
-      'User-Agent': `XiaoXiaoYouXuan/20127 CFNetwork/1331.0.7 Darwin/21.4.0`,
+      'User-Agent': `XiaoXiaoYouXuan/20480 CFNetwork/3826.400.120 Darwin/24.3.0`,
       'Content-Type': `application/json;charset=utf-8`,
       'Host': `xxyx-client-api.xiaoxiaoyouxuan.com`
     },
@@ -104,9 +104,9 @@ function getTaskList(token) {
     headers: {
       'xx-time': `${currentTimeStamp}`,
       'xx-token': `${token}`,
-      'xx-version': `20127`,
+      'xx-version': `20480`,
       'xx-platform': `ios`,
-      'User-Agent': `XiaoXiaoYouXuan/20127 CFNetwork/1331.0.7 Darwin/21.4.0`,
+      'User-Agent': `XiaoXiaoYouXuan/20480 CFNetwork/3826.400.120 Darwin/24.3.0`,
       'Content-Type': `application/json;charset=utf-8`,
       'Host': `xxyx-client-api.xiaoxiaoyouxuan.com`
     },
@@ -131,9 +131,9 @@ function completeTask(token, taskId) {
     url: `https://xxyx-client-api.xiaoxiaoyouxuan.com/client/energy/mall/completeTask/${taskId}?`,
     headers: {
       'xx-token': `${token}`,
-      'xx-version': `20127`,
+      'xx-version': `20480`,
       'xx-platform': `ios`,
-      'User-Agent': `XiaoXiaoYouXuan/20127 CFNetwork/1331.0.7 Darwin/21.4.0`,
+      'User-Agent': `XiaoXiaoYouXuan/20480 CFNetwork/3826.400.120 Darwin/24.3.0`,
       'Content-Type': `application/json;charset=utf-8`,
       'Host': `xxyx-client-api.xiaoxiaoyouxuan.com`
     },
