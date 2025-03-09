@@ -1,4 +1,4 @@
-// 2024-01-14 18:15
+// 2025-03-08 22:15
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -102,7 +102,7 @@ if (isIQY) {
       obj.cache_expired_sec = 1;
     }
     if (obj?.data) {
-      obj.data = [{ query: "搜索内容" }];
+      obj.data = [{query: "搜索内容"}];
     }
     if (obj?.show_style?.roll_period) {
       obj.show_style.roll_period = 1000;
@@ -140,9 +140,7 @@ if (isIQY) {
     if (obj?.cards?.length > 0) {
       // 评论资源位 无alias_name字段的为广告
       obj.cards = obj.cards.filter(
-          (i) =>
-              i.hasOwnProperty("alias_name") &&
-              !["comment_resource_card", "comment_resource_convention_card"]?.includes(i?.alias_name)
+        (i) => i.hasOwnProperty("alias_name") && !["comment_resource_card", "comment_resource_convention_card"]?.includes(i?.alias_name)
       );
     }
   } else if (url.includes("/views_home/")) {
@@ -184,42 +182,42 @@ if (isIQY) {
     }
     if (obj?.cards?.length > 0) {
       obj.cards = obj.cards.filter(
-          (i) =>
-              ![
-                "bi_playlist", // 必播单 当下最热电影推荐
-                // "cloud_cinema_detail_character", // 云影院演员列表
-                // "cloud_cinema_detail_synopsis", // 云影院详情简介
-                // "cloud_cinema_play_detail_tag", // 云影院详情标签
-                "cloud_cinema_play_privilege", // 云影院底部文字
-                "cloud_cinema_playlist", // 云影院播单
-                "cloud_cinema_playlist_1", // 云影院播单2
-                "cloud_cinema_playlist_2", // 云影院播单3
-                // "cloud_cinema_preview_collection", // 云影院预告片选集
-                "cloud_cinema_privilege_icon", // 云影院内容权益
-                "cloud_cinema_star_activities", // 云影院推广横幅
-                "play_ad_no_vip", // 视频关联广告
-                "play_around", // 周边视频 短视频
-                // "play_collection", // 选集
-                "play_custom_card", // 偶像练习生定制卡片
-                // "play_detail_tag", // 详情标签
-                // "play_rap_custom", // 综艺 svip舞台纯享
-                // "play_series_collection", // 综艺 选集 看点
-                "play_splendid_collection", // 综艺 合集 正片没有的都在这里
-                "play_type_topical_card_3", // 综艺 幕后花絮
-                "play_type_topical_card_4", // 综艺 精彩二创
-                "play_variety_custom_2", // 综艺 精彩看点
-                "play_vertical", // 综艺 竖屏内容
-                "play_vip_promotion", // 会员推广
-                "play_water_fall_like", // 猜你喜欢
-                "play_water_fall_like_title", // 猜你喜欢标题
-                "plt_cloud_cinema_photo", // 云影院剧照 清晰度低
-                // "plt_cloud_cinema_short1", // 云影院官方短视频
-                "plt_cloud_cinema_short2", // 云影院短视频剪辑
-                "plt_playlist", // 播单
-                "plt_playlist_1", // 播单2
-                "plt_playlist_2", // 播单3
-                "funny_short_video" // 精彩短视频
-              ]?.includes(i?.alias_name)
+        (i) =>
+          ![
+            "bi_playlist", // 必播单 当下最热电影推荐
+            // "cloud_cinema_detail_character", // 云影院演员列表
+            // "cloud_cinema_detail_synopsis", // 云影院详情简介
+            // "cloud_cinema_play_detail_tag", // 云影院详情标签
+            "cloud_cinema_play_privilege", // 云影院底部文字
+            "cloud_cinema_playlist", // 云影院播单
+            "cloud_cinema_playlist_1", // 云影院播单2
+            "cloud_cinema_playlist_2", // 云影院播单3
+            // "cloud_cinema_preview_collection", // 云影院预告片选集
+            "cloud_cinema_privilege_icon", // 云影院内容权益
+            "cloud_cinema_star_activities", // 云影院推广横幅
+            "play_ad_no_vip", // 视频关联广告
+            "play_around", // 周边视频 短视频
+            // "play_collection", // 选集
+            "play_custom_card", // 偶像练习生定制卡片
+            // "play_detail_tag", // 详情标签
+            // "play_rap_custom", // 综艺 svip舞台纯享
+            // "play_series_collection", // 综艺 选集 看点
+            "play_splendid_collection", // 综艺 合集 正片没有的都在这里
+            "play_type_topical_card_3", // 综艺 幕后花絮
+            "play_type_topical_card_4", // 综艺 精彩二创
+            "play_variety_custom_2", // 综艺 精彩看点
+            "play_vertical", // 综艺 竖屏内容
+            "play_vip_promotion", // 会员推广
+            "play_water_fall_like", // 猜你喜欢
+            "play_water_fall_like_title", // 猜你喜欢标题
+            "plt_cloud_cinema_photo", // 云影院剧照 清晰度低
+            // "plt_cloud_cinema_short1", // 云影院官方短视频
+            "plt_cloud_cinema_short2", // 云影院短视频剪辑
+            "plt_playlist", // 播单
+            "plt_playlist_1", // 播单2
+            "plt_playlist_2", // 播单3
+            "funny_short_video" // 精彩短视频
+          ]?.includes(i?.alias_name)
       );
     }
   } else if (url.includes("/views_search/")) {
@@ -228,18 +226,18 @@ if (isIQY) {
       let newCards = [];
       for (let card of obj.cards) {
         if (
-            [
-              "ad_mobile_flow", // 信息流广告
-              "hot_query_bottom", // 底部图标
-              "hot_query_search_top_ad", //顶部广告
-              "search_com_related_query", // 相关搜索
-              "search_intent_detail_onesearch", // 为你推荐信息流
-              "search_mid_text_ad", // 底部广告
-              "search_onebox_v2", // 搜索界面 赢年卡
-              "search_small_card_ad", // 搜索短视频小图广告
-              "search_topbanner_text", // 为你推荐标题
-              "search_vip_banner" // vip营销
-            ]?.includes(card?.strategy_com_id)
+          [
+            "ad_mobile_flow", // 信息流广告
+            "hot_query_bottom", // 底部图标
+            "hot_query_search_top_ad", //顶部广告
+            "search_com_related_query", // 相关搜索
+            "search_intent_detail_onesearch", // 为你推荐信息流
+            "search_mid_text_ad", // 底部广告
+            "search_onebox_v2", // 搜索界面 赢年卡
+            "search_small_card_ad", // 搜索短视频小图广告
+            "search_topbanner_text", // 为你推荐标题
+            "search_vip_banner" // vip营销
+          ]?.includes(card?.strategy_com_id)
         ) {
           continue;
         } else {
@@ -384,7 +382,7 @@ if (isIQY) {
   } else if (url.includes("/mobile/recommend/v2?")) {
     // 芒果 搜索框填充词
     if (obj?.data?.default) {
-      obj.data.default = { 0: ["搜索内容"] };
+      obj.data.default = {0: ["搜索内容"]};
     }
     if (obj?.data?.recommend) {
       obj.data.recommend = [];
@@ -527,7 +525,7 @@ if (isIQY) {
         if (config?.PHONE_DETAIL_TOP_TAB?.pageTabs?.length > 0) {
           // detail视频 list热门 planet讨论
           config.PHONE_DETAIL_TOP_TAB.pageTabs = config.PHONE_DETAIL_TOP_TAB.pageTabs.filter((i) =>
-              ["detail", "planet"]?.includes(i?.code)
+            ["detail", "planet"]?.includes(i?.code)
           );
         }
       }
@@ -537,25 +535,25 @@ if (isIQY) {
           if (node0?.nodes?.length > 0) {
             if (node0?.typeName === "NORMAL") {
               node0.nodes = node0.nodes.filter(
-                  (i) =>
-                      ![
-                        "PHONE_CHD_AGE_DETAIL_2",
-                        "PHONE_CHILD_SERIES_A",
-                        "PHONE_CHILD_STAR_A",
-                        "PHONE_DEFALT_SCROLL_C",
-                        "Phone运营banner",
-                        "播放页触达组件", // 新版
-                        "播放页广告组件",
-                        "播放页会员引导组件",
-                        "播放页活动组件",
-                        "播放页全屏播后推荐组件",
-                        "播放页少儿品牌专区组件",
-                        "播放页推荐组件",
-                        "播放页用户触达组件", // 旧版
-                        "播放页有料不能停组件",
-                        "球区自动化组件",
-                        "优酷购"
-                      ]?.includes(i?.typeName)
+                (i) =>
+                  ![
+                    "PHONE_CHD_AGE_DETAIL_2",
+                    "PHONE_CHILD_SERIES_A",
+                    "PHONE_CHILD_STAR_A",
+                    "PHONE_DEFALT_SCROLL_C",
+                    "Phone运营banner",
+                    "播放页触达组件", // 新版
+                    "播放页广告组件",
+                    "播放页会员引导组件",
+                    "播放页活动组件",
+                    "播放页全屏播后推荐组件",
+                    "播放页少儿品牌专区组件",
+                    "播放页推荐组件",
+                    "播放页用户触达组件", // 旧版
+                    "播放页有料不能停组件",
+                    "球区自动化组件",
+                    "优酷购"
+                  ]?.includes(i?.typeName)
               );
             } else if (node0?.typeName === "FEED_CHILD_DRAWER_PAGINATION") {
               // 播放页推荐信息流
@@ -579,32 +577,32 @@ if (isIQY) {
     if (obj?.data?.["2019061000"]?.data) {
       let objData = obj.data["2019061000"].data;
       if (objData?.nodes?.length > 0) {
-        let newNodes = [];
-        for (let item of objData.nodes) {
-          if (item?.typeName === "PHONE_FEED_CARD_GROUP") {
-            if (item?.nodes?.length > 0) {
-              let newItems = [];
-              for (let i of item.nodes) {
-                if (i?.typeName === "PHONE_FEED_CARD_S_AD") {
+        let newNodes1 = [];
+        for (let node1 of objData.nodes) {
+          if (node1?.typeName === "PHONE_FEED_CARD_GROUP") {
+            if (node1?.nodes?.length > 0) {
+              let newNode2 = [];
+              for (let node2 of node1.nodes) {
+                if (node2?.typeName === "PHONE_FEED_CARD_S_AD") {
                   // 首页 四格小图广告
                   continue;
-                } else if (i?.typeName === "PHONE_H_UC_AD") {
+                } else if (node2?.typeName === "PHONE_H_UC_AD") {
                   // 首页 横版独占广告
                   continue;
                 } else {
-                  newItems.push(i);
+                  newNode2.push(node2);
                 }
               }
-              item.nodes = newItems;
-              newNodes.push(item);
+              node1.nodes = newNode2;
+              newNodes1.push(node1);
             } else {
-              newNodes.push(item);
+              newNodes1.push(node1);
             }
           } else {
-            newNodes.push(item);
+            newNodes1.push(node1);
           }
         }
-        objData.nodes = newNodes;
+        objData.nodes = newNodes1;
       }
     }
   } else if (url.includes("columbus.home.query/")) {
@@ -616,98 +614,97 @@ if (isIQY) {
         objData.data.indexPositionResult = [];
       }
       if (objData?.nodes?.length > 0) {
-        let newNodes = [];
-        for (let item of objData.nodes) {
-          // 第一层级循环
-          if (["CHILD", "COMIC2", "20230929GREATWORKMFK"]?.includes(item?.data?.nodeKey)) {
+        let newNodes1 = [];
+        for (let node1 of objData.nodes) { // 第一层级node，属于obj.data[2019061000].data.nodes
+          if (["CHILD", "COMIC2", "20230929GREATWORKMFK"]?.includes(node1?.data?.nodeKey)) {
             // 首页 少儿 动漫 国庆长假免费看
             continue;
           } else {
-            if (item?.data?.indexPositionResult?.length > 0) {
+            if (node1?.data?.indexPositionResult?.length > 0) {
               // 剧集 电影 二楼
-              item.data.indexPositionResult = [];
+              node1.data.indexPositionResult = [];
             }
-            if (item?.data?.refreshImg) {
+            if (node1?.data?.refreshImg) {
               // 电影 综艺 纪录片 下拉刷新的背景图片
-              delete item.data.refreshImg;
+              delete node1.data.refreshImg;
             }
             // 首页 剧集 电影 全都有信息流广告
             // 去掉nodeKey的判断 直接处理下一层级
-            if (item?.nodes?.length > 0) {
-              let newItems = [];
-              for (let i of item.nodes) {
-                // 第二层级循环
-                if (i?.data?.crmSale) {
+            if (node1?.nodes?.length > 0) {
+              let newNode2 = [];
+              for (let node2 of node1.nodes) { // 第二层级循环 node
+                if (node2?.data?.crmSale) {
                   // 季卡会员横幅
-                  delete i.data.crmSale;
+                  delete node2.data.crmSale;
                 }
-                if (["UC广告抽屉", "橱窗广告"]?.includes(i?.typeName)) {
+                if (["UC广告抽屉", "橱窗广告"].includes(node2?.typeName)) {
                   // 横版独占广告
                   continue;
-                } else if (i?.id === 31476) {
+                } else if (node2?.id === 31476) {
                   // 正在热播
-                  if (i?.data?.keywords?.length > 0) {
+                  if (node2?.data?.keywords?.length > 0) {
                     // 滚动热词
-                    delete i.data.keywords;
+                    delete node2.data.keywords;
                   }
-                } else if (i?.id === 35505) {
+                } else if (node2?.id === 35505) {
                   // 优惠购会员横幅
                   continue;
-                } else if (i?.id === 37335) {
+                } else if (node2?.id === 37335) {
                   // 首页二楼
                   continue;
                 } else {
-                  // 16214猜你在追
-                  // 38820首页顶部轮播图
-                  if (i?.nodes?.length > 0) {
-                    let newII = [];
-                    for (let ii of i.nodes) {
-                      // 第三层级循环
+                  // 16214 猜你在追
+                  // 38820 首页顶部轮播图
+                  if (node2?.nodes?.length > 0) {
+                    let newNode3 = [];
+                    for (let node3 of node2.nodes) { // 第三层级循环 node
                       if (
-                          [
-                            "PHONE_FEED_CARD_B_AD", // 横版独占广告
-                            "PHONE_FEED_CARD_S_AD", // 四格小图广告
-                            "PHONE_H_UC_AD", // 剧集 横版独占广告
-                            "PHONE_IMG_A", // 剧集 开通会员卡片
-                            "PHONE_YK_AD_BANNER" // 剧集 横版独占广告
-                          ]?.includes(ii?.typeName)
+                        [
+                          "PHONE_FEED_CARD_B_AD", // 横版独占广告
+                          "PHONE_FEED_CARD_S_AD", // 四格小图广告
+                          "PHONE_H_UC_AD", // 剧集 横版独占广告
+                          "PHONE_IMG_A", // 剧集 开通会员卡片
+                          "PHONE_YK_AD_BANNER" // 剧集 横版独占广告
+                        ].includes(node3?.typeName)
                       ) {
                         continue;
+                      } else if (node3.id === 272768) { // 首页的轮播广告
+                        console.log("移除首页的轮播广告");
+                        continue;
                       } else {
-                        if (ii?.nodes?.length > 0) {
-                          let newIII = [];
-                          for (let iii of ii.nodes) {
-                            // 第四层级循环
-                            if (iii?.typeName === "PHONE_FEED_CARD_S_AD") {
+                        if (node3?.nodes?.length > 0) {
+                          let newNode4 = [];
+                          for (let node4 of node3.nodes) { // 第四层级循环
+                            if (node4?.typeName === "PHONE_FEED_CARD_S_AD") {
                               // 剧集 四格小图广告
                               continue;
-                            } else if (iii?.data.hasOwnProperty("ad")) {
+                            } else if (node4?.data.hasOwnProperty("ad")) {
                               // 有ad字段的为广告
                               continue;
                             } else {
-                              newIII.push(iii);
+                              newNode4.push(node4);
                             }
                           }
-                          ii.nodes = newIII;
-                          newII.push(ii);
+                          node3.nodes = newNode4;
+                          newNode3.push(node3);
                         } else {
-                          newII.push(ii);
+                          newNode3.push(node3);
                         }
                       }
                     }
-                    i.nodes = newII;
-                    newItems.push(i);
+                    node2.nodes = newNode3;
+                    newNode2.push(node2);
                   } else {
-                    newItems.push(i);
+                    newNode2.push(node2);
                   }
                 }
               }
-              item.nodes = newItems;
+              node1.nodes = newNode2;
             }
-            newNodes.push(item);
+            newNodes1.push(node1);
           }
         }
-        objData.nodes = newNodes;
+        objData.nodes = newNodes1;
       }
     }
   } else if (url.includes("columbus.uc.query/")) {
@@ -843,7 +840,7 @@ if (isIQY) {
       if (bottom?.data?.bottomTabList?.length > 0) {
         // HOME首页 DONGTAI短视频 SEARCH淘好片 VIP_MEMBER会员 NEW_UCENTER我的
         bottom.data.bottomTabList = bottom.data.bottomTabList.filter((i) =>
-            ["HOME", "NEW_UCENTER", "VIP_MEMBER"]?.includes(i?.type)
+          ["HOME", "NEW_UCENTER", "VIP_MEMBER"]?.includes(i?.type)
         );
         // 修复位置
         for (let i = 0; i < bottom.data.bottomTabList.length; i++) {
@@ -873,4 +870,4 @@ if (isIQY) {
   }
 }
 
-$done({ body: JSON.stringify(obj) });
+$done({body: JSON.stringify(obj)});
