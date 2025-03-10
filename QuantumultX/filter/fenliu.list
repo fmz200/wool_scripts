@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/fenliu.list
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2024-10-18 23:10:00
+#!date=2025-03-10 11:10:00
 #!support=约9392行
 #!proxy-select=reject
 #############################################
@@ -968,6 +968,10 @@ host-suffix, android.rqd.qq.com, reject
 host-suffix, e.qq.com, reject
 host-suffix, beacon.qq.com, reject
 host-suffix, v.gdt.qq.com, reject
+host, amsweb-cdn-gz-1258344696.file.myqcloud.com, REJECT
+host, wallpaper-1258344696.file.myqcloud.com, REJECT
+host, xs.gdt.qq.com,REJECT
+IP-CIDR, 120.222.240.171/32, REJECT
 
 # > 蜻蜓FM
 host, ad.qingting.fm, reject
@@ -1573,6 +1577,7 @@ host, cm-10-138.getui.com, reject
 host, sdk.open.talk.getui.net, reject
 host, sdk-conf.getui.com, reject
 host, switch.cup.com.cn, reject
+host, ads.cup.com.cn, reject
 
 # > 雅虎
 host-suffix, adserver.yahoo.com, reject
@@ -1586,12 +1591,27 @@ host, ads.yahoo.com, reject
 host, ads.yahoo.de, reject
 
 # > 优酷
+host-suffix, sm.cn, reject
+host-suffix, acz.youku.com,REJECT
+host-suffix, adx-core.youku.com,REJECT
+host-suffix, adx-open-service.youku.com,REJECT
+host-suffix, rhdc-acs.youku.com,REJECT
+host-suffix, partner.uc.cn,REJECT
+host-suffix, ubixioe.com,REJECT
+host-suffix, uczzd.cn,REJECT
+host-suffix, ranfenghd.com,REJECT
+host-suffix, zconfig.alibabausercontent.com,REJECT
+host-suffix, bgg.baidu.com,REJECT
+host-suffix, gdt.qq.com,REJECT
+host-suffix, sdk.e.qq.com,REJECT
+host-suffix, mazu.m.qq.com,REJECT
+host-suffix, snowflake.qq.com,REJECT
+host-suffix, cad.youku.com,REJECT
+host-suffix, sjarvis.taobao.com,REJECT
 host, adsmind.ugdtimg.com, reject
 host, amdc.m.youku.com, reject
 host, apiv4-iyes.youku.com, reject
 host, httpdns.alicdn.com, reject
-host, huichuan-mc.sm.cn, reject
-host, huichuan.sm.cn, reject
 host, iyes.youku.com, reject
 host, m-vali.cp31.ott.cibntv.net, reject
 host, mc.atm.youku.com, reject
@@ -1644,6 +1664,7 @@ host-suffix, val.api.youku.com, reject
 host-suffix, wan.youku.com, reject
 host-suffix, ykatr.youku.com, reject
 host-suffix, ykrec.youku.com, reject
+IP-CIDR, 223.111.27.248/32, REJECT
 
 # > 易车
 host, adx.yiche.com, reject
