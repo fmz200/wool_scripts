@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 小红书去广告、净化、解除下载限制、画质增强等
- * @date 2025-03-21 17:30:00
+ * @date 2025-03-22 21:20:00
  * @quote @RuCu6
  */
 
@@ -290,7 +290,7 @@ if (url.includes("/v6/homefeed")) {
 }
 
 // 加载评论区
-if (url.includes("/api/sns/v5/note/comment/list?")) {
+if (url.includes("/api/sns/v5/note/comment/list?") || url.includes("/api/sns/v3/note/comment/sub_comments?")) {
   replaceRedIdWithFmz200(obj.data);
   let livePhotos = [];
   let note_id = "";
