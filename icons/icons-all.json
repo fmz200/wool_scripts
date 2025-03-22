@@ -1,6 +1,6 @@
 {
   "name": "fmz200の图标订阅",
-  "description": "收集一些自己常用的图标，尺寸为108px或144px，数量约1556个，更新日期：2025-02-22 10:30:00",
+  "description": "收集一些自己常用的图标，尺寸为108px或144px，数量约1564个，更新日期：2025-03-21 16:30:00",
   "icons": [
     {
       "name": "fmz200",
@@ -977,6 +977,10 @@
     {
       "name": "tencentcloud",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/tencentcloud.png"
+    },
+    {
+      "name": "TencentSport 腾讯体育",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/TencentSport.png"
     },
     {
       "name": "texon",
@@ -6245,10 +6249,6 @@
     {
       "name": "tag",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/erdongchanyo/tag.jpeg"
-    },
-    {
-      "name": "tencentcloud",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/erdongchanyo/tencentcloud.png"
     },
     {
       "name": "xqcloud",
