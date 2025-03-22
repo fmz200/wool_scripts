@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 小红书去广告、净化、解除下载限制、画质增强等
- * @date 2025-03-21 21:19:00
+ * @date 2025-03-21 17:30:00
  * @quote @RuCu6
  */
 
@@ -297,6 +297,15 @@ if (url.includes("/api/sns/v5/note/comment/list?")) {
   if (obj.data?.comments?.length > 0) {
     note_id = obj.data.comments[0].note_id;
     for (const comment of obj.data.comments) {
+      // comment_type: 0-文字，2-图片/live，3-表情包
+      if (comment.comment_type === 3) {
+        comment.comment_type = 2;
+        console.log(`修改评论类型：3->2`);
+      }
+      if (comment.media_source_type === 1) {
+        comment.media_source_type = 0;
+        console.log(`修改媒体类型：1->0`);
+      }
       if (comment.pictures?.length > 0) {
         console.log("comment_id: " + comment.id);
         for (const picture of comment.pictures) {
@@ -315,6 +324,14 @@ if (url.includes("/api/sns/v5/note/comment/list?")) {
       }
       if (comment.sub_comments?.length > 0) {
         for (const sub_comment of comment.sub_comments) {
+          if (comment.comment_type === 3) {
+            comment.comment_type = 2;
+            console.log(`修改评论类型1：3->2`);
+          }
+          if (comment.media_source_type === 1) {
+            comment.media_source_type = 0;
+            console.log(`修改媒体类型1：1->0`);
+          }
           if (sub_comment.pictures?.length > 0) {
             console.log("comment_id1: " + comment.id);
             for (const picture of sub_comment.pictures) {
