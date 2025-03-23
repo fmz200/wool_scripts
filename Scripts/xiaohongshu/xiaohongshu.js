@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 小红书去广告、净化、解除下载限制、画质增强等
- * @date 2025-03-21 17:30:00
+ * @date 2025-03-22 22:20:00
  * @quote @RuCu6
  */
 
@@ -290,7 +290,7 @@ if (url.includes("/v6/homefeed")) {
 }
 
 // 加载评论区
-if (url.includes("/api/sns/v5/note/comment/list?")) {
+if (url.includes("/api/sns/v5/note/comment/list?") || url.includes("/api/sns/v3/note/comment/sub_comments?")) {
   replaceRedIdWithFmz200(obj.data);
   let livePhotos = [];
   let note_id = "";
@@ -324,12 +324,12 @@ if (url.includes("/api/sns/v5/note/comment/list?")) {
       }
       if (comment.sub_comments?.length > 0) {
         for (const sub_comment of comment.sub_comments) {
-          if (comment.comment_type === 3) {
-            comment.comment_type = 2;
+          if (sub_comment.comment_type === 3) {
+            sub_comment.comment_type = 2;
             console.log(`修改评论类型1：3->2`);
           }
-          if (comment.media_source_type === 1) {
-            comment.media_source_type = 0;
+          if (sub_comment.media_source_type === 1) {
+            sub_comment.media_source_type = 0;
             console.log(`修改媒体类型1：1->0`);
           }
           if (sub_comment.pictures?.length > 0) {
