@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 微博去广告
- * @date 2025-02-22 10:00:00
+ * @date 2025-03-26 07:45:00
  */
 
 let url = $request.url;
@@ -60,6 +60,7 @@ try {
       delete resp_data.top_cards;
       delete resp_data.extend_info;
       delete resp_data.semantic_brand_params;
+      delete resp_data.ad_tag_nature;
       console.log('处理微博详情页面广告结束💕💕');
     }
 
