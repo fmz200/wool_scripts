@@ -152,6 +152,9 @@ function isAd(data) {
 	if (data.ads_material_info?.is_ads) {
 		return true;
 	}
+	if (data.is_ad === 1) {
+		return true;
+	}
 	return false;
 }
 

@@ -104,6 +104,9 @@ http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/extend\? script-pa
 # 微博最顶部的tab页分组
 http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/2\/groups\/allgroups\/v2 script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body=true, timeout=60, tag=微博最顶部的tab页分组
 
+# 微博转发评论区广告
+http-response ^https:\/\/api\.weibo\.cn\/2\/statuses\/repost_timeline\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_main.js, requires-body=true, timeout=60, tag=微博转发评论区广告
+
 # 微博去广告以及去除各部分推广模块 - cherish
 http-response ^https?:\/\/m?api\.weibo\.c(n|om)/2/(cardlist|searchall|page|messageflow|statuses/(unread_)?friends(/|_)timeline|groups/timeline|statuses/(container_timeline|container_timeline_hot|unread_hot_timeline|extend|video_mixtimeline)|profile/(me|container_timeline)|video/(community_tab|remind_info|tiny_stream_video_list)|checkin/show|\!/live/media_homelist|comments/build_comments|container/get_item) script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_main.js, requires-body=true, timeout=60, tag=微博去广告以及去除各部分推广模块
 http-response ^https?:\/\/(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua) script-path=https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_launch.js, requires-body=true, timeout=60, tag=微博去广告以及去除各部分推广模块

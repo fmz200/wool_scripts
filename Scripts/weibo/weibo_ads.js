@@ -61,6 +61,8 @@ try {
       delete resp_data.extend_info;
       delete resp_data.semantic_brand_params;
       delete resp_data.ad_tag_nature;
+      delete resp_data.title_source;
+      delete resp_data.reward_info;
       console.log('处理微博详情页面广告结束💕💕');
     }
 
