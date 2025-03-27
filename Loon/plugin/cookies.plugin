@@ -2,7 +2,7 @@
 #!desc=整合大部分获取cookie和token的配置Loon版，获取后禁用该配置
 #!author=奶思[https://github.com/fmz200]
 #!homepage=https://github.com/fmz200/wool_scripts
-#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/others/cookie.png
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/cookies.plugin
 #!tg-group=https://t.me/lanjieguanggao
 #!category=奶思的模块
