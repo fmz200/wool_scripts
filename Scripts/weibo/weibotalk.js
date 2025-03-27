@@ -203,12 +203,12 @@ function get_page_number() {
 //获取超话签到id
 function get_talk_id(page) {
     let getlisturl = $.listurl.replace(/&page=.*?&/, "&page=" + page + "&");
-    console.log(getlisturl);
+    // console.log(getlisturl);
     let idrequest = {
         url: getlisturl,
         header: $.listheaders
     };
-    console.log(idrequest)
+    // console.log(idrequest)
     return new Promise((resolve) => {
         $.get(idrequest, (error, response, data) => {
             if (error) {
@@ -259,9 +259,9 @@ function checkin(id, name) {
             name = name.replace(/超话/, "")
             if (response.statusCode == 200) {
                 msg_info = JSON.parse(response.body);
-                if (msg_info.hasOwnProperty('error_msg')) {
+                if (msg_info.hasOwnProperty('errmsg')) {
                     $.failNum += 1;
-                    error_code = msg_info.error_msg.match(/\((\d*?)\)/)[1]
+                    error_code = msg_info.errcode;
                     if (error_code == 382004) {
                         $.message.push(`【${name}】：✨今天已签到`);
                         console.log(`【${name}】：${msg_info.error_msg}`);
