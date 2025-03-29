@@ -1,6 +1,6 @@
 {
   "name": "fmz200の图标订阅",
-  "description": "收集一些自己常用的图标，尺寸为108px或144px，数量约1564个，更新日期：2025-03-23 12:30:00",
+  "description": "收集一些自己常用的图标，尺寸为108px或144px，数量约1564个，更新日期：2025-03-29 09:00:00",
   "icons": [
     {
       "name": "fmz200",
@@ -1401,6 +1401,66 @@
     {
       "name": "zhangjun",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/zhangjun.png"
+    },
+    {
+      "name": "农业银行",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/bank/ABC.png"
+    },
+    {
+      "name": "交通银行",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/bank/BC.png"
+    },
+    {
+      "name": "建设银行",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/bank/CCB.png"
+    },
+    {
+      "name": "光大银行",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/bank/CEB.png"
+    },
+    {
+      "name": "广发银行",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/bank/CGDB.png"
+    },
+    {
+      "name": "发现生活",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/bank/CGDB_1.png"
+    },
+    {
+      "name": "兴业银行",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/bank/CIB.png"
+    },
+    {
+      "name": "招商银行",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/bank/CMB.png"
+    },
+    {
+      "name": "民生银行",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/bank/CMBC.png"
+    },
+    {
+      "name": "华夏银行",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/bank/HXB.png"
+    },
+    {
+      "name": "工商银行",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/bank/ICBC.png"
+    },
+    {
+      "name": "平安银行",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/bank/PAB.png"
+    },
+    {
+      "name": "中国银行",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/bank/PBC.png"
+    },
+    {
+      "name": "邮储银行",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/bank/PSBC.png"
+    },
+    {
+      "name": "浦发银行",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/bank/SPDB.png"
     },
     {
       "name": "GetSomeCats",
