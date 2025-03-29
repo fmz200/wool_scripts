@@ -1439,12 +1439,20 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/bank/CMBC.png"
     },
     {
+      "name": "中信银行",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/bank/CNCB.png"
+    },
+    {
       "name": "华夏银行",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/bank/HXB.png"
     },
     {
       "name": "工商银行",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/bank/ICBC.png"
+    },
+    {
+      "name": "买单吧",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/bank/maidanba.png"
     },
     {
       "name": "平安银行",
