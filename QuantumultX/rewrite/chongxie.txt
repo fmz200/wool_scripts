@@ -917,12 +917,6 @@ http:\/\/ad\.myfriday\.cn\/d\/json\/1\.1 url reject
 
 
 # >>>>>>>>>>>>>>> ✅ G ✅ <<<<<<<<<<<<<<
-# > 光大银行
-# hostname = mobile.cebbank.com, yghsh.cebbank.com
-^https?:\/\/mobile\.cebbank\.com\/cebclient\/ClientNoticeList url reject-200
-# > 光大银行 阳光惠生活
-^https?:\/\/yghsh\.cebbank\.com\/static\/picture\/.*.jpg url reject-200
-
 # > 工商银行
 # hostname = v.icbc.com.cn
 # 如开启可自行添加主机名
