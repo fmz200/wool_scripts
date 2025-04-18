@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 小红书去广告、净化、解除下载限制、画质增强等
- * @date 2025-03-22 22:20:00
+ * @date 2025-04-18 14:00:00
  * @quote @RuCu6
  */
 
@@ -182,7 +182,7 @@ if (url.includes("/v4/note/videofeed")) {
         });
       }
       // 存储无水印视频链接
-      if (item?.id !== "" && item?.video_info_v2?.media?.stream?.h265?.[0]?.master_url !== "") {
+      if (item?.id && item.video_info_v2?.media?.stream?.h265?.length > 0 && item.video_info_v2.media.stream.h265[0].master_url) {
         let myData = {
           id: item.id,
           url: item.video_info_v2.media.stream.h265[0].master_url
@@ -197,7 +197,7 @@ if (url.includes("/v4/note/videofeed")) {
   if (videoFeedUnlock?.notSave === "fmz200") {
     if (obj?.data?.length > 0) {
       for (let item of obj.data) {
-        if (item?.id !== "" && item?.video_info_v2?.media?.stream?.h265?.[0]?.master_url !== "") {
+        if (item?.id && item.video_info_v2?.media?.stream?.h265?.length > 0 && item.video_info_v2.media.stream.h265[0].master_url) {
           let myData = {
             id: item.id,
             url: item.video_info_v2.media.stream.h265[0].master_url
