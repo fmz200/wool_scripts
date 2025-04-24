@@ -96,7 +96,7 @@ cron "50 4 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scr
 cron "0 5 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.js, enable=false, tag=中国联通
 cron "10 5 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/maomicd/maomicd.js, enable=false, tag=猫咪音乐
 ;cron "20 5 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.js, enable=false, tag=中国移动
-cron "30 5 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wmmeituan/wmmeituan.js, enable=false, tag= 美团外卖
+cron "30 5 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wmmeituan/wmmeituan.js, enable=false, tag=美团外卖
 cron "40 5 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.js, enable=false, tag=美团
 cron "50 5 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/everphoto/everphoto.js, enable=false, tag=时光相册
 ;cron "0 6 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bcz/bcz.js, enable=false, tag=百词斩
@@ -203,12 +203,7 @@ cron "10 0/5 13-23 * * *" script-path=https://raw.githubusercontent.com/MeetaGit
 # makexp
 # cron "40 11 8 * * *" script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/xmly_wc.js, enable=false, tag=微信小程序-喜马拉雅
 
-# vinewx  https://ooxx.be/js/
-cron "0 9 * * *" script-path=https://ooxx.be/js/jegotrip.js, enable=false, tag=无忧行
-cron "0 9 * * *" script-path=https://ooxx.be/js/umer.js, enable=false, tag=优麦医生
-cron "0 18 * * *" script-path=https://ooxx.be/js/maoyan.js, enable=false, tag=猫眼
-
-#  chouchoui  https://github.com/chouchoui/QuanX/tree/master/Scripts
+# chouchoui  https://github.com/chouchoui/QuanX/tree/master/Scripts
 #cron "30 8,13,19 * * *" script-path=https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/angelalign/angelalign.task.js, enable=false, tag=时代天使
 cron "10 0 * * *" script-path=https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/nga/nga.js, enable=false, tag=NGA刮墙
 
