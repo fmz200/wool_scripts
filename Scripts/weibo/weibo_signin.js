@@ -1,11 +1,11 @@
 /**
  * @author @fmz200
- * @date 2025-03-30 20：00
+ * @date 2025-04-24 22：11
  * @function 微博每日签到，积分多了可以兑换现金
  * 
  * Loon：
  * [Script]
- * cron "0 8 * * *" script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_signin.js, timeout=60, tag=微博签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo-00.png
+ * cron "0 8 * * *" script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_signin.js, timeout=60, tag=微博每日签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo-00.png
  */
 
 const $ = new Env("微博签到");
@@ -24,7 +24,7 @@ async function startTasks() {
   for (const item of jsonData) {
     let signUrl = item.signin_url;
     let weiboId = item.weibo_id;
-    let userInfo = await getUserInfo(weiboId, signUrl);
+    let userInfo = await getUserInfo(weiboId, signUrl, item.headers);
     let username = userInfo.name || weiboId;
     let avatar = userInfo.avatar_hd || '';
 
@@ -54,22 +54,10 @@ async function startTasks() {
 }
 
 // 获取用户信息，不是必须的
-function getUserInfo(weiboId, signUrl) {
+function getUserInfo(weiboId, signUrl, headers) {
   const options = {
-    url: `${signUrl}`,
-    headers: {
-      'x-validator': 'w6M3a8ykZn5HpVHikyRtKxZClarKWHS6eZhEk+fzs1c=',
-      'x-sessionid': 'CA9C6728-16D5-4FFE-A03C-5EBFFFEFE8D8',
-      'x-engine-type': 'cronet-114.0.5735.246',
-      'snrt': 'normal',
-      'authorization': 'WB-SUT _2A95K47-yDeRxGeNN6FEW8izJzz-IHXVnuLR6rDV6PUJbkdANLRT5kWpNSda9BXOhoLP8qagkUNT0ntR2qKlUDu5K',
-      'accept': '*/*',
-      'cronet_rid': '7580931',
-      'user-agent': 'Weibo/91850 (iPhone; iOS 18.4; Scale/3.00)',
-      'x-log-uid': `${weiboId}`,
-      'accept-language': 'ko-KR,ko,en-US,en',
-      'accept-encoding': 'gzip, deflate, br',
-    }
+    url: signUrl,
+    headers: headers
   };
 
   return $.http.get(options).then((resp) => {
