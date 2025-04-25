@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/script/tasks.scripts
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2024-12-09 12:15:00
+#!date=2025-04-25 17:10:00
 #############################################
 # 配置语法 脚本默认执行超时时间200s
 # cron "0 8 * * *" script-path=cron.js,tag = cronScript,timeout = 300,argument = "1234",enable=true
@@ -34,6 +34,9 @@ cron "22 10 * * *" script-path=https://raw.githubusercontent.com/fmz200/wool_scr
 cron "0 10 * * *" script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/backup.js, timeout=300, tag=Gist备份, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/BoxJS.png, enable=false
 cron "5 10 * * *" script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/restore.js, timeout=300, tag=Gist恢复, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/BoxJS.png, enable=false
 cron "0 0 * * *" script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/cron-sync-artifacts.min.js, timeout=300, tag=Sub-Store Sync, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/SubStore.png, enable=false
+
+# Zirawell
+cron "10 0 * * *" script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/CheckIn/flyert.js, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/flyert.png, enable=false, tag=飞客-签到
 
 # BoxJS
 cron "0 * * * *" script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/Delete_All.js, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/BoxJS.png, enable=false, tag=抹掉BoxJS全局备份
