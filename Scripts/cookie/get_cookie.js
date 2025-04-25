@@ -157,7 +157,7 @@ try {
       console.log("读取缓存数据：" + cache);
 
       let json_data = JSON.parse(cache);
-      updateOrAddObject(json_data, "weibo_id", uid, "signin_url", req_url);
+      updateOrAddObject(json_data, "weibo_id", uid, "signin_url", req_url, "headers", req_headers);
       const cacheValue = JSON.stringify(json_data, null, "\t");
       
       $.write(cacheValue, '#fmz200_weibo_token');
