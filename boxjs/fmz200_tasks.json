@@ -1,6 +1,6 @@
 {
   "name": "fmz200のTasks",
-  "description": "收集一些自用的定时任务，更新日期：2024-11-10 15:00:00",
+  "description": "收集一些自用的定时任务，更新日期：2025-04-26 21:11:00",
   "task": [
     "0 7,11,17 * * * https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, tag=阿里云盘签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/AliYunDrive.png, enabled=true",
     "10 0,8,12,18 * * * https://raw.githubusercontent.com/passerby-b/didi_fruit/main/dd_fruit.js, tag=滴滴橙心果园, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/didi.png, enabled=true",
@@ -9,7 +9,7 @@
     "22 7 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/macat/macat_signin.js, tag=马克喵签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Macat.png, enabled=true",
     "17 7 * * * https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jhsh_checkIn.js, tag=建行生活签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ccbLife.jpg, enabled=true",
     "15 7 * * * https://github.com/fmz200/wool_scripts/raw/main/Scripts/douyu/yubaSign.js, tag=斗鱼鱼吧签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/douyu.png, enabled=true",
-    "15 7 * * * https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/weibo_sign.js, tag=新浪微博签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo-00.png, enabled=true",
+    "15 7 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_signin.js, tag=新浪微博签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo-00.png, enabled=true",
     "17 7 * * * https://github.com/fmz200/wool_scripts/raw/main/Scripts/weibo/weibotalk.js, tag=新浪超话签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/WeiboTalk.png, enabled=true",
     "16 7 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xxyx/xxyx_signin.js, tag=晓晓优选每日任务, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/xxyx_01.jpeg, enabled=true",
     "17 7 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/chery/cheryAppSignin.js, tag=奇瑞汽车App签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/chery.png, enabled=true",
