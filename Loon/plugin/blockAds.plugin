@@ -44,7 +44,12 @@ aiqiyi_enable = switch,true,false,tag=爱奇艺
 blued_enable = switch,true,false,tag=Blued
 bdduditu_enable = switch,true,false,tag=百度地图
 bddutpba_enable = switch,true,false,tag=百度贴吧
-bilibili_enable = switch,true,false,tag=哔哩哔哩
+
+# > 哔哩哔哩
+bilibili_enable = switch,true,false,tag=哔哩哔哩-脚本开关
+showUpList=select,"auto","true","false",tag=哔哩哔哩-[动态]中[最常访问]的显示方式,desc=true: 始终显示\n- false: 始终隐藏\n- auto: 仅当列表中存在直播状态时显示
+filterTopReplies=switch,true,tag=哔哩哔哩-[评论区]过滤置顶评论广告,desc=true: 开启\n- false: 关闭
+
 bilimanhua_enable = switch,true,false,tag=哔哩哔哩漫画
 bohejmkh_enable = switch,true,false,tag=薄荷健康
 cdyytmqi_enable = switch,true,false,tag=彩云天气
@@ -106,9 +111,6 @@ vsgogojihhks_enable = switch,true,false,tag=中国国际航空
 vsgorfbc_enable = switch,true,false,tag=中国人保
 
 ### 功能参数 ###
-# > 哔哩哔哩
-showUpList=select,"auto","true","false",tag=哔哩哔哩-[动态]中[最常访问]的显示方式,desc=true: 始终显示\n- false: 始终隐藏\n- auto: 仅当列表中存在直播状态时显示
-filterTopReplies=switch,true,tag=哔哩哔哩-[评论区]过滤置顶评论广告,desc=true: 开启\n- false: 关闭
 
 
 [Rule]
