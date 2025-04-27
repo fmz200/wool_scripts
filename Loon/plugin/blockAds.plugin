@@ -11,7 +11,7 @@
 #!system=iOS, iPadOS
 #!system_version = 
 #!loon_version = 
-#!date=2025-04-20 17:39:00
+#!date=2025-04-27 20:11:00
 #!support=支持约511款APP/小程序
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 #############################################
@@ -34,81 +34,91 @@
 #############################################
 
 [Argument]
-12306_enable = switch,true,false,tag=12306
-555_enable = switch,true,false,tag=555影视
-51xyk_enable = switch,true,false,tag=51信用卡管家
-51job_enable = switch,true,false,tag=51job
-albb_enable = switch,true,false,tag=阿里巴巴
-alyp_enable = switch,true,false,tag=阿里云盘
-aiqiyi_enable = switch,true,false,tag=爱奇艺
-blued_enable = switch,true,false,tag=Blued
-bdduditu_enable = switch,true,false,tag=百度地图
-bddutpba_enable = switch,true,false,tag=百度贴吧
-bilibili_enable = switch,true,false,tag=哔哩哔哩
-bilimanhua_enable = switch,true,false,tag=哔哩哔哩漫画
-bohejmkh_enable = switch,true,false,tag=薄荷健康
-cdyytmqi_enable = switch,true,false,tag=彩云天气
-cdnngogo_enable = switch,true,false,tag=菜鸟裹裹
-cdxb_enable = switch,true,false,tag=财新
-davsdmpk_enable = switch,true,false,tag=大众点评
-dshxfg_enable = switch,true,false,tag=动画疯
-didiiuxk_enable = switch,true,false,tag=滴滴出行
-dyls_enable = switch,true,false,tag=电影猎手
-flightradar24_enable = switch,true,false,tag=Flightradar24
-fwke_enable = switch,true,false,tag=飞客茶馆
-ffbi_enable = switch,true,false,tag=粉笔
-hlzh_enable = switch,true,false,tag=航旅纵横
-hema_enable = switch,true,false,tag=盒马
-hftx_enable = switch,true,false,tag=汇付天下
-itzj_enable = switch,true,false,tag=IT之家
-jhsh_enable = switch,true,false,tag=建行生活
-jkds_enable = switch,true,false,tag=京东
-jkxi_enable = switch,true,false,tag=京喜
-keep_enable = switch,true,false,tag=keep
-kkuz_enable = switch,true,false,tag=快手
-kxke_enable = switch,true,false,tag=夸克
-kuwoybyt_enable = switch,true,false,tag=酷我音乐
-glgclmmg_enable = switch,true,false,tag=快手联盟,优量汇,穿山甲「广告联盟」
-kuan_enable = switch,true,false,tag=酷安
-mddjba_enable = switch,true,false,tag=买单吧
-mhgotv_enable = switch,true,false,tag=芒果TV
-mafgwo_enable = switch,true,false,tag=马蜂窝
-mdmd_enable = switch,true,false,tag=脉脉
-pupuicui_enable = switch,true,false,tag=朴朴超市
-quda_enable = switch,true,false,tag=去哒
-reddit_enable = switch,true,false,tag=Reddit
-rfrfuipk_enable = switch,true,false,tag=人人视频
-soul_enable = switch,true,false,tag=Soul
-sudaxnyr_enable = switch,true,false,tag=苏打校园APP
-ufmevidemd_enable = switch,true,false,tag=什么值得买
-lvtusvuftk_enable = switch,true,false,tag=旅途随身听
-tcbc_enable = switch,true,false,tag=淘宝
-tgxyxbwf_enable = switch,true,false,tag=腾讯新闻
-vgtime_enable = switch,true,false,tag=vgTime
-lmjpxmvi_enable = switch,true,false,tag=解除微信链接限制
-whyiyyybyt_enable = switch,true,false,tag=网易云音乐
-whyiyzdccidm_enable = switch,true,false,tag=网易有道词典
-wfnibovj_enable = switch,true,false,tag=温尼伯站
-xnmiuhig_enable = switch,true,false,tag=小米商城
-xntuisis_enable = switch,true,false,tag=小兔充充
-xnmh_enable = switch,true,false,tag=小芒
-xmyu_enable = switch,true,false,tag=闲鱼
-xljnuiyivsuvgo_enable = switch,true,false,tag=香蕉是一种水果
-xnhsuu_enable = switch,true,false,tag=小红书
-ximalaya_enable = switch,true,false,tag=喜马拉雅
-youtube_enable = switch,true,false,tag=YouTube
-yzku_enable = switch,true,false,tag=优酷
-yzxiapp_enable = switch,true,false,tag=悠洗APP
-vihu_enable = switch,true,false,tag=知乎
-vhuhgsjn_enable = switch,true,false,tag=掌上公交
-vrvr_enable = switch,true,false,tag=转转
-vsgogojihhks_enable = switch,true,false,tag=中国国际航空
-vsgorfbc_enable = switch,true,false,tag=中国人保
+12306_enable = switch,true,false,tag=12306-脚本开关
+555_enable = switch,true,false,tag=555影视-脚本开关
+51xyk_enable = switch,true,false,tag=51信用卡管家-脚本开关
+51job_enable = switch,true,false,tag=51job-脚本开关
+albb_enable = switch,true,false,tag=阿里巴巴-脚本开关
+alyp_enable = switch,true,false,tag=阿里云盘-脚本开关
+aiqiyi_enable = switch,true,false,tag=爱奇艺-脚本开关
+blued_enable = switch,true,false,tag=Blued-脚本开关
+bdduditu_enable = switch,true,false,tag=百度地图-脚本开关
+bddutpba_enable = switch,true,false,tag=百度贴吧-脚本开关
+
+# > 哔哩哔哩
+bilibili_enable = switch,true,false,tag=哔哩哔哩-脚本开关
+showUpList=select,"auto","true","false",tag=哔哩哔哩-[动态]中[最常访问]的显示方式,desc=true: 始终显示\n- false: 始终隐藏\n- auto: 仅当列表中存在直播状态时显示
+filterTopReplies=switch,true,tag=哔哩哔哩-[评论区]过滤置顶评论广告,desc=true: 开启\n- false: 关闭
+
+bilimanhua_enable = switch,true,false,tag=哔哩哔哩漫画-脚本开关
+bohejmkh_enable = switch,true,false,tag=薄荷健康-脚本开关
+cdyytmqi_enable = switch,true,false,tag=彩云天气-脚本开关
+cdnngogo_enable = switch,true,false,tag=菜鸟裹裹-脚本开关
+cdxb_enable = switch,true,false,tag=财新-脚本开关
+davsdmpk_enable = switch,true,false,tag=大众点评-脚本开关
+dshxfg_enable = switch,true,false,tag=动画疯-脚本开关
+didiiuxk_enable = switch,true,false,tag=滴滴出行-脚本开关
+dyls_enable = switch,true,false,tag=电影猎手-脚本开关
+flightradar24_enable = switch,true,false,tag=Flightradar24-脚本开关
+fwke_enable = switch,true,false,tag=飞客茶馆-脚本开关
+ffbi_enable = switch,true,false,tag=粉笔-脚本开关
+hlzh_enable = switch,true,false,tag=航旅纵横-脚本开关
+hema_enable = switch,true,false,tag=盒马-脚本开关
+hftx_enable = switch,true,false,tag=汇付天下-脚本开关
+itzj_enable = switch,true,false,tag=IT之家-脚本开关
+jhsh_enable = switch,true,false,tag=建行生活-脚本开关
+jkds_enable = switch,true,false,tag=京东-脚本开关
+jkxi_enable = switch,true,false,tag=京喜-脚本开关
+keep_enable = switch,true,false,tag=keep-脚本开关
+kkuz_enable = switch,true,false,tag=快手-脚本开关
+kxke_enable = switch,true,false,tag=夸克-脚本开关
+kuwoybyt_enable = switch,true,false,tag=酷我音乐-脚本开关
+glgclmmg_enable = switch,true,false,tag=快手联盟,优量汇,穿山甲「广告联盟」-脚本开关
+kuan_enable = switch,true,false,tag=酷安-脚本开关
+mddjba_enable = switch,true,false,tag=买单吧-脚本开关
+mhgotv_enable = switch,true,false,tag=芒果TV-脚本开关
+mafgwo_enable = switch,true,false,tag=马蜂窝-脚本开关
+mdmd_enable = switch,true,false,tag=脉脉-脚本开关
+pupuicui_enable = switch,true,false,tag=朴朴超市-脚本开关
+quda_enable = switch,true,false,tag=去哒-脚本开关
+reddit_enable = switch,true,false,tag=Reddit-脚本开关
+rfrfuipk_enable = switch,true,false,tag=人人视频-脚本开关
+soul_enable = switch,true,false,tag=Soul-脚本开关
+sudaxnyr_enable = switch,true,false,tag=苏打校园APP-脚本开关
+ufmevidemd_enable = switch,true,false,tag=什么值得买-脚本开关
+lvtusvuftk_enable = switch,true,false,tag=旅途随身听-脚本开关
+tcbc_enable = switch,true,false,tag=淘宝-脚本开关
+tgxyxbwf_enable = switch,true,false,tag=腾讯新闻-脚本开关
+vgtime_enable = switch,true,false,tag=vgTime-脚本开关
+lmjpxmvi_enable = switch,true,false,tag=解除微信链接限制-脚本开关
+whyiyyybyt_enable = switch,true,false,tag=网易云音乐-脚本开关
+whyiyzdccidm_enable = switch,true,false,tag=网易有道词典-脚本开关
+wfnibovj_enable = switch,true,false,tag=温尼伯站-脚本开关
+xnmiuhig_enable = switch,true,false,tag=小米商城-脚本开关
+xntuisis_enable = switch,true,false,tag=小兔充充-脚本开关
+xnmh_enable = switch,true,false,tag=小芒-脚本开关
+xmyu_enable = switch,true,false,tag=闲鱼-脚本开关
+xljnuiyivsuvgo_enable = switch,true,false,tag=香蕉是一种水果-脚本开关
+xnhsuu_enable = switch,true,false,tag=小红书-脚本开关
+ximalaya_enable = switch,true,false,tag=喜马拉雅-脚本开关
+youtube_enable = switch,true,false,tag=YouTube-脚本开关
+yzku_enable = switch,true,false,tag=优酷-脚本开关
+yzxiapp_enable = switch,true,false,tag=悠洗APP-脚本开关
+vihu_enable = switch,true,false,tag=知乎-脚本开关
+vhuhgsjn_enable = switch,true,false,tag=掌上公交-脚本开关
+vrvr_enable = switch,true,false,tag=转转-脚本开关
+vsgogojihhks_enable = switch,true,false,tag=中国国际航空-脚本开关
+vsgorfbc_enable = switch,true,false,tag=中国人保-脚本开关
+
 
 
 [Rule]
 # >>>>>>>>>>>>>>> ✅ B ✅ <<<<<<<<<<<<<<
 # > 哔哩哔哩
+DOMAIN,api.biliapi.com,REJECT
+DOMAIN,app.biliapi.com,REJECT
+DOMAIN,api.biliapi.net,REJECT
+DOMAIN,app.biliapi.net,REJECT
 # 开屏广告
 URL-REGEX, ^http:\/\/upos-sz-static\.bilivideo\.com\/ssaxcode\/\w{2}\/\w{2}\/\w{32}-1-SPLASH, REJECT-DICT
 URL-REGEX, ^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH, REJECT-DICT
@@ -648,25 +658,20 @@ IP-CIDR6, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT, no-resolve
 
 # > 哔哩哔哩
 # hostname = app.bilibili.com, api.bilibili.com, api.live.bilibili.com, grpc.biliapi.net
-# 开屏广告
-^https:\/\/(?:api\.bilibili\.com\/x\/mengqi\/v1\/resource|app\.bilibili\.com\/x\/resource\/peak\/download) reject-dict
-# 满意度调研
-^https:\/\/api\.bilibili\.com\/x\/v2\/dm\/qoe\/show\? reject-dict
-# 大会员广告
-^https:\/\/api\.bilibili\.com\/x\/vip\/ads\/materials\? reject-dict
-# 直播广告
 ^https:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v1\/ecommerce-user\/get_shopping_info\? reject-dict
-# 屏蔽默认搜索框关键词
-^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.interface\.v1\.Search\/DefaultWords reject-dict
-# 流量卡推荐
-^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.view\.v1\.View\/TFInfo url reject-dict
-# IP请求、地理位置请求 //api.bilibili.com
-^https:\/\/app\.bilibili\.com\/x\/resource\/ip reject-dict
-^https:\/\/api\.bilibili\.com\/x\/web-interface\/zone\?jsonp reject-dict
-# 移除视频链接跟踪参数
-(^https:\/\/(?:www|m)\.bilibili\.com\/video\/(?:BV\w{10}|av\d{9}))(\/?\?.*) 302 $1
-# 移除直播间链接跟踪参数
-(^https:\/\/live\.bilibili\.com\/\d+)(\/?\?.*) 302 $1
+^https:\/\/ap[ip]\.bilibili\.com\/x\/(?:resource\/(?:top\/activity|patch\/tab)|v2\/search\/square|vip\/ads\/materials)\? mock-response-body data-type=text status-code=200 data="{"code":-404,"message":"-404","ttl":1,"data":null}"
+^https:\/\/api\.bilibili\.com\/pgc\/activity\/deliver\/material\/receive\? mock-response-body data-type=text status-code=200 data="{"code":0,"data":{"closeType":"close_win","container":[],"showTime":""},"message":"success"}"
+^https:\/\/api\.bilibili\.com\/pgc\/view\/v2\/app\/season\? response-body-json-jq 'del(.data.payment)'
+^https:\/\/api\.bilibili\.com\/pgc\/page\/(?:bangumi|cinema\/tab)\? response-body-json-jq '.result.modules |= if . then map(if (.style | startswith("tip")) or (.module_id | IN(241, 1283, 1441, 1284)) then .items = [] elif .style | startswith("banner") then .items |= if . then map(select(.link | contains("play"))) else [] end elif .style | startswith("function") then .items |= if . then map(select(.blink | startswith("bilibili"))) else [] end end) end'
+^https:\/\/api\.live\.bilibili\.com\/xlive\/(?:app-interface\/v2\/index\/feed|app-room\/v1\/index\/getInfoBy(?:Room|User))\? response-body-json-jq '.data |= (del(.play_together_info, .play_together_info_v2, .activity_banner_info) | if .function_card then .function_card[] = null end | if .new_tab_info.outer_list then .new_tab_info.outer_list |= map(select(.biz_id != 33)) end | if .card_list then .card_list |= map(select(.card_type != "banner_v2")) end | reduce ([["show_reserve_status"], false], [["reserve_info", "show_reserve_status"], false], [["shopping_info", "is_show"], 0]) as [$path, $value] (.; if getpath($path) then setpath($path; $value) end))'
+
+^https:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\? response-body-json-del data.common_equip
+^https:\/\/app\.bilibili\.com\/x\/resource\/show\/tab\/v2\? response-body-json-jq jq-path="https://raw.githubusercontent.com/kokoryh/Sparkle/refs/heads/master/jq/bilibili.tab.jq"
+^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/(?:list|show|event\/list2)\? response-body-json-jq '.data |= with_entries(if .key | IN("show", "event_list") then .value = [] else . end)'
+^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\? response-body-json-jq 'if .data.items then .data.items |= map(select((.banner_item == null) and (.ad_info == null) and (.card_goto == "av") and (.card_type | IN("small_cover_v2", "large_cover_single_v9", "large_cover_v1")))) end'
+^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\/story\? response-body-json-jq 'if .data.items then .data.items |= map(select((.ad_info == null) and (.card_goto | startswith("ad") | not)) | del(.story_cart_icon)) end'
+^https:\/\/app\.bilibili\.com\/x\/v2\/account\/mine(?:\/ipad)?\? response-body-json-jq jq-path="https://raw.githubusercontent.com/kokoryh/Sparkle/refs/heads/master/jq/bilibili.mine.jq"
+^https:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\? response-body-json-jq '.data.vip |= if . != null and .status == 0 then . + { status: 1, type: 2, due_date: 9005270400000, role: 15 } else . end'
 
 # > 哔哩哔哩漫画
 # hostname = manga.bilibili.com, i*.hdslb.com
@@ -3797,41 +3802,7 @@ http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/(c\/f\/(frs\/(page|
 http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js, requires-body=true, binary-body-mode=true, timeout=60, tag=百度贴吧广告, enable={bddutpba_enable}
 
 # > 哔哩哔哩
-# 移除动态页面广告
-http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.dynamic\.v2\.Dynamic\/DynAll$ script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/protoC.js, requires-body = true, binary-body-mode = true, tag = 哔哩哔哩移除动态页面广告, enable={bilibili_enable}
-# 移除青少年模式弹窗
-http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.interface\.v1\.Teenagers\/ModeStatus script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/protoC.js, requires-body = true, binary-body-mode = true, tag = 哔哩哔哩移除青少年模式弹窗, enable={bilibili_enable}
-# 移除热门话题
-http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.show\.v1\.Popular\/Index$ script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/protoC.js, requires-body = true, binary-body-mode = true, tag = 哔哩哔哩移除热门话题, enable={bilibili_enable}
-# 移除播放页面视频列表广告
-http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.(?:view|viewunite)\.v1\.View\/(?:View|ViewProgress)$ script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/protoC.js, requires-body = true, binary-body-mode = true, tag = 哔哩哔哩移除播放页面视频列表广告, enable={bilibili_enable}
-# 会员特效弹幕处理
-http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.community\.service\.dm\.v1\.DM\/DmSegMobile script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/protoC.js, requires-body = true, binary-body-mode = true, tag = 哔哩哔哩会员特效弹幕处理, enable={bilibili_enable}
-# 移除交互式弹幕
-http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.community\.service\.dm\.v1\.DM\/DmView script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/protoC.js, requires-body = true, binary-body-mode = true, tag = 哔哩哔哩移除交互式弹幕, enable={bilibili_enable}
-# 移除评论区广告
-http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.main\.community\.reply\.v1\.Reply\/MainList script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/protoC.js, requires-body = true, binary-body-mode = true, tag = 哔哩哔哩移除评论区广告, enable={bilibili_enable}
-# 移除搜索结果广告
-http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.polymer\.app\.search\.v1\.Search\/SearchAll$ script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/protoC.js, requires-body = true, binary-body-mode = true, tag = 哔哩哔哩移除搜索结果广告, enable={bilibili_enable}
-# 上部为Proto处理,下部为JSON配置处理
-# 移除开屏广告
-http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/(?:brand\/list|event\/list2|list|show) script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/json.js, requires-body = true, tag = 哔哩哔哩移除开屏广告, enable={bilibili_enable}
-# 移除首页推荐广告
-http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index(\/story)?\? script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/json.js, requires-body = true, tag = 哔哩哔哩移除首页推荐广告, enable={bilibili_enable}
-# 移除右上角活动入口
-http-response ^https:\/\/app\.bilibili\.com\/x\/resource\/top\/activity\? script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/json.js, requires-body = true, tag = 哔哩哔哩移除右上角活动入口, enable={bilibili_enable}
-# 精简首页顶部标签
-http-response ^https:\/\/app\.bilibili\.com\/x\/resource\/show\/tab\/v2\? script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/json.js, requires-body = true, tag = 哔哩哔哩精简首页顶部标签, enable={bilibili_enable}
-# 移除热搜广告
-http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/search\/square script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/json.js, requires-body = true, tag = 哔哩哔哩移除热搜广告, enable={bilibili_enable}
-# 移除观影页广告
-http-response ^https:\/\/api\.bilibili\.com\/pgc\/page\/(?:bangumi|cinema\/tab) script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/json.js, requires-body = true, tag = 哔哩哔哩移除观影页广告, enable={bilibili_enable}
-# 移除直播间广告
-http-response ^https:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom\? script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/json.js, requires-body = true, tag = 哔哩哔哩移除直播间广告, enable={bilibili_enable}
-# 移除皮肤推送
-http-response ^https:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\? script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/json.js, requires-body = true, tag = 哔哩哔哩移除皮肤推送, enable={bilibili_enable}
-# 精简我的页面
-http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/(?:mine(\/ipad)?|myinfo) script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/json.js, requires-body = true, tag = 哔哩哔哩精简我的页面, enable={bilibili_enable}
+http-response ^https:\/\/(?:grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.(?:app\.(?:interface\.v1\.(?:Teenagers\/ModeStatus|Search\/DefaultWords)|show\.v1\.Popular\/Index|dynamic\.v2\.Dynamic\/DynAll|view(?:unite)?\.v1\.View\/(?:View|ViewProgress|TFInfo|RelatesFeed)|playurl\.v1\.PlayURL\/PlayView|playerunite\.v1\.Player\/PlayViewUnite)|polymer\.app\.search\.v1\.Search\/SearchAll|community\.service\.dm\.v1\.DM\/DmView|main\.community\.reply\.v1\.Reply\/MainList|pgc\.gateway\.player\.v2\.PlayURL\/PlayView)$ script-path=https://raw.githubusercontent.com/kokoryh/Sparkle/refs/heads/master/dist/bilibili.protobuf.js, argument=[{showUpList}, {filterTopReplies}], requires-body=true, binary-body-mode=true, tag=哔哩哔哩去广告及增强, enable={bilibili_enable}
 
 # > 哔哩哔哩漫画
 http-response ^https?:\/\/manga\.bilibili\.com\/twirp\/user\.v\d\.User\/UCenterConf script-path=https://raw.githubusercontent.com/zirawell/Ad-Cleaner/main/Collection/js/bilibiliManga.js, requires-body=true, timeout=60, tag=哔哩哔哩漫画, enable={bilimanhua_enable}
