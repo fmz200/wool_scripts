@@ -3649,7 +3649,7 @@ https://mgesq.api.mgtv.com/v2/user/center/icon reject-dict
 
 # > 浙里办
 # hostname = portal.zjzwfw.gov.cn
-^https?:\/\/portal\.zjzwfw\.gov\.cn\/app_api\/appHome\/selectStartPic reject-200
+^https?:\/\/portal\.zjzwfw\.gov\.cn\/app_api\/appHome\/selectStartPic response-body-json-replace data {}
 
 # > 郑好办
 # hostname = app-izz.zhengzhou.gov.cn
