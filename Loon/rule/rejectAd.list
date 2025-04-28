@@ -9,7 +9,7 @@
 #!system = iOS, iPadOS
 #!system_version =
 #!loon_version =
-#!date=2025-03-10 11:10:00
+#!date=2025-04-28 22:11:00
 #!support=约9392行
 #!proxy-select=REJECT
 #############################################
@@ -1204,8 +1204,7 @@ DOMAIN-SUFFIX,tajs.qq.com
 DOMAIN-SUFFIX,fusion.qq.com
 DOMAIN-SUFFIX,ios.bugly.qq.com
 DOMAIN, safebrowsing.urlsec.qq.com
-DOMAIN-SUFFIX,oth.str.mdt.qq.com
-DOMAIN-SUFFIX,l.qq.com
+DOMAIN, oth.str.mdt.qq.com
 DOMAIN, adsmind.apdcdn.tc.qq.com
 DOMAIN, adsmind.tc.qq.com
 DOMAIN, livep.l.t002.ottcn.com
