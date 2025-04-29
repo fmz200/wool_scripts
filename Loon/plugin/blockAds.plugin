@@ -11,7 +11,7 @@
 #!system=iOS, iPadOS
 #!system_version = 
 #!loon_version = 
-#!date=2025-04-27 20:11:00
+#!date=2025-04-28 22:11:00
 #!support=支持约511款APP/小程序
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 #############################################
@@ -1235,7 +1235,7 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 
 # > 广汽本田
 # hostname = gha.ghac.cn
-^https?:\/\/gha\.ghac\.cn\:8081\/base\/app\/api\/ad\/query\?adType=1 reject-200
+^https?:\/\/gha\.ghac\.cn\:8081\/base\/app\/api\/ad\/query\?adType=1 reject-dict
 
 # > 怪兽充电 微信小程序
 # hostname = aag.enmonster.com
@@ -2640,22 +2640,22 @@ https://apis.lifeweek.com.cn/api/baseConfig/getIosNewConfig reject
 
 # > 腾讯广告
 # hostname = btrace.qq.com, api2.helper.qq.com, *.beacon.qq.com, mi.gdt.qq.com, lives.l.qq.com, imgcache.qq.com, mtteve.beacon.qq.com, vv.video.qq.com, qt.qq.com, 3gimg.qq.com, y.gtimg.cn, splashqqlive.gtimg.com, qzonestyle.gtimg.cn, discuz.gtimg.cn, bla.gtimg.com, mmgr.gtimg.com, bk.bingo.qq.com
-^https?:\/\/btrace\.qq\.com reject-200
-^https?:\/\/api2\.helper\.qq\.com\/game\/buttons reject-img
-^https?:\/\/lives\.l\.qq\.com\/livemsg\?sdtfrom= reject-img
-^https?:\/\/imgcache\.qq\.com\/qqlive\/ reject-img
-^https?:\/\/mtteve\.beacon\.qq\.com\/analytics reject-img
-^https?:\/\/vv\.video\.qq\.com\/getvmind\? reject-200
-^https?:\/\/3gimg\.qq\.com\/tencentMapTouch\/app\/activity\/ reject-200
-^https?:\/\/3gimg\.qq\.com\/tencentMapTouch\/splash\/ reject-200
-^https?:\/\/y\.gtimg\.cn\/music\/.*?_Ad/\d+\.png reject-img
-^https?:\/\/splashqqlive\.gtimg\.com\/website\/\d{6} reject-img
-^https?:\/\/qzonestyle\.gtimg\.cn\/qzone\/biz\/gdt\/mob\/sdk\/ios\/v2\/ reject-img
-^https?:\/\/discuz\.gtimg\.cn\/cloud\/scripts\/discuz_tips\.js reject-img
-^https?:\/\/bla\.gtimg\.com\/qqlive\/\d{6}.+?\.png reject-img
-^https?:\/\/mmgr\.gtimg\.com\/gjsmall\/qiantu\/upload\/ reject-img
-^https?:\/\/mmgr\.gtimg\.com\/gjsmall\/qqpim\/public\/ios\/splash\/.+?\/\d{4}_\d{4} reject-img
-^https?://bk\.bingo\.qq\.com/bk/crx/data/videoAd.*$ reject-dict
+# ^https?:\/\/btrace\.qq\.com reject-200
+# ^https?:\/\/api2\.helper\.qq\.com\/game\/buttons reject-img
+# ^https?:\/\/lives\.l\.qq\.com\/livemsg\?sdtfrom= reject-img
+# ^https?:\/\/imgcache\.qq\.com\/qqlive\/ reject-img
+# ^https?:\/\/mtteve\.beacon\.qq\.com\/analytics reject-img
+# ^https?:\/\/vv\.video\.qq\.com\/getvmind\? reject-200
+# ^https?:\/\/3gimg\.qq\.com\/tencentMapTouch\/app\/activity\/ reject-200
+# ^https?:\/\/3gimg\.qq\.com\/tencentMapTouch\/splash\/ reject-200
+# ^https?:\/\/y\.gtimg\.cn\/music\/.*?_Ad/\d+\.png reject-img
+# ^https?:\/\/splashqqlive\.gtimg\.com\/website\/\d{6} reject-img
+# ^https?:\/\/qzonestyle\.gtimg\.cn\/qzone\/biz\/gdt\/mob\/sdk\/ios\/v2\/ reject-img
+# ^https?:\/\/discuz\.gtimg\.cn\/cloud\/scripts\/discuz_tips\.js reject-img
+# ^https?:\/\/bla\.gtimg\.com\/qqlive\/\d{6}.+?\.png reject-img
+# ^https?:\/\/mmgr\.gtimg\.com\/gjsmall\/qiantu\/upload\/ reject-img
+# ^https?:\/\/mmgr\.gtimg\.com\/gjsmall\/qqpim\/public\/ios\/splash\/.+?\/\d{4}_\d{4} reject-img
+# ^https?://bk\.bingo\.qq\.com/bk/crx/data/videoAd.*$ reject-dict
 
 # > 推栏
 # hostname = m.pvp.xoyo.com
@@ -3649,7 +3649,7 @@ https://mgesq.api.mgtv.com/v2/user/center/icon reject-dict
 
 # > 浙里办
 # hostname = portal.zjzwfw.gov.cn
-^https?:\/\/portal\.zjzwfw\.gov\.cn\/app_api\/appHome\/selectStartPic reject-200
+^https?:\/\/portal\.zjzwfw\.gov\.cn\/app_api\/appHome\/selectStartPic response-body-json-replace data {}
 
 # > 郑好办
 # hostname = app-izz.zhengzhou.gov.cn
