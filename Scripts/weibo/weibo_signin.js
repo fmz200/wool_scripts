@@ -1,6 +1,6 @@
 /**
  * @author @fmz200
- * @date 2025-04-26 21：11
+ * @date 2025-05-06 17:32
  * @function 微博每日签到，积分多了可以兑换现金
  * 
  * Loon：
@@ -79,7 +79,7 @@ function singIn(token) {
     let rspMsg;
     if (rsp_body.status === 10000) {
       rspMsg = `连续签到[${rsp_body.data.continuous}]天，本次收益[${rsp_body.data.title_style[0]}]积分`
-    } if (rsp_body.errno === 30000) {
+    } else if (rsp_body.errno === 30000) {
       rspMsg = rsp_body.errmsg;
     } else {
       rspMsg = `每日签到: ${rsp_body.msg}`
