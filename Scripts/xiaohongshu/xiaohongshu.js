@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 小红书去广告、净化、解除下载限制、画质增强等
- * @date 2025-04-18 14:00:00
+ * @date 2025-05-06 17:27:00
  * @quote @RuCu6
  */
 
@@ -401,6 +401,11 @@ $done({body: JSON.stringify(obj)});
 
 // 小红书画质增强：加载2K分辨率的图片
 function imageEnhance(jsonStr) {
+  if (!jsonStr) {
+    console.error("jsonStr is undefined or null");
+    return [];
+  }
+
   const imageQuality = $.getdata("fmz200.xiaohongshu.imageQuality");
   console.log(`Image Quality: ${imageQuality}`);
   if (imageQuality === "original") { // 原始分辨率，PNG格式的图片，占用空间比较大
@@ -416,7 +421,12 @@ function imageEnhance(jsonStr) {
   }
   console.log('图片画质增强完成✅');
 
-  return JSON.parse(jsonStr);
+  try {
+    return JSON.parse(jsonStr);
+  } catch (e) {
+    console.error("JSON parsing error: ", e);
+    return [];
+  }
 }
 
 function replaceUrlContent(collectionA, collectionB) {
