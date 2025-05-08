@@ -3038,7 +3038,14 @@ https?:\/\/interface\d?\.music\.163.com\/eapi\/(mlivestream\/entrance\/playpage|
 # > 小宇宙
 # hostname = api.xiaoyuzhoufm.com
 # 开屏广告
-^https:\/\/api\.xiaoyuzhoufm\.com\/v1\/flash-screen\/list reject-dict
+^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/flash- reject-dict
+# 移除ai总结
+^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/ai-summary reject-dict
+# 会员横幅设为不可点击
+^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/membership\/platform reject-dict
+# 移除小宇宙搜索框内容
+^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/search reject-dict
+^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/category\/list-daily-suggestion reject-dict
 
 # > 小芒
 # hostname = mgesq.api.mgtv.com, *.hitv.com
