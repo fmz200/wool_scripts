@@ -3206,7 +3206,7 @@ https://mgesq.api.mgtv.com/dsl/index.+ url script-response-body https://raw.gith
 # 会员横幅设为不可点击
 ^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/membership\/platform url reject-dict
 # 移除小宇宙搜索框内容
-^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/search url reject-dict
+^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/search\/get-(?>preset|express) url reject-dict
 ^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/category\/list-daily-suggestion url reject-dict
 
 # >>>>>>>>>>>>>>> ✅ Y ✅ <<<<<<<<<<<<<<
