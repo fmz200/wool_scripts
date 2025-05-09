@@ -450,7 +450,10 @@ host-suffix, ad.duoduo.link, reject
 
 # > 盯盯拍 广告联盟已包含
 
-
+# > 叮咚买菜
+host, trackercollect.ddxq.mobi, reject
+host, ddfs-public.ddimg.mobi, reject
+host, rttrack.ddxq.mobi, reject
 
 # >>>>>>>>>>>>>>> ✅ E ✅ <<<<<<<<<<<<<<
 

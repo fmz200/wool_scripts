@@ -444,7 +444,10 @@ DOMAIN-SUFFIX,ad.duoduo.link
 
 # > 盯盯拍 广告联盟已包含
 
-
+# > 叮咚买菜
+DOMAIN, trackercollect.ddxq.mobi
+DOMAIN, ddfs-public.ddimg.mobi
+DOMAIN, rttrack.ddxq.mobi
 
 # >>>>>>>>>>>>>>> ✅ E ✅ <<<<<<<<<<<<<<
 
