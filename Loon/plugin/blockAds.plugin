@@ -52,7 +52,7 @@ filterTopReplies=switch,true,tag=哔哩哔哩-[评论区]过滤置顶评论广�
 
 bilimanhua_enable = switch,true,false,tag=哔哩哔哩漫画-脚本开关
 bohejmkh_enable = switch,true,false,tag=薄荷健康-脚本开关
-cdyytmqi_enable = switch,true,false,tag=彩云天气-脚本开关
+cdyytmqi_enable = switch,false,true,tag=彩云天气-脚本开关
 cdnngogo_enable = switch,true,false,tag=菜鸟裹裹-脚本开关
 cdxb_enable = switch,true,false,tag=财新-脚本开关
 davsdmpk_enable = switch,true,false,tag=大众点评-脚本开关
