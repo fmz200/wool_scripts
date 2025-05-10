@@ -34,6 +34,7 @@
 #############################################
 
 [Argument]
+tf_enable = switch,true,false,tag=TestFlight国区-脚本开关
 12306_enable = switch,true,false,tag=12306-脚本开关
 555_enable = switch,true,false,tag=555影视-脚本开关
 51xyk_enable = switch,true,false,tag=51信用卡管家-脚本开关
@@ -2469,7 +2470,7 @@ https://apis.lifeweek.com.cn/api/baseConfig/getIosNewConfig reject
 ^https?:\/\/imgx\.jampp\.com\/imgsrv\/tn reject-img
 
 # TestFlight 国区下载修正
-^https:\/\/testflight\.apple\.com\/v2\/accounts\/.*\/apps\/\d*\/builds\/\d*\/install$ request-body-replace-regex "storefrontId"\x20:\x20.*, "storefrontId":"143441-19,29",
+^https:\/\/testflight\.apple\.com\/v2\/accounts\/.*\/apps\/\d*\/builds\/\d*\/install$ request-body-replace-regex "storefrontId"\x20:\x20.*, "storefrontId":"143441-19,29",enable={tf_enable}
 
 # > TT语音
 # hostname = ga-album-cdnqn.52tt.com
