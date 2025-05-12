@@ -687,6 +687,8 @@ http:\/\/ad\.myfriday\.cn\/d\/json\/1\.1 url reject
 ^https?:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/newDetails url response-body suspension response-body random_body
 # 开屏广告及首页推荐流及底部状态栏优化
 ^https?:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/(?>bottomNavi|homeFlowDetail) url script-response-body https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/ddxq.js
+# 右下角AI
+^https?:\/\/maicai\.api\.ddxq\.mobi\/tool\/getConfig url script-response-body https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/ddxq.js
 
 # > 叮嗒出行
 # hostname = img.admobile.top, webcdn.m.qq.com
