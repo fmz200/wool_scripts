@@ -1621,7 +1621,7 @@ http:\/\/dili.sqcosmos.com\/jiekou\/endpage\/ad url reject-dict
 # > 美柚
 # hostname = x.seeyouyima.com,axxd.xmseeyouyima.com
 ^http:\/\/x\.seeyouyima\.com\/adx\/staticstics\? url reject
-^https:\/\/axxd\.xmseeyouyima\.com\/ad\/ reject
+^https:\/\/axxd\.xmseeyouyima\.com\/ad\/ url reject
 ^https:\/\/axxd\.xmseeyouyima\.com\/ad_statistics\? url reject
 ^https:\/\/axxd\.xmseeyouyima\.com\/v1\/getad\? url reject
 ^https:\/\/axxd\.xmseeyouyima\.com\/pregetad\? url reject
