@@ -1,18 +1,30 @@
 #!name = 自动加入TestFlight
 #!desc = 自动监控TestFlight名额，一旦有新的名额即刻加入。
-#!author = DecoAri xream
-#!icon = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/erdongchanyo/TestFlight.png
-#!raw-url = https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/Auto_Join_TF.plugin
+#!openUrl = https://apps.apple.com/app/id899247664
+#!author = DecoAri[https://github.com/DecoAri], xream[https://github.com/xream]
+#!tag = 定时任务
+#!system = 
+#!system_version = 
+#!loon_version = 3.2.4(787)
+#!homepage = https://github.com/luestr/ProxyResource/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/TestFlight.png
 #!input = APP_ID
-#!date = 2024-03-07 22:10:30
+#!date = 2025-05-13 15:17:08
+
+[Argument]
+CaptureAccountToken = switch, "false", "true", tag = 捕获账号令牌, desc = 此开关控制插件是否捕获账户令牌
+CaptureAppID = switch, "false", "true", tag = 捕获应用ID, desc = 此开关控制插件是否捕获应用ID
+TimingParameters = input, "0 0/2 * * * ?", tag = 定时参数, desc = 这里需要输入符合CRON表达式的参数
 
 [Rule]
 DOMAIN, testflight.apple.com, PROXY
 
 [Script]
-http-request ^https?:\/\/testflight\.apple\.com\/v3\/accounts\/.*\/apps$ script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/TestFlight/TF_keys.js, tag = TF信息获取
-http-request ^https://testflight.apple.com/join/(.*) script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/TestFlight/TF_keys.js, tag = APP_ID获取
-cron "*/1 * * * * *" script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/TestFlight/Auto_join_TF.js, tag = 自动加入TF, timeout = 180
+http-request ^https?:\/\/testflight\.apple\.com\/v3\/accounts\/.*\/apps$ script-path = https://kelee.one/Resource/Script/TestFlight/TF_keys.js, tag = 获取账号令牌, enable = {CaptureAccountToken}
 
-[Mitm]
+http-request ^https://testflight.apple.com/join/(.*) script-path = https://kelee.one/Resource/Script/TestFlight/TF_keys.js, tag = 应用ID捕获, enable = {CaptureAppID}
+
+cron {TimingParameters} script-path = https://kelee.one/Resource/Script/TestFlight/Auto_join_TF.js, tag = 自动加入TF, timeout = 180
+
+[MitM]
 hostname = testflight.apple.com
