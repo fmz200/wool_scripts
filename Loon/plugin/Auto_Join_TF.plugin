@@ -8,6 +8,8 @@
 #!loon_version = 3.2.4(787)
 #!homepage = https://github.com/luestr/ProxyResource/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/TestFlight.png
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/Auto_Join_TF.plugin
+#!tg-group=https://t.me/lanjieguanggao
 #!input = APP_ID
 #!date = 2025-05-13 15:17:08
 
