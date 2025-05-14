@@ -9,7 +9,7 @@
 #!system = iOS, iPadOS
 #!system_version =
 #!loon_version =
-#!date=2025-04-28 22:11:00
+#!date=2025-05-14 22:11:00
 #!support=约9392行
 #!proxy-select=REJECT
 #############################################
@@ -786,6 +786,9 @@ DOMAIN-SUFFIX,d.meituan.net
 DOMAIN, adui.tg.meitu.com
 DOMAIN, aaid.uyunad.com
 
+# > 美柚
+DOMAIN,ad.seeyouyima.com
+
 # > 买单吧
 DOMAIN-KEYWORD,c-hzgt2.getui.com
 
@@ -1471,6 +1474,9 @@ DOMAIN, 39d83s.com
 
 # > 小利生活
 DOMAIN-KEYWORD,mpos-pic.helipay.com
+
+# > 小爱音箱
+DOMAIN, mistat.xiaomi.com
 
 # > 晓晓优选
 DOMAIN-SUFFIX,api-htp.beizi.biz
