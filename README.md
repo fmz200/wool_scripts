@@ -124,9 +124,10 @@
 | # | 规则      | `屏蔽苹果系统更新`         | [apple_update.list](https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/apple_update.list)  | [fmz200](https://github.com/fmz200) | 无                                  | 暂无   |
 
 
-### 2️⃣ ~~QuantumultX配置~~ （2025-03-19 起停止维护）
+### 2️⃣ QuantumultX配置
 
 - 2025-03-19 21:30:00，鉴于QX太久没有更新功能，无法更好地适配规则，所以停止更新。
+- 2025-05-15 20:00:00，恢复更新。
 
 > 📍 借助 [QuanX官方Github地址](https://github.com/crossutility/Quantumult-X)，你可以更快地理解QX配置。
 >
