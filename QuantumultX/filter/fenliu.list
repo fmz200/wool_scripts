@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/fenliu.list
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2025-03-10 11:10:00
+#!date=2025-05-14 22:11:00
 #!support=约9392行
 #!proxy-select=reject
 #############################################
@@ -807,6 +807,9 @@ host-suffix, d.meituan.net, reject
 host, adui.tg.meitu.com, reject
 host, aaid.uyunad.com, reject
 
+# > 美柚
+host, ad.seeyouyima.com, reject
+
 # > 买单吧
 host-suffix, c-hzgt2.getui.com, reject
 host-suffix, c-hzgt2.getui.com, reject
@@ -1554,6 +1557,9 @@ host, 39d83s.com, reject
 
 # > 小利生活
 host-keyword, mpos-pic.helipay.com, reject
+
+# > 小爱音箱
+host, mistat.xiaomi.com, reject
 
 # > 晓晓优选
 host-SUFFIX, api-htp.beizi.biz, REJECT
