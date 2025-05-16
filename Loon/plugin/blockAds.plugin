@@ -1652,7 +1652,7 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 
 # > 酷安
 # hostname = api.coolapk.com
-^https?:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch reject-dict
+# ^https?:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch reject-dict
 
 # > 肯德基
 # hostname = res.kfc.com.cn
