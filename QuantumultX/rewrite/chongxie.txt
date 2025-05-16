@@ -3726,7 +3726,7 @@ https://mgesq.api.mgtv.com/dsl/index.+ url script-response-body https://raw.gith
 
 # > 浙里办
 # hostname = portal.zjzwfw.gov.cn
-^https?:\/\/portal\.zjzwfw\.gov\.cn\/app_api\/appHome\/selectStartPic url reject-200
+^https?:\/\/portal\.zjzwfw\.gov\.cn\/app_api\/appHome\/selectStartPic url response-body "data":\{.+\} response-body "data":{}
 
 # > 郑好办
 # hostname = app-izz.zhengzhou.gov.cn
