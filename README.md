@@ -30,7 +30,7 @@
 
 ▶️ 如果你在使用过程中有问题欢迎提交PR或ISSUE，也可进群交流，群链接在下方。
 
-▶️ 交流群组：👉🏻[苹果iOS去广告交流群](https://t.me/lanjieguanggao)，👉🏻[奶思资源分享|频道](https://t.me/inaisi)。
+▶️ 交流群组：👉🏻[苹果iOS去广告交流群](https://t.me/lanjieguanggao)，👉🏻[奶思资源分享|频道](https://t.me/inaisi)，👉🏻[Quantumult X Community](https://t.me/QuantumultXCommunity)。
 
 
 ## ⚠️ 温馨提示
@@ -52,10 +52,17 @@
 > 信息中如果你看到`type:
 "isp"`那就是家庭宽带，其他值（比如：hosting，business）都不是家宽。
 
-常见的抖音分流有：
-> https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/DouYin.list
->
-> https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/QuantumultX/DouYin/DouYin.list
+下方的抖音分流就可以实现修改IP（需要代理IP干净）：
+```plaintext
+# 抖音修改IP (QuanX)
+HOST-SUFFIX, amemv.com, proxy
+HOST-SUFFIX, douyinvod.com, proxy
+```
+```plaintext
+# 抖音修改IP (Loon，Surge)
+DOMAIN-SUFFIX, amemv.com, proxy
+DOMAIN-SUFFIX, douyinvod.com, proxy
+```
 
 ### 2️⃣ 为什么有些软件明明很热门，却没有人做去广告的规则
 
@@ -146,7 +153,7 @@
 | # | 分流      | `屏蔽苹果系统更新`    | [apple.snippet](https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/apple.snippet)             | [fmz200](https://github.com/fmz200) | 有效                          | [点击查看](./QuantumultX/filter/00-How-To-Use-Filter.md)   |
 | # | 分流      | `OpenAI分流`    | [OpenAI.snippet](https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/OpenAI.snippet)           | [fmz200](https://github.com/fmz200) | 初始版本，有问题欢迎反馈                | [点击查看](./QuantumultX/filter/00-How-To-Use-Filter.md)   |
 | # | Task订阅  | `Task订阅`      | [fmz200_tasks.json](https://raw.githubusercontent.com/fmz200/wool_scripts/main/boxjs/fmz200_tasks.json)                  | [fmz200](https://github.com/fmz200) | 需要先获取cookie或token再运行        | 暂无                                                     |
-| # | 重写      | `App&小程序净化合集` | [cleanup.snippet](https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/cleanup.snippet)                   | [fmz200](https://github.com/fmz200) | 常见的微信小程序净化                  | 暂无                                                     |
+| # | 重写      | `App&小程序净化合集` | [cleanup.snippet](https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/cleanup.snippet)                   | [fmz200](https://github.com/fmz200) | 常见的微信小程序净化（有误杀慎用）           | 暂无                                                     |
 
 > ⚠️ 当远程图标更新时如果你的图表库不更新多半是缓存的问题，请手动清理图标缓存(`点击右下角风车->划到最下面->选择其他设置->找到资源模块`，选择`删除图片缓存`)，并重启 Quantumult X，远程图标会重新下载并生效。
 
@@ -176,7 +183,7 @@
 
 ## 🧚‍♂️ 特别鸣谢
 
-- [@28413761](https://github.com/28413761)(张军本人)
+- [@28413761](https://github.com/28413761)
 - [@app2smile](https://github.com/app2smile)
 - [@blackmatrix7](https://github.com/blackmatrix7)
 - [@chavyleung](https://github.com/chavyleung)
