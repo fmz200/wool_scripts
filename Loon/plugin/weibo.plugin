@@ -20,6 +20,9 @@
 # > "reject-drop"   拒绝并丢弃请求，且不会返回任何响应。
 #############################################
 
+[Argument]
+tabFilter = switch,true,false,tag=顶部Tab过滤,desc=顶部Tab过滤
+
 [Rule]
 # 收集用户信息，上传用户日志的请求
 URL-REGEX, ^https?:\/\/api\.weibo\.cn\/2\/(push\/active|client\/addlog_batch|ad\/preload), REJECT-DROP
@@ -102,7 +105,7 @@ http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/container_timeline
 http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/extend\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body=true, timeout=60, tag=微博详情页面广告
 
 # 微博最顶部的tab页分组
-http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/2\/groups\/allgroups\/v2 script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body=true, timeout=60, tag=微博最顶部的tab页分组
+http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/2\/groups\/allgroups\/v2 script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body=true, timeout=60, tag=微博最顶部的tab页分组,enable={tabFilter}
 
 # 微博转发评论区广告
 http-response ^https:\/\/api\.weibo\.cn\/2\/statuses\/repost_timeline\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_main.js, requires-body=true, timeout=60, tag=微博转发评论区广告
