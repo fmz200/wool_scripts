@@ -1021,7 +1021,7 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 
 # > 广汽本田
 # hostname = gha.ghac.cn
-^https?:\/\/gha\.ghac\.cn\:8081\/base\/app\/api\/ad\/query\?adType=1 url reject-200
+# ^https?:\/\/gha\.ghac\.cn\:8081\/base\/app\/api\/ad\/query\?adType=1 url reject-200
 
 # > 怪兽充电 微信小程序
 # hostname = aag.enmonster.com
