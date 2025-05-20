@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 微博去广告
- * @date 2025-03-30 15:20:00
+ * @date 2025-05-20 19:20:00
  */
 
 let url = $request.url;
@@ -9,138 +9,144 @@ let body = $response.body;
 let resp_data = JSON.parse(body);
 
 try {
-    // 1、首次点击发现按钮
-    if (url.includes("/search/finder?")) {
-      console.log('进入发现页...');
-      processPayload(resp_data.channelInfo.channels[0].payload);
-      removeChannelsTabs(resp_data.channelInfo.channels);
-      if (resp_data.header?.data?.items) {
-        removeHeaderAds(resp_data.header.data.items);
+  // 1、首次点击发现按钮
+  if (url.includes("/search/finder?")) {
+    console.log('进入发现页...');
+    processPayload(resp_data.channelInfo.channels[0].payload);
+    removeChannelsTabs(resp_data.channelInfo.channels);
+    if (resp_data.header?.data?.items) {
+      removeHeaderAds(resp_data.header.data.items);
+    }
+  }
+
+  // 2、发现页面刷新/再次点击发现按钮
+  if (url.includes("/search/container_timeline?") || url.includes("/search/container_discover?")) {
+    console.log('刷新发现页...');
+    processPayload(resp_data);
+    if (resp_data.header?.data?.items) {
+      removeHeaderAds(resp_data.header.data.items);
+    }
+  }
+
+  // 3、微博热搜页面刷新
+  if (url.includes("/2/page?") && resp_data.cards && resp_data.cards[0].card_group) {
+    resp_data.cards[0].card_group = resp_data.cards[0].card_group.filter(group => group.promotion == null);
+    console.log('处理微博热搜页面广告结束💕💕');
+  }
+
+  // 微博热搜页面 “热搜”tab页
+  if (url.includes("/2/flowpage?")) {
+    // 删掉Banner图
+    resp_data.pageHeader = {};
+    for (let subItem of resp_data.items) {
+      if (subItem.itemId === "hotword") {
+        subItem.items = subItem.items.filter(group => group.data.promotion == null && !group.data.itemid.includes("c_type:51"));
+        break;
+      } else if (subItem.items) {
+        subItem.items = subItem.items.filter(group => group.data.promotion == null && !group.data.itemid.includes("c_type:51"));
       }
     }
+  }
 
-    // 2、发现页面刷新/再次点击发现按钮
-    if (url.includes("/search/container_timeline?") || url.includes("/search/container_discover?")) {
-      console.log('刷新发现页...');
-      processPayload(resp_data);
-      if (resp_data.header?.data?.items) {
-        removeHeaderAds(resp_data.header.data.items);
+  // 4、微博超话页面
+  if (url.includes("/statuses/container_timeline_topicpage?") && resp_data.items) {
+    resp_data.items = resp_data.items.filter(item => !item.data || item.data.mblogtypename !== "广告");
+    console.log('处理微博超话页面广告结束💕💕');
+  }
+
+  // 5、微博详情页面
+  if (url.includes("/statuses/extend?")) {
+    delete resp_data.head_cards;
+    delete resp_data.top_cards;
+    delete resp_data.extend_info;
+    delete resp_data.trend; // 博主好物种草
+    delete resp_data.semantic_brand_params;
+    delete resp_data.ad_tag_nature;
+    delete resp_data.title_source;
+    delete resp_data.reward_info;
+    console.log('处理微博详情页面广告结束💕💕');
+  }
+
+  // 6、移除微博首页的多余tab页 微博首页Tab标签页
+  if (url.includes("/groups/allgroups/v2")) {
+    removePageDataAds(resp_data.pageDatas);
+    // 删除恶心人的“全部微博”
+    delete resp_data.pageDatas[0].categories[0].pageDatas[0];
+  }
+
+  // 7、话题页面 微博话题页面
+  if (url.includes("/2/searchall?")) {
+    for (let i = 0; i < resp_data.items.length; i++) {
+      if (resp_data.items[i].data?.mblogtypename === "广告" || resp_data.items[i].data?.ad_state === 1) {
+        console.log('处理话题页面广告');
+        resp_data.items[i] = {};
+        continue;
+      } else {
+        deleteSemanticBrandParams(resp_data.items[i]);
       }
-    }
 
-    // 3、微博热搜页面刷新
-    if (url.includes("/2/page?") && resp_data.cards && resp_data.cards[0].card_group) {
-      resp_data.cards[0].card_group = resp_data.cards[0].card_group.filter(group => group.promotion == null);
-      console.log('处理微博热搜页面广告结束💕💕');
-    }
-
-    // 微博热搜页面 “热搜”tab页
-    if (url.includes("/2/flowpage?")) {
-      // 删掉Banner图
-      resp_data.pageHeader = {};
-      for (let subItem of resp_data.items) {
-        if (subItem.itemId === "hotword") {
-          subItem.items = subItem.items.filter(group => group.data.promotion == null && !group.data.itemid.includes("c_type:51")); 
-          break;
-        } else if (subItem.items) {
-          subItem.items = subItem.items.filter(group => group.data.promotion == null && !group.data.itemid.includes("c_type:51"));
-        }
-      }
-    }
-
-    // 4、微博超话页面
-    if (url.includes("/statuses/container_timeline_topicpage?") && resp_data.items) {
-      resp_data.items = resp_data.items.filter(item => !item.data || item.data.mblogtypename !== "广告");
-      console.log('处理微博超话页面广告结束💕💕');
-    }
-
-    // 5、微博详情页面
-    if (url.includes("/statuses/extend?")) {
-      delete resp_data.head_cards;
-      delete resp_data.top_cards;
-      delete resp_data.extend_info;
-      delete resp_data.trend; // 博主好物种草
-      delete resp_data.semantic_brand_params;
-      delete resp_data.ad_tag_nature;
-      delete resp_data.title_source;
-      delete resp_data.reward_info;
-      console.log('处理微博详情页面广告结束💕💕');
-    }
-
-    // 6、移除微博首页的多余tab页 微博首页Tab标签页
-    if (url.includes("/groups/allgroups/v2")) {
-      removePageDataAds(resp_data.pageDatas);
-      // 删除恶心人的“全部微博”
-      delete resp_data.pageDatas[0].categories[0].pageDatas[0];
-    }
-
-    // 7、话题页面 微博话题页面
-    if (url.includes("/2/searchall?")) {
-      for (let i = 0; i < resp_data.items.length; i++) {
-        if (resp_data.items[i].data?.mblogtypename === "广告" || resp_data.items[i].data?.ad_state === 1) {
-          console.log('处理话题页面广告');
-          resp_data.items[i] = {};
-          continue;
-        } else {
-          deleteSemanticBrandParams(resp_data.items[i]);
-        }
-
-        if (resp_data.items[i].items) {
-          for (let j = 0; j < resp_data.items[i].items.length; j++) {
-            if (resp_data.items[i].items[j].data?.card_type === 22
-                || resp_data.items[i].items[j].data?.ad_state === 1
-                || resp_data.items[i].items[j].data?.content_auth_info?.content_auth_title === "广告") {
-              resp_data.items[i].items[j] = {};
-            } else {
-              deleteSemanticBrandParams(resp_data.items[i].items[j]);
-            }
+      if (resp_data.items[i].items) {
+        for (let j = 0; j < resp_data.items[i].items.length; j++) {
+          if (resp_data.items[i].items[j].data?.card_type === 22
+            || resp_data.items[i].items[j].data?.ad_state === 1
+            || resp_data.items[i].items[j].data?.content_auth_info?.content_auth_title === "广告") {
+            resp_data.items[i].items[j] = {};
+          } else {
+            deleteSemanticBrandParams(resp_data.items[i].items[j]);
           }
         }
       }
-      console.log('处理话题页面广告结束💕💕');
     }
+    console.log('处理话题页面广告结束💕💕');
+  }
 
-    // 8、超话tab页 微博超话tab页
-    if (url.includes("/statuses/container_timeline_topic?")) {
-      let foundFeed = false;
-      const cardTypes = [19, 179]; // 19：热帖/必刷/分类，31：热搜词，179：关注的超话
-      for (let i = 0; i < resp_data.items.length; i++) {
-        const item = resp_data.items[i];
-        if (item.data?.is_ad === 1 || item.data?.mblogtypename === "广告") {
+  // 8、超话tab页 微博超话tab页
+  if (url.includes("/statuses/container_timeline_topic?")) {
+    let foundFeed = false;
+    const cardTypes = [19, 179]; // 19：热帖/必刷/分类，31：热搜词，179：关注的超话
+    for (let i = 0; i < resp_data.items.length; i++) {
+      const item = resp_data.items[i];
+      if (item.data?.is_ad === 1 || item.data?.mblogtypename === "广告") {
+        resp_data.items[i] = {};
+        continue;
+      }
+
+      const category = item.category; // feed/card/group
+      const cardType = item.data?.card_type || "";
+      if (cardTypes.includes(cardType)) {
+        console.log(`保留的card_type = ${cardType}`);
+        continue;
+      }
+
+      // 第一条微博往下的内容只要不是微博（分类、推广等），全部删除
+      if (foundFeed && category !== "feed") {
+        resp_data.items[i] = {};
+      }
+      if (category === "feed" || category === "card") {
+        foundFeed = true;
+        if (category === "card") {
           resp_data.items[i] = {};
-          continue;
         }
-
-        const category = item.category; // feed/card/group
-        const cardType = item.data?.card_type || "";
-        if (cardTypes.includes(cardType)) {
-          console.log(`保留的card_type = ${cardType}`);
-          continue;
-        }
-
-        // 第一条微博往下的内容只要不是微博（分类、推广等），全部删除
-        if (foundFeed && category !== "feed") {
-          resp_data.items[i] = {};
-        }
-        if (category === "feed" || category === "card") {
-          foundFeed = true;
-          if (category === "card") {
-            resp_data.items[i] = {};
-          }
-        }
-        if (item.items) {
-          for (let j = 0; j < item.items.length; j++) {
-            const subItem = item.items[j];
-            if (subItem.data?.card_type === 215) {
-              item.items[j] = {};
-            }
+      }
+      if (item.items) {
+        for (let j = 0; j < item.items.length; j++) {
+          const subItem = item.items[j];
+          if (subItem.data?.card_type === 215) {
+            item.items[j] = {};
           }
         }
       }
-      console.log('处理超话tab页广告结束💕💕');
     }
+    console.log('处理超话tab页广告结束💕💕');
+  }
 
-    console.log('广告数据处理完毕🧧🧧');
+  // 8、评论区广告
+  if (url.includes("/comments/mix_comments?")) {
+    resp_data.datas = resp_data.datas.filter(item => item.adType !== "广告");
+    console.log('处理评论区广告结束💕💕');
+  }
+
+  console.log('广告数据处理完毕🧧🧧');
 } catch (e) {
   console.log('脚本运行出现错误，部分广告未去除⚠️');
   console.log('错误信息：' + e.message);
