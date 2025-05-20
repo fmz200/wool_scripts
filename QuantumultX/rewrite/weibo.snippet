@@ -10,7 +10,7 @@
 #!system = iOS, iPadOS
 #!system_version = 
 #!loon_version = 
-#!date=2025-02-15 21:00:00
+#!date=2025-05-20 19:20:00
 #############################################
 # > "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # > "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -74,6 +74,9 @@ hostname = *.weibo.cn, *.weibo.com, weibo.com
 
 # 微博最顶部的tab页分组
 ^https?:\/\/m?api\.weibo\.c(n|om)\/2\/groups\/allgroups\/v2 Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
+
+# 微博评论区广告
+^https?:\/\/m?api\.weibo\.c(n|om)\/2\/comments\/mix_comments\? Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js
 
 # 微博去广告以及去除各部分推广模块 - cherish
 ^https?:\/\/m?api\.weibo\.c(n|om)/2/(cardlist|searchall|page|messageflow|statuses/(unread_)?friends(/|_)timeline|groups/timeline|statuses/(container_timeline|container_timeline_hot|unread_hot_timeline|extend|video_mixtimeline|repost_timeline)|profile/(me|container_timeline)|video/(community_tab|remind_info|tiny_stream_video_list)|checkin/show|\!/live/media_homelist|comments/build_comments|container/get_item) Weibo url-and-header script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_main.js
