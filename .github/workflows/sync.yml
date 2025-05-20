@@ -7,7 +7,7 @@ permissions:
 
 on:
   schedule:
-    - cron: '0 * * * *' # 每小时第0分钟执行
+    - cron: '0 */3 * * *' # 每小时第0分钟执行
   workflow_dispatch:
 
 jobs:
