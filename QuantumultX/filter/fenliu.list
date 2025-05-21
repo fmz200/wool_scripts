@@ -1563,6 +1563,9 @@ host, mistat.xiaomi.com, reject
 
 # > 晓晓优选
 host-SUFFIX, api-htp.beizi.biz, REJECT
+host-suffix, yfanads.com, reject
+host-suffix, 1rtb.net, reject
+host-suffix, adwangmai.com, reject
 
 # > 新浪
 host-suffix, beacon.sina.com.cn, reject
