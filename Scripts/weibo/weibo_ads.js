@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 微博去广告
- * @date 2025-05-20 19:20:00
+ * @date 2025-05-21 12:50:00
  */
 
 let url = $request.url;
@@ -171,8 +171,8 @@ function processPayload(payload) {
 }
 
 function removeChannelsTabs(channels) {
-  // 1001：发现，1015：趋势，1016：榜单
-  const channelIds = [1001, 1015, 1016];
+  // 1001：发现，1015：趋势，1016：榜单，1040：热转，1041：热问，1043：智搜
+  const channelIds = [1001, 1015, 1016, 1040, 1041, 1043];
   // 反向遍历数组
   for (let i = channels.length - 1; i >= 0; i--) {
     if (!channelIds.includes(channels[i].id)) {
