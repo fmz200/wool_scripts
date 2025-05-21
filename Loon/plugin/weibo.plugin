@@ -27,6 +27,7 @@ RemoveHotSearchAds = switch,true,false,tag=热搜广告,desc=移除微博热搜�
 RemoveTopicAds = switch,true,false,tag=话题广告,desc=移除微博话题页面广告
 RemoveSuperTopicAds = switch,true,false,tag=超话广告,desc=移除微博超话页面广告
 CleanSuperTopicTab = switch,true,false,tag=超话tab净化,desc=净化微博超话tab页面
+RemoveCommentAds = switch,true,false,tag=评论区去广告,desc=移除微博评论区广告
 RemoveDetailAds = switch,true,false,tag=详情页广告,desc=移除微博详情页面广告
 RemoveRepostAds = switch,true,false,tag=转发评论广告,desc=移除微博转发评论区广告
 FullAdsCleaner = switch,true,false,tag=全功能去广告,desc=微博多页面广告清理
@@ -119,7 +120,7 @@ http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/extend\? script-pa
 http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/2\/groups\/allgroups\/v2 script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body=true, timeout=60, tag=微博最顶部的tab页分组, enable={MainTabFilter}
 
 # 微博评论区广告
-^https?:\/\/m?api\.weibo\.c(n|om)\/2\/comments\/mix_comments\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body=true, timeout=60, tag=微博评论区广告
+^https?:\/\/m?api\.weibo\.c(n|om)\/2\/comments\/mix_comments\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body=true, timeout=60, tag=微博评论区广告, enable={RemoveCommentAds}
 
 # 微博转发评论区广告
 http-response ^https:\/\/api\.weibo\.cn\/2\/statuses\/repost_timeline\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_main.js, requires-body=true, timeout=60, tag=微博转发评论区广告, enable={RemoveRepostAds}
