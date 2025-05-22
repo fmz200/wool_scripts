@@ -105,7 +105,7 @@ http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/extend\? script-pa
 http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/2\/groups\/allgroups\/v2 script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body=true, timeout=60, tag=微博最顶部的tab页分组
 
 # 微博评论区广告
-^https?:\/\/m?api\.weibo\.c(n|om)\/2\/comments\/mix_comments\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body=true, timeout=60, tag=微博评论区广告
+http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/2\/comments\/mix_comments\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body=true, timeout=60, tag=微博评论区广告
 
 # 微博转发评论区广告
 http-response ^https:\/\/api\.weibo\.cn\/2\/statuses\/repost_timeline\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_main.js, requires-body=true, timeout=60, tag=微博转发评论区广告
