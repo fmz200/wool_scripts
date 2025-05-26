@@ -16,16 +16,15 @@ $.nodeNotifyMsg = []; // nodeJS合并通知
 
 let tokenList = isNode ? process.env["fmz200_xxyx_token"] : $.getdata("fmz200_xxyx_token");
 
-if (!tokenList) {
-  // $.msg($.name, '❌ 请先获取晓晓优选token');
-  await sendMsg("❌ 请先获取晓晓优选token", "");
-  $.done();
-}
-let json_token = JSON.parse(tokenList);
-
 startTasks().then(r => $.done());
 
 async function startTasks() {
+  if (!tokenList) {
+    await sendMsg("❌ 请先获取晓晓优选token", "");
+    $.done();
+  }
+  let json_token = JSON.parse(tokenList);
+  
   for (const item of json_token) {
     let token = item.token;
     let username = item.username;
