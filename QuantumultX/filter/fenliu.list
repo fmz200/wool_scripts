@@ -1602,7 +1602,7 @@ host, ads.yahoo.com, reject
 host, ads.yahoo.de, reject
 
 # > 优酷
-host-suffix, sm.cn, reject
+#host-suffix, sm.cn, reject
 host-suffix, acz.youku.com,REJECT
 host-suffix, adx-core.youku.com,REJECT
 host-suffix, adx-open-service.youku.com,REJECT
