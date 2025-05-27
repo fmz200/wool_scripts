@@ -5,7 +5,7 @@
   "icon": "https://avatars.githubusercontent.com/u/57740735?s=60&v=4",
   "repo": "https://github.com/fmz200/wool_scripts",
   "desc": "订阅大多都支持多账号，协定数据格式如下：有主键的用JSON，没有主键的拼接用#分割用@。\n例如{\"uid1\": \"token1\", \"uid2\": \"token2\",\"uid3\": \"token3\"}和uid1#token1@uid2#token2@uid3#token3",
-  "date": "更新日期：2025-04-10 22:00:00",
+  "date": "更新日期：2025-05-27 22:00:00",
   "apps": [
     {
       "id": "fmz200_xiaohongshu",
@@ -802,6 +802,7 @@
         "wb_delete_cookie",
         "wb_msg_max_num",
         "wb_request_time",
+        "fmz200_weibotalk_token",
         "evil_tokenurl",
         "evil_tokenheaders",
         "evil_tokencheckinurl",
@@ -832,6 +833,14 @@
           "val": "",
           "type": "text",
           "desc": "【签到间隔，单位ms】，若超话过多，建议填1000ms以上。"
+        },
+        {
+          "id": "fmz200_weibotalk_token",
+          "name": "多账号token",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 4
         },
         {
           "id": "evil_tokenurl",
