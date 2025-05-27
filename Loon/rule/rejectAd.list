@@ -1516,7 +1516,7 @@ DOMAIN, ads.yahoo.com
 DOMAIN, ads.yahoo.de
 
 # > 优酷
-DOMAIN-SUFFIX, sm.cn
+#DOMAIN-SUFFIX, sm.cn
 DOMAIN-SUFFIX, acz.youku.com
 DOMAIN-SUFFIX, adx-core.youku.com
 DOMAIN-SUFFIX, adx-open-service.youku.com
