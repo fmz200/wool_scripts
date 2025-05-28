@@ -19,7 +19,7 @@ let tokenList = isNode ? process.env["fmz200_xxyx_token"] : $.getdata("fmz200_xx
 startTasks().then(r => $.done());
 
 async function startTasks() {
-  if (!tokenList) {
+  if (!tokenList || JSON.parse(tokenList).length === 0) {
     await sendMsg("❌ 请先获取晓晓优选token", "");
     $.done();
   }
