@@ -1,349 +1,443 @@
+// 引用地址：https://raw.githubusercontent.com/fmz200/wool_scripts/refs/heads/main/Scripts/xiaohongshu/xiaohongshu.js
+
 /**
  * @author fmz200
  * @function 小红书去广告、净化、解除下载限制、画质增强等
- * @date 2025-05-06 17:27:00
+ * @date 2025-06-01
  * @quote @RuCu6
  */
 
 const $ = new Env('小红书');
 const url = $request.url;
 let rsp_body = $response.body;
+
+// 如果没有响应体，直接结束
 if (!rsp_body) {
   $done({});
 }
-let obj = JSON.parse(rsp_body);
+
+let obj;
+try {
+  obj = JSON.parse(rsp_body);
+} catch (e) {
+  console.log(`解析 JSON 失败：${e}. 返回原始 Body`);
+  $done({ body: rsp_body });
+}
+
+// 1.—— 搜索相关：去除广告/热搜/提示/趋势/非“笔记”类型 —— 
 
 if (url.includes("/search/banner_list")) {
-  obj.data = {};
-} 
+  if (obj.data) obj.data = {};
+}
 
 if (url.includes("/search/hot_list")) {
-  // 热搜列表
-  obj.data.items = [];
-}
-
-if (url.includes("/search/hint")) {
-  // 搜索栏填充词
-  obj.data.hint_words = [];
-}
-
-if (url.includes("/search/trending?")) {
-  // 搜索栏
-  obj.data.queries = [];
-  obj.data.hint_word = {};
-}
-
-if (url.includes("/search/notes?")) {
-  // 搜索结果
-  if (obj.data.items?.length > 0) {
-    obj.data.items = obj.data.items.filter((i) => i.model_type === "note");
+  if (Array.isArray(obj.data?.items)) {
+    obj.data.items = [];
   }
 }
 
-if (url.includes("/system_service/config?")) {
-  // 整体配置
-  const item = ["app_theme", "loading_img", "splash", "store"];
+if (url.includes("/search/hint")) {
+  if (Array.isArray(obj.data?.hint_words)) {
+    obj.data.hint_words = [];
+  }
+}
+
+if (url.includes("/search/trending?")) {
   if (obj.data) {
-    for (let i of item) {
-      delete obj.data[i];
+    obj.data.queries = [];
+    obj.data.hint_word = {};
+  }
+}
+
+if (url.includes("/search/notes?")) {
+  if (Array.isArray(obj.data?.items)) {
+    obj.data.items = obj.data.items.filter(i => i?.model_type === "note");
+  }
+}
+
+// 2.—— 系统配置 & 启动页广告 —— 
+
+if (url.includes("/system_service/config?")) {
+  if (obj.data) {
+    const removeKeys = ["app_theme", "loading_img", "splash", "store"];
+    for (let key of removeKeys) {
+      delete obj.data[key];
     }
   }
 }
 
 if (url.includes("/system_service/splash_config")) {
-  // 开屏广告
-  if (obj?.data?.ads_groups?.length > 0) {
-    for (let i of obj.data.ads_groups) {
-      i.start_time = 3818332800; // Unix 时间戳 2090-12-31 00:00:00
-      i.end_time = 3818419199; // Unix 时间戳 2090-12-31 23:59:59
-      if (i?.ads?.length > 0) {
-        for (let ii of i.ads) {
-          ii.start_time = 3818332800; // Unix 时间戳 2090-12-31 00:00:00
-          ii.end_time = 3818419199; // Unix 时间戳 2090-12-31 23:59:59
+  if (Array.isArray(obj.data?.ads_groups)) {
+    for (let grp of obj.data.ads_groups) {
+      grp.start_time = 3818332800; // 2090-12-31 00:00:00
+      grp.end_time = 3818419199;   // 2090-12-31 23:59:59
+      if (Array.isArray(grp.ads)) {
+        for (let ad of grp.ads) {
+          ad.start_time = 3818332800;
+          ad.end_time = 3818419199;
         }
       }
     }
   }
 }
 
+// 3.—— 在笔记详情页也缓存 images_list，以增加“在详情页直接保存”时的命中率 —— 
+
+if (url.includes("/note/detail")) {
+  try {
+    // 详情页结构通常在 obj.data.images_list
+    const detailImages = obj.data?.images_list;
+    if (Array.isArray(detailImages) && detailImages.length > 0) {
+      $.setdata(JSON.stringify(detailImages), "fmz200.xiaohongshu.feed.rsp");
+      console.log(`详情页缓存：共 ${detailImages.length} 张图片/Live 图`);
+    }
+  } catch (e) {
+    console.log(`在 note/detail 缓存时出错：${e}`);
+  }
+}
+
+// 4.—— Feed 列表页缓存所有 note 的 images_list —— 
+
 if (url.includes("/note/imagefeed?") || url.includes("/note/feed?")) {
-  // 信息流 图片
-  if (obj?.data?.length > 0) {
-    if (obj.data[0]?.note_list?.length > 0) {
-      for (let item of obj.data[0].note_list) {
+  try {
+    const firstPage = obj.data;
+    if (Array.isArray(firstPage) && firstPage.length > 0) {
+      const noteList = firstPage[0]?.note_list;
+      if (Array.isArray(noteList) && noteList.length > 0) {
+        // 4.1) 去水印 + 加下载按钮 + 画质增强
+        for (let noteItem of noteList) {
+          // 允许保存 & 去水印
+          if (noteItem?.media_save_config) {
+            noteItem.media_save_config.disable_save = false;
+            noteItem.media_save_config.disable_watermark = true;
+            noteItem.media_save_config.disable_weibo_cover = true;
+          }
+          // 强制插入“视频下载”按钮
+          if (Array.isArray(noteItem.share_info?.function_entries)) {
+            const firstEntry = noteItem.share_info.function_entries[0];
+            if (firstEntry?.type !== "video_download") {
+              noteItem.share_info.function_entries.unshift({ type: "video_download" });
+            }
+          }
+        }
+        // 4.2) 合并本页所有 note 的 images_list 到一个大数组
+        let allImages = [];
+        for (let noteItem of noteList) {
+          const imagesArr = noteItem?.images_list;
+          if (Array.isArray(imagesArr) && imagesArr.length > 0) {
+            // 缓存前先强制画质增强
+            try {
+              noteItem.images_list = imageEnhance(JSON.stringify(imagesArr));
+            } catch (e) {
+              console.log(`imageEnhance 画质增强失败：${e}`);
+            }
+            // 合并原始列表
+            allImages = allImages.concat(imagesArr);
+          }
+        }
+        if (allImages.length > 0) {
+          $.setdata(JSON.stringify(allImages), "fmz200.xiaohongshu.feed.rsp");
+          console.log(`Feed 页缓存：共 ${allImages.length} 张图片/Live 图`);
+        }
+      }
+    }
+  } catch (e) {
+    console.log(`在 note/imagefeed? 缓存时出错：${e}`);
+  }
+}
+
+// 5.—— live_photo 保存：根据缓存结果替换 URL —— 
+
+if (url.includes("/note/live_photo/save")) {
+  console.log('触发 live_photo/save，原 body：' + rsp_body);
+  const rawCache = $.getdata("fmz200.xiaohongshu.feed.rsp") || "";
+  if (!rawCache) {
+    console.log('保存失败：缓存为空');
+    $done({ body: rsp_body });
+  }
+  let cacheArr;
+  try {
+    cacheArr = JSON.parse(rawCache);
+  } catch (e) {
+    console.log(`缓存 JSON 解析失败：${e}`);
+    $done({ body: rsp_body });
+  }
+  // 5.1) 从缓存中提取所有带 live_photo_file_id 的记录
+  const liveItems = [];
+  for (let imgObj of cacheArr) {
+    const fid = imgObj?.live_photo_file_id;
+    const h265url = imgObj?.live_photo?.media?.stream?.h265?.[0]?.master_url;
+    const vid = imgObj?.live_photo?.media?.video_id;
+    if (fid && vid && h265url) {
+      liveItems.push({ file_id: fid, video_id: vid, url: h265url });
+    }
+  }
+  if (liveItems.length === 0) {
+    console.log('live 图保存为静态照片：缓存中无 live_photo_file_id 或结构发生变化');
+    $done({ body: rsp_body });
+  }
+  // 5.2) 若返回体里包含 data.datas，则针对每个 file_id 做替换；否则新建响应
+  if (Array.isArray(obj.data?.datas) && obj.data.datas.length > 0) {
+    let matched = false;
+    for (let respItem of obj.data.datas) {
+      const fid = respItem?.file_id;
+      const match = liveItems.find(x => x.file_id === fid);
+      if (match) {
+        // 只替换有匹配的条目
+        respItem.url = match.url;
+        respItem.author = "@fmz200";
+        matched = true;
+      }
+    }
+    if (!matched) {
+      console.log('保存失败：未找到与返回体中 file_id 对应的 live URL');
+      $done({ body: rsp_body });
+    }
+  } else {
+    // 5.3) 如果服务器根本没返回 datas，就自己构造一个成功体
+    obj = { code: 0, success: true, msg: "成功", data: { datas: liveItems } };
+    console.log('保存成功：自建响应体，返回所有 liveItems');
+  }
+  console.log('保存后新 body：' + JSON.stringify(obj));
+}
+
+// 6.—— 视频信息流 & 保存（v3/v4/v10）类似逻辑，可参照上面思路做健壮性检查 —— 
+
+if (url.includes("/v3/note/videofeed?")) {
+  try {
+    if (Array.isArray(obj.data) && obj.data.length > 0) {
+      for (let item of obj.data) {
         if (item?.media_save_config) {
-          // 水印开关
           item.media_save_config.disable_save = false;
           item.media_save_config.disable_watermark = true;
           item.media_save_config.disable_weibo_cover = true;
         }
-        if (item?.share_info?.function_entries?.length > 0) {
-          // 下载限制
-          const addItem = {type: "video_download"};
-          let func = item.share_info.function_entries[0];
-          if (func?.type !== "video_download") {
-            // 向数组开头添加对象
-            item.share_info.function_entries.unshift(addItem);
+        if (Array.isArray(item.share_info?.function_entries)) {
+          const firstEntry = item.share_info.function_entries[0];
+          if (firstEntry?.type !== "video_download") {
+            item.share_info.function_entries.unshift({ type: "video_download" });
           }
         }
       }
-
-      const images_list = obj.data[0].note_list[0].images_list;
-      // 画质增强
-      obj.data[0].note_list[0].images_list = imageEnhance(JSON.stringify(images_list));
-      // 保存无水印信息
-      $.setdata(JSON.stringify(images_list), "fmz200.xiaohongshu.feed.rsp");
-      console.log('已存储无水印信息♻️');
     }
-  }
-} 
-
-if (url.includes("/note/live_photo/save")) {
-  console.log('原body：' + rsp_body);
-  const rsp = $.getdata("fmz200.xiaohongshu.feed.rsp");
-  console.log("读取缓存key：fmz200.xiaohongshu.feed.rsp");
-  // console.log("读取缓存val：" + rsp);
-  if (rsp == null || rsp.length === 0) {
-    console.log('缓存无内容，返回原body');
-    $done({body: rsp_body});
-  }
-  const cache_body = JSON.parse(rsp);
-  let new_data = [];
-  for (const images of cache_body) {
-    if (images.live_photo_file_id) {
-      const item = {
-        file_id: images.live_photo_file_id,
-        video_id: images.live_photo.media.video_id,
-        url: images.live_photo.media.stream.h265[0].master_url
-      };
-      new_data.push(item);
-    }
-  }
-  if (obj.data.datas) {
-    replaceUrlContent(obj.data.datas, new_data);
-  } else {
-    obj = {"code": 0, "success": true, "msg": "成功", "data": {"datas": new_data}};
-  }
-  console.log('新body：' + JSON.stringify(obj));
-} 
-
-if (url.includes("/note/widgets")) {
-  const item = ["cooperate_binds", "generic", "note_next_step"];
-  if (obj?.data) {
-    for (let i of item) {
-      delete obj.data[i];
-    }
-  }
-} 
-
-if (url.includes("/v3/note/videofeed?")) {
-  // 信息流 视频
-  if (obj?.data?.length > 0) {
-    for (let item of obj.data) {
-      if (item?.media_save_config) {
-        // 水印
-        item.media_save_config.disable_save = false;
-        item.media_save_config.disable_watermark = true;
-        item.media_save_config.disable_weibo_cover = true;
-      }
-      if (item?.share_info?.function_entries?.length > 0) {
-        // 下载限制
-        const addItem = {type: "video_download"};
-        let func = item.share_info.function_entries[0];
-        if (func?.type !== "video_download") {
-          // 向数组开头添加对象
-          item.share_info.function_entries.unshift(addItem);
-        }
-      }
-    }
+  } catch (e) {
+    console.log(`/v3/note/videofeed? 处理异常：${e}`);
   }
 }
 
 if (url.includes("/v4/note/videofeed")) {
-  // 信息流 视频
-  let newDatas = [];
-  let unlockDatas = [];
-  if (obj?.data?.length > 0) {
-    for (let item of obj.data) {
-      // 检查function_entries中的每一个元素的type属性是否等于"video_download"
-      console.log("检查是否有下载按钮")
-      let found = false;
-      for (let entry of item.share_info.function_entries) {
-        if (entry.type === "video_download") {
-          found = true;
-          break;
-        }
-      }
-      // 如果没有匹配到，则添加一个新的元素
-      if (!found) {
-        console.log("添加下载按钮")
-        item.share_info.function_entries.push({
-          "type": "video_download"
-        });
-      }
-      // 存储无水印视频链接
-      if (item?.id && item.video_info_v2?.media?.stream?.h265?.length > 0 && item.video_info_v2.media.stream.h265[0].master_url) {
-        let myData = {
-          id: item.id,
-          url: item.video_info_v2.media.stream.h265[0].master_url
-        };
-        newDatas.push(myData);
-      }
-    }
-    $.setdata(JSON.stringify(newDatas), "redBookVideoFeed"); // 普通视频 写入持久化存储
-  }
-  // let cache = $.getdata("redBookVideoFeedUnlock");
-  let videoFeedUnlock = {notSave: "fmz200"}; // 禁止保存的视频 读取持久化存储
-  if (videoFeedUnlock?.notSave === "fmz200") {
-    if (obj?.data?.length > 0) {
+  try {
+    let normalCache = [];
+    let unlockCache = [];
+    if (Array.isArray(obj.data) && obj.data.length > 0) {
       for (let item of obj.data) {
-        if (item?.id && item.video_info_v2?.media?.stream?.h265?.length > 0 && item.video_info_v2.media.stream.h265[0].master_url) {
-          let myData = {
-            id: item.id,
-            url: item.video_info_v2.media.stream.h265[0].master_url
-          };
-          unlockDatas.push(myData);
+        // 插入下载按钮
+        if (Array.isArray(item.share_info?.function_entries)) {
+          const hasDL = item.share_info.function_entries.some(x => x?.type === "video_download");
+          if (!hasDL) {
+            item.share_info.function_entries.push({ type: "video_download" });
+          }
+        }
+        // 提取无水印H265 URL
+        const vid = item?.id;
+        const h265url = item?.video_info_v2?.media?.stream?.h265?.[0]?.master_url;
+        if (vid && h265url) {
+          normalCache.push({ id: vid, url: h265url });
+          // 如果 item.data.disable 为 true，则认为是“禁止保存”模式，把链接放到 unlockCache
+          if (item?.media_save_config?.disable_save === true) {
+            unlockCache.push({ id: vid, url: h265url });
+          }
         }
       }
     }
-    $.setdata(JSON.stringify(unlockDatas), "redBookVideoFeedUnlock"); // 禁止保存的视频 写入持久化存储
+    if (normalCache.length > 0) {
+      $.setdata(JSON.stringify(normalCache), "redBookVideoFeed");
+      console.log(`v4 cache: 普通视频 ${normalCache.length} 条`);
+    }
+    if (unlockCache.length > 0) {
+      $.setdata(JSON.stringify(unlockCache), "redBookVideoFeedUnlock");
+      console.log(`v4 cache: 禁止保存视频 ${unlockCache.length} 条`);
+    }
+  } catch (e) {
+    console.log(`/v4/note/videofeed 处理异常：${e}`);
   }
 }
 
 if (url.includes("/v10/note/video/save")) {
-  // 视频保存请求
-  let videoFeed = JSON.parse($.getdata("redBookVideoFeed")); // 普通视频 读取持久化存储
-  let videoFeedUnlock = JSON.parse($.getdata("redBookVideoFeedUnlock")); // 禁止保存的视频 读取持久化存储
-  if (obj?.data?.note_id !== "" && videoFeed?.length > 0) {
-    for (let item of videoFeed) {
-      if (item.id === obj.data.note_id) {
-        obj.data.download_url = item.url;
-      }
+  try {
+    const vid = obj.data?.note_id;
+    if (!vid) {
+      console.log("视频保存失败：返回体缺少 note_id");
+      $done({ body: rsp_body });
     }
-  }
-  if (obj?.data?.note_id !== "" && videoFeedUnlock?.length > 0) {
-    if (obj?.data?.disable === true && obj?.data?.msg !== "") {
-      delete obj.data.disable;
-      delete obj.data.msg;
-      obj.data.download_url = "";
-      obj.data.status = 2;
-      for (let item of videoFeedUnlock) {
-        if (item.id === obj.data.note_id) {
-          obj.data.download_url = item.url;
+    const normalRaw = $.getdata("redBookVideoFeed") || "[]";
+    const unlockRaw = $.getdata("redBookVideoFeedUnlock") || "[]";
+    let normalArr = [], unlockArr = [];
+    try {
+      normalArr = JSON.parse(normalRaw);
+      unlockArr = JSON.parse(unlockRaw);
+    } catch {
+      console.log("解析视频缓存失败");
+    }
+    let foundDL = false;
+    // 先尝试从普通视频缓存里找
+    if (Array.isArray(normalArr)) {
+      for (let rec of normalArr) {
+        if (rec.id === vid) {
+          obj.data.download_url = rec.url;
+          foundDL = true;
+          break;
         }
       }
     }
+    // 如果普通缓存没有，再判断服务器是否标记为 disable=true
+    if (!foundDL && obj?.data?.disable === true) {
+      for (let rec of unlockArr) {
+        if (rec.id === vid) {
+          // 移除禁止标记，设置 status=2，并填入链接
+          delete obj.data.disable;
+          delete obj.data.msg;
+          obj.data.status = 2;
+          obj.data.download_url = rec.url;
+          foundDL = true;
+          break;
+        }
+      }
+      if (!foundDL) {
+        console.log(`视频保存失败：未在 unlock 缓存中找到 note_id=${vid}`);
+      }
+    }
+    if (!foundDL) {
+      console.log(`视频保存失败： note_id=${vid} 未在任何缓存命中`);
+    }
+    // 重置 unlock 缓存标记
+    $.setdata(JSON.stringify([]), "redBookVideoFeedUnlock");
+  } catch (e) {
+    console.log(`/v10/note/video/save 处理异常：${e}`);
   }
-  videoFeedUnlock = { notSave: "fmz200" };
-  $.setdata(JSON.stringify(videoFeedUnlock), "redBookVideoFeedUnlock");
 }
+
+// 7.—— 关注页 / 推荐页 —— 
 
 if (url.includes("/user/followings/followfeed")) {
-  // 关注页信息流 可能感兴趣的人
-  if (obj?.data?.items?.length > 0) {
-    // 白名单
-    obj.data.items = obj.data.items.filter((i) => i?.recommend_reason === "friend_post");
-  }
-} 
-
-if (url.includes("/v4/followfeed")) {
-  // 关注列表
-  if (obj?.data?.items?.length > 0) {
-    // recommend_user 可能感兴趣的人
-    obj.data.items = obj.data.items.filter((i) => !["recommend_user"].includes(i.recommend_reason));
-  }
-}  
-
-if (url.includes("/recommend/user/follow_recommend")) {
-  // 用户详情页 你可能感兴趣的人
-  if (obj?.data?.title === "你可能感兴趣的人" && obj?.data?.rec_users?.length > 0) {
-    obj.data = {};
-  }
-} 
-
-if (url.includes("/v6/homefeed")) {
-  if (obj?.data?.length > 0) {
-    // 信息流广告
-    let newItems = [];
-    for (let item of obj.data) {
-      if (item?.model_type === "live_v2") {
-        // 信息流-直播
-
-      } else if (item?.hasOwnProperty("ads_info")) {
-        // 信息流-赞助
-
-      } else if (item?.hasOwnProperty("card_icon")) {
-        // 信息流-带货
-
-      } else if (item?.note_attributes?.includes("goods")) {
-        // 信息流-商品
-
-      } else {
-        if (item?.related_ques) {
-          delete item.related_ques;
-        }
-        newItems.push(item);
-      }
-    }
-    obj.data = newItems;
+  if (Array.isArray(obj.data?.items)) {
+    obj.data.items = obj.data.items.filter(i => i?.recommend_reason === "friend_post");
   }
 }
 
-// 加载评论区
+if (url.includes("/v4/followfeed")) {
+  if (Array.isArray(obj.data?.items)) {
+    obj.data.items = obj.data.items.filter(i => !["recommend_user"].includes(i?.recommend_reason));
+  }
+}
+
+if (url.includes("/recommend/user/follow_recommend")) {
+  if (obj.data?.title === "你可能感兴趣的人") {
+    obj.data = {};
+  }
+}
+
+// 8.—— 首页 Feed（v6）去广告/带货/商品，只保留直播 & 普通笔记 —— 
+
+if (url.includes("/v6/homefeed")) {
+  try {
+    const arr = obj.data;
+    if (Array.isArray(arr) && arr.length > 0) {
+      const filtered = [];
+      for (let item of arr) {
+        if (item?.model_type === "live_v2") {
+          // 保留直播条目
+          filtered.push(item);
+        } else if (item?.hasOwnProperty("ads_info")) {
+          // 跳过广告
+        } else if (item?.hasOwnProperty("card_icon")) {
+          // 跳过带货卡片
+        } else if (Array.isArray(item?.note_attributes) && item.note_attributes.includes("goods")) {
+          // 跳过商品
+        } else {
+          // 普通笔记，先删除 related_ques 冗余字段
+          if (item?.related_ques) delete item.related_ques;
+          filtered.push(item);
+        }
+      }
+      obj.data = filtered;
+    }
+  } catch (e) {
+    console.log(`/v6/homefeed 过滤异常：${e}`);
+  }
+}
+
+// 9.—— 小工具 Widgets —— 
+
+if (url.includes("/note/widgets")) {
+  if (obj.data) {
+    const removeKeys = ["cooperate_binds", "generic", "note_next_step"];
+    for (let key of removeKeys) {
+      delete obj.data[key];
+    }
+  }
+}
+
+// 10.—— 评论列表 & 评论 Live 图缓存 —— 
+
 if (url.includes("/api/sns/v5/note/comment/list?") || url.includes("/api/sns/v3/note/comment/sub_comments?")) {
-  replaceRedIdWithFmz200(obj.data);
-  let livePhotos = [];
-  let note_id = "";
-  if (obj.data?.comments?.length > 0) {
-    note_id = obj.data.comments[0].note_id;
-    for (const comment of obj.data.comments) {
-      // comment_type: 0-文字，2-图片/live，3-表情包
-      if (comment.comment_type === 3) {
-        comment.comment_type = 2;
-        console.log(`修改评论类型：3->2`);
-      }
-      if (comment.media_source_type === 1) {
-        comment.media_source_type = 0;
-        console.log(`修改媒体类型：1->0`);
-      }
-      if (comment.pictures?.length > 0) {
-        console.log("comment_id: " + comment.id);
-        for (const picture of comment.pictures) {
-          if (picture.video_id) {
-            const picObj = JSON.parse(picture.video_info);
-            if (picObj.stream?.h265?.[0]?.master_url) {
-              console.log("video_id：" + picture.video_id);
-              const videoData = {
-                videId: picture.video_id,
-                videoUrl: picObj.stream.h265[0].master_url
-              };
-              livePhotos.push(videoData);
+  try {
+    replaceRedIdWithFmz200(obj.data);
+    const comments = obj.data?.comments;
+    let note_id = "";
+    const livePhotos = [];
+    if (Array.isArray(comments) && comments.length > 0) {
+      note_id = comments[0]?.note_id || "";
+      for (let comment of comments) {
+        // 处理一级评论
+        if (comment.comment_type === 3) {
+          comment.comment_type = 2;
+          console.log(`修改 一级评论 comment_type: 3->2`);
+        }
+        if (comment.media_source_type === 1) {
+          comment.media_source_type = 0;
+          console.log(`修改 一级评论 media_source_type: 1->0`);
+        }
+        if (Array.isArray(comment.pictures)) {
+          for (let pic of comment.pictures) {
+            const vid = pic?.video_id;
+            const h265url = (() => {
+              try {
+                return JSON.parse(pic.video_info)?.stream?.h265?.[0]?.master_url;
+              } catch {
+                return null;
+              }
+            })();
+            if (vid && h265url) {
+              livePhotos.push({ videId: vid, videoUrl: h265url });
+              console.log(`一级评论收集到 Live 图 video_id=${vid}`);
             }
           }
         }
-      }
-      if (comment.sub_comments?.length > 0) {
-        for (const sub_comment of comment.sub_comments) {
-          if (sub_comment.comment_type === 3) {
-            sub_comment.comment_type = 2;
-            console.log(`修改评论类型1：3->2`);
-          }
-          if (sub_comment.media_source_type === 1) {
-            sub_comment.media_source_type = 0;
-            console.log(`修改媒体类型1：1->0`);
-          }
-          if (sub_comment.pictures?.length > 0) {
-            console.log("comment_id1: " + comment.id);
-            for (const picture of sub_comment.pictures) {
-              if (picture.video_id) {
-                const picObj = JSON.parse(picture.video_info);
-                if (picObj.stream?.h265?.[0]?.master_url) {
-                  console.log("video_id1：" + picture.video_id);
-                  const videoData = {
-                    videId: picture.video_id,
-                    videoUrl: picObj.stream.h265[0].master_url
-                  };
-                  livePhotos.push(videoData);
+        // 处理二级子评论
+        if (Array.isArray(comment.sub_comments)) {
+          for (let sub of comment.sub_comments) {
+            if (sub.comment_type === 3) {
+              sub.comment_type = 2;
+              console.log(`修改 二级评论 comment_type: 3->2`);
+            }
+            if (sub.media_source_type === 1) {
+              sub.media_source_type = 0;
+              console.log(`修改 二级评论 media_source_type: 1->0`);
+            }
+            if (Array.isArray(sub.pictures)) {
+              for (let pic of sub.pictures) {
+                const vid = pic?.video_id;
+                const h265url = (() => {
+                  try {
+                    return JSON.parse(pic.video_info)?.stream?.h265?.[0]?.master_url;
+                  } catch {
+                    return null;
+                  }
+                })();
+                if (vid && h265url) {
+                  livePhotos.push({ videId: vid, videoUrl: h265url });
+                  console.log(`二级评论收集到 Live 图 video_id=${vid}`);
                 }
               }
             }
@@ -351,119 +445,160 @@ if (url.includes("/api/sns/v5/note/comment/list?") || url.includes("/api/sns/v3/
         }
       }
     }
-  }
-  console.log("本次note_id：" + note_id);
-  if (livePhotos.length > 0) {
-    let commitsRsp;
-    const commitsCache = $.getdata("fmz200.xiaohongshu.comments.rsp");
-    console.log("读取缓存val：" + commitsCache);
-    if (!commitsCache) {
-      commitsRsp = {noteId: note_id, livePhotos: livePhotos};
-    } else {
-      commitsRsp = JSON.parse(commitsCache);
-      console.log("缓存note_id：" + commitsRsp.noteId);
-      if (commitsRsp.noteId === note_id) {
-        console.log("增量数据");
-        commitsRsp.livePhotos = deduplicateLivePhotos(commitsRsp.livePhotos.concat(livePhotos));
-      } else {
-        console.log("更换数据");
-        commitsRsp = {noteId: note_id, livePhotos: livePhotos};
-      }
-    }
-    console.log("写入缓存val：" + JSON.stringify(commitsRsp));
-    $.setdata(JSON.stringify(commitsRsp), "fmz200.xiaohongshu.comments.rsp");
-  }
-}
-
-// 下载评论区live图
-if (url.includes("/api/sns/v1/interaction/comment/video/download?")) {
-  const commitsCache = $.getdata("fmz200.xiaohongshu.comments.rsp");
-  console.log("读取缓存val：" + commitsCache);
-  console.log("目标video_id：" + obj.data.video.video_id);
-  if (commitsCache) {
-    let commitsRsp = JSON.parse(commitsCache);
-    if (commitsRsp.livePhotos.length > 0 && obj.data?.video) {
-      for (const item of commitsRsp.livePhotos) {
-        // console.log("缓存video_id：" + item.videId);
-        if (item.videId === obj.data.video.video_id) {
-          console.log("匹配到无水印链接：" + item.videoUrl);
-          obj.data.video.video_url = item.videoUrl;
-          break;
+    console.log(`评论列表 note_id=${note_id}，共收集到 ${livePhotos.length} 条 Live 图`);
+    if (livePhotos.length > 0) {
+      const oldCacheRaw = $.getdata("fmz200.xiaohongshu.comments.rsp") || "";
+      let newCache = { noteId: note_id, livePhotos };
+      if (oldCacheRaw) {
+        try {
+          const oldCache = JSON.parse(oldCacheRaw);
+          if (oldCache.noteId === note_id) {
+            // 去重合并
+            const merged = oldCache.livePhotos.concat(livePhotos);
+            newCache.livePhotos = deduplicateLivePhotos(merged);
+            console.log(`评论 Live 图做了去重合并，合并后共 ${newCache.livePhotos.length} 条`);
+          }
+        } catch {
+          console.log("旧评论缓存解析失败，直接覆盖");
         }
       }
+      $.setdata(JSON.stringify(newCache), "fmz200.xiaohongshu.comments.rsp");
+      console.log("已写入评论 Live 图缓存");
     }
-  } else {
-    console.log(`没有[${obj.data?.video.video_id}]的无水印地址`);
+  } catch (e) {
+    console.log(`/note/comment 处理异常：${e}`);
   }
 }
 
-$done({body: JSON.stringify(obj)});
+// 11.—— 评论区 Live 图下载替换 —— 
 
-// 小红书画质增强：加载2K分辨率的图片
+if (url.includes("/api/sns/v1/interaction/comment/video/download?")) {
+  try {
+    const cacheRaw = $.getdata("fmz200.xiaohongshu.comments.rsp") || "";
+    const vid = obj.data?.video?.video_id;
+    if (!vid) {
+      console.log("评论 Live 图下载失败：响应体缺少 video.video_id");
+      $done({ body: rsp_body });
+    }
+    if (!cacheRaw) {
+      console.log(`评论 Live 图下载失败：缓存为空，无法替换 video_id=${vid}`);
+      $done({ body: rsp_body });
+    }
+    let cacheObj;
+    try {
+      cacheObj = JSON.parse(cacheRaw);
+    } catch {
+      console.log("评论缓存 JSON 解析失败");
+      $done({ body: rsp_body });
+    }
+    const matched = cacheObj.livePhotos.find(x => x.videId === vid);
+    if (matched) {
+      obj.data.video.video_url = matched.videoUrl;
+      console.log(`评论 Live 图下载成功：video_id=${vid} URL 已替换`);
+    } else {
+      console.log(`评论 Live 图下载失败：缓存中找不到 video_id=${vid}`);
+    }
+  } catch (e) {
+    console.log(`/comment/video/download 处理异常：${e}`);
+  }
+}
+
+$done({ body: JSON.stringify(obj) });
+
+
+
+/**
+ * imageEnhance：对传入的 images_list（JSON 字符串）做“高像素输出”或“原始分辨率PNG”替换
+ * 如果传入非 JSON 或替换失败，会 catch 并返回空数组，保证不抛异常
+ */
 function imageEnhance(jsonStr) {
   if (!jsonStr) {
-    console.error("jsonStr is undefined or null");
+    console.error("imageEnhance 收到空字符串");
     return [];
   }
-
-  const imageQuality = $.getdata("fmz200.xiaohongshu.imageQuality");
-  console.log(`Image Quality: ${imageQuality}`);
-  if (imageQuality === "original") { // 原始分辨率，PNG格式的图片，占用空间比较大
-    console.log("画质修改为-原始分辨率");
-    jsonStr = jsonStr.replace(/\?imageView2\/2[^&]*(?:&redImage\/frame\/0)/, "?imageView2/0/format/png&redImage/frame/0");
-  } else { // 高像素输出
-    console.log("画质修改为-高像素输出");
-    const regex1 = /imageView2\/2\/w\/\d+\/format/g;
-    jsonStr = jsonStr.replace(regex1, `imageView2/2/w/2160/format`);
-
-    const regex2 = /imageView2\/2\/h\/\d+\/format/g;
-    jsonStr = jsonStr.replace(regex2, `imageView2/2/h/2160/format`);
-  }
-  console.log('图片画质增强完成✅');
-
+  let modStr = jsonStr;
   try {
-    return JSON.parse(jsonStr);
+    const quality = $.getdata("fmz200.xiaohongshu.imageQuality");
+    if (quality === "original") {
+      // 原始分辨率：PNG
+      modStr = modStr.replace(
+        /\?imageView2\/2[^&]*(?:&redImage\/frame\/0)/,
+        "?imageView2/0/format/png&redImage/frame/0"
+      );
+      console.log("imageEnhance：使用原始 PNG");
+    } else {
+      // 高像素输出 2160p
+      modStr = modStr.replace(/imageView2\/2\/w\/\d+\/format/g, "imageView2/2/w/2160/format");
+      modStr = modStr.replace(/imageView2\/2\/h\/\d+\/format/g, "imageView2/2/h/2160/format");
+      console.log("imageEnhance：使用高像素输出 2160p");
+    }
+    return JSON.parse(modStr);
   } catch (e) {
-    console.error("JSON parsing error: ", e);
-    return [];
+    console.error(`imageEnhance 异常：${e}`);
+    try {
+      return JSON.parse(jsonStr);
+    } catch {
+      return [];
+    }
   }
 }
 
-function replaceUrlContent(collectionA, collectionB) {
-  console.log('替换无水印的URL');
-  collectionA.forEach(itemA => {
-    const matchingItemB = collectionB.find(itemB => itemB.file_id === itemA.file_id);
-    if (matchingItemB) {
-      itemA.url = itemA.url.replace(/(.*)\.mp4/, `${matchingItemB.url.match(/(.*)\.mp4/)[1]}.mp4`);
-      itemA.author = "@fmz200"
+
+/**
+ * 去重 Live Photo 列表，根据 videId 唯一性
+ */
+function deduplicateLivePhotos(arr) {
+  const seen = new Set();
+  const ret = [];
+  for (let item of arr) {
+    if (!item?.videId) continue;
+    if (!seen.has(item.videId)) {
+      seen.add(item.videId);
+      ret.push(item);
     }
-  });
+  }
+  return ret;
 }
 
-function deduplicateLivePhotos(livePhotos) {
-  const seen = new Map();
-  livePhotos = livePhotos.filter(item => {
-    if (seen.has(item.videId)) {
-      return false;
-    }
-    seen.set(item.videId, true);
-    return true;
-  });
-  return livePhotos;
-}
-
+/**
+ * 递归替换对象中所有 red_id 字段为 fmz200，然后删除原 red_id
+ */
 function replaceRedIdWithFmz200(obj) {
   if (Array.isArray(obj)) {
-    obj.forEach(item => replaceRedIdWithFmz200(item));
-  } else if (typeof obj === 'object' && obj !== null) {
-    if ('red_id' in obj) {
-      obj.fmz200 = obj.red_id; // 创建新属性fmz200
-      delete obj.red_id; // 删除旧属性red_id
+    for (let el of obj) {
+      replaceRedIdWithFmz200(el);
     }
-    Object.keys(obj).forEach(key => {
-      replaceRedIdWithFmz200(obj[key]);
-    });
+  } else if (obj && typeof obj === 'object') {
+    if ('red_id' in obj) {
+      obj.fmz200 = obj.red_id;
+      delete obj.red_id;
+    }
+    for (let key in obj) {
+      if (Object.prototype.hasOwnProperty.call(obj, key)) {
+        replaceRedIdWithFmz200(obj[key]);
+      }
+    }
   }
 }
 
-function Env(t, e) { class s { constructor(t) { this.env = t } send(t, e = "GET") { t = "string" == typeof t ? { url: t } : t; let s = this.get; return "POST" === e && (s = this.post), new Promise((e, i) => { s.call(this, t, (t, s, r) => { t ? i(t) : e(s) }) }) } get(t) { return this.send.call(this.env, t) } post(t) { return this.send.call(this.env, t, "POST") } } return new class { constructor(t, e) { this.name = t, this.http = new s(this), this.data = null, this.dataFile = "box.dat", this.logs = [], this.isMute = !1, this.isNeedRewrite = !1, this.logSeparator = "\n", this.encoding = "utf-8", this.startTime = (new Date).getTime(), Object.assign(this, e), this.log("", `\ud83d\udd14${this.name}, \u5f00\u59cb!`) } isNode() { return "undefined" != typeof module && !!module.exports } isQuanX() { return "undefined" != typeof $task } isSurge() { return "undefined" != typeof $httpClient && "undefined" == typeof $loon } isLoon() { return "undefined" != typeof $loon } isShadowrocket() { return "undefined" != typeof $rocket } isStash() { return "undefined" != typeof $environment && $environment["stash-version"] } toObj(t, e = null) { try { return JSON.parse(t) } catch { return e } } toStr(t, e = null) { try { return JSON.stringify(t) } catch { return e } } getjson(t, e) { let s = e; const i = this.getdata(t); if (i) try { s = JSON.parse(this.getdata(t)) } catch { } return s } setjson(t, e) { try { return this.setdata(JSON.stringify(t), e) } catch { return !1 } } getScript(t) { return new Promise(e => { this.get({ url: t }, (t, s, i) => e(i)) }) } runScript(t, e) { return new Promise(s => { let i = this.getdata("@chavy_boxjs_userCfgs.httpapi"); i = i ? i.replace(/\n/g, "").trim() : i; let r = this.getdata("@chavy_boxjs_userCfgs.httpapi_timeout"); r = r ? 1 * r : 20, r = e && e.timeout ? e.timeout : r; const [o, a] = i.split("@"), n = { url: `http://${a}/v1/scripting/evaluate`, body: { script_text: t, mock_type: "cron", timeout: r }, headers: { "X-Key": o, Accept: "*/*" } }; this.post(n, (t, e, i) => s(i)) }).catch(t => this.logErr(t)) } loaddata() { if (!this.isNode()) return {}; { this.fs = this.fs ? this.fs : require("fs"), this.path = this.path ? this.path : require("path"); const t = this.path.resolve(this.dataFile), e = this.path.resolve(process.cwd(), this.dataFile), s = this.fs.existsSync(t), i = !s && this.fs.existsSync(e); if (!s && !i) return {}; { const i = s ? t : e; try { return JSON.parse(this.fs.readFileSync(i)) } catch (t) { return {} } } } } writedata() { if (this.isNode()) { this.fs = this.fs ? this.fs : require("fs"), this.path = this.path ? this.path : require("path"); const t = this.path.resolve(this.dataFile), e = this.path.resolve(process.cwd(), this.dataFile), s = this.fs.existsSync(t), i = !s && this.fs.existsSync(e), r = JSON.stringify(this.data); s ? this.fs.writeFileSync(t, r) : i ? this.fs.writeFileSync(e, r) : this.fs.writeFileSync(t, r) } } lodash_get(t, e, s) { const i = e.replace(/\[(\d+)\]/g, ".$1").split("."); let r = t; for (const t of i) if (r = Object(r)[t], void 0 === r) return s; return r } lodash_set(t, e, s) { return Object(t) !== t ? t : (Array.isArray(e) || (e = e.toString().match(/[^.[\]]+/g) || []), e.slice(0, -1).reduce((t, s, i) => Object(t[s]) === t[s] ? t[s] : t[s] = Math.abs(e[i + 1]) >> 0 == +e[i + 1] ? [] : {}, t)[e[e.length - 1]] = s, t) } getdata(t) { let e = this.getval(t); if (/^@/.test(t)) { const [, s, i] = /^@(.*?)\.(.*?)$/.exec(t), r = s ? this.getval(s) : ""; if (r) try { const t = JSON.parse(r); e = t ? this.lodash_get(t, i, "") : e } catch (t) { e = "" } } return e } setdata(t, e) { let s = !1; if (/^@/.test(e)) { const [, i, r] = /^@(.*?)\.(.*?)$/.exec(e), o = this.getval(i), a = i ? "null" === o ? null : o || "{}" : "{}"; try { const e = JSON.parse(a); this.lodash_set(e, r, t), s = this.setval(JSON.stringify(e), i) } catch (e) { const o = {}; this.lodash_set(o, r, t), s = this.setval(JSON.stringify(o), i) } } else s = this.setval(t, e); return s } getval(t) { return this.isSurge() || this.isLoon() ? $persistentStore.read(t) : this.isQuanX() ? $prefs.valueForKey(t) : this.isNode() ? (this.data = this.loaddata(), this.data[t]) : this.data && this.data[t] || null } setval(t, e) { return this.isSurge() || this.isLoon() ? $persistentStore.write(t, e) : this.isQuanX() ? $prefs.setValueForKey(t, e) : this.isNode() ? (this.data = this.loaddata(), this.data[e] = t, this.writedata(), !0) : this.data && this.data[e] || null } initGotEnv(t) { this.got = this.got ? this.got : require("got"), this.cktough = this.cktough ? this.cktough : require("tough-cookie"), this.ckjar = this.ckjar ? this.ckjar : new this.cktough.CookieJar, t && (t.headers = t.headers ? t.headers : {}, void 0 === t.headers.Cookie && void 0 === t.cookieJar && (t.cookieJar = this.ckjar)) } get(t, e = (() => { })) { if (t.headers && (delete t.headers["Content-Type"], delete t.headers["Content-Length"]), this.isSurge() || this.isLoon()) this.isSurge() && this.isNeedRewrite && (t.headers = t.headers || {}, Object.assign(t.headers, { "X-Surge-Skip-Scripting": !1 })), $httpClient.get(t, (t, s, i) => { !t && s && (s.body = i, s.statusCode = s.status ? s.status : s.statusCode, s.status = s.statusCode), e(t, s, i) }); else if (this.isQuanX()) this.isNeedRewrite && (t.opts = t.opts || {}, Object.assign(t.opts, { hints: !1 })), $task.fetch(t).then(t => { const { statusCode: s, statusCode: i, headers: r, body: o } = t; e(null, { status: s, statusCode: i, headers: r, body: o }, o) }, t => e(t && t.error || "UndefinedError")); else if (this.isNode()) { let s = require("iconv-lite"); this.initGotEnv(t), this.got(t).on("redirect", (t, e) => { try { if (t.headers["set-cookie"]) { const s = t.headers["set-cookie"].map(this.cktough.Cookie.parse).toString(); s && this.ckjar.setCookieSync(s, null), e.cookieJar = this.ckjar } } catch (t) { this.logErr(t) } }).then(t => { const { statusCode: i, statusCode: r, headers: o, rawBody: a } = t, n = s.decode(a, this.encoding); e(null, { status: i, statusCode: r, headers: o, rawBody: a, body: n }, n) }, t => { const { message: i, response: r } = t; e(i, r, r && s.decode(r.rawBody, this.encoding)) }) } } post(t, e = (() => { })) { const s = t.method ? t.method.toLocaleLowerCase() : "post"; if (t.body && t.headers && !t.headers["Content-Type"] && (t.headers["Content-Type"] = "application/x-www-form-urlencoded"), t.headers && delete t.headers["Content-Length"], this.isSurge() || this.isLoon()) this.isSurge() && this.isNeedRewrite && (t.headers = t.headers || {}, Object.assign(t.headers, { "X-Surge-Skip-Scripting": !1 })), $httpClient[s](t, (t, s, i) => { !t && s && (s.body = i, s.statusCode = s.status ? s.status : s.statusCode, s.status = s.statusCode), e(t, s, i) }); else if (this.isQuanX()) t.method = s, this.isNeedRewrite && (t.opts = t.opts || {}, Object.assign(t.opts, { hints: !1 })), $task.fetch(t).then(t => { const { statusCode: s, statusCode: i, headers: r, body: o } = t; e(null, { status: s, statusCode: i, headers: r, body: o }, o) }, t => e(t && t.error || "UndefinedError")); else if (this.isNode()) { let i = require("iconv-lite"); this.initGotEnv(t); const { url: r, ...o } = t; this.got[s](r, o).then(t => { const { statusCode: s, statusCode: r, headers: o, rawBody: a } = t, n = i.decode(a, this.encoding); e(null, { status: s, statusCode: r, headers: o, rawBody: a, body: n }, n) }, t => { const { message: s, response: r } = t; e(s, r, r && i.decode(r.rawBody, this.encoding)) }) } } time(t, e = null) { const s = e ? new Date(e) : new Date; let i = { "M+": s.getMonth() + 1, "d+": s.getDate(), "H+": s.getHours(), "m+": s.getMinutes(), "s+": s.getSeconds(), "q+": Math.floor((s.getMonth() + 3) / 3), S: s.getMilliseconds() }; /(y+)/.test(t) && (t = t.replace(RegExp.$1, (s.getFullYear() + "").substr(4 - RegExp.$1.length))); for (let e in i) new RegExp("(" + e + ")").test(t) && (t = t.replace(RegExp.$1, 1 == RegExp.$1.length ? i[e] : ("00" + i[e]).substr(("" + i[e]).length))); return t } msg(e = t, s = "", i = "", r) { const o = t => { if (!t) return t; if ("string" == typeof t) return this.isLoon() ? t : this.isQuanX() ? { "open-url": t } : this.isSurge() ? { url: t } : void 0; if ("object" == typeof t) { if (this.isLoon()) { let e = t.openUrl || t.url || t["open-url"], s = t.mediaUrl || t["media-url"]; return { openUrl: e, mediaUrl: s } } if (this.isQuanX()) { let e = t["open-url"] || t.url || t.openUrl, s = t["media-url"] || t.mediaUrl, i = t["update-pasteboard"] || t.updatePasteboard; return { "open-url": e, "media-url": s, "update-pasteboard": i } } if (this.isSurge()) { let e = t.url || t.openUrl || t["open-url"]; return { url: e } } } }; if (this.isMute || (this.isSurge() || this.isLoon() ? $notification.post(e, s, i, o(r)) : this.isQuanX() && $notify(e, s, i, o(r))), !this.isMuteLog) { let t = ["", "==============\ud83d\udce3\u7cfb\u7edf\u901a\u77e5\ud83d\udce3=============="]; t.push(e), s && t.push(s), i && t.push(i), console.log(t.join("\n")), this.logs = this.logs.concat(t) } } log(...t) { t.length > 0 && (this.logs = [...this.logs, ...t]), console.log(t.join(this.logSeparator)) } logErr(t, e) { const s = !this.isSurge() && !this.isQuanX() && !this.isLoon(); s ? this.log("", `\u2757\ufe0f${this.name}, \u9519\u8bef!`, t.stack) : this.log("", `\u2757\ufe0f${this.name}, \u9519\u8bef!`, t) } wait(t) { return new Promise(e => setTimeout(e, t)) } done(t = {}) { const e = (new Date).getTime(), s = (e - this.startTime) / 1e3; this.log("", `\ud83d\udd14${this.name}, \u7ed3\u675f! \ud83d\udd5b ${s} \u79d2`), this.log(), this.isSurge() || this.isQuanX() || this.isLoon() ? $done(t) : this.isNode() && process.exit(1) } }(t, e) }
+/**
+ * Env 脚本环境适配（Surge/QuanX/Loon/Node.js 等）
+ */
+function Env(name) {
+  this.name = name;
+  this.log = msg => console.log(`${this.name}, ${msg}`);
+  this.getdata = key => {
+    try {
+      return $persistentStore.read(key);
+    } catch {
+      return null;
+    }
+  };
+  this.setdata = (val, key) => {
+    try {
+      return $persistentStore.write(val, key);
+    } catch {
+      return false;
+    }
+  };
+}
