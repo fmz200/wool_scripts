@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 小红书去广告、净化、解除下载限制、画质增强等
- * @date 2025-05-06 17:27:00
+ * @date 2025-06-01 21:27:00
  * @quote @RuCu6
  */
 
@@ -432,9 +432,9 @@ function imageEnhance(jsonStr) {
 function replaceUrlContent(collectionA, collectionB) {
   console.log('替换无水印的URL');
   collectionA.forEach(itemA => {
-    const matchingItemB = collectionB.find(itemB => itemB.file_id === itemA.file_id);
-    if (matchingItemB) {
-      itemA.url = itemA.url.replace(/(.*)\.mp4/, `${matchingItemB.url.match(/(.*)\.mp4/)[1]}.mp4`);
+    const itemB = collectionB.find(itemB => itemB.file_id === itemA.file_id);
+    if (itemB) {
+      itemA.url = itemA.url !== "" ? itemA.url.replace(/(.*)\.mp4/, `${itemB.url.match(/(.*)\.mp4/)[1]}.mp4`) : itemB.url;
       itemA.author = "@fmz200"
     }
   });
