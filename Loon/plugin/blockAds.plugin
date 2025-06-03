@@ -11,7 +11,7 @@
 #!system=iOS, iPadOS
 #!system_version = 
 #!loon_version = 
-#!date=2025-06-01 14:30:00
+#!date=2025-06-03 21:11:00
 #!support=支持约511款APP/小程序
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 #############################################
@@ -2987,10 +2987,10 @@ https?:\/\/(ipv4|interface\d?)\.music\.163.com\/e?api\/ad reject-dict
 ^https?:\/\/api\.jr\.mi\.com\/jr\/api\/playScreen reject-200
 
 # > 小爱音箱
-# hostname = info.mina.xiaoaisound.com
-^https?:\/\/info\.mina\.xiaoaisound\.com\/advertise(?!\/banner) reject
-^https?:\/\/info\.mina\.xiaoaisound\.com\/payGuide\/userCenter reject
-^https?:\/\/info\.mina\.xiaoaisound\.com\/popup reject-dict
+# hostname = info.mina.xiaoaisound.com, marketing-aibox.v.mitvos.com
+^https?:\/\/(info\.mina\.xiaoaisound|marketing-aibox\.v\.mitvos)\.com\/advertise(?!\/banner) url reject
+^https?:\/\/(info\.mina\.xiaoaisound|marketing-aibox\.v\.mitvos)\.com\/payGuide\/userCenter url reject
+^https?:\/\/(info\.mina\.xiaoaisound|marketing-aibox\.v\.mitvos)\.com\/popup url reject-dict
 
 # > 米家
 # hostname = home.mi.com
