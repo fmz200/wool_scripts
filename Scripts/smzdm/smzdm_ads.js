@@ -34,6 +34,7 @@ if (requestUrl.includes("/sou/list_v10")) {
 if (requestUrl.includes("/sou/filter/tags/hot_tags?")) {
   obj.data.search_hot.home = obj.data.search_hot.home.filter(item => item.pos);
   delete obj.data.tonglan;
+  delete obj.data.hongbao;
   console.log('去除搜索热榜广告💕');
 }
 
