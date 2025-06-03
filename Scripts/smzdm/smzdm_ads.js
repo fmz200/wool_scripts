@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 什么值得买去广告
- * @date 2025-06-01 14:37:50
+ * @date 2025-06-04 00:20:50
  */
 
 let requestUrl = $request.url;
@@ -24,6 +24,11 @@ if (requestUrl.includes("/util/update")) {
 if (requestUrl.includes("/ranking_list/articles?")) {
   obj.data.rows = obj.data.rows.filter(item => item.model_type !== "ads");
   console.log('去除排行榜广告💕');
+}
+
+if (requestUrl.includes("/sou/list_v10")) {
+  obj.data.rows = obj.data.rows.filter(item => item.model_type !== "ads");
+  console.log('去除搜索结果广告💕');
 }
 
 if (requestUrl.includes("/sou/filter/tags/hot_tags?")) {
