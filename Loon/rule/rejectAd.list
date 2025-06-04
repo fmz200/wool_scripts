@@ -9,7 +9,7 @@
 #!system = iOS, iPadOS
 #!system_version =
 #!loon_version =
-#!date=2025-05-14 22:11:00
+#!date=2025-06-03 21:11:00
 #!support=约9392行
 #!proxy-select=REJECT
 #############################################
@@ -1102,24 +1102,36 @@ DOMAIN-SUFFIX,m-adash.m.taobao.com
 DOMAIN-SUFFIX,adashbc.m.taobao.com
 
 # > 腾讯视频
-# DOMAIN, adsmind.gdtimg.com
-# DOMAIN, btrace.qq.com
-# DOMAIN, btrace.video.qq.com
-# DOMAIN, info4.video.qq.com
-# DOMAIN, info6.video.qq.com
-# DOMAIN, ios.video.mpush.qq.com
-# DOMAIN, mtrace.qq.com
-# DOMAIN, p.l.qq.com
-# DOMAIN, pgdt.gtimg.cn
-# DOMAIN, rpt.gdt.qq.com
-# DOMAIN-SUFFIX, trace.qq.com
-# DOMAIN-SUFFIX, tetrack.qq.com
-# DOMAIN-SUFFIX, tpns.tencent.com
-# DOMAIN-SUFFIX, api.poll.video.qq.com
-# DOMAIN-SUFFIX, static-res.qq.com
-# DOMAIN-SUFFIX, stat.tpns.tencent.com
-# DOMAIN-SUFFIX, omgmta.qq.com
-# DOMAIN-SUFFIX, omgmta1.qq.com
+# 去除开屏，播放，暂停，青少年等广告。开启下面的规则播放时会有10秒左右的卡顿
+# DOMAIN,pgdt.gtimg.cn,REJECT
+# DOMAIN,ugchsy.gtimg.com,REJECT
+# DOMAIN,adsmind.gdtimg.com,REJECT
+# DOMAIN,btrace.video.qq.com,REJECT
+# DOMAIN,info4.video.qq.com,REJECT
+# DOMAIN,info6.video.qq.com,REJECT
+# DOMAIN-SUFFIX,api.poll.video.qq.com,REJECT
+# DOMAIN,activity.video.qq.com,REJECT
+# DOMAIN,ios.video.mpush.qq.com,REJECT
+# DOMAIN,p.l.qq.com,REJECT
+# DOMAIN,rpt.gdt.qq.com,REJECT
+# DOMAIN-SUFFIX,trace.qq.com,REJECT
+# DOMAIN-SUFFIX,tetrack.qq.com,REJECT
+# DOMAIN-SUFFIX,tpns.tencent.com,REJECT
+# DOMAIN-SUFFIX,stat.tpns.tencent.com,REJECT
+# DOMAIN-SUFFIX,static-res.qq.com,REJECT
+# DOMAIN-SUFFIX,omgmta.qq.com,REJECT
+# DOMAIN-SUFFIX,omgmta1.qq.com,REJECT
+# DOMAIN,tux.qq.com,REJECT
+# DOMAIN,iacc.qq.com,REJECT
+# DOMAIN,p2.l.qq.com,REJECT
+# DOMAIN,v3.gdt.qq.com,REJECT
+# DOMAIN,rmonitor.qq.com,REJECT
+# DOMAIN,xs.gdt.qq.com,REJECT
+# DOMAIN,aegis.qq.com,REJECT
+# DOMAIN,rdelivery.qq.com,REJECT
+# DOMAIN,wallpaper-1258344696.file.myqcloud.com,REJECT
+# DOMAIN,wallpaper-test-1258344696.file.myqcloud.com,REJECT
+# IP-CIDR,183.201.213.194/24,REJECT,no-resolve
 
 # >  腾讯
 DOMAIN-SUFFIX,news.ssp.qq.com
