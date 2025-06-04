@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 奇瑞汽车App签到
- * @date 2024-11-11 19:00:00
+ * @date 2025-06-04 10:00:00
  */
 const $ = new Env("奇瑞汽车App签到");
 const isNode = $.isNode();
@@ -11,9 +11,9 @@ $.nodeNotifyMsg = []; // nodeJS合并通知
 const tokenList = isNode ? process.env["fmz200_chery_account"] : $.getdata('fmz200_chery_account');
 const userAgent = `Mozilla/5.0 (iPhone; CPU iPhone OS 18_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 ios/1.0.0`;
 
-process();
+startTasks().then(r => $.done());
 
-async function process() {
+async function startTasks() {
   if (!tokenList || JSON.parse(tokenList).length === 0) {
     await sendMsg("❌ 请先获取奇瑞汽车App签到token", "");
     $.done();
@@ -26,8 +26,11 @@ async function process() {
     // 调用 completeSignTask 并等待完成
     await completeSignTask(item); // 签到
     const articleIdList = await getArticleList(item);
-    for (let articleId of articleIdList) {
-      await shareArticleList(item, articleId);
+    console.log(`获取到文章ID列表：${articleIdList}`);
+    if (articleIdList) {
+      for (const articleId of articleIdList) {
+        await shareArticleList(item, articleId);
+      }
     }
   });
 
@@ -119,7 +122,7 @@ async function getArticleList(item) {
       }
     }
   }, reason => {
-    console.log(reason.error);
+    console.log("获取文章发生异常", reason.error);
   });
 }
 
