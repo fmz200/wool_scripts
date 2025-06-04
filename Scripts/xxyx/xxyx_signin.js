@@ -14,7 +14,7 @@ const isNode = $.isNode();
 const notify = isNode ? require('./sendNotify') : '';
 $.nodeNotifyMsg = []; // nodeJS合并通知
 
-let tokenList = isNode ? process.env["fmz200_xxyx_token"] : $.getdata("fmz200_xxyx_token");
+const tokenList = isNode ? process.env["fmz200_xxyx_token"] : $.getdata("fmz200_xxyx_token");
 
 startTasks().then(r => $.done());
 
