@@ -1,6 +1,6 @@
 {
-  "name": "fmz200の图标订阅",
-  "description": "收集一些自己常用的图标，尺寸为108px或144px，数量约1564个，更新日期：2025-03-29 09:00:00",
+  "name": "fmz200の图标库",
+  "description": "收集一些自己常用的图标，尺寸为108px或144px，数量约1587个，更新日期：2025-06-05 15:00:00",
   "icons": [
     {
       "name": "fmz200",
@@ -1069,6 +1069,10 @@
     {
       "name": "Viu",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Viu.png"
+    },
+    {
+      "name": "Walbum 表盘专辑",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Walbum.png"
     },
     {
       "name": "warp",
