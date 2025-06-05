@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 微博去广告
- * @date 2025-05-21 12:50:00
+ * @date 2025-06-05 15:24:55
  */
 
 let url = $request.url;
@@ -82,7 +82,7 @@ try {
         resp_data.items[i] = {};
         continue;
       } else {
-        deleteSemanticBrandParams(resp_data.items[i]);
+        deleteCommonAndSemanticBrandParams(resp_data.items[i]);
       }
 
       if (resp_data.items[i].items) {
@@ -92,7 +92,7 @@ try {
             || resp_data.items[i].items[j].data?.content_auth_info?.content_auth_title === "广告") {
             resp_data.items[i].items[j] = {};
           } else {
-            deleteSemanticBrandParams(resp_data.items[i].items[j]);
+            deleteCommonAndSemanticBrandParams(resp_data.items[i].items[j]);
           }
         }
       }
@@ -223,6 +223,8 @@ function removeCommonAds(items) {
       removeHotSearchAds(items[i].data.group);
     }
     // 118横版广告图片 182热议话题 217错过了热词 247横版视频广告 236微博趋势
+    // 删除信息流中的图片广告、推广
+    deleteCommonAndSemanticBrandParams(items[i])
   }
 }
 
@@ -262,9 +264,18 @@ function removePageDataAds(items) {
 }
 
 // 删除一条微博下面的图片广告
-function deleteSemanticBrandParams(item) {
+function deleteCommonAndSemanticBrandParams(item) {
+  // 删除信息流中的图片广告、推广
+  if (item.data?.extend_info?.shopwindow_cards) {
+    delete item.data.extend_info.shopwindow_cards
+  }
+  if (item.data?.extend_info?.ad_semantic_brand) {
+    delete item.data.extend_info.ad_semantic_brand
+  }
+  if (item.data?.common_struct) {
+    delete item.data.common_struct;
+  }
   if (item.data?.semantic_brand_params) {
-    console.log('删除一条微博下面的图片广告💕');
     delete item.data.semantic_brand_params;
   }
 }
