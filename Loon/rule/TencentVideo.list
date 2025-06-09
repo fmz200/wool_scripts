@@ -1,0 +1,66 @@
+#!name=腾讯视频去广告
+#!desc=去除开屏，青少年，打开通知，播放，暂停等广告。提示：播放会加载10秒左右
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/TencentVideo.list
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-06-09 20:00:26
+#############################################
+
+# > 精简版
+DOMAIN, info4.video.qq.com
+DOMAIN, info6.video.qq.com
+DOMAIN, ugchsy.gtimg.com
+DOMAIN, rmonitor.qq.com
+DOMAIN, activity.video.qq.com
+DOMAIN, iacc.qq.com
+DOMAIN, tux.qq.com
+DOMAIN, aegis.qq.com
+DOMAIN, rdelivery.qq.com
+DOMAIN-suffix, static-res.qq.com
+DOMAIN-suffix, gdtimg.com
+DOMAIN-suffix, l.qq.com
+DOMAIN-suffix, gdt.qq.com
+DOMAIN-suffix, video.mpush.qq.com
+DOMAIN-suffix, api.poll.video.qq.com
+DOMAIN-suffix, tpns.tencent.com
+DOMAIN-suffix, omgmta.qq.com
+DOMAIN-suffix, omgmta1.qq.com
+DOMAIN-keyword, track.qq.com
+DOMAIN-keyword, trace.qq.com
+DOMAIN-keyword, pgdt.gtimg.c
+DOMAIN-keyword, trace.video.qq.com
+DOMAIN-keyword, 1258344696.file.myqcloud.com
+ip-cidr, 183.201.213.194/24, no-resolve
+
+# > 复杂版
+#DOMAIN, pgdt.gtimg.cn
+#DOMAIN, ugchsy.gtimg.com
+#DOMAIN, adsmind.gdtimg.com
+#DOMAIN, btrace.video.qq.com
+#DOMAIN, info4.video.qq.com
+#DOMAIN, info6.video.qq.com
+#DOMAIN, activity.video.qq.com
+#DOMAIN, ios.video.mpush.qq.com
+#DOMAIN, p.l.qq.com
+#DOMAIN, rpt.gdt.qq.com
+#DOMAIN-SUFFIX, api.poll.video.qq.com
+#DOMAIN-SUFFIX, trace.qq.com
+#DOMAIN-SUFFIX, tetrack.qq.com
+#DOMAIN-SUFFIX, tpns.tencent.com
+#DOMAIN-SUFFIX, stat.tpns.tencent.com
+#DOMAIN-SUFFIX, static-res.qq.com
+#DOMAIN-SUFFIX, omgmta.qq.com
+#DOMAIN-SUFFIX, omgmta1.qq.com
+#DOMAIN, tux.qq.com
+#DOMAIN, iacc.qq.com
+#DOMAIN, p2.l.qq.com
+#DOMAIN, v3.gdt.qq.com
+#DOMAIN, rmonitor.qq.com
+#DOMAIN, xs.gdt.qq.com
+#DOMAIN, aegis.qq.com
+#DOMAIN, rdelivery.qq.com
+#DOMAIN, wallpaper-1258344696.file.myqcloud.com
+#DOMAIN, wallpaper-test-1258344696.file.myqcloud.com
+#IP-CIDR, 183.201.213.194/24, no-resolve
