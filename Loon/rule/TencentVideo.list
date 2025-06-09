@@ -32,7 +32,7 @@ DOMAIN-keyword, trace.qq.com
 DOMAIN-keyword, pgdt.gtimg.c
 DOMAIN-keyword, trace.video.qq.com
 DOMAIN-keyword, 1258344696.file.myqcloud.com
-ip-cidr, 183.201.213.194/24
+ip-cidr, 183.201.213.194/24, no-resolve
 
 # > 复杂版
 #DOMAIN, pgdt.gtimg.cn
