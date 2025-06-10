@@ -18,21 +18,21 @@ DOMAIN, iacc.qq.com
 DOMAIN, tux.qq.com
 DOMAIN, aegis.qq.com
 DOMAIN, rdelivery.qq.com
-DOMAIN-suffix, static-res.qq.com
-DOMAIN-suffix, gdtimg.com
-DOMAIN-suffix, l.qq.com
-DOMAIN-suffix, gdt.qq.com
-DOMAIN-suffix, video.mpush.qq.com
-DOMAIN-suffix, api.poll.video.qq.com
-DOMAIN-suffix, tpns.tencent.com
-DOMAIN-suffix, omgmta.qq.com
-DOMAIN-suffix, omgmta1.qq.com
-DOMAIN-keyword, track.qq.com
-DOMAIN-keyword, trace.qq.com
-DOMAIN-keyword, pgdt.gtimg.c
-DOMAIN-keyword, trace.video.qq.com
-DOMAIN-keyword, 1258344696.file.myqcloud.com
-ip-cidr, 183.201.213.194/24, no-resolve
+DOMAIN-SUFFIX, static-res.qq.com
+DOMAIN-SUFFIX, gdtimg.com
+DOMAIN-SUFFIX, l.qq.com
+DOMAIN-SUFFIX, gdt.qq.com
+DOMAIN-SUFFIX, video.mpush.qq.com
+DOMAIN-SUFFIX, api.poll.video.qq.com
+DOMAIN-SUFFIX, tpns.tencent.com
+DOMAIN-SUFFIX, omgmta.qq.com
+DOMAIN-SUFFIX, omgmta1.qq.com
+DOMAIN-KEYWORD, track.qq.com
+DOMAIN-KEYWORD, trace.qq.com
+DOMAIN-KEYWORD, pgdt.gtimg.c
+DOMAIN-KEYWORD, trace.video.qq.com
+DOMAIN-KEYWORD, 1258344696.file.myqcloud.com
+IP-CIDR, 183.201.213.194/24, no-resolve
 
 # > 复杂版
 #DOMAIN, pgdt.gtimg.cn
