@@ -270,9 +270,10 @@ hostname = member.alipan.com, vod-movie.maoyan.com, wx.maoyan.com, api.maoyan.co
 ^https:\/\/mobile-api\.imlaidian\.com\/api\/args url reject-dict
 
 # > 罗森点点 微信小程序净化
-^https:\/\/lawsonapi\.yorentown\.com\/area\/sh-lawson\/app\/v1\/mina\/systemSetting url reject-dict
+# ^https:\/\/lawsonapi\.yorentown\.com\/area\/sh-lawson\/app\/v1\/mina\/systemSetting url reject-dict
 ^https:\/\/plt\.yorentown\.com\/pltapp\/v1\/banner url reject-dict
-^https:\/\/lawsonapi\.yorentown\.com\/area\/sh-lawson\/app\/v1\/home url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/lawson.js
+^https:\/\/lawsonapi\.yorentown\.com\/area\/sh-lawson\/app\/v1\/ url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/lawson.js
+^https:\/\/lawsonapi\.yorentown\.com\/portal\/app\/globalLaunch\/listAdvert url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/lawson.js
 
 # > 老乡鸡 微信小程序净化
 ^https:\/\/member\.lxjchina\.com\.cn\/mini-server\/home\/page\/banner url reject-dict
