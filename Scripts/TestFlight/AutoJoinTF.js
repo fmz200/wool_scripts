@@ -55,7 +55,7 @@ function autoPost(appId) {
           await sendMsg(`[${appId}]不存在该TestFlight，已自动删除该APP_ID`, "");
           resolve();
         } else if (resp.status === 401) {
-          console.log(`[${appId}]请求异常，尝试重新加入`);
+          console.log(`[${appId}]请求异常，可能是令牌过期或者定时任务间隔太短[建议3分钟以上]，尝试重新加入`);
           resolve();
         } else {
           const jsonData = JSON.parse(data);
