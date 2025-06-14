@@ -13,6 +13,7 @@
 const $ = new Env('自动加入TestFlight');
 const isNode = $.isNode();
 const notify = isNode ? require('./sendNotify') : '';
+$.nodeNotifyMsg = []; // nodeJS合并通知
 
 let TF_APP_ID = isNode ? process.env["fmz200_TF_APP_ID"] : $.getdata("fmz200_TF_APP_ID");
 let TF_header = isNode ? process.env["fmz200_TF_header"] : $.getdata("fmz200_TF_header");
@@ -31,6 +32,8 @@ let TF_header = isNode ? process.env["fmz200_TF_header"] : $.getdata("fmz200_TF_
   for await (const appId of appIds) {
     await autoPost(appId.trim());
   }
+
+  if (isNode) await sendMsg($.nodeNotifyMsg.join("\n"), "");
   $.done();
 })();
 
@@ -52,7 +55,11 @@ function autoPost(appId) {
         if (resp.status === 404) {
           updateData(TF_APP_ID, appId);
           console.log(`[${appId}]不存在该TestFlight，已自动删除该APP_ID`);
-          await sendMsg(`[${appId}]不存在该TestFlight，已自动删除该APP_ID`, "");
+          if (isNode) {
+            $.nodeNotifyMsg.push(`[${appId}]不存在该TestFlight，已自动删除该APP_ID`);
+          } else {
+            await sendMsg(`[${appId}]不存在该TestFlight，已自动删除该APP_ID`, "");
+          }
           resolve();
         } else if (resp.status === 401) {
           console.log(`[${appId}]请求异常，可能是令牌过期或者定时任务间隔太短[建议3分钟以上]，尝试重新加入`);
@@ -72,7 +79,11 @@ function autoPost(appId) {
               console.log(`${resp}\n`);
               console.log(`${data}\n`);
               const jsonBody = JSON.parse(body);
-              await sendMsg(`[${appId}:${jsonBody.data.name}]加入成功，已自动删除该APP_ID`, "");
+              if (isNode) {
+                $.nodeNotifyMsg.push(`[${appId}:${jsonBody.data.name}]加入成功，已自动删除该APP_ID`);
+              } else {
+                await sendMsg(`[${appId}:${jsonBody.data.name}]加入成功，已自动删除该APP_ID`, "");
+              }
               console.log(jsonBody.data.name + ' TestFlight 加入成功');
               updateData(TF_APP_ID, appId);
               resolve();
@@ -84,7 +95,11 @@ function autoPost(appId) {
           console.log(appId + ' ' + error);
           resolve();
         } else {
-          await sendMsg(`自动加入TF[${appId}]异常`, "");
+          if (isNode) {
+            $.nodeNotifyMsg.push(`自动加入TF[${appId}]异常`);
+          } else {
+            await sendMsg(`自动加入TF[${appId}]异常`, "");
+          }
           console.log(appId + ' ' + error);
           resolve();
         }
