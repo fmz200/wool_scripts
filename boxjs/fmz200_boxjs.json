@@ -411,15 +411,15 @@
     },
     {
       "id": "fmz200_testflight",
-      "name": "TF监控",
+      "name": "TF自动加入",
       "keys": [
-        "appkey",
-        "testflight_isnotify"
+        "fmz200_TF_APP_ID",
+        "fmz200_TF_header"
       ],
       "settings": [
         {
-          "id": "appkey",
-          "name": "监控appkey",
+          "id": "fmz200_TF_APP_ID",
+          "name": "",
           "val": "",
           "type": "textarea",
           "placeholder": "VCIvwk2g,1SyedSId",
@@ -428,18 +428,17 @@
           "desc": "以英文逗号分隔多个key"
         },
         {
-          "id": "testflight_isnotify",
-          "name": "是否静默通知",
+          "id": "fmz200_TF_header",
+          "name": "",
           "val": "",
-          "type": "boolean",
-          "placeholder": "true or false",
+          "type": "textarea",
           "autoGrow": true,
-          "rows": 1,
-          "desc": "没有tf位置将不会通知"
+          "rows": 4,
+          "desc": ""
         }
       ],
-      "author": "@syzzzf",
-      "repo": "https://github.com/songyangzz/QuantumultX/blob/master/testflight.js",
+      "author": "@fmz200",
+      "repo": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/TestFlight/AutoJoinTF.js",
       "icons": [
         "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/erdongchanyo/TestFlight.png",
         "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/erdongchanyo/TestFlight.png"
