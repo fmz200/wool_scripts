@@ -35,7 +35,7 @@ let TF_header = isNode ? process.env["fmz200_TF_header"] : $.getdata("fmz200_TF_
 })();
 
 function autoPost(appId) {
-  const url = `https://testflight.apple.com/v3/accounts/${TF_header.Key}/ru/${appId}`;
+  const url = `https://testflight.apple.com/v3/accounts/${TF_header.key}/ru/${appId}`;
   const header = {
     'X-Session-Id': `${TF_header.session_id}`,
     'X-Session-Digest': `${TF_header.session_digest}`,
