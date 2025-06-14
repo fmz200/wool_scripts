@@ -1,6 +1,6 @@
 /**
  @author fmz200
- @function 获取自动加入TF需要的信息，修改数据存储形式，支持大部分代理工具包括 QX，Loon，Surge，Egern，Stash，ShadowRocket
+ @function 获取自动加入TF需要的信息，修改数据存储形式，支持大部分代理工具包括 QX，Loon，Surge，Egern，Stash，ShadowRocket，青龙
  @date 2025-06-14 15:27:00
  @quote https://raw.githubusercontent.com/DecoAri/JavaScript/main/Surge/Auto_join_TF.js
 
@@ -44,14 +44,15 @@ function autoPost(appId) {
   }
   return new Promise(function (resolve) {
     $.get({url: url, headers: header}, async function (error, resp, data) {
-      console.log(error);
-      console.log(resp);
-      console.log(data);
+      console.log("❤️ 查询appId情况响应");
+      console.log(`${error}\n`);
+      console.log(`${resp}\n`);
+      console.log(`${data}\n`);
       if (error == null) {
         if (resp.status === 404) {
           updateData(TF_APP_ID, appId);
-          console.log(`[${appId}]不存在该TestFlight，已自动删除该 APP_ID`);
-          await sendMsg(`[${appId}]不存在该TestFlight，已自动删除该 APP_ID`, "");
+          console.log(`[${appId}]不存在该TestFlight，已自动删除该APP_ID`);
+          await sendMsg(`[${appId}]不存在该TestFlight，已自动删除该APP_ID`, "");
           resolve();
         } else if (resp.status === 401) {
           console.log(`[${appId}]请求异常，尝试重新加入`);
@@ -66,15 +67,14 @@ function autoPost(appId) {
             resolve();
           } else {
             $.post({url: url + '/accept', headers: header}, async function (error, resp, body) {
-              console.log(error);
-              console.log(resp);
-              console.log(data);
+              console.log("✅ 加入TF响应");
+              console.log(`${error}\n`);
+              console.log(`${resp}\n`);
+              console.log(`${data}\n`);
               const jsonBody = JSON.parse(body);
-              await sendMsg(`[${appId}]TestFlight加入成功，已自动删除该 APP_ID`, "");
+              await sendMsg(`[${appId}:${jsonBody.data.name}]加入成功，已自动删除该APP_ID`, "");
               console.log(jsonBody.data.name + ' TestFlight 加入成功');
               updateData(TF_APP_ID, appId);
-              console.log(`[${appId}]不存在该TestFlight，已自动删除该 APP_ID`);
-              await sendMsg(`[${appId}]不存在该TestFlight，已自动删除该 APP_ID`, "");
               resolve();
             })
           }

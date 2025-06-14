@@ -28,9 +28,9 @@ if (reg1.test($request.url)) {
   $.setdata(JSON.stringify(TF_header), "fmz200_TF_header");
 
   if ($.getdata("fmz200_TF_header") !== null) {
-    $.msg($.name, "", "信息获取成功，请关闭脚本！", "");
+    $.msg($.name, "", "令牌获取成功，请关闭脚本！", "");
   } else {
-    $.msg($.name, "", "信息获取失败，请打开Mitm over HTTP2开关，并重启VPN和TestFlight App！", "");
+    $.msg($.name, "", "令牌获取失败，请打开Mitm over HTTP2开关，并重启VPN和TestFlight App！", "");
   }
   $.done({});
 }

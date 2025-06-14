@@ -24,7 +24,7 @@ DOMAIN, testflight.apple.com, PROXY
 [Script]
 http-request ^https?:\/\/testflight\.apple\.com\/v3\/accounts\/.*\/apps$ script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/TestFlight/AutoJoinTFKeys.js, tag = 获取账号令牌, enable = {CaptureAccountToken}
 
-http-request ^https://testflight.apple.com/join/(.*) script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/TestFlight/AutoJoinTFKeys.js, tag = 应用ID捕获, enable = {CaptureAppID}
+http-request ^https?:\/\/testflight\.apple\.com\/join\/(.*) script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/TestFlight/AutoJoinTFKeys.js, tag = 应用ID捕获(可能抓不到), enable = {CaptureAppID}
 
 cron {TimingParameters} script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/TestFlight/AutoJoinTF.js, tag = 自动加入TF, timeout = 180
 
