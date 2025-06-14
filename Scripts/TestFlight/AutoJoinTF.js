@@ -1,7 +1,7 @@
 /**
  @author fmz200
  @function 获取自动加入TF需要的信息，修改数据存储形式，支持大部分代理工具包括 QX，Loon，Surge，Egern，Stash，ShadowRocket
- @date 2025-06-01 21:27:00
+ @date 2025-06-14 15:27:00
  @quote https://raw.githubusercontent.com/DecoAri/JavaScript/main/Surge/Auto_join_TF.js
 
  具体使用步骤
@@ -20,6 +20,10 @@ let TF_header = isNode ? process.env["fmz200_TF_header"] : $.getdata("fmz200_TF_
 !(async () => {
   if (TF_APP_ID == null || TF_APP_ID === "") {
     await sendMsg("❌ 未添加TF_APP_ID，请手动添加或使用TestFlight链接自动获取", "");
+    $.done();
+  }
+  if (TF_header == null || TF_header === "") {
+    await sendMsg("❌ 令牌信息不存在，请重新获取", "");
     $.done();
   }
   TF_header = JSON.parse(TF_header);

@@ -1,7 +1,7 @@
 /**
  @author fmz200
  @function 获取自动加入TF需要的信息，修改数据存储形式，支持大部分代理工具包括 QX，Loon，Surge，Egern，Stash，ShadowRocket
- @date 2025-06-01 21:27:00
+ @date 2025-06-14 15:27:00
  @quote https://github.com/DecoAri/JavaScript/blob/main/Surge/TF_keys.js
 
  具体使用步骤
