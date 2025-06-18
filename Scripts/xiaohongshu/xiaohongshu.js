@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 小红书去广告、净化、解除下载限制、画质增强等
- * @date 2025-06-01 21:27:00
+ * @date 2025-06-18 19:27:00
  * @quote @RuCu6
  */
 
@@ -159,83 +159,66 @@ if (url.includes("/v3/note/videofeed?")) {
   }
 }
 
+// 信息流 视频
 if (url.includes("/v4/note/videofeed")) {
-  // 信息流 视频
-  let newDatas = [];
-  let unlockDatas = [];
-  if (obj?.data?.length > 0) {
+  let videoData = [];
+  if (obj.data?.length > 0) {
     for (let item of obj.data) {
-      // 检查function_entries中的每一个元素的type属性是否等于"video_download"
-      console.log("检查是否有下载按钮")
-      let found = false;
-      for (let entry of item.share_info.function_entries) {
-        if (entry.type === "video_download") {
-          found = true;
-          break;
+      // 添加下载按钮（如果未存在）
+      if (item?.share_info?.function_entries?.length > 0) {
+        const hasDownload = item.share_info.function_entries.some(entry => entry.type === "video_download");
+        if (!hasDownload) {
+          console.log(`添加下载按钮: ${item.id}`);
+          item.share_info.function_entries.push({type: "video_download"});
         }
       }
-      // 如果没有匹配到，则添加一个新的元素
-      if (!found) {
-        console.log("添加下载按钮")
-        item.share_info.function_entries.push({
-          "type": "video_download"
-        });
+
+      // 提取 H.265 视频流
+      const h265List = item?.video_info_v2?.media?.stream?.h265 || [];
+      if (!Array.isArray(h265List) || h265List.length === 0) {
+        console.log(`无 h265 视频: ${item.id}`);
+        continue;
       }
-      // 存储无水印视频链接
-      if (item?.id && item.video_info_v2?.media?.stream?.h265?.length > 0 && item.video_info_v2.media.stream.h265[0].master_url) {
-        let myData = {
+
+      // 分辨率从高到低排序
+      const sortedList = h265List.filter(v => !!v.master_url && !!v.height).sort((a, b) => b.height - a.height);
+      // 选择分辨率最高的
+      let selectedStream = sortedList[0];
+
+      // 存入缓存数组
+      if (item?.id && selectedStream?.master_url) {
+        const data = {
           id: item.id,
-          url: item.video_info_v2.media.stream.h265[0].master_url
+          url: selectedStream.master_url
         };
-        newDatas.push(myData);
+        console.log(`提取成功 ➜ ${item.id} → ${selectedStream.stream_desc}`);
+        videoData.push(data);
+      } else {
+        console.log(`未找到可用视频: ${item.id}`);
       }
     }
-    $.setdata(JSON.stringify(newDatas), "redBookVideoFeed"); // 普通视频 写入持久化存储
-  }
-  // let cache = $.getdata("redBookVideoFeedUnlock");
-  let videoFeedUnlock = {notSave: "fmz200"}; // 禁止保存的视频 读取持久化存储
-  if (videoFeedUnlock?.notSave === "fmz200") {
-    if (obj?.data?.length > 0) {
-      for (let item of obj.data) {
-        if (item?.id && item.video_info_v2?.media?.stream?.h265?.length > 0 && item.video_info_v2.media.stream.h265[0].master_url) {
-          let myData = {
-            id: item.id,
-            url: item.video_info_v2.media.stream.h265[0].master_url
-          };
-          unlockDatas.push(myData);
-        }
-      }
-    }
-    $.setdata(JSON.stringify(unlockDatas), "redBookVideoFeedUnlock"); // 禁止保存的视频 写入持久化存储
+    // 写入本地持久化缓存
+    $.setdata(JSON.stringify(videoData), "redBookVideoFeed");
+    console.log(`已缓存普通视频 ${videoData.length} 条`);
   }
 }
 
+// 视频保存请求
 if (url.includes("/v10/note/video/save")) {
-  // 视频保存请求
-  let videoFeed = JSON.parse($.getdata("redBookVideoFeed")); // 普通视频 读取持久化存储
-  let videoFeedUnlock = JSON.parse($.getdata("redBookVideoFeedUnlock")); // 禁止保存的视频 读取持久化存储
-  if (obj?.data?.note_id !== "" && videoFeed?.length > 0) {
+  let videoFeed = JSON.parse($.getdata("redBookVideoFeed")); // 读取持久化存储
+  if (obj.data?.note_id !== "" && videoFeed?.length > 0) {
     for (let item of videoFeed) {
       if (item.id === obj.data.note_id) {
         obj.data.download_url = item.url;
       }
     }
   }
-  if (obj?.data?.note_id !== "" && videoFeedUnlock?.length > 0) {
-    if (obj?.data?.disable === true && obj?.data?.msg !== "") {
-      delete obj.data.disable;
-      delete obj.data.msg;
-      obj.data.download_url = "";
-      obj.data.status = 2;
-      for (let item of videoFeedUnlock) {
-        if (item.id === obj.data.note_id) {
-          obj.data.download_url = item.url;
-        }
-      }
-    }
+  // 解除下载限制
+  if (obj.data?.disable) {
+    delete obj.data.disable;
+    delete obj.data.msg;
+    obj.data.status = 2;
   }
-  videoFeedUnlock = { notSave: "fmz200" };
-  $.setdata(JSON.stringify(videoFeedUnlock), "redBookVideoFeedUnlock");
 }
 
 if (url.includes("/user/followings/followfeed")) {
@@ -268,16 +251,12 @@ if (url.includes("/v6/homefeed")) {
     for (let item of obj.data) {
       if (item?.model_type === "live_v2") {
         // 信息流-直播
-
       } else if (item?.hasOwnProperty("ads_info")) {
         // 信息流-赞助
-
       } else if (item?.hasOwnProperty("card_icon")) {
         // 信息流-带货
-
       } else if (item?.note_attributes?.includes("goods")) {
         // 信息流-商品
-
       } else {
         if (item?.related_ques) {
           delete item.related_ques;

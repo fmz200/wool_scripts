@@ -422,7 +422,7 @@
           "name": "",
           "val": "",
           "type": "textarea",
-          "placeholder": "VCIvwk2g,1SyedSId",
+          "placeholder": "示例：VCIvwk2g,1SyedSId",
           "autoGrow": true,
           "rows": 1,
           "desc": "以英文逗号分隔多个key"
