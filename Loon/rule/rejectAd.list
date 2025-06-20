@@ -9,7 +9,7 @@
 #!system = iOS, iPadOS
 #!system_version =
 #!loon_version =
-#!date=2025-06-03 21:11:00
+#!date=2025-06-20 23:40:17
 #!support=约9392行
 #!proxy-select=REJECT
 #############################################
@@ -815,11 +815,12 @@ DOMAIN, v1.log.moji.com
 # > 咪咕视频
 DOMAIN-SUFFIX,ad.cmvideo.cn
 DOMAIN, ggc.cmvideo.cn
-DOMAIN, ggic03.miguvideo.com
-DOMAIN, ggmk.miguvideo.com
 DOMAIN, ggv.cmvideo.cn
 DOMAIN, ggx.cmvideo.cn
 DOMAIN, ggx03.miguvideo.com
+DOMAIN, ggic03.miguvideo.com
+DOMAIN, ggmk.miguvideo.com
+DOMAIN, ggadoffline.miguvideo.com
 
 # > 小米米家
 DOMAIN, sdkconfig.ad.xiaomi.com

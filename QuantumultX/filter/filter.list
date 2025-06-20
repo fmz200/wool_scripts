@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/filter.list
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2025-06-03 21:11:00
+#!date=2025-06-20 23:40:17
 #!support=约9760行
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
@@ -961,11 +961,12 @@ host, v1.log.moji.com, reject
 # > 咪咕视频
 host-suffix, ad.cmvideo.cn, reject
 host, ggc.cmvideo.cn, reject
-host, ggic03.miguvideo.com, reject
-host, ggmk.miguvideo.com, reject
 host, ggv.cmvideo.cn, reject
 host, ggx.cmvideo.cn, reject
 host, ggx03.miguvideo.com, reject
+host, ggic03.miguvideo.com, reject
+host, ggmk.miguvideo.com, reject
+host, ggadoffline.miguvideo.com, reject
 
 # > 小米米家
 host, sdkconfig.ad.xiaomi.com, reject
