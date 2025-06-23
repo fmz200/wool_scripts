@@ -1942,7 +1942,7 @@ http:\/\/dili.sqcosmos.com\/jiekou\/endpage\/ad reject-dict
 ^https?:\/\/recommend-dy\.miguvideo\.com\/recommend-dynamic\/dataSource\/v1\/recommend\/merge reject-dict
 ^https?:\/\/app-sc\.miguvideo\.com\/app-management\/v1\/staticcache\/settings\/miguvideo\/SHARE_PIC reject-dict
 ^https?:\/\/common-sc\.miguvideo\.com\/videoActivity\/activityList\/ reject-dict
-^https?:\/\/display-sc\.miguvideo\.com\/display\/v3\/static\/PERSONAL_CENTER reject-dict
+#^https?:\/\/display-sc\.miguvideo\.com\/display\/v3\/static\/PERSONAL_CENTER\/ reject-dict
 ^https?:\/\/ggx\d+\.miguvideo\.com\/request\/sdk reject-dict
 ^https?:\/\/ggic\d+.miguvideo\.com\/ad\/ reject-dict
 
