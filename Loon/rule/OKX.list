@@ -1,0 +1,13 @@
+#!name=OKX欧易分流
+#!desc=选择支持的地区
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/OKX.list
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2024-06-01 23:15:00
+#############################################
+
+DOMAIN-SUFFIX, okex.com
+DOMAIN-SUFFIX, oklink.com
+DOMAIN-SUFFIX, okx.com

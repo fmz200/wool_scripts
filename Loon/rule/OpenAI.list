@@ -1,0 +1,44 @@
+#############################################
+# 分流作用：对OpenAI相关服务进行分流
+# 重要提示：如果不想新增一个策略组，可以设置策略偏好
+# 项目地址：https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/rule/OpenAI.list
+# 交流群组：https://t.me/lanjieguanggao
+# 更新时间：2024-03-10 19:07:00
+# 策略选择：选择支持OpenAI的地区
+#############################################
+
+DOMAIN, cdn.auth0.com
+DOMAIN-SUFFIX, vimeo.com
+DOMAIN-SUFFIX, vimeocdn.com
+DOMAIN-SUFFIX, hcaptcha.com
+DOMAIN-SUFFIX, akamaized.com
+
+DOMAIN,challenges.cloudflare.com
+DOMAIN,api.statsig.com
+DOMAIN,cdn.oaistatic.com
+DOMAIN-SUFFIX,ai.com
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,stripe.com
+DOMAIN-SUFFIX,poe.com
+DOMAIN-SUFFIX,intercom.io
+DOMAIN-SUFFIX,identrust.com
+DOMAIN-SUFFIX,featuregates.org
+DOMAIN-SUFFIX,events.statsigapi.net
+DOMAIN-SUFFIX,oaiusercontent.com
+DOMAIN-SUFFIX,openaicom.imgix.net
+DOMAIN-SUFFIX,openaiapi-site.azureedge.net
+DOMAIN-SUFFIX,chat.openai.com.cdn.cloudflare.net
+DOMAIN-SUFFIX,openaicom.imgix.net
+DOMAIN-SUFFIX,openaicomproductionae4b.blob.core.windows.net
+DOMAIN-SUFFIX,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
+DOMAIN-SUFFIX,sentry.io
+#
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,claude.ai
+#
+DOMAIN-SUFFIX,gatewayai.com
+DOMAIN-SUFFIX,tktn.be
+IP-CIDR,50.117.27.0/24,no-resolve
+IP-CIDR,69.46.75.0/24,no-resolve
+IP-CIDR,205.164.56.29/24,no-resolve
+IP-CIDR,63.251.124.0/24,no-resolve

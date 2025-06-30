@@ -1,0 +1,18 @@
+#!name=脚本工具合集
+#!desc=节点检测、地理位置、节点解锁、节点网速等查询。详细见脚本
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/script/tools.scripts
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2024-10-21 19:00:00
+#############################################
+
+generic script-path=https://raw.githubusercontent.com/MCdasheng/Loon/main/Streaming/ChatGPT.js, timeout=10, tag=GPT解锁查询, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/ChatGPT3.png
+generic script-path=https://raw.githubusercontent.com/MCdasheng/Loon/main/Streaming/Spotify.js, timeout=10, tag=Spotify解锁查询, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/erdongchanyo/Spotify.png
+generic script-path=https://raw.githubusercontent.com/Loon0x00/LoonScript/main/MediaCheck/check.js, timeout=300, tag=流媒体-解锁查询, img-url=tv.and.mediabox
+generic script-path=https://raw.githubusercontent.com/getsomecat/Loon/main/Net_Speedlite.js, tag=网络延迟测试, timeout=10,img-url=bolt.system
+generic script-path=https://github.com/Keywos/rule/raw/main/loon/ipapi2.js, timeout=10, tag=测试位置查询, img-url=location.circle
+generic script-path=https://raw.githubusercontent.com/Loon0x00/LoonExampleConfig/master/Script/generic_example.js, timeout=10, tag=GeoLocation, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ipInfo.png
+generic script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/tools/LocationDetection.js, timeout = 10, tag = 地理位置查询, img-url = location.circle.system
+generic script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/tools/NodeUnlockDetection.js, timeout = 20, tag = 节点解锁查询, img-url = play.circle.system

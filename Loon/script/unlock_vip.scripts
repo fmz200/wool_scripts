@@ -1,0 +1,95 @@
+#!name=fmz200解锁会员合集
+#!desc=用于解锁会员
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/script/unlock_vip.scripts
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2024-05-25 23:35:00
+
+
+hostname = api.textnow.me, *.videostarapp.com, avatar-nct.nixcdn.com, spclient.wg.spotify.com, *.googlevideo.com, oa.zalo.me, vsco.co, api.gyrosco.pe, origin-prod-phoenix.jibjab.com, api.termius.com, api.picsart.c*, api.meiease.c*, api.unfold.app, viva-asia1.vvbrd.com, graph.nhaccuatui.com, api.memrise.com, api.sync.me, pool.elsanow.io, lambda.us-east-1.amazonaws.com, api.mondlylanguages.com, api.busuu.com, owa.videoshowiosglobalserver.com:0, accounts.elevateapp.net, purchases.ws.pho.to, api-intl.mr.meitu.com, bmall.camera360.com, api.tv.zing.vn, api.calm.com, www.calm.com, api.global.mp3.zing.vn, apimboom2.globaldelight.net, photos.adobe.io, license.pdfexpert.com, subs.platforms.team, apic.musixmatch.com, api.getmimo.com, api.revenuecat.com, pixmagicapp.com, engbright.com, api.lingokids.com, www.peacefulsoundsapp.com, duolingo-leaderboards-prod.duolingo.com, commerce-i18n-api.faceu.mobi, mobi, mobile-api.adguard.com, api.blinkist.com, api.sololearn.com, receipts.cerebralgardens.com, api-kinemaster-assetstore.*, api.pushover.net, api-cs.intsig.net, api.overhq.com, api.appsyscode.com, api.freeletics.com, api.shred.app, receipt-validator.herewetest.com, api.deezer.com, iap.aps-sdk.com, education.github.com, api.revenuecat.com, backend.getdrafts.com, ssl-api.itranslateapp.com, sk.ulysses.app, dayone.me, license.enpass.io, mp.bybutter.com, *.grammarly.com, splice.oracle.*.com, api.keepkeep.com, planner5d.com, secure.istreamer.com, www.api.monkeyuni.net, account.wps.com, menscoach-api.asqq.io,biz.caiyunapp.com, api.revenuecat.com
+
+# Gear
+http-response ^https\:\/\/api.revenuecat.com\/v1\/subscribers(.+) script-path=https://raw.githubusercontent.com/ThorJsbox/QuanX/master/Rewrite_local/Gearpro.js, requires-body=true, timeout=10, tag=Gear
+
+# 彩云天气
+http-response https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/CaiYun.js,requires-body=1, tag=彩云天气SVIP  
+
+# vsco
+#http-response ^https:\/\/api\.revenuecat\.com\/v\d\/subscribers\/\d+$ script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/vsco.js, requires-bpdy=true, tag=VSCO 
+
+# Nhaccuatui
+#http-response ^https:\/\/graph\.nhaccuatui\.com\/.*\/users\/info* script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/nhaccuatui.js
+
+# buyhack
+#http-response ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/verify_receipt.js
+
+# sync
+#http-response ^https:\/\/api\.sync\.me\/api\/purchases\/(report_purchases|get_purchases)  script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/syn.me.js
+
+# elsaresponse
+#http-response ^https:\/\/pool\.elsanow\.io\/user\/api\/v1\/purchase$ script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/elsa-response.js
+
+# drops
+#http-response ^https:\/\/lambda\.us-east-1\.amazonaws\.com/.*/functions\/prod-4-syncPurchases\/invocations$ script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/drops.js
+
+# mojo&noto
+#http-response ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[a-zA-Z0-9_-]*$) script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/revenuecat.js
+
+# musicalm
+#http-response ^https:\/\/www\.peacefulsoundsapp\.com\/api\/v1\/init$ script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/musicalm.js
+
+# duolingo_test
+#http-response ^https:\/\/duolingo-leaderboards-prod\.duolingo\.com\/leaderboards* script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/duolingo.js
+
+# ulike
+#http-response ^https:\/\/commerce-i18n-api\.faceu\.mobi\/commerce\/v1\/subscription\/user_info$ script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/ulike.js
+
+# zingmp3
+#http-response ^https:\/\/api\.global\.mp3\.zing\.vn\/1\.0\/getUserInfo\?data=* script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/zingmp3.js
+
+# Blinkist
+#http-response ^https:\/\/api\.blinkist\.com\/v4\/(me$|me.json$|me\/access$) script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/blinkist.js
+
+# sololearn 
+#http-response ^https:\/\/api\.sololearn\.com\/(authenticateDevice|challenge\/GetContestFeed|Profile\/GetProfile)$ script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/sololearn.js
+
+# kinemaster
+#http-response ^https:\/\/api-kinemaster-assetstore\.(nexstreaming|kinemasters)\.com\/.*\/product\/verifyReceipt$ script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/kinemaster.js
+
+# speak&translate
+#http-response ^https:\/\/receipt-validator\.herewetest\.com\/apple\/verifyTransaction$ script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/speak&translate.js
+
+# document
+#http-response ^https:\/\/license\.pdfexpert\.com\/api\/.*\/documents\/subscription\/(refresh$|check$) script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/documents.js
+
+# draft
+#http-response ^https:\/\/backend\.getdrafts\.com\/api\/.*\/verification* script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/draft.js
+
+# phothop&PSexpress
+#http-response ^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/photoshop.js
+
+# itranslate&lingo&voice&converse
+#http-response ^https:\/\/ssl-api\.itranslateapp\.com\/.*\/subscriptions\/.*\/ios$ script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/itranslate.js
+
+# dayone
+#http-response ^https:\/\/dayone\.me\/api\/(users|v2\/users\/account-status)$ script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/dayone.js
+
+# endel
+#http-response ^https:\/\/api-production\.endel\.io\/.*\/user$ script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/endel.js
+
+# nichi
+#http-response ^https?:\/\/mp\.bybutter\.com\/mood\/(official-templates|privileges) script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/nichi.js
+
+# grammarly
+#http-response ^https:\/\/subscription\.grammarly\.com\/api\/v1$ script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/grammarly.js
+
+# splice
+#http-response ^https:\/\/splice\.oracle\.\w+\.com\/devices\/me script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/splice.js
+
+# planner5d
+#http-response ^https:\/\/planner5d\.com\/api\/sets script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/planner5d.js
+
+# all apps monkey
+#http-response ^https:\/\/www\.api\.monkeyuni\.net\/api\/.+\/mobile\/account\/load-update script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/monkey.js

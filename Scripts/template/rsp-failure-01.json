@@ -1,0 +1,7 @@
+{
+  "code": 1,
+  "success": false,
+  "message": "失败",
+  "data": {},
+  "_content": "存储一些公共的响应内容，对于不适用reject-dict的规则，可以使用这些JSON"
+}
