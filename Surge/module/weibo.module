@@ -8,7 +8,7 @@
 #!tg-group=https://t.me/lanjieguanggao
 #!tag=去广告, 微博, fmz200
 #!system=ios
-#!date=2025-06-29 23:00:00
+#!date=2025-07-02 19:30:17
 
 [Rule]
 # 收集用户信息，上传用户日志的请求
@@ -51,6 +51,9 @@ DOMAIN,adpinpai.video.weibocdn.com,REJECT
 [URL Rewrite]
 ^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(get-lbs-cell-info\.php|sdkconfig\.php) - reject
 ^https:\/\/api\.weibo\.cn\/2\/logservice\/service\? - reject
+
+[Body Rewrite]
+http-response-jq ^https:\/\/api\.weibo\.cn\/2\/cardlist\? 'del(.items[] | select(.category == "group"))'
 
 [Map Local]
 # 热门视频 | 热推荐
