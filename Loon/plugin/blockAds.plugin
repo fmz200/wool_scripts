@@ -3435,7 +3435,8 @@ https://mgesq.api.mgtv.com/v2/user/center/icon reject-dict
 ^https?:\/\/oneapp-api\.faw-vw\.com\/content\/booth\/getBoothList\/v1\?.*showPositionCode=VWAPP_(ICE|MEB)_HOME_(OWNER_BANNER|PROSPECTS_BANNER|CUSTOM_BANNER|KONGO|CUSTOM_KONGO) mock-response-body data-type=json status-code=200 data={"returnStatus":"SUCCEED","hasMore":false,"data":[]}
 ^https?:\/\/oneapp-api\.faw-vw\.com\/content\/(customize\/getCustomizePageName|recommend\/getRecommendInfoFlows)\/v1\?.* mock-response-body data-type=json status-code=200 data={"returnStatus":"SUCCEED","hasMore":false,"data":[]}
 ^https?:\/\/oneapp-api\.faw-vw\.com\/content\/(activity\/getSquareActivityList|theme\/getThemeList|post\/getPostsByTags)\/v1\?.* mock-response-body data-type=json status-code=200 data={"returnStatus":"SUCCEED","hasMore":false,"data":[]}
-^https?:\/\/oneapp-api\.faw-vw\.com\/content\/(evaluate\/getEvaluateCards|collection\/getCollectionList)\/v1\?.* mock-response-body data-type=json status-code=200 data={"returnStatus":"SUCCEED","hasMore":false,"data":{}}
+^https?:\/\/oneapp-api\.faw-vw\.com\/content\/(evaluate\/getEvaluateCards)\/v1\?.* mock-response-body data-type=json status-code=200 data={"returnStatus":"SUCCEED","hasMore":false,"data":[]}
+^https?:\/\/oneapp-api\.faw-vw\.com\/content\/(collection\/getCollectionList)\/v1\?.* mock-response-body data-type=json status-code=200 data={"returnStatus":"SUCCEED","hasMore":false,"data":{}}
 
 # > 一起考教师
 # hostname = api.17kjs.com
