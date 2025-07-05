@@ -1,0 +1,36 @@
+# macOS 系统文件
+.DS_Store
+**/.DS_Store
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+.fseventsd
+.TemporaryItems
+
+# IntelliJ IDEA 配置文件
+.idea/
+*.iml
+*.ipr
+*.iws
+modules.xml
+workspace.xml
+navEditor.xml
+
+# 通用忽略项
+*~
+*.log
+*.tmp
+*.bak
+.vscode/
+.history/
+
+# 默认忽略的文件
+/shelf/
+/workspace.xml
+# 基于编辑器的 HTTP 客户端请求
+/httpRequests/
+# CodeStream ignored files
+/codestream.xml
+# node依赖
+./node_modules
