@@ -1,4 +1,4 @@
-#!name=广告拦截合集-分流
+#!name=广告拦截合集-不要设置策略偏好
 #!desc=(F)针对部分APP和小程序广告进行拦截，某些APP要清除缓存或者重新安装APP，拦截广告才会生效！
 #!author=奶思
 #!homepage=https://github.com/fmz200/wool_scripts
