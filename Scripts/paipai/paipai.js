@@ -8,7 +8,7 @@ const $ = new Env('拍拍严选');
 
 const url = $request.url;
 const body = $response.body;
-console.log(body);
+// console.log(body);
 
 let resp_data = JSON.parse(body);
 
