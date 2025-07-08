@@ -2,6 +2,7 @@
 #!desc=拦截常见的HTTPDNS服务，以确保这些请求都能够在Loon的DNS框架下工作。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md], VirgilClyne[https://github.com/VirgilClyne]
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/HTTPDNS.png
+#!category=奶思的模块
 #!tag=DNS
 #!loon_version=3.2.4(787)
 #!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
