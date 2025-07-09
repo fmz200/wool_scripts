@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 微博去广告
- * @date 2025-07-01 12:00:00
+ * @date 2025-07-09 19:00:00
  */
 
 let url = $request.url;
@@ -68,7 +68,7 @@ try {
   }
   if (url.includes("/statuses/container_detail?")) {
     resp_data.pageHeader.data.items = resp_data.pageHeader.data.items.filter(item =>
-      item?.category !== 'card' && item?.category !== "group" && item?.type !== 'share'
+      item?.category !== 'card' && item?.category !== "group" && item?.category !== "wboxcard" && item?.type !== 'share'
     );
   }
 
