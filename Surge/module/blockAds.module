@@ -9,7 +9,7 @@
 #!tg-group=https://t.me/lanjieguanggao
 #!tag=去广告, fmz200, 奶思
 #!system=ios
-#!date=2025-07-08 20:00:00
+#!date=2025-07-11 20:00:00
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 
 [Rule]
@@ -1090,6 +1090,10 @@ http-response-jq ^https?:\/\/oneapp-api\.faw-vw\.com\/content\/booth\/getBoothLi
 http-response-jq ^https?:\/\/oneapp-api\.faw-vw\.com\/content\/booth\/getBoothList\/v1\?.*showPositionCode=VWAPP_(ICE|MEB)_HOME_(OWNER_BANNER|PROSPECTS_BANNER|CUSTOM_BANNER|KONGO|CUSTOM_KONGO) '. = { returnStatus: "SUCCEED", hasMore: false, data: [] }'
 http-response-jq ^https?:\/\/oneapp-api\.faw-vw\.com\/content\/(customize\/getCustomizePageName|recommend\/getRecommendInfoFlows|activity\/getSquareActivityList|theme\/getThemeList|post\/getPostsByTags|evaluate\/getEvaluateCards)\/v1\?.* '. = { returnStatus: "SUCCEED", hasMore: false, data: [] }'
 http-response-jq ^https?:\/\/oneapp-api\.faw-vw\.com\/content\/(collection\/getCollectionList)\/v1\?.* '. = { returnStatus: "SUCCEED", hasMore: false, data: {} }'
+
+# > 小宇宙
+# 首页净化
+http-response-jq ^https?:\/\/api\.xiaoyuzhoufm\.com\/v1\/discovery-feed\/list '.data |= map(select(.type != "DISCOVERY_HEADER" and .type != "DISCOVERY_BANNER"))'
 
 
 [Map Local]
@@ -2589,18 +2593,12 @@ https?:\/\/(ipv4|interface\d?)\.music\.163.com\/e?api\/ad data-type=text data="{
 ^https?:\/\/mall\.meituan\.com\/api\/c\/homepage\/splash data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 # 开屏广告
-^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/flash- data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-
+^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/flash data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 # 移除ai总结
-^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/ai-summary data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-
-# 会员横幅设为不可点击
-^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/membership\/platform data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-
-# 移除小宇宙搜索框内容
-^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/search\/get-(?>preset|express) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-
-^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/category\/list-daily-suggestion data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/ai data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+# 移除搜索框内容
+^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/search\/get data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/category data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 # 我的页面-猜你喜欢
 ^https:\/\/mgesq\.api\.mgtv\.com\/v2\/goods\/guess_you_like data-type=text data="{}" status-code=200 header="Content-Type:application/json"
