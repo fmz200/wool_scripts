@@ -9899,7 +9899,6 @@ host-suffix, sape.ru, reject
 host-suffix, tns-counter.ru, reject
 host-suffix, winlinebet.ru, reject
 host-suffix, yadro.ru, reject
-host-suffix, yandex.ru, reject
 host-suffix, ad.3dnews.ru, reject
 host-suffix, rtb.com.ru, reject
 host-suffix, dmg.digitaltarget.ru, reject
@@ -9921,9 +9920,6 @@ host-suffix, pixel.vihub.ru, reject
 host-suffix, ad.xmovies8.ru, reject
 host-suffix, counter.yadro.ru, reject
 host-suffix, mg.yadro.ru, reject
-host-suffix, an.yandex.ru, reject
-host-suffix, mc.yandex.ru, reject
-host-suffix, mc.yandex.ru, reject
 host-suffix, spb.bid.run, reject
 host-suffix, adrotator.se, reject
 host-suffix, ingest.sentry, reject
