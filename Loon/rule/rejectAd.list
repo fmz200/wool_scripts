@@ -1455,21 +1455,11 @@ DOMAIN-KEYWORD,m.panda.voiceads.cn
 DOMAIN-KEYWORD,iflyad.bj.openstorage.cn
 
 # > 喜马拉雅
+DOMAIN, adse.ximalaya.com
+DOMAIN, adsehera.ximalaya.com
+DOMAIN, adse.wsa.ximalaya.com
 DOMAIN, adbehavior.ximalaya.com
-DOMAIN, adwbs.ximalaya.com
-DOMAIN-SUFFIX,ad.test.ximalaya.com
-DOMAIN-SUFFIX,adse.test.ximalaya.com
-DOMAIN-SUFFIX,adweb.test.ximalaya.com
-DOMAIN-SUFFIX,adweb.ximalaya.com
-DOMAIN-SUFFIX,linkeye.ximalaya.com
-DOMAIN-SUFFIX,location.ximalaya.com
-DOMAIN-SUFFIX,xdcs-collector.ximalaya.com
-DOMAIN-SUFFIX,ad.ximalaya.com
-DOMAIN-SUFFIX,adse.ximalaya.com
-DOMAIN-SUFFIX,adse.wsa.ximalaya.com
-DOMAIN-SUFFIX,adbehavior.wsa.ximalaya.com
-DOMAIN-SUFFIX,adsebs.ximalaya.com
-DOMAIN-SUFFIX,adbs.ximalaya.com
+DOMAIN, adbehavior.wsa.ximalaya.com
 
 # > 小红书
 DOMAIN, ads-img-qc.xhscdn.com

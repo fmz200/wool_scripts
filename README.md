@@ -190,7 +190,7 @@ DOMAIN-SUFFIX, douyinvod.com, proxy
 - [@Keywos](https://github.com/Keywos)
 - [@kokoryh](https://github.com/kokoryh)
 - [@KOP-XIAO](https://github.com/KOP-XIAO)
-- [@lodepuly](https://gitlab.com/lodepuly)
+- [@lodepuly](https://github.com/luestr)
 - [@NobyDa](https://github.com/NobyDa)
 - [@Orz-3](https://github.com/Orz-3)
 - [@RuCu6](https://github.com/RuCu6)

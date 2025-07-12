@@ -1538,21 +1538,11 @@ host-keyword, m.panda.voiceads.cn, reject
 host-keyword, iflyad.bj.openstorage.cn, reject
 
 # > 喜马拉雅
-host, adbehavior.ximalaya.com, reject
-host, adwbs.ximalaya.com, reject
-host-suffix, ad.test.ximalaya.com, reject
-host-suffix, adse.test.ximalaya.com, reject
-host-suffix, adweb.test.ximalaya.com, reject
-host-suffix, adweb.ximalaya.com, reject
-host-suffix, linkeye.ximalaya.com, reject
-host-suffix, location.ximalaya.com, reject
-host-suffix, xdcs-collector.ximalaya.com, reject
-host-suffix, ad.ximalaya.com, reject
-host-suffix, adse.ximalaya.com, reject
-host-suffix, adse.wsa.ximalaya.com, reject
-host-suffix, adbehavior.wsa.ximalaya.com, reject
-host-suffix, adsebs.ximalaya.com, reject
-host-suffix, adbs.ximalaya.com, reject
+host, adse.ximalaya.com, REJECT
+host, adsehera.ximalaya.com, REJECT
+host, adse.wsa.ximalaya.com, REJECT
+host, adbehavior.ximalaya.com, REJECT
+host, adbehavior.wsa.ximalaya.com, REJECT
 
 # > 小红书
 host, ads-img-qc.xhscdn.com, reject
