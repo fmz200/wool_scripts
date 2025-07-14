@@ -9,7 +9,7 @@
 #!system = iOS, iPadOS
 #!system_version =
 #!loon_version =
-#!date=2025-06-20 23:40:17
+#!date=2025-07-14 22:20:17
 #!support=约9392行
 #!proxy-select=REJECT
 #############################################
@@ -9852,6 +9852,15 @@ DOMAIN-SUFFIX, yumcs.xiaohuau.xyz
 DOMAIN-SUFFIX, banner.itweb.co.za
 DOMAIN-SUFFIX, banners.itweb.co.za
 DOMAIN-SUFFIX, xn--3bs795g.zone
+DOMAIN-SUFFIX, ppezijkacga.com
+DOMAIN-SUFFIX, kreopbkabsit.com
+DOMAIN-SUFFIX, admiitad.com
+DOMAIN-SUFFIX, thelifeandmore.com
+DOMAIN-SUFFIX, fractionfridgejudiciary.com
+DOMAIN-SUFFIX, ocponcphaafb.com
+DOMAIN-SUFFIX, tapwhigwy.com
+DOMAIN-SUFFIX, ahqovxli.com
+DOMAIN-SUFFIX, fipabtomqok.com
 
 # IPV4 addresses
 IP-CIDR, 117.177.248.17/32, no-resolve
