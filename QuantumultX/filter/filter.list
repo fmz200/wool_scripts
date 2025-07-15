@@ -10075,15 +10075,15 @@ host-suffix, yumcs.xiaohuau.xyz, reject
 host-suffix, banner.itweb.co.za, reject
 host-suffix, banners.itweb.co.za, reject
 host-suffix, xn--3bs795g.zone, reject
-host-suffix, ppezijkacga.com
-host-suffix, kreopbkabsit.com
-host-suffix, admiitad.com
-host-suffix, thelifeandmore.com
-host-suffix, fractionfridgejudiciary.com
-host-suffix, ocponcphaafb.com
-host-suffix, tapwhigwy.com
-host-suffix, ahqovxli.com
-host-suffix, fipabtomqok.com
+host-suffix, ppezijkacga.com, reject
+host-suffix, kreopbkabsit.com, reject
+host-suffix, admiitad.com, reject
+host-suffix, thelifeandmore.com, reject
+host-suffix, fractionfridgejudiciary.com, reject
+host-suffix, ocponcphaafb.com, reject
+host-suffix, tapwhigwy.com, reject
+host-suffix, ahqovxli.com, reject
+host-suffix, fipabtomqok.com, reject
 
 # IPV4 addresses
 IP-CIDR, 117.177.248.17/32, reject
