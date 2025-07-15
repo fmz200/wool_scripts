@@ -1060,7 +1060,7 @@ host-keyword, api-access.pangolin-sdk-toutiao.com, reject
 ;host-keyword, mssdk-bu.bytedance.com, reject
 ;host-keyword, 365yg.com, reject
 ;host-keyword, ppx.byteimg.com, reject
-;host-keyword, i.snssdk.com, reject, reject
+;host-keyword, i.snssdk.com, reject,
 
 # > 影响端传媒正常运行，默认关闭
 ;host-suffix, cloudfront.net, reject
