@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/fenliu.list
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2025-06-20 23:40:17
+#!date=2025-07-14 22:20:17
 #!support=约9392行
 #!proxy-select=reject
 #############################################
@@ -9951,6 +9951,15 @@ host-suffix, yumcs.xiaohuau.xyz, reject
 host-suffix, banner.itweb.co.za, reject
 host-suffix, banners.itweb.co.za, reject
 host-suffix, xn--3bs795g.zone, reject
+host-suffix, ppezijkacga.com
+host-suffix, kreopbkabsit.com
+host-suffix, admiitad.com
+host-suffix, thelifeandmore.com
+host-suffix, fractionfridgejudiciary.com
+host-suffix, ocponcphaafb.com
+host-suffix, tapwhigwy.com
+host-suffix, ahqovxli.com
+host-suffix, fipabtomqok.com
 
 # IPV4 addresses
 IP-CIDR, 117.177.248.17/32, reject
