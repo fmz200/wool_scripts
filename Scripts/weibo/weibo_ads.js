@@ -76,7 +76,11 @@ try {
   if (url.includes("/groups/allgroups/v2")) {
     removePageDataAds(resp_data.pageDatas);
     // 删除恶心人的“全部微博”
-    delete resp_data.pageDatas[0].categories[0].pageDatas[0];
+    if (resp_data.pageDatas[0].categories) {
+      delete resp_data.pageDatas[0].categories[0].pageDatas[0];
+    } else {
+      delete resp_data.pageDatas[1].categories[0].pageDatas[0];
+    }
   }
 
   // 7、话题页面 微博话题页面
