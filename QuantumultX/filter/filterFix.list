@@ -1,12 +1,11 @@
 #!name=分流修正
-#!desc=修正某些被分流到外区的国内网站
+#!desc=修正某些被分流到外区的国内网站，不要设置策略偏好
 #!author=奶思
 #!homepage=https://github.com/fmz200/wool_scripts
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
-#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/fenliuxiuzheng.list
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/filterFix.list
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2023-11-06 21:30:00
-#!proxy-select=direct
+#!date=2025-07-19 10:10:00
 #############################################
 # > "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # > "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -87,9 +86,9 @@ host-keyword, api.smoot.apple.cn, direct
 # > 苹果iMessage服务
 host, init.ess.apple.com, direct
 # > 苹果其他服务
+host, smp-device-content.apple.com, direct
 host-keyword, ssl.apple.com, direct
 host-keyword, humb.apple.com, direct
-host, smp-device-content.apple.com, direct
 host-keyword, api-adservices.apple.com, direct
 host-keyword, ls.apple.com, direct
 host-keyword, gsa.apple.com, direct
