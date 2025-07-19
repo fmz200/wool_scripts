@@ -1,0 +1,12 @@
+#!name=抖音分流
+#!desc=分流选择支持的地区
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/Douyin.list
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-07-19 10:10:00
+#############################################
+
+DOMAIN-SUFFIX, amemv.com
+DOMAIN-SUFFIX, douyinvod.com
