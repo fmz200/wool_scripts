@@ -350,12 +350,12 @@ host, lc.map.baidu.com, reject
 IP-CIDR, 180.76.76.200/32, reject
 
 # > 哔哩哔哩
-host, app.biliapi.net, reject
-host, api.biliapi.net, reject
-host, app.biliapi.com, reject
-host, api.biliapi.com, reject
-host, line3-h5-mobile-api.biligame.com, reject
-host-suffix, chat.bilibili.com, reject
+#host, app.biliapi.net, reject
+#host, api.biliapi.net, reject
+#host, app.biliapi.com, reject
+#host, api.biliapi.com, reject
+#host, line3-h5-mobile-api.biligame.com, reject
+#host-suffix, chat.bilibili.com, reject
 
 # > 百词斩
 host, advertise.baicizhan.com, reject
