@@ -10,7 +10,7 @@
 #!system = iOS, iPadOS
 #!system_version = 
 #!loon_version = 
-#!date=2024-11-10 15:00:00
+#!date=2025-07-20 09:50:00
 #############################################
 
 
@@ -98,12 +98,6 @@ hostname = mobile-consumer-sapp.chery.cn, xxyx-client-api.xiaoxiaoyouxuan.com, y
 # > 百度贴吧 cookie
 # hostname = 
 https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js
-# 贴吧 获取cookie1
-https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login url script-request-header https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js
-# 贴吧_获取cookie2
-^https?:\/\/c\.tieba\.baidu\.com\/c\/s\/channelIconConfig url script-request-header https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js
-# 贴吧_获取cookie3
-^https?:\/\/tiebac\.baidu\.com\/c\/u\/follow\/getFoldedMessageUserInfo url script-request-header https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js
 
 # > 百词斩
 # hostname = 
@@ -149,11 +143,6 @@ https?:\/\/app.bilibili.com\/x\/v2\/space\/bangumi url script-request-header htt
 # hostname = 
 ^https://minigame.zijieapi.com/ttgame/game_orchard_ecom/polling_info url script-request-header https://raw.githubusercontent.com/LinYuanovo/scripts/main/dygy.js
 
-# > 叮咚买菜 获取cookie
-# hostname = 
-^https?:\/\/maicai\.api\.ddxq\.mobi\/point\/home\?api_version url script-request-header https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/dingdong/dingdong_checkin.js
-;^https:\/\/maicai.api.ddxq.mobi\/point\/home url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/mcdd/mcdd.cookie.js
-
 # > 斗鱼鱼吧 获取cookie
 # hostname = 
 ^https://yuba.douyu.com/wbapi/web/group/myFollow? url script-request-header https://raw.githubusercontent.com/lowking/Scripts/master/douyu/yubaSign.js
@@ -185,10 +174,6 @@ https:\/\/farm\.api\.ddxq\.mobi\/api\/v2\/props\/feed url script-request-header 
 
 
 # >>>>>>>>>>>>>>> ✅ F ✅ <<<<<<<<<<<<<<
-# > Fa米家 获取cookie
-# hostname = 
-^https?:\/\/fmapp\.chinafamilymart\.com\.cn\/api\/app\/market\/member\/(signin\/usersign|sign\/current) url script-request-header https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/famijia/famijia_checkin.js
-
 # > 飞客茶馆
 # hostname = 
 ^https?:\/\/www\.flyert\.com\.cn\/api\/mobile\/index\.php\?module=getdata&.* url script-request-header https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/CheckIn/flyert.js
@@ -285,12 +270,7 @@ https://gaea.meituan.com/mapi/usercenter url script-request-header https://raw.g
 
 # > 美团外卖
 # hostname = 
-^https:\/\/promotion.waimai.meituan.com\/playcenter\/signIn\/entry url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/wmmeituan/wmmeituan.cookie.js
-^https:\/\/promotion.waimai.meituan.com\/playcenter\/signIn\/doaction url script-request-body https://raw.githubusercontent.com/chavyleung/scripts/master/wmmeituan/wmmeituan.cookie.js
-
-# > 慢慢买 获取cookie
-# hostname = 
-^https?:\/\/apph5\.manmanbuy\.com\/taolijin\/(login.aspx|logserver.aspx) url script-request-body https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/manmanbuy/manmanbuy_checkin.js
+^https:\/\/promotion.waimai.meituan.com\/playcenter\/signIn\/(entry|doaction) url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/wmmeituan/wmmeituan.cookie.js
 
 # > 芒果TV
 # hostname = 

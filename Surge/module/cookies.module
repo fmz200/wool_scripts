@@ -8,7 +8,7 @@
 #!tg-group=https://t.me/lanjieguanggao
 #!tag=fmz200
 #!system=ios
-#!date=2025-04-25 17:10:00
+#!date=2025-07-20 09:50:00
 
 [Script]
 # hostname = 
@@ -30,15 +30,6 @@ bing获取积分cookie = type=http-request, pattern=^https:\/\/rewards\.bing\.co
 
 # hostname = 
 百度贴吧@NobyDa = type=http-request, pattern=https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login, script-path=https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js, timeout=60
-
-# 贴吧 获取cookie1
-百度贴吧@bm7 = type=http-request, pattern=https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login, script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js, timeout=60
-
-# 贴吧_获取cookie2
-百度贴吧@bm7 = type=http-request, pattern=^https?:\/\/c\.tieba\.baidu\.com\/c\/s\/channelIconConfig, script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js, timeout=60
-
-# 贴吧_获取cookie3
-百度贴吧@bm7 = type=http-request, pattern=^https?:\/\/tiebac\.baidu\.com\/c\/u\/follow\/getFoldedMessageUserInfo, script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js, timeout=60
 
 # hostname = 
 哔哩哔哩漫画@NobyDa = type=http-request, pattern=^https:\/\/passport\.biligame\.com\/api\/login\/sso.+?version%22%3A%22(3|4|5), script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Bilibili-DailyBonus/Manga.js, timeout=60
@@ -70,9 +61,6 @@ CSDN = type=http-request, pattern=^https:\/\/gw.csdn.net\/mini-app\/v2\/lucky_dr
 抖音-抖抖果园 = type=http-request, pattern=^https://minigame.zijieapi.com/ttgame/game_orchard_ecom/polling_info, script-path=https://raw.githubusercontent.com/LinYuanovo/scripts/main/dygy.js, timeout=60
 
 # hostname = 
-叮咚买菜 = type=http-request, pattern=^https?:\/\/maicai\.api\.ddxq\.mobi\/point\/home\?api_version, script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/dingdong/dingdong_checkin.js, timeout=60
-
-# hostname = 
 斗鱼鱼吧 = type=http-request, pattern=^https://yuba.douyu.com/wbapi/web/group/myFollow?, script-path=https://raw.githubusercontent.com/lowking/Scripts/master/douyu/yubaSign.js, timeout=60
 
 # hostname = 
@@ -83,9 +71,6 @@ CSDN = type=http-request, pattern=^https:\/\/gw.csdn.net\/mini-app\/v2\/lucky_dr
 
 # > 叮咚果园
 叮咚果园获取Cookie = type=http-request, pattern=https:\/\/farm\.api\.ddxq\.mobi\/api\/v2\/props\/feed, script-path=https://raw.githubusercontent.com/iepngs/Script/master/dingdong/ddgy.js, timeout=60
-
-# hostname = 
-Fa米家-获取cookie = type=http-request, pattern=^https?:\/\/fmapp\.chinafamilymart\.com\.cn\/api\/app\/market\/member\/(signin\/usersign|sign\/current), script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/famijia/famijia_checkin.js, timeout=60
 
 # hostname = www.flyert.com.cn
 飞客茶馆获取cookie = type=http-request, pattern=^https?:\/\/www\.flyert\.com\.cn\/api\/mobile\/index\.php\?module=getdata&.*, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/CheckIn/flyert.js, timeout=60
@@ -135,12 +120,7 @@ Luka-获取cookie = type=http-request, pattern=^https?:\/\/luka\-graphql\.ling\.
 美团旧版本token = type=http-request, pattern=https://gaea.meituan.com/mapi/usercenter, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cookie/get_cookie.js, timeout=60
 
 # hostname = 
-美团外卖 = type=http-request, pattern=^https:\/\/promotion.waimai.meituan.com\/playcenter\/signIn\/entry, script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wmmeituan/wmmeituan.cookie.js, timeout=60
-
-美团外卖 = type=http-request, pattern=^https:\/\/promotion.waimai.meituan.com\/playcenter\/signIn\/doaction, script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wmmeituan/wmmeituan.cookie.js, requires-body=true, timeout=60
-
-# hostname = 
-慢慢买-获取cookie = type=http-request, pattern=^https?:\/\/apph5\.manmanbuy\.com\/taolijin\/(login.aspx|logserver.aspx), script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/manmanbuy/manmanbuy_checkin.js, requires-body=true, timeout=60
+美团外卖 = type=http-request, pattern=^https:\/\/promotion.waimai.meituan.com\/playcenter\/signIn\/(entry|doaction), script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wmmeituan/wmmeituan.cookie.js, timeout=60
 
 # hostname = 
 芒果TV = type=http-request, pattern=^https:\/\/credits.bz.mgtv.com\/user\/creditsTake, script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/mgtv/mgtv.cookie.js, timeout=60
