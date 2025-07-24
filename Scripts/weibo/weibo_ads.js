@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 微博去广告
- * @date 2025-07-09 19:00:00
+ * @date 2025-07-24 22:30:00
  */
 
 let url = $request.url;
@@ -155,7 +155,7 @@ try {
     console.log('处理评论区广告结束💕💕');
   }
   if (url.includes("/statuses/container_detail_comment?")) {
-    resp_data.items = resp_data.items.filter(item => item.type !== "trend");
+    resp_data.items = resp_data.items.filter(item => item.type === "detail");
     console.log('处理评论区广告结束💕💕');
   }
   
