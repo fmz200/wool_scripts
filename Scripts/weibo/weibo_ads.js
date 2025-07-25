@@ -155,7 +155,7 @@ try {
     console.log('处理评论区广告结束💕💕');
   }
   if (url.includes("/statuses/container_detail_comment?")) {
-    resp_data.items = resp_data.items.filter(item => item.type !== "trend");
+    resp_data.items = resp_data.items.filter(item => item.type !== "trend" && !item.commentAdType);
     console.log('处理评论区广告结束💕💕');
   }
   
