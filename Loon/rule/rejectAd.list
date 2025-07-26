@@ -1024,8 +1024,8 @@ DOMAIN-SUFFIX,jdqd.jd.com
 DOMAIN-SUFFIX,shouji.sougou.com
 
 # > 搜狗输入法
-# host-keyword, business-cdn.shouji.sogou.com, reject
-host-suffix, push-service-ios.sginput.qq.com, reject
+# DOMAIN-SUFFIX, business-cdn.shouji.sogou.com, reject
+DOMAIN-SUFFIX, push-service-ios.sginput.qq.com, reject
 
 # > 深圳通微信小程序
 DOMAIN-SUFFIX,wxsnsdythumb.wxs.qq.com
