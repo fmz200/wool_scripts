@@ -34,6 +34,9 @@ host-suffix, gepush.com, reject
 host-suffix, igexin.com, reject
 host-suffix, log.aliyuncs.com, reject
 host-suffix, zlsdk.1rtb.net, reject
+host-suffix, ott.cibntv.net, reject
+host-suffix, cdntips.net, reject
+host-suffix, tfogc.com, reject
 # > 收集用户隐私联盟，若有问题自行设置白名单
 host-keyword, volc, reject
 host-keyword, umeng, reject
@@ -1062,6 +1065,7 @@ host-suffix, shouji.sougou.com, reject
 
 # > 搜狗输入法
 ;host-keyword, business-cdn.shouji.sogou.com, reject
+host-suffix, push-service-ios.sginput.qq.com, reject
 
 # > 深圳通微信小程序
 host-suffix, wxsnsdythumb.wxs.qq.com, reject
