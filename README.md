@@ -54,14 +54,8 @@
 
 下方的抖音分流就可以实现修改IP（需要代理IP干净）：
 ```plaintext
-# 抖音修改IP (QuanX)
-HOST-SUFFIX, amemv.com, proxy
-HOST-SUFFIX, douyinvod.com, proxy
-```
-```plaintext
-# 抖音修改IP (Loon，Surge)
-DOMAIN-SUFFIX, amemv.com, proxy
-DOMAIN-SUFFIX, douyinvod.com, proxy
+# 抖音修改IP (QuanX 打开解析器，Loon，Surge，Egern直接引用)
+https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/Douyin.list
 ```
 
 ### 2️⃣ 为什么有些软件明明很热门，却没有人做去广告的规则
@@ -147,10 +141,10 @@ DOMAIN-SUFFIX, douyinvod.com, proxy
 | # | 重写     | `去广告合集`       | [rewrite.snippet](https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/rewrite.snippet)  | [fmz200](https://github.com/fmz200) | 去广告合集，不包含微博                 | [点击查看](./QuantumultX/rewrite/00-How-To-Use-Rewrite.md) |
 | # | 重写     | `微博去广告`       | [weibo.snippet](https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/weibo.snippet)      | [fmz200](https://github.com/fmz200) | 自用的配置                       | [点击查看](./QuantumultX/rewrite/00-How-To-Use-Rewrite.md) |
 | # | 重写     | `获取cookie合集`  | [cookies.snippet](https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/cookies.snippet)  | [fmz200](https://github.com/fmz200) | 包含NobyDa，chavyleung，Sunert等 | 暂无                                                     |
+| # | 重写     | `App&小程序净化合集` | [cleanup.snippet](https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/cleanup.snippet)             | [fmz200](https://github.com/fmz200) | 常见的微信小程序净化（有误杀慎用）           | 暂无                                                     |
 | # | 分流     | `去广告合集`       | [filter.list](https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/filter.list)           | [fmz200](https://github.com/fmz200) | 无                           | [点击查看](./QuantumultX/filter/00-How-To-Use-Filter.md)   |
 | # | 分流     | `屏蔽苹果系统更新`    | [apple.snippet](https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/apple.snippet)       | [fmz200](https://github.com/fmz200) | 有效                          | [点击查看](./QuantumultX/filter/00-How-To-Use-Filter.md)   |
 | # | Task订阅 | `Task订阅`      | [fmz200_tasks.json](https://raw.githubusercontent.com/fmz200/wool_scripts/main/boxjs/fmz200_tasks.json)            | [fmz200](https://github.com/fmz200) | 需要先获取cookie或token再运行        | 暂无                                                     |
-| # | 重写     | `App&小程序净化合集` | [cleanup.snippet](https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/cleanup.snippet)             | [fmz200](https://github.com/fmz200) | 常见的微信小程序净化（有误杀慎用）           | 暂无                                                     |
 
 > ⚠️ 当远程图标更新时如果你的图表库不更新多半是缓存的问题，请手动清理图标缓存(`点击右下角风车->划到最下面->选择其他设置->找到资源模块`，选择`删除图片缓存`)，并重启 Quantumult X，远程图标会重新下载并生效。
 
