@@ -20,7 +20,7 @@ cron "17 7 * * *" script-path=https://raw.githubusercontent.com/fmz200/wool_scri
 cron "17 7 * * *" script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/chery/cheryAppSignin.js, timeout=300, tag=奇瑞汽车App签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/chery.png, enable=false
 cron "15 7 * * *" script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/douyu/yubaSign.js, timeout=300, tag=斗鱼鱼吧签到, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/douyu.png, enable=false
 cron "19 7 * * *" script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_signin.js, timeout=300, tag=微博每日签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo-00.png, enable=false
-cron "19 7 * * *" script-path=https://raw.githubusercontent.com/toulanboy/scripts/master/weibo/weibotalk.js, timeout=6000, tag=微博超话签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/WeiboTalk.png, enable=false
+cron "19 7 * * *" script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibotalk_signin.js, timeout=6000, tag=微博超话签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/WeiboTalk.png, enable=false
 cron "1 0 * * *" script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, timeout=300, tag=高德地图打车签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/GaodeMap.jpg, enable=false
 #cron "25 7-12/1 * * *" script-path=https://raw.githubusercontent.com/WowYiJiu/Personal/main/Script/qqMusic.js, timeout=300, tag=QQ音乐任务, img-url=https://raw.githubusercontent.com/WowYiJiu/Personal/main/icon/Color/qqMusic.png, enable=false
 cron "18 0 8-22 * * ?" script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/douyin/my_girl_video.js, timeout=300, tag=小姐姐视频, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/others/18Plus.png, enable=false
@@ -154,10 +154,6 @@ cron "5 5 * * *" script-path=https://raw.githubusercontent.com/lowking/Scripts/m
 cron "20 4 0 * * *" script-path=https://raw.githubusercontent.com/lowking/Scripts/master/sony/sonyClub.js, enable=false, tag=索尼俱乐部签到
 cron "21 4 0,1 * * *" script-path=https://raw.githubusercontent.com/lowking/Scripts/master/douyu/yubaSign.js, enable=false, tag=斗鱼鱼吧签到
 cron "22 4 0,2 * * *" script-path=https://raw.githubusercontent.com/lowking/Scripts/master/QQPet/lkQQPet.js, enable=false, tag=QQ萌宠
-
-# toulanboy  https://github.com/toulanboy/scripts
-cron "52 5 * * *" script-path=https://raw.githubusercontent.com/toulanboy/scripts/master/weibo/weibotalk.js, enable=false, tag=微博超话
-cron "51 5 * * *" script-path=https://raw.githubusercontent.com/toulanboy/scripts/master/muchong/muchong.js, enable=false, tag=小木虫论坛
 
 # dompling   https://github.com/dompling/Script
 # cron "51 4 * * *" script-path=https://raw.githubusercontent.com/dompling/Script/master/cuuc/cuuc.js, enable=false, tag=CU 云加速
