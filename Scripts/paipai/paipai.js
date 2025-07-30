@@ -1,6 +1,6 @@
 /**
  * @author fmz200
- * @function 拍拍严选
+ * @function 拍拍严选夺宝岛历史价格
  * @date 2025-07-06 10:30:00
  */
 
@@ -19,8 +19,10 @@ if (url.includes("functionId=dbd.auction.detail.history") && url.includes("appid
   resp_data.result.data.forEach(item => {
     if (item.endTime) {
       // 将毫秒时间戳转换为标准时间
-      const date = new Date(item.endTime).toISOString().replace('T', ' ').replace(/\..+/, '');
-      const tips = `时间：${date}，出价：${item.offerPrice}，获拍人：${item.userNickname}`;
+      const date = new Date(item.endTime);
+      const cstDate = new Date(date.getTime() + 8 * 60 * 60 * 1000); // 增加8小时的毫秒数
+      const formattedDate = cstDate.toISOString().replace('T', ' ').replace(/\..+/, '');
+      const tips = `时间：${formattedDate}，出价：${item.offerPrice}，获拍人：${item.userNickname}`;
       console.log(tips);
       msg += tips + "\n";
     }
