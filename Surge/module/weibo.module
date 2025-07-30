@@ -8,7 +8,7 @@
 #!tg-group=https://t.me/lanjieguanggao
 #!tag=去广告, 微博, fmz200
 #!system=ios
-#!date=2025-07-02 19:30:17
+#!date=2025-07-30 14:30:17
 
 [Rule]
 # 收集用户信息，上传用户日志的请求
@@ -113,12 +113,10 @@ http-response-jq ^https:\/\/api\.weibo\.cn\/2\/cardlist\? 'del(.items[] | select
 
 # 微博评论区广告
 微博评论区广告 = type=http-response, pattern=^https?:\/\/m?api\.weibo\.c(n|om)\/2\/comments\/mix_comments\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body=true, timeout=60
-
-微博评论区广告 = type=http-response, pattern=^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/container_detail_comment\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body=true, timeout=60
+微博评论区广告 = type=http-response, pattern=^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/(container_detail_comment|container_detail_mix)\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body=true, timeout=60
 
 # 微博转发区广告
 微博转发区广告 = type=http-response, pattern=^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/container_detail_forward\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body=true, timeout=60
-
 微博转发区广告 = type=http-response, pattern=^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/repost_timeline\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_main.js, requires-body=true, timeout=60
 
 # 微博去广告以及去除各部分推广模块 - cherish
