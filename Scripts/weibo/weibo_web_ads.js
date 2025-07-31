@@ -22,7 +22,7 @@ function startAction() {
   // 微博热搜
   if (url.includes("/ajax/side/searchBand?")) {
     console.log("处理热搜多余条目💕");
-    if (url.includes("type=mine")) { // "我的"tab页
+    if (url.includes("type=mine") || url.includes("last_tab=mine")) { // "我的"tab页
       if (obj.data?.realtime) {
         console.log("删除'我的'多余热搜条目💕");
         obj.data.realtime = obj.data.realtime.filter(item => item.rank !== null);
