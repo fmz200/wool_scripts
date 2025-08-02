@@ -1,12 +1,13 @@
-# NAME: Facebook
-# AUTHOR: blackmatrix7
-# REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-06-06 09:16:55
-# DOMAIN-KEYWORD: 2
-# DOMAIN-SUFFIX: 544
-# IP-ASN: 1
-# IP-CIDR: 23
-# TOTAL: 570
+#!name=Facebook
+#!desc=分流选择支持的地区
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/Facebook.list
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-06-06 09:16:55
+#############################################
+
 DOMAIN-SUFFIX,aboutfacebook.com
 DOMAIN-SUFFIX,accessfacebookfromschool.com
 DOMAIN-SUFFIX,accountkit.com
