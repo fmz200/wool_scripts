@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 微博去广告
- * @date 2025-07-09 19:00:00
+ * @date 2025-07-30 14:30:17
  */
 
 let url = $request.url;
@@ -70,6 +70,10 @@ try {
     resp_data.pageHeader.data.items = resp_data.pageHeader.data.items.filter(item =>
       item?.category !== 'card' && item?.category !== "group" && item?.category !== "wboxcard" && item?.type !== 'share'
     );
+    // 详情页面的关注悬浮横幅
+    if (resp_data.detailInfo?.extend?.follow_data) {
+      delete resp_data.detailInfo.extend.follow_data;
+    }
   }
 
   // 6、移除微博首页的多余tab页 微博首页Tab标签页
@@ -154,7 +158,7 @@ try {
     resp_data.datas = resp_data.datas.filter(item => item.adType !== "广告");
     console.log('处理评论区广告结束💕💕');
   }
-  if (url.includes("/statuses/container_detail_comment?")) {
+  if (url.includes("/statuses/container_detail_comment?") || url.includes("/statuses/container_detail_mix?")) {
     resp_data.items = resp_data.items.filter(item => item.type !== "trend" && !item.commentAdType);
     console.log('处理评论区广告结束💕💕');
   }

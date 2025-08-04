@@ -1573,6 +1573,10 @@ host-suffix, adwangmai.com, reject
 host-suffix, yunxinfw.com, REJECT
 host-suffix, bridgeoos.com, REJECT
 host-suffix, cloooud.com, REJECT
+host-suffix, baihemob.com, REJECT
+host-suffix, ad.bwton.com, REJECT
+host-suffix, api.wxcjgg.cn, REJECT
+host-suffix, shunchangzhixing.com, REJECT
 IP-CIDR, 114.132.165.205/32, REJECT
 
 # > 新浪

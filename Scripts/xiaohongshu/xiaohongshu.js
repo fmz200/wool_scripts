@@ -86,6 +86,10 @@ if (url.includes("/note/imagefeed?") || url.includes("/note/feed?")) {
             item.share_info.function_entries.unshift(addItem);
           }
         }
+        // 处理帖子引用的标签
+        if (item.hash_tag) {
+          item.hash_tag = item.hash_tag.filter(tag => tag.type !== "interact_vote");
+        }
       }
 
       const images_list = obj.data[0].note_list[0].images_list;
@@ -128,7 +132,7 @@ if (url.includes("/note/live_photo/save")) {
 } 
 
 if (url.includes("/note/widgets")) {
-  const item = ["cooperate_binds", "generic", "note_next_step"];
+  const item = ["cooperate_binds", "generic", "note_next_step", "widget_list"];
   if (obj?.data) {
     for (let i of item) {
       delete obj.data[i];

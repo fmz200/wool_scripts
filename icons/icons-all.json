@@ -1,6 +1,6 @@
 {
   "name": "fmz200の图标库",
-  "description": "收集一些自己常用的图标，尺寸为108px或144px，数量约1587个，更新日期：2025-06-05 15:00:00",
+  "description": "收集一些自己常用的图标，尺寸为108px或144px，数量约1587个，更新日期：2025-07-29 19:00:00",
   "icons": [
     {
       "name": "fmz200",
@@ -1289,6 +1289,10 @@
     {
       "name": "wireguard",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/wireguard.png"
+    },
+    {
+      "name": "歪麦霸王餐",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/wmbwc.png"
     },
     {
       "name": "wangzherongyao",
