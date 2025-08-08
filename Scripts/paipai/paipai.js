@@ -8,14 +8,14 @@ const $ = new Env('拍拍严选');
 
 const url = $request.url;
 const body = $response.body;
-// console.log(body);
+console.log(body);
 
 let resp_data = JSON.parse(body);
 
 // 查询夺宝岛历史价格
 if (url.includes("functionId=dbd.auction.detail.history") && url.includes("appid=paipai_h5")) {
-  console.log("处理夺宝岛历史价格");
-  let msg = "";
+  console.log("处理夺宝岛历史获拍价");
+  /* let msg = "";
   resp_data.result.data.forEach(item => {
     if (item.endTime) {
       // 将毫秒时间戳转换为标准时间
@@ -26,9 +26,77 @@ if (url.includes("functionId=dbd.auction.detail.history") && url.includes("appid
       console.log(tips);
       msg += tips + "\n";
     }
-  });
-  
-  $.msg($.name, '夺宝岛历史获拍价格如下', msg, {'open-url': '', 'media-url': "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/paipai.png"});
+  }); */
+  const newItem = {
+    userNickname: "以下是历史获拍价",
+    endTime: 1753891200000, // 2025-07-31 00:00:00
+    userImage: null,
+    offerPrice: "---"
+  };
+  resp_data.result.data.unshift(newItem);
+  $.setdata(JSON.stringify(resp_data.result.data), "fmz200.paipai.detail.history");
+  console.log("处理夺宝岛历史获拍价完成");
+  // $.msg($.name, '夺宝岛历史获拍价格如下', msg, {'open-url': '', 'media-url': "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/paipai.png"});
+}
+
+// 查询历史获拍人的出价
+if (url.includes("functionId=paipai.auction.bidrecords") && url.includes("appid=paipai_h5")) {
+  console.log("查询历史获拍人的出价");
+  let commitsRsp;
+  const commitsCache = $.getdata("fmz200.paipai.detail.history");
+  console.log("读取缓存val：" + commitsCache);
+  if (commitsCache) {
+    commitsRsp = JSON.parse(commitsCache);
+    console.log("开始追加字段");
+    commitsRsp.forEach(item => {
+      const data = {
+        id: item.endTime,
+        productName: null,
+        imagePath: null,
+        offerPrice: item.offerPrice,
+        auctionId: null,
+        orderId: null,
+        usedNo: null,
+        userName: item.userNickname,
+        userNickname: item.userNickname,
+        userLevel: null,
+        ip: null,
+        userBean: null,
+        status: 1,
+        endTime: null,
+        created: item.endTime,
+        modified: null,
+        userImage: null,
+        currentPrice: null,
+        newPrice: null,
+        entryId: null,
+        shopId: null,
+        venderId: null,
+        hasSameAuctions: false,
+        productType: null,
+        category3: null,
+        orderErrorStatus: null,
+        startPrice: null,
+        minPrice: null,
+        maxPrice: null,
+        cappedPrice: null,
+        auctionType: null,
+        actualEndTime: null,
+        delayCount: null,
+        delayTime: null,
+        address: null,
+        discount: null,
+        shortProductName: null,
+        currentUserRecord: false,
+        startTime: null
+      }
+      resp_data.result.data.push(data);
+      console.log("成功追加一个对象");
+    });
+    console.log("结束追加字段");
+  } else {
+    console.log("缓存为空");
+  }
 }
 
 $.done({body:JSON.stringify(resp_data)});
