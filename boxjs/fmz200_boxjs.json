@@ -450,28 +450,28 @@
       "settings": [
         {
           "id": "fmz200_TF_notify",
-          "name": "获取令牌成功通知，默认开启",
+          "name": "获取令牌成功通知",
           "val": true,
           "type": "boolean",
           "desc": ""
-        },{
+        },
+        {
           "id": "fmz200_TF_APP_ID",
-          "name": "",
+          "name": "要加入的TF App",
           "val": "",
           "type": "textarea",
           "placeholder": "示例：VCIvwk2g,1SyedSId",
-          "autoGrow": true,
           "rows": 1,
           "desc": "以英文逗号分隔多个key"
         },
         {
           "id": "fmz200_TF_header",
-          "name": "",
+          "name": "TF账号令牌",
           "val": "",
           "type": "textarea",
           "autoGrow": true,
           "rows": 4,
-          "desc": ""
+          "desc": "json格式存储，理论支持多账号"
         }
       ],
       "author": "@fmz200",
