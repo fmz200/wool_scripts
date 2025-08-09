@@ -14,7 +14,7 @@
 const $ = new Env('自动加入TF信息获取');
 const reg1 = /^https:\/\/testflight\.apple\.com\/v3\/accounts\/(.*)\/apps$/;
 const reg2 = /^https:\/\/testflight\.apple\.com\/join\/(.*)/;
-const sendNotify = $.getdata("fmz200_TF_notify") || true;
+const sendNotify = $.getdata("fmz200_TF_notify") == "true";
 
 if (reg1.test($request.url)) {
   console.log(sendNotify);
