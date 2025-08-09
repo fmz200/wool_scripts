@@ -443,11 +443,18 @@
       "id": "fmz200_testflight",
       "name": "TF自动加入",
       "keys": [
+        "fmz200_TF_notify",
         "fmz200_TF_APP_ID",
         "fmz200_TF_header"
       ],
       "settings": [
         {
+          "id": "fmz200_TF_notify",
+          "name": "获取令牌成功通知，默认开启",
+          "val": true,
+          "type": "boolean",
+          "desc": ""
+        },{
           "id": "fmz200_TF_APP_ID",
           "name": "",
           "val": "",

@@ -1,7 +1,7 @@
 /**
  @author fmz200
- @function 获取自动加入TF需要的信息，修改数据存储形式，支持大部分代理工具包括 QX，Loon，Surge，Egern，Stash，ShadowRocket
- @date 2025-06-14 15:27:00
+ @function 获取自动加入TF需要的信息，支持大部分代理工具包括 QX，Loon，Surge，Egern，Stash，ShadowRocket
+ @date 2025-08-10 00:37:00
  @quote https://github.com/DecoAri/JavaScript/blob/main/Surge/TF_keys.js
 
  具体使用步骤
@@ -14,8 +14,10 @@
 const $ = new Env('自动加入TF信息获取');
 const reg1 = /^https:\/\/testflight\.apple\.com\/v3\/accounts\/(.*)\/apps$/;
 const reg2 = /^https:\/\/testflight\.apple\.com\/join\/(.*)/;
+const sendNotify = $.getdata("fmz200_TF_notify") || true;
 
 if (reg1.test($request.url)) {
+  console.log(sendNotify);
   console.log($request.headers);
   $.setdata(null, "fmz200_TF_header");
   const TF_header = {
@@ -28,7 +30,9 @@ if (reg1.test($request.url)) {
   $.setdata(JSON.stringify(TF_header), "fmz200_TF_header");
 
   if ($.getdata("fmz200_TF_header") !== null) {
-    $.msg($.name, "", "令牌获取成功，请关闭脚本！", "");
+    if (sendNotify) {
+      $.msg($.name, "", "令牌获取成功，请关闭脚本！", "");
+    }
   } else {
     $.msg($.name, "", "令牌获取失败，请打开Mitm over HTTP2开关，并重启VPN和TestFlight App！", "");
   }
