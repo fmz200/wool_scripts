@@ -5,7 +5,7 @@
   "icon": "https://avatars.githubusercontent.com/u/57740735?s=60&v=4",
   "repo": "https://github.com/fmz200/wool_scripts",
   "desc": "订阅大多都支持多账号，协定数据格式如下：有主键的用JSON，没有主键的拼接用#分割用@。\n例如{\"uid1\": \"token1\", \"uid2\": \"token2\",\"uid3\": \"token3\"}和uid1#token1@uid2#token2@uid3#token3",
-  "date": "更新日期：2025-07-29 19:00:00",
+  "date": "更新日期：2025-08-10 10:00:00",
   "apps": [
     {
       "id": "fmz200_xiaohongshu",
@@ -515,101 +515,6 @@
       ]
     },
     {
-      "id": "fmz200_ql_sync",
-      "name": "BoxJS与青龙数据同步",
-      "keys": [
-        "ql_sync_keys",
-        "ql_sync_notify",
-        "@ql.ip",
-        "@ql.client_id",
-        "@ql.client_secret",
-        "@ql.username",
-        "@ql.password",
-        "@ql.env",
-        "@ql.mute",
-        "@ql.is_pwd"
-      ],
-      "settings": [
-        {
-          "id": "ql_sync_keys",
-          "name": "需要同步的keys",
-          "val": "",
-          "type": "textarea",
-          "placeholder": "",
-          "autoGrow": true,
-          "rows": 2,
-          "desc": "以英文逗号分隔多个key，例如：key1,key2,key3 \n 如果要增加注释可以用格式@分隔key和注释，例如：key1@remark1,key2@remark2,key3@remark3 \n 以上两种格式可以混用"
-        },
-        {
-          "id": "ql_sync_notify",
-          "name": "是否静默通知",
-          "val": "",
-          "type": "boolean",
-          "placeholder": "true or false",
-          "autoGrow": true,
-          "rows": 1,
-          "desc": "关闭后成功时将不会通知，同步失败会通知（暂时没做）"
-        },
-        {
-          "id": "@ql.is_pwd",
-          "name": "开启密码登陆",
-          "val": false,
-          "type": "boolean",
-          "desc": "同步时，优先使用密码登陆"
-        },
-        {
-          "id": "@ql.ip",
-          "name": "青龙登陆的域名或IP:端口号",
-          "val": "",
-          "type": "text",
-          "placeholder": "111.21.0.32:5700"
-        },
-        {
-          "id": "@ql.client_id",
-          "name": "应用 Client ID",
-          "val": "",
-          "type": "text"
-        },
-        {
-          "id": "@ql.client_secret",
-          "name": "应用 Client Secret",
-          "val": "",
-          "type": "text"
-        },
-        {
-          "id": "@ql.username",
-          "name": "账号",
-          "val": "",
-          "type": "text"
-        },
-        {
-          "id": "@ql.password",
-          "name": "密码",
-          "val": "",
-          "type": "text"
-        }
-      ],
-      "author": "@fmz200",
-      "repo": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/qinglong/ql_sync.js",
-      "icons": [
-        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ql.png",
-        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ql.png"
-      ],
-      "scripts": [
-        {
-          "name": "BoxJS同步到青龙",
-          "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/qinglong/ql_sync.js"
-        }
-      ],
-      "descs_html": [
-        "青龙 docker 的安装方式请移步 tg 频道",
-        "青龙 docker 仓库：【<a href=\"https://github.com/whyour\">github</a>】",
-        "青龙 docker 频道：【<a href=\"https://t.me/jiao_long\",>电报频道</a>】",
-        "去广告交流群：【<a href=\"https://t.me/lanjieguanggao\",>去广告交流群</a>】",
-        "应用client_id，client_secret获取请去青龙面板“系统设置->应用设置”中添加相关参数，优先以openapi方式同步"
-      ]
-    },
-    {
       "id": "fmz200_macat_signin",
       "name": "macat.vip网站签到",
       "keys": [
@@ -631,39 +536,6 @@
       "icons": [
         "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Macat.png",
         "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Macat.png"
-      ]
-    },
-    {
-      "id": "fmz200_freeAppsToday",
-      "name": "今日限免APP",
-      "keys": [
-        "freeAppsTodayKey"
-      ],
-      "descs_html": [
-        "填写key可以使用bark推送，可以对不同平台和更新内容分组推送，不填使用自带通知推送，支持跳转商店"
-      ],
-      "settings": [
-        {
-          "id": "freeAppsTodayKey",
-          "name": "bark的Key",
-          "val": "",
-          "desc": "",
-          "type": "textarea",
-          "autoGrow": false,
-          "rows": 4
-        }
-      ],
-      "author": "@fmz200",
-      "repo": "https://github.com/fmz200/wool_scripts",
-      "scripts": [
-        {
-          "name": "获取今日限免APP",
-          "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/freeAppsToday.js"
-        }
-      ],
-      "icons": [
-        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/AppStore.png",
-        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/AppStore.png"
       ]
     },
     {
@@ -877,109 +749,6 @@
       "icons": [
         "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/WeiboTalk.png",
         "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/WeiboTalk.png"
-      ]
-    },
-    {
-      "id": "fmz200_bilibili_share",
-      "name": "哔哩哔哩共享会员模板",
-      "desc_html": "⚠️使用说明：有会员的用户获取headers发给你后填入下面对应的内容里，点击保存，打开B站测试可用性\n</br>【<a href='https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bilibili/bilibiliShare.js'><font class='red--text'>点我查看使用说明</font></a>】",
-      "keys": [
-        "Cookie",
-        "x-bili-device-bin",
-        "wb_request_time",
-        "Authorization",
-        "User-Agent",
-        "buvid",
-        "x-bili-metadata-bin",
-        "x-bili-locale-bin",
-        "x-bili-network-bin",
-        "x-bili-fawkes-req-bin",
-        "x-bili-trace-id"
-      ],
-      "settings": [
-        {
-          "id": "Cookie",
-          "name": "Cookie",
-          "val": false,
-          "type": "text",
-          "desc": ""
-        },
-        {
-          "id": "x-bili-device-bin",
-          "name": "x-bili-device-bin",
-          "val": "",
-          "type": "text",
-          "desc": ""
-        },
-        {
-          "id": "Authorization",
-          "name": "Authorization",
-          "val": "",
-          "type": "text",
-          "desc": ""
-        },
-        {
-          "id": "User-Agent",
-          "name": "User-Agent",
-          "val": "",
-          "type": "textarea",
-          "autoGrow": true,
-          "rows": 4
-        },
-        {
-          "id": "buvid",
-          "name": "buvid",
-          "val": "",
-          "type": "textarea",
-          "autoGrow": true,
-          "rows": 4
-        },
-        {
-          "id": "x-bili-metadata-bin",
-          "name": "x-bili-metadata-bin",
-          "val": "",
-          "type": "textarea",
-          "autoGrow": true,
-          "rows": 4
-        },
-        {
-          "id": "x-bili-locale-bin",
-          "name": "x-bili-locale-bin",
-          "val": "",
-          "type": "textarea",
-          "autoGrow": true,
-          "rows": 4
-        },
-        {
-          "id": "x-bili-network-bin",
-          "name": "x-bili-network-bin",
-          "val": "",
-          "type": "textarea",
-          "autoGrow": true,
-          "rows": 4
-        },
-        {
-          "id": "x-bili-fawkes-req-bin",
-          "name": "x-bili-fawkes-req-bin",
-          "val": "",
-          "type": "textarea",
-          "autoGrow": true,
-          "rows": 4
-        },
-        {
-          "id": "x-bili-trace-id",
-          "name": "x-bili-trace-id",
-          "val": "",
-          "type": "textarea",
-          "autoGrow": true,
-          "rows": 4
-        }
-      ],
-      "author": "@fmz200",
-      "repo": "https://github.com/fmz200/wool_scripts",
-      "icons": [
-        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/BiliBili.png",
-        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/BiliBili.png"
       ]
     }
   ]
