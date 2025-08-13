@@ -9,7 +9,7 @@
 #!system = iOS, iPadOS
 #!system_version =
 #!loon_version =
-#!date=2025-07-21 10:20:17
+#!date=2025-08-13 22:20:17
 #!support=约9392行
 #!proxy-select=REJECT
 #############################################
@@ -1110,41 +1110,7 @@ DOMAIN-SUFFIX,stat.simba.taobao.com
 DOMAIN-SUFFIX,m-adash.m.taobao.com
 DOMAIN-SUFFIX,adashbc.m.taobao.com
 
-# > 腾讯视频
-# 去除开屏，播放，暂停，青少年等广告。开启下面的规则播放时会有10秒左右的卡顿
-# DOMAIN,pgdt.gtimg.cn,REJECT
-# DOMAIN,ugchsy.gtimg.com,REJECT
-# DOMAIN,adsmind.gdtimg.com,REJECT
-# DOMAIN,btrace.video.qq.com,REJECT
-# DOMAIN,info4.video.qq.com,REJECT
-# DOMAIN,info6.video.qq.com,REJECT
-# DOMAIN-SUFFIX,api.poll.video.qq.com,REJECT
-# DOMAIN,activity.video.qq.com,REJECT
-# DOMAIN,ios.video.mpush.qq.com,REJECT
-# DOMAIN,p.l.qq.com,REJECT
-# DOMAIN,rpt.gdt.qq.com,REJECT
-# DOMAIN-SUFFIX,trace.qq.com,REJECT
-# DOMAIN-SUFFIX,tetrack.qq.com,REJECT
-# DOMAIN-SUFFIX,tpns.tencent.com,REJECT
-# DOMAIN-SUFFIX,stat.tpns.tencent.com,REJECT
-# DOMAIN-SUFFIX,static-res.qq.com,REJECT
-# DOMAIN-SUFFIX,omgmta.qq.com,REJECT
-# DOMAIN-SUFFIX,omgmta1.qq.com,REJECT
-# DOMAIN,tux.qq.com,REJECT
-# DOMAIN,iacc.qq.com,REJECT
-# DOMAIN,p2.l.qq.com,REJECT
-# DOMAIN,v3.gdt.qq.com,REJECT
-# DOMAIN,rmonitor.qq.com,REJECT
-# DOMAIN,xs.gdt.qq.com,REJECT
-# DOMAIN,aegis.qq.com,REJECT
-# DOMAIN,rdelivery.qq.com,REJECT
-# DOMAIN,wallpaper-1258344696.file.myqcloud.com,REJECT
-# DOMAIN,wallpaper-test-1258344696.file.myqcloud.com,REJECT
-# IP-CIDR,183.201.213.194/24,REJECT,no-resolve
-
 # >  腾讯
-DOMAIN-SUFFIX,news.ssp.qq.com
-DOMAIN-SUFFIX,news.l.qq.com
 DOMAIN-SUFFIX,activeqq.3g.qq.com
 DOMAIN-SUFFIX,ad.qq.com
 DOMAIN-SUFFIX,adping.qq.com
@@ -1168,78 +1134,6 @@ DOMAIN-SUFFIX,adver.qq.com
 DOMAIN-SUFFIX,aeventlog.beacon.qq.com
 DOMAIN-SUFFIX,analy.qq.com
 DOMAIN-SUFFIX,astrategy.beacon.qq.com
-DOMAIN-SUFFIX,c.gdt.qq.com
-DOMAIN-SUFFIX,c.gj.qq.com
-DOMAIN-SUFFIX,canvas.gdt.qq.com
-DOMAIN-SUFFIX,d.gdt.qq.com
-DOMAIN-SUFFIX,d3g.qq.com
-DOMAIN-SUFFIX,download.sj.qq.com
-DOMAIN-SUFFIX,dp3.qq.com
-DOMAIN-SUFFIX,eventlog.beacon.qq.com
-DOMAIN-SUFFIX,game.html5.qq.com
-DOMAIN-SUFFIX,ggmmqq.com
-DOMAIN-SUFFIX,j.wit.qq.com
-DOMAIN-SUFFIX,jqmt.qq.com
-DOMAIN-SUFFIX,jrlt.beacon.qq.com
-DOMAIN-SUFFIX,jsqmt.qq.com
-DOMAIN-SUFFIX,lives.l.qq.com
-DOMAIN-SUFFIX,livep.l.qq.com
-DOMAIN-SUFFIX,mi.gdt.qq.com
-DOMAIN-SUFFIX,livep.l.ott.video.qq.com
-DOMAIN-SUFFIX,lives.l.ott.video.qq.com
-DOMAIN-SUFFIX,masdk.3g.qq.com
-DOMAIN-SUFFIX,mfm.video.qq.com
-DOMAIN-SUFFIX,mini2015.qq.com
-DOMAIN-SUFFIX,monitor.uu.qq.com
-DOMAIN-SUFFIX,mqqad.cs0309.html5.qq.com
-DOMAIN-SUFFIX,mqqad.html5.qq.com
-DOMAIN-SUFFIX,mqqadr.reader.qq.com
-DOMAIN-SUFFIX,nc.gdt.qq.com
-DOMAIN-SUFFIX,news.mpush.qq.com
-DOMAIN-SUFFIX,news-l.play.ott.video.qq.com
-DOMAIN-SUFFIX,novelsns.html5.qq.com
-DOMAIN-SUFFIX,oth.update.mdt.qq.com
-DOMAIN-SUFFIX,pcbrowser.dd.qq.com
-DOMAIN-SUFFIX,pmir.3g.qq.com
-DOMAIN-SUFFIX,pvstat.html5.qq.com
-DOMAIN-SUFFIX,q.i.gdt.qq.com
-DOMAIN-SUFFIX,qqshow2-item.qq.com
-DOMAIN-SUFFIX,rm.gdt.qq.com
-DOMAIN-SUFFIX,scdown.qq.com
-DOMAIN-SUFFIX,setting.snswin.qq.com
-DOMAIN-SUFFIX,sngmta.qq.com
-DOMAIN-SUFFIX,strategy.beacon.qq.com
-DOMAIN-SUFFIX,t.gdt.qq.com
-DOMAIN-SUFFIX,t.sj.qq.com
-DOMAIN-SUFFIX,ta.qq.com
-DOMAIN-SUFFIX,tcss.qq.com
-DOMAIN-SUFFIX,tpush.html5.qq.com
-DOMAIN-SUFFIX,updatecenter.qq.com
-DOMAIN-SUFFIX,video.ureport.push.qq.com
-DOMAIN-SUFFIX,video.wap.mpush.qq.com
-DOMAIN-SUFFIX,vlive.qqvideo.tc.qq.com
-DOMAIN-SUFFIX,wap.mpush.qq.com
-DOMAIN-SUFFIX,win.gdt.qq.com
-DOMAIN-SUFFIX,ws.sj.qq.com
-DOMAIN-SUFFIX,wxsnsdy.tc.qq.com
-DOMAIN-SUFFIX,wxsnsdy.video.qq.com
-DOMAIN-SUFFIX,adsmind.tc.qq.com
-DOMAIN-SUFFIX,pingma.qq.com
-DOMAIN-SUFFIX,pingtcss.qq.com
-DOMAIN-SUFFIX,tajs.qq.com
-DOMAIN-SUFFIX,fusion.qq.com
-DOMAIN-SUFFIX,ios.bugly.qq.com
-DOMAIN, safebrowsing.urlsec.qq.com
-DOMAIN, oth.str.mdt.qq.com
-DOMAIN, adsmind.apdcdn.tc.qq.com
-DOMAIN, adsmind.tc.qq.com
-DOMAIN, livep.l.t002.ottcn.com
-DOMAIN, pgdt.ugdtimg.com
-DOMAIN, splashqqlive.gtimg.com
-DOMAIN, vv.video.qq.com
-DOMAIN, wa.gtimg.com
-DOMAIN, wxsnsdy.wxs.qq.com
-DOMAIN, wxsmsdy.video.qq.com
 
 # > 同花顺
 DOMAIN, adm.10jqka.com.cn

@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/filter.list
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2025-07-21 10:00:00
+#!date=2025-08-13 22:20:17
 #!support=约9760行
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
@@ -1151,41 +1151,7 @@ host-suffix, stat.simba.taobao.com, reject
 host-suffix, m-adash.m.taobao.com, reject
 host-suffix, adashbc.m.taobao.com, reject
 
-# > 腾讯视频
-# 去除开屏，播放，暂停，青少年等广告。开启下面的规则播放时会有10秒左右的卡顿
-# host,pgdt.gtimg.cn,REJECT
-# host,ugchsy.gtimg.com,REJECT
-# host,adsmind.gdtimg.com,REJECT
-# host,btrace.video.qq.com,REJECT
-# host,info4.video.qq.com,REJECT
-# host,info6.video.qq.com,REJECT
-# host-SUFFIX,api.poll.video.qq.com,REJECT
-# host,activity.video.qq.com,REJECT
-# host,ios.video.mpush.qq.com,REJECT
-# host,p.l.qq.com,REJECT
-# host,rpt.gdt.qq.com,REJECT
-# host-SUFFIX,trace.qq.com,REJECT
-# host-SUFFIX,tetrack.qq.com,REJECT
-# host-SUFFIX,tpns.tencent.com,REJECT
-# host-SUFFIX,stat.tpns.tencent.com,REJECT
-# host-SUFFIX,static-res.qq.com,REJECT
-# host-SUFFIX,omgmta.qq.com,REJECT
-# host-SUFFIX,omgmta1.qq.com,REJECT
-# host,tux.qq.com,REJECT
-# host,iacc.qq.com,REJECT
-# host,p2.l.qq.com,REJECT
-# host,v3.gdt.qq.com,REJECT
-# host,rmonitor.qq.com,REJECT
-# host,xs.gdt.qq.com,REJECT
-# host,aegis.qq.com,REJECT
-# host,rdelivery.qq.com,REJECT
-# host,wallpaper-1258344696.file.myqcloud.com,REJECT
-# host,wallpaper-test-1258344696.file.myqcloud.com,REJECT
-# IP-CIDR,183.201.213.194/24,REJECT
-
 # >  腾讯
-host-suffix, news.ssp.qq.com, reject
-host-suffix, news.l.qq.com, reject
 host-suffix, activeqq.3g.qq.com, reject
 host-suffix, ad.qq.com, reject
 host-suffix, adping.qq.com, reject
@@ -1209,79 +1175,6 @@ host-suffix, adver.qq.com, reject
 host-suffix, aeventlog.beacon.qq.com, reject
 host-suffix, analy.qq.com, reject
 host-suffix, astrategy.beacon.qq.com, reject
-host-suffix, c.gdt.qq.com, reject
-host-suffix, c.gj.qq.com, reject
-host-suffix, canvas.gdt.qq.com, reject
-host-suffix, d.gdt.qq.com, reject
-host-suffix, d3g.qq.com, reject
-host-suffix, download.sj.qq.com, reject
-host-suffix, dp3.qq.com, reject
-host-suffix, eventlog.beacon.qq.com, reject
-host-suffix, game.html5.qq.com, reject
-host-suffix, ggmmqq.com, reject
-host-suffix, j.wit.qq.com, reject
-host-suffix, jqmt.qq.com, reject
-host-suffix, jrlt.beacon.qq.com, reject
-host-suffix, jsqmt.qq.com, reject
-host-suffix, lives.l.qq.com, reject
-host-suffix, livep.l.qq.com, reject
-host-suffix, mi.gdt.qq.com, reject
-host-suffix, livep.l.ott.video.qq.com, reject
-host-suffix, lives.l.ott.video.qq.com, reject
-host-suffix, masdk.3g.qq.com, reject
-host-suffix, mfm.video.qq.com, reject
-host-suffix, mini2015.qq.com, reject
-host-suffix, monitor.uu.qq.com, reject
-host-suffix, mqqad.cs0309.html5.qq.com, reject
-host-suffix, mqqad.html5.qq.com, reject
-host-suffix, mqqadr.reader.qq.com, reject
-host-suffix, nc.gdt.qq.com, reject
-host-suffix, news.mpush.qq.com, reject
-host-suffix, news-l.play.ott.video.qq.com, reject
-host-suffix, novelsns.html5.qq.com, reject
-host-suffix, oth.update.mdt.qq.com, reject
-host-suffix, pcbrowser.dd.qq.com, reject
-host-suffix, pmir.3g.qq.com, reject
-host-suffix, pvstat.html5.qq.com, reject
-host-suffix, q.i.gdt.qq.com, reject
-host-suffix, qqshow2-item.qq.com, reject
-host-suffix, rm.gdt.qq.com, reject
-host-suffix, scdown.qq.com, reject
-host-suffix, setting.snswin.qq.com, reject
-host-suffix, sngmta.qq.com, reject
-host-suffix, strategy.beacon.qq.com, reject
-host-suffix, t.gdt.qq.com, reject
-host-suffix, t.sj.qq.com, reject
-host-suffix, ta.qq.com, reject
-host-suffix, tcss.qq.com, reject
-host-suffix, tpush.html5.qq.com, reject
-host-suffix, updatecenter.qq.com, reject
-host-suffix, video.ureport.push.qq.com, reject
-host-suffix, video.wap.mpush.qq.com, reject
-host-suffix, vlive.qqvideo.tc.qq.com, reject
-host-suffix, wap.mpush.qq.com, reject
-host-suffix, win.gdt.qq.com, reject
-host-suffix, ws.sj.qq.com, reject
-host-suffix, wxsnsdy.tc.qq.com, reject
-host-suffix, wxsnsdy.video.qq.com, reject
-host-suffix, adsmind.tc.qq.com, reject
-host-suffix, pingma.qq.com, reject
-host-suffix, pingtcss.qq.com, reject
-host-suffix, tajs.qq.com, reject
-host-suffix, fusion.qq.com, reject
-host-suffix, ios.bugly.qq.com, reject
-host, safebrowsing.urlsec.qq.com, reject
-host-suffix, oth.str.mdt.qq.com, reject
-host-suffix, l.qq.com, reject
-host, adsmind.apdcdn.tc.qq.com, reject
-host, adsmind.tc.qq.com, reject
-host, livep.l.t002.ottcn.com, reject
-host, pgdt.ugdtimg.com, reject
-host, splashqqlive.gtimg.com, reject
-host, vv.video.qq.com, reject
-host, wa.gtimg.com, reject
-host, wxsnsdy.wxs.qq.com, reject
-host, wxsmsdy.video.qq.com, reject
 
 # > 同花顺
 host, adm.10jqka.com.cn, reject
