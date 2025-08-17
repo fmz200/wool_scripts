@@ -2414,13 +2414,6 @@ https://apis.lifeweek.com.cn/api/baseConfig/getIosNewConfig url reject
 ^https?:\/\/alt-r\.my\.com\/mobile url reject-dict
 ^https?:\/\/imgx\.jampp\.com\/imgsrv\/tn url reject-img
 
-# > TestFlight
-# hostname = testflight.apple.com
-# TestFlight 国区下载修正
-^https:\/\/testflight\.apple\.com\/v2\/accounts\/.*\/apps\/\d*\/builds\/\d*\/install$ url request-body "storefrontId"\x20:\x20.*, request-body "storefrontId":"143441-19,29",
-# TF账户管理 App更新时提示"APP不可用"问题，解决部分TF兑换错了区域的问题，例如Loon兑换到了国区
-# ^https?:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/ url script-analyze-echo-response https://raw.githubusercontent.com/NobyDa/Script/master/TestFlight/TestFlightAccount.js
-
 # > TT语音
 # hostname = ga-album-cdnqn.52tt.com
 # 开屏广告 个别图片误杀 如开启可自行添加主机名
