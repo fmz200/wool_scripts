@@ -46,11 +46,15 @@ function autoPost(appId) {
     'X-Request-Id': `${TF_header.request_id}`,
     'User-Agent': `${TF_header.tf_ua}`,
   }
+  console.log(`请求URL: ${url}`);
   return new Promise(function (resolve) {
     $.get({url: url, headers: header}, async function (error, resp, data) {
       console.log("❤️ 查询appId情况响应");
+      console.log("1、打印error");
       console.log(error);
+      console.log("2、打印resp");
       console.log(resp);
+      console.log("3、打印data");
       console.log(data);
       if (error == null) {
         if (resp.status === 404) {
