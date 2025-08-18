@@ -25,7 +25,8 @@ if (reg1.test($request.url)) {
     session_id: $request.headers['X-Session-Id'] || $request.headers['x-session-id'],
     session_digest: $request.headers['X-Session-Digest'] || $request.headers['x-session-digest'],
     request_id: $request.headers['X-Request-Id'] || $request.headers['x-request-id'],
-    tf_ua: $request.headers['User-Agent'] || $request.headers['user-agent']
+    tf_ua: $request.headers['User-Agent'] || $request.headers['user-agent'],
+    update_time: formatBeijingDate()
   }
   $.setdata(JSON.stringify(TF_header), "fmz200_TF_header");
 
@@ -55,6 +56,19 @@ if (reg2.test($request.url)) {
 }
 function unique(arr) {
   return Array.from(new Set(arr));
+}
+
+function formatBeijingDate() {
+  return new Date().toLocaleString('zh-CN', {
+    timeZone: 'Asia/Shanghai',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: false
+  }).replace(/(\d+)\/(\d+)\/(\d+) (\d+:\d+:\d+)/, '$3-$1-$2 $4');
 }
 
 // API start
