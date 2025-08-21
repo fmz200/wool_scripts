@@ -3525,12 +3525,12 @@ NetEaseCloudMusic_foll = type=http-response, pattern=^https?:\/\/(ipv4|interface
 小芒APP主页广告 = type=http-response, pattern=https://mgesq.api.mgtv.com/dsl/index.+, script-path=https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/AdBlock/xmApp/xmApp.js, requires-body=true, timeout=60
 
 # > 闲鱼
-商品信息流广告 = type=http-response, pattern=^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.nextfresh\/, script-path=https://klraw.pages.dev/kelv1n1n/script/refs/heads/main/js/goofish.js, requires-body=true
-定位地区页面的信息流广告 = type=http-response, pattern=^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.local\.home\/, script-path=https://klraw.pages.dev/kelv1n1n/script/refs/heads/main/js/goofish.js, requires-body=true
-个人主页 = type=http-response, pattern=^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.idle\.user\.page\.my\.adapter\/, script-path=https://klraw.pages.dev/kelv1n1n/script/refs/heads/main/js/goofish.js, requires-body=true
-首页顶部频道菜单 = type=http-response, pattern=^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.circle\.list\/1\.0, script-path=https://klraw.pages.dev/kelv1n1n/script/refs/heads/main/js/goofish.js, requires-body=true
-商品详情页周边推荐 = type=http-response, pattern=^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.local\.nearby\.itemdetail\.enter\/1\.0, script-path=https://klraw.pages.dev/kelv1n1n/script/refs/heads/main/js/goofish.js, requires-body=true
-搜索结果信息流广告 = type=http-response, pattern=^https:\/\/g-acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\/, script-path=https://klraw.pages.dev/kelv1n1n/script/refs/heads/main/js/goofish.js, requires-body=true
+商品信息流广告 = type=http-response, pattern=^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.nextfresh\/, script-path=https://klraw.pages.dev/kelv1n1n/script/refs/heads/main/js/goofish.js?token=209863, requires-body=true
+定位地区页面的信息流广告 = type=http-response, pattern=^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.local\.home\/, script-path=https://klraw.pages.dev/kelv1n1n/script/refs/heads/main/js/goofish.js?token=209863, requires-body=true
+个人主页 = type=http-response, pattern=^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.idle\.user\.page\.my\.adapter\/, script-path=https://klraw.pages.dev/kelv1n1n/script/refs/heads/main/js/goofish.js?token=209863, requires-body=true
+首页顶部频道菜单 = type=http-response, pattern=^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.circle\.list\/1\.0, script-path=https://klraw.pages.dev/kelv1n1n/script/refs/heads/main/js/goofish.js?token=209863, requires-body=true
+商品详情页周边推荐 = type=http-response, pattern=^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.local\.nearby\.itemdetail\.enter\/1\.0, script-path=https://klraw.pages.dev/kelv1n1n/script/refs/heads/main/js/goofish.js?token=209863, requires-body=true
+搜索结果信息流广告 = type=http-response, pattern=^https:\/\/g-acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\/, script-path=https://klraw.pages.dev/kelv1n1n/script/refs/heads/main/js/goofish.js?token=209863, requires-body=true
 同城页横幅广告 = type=http-response, pattern=^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.local\.flow\.plat\.section, script-path=https://klraw.pages.dev/kelv1n1n/script/refs/heads/main/js/goofish.js?token=209863, requires-body=true
 
 # > 香蕉是一种水果
