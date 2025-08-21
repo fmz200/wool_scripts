@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/filter.list
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2025-08-13 22:20:17
+#!date=2025-08-21 22:37:00
 #!support=约9760行
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
@@ -1527,9 +1527,8 @@ host-suffix, cad.youku.com,REJECT
 host-suffix, sjarvis.taobao.com,REJECT
 host, adsmind.ugdtimg.com, reject
 host, amdc.m.youku.com, reject
-host, apiv4-iyes.youku.com, reject
 host, httpdns.alicdn.com, reject
-host, iyes.youku.com, reject
+host-keyword, iyes.youku.com, reject
 host, m-vali.cp31.ott.cibntv.net, reject
 host, mc.atm.youku.com, reject
 host, vali-g1.cp31.ott.cibntv.net, reject
