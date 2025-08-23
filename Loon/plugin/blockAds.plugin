@@ -3058,6 +3058,7 @@ https?:\/\/(ipv4|interface\d?)\.music\.163.com\/e?api\/ad reject-dict
 # > 米家
 # hostname = home.mi.com
 ^https?:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|carousel\/banners|myTab|openingBanner) reject-dict
+^https?:\/\/home\.mi\.com\/cgi-op\/api\/v1\/resource\/realtime\/openingBanner reject-dict
 
 # > 米读
 # hostname = apiwz.midukanshu.com
