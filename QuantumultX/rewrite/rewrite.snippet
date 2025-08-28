@@ -3301,7 +3301,7 @@ https://mgesq.api.mgtv.com/dsl/index.+ url script-response-body https://raw.gith
 # 小宇宙
 # hostname = api.xiaoyuzhoufm.com
 # 首页净化
-^https?:\/\/api\.xiaoyuzhoufm\.com\/v1\/discovery-feed\/list url jsonjq-response-body '.data |= map(select(.type != "DISCOVERY_HEADER" and .type != "DISCOVERY_BANNER"))'
+^https?:\/\/api\.xiaoyuzhoufm\.com\/v1\/discovery-feed\/list url jsonjq-response-body '.data |= map(select(.type == "DISCOVERY_EPISODE_RECOMMEND" or .type == "EDITOR_PICK"))'
 # 移除开屏广告
 ^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/flash url reject-dict
 # 移除单集总结和ai总结
