@@ -57,7 +57,7 @@ DOMAIN, api.liquidlink.cn
 
 
 # >>>>>>>>>>>>>>> ✅ 1 ✅ <<<<<<<<<<<<<<
-# > 交管12123
+# > 12123
 DOMAIN-SUFFIX, v3.fstats.xyz
 DOMAIN-SUFFIX, wss.haoyundmn.com
 DOMAIN-SUFFIX, new.xiongzhangad.com
@@ -533,7 +533,7 @@ DOMAIN-SUFFIX,www.googleadservices.com
 DOMAIN-SUFFIX,www.google-analytics.com
 DOMAIN, ads.youtube.com
 
-# > 高德
+# > 高德地图
 DOMAIN-SUFFIX,adiu.amap.com
 DOMAIN, aboard.apilocate.amap.com
 DOMAIN, apiinit.amap.com

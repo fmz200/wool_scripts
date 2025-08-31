@@ -52,7 +52,7 @@ host, api.liquidlink.cn, reject
 
 
 # >>>>>>>>>>>>>>> ✅ 1 ✅ <<<<<<<<<<<<<<
-# > 交管12123
+# > 12123
 host-suffix, v3.fstats.xyz, reject
 host-suffix, wss.haoyundmn.com, reject
 host-suffix, new.xiongzhangad.com, reject
@@ -535,7 +535,7 @@ host-suffix, www.googleadservices.com, reject
 host-suffix, www.google-analytics.com, reject
 host, ads.youtube.com, reject
 
-# > 高德
+# > 高德地图
 ;host, restapi.amap.com, reject
 host-suffix, adiu.amap.com, reject
 host, aboard.apilocate.amap.com, reject
