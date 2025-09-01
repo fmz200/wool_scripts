@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@vitalets/google-translate-api": "^9.2.1",
     "adm-zip": "^0.5.10",
     "axios": "^1.7.8",
     "crypto-js": "^4.2.0",
@@ -8,8 +9,10 @@
     "https-proxy-agent": "^7.0.2",
     "node-fetch": "^3.3.1",
     "node-schedule": "^2.1.1",
+    "pinyin": "^4.0.0",
     "request": "^2.88.2",
     "sharp": "^0.32.6",
+    "sqlite3": "^5.1.7",
     "terser": "^5.26.0"
   },
   "name": "wool_scripts",

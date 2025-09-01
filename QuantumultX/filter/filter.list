@@ -20,6 +20,7 @@
 
 # >>>>>>>>>>>>>>> ✅ # ✅ <<<<<<<<<<<<<<
 # > 广告联盟
+# 若有问题自行设置白名单
 host-suffix, miaozhen.com, reject
 host-suffix, ad-sign.byteimg.com, reject
 host-suffix, tos.pstatp.com, reject
@@ -37,7 +38,6 @@ host-suffix, zlsdk.1rtb.net, reject
 host-suffix, ott.cibntv.net, reject
 host-suffix, cdntips.net, reject
 host-suffix, tfogc.com, reject
-# > 收集用户隐私联盟，若有问题自行设置白名单
 host-keyword, volc, reject
 host-keyword, umeng, reject
 
@@ -349,7 +349,8 @@ host, afdconf.baidu.com, reject
 host, httpdns.baidubce.com, reject
 host, lc.map.baidu.com, reject
 
-# > 百度贴吧 屏蔽域名dns查询
+# > 百度贴吧
+# 屏蔽域名dns查询
 IP-CIDR, 180.76.76.200/32, reject
 
 # > 哔哩哔哩
@@ -409,7 +410,7 @@ host-suffix, hoisin.coocaa.com, reject
 host-suffix, hoisin.coocaatv.com, reject
 host, data-hoisin.coocaa.com, reject
 
-# > 车来了（包括小程序）
+# > 车来了
 host-suffix, atrace.chelaile.net.cn, reject
 host, logs.chelaile.net.cn, reject
 host, ad.chelaile.net.cn, reject
@@ -424,7 +425,8 @@ IP-CIDR, 211.161.101.110/32, reject
 # > 叮嗒出行
 host-keyword, image.bianxianmao.com, reject
 
-# > 滴滴青桔（支付界面图片有误杀）
+# > 滴滴青桔
+# 支付界面图片有误杀
 ;host-keyword, pt-starimg.didistatic.com, reject
 ip-cidr, 203.107.1.1/24, reject
 
@@ -446,10 +448,12 @@ host-suffix, bayescom.com, reject
 host, track.tiara.daum.net, reject
 host, track.tiara.kakao.com, reject
 
-# > 朵朵校友圈 微信小程序去广告
+# > 朵朵校友圈
+# 微信小程序去广告
 host-suffix, ad.duoduo.link, reject
 
-# > 盯盯拍 广告联盟已包含
+# > 盯盯拍
+# 广告联盟已包含
 
 # > 叮咚买菜
 host, trackercollect.ddxq.mobi, reject
@@ -507,7 +511,7 @@ host-suffix, gz-data.com, reject
 # > GrowingIO
 host-suffix, giocdn.com, reject
 
-# > 光大银行阳光惠生活
+# > 光大银行 阳光惠生活
 host-keyword, talk.bz.getui.com, reject
 
 # > 谷歌
@@ -584,7 +588,8 @@ host, adx.hupu.com, reject
 host, adx-api.hupu.com, reject
 host, goblin.hupu.com, reject
 
-# > 虎牙直播 开屏广告
+# > 虎牙直播
+# 开屏广告
 host, pp-cdnfile2pcdn.msstatic.com, reject
 host, livewebbs2pcdn.msstatic.com, reject
 host, huyafile.msstatic.com, reject
@@ -592,10 +597,12 @@ host, livewebbs2.msstatic.com, reject
 host, business.msstatic.com, reject
 host-suffix, v1d.szbdyd.com, reject
 
-# > 哈啰 大部分图片无法正常加载
+# > 哈啰
+# 大部分图片无法正常加载
 ;host-keyword, assets.51downapp.cn, reject
 
-# > 黄油相机 #开屏广告 感谢#Dragon分享
+# > 黄油相机
+# 开屏广告 感谢#Dragon分享
 host-suffix, anythinktech.com, reject
 host-suffix, adkwai.com, reject
 host-suffix, mob.com, reject
@@ -762,7 +769,8 @@ host-suffix, webstat.kuwo.cn, reject
 host-suffix, mobilead.kuwo.cn, reject
 host-suffix, rich.kuwo.cn, reject
 
-# > 酷安 广告联盟已包含
+# > 酷安
+# 广告联盟已包含
 
 
 
@@ -772,7 +780,8 @@ host, a.wkanx.com, reject
 host, cwx.lianwangtech.com, reject
 host, c1wx.lianwangtech.com, reject
 
-# > 蓝基因（弹窗还在，需要手动关闭）
+# > 蓝基因
+# 弹窗还在，需要手动关闭
 host-keyword, medicine.lanjiyin.com.cn, reject
 
 # > 两步路
@@ -804,7 +813,8 @@ host-suffix, mads.meituan.com, reject
 host-suffix, dreport.meituan.net, reject
 host-suffix, d.meituan.net, reject
 
-# > 美颜相机 去首页和轮播广告
+# > 美颜相机
+# 去首页和轮播广告
 host, adui.tg.meitu.com, reject
 host, aaid.uyunad.com, reject
 
@@ -923,12 +933,11 @@ host, imgad0.pcauto.com.cn, reject
 host, imgad0.pconline.com.cn, reject
 host, ivy.pchouse.com.cn, reject
 
-# > 皮皮虾（推荐视频不能预览）
+# > 皮皮虾
+# 推荐视频不能预览
 host-keyword, log-api.pangolin-sdk-toutiao-b.com, reject
 host-keyword, log-api.pangolin-sdk-toutiao.com, reject
 host-keyword, api-access.pangolin-sdk-toutiao.com, reject
-
-# > 皮皮虾（比较激进，需要的自己开启）
 ;host-keyword, snssdk.com, reject
 ;host-keyword, mssdk.bytedance.com, reject
 ;host-keyword, api.ribaoapi.com, reject
@@ -937,11 +946,7 @@ host-keyword, api-access.pangolin-sdk-toutiao.com, reject
 ;host-keyword, mssdk-bu.bytedance.com, reject
 ;host-keyword, 365yg.com, reject
 ;host-keyword, ppx.byteimg.com, reject
-;host-keyword, i.snssdk.com, reject,
-
-# > 影响端传媒正常运行，默认关闭
-;host-suffix, cloudfront.net, reject
-
+;host-keyword, i.snssdk.com, reject
 
 
 
@@ -1070,7 +1075,8 @@ host-suffix, push-service-ios.sginput.qq.com, reject
 # > 深圳通微信小程序
 host-suffix, wxsnsdythumb.wxs.qq.com, reject
 
-# > 收钱吧 买单小程序去广告
+# > 收钱吧
+# 买单小程序去广告
 host, ads-shopping.shouqianba.com, reject
 
 # > 什么值得买
@@ -1088,7 +1094,7 @@ host, ynuf.aliapp.org, REJECT
 
 
 # >>>>>>>>>>>>>>> ✅ T ✅ <<<<<<<<<<<<<<
-# > TubeMax  感谢@可莉分享
+# > TubeMax
 host-suffix, adjust.com, reject
 host-suffix, applvn.com, reject
 host-suffix, app-measurement.com, reject
@@ -1329,12 +1335,6 @@ host-keyword, paradisestatic.vivo.com.cn, reject
 
 
 # >>>>>>>>>>>>>>> ✅ W ✅ <<<<<<<<<<<<<<
-# > 万能钥匙专业版
-# 感谢【All in 梭哈】分享
-host-suffix, mi.gdt.qq.com, reject
-# 去除导航栏免费短剧
-host, taichi.51y5.net, reject
-
 # > WiFi万能钥匙
 host-keyword, app.51y5.net, reject
 host-keyword, apiinit.amap.com, reject
@@ -1354,6 +1354,11 @@ host-keyword, insurance.lianwifi.com, reject
 host-keyword, config.51y5.net, reject
 host-keyword, static.wkanx.com, reject
 host-keyword, config.y5en.com, reject
+# 万能钥匙专业版
+# 感谢【All in 梭哈】分享
+host-suffix, mi.gdt.qq.com, reject
+# 去除导航栏免费短剧
+host, taichi.51y5.net, reject
 
 # > 微博
 host-suffix, fastimage.uve.weibo.com, reject
@@ -1417,11 +1422,13 @@ host-suffix, bingads.microsoft.com, reject
 host-suffix, rads.msn.com, reject
 host, mobileads.msn.com, reject
 
-# > 歪麦去开屏 
+# > 歪麦霸王餐
+# 去开屏
 host-suffix, ad.gameley.com, reject
 host-suffix, zlsdk.1rtb.net, reject
 
-# > 威锋 广告联盟已包含
+# > 威锋
+# 广告联盟已包含
 
 
 
@@ -1479,10 +1486,9 @@ host, sax.sina.com.cn, reject
 host, saxs.sina.com.cn, reject
 host, saxn.sina.com.cn, reject
 
-# > 雪球（可以去掉倒计时，但是误杀很多图片，默认关闭）
+# > 雪球
+# 可以去掉倒计时，但是误杀很多图片，默认关闭
 ;host-keyword, xqimg.imedao.com, reject
-
-# > 向日葵 见重写
 
 
 
@@ -1605,7 +1611,8 @@ host-suffix, mdrecv.app.cntvwb.cn, reject
 host-suffix, sdapprecv.app.cntvwb.cn, reject
 host-suffix, vdapprecv.app.cntvwb.cn, reject
 
-# > 一刻相册 广告联盟已包含
+# > 一刻相册
+# 广告联盟已包含
 
 
 
@@ -1656,7 +1663,8 @@ host-keyword, client-dmp.suishenyun.cn, reject
 host-keyword, pc.suishenyun.net, reject
 host-keyword, v0-client-lz.rili.cn, reject
 
-# > 招钱进宝 广告联盟已包含
+# > 招钱进宝
+# 广告联盟已包含
 
 # > 真不卡
 host-suffix, ttayy.cn, reject
