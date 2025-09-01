@@ -1,0 +1,29 @@
+#!name=七猫小说
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partQ/QiMaoNovel.snippet
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+
+host, cdn-new-ad.wtzw.com, REJECT
+host, a-remad.qm989.com, REJECT
+host, mobads.baidu.com, REJECT
+host-suffix, gdt.qq.com, REJECT
+host, qzs.gdtimg.com, REJECT
+host, mobads-pre-config.cdn.bcebos.com, REJECT
+host, pgdt.ugdtimg.com, REJECT
+
+# 删除了域名lf-cdn-tos.bytescm.com，原因是无法MITM
+^https?:\/\/open\.e\.kuaishou\.cn\/rest\/e\/v3\/open\/univ url reject
+^https?:\/\/api-access\.pangolin-sdk-toutiao-b\.com\/api\/ad\/union\/sdk\/get_ads url reject
+^https?:\/\/api-access\.(pangolin-sdk-toutiao|pangolin-sdk-toutiao1)\.com\/api\/ad url reject
+^https?:\/\/dsp\-x\.jd\.com\/adx\/sdk url reject
+^https?:\/\/api\-cfg\.wtzw\.com\/v1\/(adv|reward|operation) url reject
+^https?:\/\/p1\-lm\.adukwai\.com\/bs2\/adUnionVideo url reject
+^https?:\/\/lf\-cdn\-tos\.bytescm\.com\/obj\/static\/ad url reject
+
+hostname = open.e.kuaishou.cn, api-access.pangolin-sdk-toutiao-b.com, api-access.pangolin-sdk-toutiao.com, api-access.pangolin-sdk-toutiao1.com, dsp-x.jd.com,api-cfg.wtzw.com, p1-lm.adukwai.com, lf-cdn-tos.bytescm.com

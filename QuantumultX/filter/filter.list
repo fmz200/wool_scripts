@@ -1655,7 +1655,7 @@ IP-CIDR, 122.229.29.89/32, reject
 ;host-suffix, im.jpush.cn, reject
 ;host-suffix, jpush.html5.qq.com, reject
 
-# > 中华万年历广告
+# > 中华万年历
 host-keyword, lkme.cc, reject
 host-keyword, api.freed.so, reject
 host-keyword, log-dmp.suishenyun.cn, reject

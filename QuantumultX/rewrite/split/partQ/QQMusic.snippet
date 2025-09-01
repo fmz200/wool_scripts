@@ -1,0 +1,53 @@
+#!name=QQ音乐
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partQ/QQMusic.snippet
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+
+host, adstats.tencentmusic.com, REJECT
+host, ad.tencentmusic.com, REJECT
+host, adcdn.tencentmusic.com, REJECT
+host, adcdn6.tencentmusic.com, REJECT
+host, adexpo.tencentmusic.com, REJECT
+host, adclick.tencentmusic.com, REJECT
+host, otheve.beacon.qq.com, REJECT
+host, monitor.music.qq.com, REJECT
+host, stat.y.qq.com, REJECT
+host, tmead.y.qq.com, REJECT
+host, oth.str.mdt.qq.com, REJECT
+host, h.trace.qq.com, REJECT
+host, sdk.e.qq.com, REJECT
+host, p.l.qq.com, REJECT
+host, us.l.qq.com, REJECT
+host, tangram.e.qq.com, REJECT
+host, tmeadbak.y.qq.com, REJECT
+host-suffix, imtmp.net, REJECT
+host, tmeadcomm.y.qq.com, reject
+host, ad.tencentmusic.com, reject
+host, adstats.tencentmusic.com, reject
+host, tmead.y.qq.com, reject
+host-suffix, rqd.qq.com, reject
+host-suffix, wup.imtt.qq.com, reject
+host-suffix, gdt.qq.com, reject
+host-suffix, android.rqd.qq.com, reject
+host-suffix, e.qq.com, reject
+host-suffix, beacon.qq.com, reject
+host-suffix, v.gdt.qq.com, reject
+host, amsweb-cdn-gz-1258344696.file.myqcloud.com, REJECT
+host, wallpaper-1258344696.file.myqcloud.com, REJECT
+host, xs.gdt.qq.com,REJECT
+IP-CIDR, 120.222.240.171/32, REJECT
+
+^https?:\/\/us\.l\.qq\.com\/exapp url reject
+^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/t_splash_info\/ url reject
+^https?:\/\/.+?\/music\/common\/upload\/t_splash_info\/ url reject
+^https?:\/\/y\.gtimg\.cn\/music\/common\/\/upload\/kg_ad/.*?\d{4}\.jpg url reject-img
+^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/targeted_ads url reject-img
+^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/music\/common\/upload\/t_splash_info\/ url reject
+
+hostname = us.l.qq.com, y.gtimg.cn

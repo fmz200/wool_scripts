@@ -1,0 +1,21 @@
+#!name=苏e行
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partS/SuEHang.snippet
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+
+# 需卸载重装，有缓存
+^https?:\/\/ad\.shunchangzhixing\.com\/getAd url reject-dict
+^https?:\/\/api\.bwton\.com\/bff\/app\/h5\/v1\/station\/goods url reject-dict
+# 开屏广告 感谢【alist.choc.ga】分享
+^https?:\/\/api\.bwton\.com\/bas\/ad url reject-200
+# 软件内推广广告 感谢【为什么要看头像呢】分享
+^https?:\/\/api\.bwton\.com\/bff\/app\/index\/goods url reject-dict
+^https?:\/\/api\.bwton\.com\/bff\/app\/index\/recommend url reject-dict
+
+hostname = ad.shunchangzhixing.com, api.bwton.com

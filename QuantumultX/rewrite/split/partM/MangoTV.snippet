@@ -1,0 +1,66 @@
+#!name=芒果TV
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partM/MangoTV.snippet
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+
+host, dflow.bz.mgtv.com, reject
+host, encounter.bz.mgtv.com, reject
+host, floor.bz.mgtv.com, reject
+host, img.da.mgtv.com, reject
+host, layer.bz.mgtv.com, reject
+host, mob.bz.mgtv.com, reject
+host, mobile.da.mgtv.com, reject
+host, rc-topic-api.bz.mgtv.com, reject
+host, v2.da.mgtv.com, reject
+host, video.da.mgtv.com, reject
+host, vip.bz.mgtv.com, reject
+host, ys.da.mgtv.com, reject
+host-suffix, mobile2.da.mgtv.com, reject
+host-suffix, cdn.cmop.mgtv.com, reject
+host-suffix, cmop.mgtv.com, reject
+host-suffix, imgaliyun.da.mgtv.com, reject
+host-suffix, imgaliyun.res.mgtv.com, reject
+host-suffix, m2.da.mgtv.com, reject
+host-suffix, mobaliyun.res.mgtv.com, reject
+host-suffix, pc.da.mgtv.com, reject
+host-suffix, pc1.da.mgtv.com, reject
+host-suffix, pcvideoaliyun.titan.mgtv.com, reject
+host-suffix, pcvideoyd.titan.mgtv.com, reject
+host-suffix, pcweb.v1.mgtv.com, reject
+host-suffix, py.da.mgtv.com, reject
+host-suffix, web.da.mgtv.com, reject
+host-suffix, x.da.mgtv.com, reject
+host-suffix, y.da.mgtv.com, reject
+host-suffix, da.mgtv.com, reject
+
+# 无用请求
+^https?:\/\/[\d\.]+:\d{5}\/\?cmd=indexes url reject
+# 首页左上角推广
+^https?:\/\/[\d\.]+\/odin\/c1\/(channel\/ads|skin\/config)\? url reject-dict
+# 底部tab红点
+^https?:\/\/damang\.api\.mgtv\.com\/station\/album\/red\/dot\? url reject-dict
+# 播放器界面
+^https?:\/\/hb-boom\.api\.mgtv\.com\/release\/pullReleaseInfo url reject-dict
+# 我的页面
+^https?:\/\/me\.bz\.mgtv\.com\/v3\/module\/list\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js
+# 首页信息流,顶部tab
+^https?:\/\/mob-st\.bz\.mgtv\.com\/odin\/c1\/channel\/index\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js
+^https?:\/\/dc2?\.bz\.mgtv\.com\/dynamic\/v1\/channel\/(index|vrsList)\/\w url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js
+# 底部tab
+^https?:\/\/mobile\.api\.mgtv\.com\/mobile\/config\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js
+# 升级弹窗
+^https?:\/\/mobile\.api\.mgtv\.com\/v2\/mobile\/checkUpdate\? url reject-dict
+# 播放详情页
+^https?:\/\/mobile\.api\.mgtv\.com\/v10\/video\/info\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js
+^https?:\/\/mobile-thor\.api\.mgtv\.com\/v1\/vod\/info\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js
+# 搜索框填充词
+^https?:\/\/mobileso\.bz\.mgtv\.com\/spotlight\/search\/v1\? url reject-dict
+^https?:\/\/mobileso\.bz\.mgtv\.com\/mobile\/recommend\/v2\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js
+
+hostname = *.mgtv.com

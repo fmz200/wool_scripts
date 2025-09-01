@@ -1,0 +1,23 @@
+#!name=飞客茶馆
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partF/FeiKeChaGuan.snippet
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+
+^https?:\/\/ptf\.flyertrip\.com\/common\/cf\/.*.jpg url reject-200
+^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=advis url reject
+^https?:\/\/47\.100\.65\.202\/api\/mobile\/index\.php\?version=\d&mobile=yes&module=basicdata&type=forumlist url response-body adv response-body fmz200
+^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=threadpost&.+?&page=1 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/fly.js
+^https?:\/\/www\.flyert\.com\/.*\.php\?module=advis url reject-dict
+^https?:\/\/www\.flyert\.com(\.cn)?\/.*\.php\?module=advis url reject-dict
+^https?:\/\/www\.flyert\.com(\.cn)?\/.*plugin url script-response-body https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/flyert.js
+# 飞智游戏厅
+# 开屏 需要卸载重装
+^https:\/\/api\.flydigi\.com\/android\/v2\/ad url reject-dict
+
+hostname = api.flydigi.com

@@ -1,0 +1,23 @@
+#!name=斗鱼直播
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partD/DouyuLive.snippet
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+
+^https?:\/\/daoyu\.sdo\.com\/api\/userCommon\/getAppStartAd url reject
+^https?:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo url reject-dict
+^https?:\/\/staticlive\.douyucdn\.cn\/upload\/signs\/ url reject
+^https?:\/\/staticlive\.douyucdn\.cn\/.+\/getStartSend url reject
+^https?:\/\/staticlive\.douyucdn\.cn\/.+?\/getStartSend url reject-img
+^https?:\/\/capi\.douyucdn\.cn\/lapi\/sign\/app(api)?\/getinfo\?client_sys=ios url reject
+^https?:\/\/capi\.douyucdn\.cn\/api\/ios_app\/check_update url reject-img
+^https?:\/\/capi\.douyucdn\.cn\/api\/v1\/getStartSend?client_sys=ios url reject-img
+^https?:\/\/douyucdn\.cn\/.+\/appapi\/getinfo url reject
+^https?:\/\/douyucdn\.cn\/.+?\/appapi\/getinfo url reject-img
+
+hostname = daoyu.sdo.com, rtbapi.douyucdn.cn, staticlive.douyucdn.cn, capi.douyucdn.cn, douyucdn.cn

@@ -1,0 +1,20 @@
+#!name=悠洗APP
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partY/YouXiAPP.snippet
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+
+# 净化 感谢【TEXAS】分享
+^https?:\/\/api\.ulife\.group\/signintask\/adServing url reject-dict
+^https?:\/\/api\.ulife\.group\/auth\/account\/getUpgradeStrategy url reject-dict
+^https?:\/\/api\.ulife\.group\/market\/frontEntrance\/getThirdAdvertising\?displayPort=1&type=15 url reject-dict
+^https?:\/\/api\.ulife\.group\/market\/memberCard\/listMemberCard\?isShowSecondaryCard=1 url reject-dict
+^https?:\/\/api\.ulife\.group\/auth\/account\/entrance url reject-dict
+^https?:\/\/api\.ulife\.group\/market\/homeIconDetail\/list\/v7 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/yx.js
+
+hostname = api.ulife.group

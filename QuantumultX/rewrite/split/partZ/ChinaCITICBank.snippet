@@ -1,0 +1,24 @@
+#!name=中信银行
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partZ/ChinaCITICBank.snippet
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+
+;host-suffix, sis.jpush.io, reject
+;host-suffix, s.jpush.cn, reject
+;host-suffix, jpush.cn, reject
+;host-suffix, im64.jpush.cn, reject
+;host-suffix, im.jpush.cn, reject
+;host-suffix, jpush.html5.qq.com, reject
+
+^https?:\/\/wap.bank\.ecitic\.com:6443\/NMBFOServer\/cbframework\.do\?act=CUBEPAGEDATA url reject-200
+# 开屏广告
+^https:\/\/imcs\.citicbank\.com\/cloud\/([a-fA-F0-9]{32})\.(jpg|png) url reject
+^https?:\/\/imcs\.citicbank\.com\/cloud\/.+(1125.+2436|1242.+2688|750.+1638|563.+1218) url reject-dict
+
+hostname = wap.bank.ecitic.com, imcs.citicbank.com

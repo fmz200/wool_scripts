@@ -1568,7 +1568,7 @@ DOMAIN, adshows.21cn.com
 IP-CIDR, 122.229.8.47/32, no-resolve
 IP-CIDR, 122.229.29.89/32, no-resolve
 
-# > 中华万年历广告
+# > 中华万年历
 DOMAIN-KEYWORD,lkme.cc
 DOMAIN-KEYWORD,api.freed.so
 DOMAIN-KEYWORD,log-dmp.suishenyun.cn

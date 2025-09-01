@@ -1,0 +1,17 @@
+#!name=丰巢
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partF/FengChao.snippet
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+
+^https:\/\/dsp\.fcbox\.com\/adSearch\/get\? url reject
+^https:\/\/external\.fcbox\.com\/wxgw\/post\/suggestion\/query url reject
+# 已无法MITM
+^https?:\/\/consumer\.fcbox\.com\/v\d\/ad\/ url reject
+
+hostname = external.fcbox.com, dsp.fcbox.com, consumer.fcbox.com

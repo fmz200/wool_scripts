@@ -1,0 +1,32 @@
+#!name=央视
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partY/CCTV.snippet
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+
+host, galaxy.bjcathay.com, reject
+host, mdrecv.app.cntvwb.cn, reject
+host, sdapprecv.app.cntvwb.cn, reject
+host, vdapprecv.app.cntvwb.cn, reject
+host-suffix, a.cctv.com, reject
+host-suffix, ad.cctv.com, reject
+host-suffix, ad.cntv.cn, reject
+host-suffix, adguanggao.eee114.com, reject
+host-suffix, afp.qiyi.com, reject
+host-suffix, cctv.adsunion.com, reject
+host-suffix, d.cntv.cn, reject
+host-suffix, de.pandora.xiaomi.com, reject
+host-suffix, mishop.pandora.xiaomi.com, reject
+host-suffix, cws-cctv.conviva.com, reject
+host-suffix, mdrecv.app.cntvwb.cn, reject
+host-suffix, sdapprecv.app.cntvwb.cn, reject
+host-suffix, vdapprecv.app.cntvwb.cn, reject
+
+^https?:\/\/www\.cntv\.cn\/nettv\/adp\/ url reject-200
+
+hostname = www.cntv.cn

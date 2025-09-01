@@ -1,0 +1,55 @@
+#!name=番茄小说
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partF/FanQieNovel.snippet
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+
+host-suffix, byteimg.com, DIRECT
+host, i.snssdk.com, REJECT
+host, i-lq.snssdk.com, REJECT
+host, dig.bdurl.net, REJECT
+host, activity-ag.awemeughun.com, REJECT
+host, mcs.snssdk.com, REJECT
+host, tnc3-alisc1.snssdk.com, REJECT
+host, security-lq.snssdk.com, REJECT
+host, tnc3-aliec2.snssdk.com, REJECT
+#host, is.snssdk.com, REJECT
+host, i.snssdk.com, REJECT
+host, v6-novelapp.ixigua.com, REJECT
+host-suffix, novelapp.ixigua.com, REJECT
+host-suffix, default.ixigua.com, REJECT
+host, msync-im1-vip6-std.easemob.com, REJECT
+host, apd-pcdnwxlogin.teg.tencent-cloud.net, REJECT
+host, api.iegadp.qq.com, REJECT
+host-suffix, byteorge.com, REJECT
+# 下面两条误杀严重导致懂车帝无法正常使用
+#host-suffix, bytegoofy.com, REJECT
+#host-suffix, bytedance.com, REJECT
+IP-CIDR, 49.71.37.101/32, REJECT
+IP-CIDR, 117.71.105.23/32, REJECT
+IP-CIDR, 218.94.207.205/32, REJECT
+IP-CIDR, 117.92.229.188/32, REJECT
+IP-CIDR, 101.36.166.16/32, REJECT
+IP-CIDR, 180.96.2.114/32, REJECT
+
+# 去章末广告
+^https?:\/\/.+\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/(get_ads|stats|settings)\/ url reject
+^https?:\/\/.+\.pglstatp-toutiao\.com\/.+\/toutiao\.mp4 url reject
+^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(obj|img)\/(ad-app-package|ad)\/.+ url reject
+^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(obj|img)\/web\.business\.image\/.+ url reject
+^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/obj\/ad-pattern\/renderer url reject
+^https?:\/\/gurd\.snssdk\.com\/src\/server\/v3\/package url reject
+^https?:\/\/.+\.byteimg.com/tos-cn-i-1yzifmftcy\/(.+)-jpeg\.jpeg url reject
+^https?:\/\/.+\.pstatp\.com\/obj\/mosaic-legacy\/.+\?from\=ad url reject
+^https?:\/\/.+\.pstatp\.com\/bytecom\/resource\/track_log\/src\/.+ url reject
+^https?:\/\/.+\.snssdk\.com\/video\/play\/1\/toutiao\/.+\/mp4 url reject
+^https?:\/\/.+\.snssdk.com\/api\/ad\/.+ url reject
+^https?:\/\/.+\.byteimg\.com\/ad-app-package url reject
+^https?:\/\/.+\.byteimg\.com\/web\.business\.image url reject
+
+hostname = *.pangolin-sdk-toutiao.com, *.pangolin-sdk-toutiao.*, *.pstatp.com, *.pstatp.com.*, *.pglstatp-toutiao.com.*, *.pglstatp-toutiao.com, gurd.snssdk.com, gurd.snssdk.com.*, i-lq.snssdk.com, i-lq.snssdk.com.*, *default.ixigua.com

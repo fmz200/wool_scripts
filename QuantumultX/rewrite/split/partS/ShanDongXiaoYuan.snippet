@@ -1,0 +1,25 @@
+#!name=闪动校园
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partS/ShanDongXiaoYuan.snippet
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+
+# 感谢【𝔐𝔞𝔨𝔞𝔟𝔞 𝔨𝔞】分享
+# 去除ai视频
+^https:\/\/api\.huachenjie\.com\/run-front\/ai\/getAICategory url reject-dict
+# 去除顶部横幅
+^https:\/\/api\.huachenjie\.com\/run-front\/home\/sports\/getPopup url reject-dict
+# 去除首页广告
+^https:\/\/api\.huachenjie\.com\/run-front\/ad url reject-dict
+# 去除“我”页面下方福袋
+^http:\/\/ad\.shunchangzhixing\.com\/getAd url reject-dict
+# 去除开屏广告
+^https:\/\/open\.e\.kuaishou\.cn\/rest\/e\/v3\/open url reject-dict
+^https:\/\/zlsdk\.1rtb\.net\/sdk\/req_ad\?sdk_version=\d+\.\d+\.\d+\.\d+&device_os=iOS&accept_ad_type=\d+&app_id=\d+&pid=\d+&sdk_version_code=\d+ url reject-dict
+
+hostname = api.huachenjie.com, open.e.kuaishou.cn, ad.shunchangzhixing.com, zlsdk.1rtb.net

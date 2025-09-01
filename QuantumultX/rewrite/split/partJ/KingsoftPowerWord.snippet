@@ -1,0 +1,27 @@
+#!name=金山词霸
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partJ/KingsoftPowerWord.snippet
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+
+host, ad-stat.ksosoft.com, reject
+host, img.auction-ads.wpscdn.cn, reject
+host, counter.kingsoft.com, reject
+host, counter.ksosoft.com, reject
+host, minfo.wps.cn, reject
+host, mobad.ijinshan.com, reject
+host, ups.ksmobile.net, reject
+host, ws.ksmobile.net, reject
+
+^https?:\/\/dict-mobile\.iciba\.com\/interface\/index\.php\?.+(c=ad|collectFeedsAdShowCount|KSFeedsAdCardViewController) url reject
+^https?:\/\/mobile-pic\.cache\.iciba\.com\/feeds_ad\/ url reject
+^https?:\/\/service\.iciba\.com\/popo\/open\/screens\/v\d\?adjson url reject-200
+^https?:\/\/\w+?\.kingsoft-office-service\.com\/ad url reject-200
+^https?:\/\/.+?\.kingsoft-office-service\.com url reject
+
+hostname = dict-mobile.iciba.com, mobile-pic.cache.iciba.com, service.iciba.com, *.kingsoft-office-service.com

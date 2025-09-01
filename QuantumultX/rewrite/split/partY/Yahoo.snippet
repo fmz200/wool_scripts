@@ -1,0 +1,24 @@
+#!name=雅虎
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partY/Yahoo.snippet
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+
+host-suffix, adserver.yahoo.com, reject
+host-suffix, adspecs.yahoo.com, reject
+host-suffix, advertising.yahoo.com, reject
+host-suffix, gemini.yahoo.com, reject
+host, admarketing.yahoo.net, reject
+host, ads.auctions.yahoo.com, reject
+host, ads.finance.yahoo.com, reject
+host, ads.yahoo.com, reject
+host, ads.yahoo.de, reject
+
+^https?:\/\/m\.yap\.yahoo\.com\/v\d{2}\/getAds\.do url reject
+
+hostname = m.yap.yahoo.com

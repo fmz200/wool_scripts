@@ -1,0 +1,27 @@
+#!name=书旗小说
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partS/ShuQiNovel.snippet
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+
+^https?:\/\/ut2\.shuqistat\.com\/.+\.gif url reject
+^https?:\/\/dsp\.toutiao\.com\/api\/xunfei\/ads\/ url reject
+^https?:\/\/sf3-be-pack\.pglstatp-toutiao\.com\/img\/ad\.union\.api url reject
+^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/.+ url reject
+^https?:\/\/sq\.sljkj\.com\/api\/sdk\/ads2 url reject
+^https?:\/\/ocean\.shuqireader\.com\/api\/ad\/adserver\/.+ url reject
+^https?:\/\/ocean\.shuqireader\.com\/api\/route\/iosReadPage\/ad.+ url reject
+^https?:\/\/.+\.pglstatp-toutiao\.com url reject
+^https?:\/\/img-tailor\.11222\.cn\/pm\/app\/.+\.gif url reject
+^https?:\/\/img-tailor\.11222\.cn\/cms\/upload\/img\/.+ url reject
+^https?:\/\/message\.shuqireader\.com\/message\/.+ url reject
+^https?:\/\/101\.91\.69\.26:8080\/.+ url reject
+^https?:\/\/feedback\.uc\.cn\/feedback\/api\/get_unread_status url reject
+^https?:\/\/.+\.shuqireader\.com\/sapi\/.+ url reject
+
+hostname = ut2.shuqistat.com, dsp.toutiao.com, sf3-be-pack.pglstatp-toutiao.com, api-access.pangolin-sdk-toutiao.com, sq.sljkj.com, ocean.shuqireader.com, img-tailor.11222.cn, message.shuqireader.com, feedback.uc.cn, *.shuqireader.com, 101.91.69.26

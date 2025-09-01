@@ -1,0 +1,15 @@
+#!name=蜗牛睡眠
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partW/SnailSleep.snippet
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+
+^https?:\/\/snailsleep\.net\/snail\/v\d\/adTask\/ url reject
+^https?:\/\/snailsleep\.net\/snail\/v\d\/screen\/qn\/get\? url reject
+
+hostname = snailsleep.net

@@ -1,0 +1,19 @@
+#!name=到梦空间
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partD/DaoMengKongJian.snippet
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+
+# 开屏广告 感谢【企鹅】分享
+^https?:\/\/appdmkj\.5idream\.net\/appPic\/homepage url reject-dict
+# 更新弹窗 感谢【企鹅】分享
+^https?:\/\/appdmkj\.5idream\.net\/v2\/login\/message\/tip url reject-dict
+# 我的页面广告
+^https?:\/\/appdmkj\.5idream\.net\/v3\/user\/advertising\/list url reject-dict
+
+hostname = appdmkj.5idream.net

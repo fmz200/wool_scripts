@@ -1,0 +1,22 @@
+#!name=美柚
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partM/Meiyou.snippet
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+
+host, ad.seeyouyima.com, reject
+
+^http:\/\/x\.seeyouyima\.com\/adx\/staticstics\? url reject
+^https:\/\/axxd\.xmseeyouyima\.com\/ad\/ url reject
+^https:\/\/axxd\.xmseeyouyima\.com\/ad_statistics\? url reject
+^https:\/\/axxd\.xmseeyouyima\.com\/v1\/getad\? url reject
+^https:\/\/axxd\.xmseeyouyima\.com\/pregetad\? url reject
+^https:\/\/config-service\.seeyouyima\.com\/api\/configs\/batch\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/meiyou/meiyou_ads.js
+^https:\/\/config-service\.seeyouyima\.com\/api\/configs\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/meiyou/meiyou_ads.js
+
+hostname = x.seeyouyima.com, axxd.xmseeyouyima.com

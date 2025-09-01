@@ -1,0 +1,16 @@
+#!name=网易考拉
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partW/NetEaseKaola.snippet
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+
+^https?:\/\/kaola-haitao\.oss\.kaolacdn.com\/.+?_\d{3,4}_\d{4}\.jpg\?x-oss-process=image\/resize,m_mfit,w_\d{3,4},h_\d{4}\/format,webp\/quality,Q_85 url reject-200
+^https?:\/\/sp\.kaola\.com\/api\/openad url reject-200
+^https?:\/\/gw\.kaola\.com\/gw\/dgmobile\/newOpenAd url reject
+
+hostname = kaola-haitao.oss.kaolacdn.com, sp.kaola.com, gw.kaola.com

@@ -1,0 +1,30 @@
+#!name=皮皮虾
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partP/PiPiXia.snippet
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+
+# 推荐视频不能预览
+host-keyword, log-api.pangolin-sdk-toutiao-b.com, reject
+host-keyword, log-api.pangolin-sdk-toutiao.com, reject
+host-keyword, api-access.pangolin-sdk-toutiao.com, reject
+;host-keyword, snssdk.com, reject
+;host-keyword, mssdk.bytedance.com, reject
+;host-keyword, api.ribaoapi.com, reject
+;host-keyword, apps.bytesfield.com, reject
+;host-keyword, bytesmanager.com, reject
+;host-keyword, mssdk-bu.bytedance.com, reject
+;host-keyword, 365yg.com, reject
+;host-keyword, ppx.byteimg.com, reject
+;host-keyword, i.snssdk.com, reject
+
+# 净化 配合图层效果极佳 首页Tap精简 我的页面去除无用模块 感谢【怎么肥事】分享
+#^https?:\/\/.+\.pipix\.com\/bds\/feed\/channel_list\/ url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/PPX.js
+#^https?:\/\/.+\.pipix\.com\/bds\/user\/check_in\/ url script-response-body https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/PPX.js
+
+hostname = *.pipix.com

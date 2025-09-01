@@ -1,0 +1,20 @@
+#!name=盯盯拍
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partD/DingDingPai.snippet
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+
+# 广告联盟已包含
+
+^https?:\/\/.*\.pglstatp-toutiao\.com\/.*ad.* url reject
+^https?:\/\/api\.htp\.ad-scope\.com\.cn.* url reject
+^https?:\/\/appgw\.ddpai\.com.*\/ad\/list.* url reject
+^https?:\/\/init\.sms\.mob\.com\/.*sdk\/init.* url reject
+^https?:\/\/apphw\.ddpai\.com:\d+\/onroad\/api\/v\d\/\w+\/list url reject-dict
+
+hostname = *.pglstatp-toutiao.com, api.htp.ad-scope.com.cn, appgw.ddpai.com, init.sms.mob.com, apphw.ddpai.com

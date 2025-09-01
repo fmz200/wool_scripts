@@ -1,0 +1,44 @@
+#!name=网易
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partW/NetEase.snippet
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+
+host-suffix, dsp.youdao.com, reject
+host-suffix, union.youdao.com, reject
+host, ad.bn.netease.com, reject
+host, ad.yixin.im, reject
+host, admusicpic.music.126.net, reject
+host, g1.163.com, reject
+host, gorgon.youdao.com, reject
+host, iad.g.163.com, reject
+host, iadmat.nosdn.127.net, reject
+host, iadmusicmat.music.126.net, reject
+host, iadmusicmatvideo.music.126.net, reject
+host, impservice.dictapp.youdao.com, reject
+host, impservice.youdao.com, reject
+host, n.3g.163.com, reject
+host, nex.163.com, reject
+host, yt-adp.nosdn.127.net, reject
+host, yt-adp.ws.126.net, reject
+
+^https?:\/\/p[^4](c)?\.music\.126\.net\/\w+==\/10995\d{13}\.jpg$ url reject-img
+^https?:\/\/p\.c\.music\.126.net\/.*?jpg$ url reject
+^https?:\/\/img1.126.net\/.+dpi=\w{7,8} url reject
+^https?:\/\/img1.126.net\/channel14\/ url reject
+^https?:\/\/iadmusicmat\.music.126.net\/.*?jpg$ url reject
+^https?:\/\/p\d\.music\.126\.net\/\w+==\/\d+\.jpg$ url reject
+^https?:\/\/www.icourse163.org\/.*?(Advertisement) url reject-img
+^https?:\/\/nex.163.com\/q url reject
+^https?:\/\/g1.163.com\/madfeedback url reject
+^https?:\/\/client\.mail\.163\.com\/apptrack\/confinfo\/searchMultiAds url reject
+^https?:\/\/c\.m\.163\.com\/nc\/gl\/ url reject
+^https?:\/\/www\.icourse163\.org\/mob\/j\/v1\/mobRecommendRPCBean\.getMaxWeightAdvertisement\.rpc url reject-200
+^https?:\/\/interface3?\.music\.163\.com/eapi/(ad|abtest|sp|hot|store|mlog|search/(specialkeyword|defaultkeyword|hot)) url reject-img
+
+hostname = *.music.126.net, img1.126.net, www.icourse163.org, nex.163.com, g1.163.com, client.mail.163.com, c.m.163.com, interface*.music.163.com

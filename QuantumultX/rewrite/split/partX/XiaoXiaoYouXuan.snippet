@@ -1,0 +1,36 @@
+#!name=晓晓优选
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partX/XiaoXiaoYouXuan.snippet
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+
+host-SUFFIX, api-htp.beizi.biz, REJECT
+host-suffix, yfanads.com, reject
+host-suffix, 1rtb.net, reject
+host-suffix, adwangmai.com, reject
+host-suffix, yunxinfw.com, REJECT
+host-suffix, bridgeoos.com, REJECT
+host-suffix, cloooud.com, REJECT
+host-suffix, baihemob.com, REJECT
+host-suffix, ad.bwton.com, REJECT
+host-suffix, api.wxcjgg.cn, REJECT
+host-suffix, shunchangzhixing.com, REJECT
+IP-CIDR, 114.132.165.205/32, REJECT
+
+# 多余模块
+^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/vajra url reject-dict
+# 弹窗广告
+^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/agent_ad url reject
+#^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/newcomer_ad url reject-dict
+# 右下角的悬浮广告
+^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/activity\/show url reject
+^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/client\/urban\/activity\/index\/data\?agentId=12 url reject
+# 禁止上报设备信息
+^https?:\/\/statistic\.live\.126\.net\/statics\/report\/common\/form url reject
+
+hostname = xxyx-client-api.xiaoxiaoyouxuan.com, statistic.live.126.net

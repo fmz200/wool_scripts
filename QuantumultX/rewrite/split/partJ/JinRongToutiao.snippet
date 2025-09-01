@@ -1,0 +1,35 @@
+#!name=今日头条
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partJ/JinRongToutiao.snippet
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+
+host, dm.toutiao.com, reject
+host-keyword, ad.toutiao.com, reject
+host-keyword, clk.gentags.net, reject
+host-keyword, dm.toutiao.com, reject
+host-keyword, dm.pstatp.com, reject
+host-keyword, dm.bytedance.com, reject
+host-keyword, uop.umeng.com, reject
+host-keyword, m.suning.com, reject
+host-keyword, adshare.toutiao.com, reject
+host-keyword, tunion-api.m.taobao.com, reject
+host-keyword, s1.pstatp.com, reject
+host-keyword, s2.pstatp.com, reject
+host-keyword, s3.pstatp.com, reject
+host-keyword, a3.pstatp.com, reject
+host-keyword, a3.bytecdn.cn, reject
+;host-keyword, ichannel.snssdk.com, reject
+host, ad.toutiao.com, reject
+host, dsp.toutiao.com, reject
+
+# 感谢【Jörgen Frecht】分享
+^https?:\/\/p\d\.pstatp.com\/origin url reject
+^https?:\/\/pb\d\.pstatp.com\/origin url reject
+
+hostname = p*.pstatp.com

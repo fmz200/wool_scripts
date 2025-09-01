@@ -1,0 +1,17 @@
+#!name=苏宁
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partS/Suning.snippet
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+
+^https?:\/\/mpcs\.suning\.com\/mpcs\/dm\/getDmInfo url reject
+^https?:\/\/image\.suning\.cn\/uimg\/ma\/ad\/ url reject-200
+# 新人专享弹窗
+^https?:\/\/luckman\.suning\.com\/luck-web\/policy\/v\d\/msf\/index\.do url reject-200
+
+hostname = mpcs.suning.com, image.suning.com, luckman.suning.com

@@ -1,0 +1,24 @@
+#!name=小芒
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partX/XiaoMang.snippet
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+
+# app去广告 感谢【sliverkiss】分享
+# 我的页面-猜你喜欢
+^https:\/\/mgesq\.api\.mgtv\.com\/v2\/goods\/guess_you_like url reject-dict
+# 我的页面-
+https://mgesq.api.mgtv.com/v2/user/center/icon url reject-dict
+# 主页广告
+https://mgesq.api.mgtv.com/dsl/index.+ url script-response-body https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/AdBlock/xmApp/xmApp.js
+# 搜索排行榜单
+^https:\/\/mgesq\.api\.mgtv\.com\/search\/goods\/rank url reject-dict
+# 底部按钮、我的页面左上角
+^https:\/\/mgesq\.api\.mgtv\.com\/user\/center\/config url reject-dict
+
+hostname = mgesq.api.mgtv.com, *.hitv.com

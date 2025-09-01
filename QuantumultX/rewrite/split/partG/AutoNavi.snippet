@@ -1,0 +1,32 @@
+#!name=高德地图
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partG/AutoNavi.snippet
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+
+;host, restapi.amap.com, reject
+host-suffix, adiu.amap.com, reject
+host, aboard.apilocate.amap.com, reject
+host, apiinit.amap.com, reject
+host, icloud-amap.com, reject
+host, logs.amap.com, reject
+host-suffix, dualstack-logs.amap.com, reject
+host-suffix, logs.amap.com, reject
+host-suffix, optimus-ads.amap.com, reject
+host-suffix, page.amap.com, reject
+host, optimus-ads.amap.com, reject
+host, optimus-ads.amap.com.w.alikunlun.com, reject
+host-suffix, shouji.sougou.com, reject
+host, u51.me, reject
+host-suffix, u51.me, reject
+
+^https?:\/\/m5\.amap\.com\/ws\/shield\/dsp\/app\/startup\/init\? url reject-dict
+^https?:\/\/m5\.amap\.com\/ws\/valueadded\/ url reject
+^https?://optimus-ads.amap.com/uploadimg/[a-zA-Z0-9]+.gif url reject-200
+
+hostname = m*.amap.com, optimus-ads.amap.com

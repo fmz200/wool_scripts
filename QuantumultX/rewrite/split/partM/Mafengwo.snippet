@@ -1,0 +1,19 @@
+#!name=马蜂窝
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partM/Mafengwo.snippet
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+
+^https?:\/\/mapi\.mafengwo\.cn\/(travelguide\/)?ad url reject
+^https?:\/\/mapi\.mafengwo\.cn\/widget\/note\/get_widget_note url reject
+^https?:\/\/mapi\.mafengwo\.cn\/system\/update\/check_update url reject-dict
+^https?:\/\/mapi\.mafengwo\.cn\/system\/config\/(get|mark)_(push|alert)_config url reject-dict
+^https?:\/\/mapi\.mafengwo\.cn\/system\/push\/get_local_push_config url reject
+^https?:\/\/mapi\.mafengwo\.cn\/user\/profile\/get_(list|profile) url script-response-body https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/mafengwo.js
+
+hostname = mapi.mafengwo.cn
