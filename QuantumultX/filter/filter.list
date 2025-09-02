@@ -1360,37 +1360,6 @@ host-suffix, mi.gdt.qq.com, reject
 # 去除导航栏免费短剧
 host, taichi.51y5.net, reject
 
-# > 微博
-host-suffix, fastimage.uve.weibo.com, reject
-host-suffix, adimg.vue.weibo.com, reject
-host-suffix, zymo.mps.weibo.com, reject
-host-suffix, weibomingzi.com, reject
-host-suffix, sdkapp.uve.weibo.com, reject
-host-suffix, promote.biz.weibo.cn, reject
-host-suffix, gw5.push.mcp.weibo.cn, reject
-host-suffix, gw6.push.mcp.weibo.cn, reject
-host-suffix, game.weibo.cn, reject
-host-suffix, adimg.uve.weibo.com, reject
-host-suffix, game.weibo.com, reject
-host-suffix, ads.viber.com, reject
-host-suffix, ads-d.viber.com, reject
-host-suffix, ads.aws.viber.com, reject
-host-suffix, alitui.weibo.com, reject
-host-suffix, dp.im.weibo.cn, reject
-host-suffix, biz.weibo.com.cn, reject
-host-suffix, biz.weibo.com, reject
-host-suffix, click.uve.weibo.com, reject
-host-suffix, wax.weibo.com, reject
-host-suffix, wbapp.uve.weibo.com, reject
-host-suffix, widget.weibo.com, reject
-host-suffix, dsp.edm.weibo.cn, reject
-host-suffix, alitui.weibo.com.cn, reject
-host-suffix, tui.weibo.com, reject
-host-suffix, wax.weibo.com.cn, reject
-host-suffix, ad.weibo.com, reject
-# 微博开屏广告预加载
-host, bootpreload.uve.weibo.com, reject
-
 # > 网易
 host-suffix, dsp.youdao.com, reject
 host-suffix, union.youdao.com, reject

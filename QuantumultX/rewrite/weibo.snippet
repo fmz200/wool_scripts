@@ -19,8 +19,37 @@
 # > "reject-array"  策略返回 HTTP 状态码 200,同时附带一个空的 JSON 数组
 #############################################
 
-# hostname = api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, new.vip.weibo.cn, *api.weibo.cn, sdkapp.uve.weibo.com
-hostname = *.weibo.cn, *.weibo.com, weibo.com
+
+host-suffix, fastimage.uve.weibo.com, reject
+host-suffix, adimg.vue.weibo.com, reject
+host-suffix, zymo.mps.weibo.com, reject
+host-suffix, weibomingzi.com, reject
+host-suffix, sdkapp.uve.weibo.com, reject
+host-suffix, promote.biz.weibo.cn, reject
+host-suffix, gw5.push.mcp.weibo.cn, reject
+host-suffix, gw6.push.mcp.weibo.cn, reject
+host-suffix, game.weibo.cn, reject
+host-suffix, adimg.uve.weibo.com, reject
+host-suffix, game.weibo.com, reject
+host-suffix, ads.viber.com, reject
+host-suffix, ads-d.viber.com, reject
+host-suffix, ads.aws.viber.com, reject
+host-suffix, alitui.weibo.com, reject
+host-suffix, dp.im.weibo.cn, reject
+host-suffix, biz.weibo.com.cn, reject
+host-suffix, biz.weibo.com, reject
+host-suffix, click.uve.weibo.com, reject
+host-suffix, wax.weibo.com, reject
+host-suffix, wbapp.uve.weibo.com, reject
+host-suffix, widget.weibo.com, reject
+host-suffix, dsp.edm.weibo.cn, reject
+host-suffix, alitui.weibo.com.cn, reject
+host-suffix, tui.weibo.com, reject
+host-suffix, wax.weibo.com.cn, reject
+host-suffix, ad.weibo.com, reject
+# 微博开屏广告预加载
+host, bootpreload.uve.weibo.com, reject
+
 
 ############################################# 微博国际版去广告 #############################################
 # User-Agent: WeiboOverseas/6.3.8 (com.weibo.international; build:6.3.8.1; iOS 17.3.0) Alamofire/6.3.8
