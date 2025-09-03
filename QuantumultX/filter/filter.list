@@ -855,7 +855,7 @@ host, ggic03.miguvideo.com, reject
 host, ggmk.miguvideo.com, reject
 host, ggadoffline.miguvideo.com, reject
 
-# > 小米米家
+# > 米家
 host, sdkconfig.ad.xiaomi.com, reject
 
 # > 芒果TV
