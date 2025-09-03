@@ -1023,7 +1023,7 @@ host, adm3.autoimg.cn, reject
 
 
 # >>>>>>>>>>>>>>> ✅ S ✅ <<<<<<<<<<<<<<
-# > soul
+# > Soul
 host, soul-ad.soulapp.cn, reject
 host, ad-r.soulapp.cn, reject
 host, ad-reward.soulapp.cn, reject
