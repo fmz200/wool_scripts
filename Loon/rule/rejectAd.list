@@ -23,7 +23,6 @@
 #############################################
 
 
-#[Rule]
 # >>>>>>>>>>>>>>> ✅ # ✅ <<<<<<<<<<<<<<
 # > 广告联盟
 # 若有问题自行设置白名单
@@ -48,8 +47,6 @@ DOMAIN-SUFFIX, file.myqcloud.com
 DOMAIN-KEYWORD, volc
 DOMAIN-KEYWORD, umeng
 
-# > 其他
-DOMAIN, api.liquidlink.cn
 
 
 # >>>>>>>>>>>>>>> ✅ 0 ✅ <<<<<<<<<<<<<<
@@ -71,7 +68,7 @@ DOMAIN-KEYWORD, in-page-push
 
 
 # >>>>>>>>>>>>>>> ✅ 3 ✅ <<<<<<<<<<<<<<
-DOMAIN, ad.mcloud.139.com
+
 
 
 # >>>>>>>>>>>>>>> ✅ 4 ✅ <<<<<<<<<<<<<<
@@ -1556,6 +1553,9 @@ DOMAIN, pvnapp.zol.com.cn
 
 # > 中国移动
 IP-CIDR, 120.240.95.37/32, no-resolve
+
+# > 中国移动云盘
+DOMAIN, ad.mcloud.139.com
 
 # > 中国联通
 DOMAIN-SUFFIX,m1.ad.10010.com
