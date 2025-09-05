@@ -26,7 +26,7 @@ if (reg1.test($request.url)) {
     session_digest: $request.headers['X-Session-Digest'] || $request.headers['x-session-digest'],
     request_id: $request.headers['X-Request-Id'] || $request.headers['x-request-id'],
     tf_ua: $request.headers['User-Agent'] || $request.headers['user-agent'],
-    update_time: formatBeijingDate()
+    update_time: formatBeijingTime()
   }
   $.setdata(JSON.stringify(TF_header), "fmz200_TF_header");
 
@@ -58,17 +58,26 @@ function unique(arr) {
   return Array.from(new Set(arr));
 }
 
-function formatBeijingDate() {
-  return new Date().toLocaleString('zh-CN', {
-    timeZone: 'Asia/Shanghai',
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit',
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
-    hour12: false
-  }).replace(/(\d+)\/(\d+)\/(\d+) (\d+:\d+:\d+)/, '$3-$1-$2 $4');
+function formatBeijingTime() {
+  const date = new Date();
+
+  // 获取UTC时间戳（毫秒）
+  const utcTime = date.getTime();
+  // 北京时区是UTC+8，计算偏移量（8小时的毫秒数）
+  const beijingOffset = 8 * 60 * 60 * 1000;
+  // 计算北京时间的时间戳
+  const beijingTime = new Date(utcTime + beijingOffset);
+
+  // 获取各部分并补零
+  const year = beijingTime.getUTCFullYear();
+  // 注意：这里要用getUTCMonth()，因为beijingTime是基于UTC计算的
+  const month = String(beijingTime.getUTCMonth() + 1).padStart(2, '0');
+  const day = String(beijingTime.getUTCDate()).padStart(2, '0');
+  const hours = String(beijingTime.getUTCHours()).padStart(2, '0');
+  const minutes = String(beijingTime.getUTCMinutes()).padStart(2, '0');
+  const seconds = String(beijingTime.getUTCSeconds()).padStart(2, '0');
+
+  return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
 }
 
 // API start
