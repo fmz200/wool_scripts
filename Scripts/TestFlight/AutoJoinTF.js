@@ -1,7 +1,7 @@
 /**
  @author fmz200
  @function 获取自动加入TF需要的信息，修改数据存储形式，支持大部分代理工具包括 QX，Loon，Surge，Egern，Stash，ShadowRocket，青龙
- @date 2025-06-19 21:00:00
+ @date 2025-09-05 20:00:00
  @quote https://raw.githubusercontent.com/DecoAri/JavaScript/main/Surge/Auto_join_TF.js
 
  具体使用步骤
@@ -29,9 +29,14 @@ let TF_header = isNode ? process.env["fmz200_TF_header"] : $.getdata("fmz200_TF_
   }
   TF_header = JSON.parse(TF_header);
   const appIds = TF_APP_ID.split(',');
+  let counter = 1;
   for await (const appId of appIds) {
-    console.log("===================");
+    console.log(`========= [${counter}/${appIds.length}] ==========`);
+    // 随机延迟，单位：秒
+    await randomDelay(10);
+    // 执行
     await autoPost(appId.trim());
+    counter++;
   }
 
   if (isNode) await sendMsg($.nodeNotifyMsg.join("\n"), "");
@@ -121,6 +126,27 @@ function updateData(ids, appId) {
     $.setdata(ids.toString(), "fmz200_TF_APP_ID");
   }
 }
+
+/**
+ * 在一个基础延迟时间上下3秒内随机延迟
+ * @param {number} baseDelaySeconds - 基础延迟时间（秒）
+ */
+function randomDelay(baseDelaySeconds) {
+  // 计算最小和最大延迟时间
+  const minDelay = (baseDelaySeconds - 3) * 1000;
+  const maxDelay = (baseDelaySeconds + 3) * 1000;
+
+  // 生成一个在 minDelay 和 maxDelay 之间的随机毫秒数
+  const delayMilliseconds = Math.floor(Math.random() * (maxDelay - minDelay + 1)) + minDelay;
+
+  // 确保延迟时间不为负数
+  const finalDelay = Math.max(0, delayMilliseconds);
+
+  console.log(`将在 ${finalDelay / 1000} 秒后执行...`);
+
+  return new Promise(resolve => setTimeout(resolve, finalDelay));
+}
+
 
 // API start
 async function sendMsg(desc, opts) { $.isNode() ? await notify.sendNotify($.name, desc) : $.msg($.name, $.subTitle || "", desc, opts) }
