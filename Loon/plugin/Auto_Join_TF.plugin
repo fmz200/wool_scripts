@@ -11,11 +11,12 @@
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/Auto_Join_TF.plugin
 #!tg-group=https://t.me/lanjieguanggao
 #!input = fmz200_TF_APP_ID
-#!date = 2025-06-14 15:17:08
+#!date = 2025-09-05 15:17:08
 
 [Argument]
 CaptureAccountToken = switch, "false", "true", tag = 捕获账号令牌, desc = 此开关控制插件是否捕获账户令牌
 CaptureAppID = switch, "false", "true", tag = 捕获应用ID, desc = 此开关控制插件是否捕获应用ID
+RunTask = switch, "true", "false", tag = 运行自动加入TF, desc = 此开关控制是否启动定时任务
 TimingParameters = input, "0 0/3 * * * ?", tag = 定时参数, desc = 这里需要输入符合CRON表达式的参数
 
 [Rule]
@@ -26,7 +27,7 @@ http-request ^https?:\/\/testflight\.apple\.com\/v3\/accounts\/.*\/apps$ script-
 
 http-request ^https?:\/\/testflight\.apple\.com\/join\/(.*) script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/TestFlight/AutoJoinTFKeys.js, tag = 应用ID捕获(可能抓不到), enable = {CaptureAppID}
 
-cron {TimingParameters} script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/TestFlight/AutoJoinTF.js, tag = 自动加入TF, timeout = 180
+cron {TimingParameters} script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/TestFlight/AutoJoinTF.js, tag = 自动加入TF, timeout = 600, enable = {RunTask}
 
 [MitM]
 hostname = testflight.apple.com
