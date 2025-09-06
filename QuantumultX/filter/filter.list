@@ -1645,7 +1645,7 @@ host, applog.zijieapi.com, reject
 host-suffix, -normal-lq.zijieapi.com, reject
 
 
-# >>>>>>>>>>>>>>> ✅ 其他广告 ✅ <<<<<<<<<<<<<<
+# >>>>>>>>>>>>>>> ✅ 其他 ✅ <<<<<<<<<<<<<<
 host-keyword, 112wan, reject
 host-keyword, 789htbet, reject
 host-suffix, XiaoQiang, reject
