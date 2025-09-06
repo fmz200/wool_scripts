@@ -9,11 +9,34 @@
 #############################################
 
 
-# 开屏广告 感谢【Ava阿檬】分享
-^https?:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v7\?position_types=2(%[A-Z0-9]+)+&store_id url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js
-^https?:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v7\?position_types=(?!2)(.*)&store_id url reject
-^https?:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v7\?position url reject
-^https?:\/\/j1\.pupuapi\.com\/client\/marketing\/advertisement\/v1\? url reject-dict
-^https?:\/\/54\.222\.159\.138:8053\/^httpdns\/resolve\? url reject-dict
+# 开屏广告 感谢【树先生, 可莉】分享
+# 广告下发
+^http:\/\/139\.196\.12\.179:8053\/httpdns\/ url REJECT
+^http:\/\/106\.55\.220\.18:8053\/httpdns\/ url REJECT
+^http:\/\/54\.222\.159\.138:8053\/httpdns\/ url REJECT
+^http:\/\/101\.42\.130\.147\/httpdns\/resolve\/ url REJECT
+# 主页实惠卡横幅
+^https:\/\/j1\.pupuapi\.com\/client\/member_card\/index\/my url REJECT
+# 搜索框页面热榜
+^https:\/\/j1\.pupuapi\.com\/client\/marketing\/advertisement\/search_input_ranking url reject-dict
+# 朴朴超市订单待收货页右下角悬浮广告
+^https:\/\/j1\.pupuapi\.com\/client\/assets\/discount\/order url reject-dict
+# 购物车页去换购推荐
+^https:\/\/j1\.pupuapi\.com\/client\/marketing\/channel\/global_redeem\/top_tip\/v2 url reject-dict
+# 各种页面的商品推荐
+^https:\/\/j1\.pupuapi\.com\/client\/recommendation\/hub\/interests\/products\/v2 url reject-dict
+# 个人主页会员标识
+^https:\/\/j1\.pupuapi\.com\/client\/member_card\/premium\/user_center url reject-dict
+# 消息中心促销消息未读提示
+^https:\/\/j1\.pupuapi\.com\/client\/notification\/message_center\/unread_number url jsonjq-response-body .data = []
+^https:\/\/j1\.pupuapi\.com\/client\/search\/hot_keywords\/v3 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js
+^https:\/\/j1\.pupuapi\.com\/client\/app_resource\/resource_preload\/list_h5_resource url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js
+^https:\/\/j1\.pupuapi\.com\/client\/marketing\/advertisement\/v1 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js
+# 搜索结果页信息流横幅广告
+^https:\/\/j1\.pupuapi\.com\/client\/search\/hub\/search_box\/products\/v6 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js
+# 下单页实惠卡开通推荐
+^https:\/\/j1\.pupuapi\.com\/client\/order_settlement\/detail url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js
+# 订单列表骑手反馈问题推荐
+^https:\/\/j1\.pupuapi\.com\/client\/order\/orders\/list\/v4 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js
 
-hostname = j1.pupuapi.com, 54.222.159.138
+hostname = j1.pupuapi.com

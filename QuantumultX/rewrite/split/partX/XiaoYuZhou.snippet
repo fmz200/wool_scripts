@@ -1,0 +1,22 @@
+#!name=小宇宙
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partX/XiaoYuZhou.snippet
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+
+# 首页净化
+^https?:\/\/api\.xiaoyuzhoufm\.com\/v1\/discovery-feed\/list url jsonjq-response-body '.data |= map(select(.type == "DISCOVERY_EPISODE_RECOMMEND" or .type == "EDITOR_PICK"))'
+# 移除开屏广告
+^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/flash url reject-dict
+# 移除单集总结和ai总结
+^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/ai url reject-dict
+# 移除搜索框内容
+^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/search\/get url reject-dict
+^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/category url reject-dict
+
+hostname = api.xiaoyuzhoufm.com

@@ -37,15 +37,5 @@ host, adbehavior.wsa.ximalaya.com, REJECT
 ^https:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/mobile-user\/v\d\/homePage\/ url jsonjq-response-body '.data.serviceModule.entrances |= map(select(.name == "全部服务"))'
 ^https:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/subscribe\/v\d\/subscribe\/recommend\? url reject-dict
 ^https:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/mobile-user\/v\d\/purchased\/recommend\/ url reject-dict
-# 小宇宙
-# 首页净化
-^https?:\/\/api\.xiaoyuzhoufm\.com\/v1\/discovery-feed\/list url jsonjq-response-body '.data |= map(select(.type == "DISCOVERY_EPISODE_RECOMMEND" or .type == "EDITOR_PICK"))'
-# 移除开屏广告
-^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/flash url reject-dict
-# 移除单集总结和ai总结
-^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/ai url reject-dict
-# 移除搜索框内容
-^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/search\/get url reject-dict
-^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/category url reject-dict
 
-hostname = api.xiaoyuzhoufm.com
+hostname = gslbali.ximalaya.com, search.ximalaya.com, searchwsa.ximalaya.com, mobile.ximalaya.com, mobilehera.ximalaya.com, mobwsa.ximalaya.com, m.ximalaya.com, mwsa.ximalaya.com
