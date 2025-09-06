@@ -514,7 +514,7 @@ IP-CIDR6, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT, no-resolve
 # hostname = evs.500.com
 ^https?:\/\/evs\.500\.com\/esinfo\/loading\/loading reject
 
-# > 51job
+# > 前程无忧 51Job
 # hostname = appapi.51job*.com, cupid.51job*.com
 ^https?:\/\/appapi\.51job(app)?\.com\/api\/market\/(adtrace|get_launch|get_prompt) reject
 ^https?:\/\/cupid\.51job(app)?\.com\/open\/index\/recommend-infos reject
@@ -1243,7 +1243,9 @@ http:\/\/ad\.myfriday\.cn\/d\/json\/1\.1 reject
 # > 光大银行
 # hostname = mobile.cebbank.com, yghsh.cebbank.com
 ^https?:\/\/mobile\.cebbank\.com\/cebclient\/ClientNoticeList reject-200
+
 # > 光大银行 阳光惠生活
+# hostname = yghsh.cebbank.com
 ^https?:\/\/yghsh\.cebbank\.com\/static\/picture\/.*.jpg reject-200
 
 # > 工商银行
@@ -2618,9 +2620,6 @@ https://apis.lifeweek.com.cn/api/baseConfig/getIosNewConfig reject
 ^https?:\/\/alt-r\.my\.com\/mobile reject-dict
 ^https?:\/\/imgx\.jampp\.com\/imgsrv\/tn reject-img
 
-# TestFlight 国区下载修正
-# ^https:\/\/testflight\.apple\.com\/v2\/accounts\/.*\/apps\/\d*\/builds\/\d*\/install$ request-body-replace-regex "storefrontId"\x20:\x20.*, "storefrontId":"143441-19,29"
-
 # > TT语音
 # hostname = ga-album-cdnqn.52tt.com
 # 开屏广告 个别图片误杀 如开启可自行添加主机名
@@ -2903,11 +2902,11 @@ https://apis.lifeweek.com.cn/api/baseConfig/getIosNewConfig reject
 # 小程序弹窗广告
 ^https?:\/\/misc-api-prd-mx\.wandafilm\.com\/commend\/common_banner_batch\.api\?bannerInfos=%5B%7B%22cinemaI response-body-replace-regex "WX_index_mp-&-boxAD" "fmz200"
 
-# > 微信
+# > 微信公众号
 # hostname = mp.weixin.qq.com
 # 公众号文章下方广告
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad response-body-replace-regex advertisement fmz200
-# 微信公众号去除商品推广
+# 公众号去除商品推广
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/cps_product_info\?action reject-dict
 
 # > 网易新闻
@@ -3474,7 +3473,7 @@ https://mgesq.api.mgtv.com/v2/user/center/icon reject-dict
 
 # > 银盛小Y管家
 # hostname = ads.ysepay.com
-#开屏广告
+# 开屏广告
 ^https:\/\/ads\.ysepay\.com\/ads\/ctrl\/getAdvertisingInfo reject-dict
 
 # > 盈宝证券
@@ -3993,7 +3992,7 @@ http-response ^https?:\/\/[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+){1,3}(:\d+)?\/api\/v\d\/
 http-response ^https?:\/\/api\.u51\.com\/liabilitygateway\/api\/v\d\/homepage\/liabilityline script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/51card.js, requires-body=true, timeout=60, tag=51信用卡管家, enable={51xyk_enable}
 http-response ^https?:\/\/api\.u51\.com\/generic-config-gateway\/api\/v\d\/guanjia\/me-tab2\/config script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/51card.js, requires-body=true, timeout=60, tag=51信用卡管家, enable={51xyk_enable}
 
-# > 51job
+# > 前程无忧 51Job
 http-response ^https?:\/\/cupid\.51job(app)?\.com\/open\/noauth\/recommend\/job-tab-dynamic script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/51job.js, requires-body=true, timeout=60, tag=51job, enable={51job_enable}
 
 
@@ -4190,7 +4189,7 @@ http-response ^https?:\/\/api\.m\.jd\.com\/api\?functionId=delivery_show script-
 
 
 # >>>>>>>>>>>>>>> ✅ K ✅ <<<<<<<<<<<<<<
-# > keep
+# > Keep
 # 我的页面去推广
 http-response ^https?:\/\/api\.gotokeep\.com\/athena\/v\d\/people\/my$ script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js, requires-body=true, timeout=60, tag=keep, enable={keep_enable}
 # 应用底部栏净化
@@ -4386,10 +4385,6 @@ http-response ^https?:\/\/qianbao\.smzdm\.com\/v\d\/app\/home script-path=https:
 
 
 # >>>>>>>>>>>>>>> ✅ T ✅ <<<<<<<<<<<<<<
-# > TestFlight
-# TF账户管理 App更新时提示"APP不可用"问题，解决部分TF兑换错了区域的问题，例如Loon兑换到了国区
-# http-request ^https?:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/ script-path=https://raw.githubusercontent.com/NobyDa/Script/master/TestFlight/TestFlightAccount.js, requires-body=true, timeout=60, tag=TestFlight账户管理
-
 # > 淘宝
 http-response ^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get) script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/myBlockAds.js, requires-body=true, timeout=60, tag=淘宝, enable={tcbc_enable}
 http-response ^https?:\/\/poplayer\.template\.alibaba\.com\/\w+\.json script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/myBlockAds.js, requires-body=true, timeout=60, tag=淘宝, enable={tcbc_enable}
@@ -4407,7 +4402,7 @@ http-response ^https?:\/\/app02\.vgtime\.com:8080\/vgtime-app\/api\/v2\/init\/ad
 
 
 # >>>>>>>>>>>>>>> ✅ W ✅ <<<<<<<<<<<<<<
-# > 解除微信链接限制
+# > 微信解除链接限制
 # hostname = weixin110.qq.com, security.wechat.com
 # 微信跳过中间界面，支付宝链接、被封禁链接进行通知弹窗跳转，在微信中用快照显示被封禁的链接（可选），在微信中进行强制重定向（可选），群聊 / 扫码均可使用，可选项可在脚本 2、3 行更改，也可在 BoxJs 中更改。
 http-response ^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\? script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/asset/UnblockURLinWeChat.js, requires-body=true, timeout=60, tag=UnblockURLinWeChat-解除微信链接限制, enable={lmjpxmvi_enable}
