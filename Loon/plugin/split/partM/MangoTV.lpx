@@ -1,0 +1,78 @@
+#!name=芒果TV
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partM/MangoTV.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Argument]
+mhgotv_enable = switch,true,false,tag=芒果TV-脚本开关
+
+[Rule]
+DOMAIN, dflow.bz.mgtv.com
+DOMAIN, encounter.bz.mgtv.com
+DOMAIN, floor.bz.mgtv.com
+DOMAIN, img.da.mgtv.com
+DOMAIN, layer.bz.mgtv.com
+DOMAIN, mob.bz.mgtv.com
+DOMAIN, mobile.da.mgtv.com
+DOMAIN, rc-topic-api.bz.mgtv.com
+DOMAIN, v2.da.mgtv.com
+DOMAIN, video.da.mgtv.com
+DOMAIN, vip.bz.mgtv.com
+DOMAIN, ys.da.mgtv.com
+DOMAIN-SUFFIX,mobile2.da.mgtv.com
+DOMAIN-SUFFIX,cdn.cmop.mgtv.com
+DOMAIN-SUFFIX,cmop.mgtv.com
+DOMAIN-SUFFIX,imgaliyun.da.mgtv.com
+DOMAIN-SUFFIX,imgaliyun.res.mgtv.com
+DOMAIN-SUFFIX,m2.da.mgtv.com
+DOMAIN-SUFFIX,mobaliyun.res.mgtv.com
+DOMAIN-SUFFIX,pc.da.mgtv.com
+DOMAIN-SUFFIX,pc1.da.mgtv.com
+DOMAIN-SUFFIX,pcvideoaliyun.titan.mgtv.com
+DOMAIN-SUFFIX,pcvideoyd.titan.mgtv.com
+DOMAIN-SUFFIX,pcweb.v1.mgtv.com
+DOMAIN-SUFFIX,py.da.mgtv.com
+DOMAIN-SUFFIX,web.da.mgtv.com
+DOMAIN-SUFFIX,x.da.mgtv.com
+DOMAIN-SUFFIX,y.da.mgtv.com
+DOMAIN-SUFFIX,da.mgtv.com
+
+
+
+[Rewrite]
+# 无用请求
+^https?:\/\/[\d\.]+:\d{5}\/\?cmd=indexes reject
+# 首页左上角推广
+^https?:\/\/[\d\.]+\/odin\/c1\/(channel\/ads|skin\/config)\? reject-dict
+# 底部tab红点
+^https?:\/\/damang\.api\.mgtv\.com\/station\/album\/red\/dot\? reject-dict
+# 播放器界面
+^https?:\/\/hb-boom\.api\.mgtv\.com\/release\/pullReleaseInfo reject-dict
+# 升级弹窗
+^https?:\/\/mobile\.api\.mgtv\.com\/v2\/mobile\/checkUpdate\? reject-dict
+# 搜索框填充词
+^https?:\/\/mobileso\.bz\.mgtv\.com\/spotlight\/search\/v1\? reject-dict
+
+
+[Script]
+# 我的页面
+http-response ^https?:\/\/me\.bz\.mgtv\.com\/v3\/module\/list\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=芒果TV我的页面, enable={mhgotv_enable}
+# 首页信息流,顶部tab
+http-response ^https?:\/\/mob-st\.bz\.mgtv\.com\/odin\/c1\/channel\/index\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=芒果TV首页信息流,顶部tab, enable={mhgotv_enable}
+http-response ^https?:\/\/dc2?\.bz\.mgtv\.com\/dynamic\/v1\/channel\/(index|vrsList)\/\w script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=芒果TV, enable={mhgotv_enable}
+# 底部tab
+http-response ^https?:\/\/mobile\.api\.mgtv\.com\/mobile\/config\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=芒果TV底部tab, enable={mhgotv_enable}
+# 播放详情页
+http-response ^https?:\/\/mobile\.api\.mgtv\.com\/v10\/video\/info\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=芒果TV播放详情页, enable={mhgotv_enable}
+http-response ^https?:\/\/mobile-thor\.api\.mgtv\.com\/v1\/vod\/info\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=芒果TV播放详情页, enable={mhgotv_enable}
+# 搜索框填充词
+http-response ^https?:\/\/mobileso\.bz\.mgtv\.com\/mobile\/recommend\/v2\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=芒果TV搜索框填充词, enable={mhgotv_enable}
+
+
+[MITM]
+hostname = *.mgtv.com

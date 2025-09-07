@@ -1,0 +1,66 @@
+#!name=酷狗音乐
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partK/KuGouMusic.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rule]
+DOMAIN, adserviceretry.kugou.com
+DOMAIN, ads.service.kugou.com
+DOMAIN, adsfile.bssdlbig.kugou.com
+DOMAIN, g.koowo.com
+DOMAIN, kgmobilestat.kugou.com
+DOMAIN, kgmobilestatbak.kugou.com
+DOMAIN, mobilelog.kugou.com
+DOMAIN, adsfile.bssdlbig.kugou.com
+DOMAIN, pgdt.gtimg.com
+DOMAIN, adsmind.gdtimg.com
+DOMAIN-KEYWORD,searchrecommend.kugou.com
+DOMAIN-KEYWORD,nbcollectretry.kugou.com
+DOMAIN-KEYWORD,rtmretry.kugou.com
+DOMAIN-KEYWORD,rt-m.kugou.com
+DOMAIN-KEYWORD,nbcollect.kugou.com
+DOMAIN-KEYWORD,c1img.ali.kugou.com
+DOMAIN-KEYWORD,kgstaticdlbssdlbig.tx.kugou.com
+DOMAIN-KEYWORD,adsfilebssdlbig.ali.kugou.com
+DOMAIN-KEYWORD,splashimgbssdl.yun.kugou.com
+DOMAIN-KEYWORD,adservice.kugou.com
+DOMAIN-KEYWORD,kgipadstat.kugou.com
+DOMAIN-KEYWORD,kgipadstatbak.kugou.com
+DOMAIN-KEYWORD,logwebs.kugou.com
+DOMAIN-KEYWORD,tracker.kugou.com
+DOMAIN-KEYWORD,trackercdnbj.kugou.com
+DOMAIN-SUFFIX,oth.eve.mdt.qq.com
+DOMAIN-SUFFIX,channel.fanxing.kugou.com
+DOMAIN-SUFFIX,d.kugou.com
+DOMAIN-SUFFIX,downmobile.kugou.com
+DOMAIN-SUFFIX,gad.kugou.com
+DOMAIN-SUFFIX,game.kugou.com
+DOMAIN-SUFFIX,gamebox.kugou.com
+DOMAIN-SUFFIX,gcapi.sy.kugou.com
+DOMAIN-SUFFIX,gg.kugou.com
+DOMAIN-SUFFIX,install.kugou.com
+DOMAIN-SUFFIX,install2.kugou.com
+DOMAIN-SUFFIX,minidcsc.kugou.com
+DOMAIN-SUFFIX,mo.kugou.com
+DOMAIN-SUFFIX,msg.mobile.kugou.com
+DOMAIN-SUFFIX,mvads.kugou.com
+DOMAIN-SUFFIX,p.kugou.com
+DOMAIN-SUFFIX,push.mobile.kugou.com
+DOMAIN-SUFFIX,rtmonitor.kugou.com
+DOMAIN-SUFFIX,sdn.kugou.com
+DOMAIN-SUFFIX,song.fanxing.kugou.com
+DOMAIN-SUFFIX,update.mobile.kugou.com
+DOMAIN-SUFFIX,youxi.kugou.com
+DOMAIN-SUFFIX,adserviceretry.kugou.com
+DOMAIN-SUFFIX,ads.service.kugou.com
+DOMAIN-SUFFIX,adsfile.bssdlbig.kugou.com
+DOMAIN-SUFFIX,log.stat.kugou.com
+DOMAIN-SUFFIX,log.web.kugou.com
+DOMAIN-SUFFIX,kgmobilestat.kugou.com
+DOMAIN-SUFFIX,kgmobilestatbak.kugou.com
+DOMAIN-SUFFIX,mobilelog.kugou.com

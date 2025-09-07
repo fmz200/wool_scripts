@@ -1,0 +1,24 @@
+#!name=罗森点点
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partL/LuoSenDianDian.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Argument]
+lawson_enable = switch,true,false,tag=罗森点点-脚本开关
+
+[Rewrite]
+^https:\/\/plt\.yorentown\.com\/pltapp\/v1\/banner reject-dict
+
+
+[Script]
+http-response ^https:\/\/lawsonapi\.yorentown\.com\/area\/sh-lawson\/app\/v1\/ script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/lawson.js, requires-body=true, timeout=60, tag=罗森点点, enable={lawson_enable}
+http-response ^https:\/\/lawsonapi\.yorentown\.com\/portal\/app\/globalLaunch\/listAdvert script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/lawson.js, requires-body=true, timeout=60, tag=罗森点点, enable={lawson_enable}
+
+
+[MITM]
+hostname = plt.yorentown.com, lawsonapi.yorentown.com

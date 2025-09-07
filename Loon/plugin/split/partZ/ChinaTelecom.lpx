@@ -1,0 +1,26 @@
+#!name=中国电信
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partZ/ChinaTelecom.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rule]
+DOMAIN, ad.21cn.com
+DOMAIN, ad.k.21cn.com
+DOMAIN, admarket.21cn.com
+DOMAIN, adshows.21cn.com
+IP-CIDR, 122.229.8.47/32, no-resolve
+IP-CIDR, 122.229.29.89/32, no-resolve
+
+
+[Rewrite]
+^https?:\/\/cloud\.189\.cn\/include\/splash\/ reject
+^https?:\/\/zt-app\.go189\.cn\/zt-app\/welcome\/.*?Animation reject-img
+
+
+[MITM]
+hostname = cloud.189.cn, zt-app.go189.cn

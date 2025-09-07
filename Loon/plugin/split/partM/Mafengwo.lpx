@@ -1,0 +1,27 @@
+#!name=马蜂窝
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partM/Mafengwo.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Argument]
+mafgwo_enable = switch,true,false,tag=马蜂窝-脚本开关
+
+[Rewrite]
+^https?:\/\/mapi\.mafengwo\.cn\/(travelguide\/)?ad reject
+^https?:\/\/mapi\.mafengwo\.cn\/widget\/note\/get_widget_note reject
+^https?:\/\/mapi\.mafengwo\.cn\/system\/update\/check_update reject-dict
+^https?:\/\/mapi\.mafengwo\.cn\/system\/config\/(get|mark)_(push|alert)_config reject-dict
+^https?:\/\/mapi\.mafengwo\.cn\/system\/push\/get_local_push_config reject
+
+
+[Script]
+http-response ^https?:\/\/mapi\.mafengwo\.cn\/user\/profile\/get_(list|profile) script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/mafengwo.js, requires-body=true, timeout=60, tag=马蜂窝, enable={mafgwo_enable}
+
+
+[MITM]
+hostname = mapi.mafengwo.cn

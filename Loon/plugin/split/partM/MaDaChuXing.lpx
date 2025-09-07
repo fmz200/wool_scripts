@@ -1,0 +1,33 @@
+#!name=马达出行
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partM/MaDaChuXing.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rewrite]
+# 开屏广告
+^https:\/\/mada-travel\.17u\.cn\/mdapi\/config\/ads reject-dict
+# 我的会员中心
+^https:\/\/mada-travel\.17u\.cn\/mdapi\/config\/mine reject-dict
+# 首页下方推广
+^https:\/\/mada-travel\.17u\.cn\/mdapi\/config\/tabAct reject-dict
+# 屏蔽更新
+^http:\/\/ebk\.17u\.cn\/tctrafficappversionadmin\/api\/getLatestVersionApp reject-dict
+
+
+^https?:\/\/ggc\.miguvideo\.com\/v1\/iflyad\/deliverysystem\/direct\/ reject-img
+^https?:\/\/public-deliver9\.miguvideo\.com\/deliver\/site\/batchMatch\/mergeSpot\/miguvideo\/ reject-dict
+^https?:\/\/recommend-dy\.miguvideo\.com\/recommend-dynamic\/dataSource\/v1\/recommend\/merge reject-dict
+^https?:\/\/app-sc\.miguvideo\.com\/app-management\/v1\/staticcache\/settings\/miguvideo\/SHARE_PIC reject-dict
+^https?:\/\/common-sc\.miguvideo\.com\/videoActivity\/activityList\/ reject-dict
+#^https?:\/\/display-sc\.miguvideo\.com\/display\/v3\/static\/PERSONAL_CENTER\/ reject-dict
+^https?:\/\/ggx.+\.miguvideo\.com\/request\/sdk.+[^?]*$ reject-dict
+^https?:\/\/ggic\d+.miguvideo\.com\/ad\/ reject-dict
+
+
+[MITM]
+hostname = ggc.miguvideo.com, public-deliver9.miguvideo.com, display*-sc.miguvideo.com, recommend-dy.miguvideo.com, app-sc.miguvideo.com, common-sc.miguvideo.com, ggx*.miguvideo.com, ggic*.miguvideo.com

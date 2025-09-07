@@ -1,0 +1,122 @@
+#!name=UC浏览器
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partU/UCBrowser.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rule]
+DOMAIN-KEYWORD,m.atm.youku.com
+DOMAIN-KEYWORD,adp.atm.youku.com
+DOMAIN-KEYWORD,clickc.admaster.com
+DOMAIN-KEYWORD,count.atm.youku.com
+DOMAIN-KEYWORD,ems.youku.com
+DOMAIN-KEYWORD,fans.m.tmall.com
+DOMAIN-KEYWORD,r1.ykimg.com
+DOMAIN-KEYWORD,v.admaster.com
+DOMAIN-KEYWORD,v2.reachmax.cn
+DOMAIN-KEYWORD,val.atm.youku.com
+DOMAIN-KEYWORD,server.m.pp.cn
+DOMAIN-KEYWORD,puds.ucweb.com
+DOMAIN-KEYWORD,wgo.mmstat.com
+DOMAIN-KEYWORD,log.cs.pp.cn
+DOMAIN-KEYWORD,applog.uc.cn
+DOMAIN-KEYWORD,afpapi.alimama.com
+DOMAIN-KEYWORD,a.9game.cn
+DOMAIN-KEYWORD,track.uc.cn
+DOMAIN-KEYWORD,adtrack.ucweb.com
+DOMAIN-KEYWORD,utp-dmp.ucweb.com
+DOMAIN-KEYWORD,utp.ucweb.com
+DOMAIN-KEYWORD,huichuan.sm.cn
+DOMAIN-KEYWORD,ynuf.alipay.com
+DOMAIN-KEYWORD,pdds.ucweb.com
+DOMAIN-KEYWORD,js.union-wifi.com
+DOMAIN-KEYWORD,www.qmlog.cn
+DOMAIN-KEYWORD,cpu.baidu.com
+DOMAIN-KEYWORD,caclick.baidu.com
+DOMAIN-KEYWORD,rescn.u3.ucweb.com
+DOMAIN-KEYWORD,editor.sm.cn
+DOMAIN-KEYWORD,fc-video.cdn.bcebos.com
+DOMAIN-KEYWORD,vs10.bj2ct.u3.ucweb.com
+DOMAIN, safe.ucweb.com
+DOMAIN, px.ucweb.com
+DOMAIN, navigis.uc.cn
+DOMAIN, order.sm.cn
+DOMAIN, ucdc-upaas.uc.cn
+DOMAIN, access.open.uc.cn
+DOMAIN, uc.ucweb.com
+DOMAIN, emoji.uc.cn
+DOMAIN, ssp-partner.alibaba.com
+DOMAIN, voice-service.uc.cn
+DOMAIN, v.uc.cn
+DOMAIN, coral.uc.cn
+DOMAIN, wolong-dsp.sm.cn
+DOMAIN, cartoonapi.uc.cn
+DOMAIN, umessage-online-zb.uc.cn
+DOMAIN, sealine.youku.com
+DOMAIN, api.c.uc.cn
+DOMAIN, aid.m.taobao.com
+DOMAIN, cms.uc.cn
+DOMAIN, applog-perf.uc.cn
+DOMAIN-SUFFIX,m.atm.youku.com
+DOMAIN-SUFFIX,adp.atm.youku.com
+DOMAIN-SUFFIX,clickc.admaster.com.cn
+DOMAIN-SUFFIX,count.atm.youku.com
+DOMAIN-SUFFIX,ems.youku.com
+DOMAIN-SUFFIX,fans.m.tmall.com
+DOMAIN-SUFFIX,r1.ykimg.com
+DOMAIN-SUFFIX,v.admaster.com.cn
+DOMAIN-SUFFIX,v2.reachmax.cn
+DOMAIN-SUFFIX,val.atm.youku.com
+DOMAIN-SUFFIX,server.m.pp.cn
+DOMAIN-SUFFIX,puds.ucweb.com
+DOMAIN-SUFFIX,wgo.mmstat.com
+DOMAIN-SUFFIX,log.cs.pp.cn
+DOMAIN-SUFFIX,applog.uc.cn
+DOMAIN-SUFFIX,afpapi.alimama.com
+DOMAIN-SUFFIX,a.9game.cn
+DOMAIN-SUFFIX,track.uc.cn
+DOMAIN-SUFFIX,adtrack.ucweb.com
+DOMAIN-SUFFIX,utp-dmp.ucweb.com
+DOMAIN-SUFFIX,utp.ucweb.com
+DOMAIN-SUFFIX,huichuan.sm.cn
+DOMAIN-SUFFIX,ynuf.alipay.com
+DOMAIN-SUFFIX,pdds.ucweb.com
+DOMAIN-SUFFIX,js.union-wifi.com
+DOMAIN-SUFFIX,qmlog.cn
+DOMAIN-SUFFIX,cpu.baidu.com
+DOMAIN-SUFFIX,caclick.baidu.com
+DOMAIN-SUFFIX,rescn.u3.ucweb.com
+DOMAIN, feedback.uc.cn
+DOMAIN, gj.applog.uc.cn
+DOMAIN, gj.track.uc.cn
+DOMAIN, gjapplog.uc.cn
+DOMAIN, gjtrack.uc.cn
+DOMAIN, holmeshelptest.uc.cn
+DOMAIN-SUFFIX,ads.uc.cn
+DOMAIN-SUFFIX,adslot.uc.cn
+DOMAIN-SUFFIX,alissl.ucdl.pp.uc.cn
+DOMAIN-SUFFIX,api.mp.uc.cn
+DOMAIN-SUFFIX,api.open.uc.cn
+DOMAIN-SUFFIX,applog.uc.cn
+DOMAIN-SUFFIX,applogios.uc.cn
+DOMAIN-SUFFIX,bench.uc.cn
+DOMAIN-SUFFIX,client.tv.uc.cn
+DOMAIN-SUFFIX,coral-task.uc.cn
+DOMAIN-SUFFIX,dispatcher.upmc.uc.cn
+DOMAIN-SUFFIX,hcadv.video.ums.uc.cn
+DOMAIN-SUFFIX,hao.uc.cn
+DOMAIN-SUFFIX,lobmuc.cn
+DOMAIN-SUFFIX,open-uc.cn
+DOMAIN-SUFFIX,puds.test.uae.uc.cn
+DOMAIN-SUFFIX,track.uc.cn
+DOMAIN-SUFFIX,wmedia-track.uc.cn
+DOMAIN-SUFFIX,woodpecker.uc.cn
+DOMAIN, gecko-pangle-lf.snssdk.com
+DOMAIN, mercury-sdk.snssdk.com
+DOMAIN, tbm.snssdk.com
+DOMAIN, toblog.ctobsnssdk.com
+DOMAIN, tnc3-aliec2.snssdk.com

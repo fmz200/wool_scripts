@@ -1,0 +1,34 @@
+#!name=WiFi万能钥匙
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partW/WiFiMasterKey.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rule]
+DOMAIN-KEYWORD,app.51y5.net
+DOMAIN-KEYWORD,apiinit.amap.com
+DOMAIN-KEYWORD,c.51y5.net
+DOMAIN-KEYWORD,msg.push.51y5.net
+DOMAIN-KEYWORD,a.wkanx.com
+DOMAIN-KEYWORD,c.wkanx.com
+DOMAIN-KEYWORD,c1.wkanx.com
+DOMAIN-KEYWORD,ap.51y5.net
+DOMAIN-KEYWORD,dc.51y5.net
+DOMAIN-KEYWORD,push-dc.51y5.net
+DOMAIN-KEYWORD,news-log.51y5.net
+DOMAIN-KEYWORD,login.push.51y5.net
+DOMAIN-KEYWORD,news.51y5.net
+DOMAIN-KEYWORD,cds.51y5.net
+DOMAIN-KEYWORD,insurance.lianwifi.com
+DOMAIN-KEYWORD,config.51y5.net
+DOMAIN-KEYWORD,static.wkanx.com
+DOMAIN-KEYWORD,config.y5en.com
+# 万能钥匙专业版
+# 感谢#All in 梭哈分享
+DOMAIN-SUFFIX,mi.gdt.qq.com
+# 去除导航栏免费短剧
+DOMAIN, taichi.51y5.net

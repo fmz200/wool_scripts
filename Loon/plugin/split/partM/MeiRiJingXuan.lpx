@@ -1,0 +1,13 @@
+#!name=每日精选
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partM/MeiRiJingXuan.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rewrite]
+http:\/\/dili.sqcosmos.com\/jiekou\/mains\/p\d+.html response-body-json-jq '.album |= map(select(.id != "4154" and .id != "4165"))'
+http:\/\/dili.sqcosmos.com\/jiekou\/endpage\/ad reject-dict

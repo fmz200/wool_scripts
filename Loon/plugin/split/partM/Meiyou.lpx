@@ -1,0 +1,32 @@
+#!name=美柚
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partM/Meiyou.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Argument]
+meiyou_enable = switch,true,false,tag=美柚-脚本开关
+
+[Rule]
+DOMAIN,ad.seeyouyima.com
+
+
+[Rewrite]
+^http:\/\/x\.seeyouyima\.com\/adx\/staticstics\? reject
+^https:\/\/axxd\.xmseeyouyima\.com\/ad\/ reject
+^https:\/\/axxd\.xmseeyouyima\.com\/ad_statistics\? reject
+^https:\/\/axxd\.xmseeyouyima\.com\/v1\/getad\? reject
+^https:\/\/axxd\.xmseeyouyima\.com\/pregetad\? reject
+
+
+[Script]
+http-response ^https:\/\/config-service\.seeyouyima\.com\/api\/configs\/batch\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/meiyou/meiyou_ads.js, requires-body=true, timeout=60, tag=美柚App净化, enable={meiyou_enable}
+http-response ^https:\/\/config-service\.seeyouyima\.com\/api\/configs\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/meiyou/meiyou_ads.js, requires-body=true, timeout=60, tag=美柚App净化, enable={meiyou_enable}
+
+
+[MITM]
+hostname = x.seeyouyima.com, axxd.xmseeyouyima.com, config-service.seeyouyima.com

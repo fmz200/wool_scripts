@@ -1,0 +1,19 @@
+#!name=韭菜公社
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partJ/JiuCaiGongShe.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rewrite]
+# 开屏广告干净了,有小部分误杀
+#^https?:\/\/jiucaigongshe\.oss-cn-beijing\.aliyuncs\.com\/.*.png reject-200
+# 开屏倒计时还在,没有误杀
+#^https?:\/\/jiucaigongshe\.oss-cn-beijing\.aliyuncs\.com\/[A-Z0-9]{8}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{12}\.png reject-200
+
+
+[MITM]
+hostname = jiucaigongshe.oss-cn-beijing.aliyuncs.com

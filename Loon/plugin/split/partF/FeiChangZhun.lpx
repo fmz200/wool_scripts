@@ -1,0 +1,17 @@
+#!name=飞常准
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partF/FeiChangZhun.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rewrite]
+^https?:\/\/app\.variflight\.com\/ad\/ reject
+^https?:\/\/app\.variflight\.com\/v\d\/advert\/ reject
+
+
+[MITM]
+hostname = app.variflight.com

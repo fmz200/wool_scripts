@@ -1,0 +1,19 @@
+#!name=PushPlus微信推送广告
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partP/PushPlusWeChatPushAd.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rewrite]
+# 屏蔽图片广告，但是还有css空白模块, 如开启可自行添加主机名
+#^https?:\/\/image\.pushplus\.plus\/ad.* reject-dict
+# 屏蔽广告推送模块，会把“打开小程序”也屏蔽
+#^https?:\/\/www\.pushplus\.plus.* response-body-replace-regex (<head>) $1<style type="text/css"> div.container.py-3.text-center {display: none! important} </style />
+
+
+[MITM]
+hostname = image.pushplus.plus, www.pushplus.plus

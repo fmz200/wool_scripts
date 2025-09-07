@@ -1,0 +1,32 @@
+#!name=广告联盟
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/part!!/AffiliateMarketing.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rule]
+# 若有问题自行设置白名单
+DOMAIN-SUFFIX, miaozhen.com
+DOMAIN-KEYWORD, -ad-sign.byteimg.com
+DOMAIN-KEYWORD, -tos.pstatp.com
+DOMAIN-KEYWORD, asiad.byteactivity
+DOMAIN-KEYWORD, pangolin-sdk-toutiao
+DOMAIN-KEYWORD, pglstatp-toutiao
+DOMAIN-KEYWORD, pangolin.snssdk.com
+DOMAIN-KEYWORD, video-cn.snssdk.com
+DOMAIN-SUFFIX, getui.com
+DOMAIN-SUFFIX, getui.net
+DOMAIN-SUFFIX, gepush.com
+DOMAIN-SUFFIX, igexin.com
+DOMAIN-SUFFIX, log.aliyuncs.com
+DOMAIN-SUFFIX, zlsdk.1rtb.net
+DOMAIN-SUFFIX, ott.cibntv.net
+DOMAIN-SUFFIX, cdntips.net
+DOMAIN-SUFFIX, tfogc.com
+DOMAIN-SUFFIX, file.myqcloud.com
+DOMAIN-KEYWORD, volc
+DOMAIN-KEYWORD, umeng

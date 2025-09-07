@@ -1,0 +1,31 @@
+#!name=腾讯广告
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partT/TencentAds.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rewrite]
+# ^https?:\/\/btrace\.qq\.com reject-200
+# ^https?:\/\/api2\.helper\.qq\.com\/game\/buttons reject-img
+# ^https?:\/\/lives\.l\.qq\.com\/livemsg\?sdtfrom= reject-img
+# ^https?:\/\/imgcache\.qq\.com\/qqlive\/ reject-img
+# ^https?:\/\/mtteve\.beacon\.qq\.com\/analytics reject-img
+# ^https?:\/\/vv\.video\.qq\.com\/getvmind\? reject-200
+# ^https?:\/\/3gimg\.qq\.com\/tencentMapTouch\/app\/activity\/ reject-200
+# ^https?:\/\/3gimg\.qq\.com\/tencentMapTouch\/splash\/ reject-200
+# ^https?:\/\/y\.gtimg\.cn\/music\/.*?_Ad/\d+\.png reject-img
+# ^https?:\/\/splashqqlive\.gtimg\.com\/website\/\d{6} reject-img
+# ^https?:\/\/qzonestyle\.gtimg\.cn\/qzone\/biz\/gdt\/mob\/sdk\/ios\/v2\/ reject-img
+# ^https?:\/\/discuz\.gtimg\.cn\/cloud\/scripts\/discuz_tips\.js reject-img
+# ^https?:\/\/bla\.gtimg\.com\/qqlive\/\d{6}.+?\.png reject-img
+# ^https?:\/\/mmgr\.gtimg\.com\/gjsmall\/qiantu\/upload\/ reject-img
+# ^https?:\/\/mmgr\.gtimg\.com\/gjsmall\/qqpim\/public\/ios\/splash\/.+?\/\d{4}_\d{4} reject-img
+# ^https?://bk\.bingo\.qq\.com/bk/crx/data/videoAd.*$ reject-dict
+
+
+[MITM]
+hostname = btrace.qq.com, api2.helper.qq.com, *.beacon.qq.com, mi.gdt.qq.com, lives.l.qq.com, imgcache.qq.com, mtteve.beacon.qq.com, vv.video.qq.com, qt.qq.com, 3gimg.qq.com, y.gtimg.cn, splashqqlive.gtimg.com, qzonestyle.gtimg.cn, discuz.gtimg.cn, bla.gtimg.com, mmgr.gtimg.com, bk.bingo.qq.com

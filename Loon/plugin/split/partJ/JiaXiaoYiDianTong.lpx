@@ -1,0 +1,21 @@
+#!name=驾校一点通
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partJ/JiaXiaoYiDianTong.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rewrite]
+# 开屏广告 感谢【jinlvei】分享
+^https?:\/\/richmanrules\.ksedt\.com\/intellectWaterfall(Bidding)?\/find reject
+^https?:\/\/richmanapi\.jxedt\.com\/api\/(ad|adplus|banadplus)\/ reject-200
+^https?:\/\/api\.jxedt\.com\/ad\/ reject
+^https?:\/\/api\.jxedt\.com\/jump\/EMiCcDNp reject-img
+^https?:\/\/richmanmain\.jxedt\.com\/advertisement\/fallback reject-img
+
+
+[MITM]
+hostname = richmanrules.ksedt.com, api.jxedt.com, richmanapi.jxedt.com

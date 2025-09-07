@@ -1,0 +1,58 @@
+#!name=番茄小说
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partF/FanQieNovel.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rule]
+DOMAIN, i.snssdk.com
+DOMAIN, i-lq.snssdk.com
+DOMAIN, dig.bdurl.net
+DOMAIN, activity-ag.awemeughun.com
+DOMAIN, mcs.snssdk.com
+DOMAIN, tnc3-alisc1.snssdk.com
+DOMAIN, security-lq.snssdk.com
+DOMAIN, tnc3-aliec2.snssdk.com
+#DOMAIN, is.snssdk.com
+DOMAIN, i.snssdk.com
+DOMAIN, v6-novelapp.ixigua.com
+DOMAIN, msync-im1-vip6-std.easemob.com
+DOMAIN, apd-pcdnwxlogin.teg.tencent-cloud.net
+DOMAIN, api.iegadp.qq.com
+DOMAIN-SUFFIX, novelapp.ixigua.com
+DOMAIN-SUFFIX, default.ixigua.com
+DOMAIN-SUFFIX, byteorge.com
+# 下面两条误杀严重导致懂车帝无法正常使用
+#DOMAIN-SUFFIX, bytegoofy.com
+#DOMAIN-SUFFIX, bytedance.com
+IP-CIDR, 49.71.37.101/32, no-resolve
+IP-CIDR, 117.71.105.23/32, no-resolve
+IP-CIDR, 218.94.207.205/32, no-resolve
+IP-CIDR, 117.92.229.188/32, no-resolve
+IP-CIDR, 101.36.166.16/32, no-resolve
+IP-CIDR, 180.96.2.114/32, no-resolve
+
+
+[Rewrite]
+# 去章末广告
+^https?:\/\/.+\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/(get_ads|stats|settings)\/ reject
+^https?:\/\/.+\.pglstatp-toutiao\.com\/.+\/toutiao\.mp4 reject
+^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(obj|img)\/(ad-app-package|ad)\/.+ reject
+^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(obj|img)\/web\.business\.image\/.+ reject
+^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/obj\/ad-pattern\/renderer reject
+^https?:\/\/gurd\.snssdk\.com\/src\/server\/v3\/package reject
+^https?:\/\/.+\.byteimg.com/tos-cn-i-1yzifmftcy\/(.+)-jpeg\.jpeg reject
+^https?:\/\/.+\.pstatp\.com\/obj\/mosaic-legacy\/.+\?from\=ad reject
+^https?:\/\/.+\.pstatp\.com\/bytecom\/resource\/track_log\/src\/.+ reject
+^https?:\/\/.+\.snssdk\.com\/video\/play\/1\/toutiao\/.+\/mp4 reject
+^https?:\/\/.+\.snssdk.com\/api\/ad\/.+ reject
+^https?:\/\/.+\.byteimg\.com\/ad-app-package reject
+^https?:\/\/.+\.byteimg\.com\/web\.business\.image reject
+
+
+[MITM]
+hostname = *.pangolin-sdk-toutiao.com, *.pangolin-sdk-toutiao.*, *.pstatp.com, *.pstatp.com.*, *.pglstatp-toutiao.com.*, *.pglstatp-toutiao.com, gurd.snssdk.com, gurd.snssdk.com.*, i-lq.snssdk.com, i-lq.snssdk.com.*, *default.ixigua.com

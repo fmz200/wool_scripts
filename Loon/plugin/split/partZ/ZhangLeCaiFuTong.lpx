@@ -1,0 +1,20 @@
+#!name=涨乐财富通
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partZ/ZhangLeCaiFuTong.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rewrite]
+# 开屏广告 弹窗广告
+^https?:\/\/c\.zhangle\.com\/pic\/mktg\/diversity\/.+\.jpg$ reject-dict
+^https?:\/\/live\.inst-service\.htsc\.com\/live reject-dict
+^https?:\/\/geetest\.htsc\.com:8888\/pre_get_token reject-200
+^https?:\/\/119\.29\.29\.\d+\/d reject-200
+
+
+[MITM]
+hostname = c.zhangle.com, live.inst-service.htsc.com, geetest.htsc.com, 119.29.29.*

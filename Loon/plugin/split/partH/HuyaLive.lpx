@@ -1,0 +1,29 @@
+#!name=虎牙直播
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partH/HuyaLive.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rule]
+# 开屏广告
+DOMAIN, pp-cdnfile2pcdn.msstatic.com
+DOMAIN, livewebbs2pcdn.msstatic.com
+DOMAIN, huyafile.msstatic.com
+DOMAIN, livewebbs2.msstatic.com
+DOMAIN, business.msstatic.com
+DOMAIN-SUFFIX,v1d.szbdyd.com
+
+
+[Rewrite]
+^https?:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns$ reject
+^https?:\/\/business\.msstatic\.com\/advertiser\/material reject
+^https?:\/\/cdnfile1\.msstatic\.com\/cdnfile\/appad\/ reject-img
+^https?://live-ads\.huya\.com/live/getAllEntrance.*$ reject-dict
+
+
+[MITM]
+hostname = cdn.wup.huya.com, business.msstatic.com, cdnfile1.msstatic.com, live-ads.huya.com

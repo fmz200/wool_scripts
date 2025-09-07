@@ -1,0 +1,26 @@
+#!name=百度贴吧
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partB/BaiduTieba.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Argument]
+bddutpba_enable = switch,true,false,tag=百度贴吧-脚本开关
+
+[Rule]
+# 屏蔽域名dns查询
+IP-CIDR, 180.76.76.200/32, no-resolve
+DOMAIN-KEYWORD,api.sobot.com
+DOMAIN-SUFFIX,cm.ad.bilibili.com
+DOMAIN-SUFFIX,cm.adcommon.bilibili.com
+DOMAIN-SUFFIX,cm.game.bilibili.com
+DOMAIN-SUFFIX,cm.track.biligame.bilibili.com
+
+
+[Script]
+http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/(c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)$|tiebaads\/commonbatch|c\/s\/sync$) script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-json.js, requires-body=true, timeout=60, tag=百度贴吧广告, enable={bddutpba_enable}
+http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js, requires-body=true, binary-body-mode=true, timeout=60, tag=百度贴吧广告, enable={bddutpba_enable}

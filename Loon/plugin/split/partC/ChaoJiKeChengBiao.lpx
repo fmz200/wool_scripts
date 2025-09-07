@@ -1,0 +1,18 @@
+#!name=超级课程表
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partC/ChaoJiKeChengBiao.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rewrite]
+# 开屏广告 由【jinlvei】分享
+^https?:\/\/182\.92\.244\.70\/d\/json reject-dict
+http:\/\/ad\.myfriday\.cn\/d\/json\/1\.1 reject
+
+
+[MITM]
+hostname = 182.92.244.70, ad.myfriday.cn

@@ -1,0 +1,56 @@
+#!name=朴朴超市
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partP/PuPuSupermarket.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Argument]
+pupuicui_enable = switch,true,false,tag=朴朴超市-脚本开关
+
+[Rewrite]
+# 开屏广告 感谢【树先生, 可莉】分享
+^https:\/\/j1\.pupuapi\.com\/client\/notification\/message_center\/unread_number response-body-json-jq .data = []
+# 广告下发
+^http:\/\/139\.196\.12\.179:8053\/httpdns\/ reject
+^http:\/\/106\.55\.220\.18:8053\/httpdns\/ reject
+^http:\/\/54\.222\.159\.138:8053\/httpdns\/ reject
+^http:\/\/101\.42\.130\.147\/httpdns\/resolve\/ reject
+# 主页实惠卡横幅
+^https:\/\/j1\.pupuapi\.com\/client\/member_card\/index\/my reject
+# 搜索框页面热榜
+^https:\/\/j1\.pupuapi\.com\/client\/marketing\/advertisement\/search_input_ranking reject-dict
+# 朴朴超市订单待收货页右下角悬浮广告
+^https:\/\/j1\.pupuapi\.com\/client\/assets\/discount\/order reject-dict
+# 购物车页去换购推荐
+^https:\/\/j1\.pupuapi\.com\/client\/marketing\/channel\/global_redeem\/top_tip\/v2 reject-dict
+# 各种页面的商品推荐
+^https:\/\/j1\.pupuapi\.com\/client\/recommendation\/hub\/interests\/products\/v2 reject-dict
+# 个人主页会员标识
+^https:\/\/j1\.pupuapi\.com\/client\/member_card\/premium\/user_center reject-dict
+
+
+[Script]
+http-response ^https:\/\/j1\.pupuapi\.com\/client\/search\/hot_keywords\/v3 script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js, requires-body=true, timeout=60, tag=朴朴超市, enable={pupuicui_enable}
+
+http-response ^https:\/\/j1\.pupuapi\.com\/client\/a朴朴超市, enable={pupuicui_enable}_resource\/resource_preload\/list_h5_resource script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js, requires-body=true, timeout=60, tag=朴朴超市, enable={pupuicui_enable}
+
+http-response ^https:\/\/j1\.pupuapi\.com\/client\/marketing\/advertisement\/v1 script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js, requires-body=true, timeout=60, tag=朴朴超市, enable={pupuicui_enable}
+
+# 搜索结果页信息流横幅广告
+http-response ^https:\/\/j1\.pupuapi\.com\/client\/search\/hub\/search_box\/products\/v6 script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js, requires-body=true, timeout=60, tag=朴朴超市, enable={pupuicui_enable}
+
+# 下单页实惠卡开通推荐
+http-response ^https:\/\/j1\.pupuapi\.com\/client\/order_settlement\/detail script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js, requires-body=true, timeout=60, tag=朴朴超市, enable={pupuicui_enable}
+
+# 订单列表骑手反馈问题推荐
+http-response ^https:\/\/j1\.pupuapi\.com\/client\/order\/orders\/list\/v4 script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js, requires-body=true, timeout=60, tag=朴朴超市, enable={pupuicui_enable}
+
+
+
+
+[MITM]
+hostname = j1.pupuapi.com

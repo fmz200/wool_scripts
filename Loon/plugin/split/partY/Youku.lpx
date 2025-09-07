@@ -1,0 +1,112 @@
+#!name=优酷
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partY/Youku.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Argument]
+yzku_enable = switch,true,false,tag=优酷-脚本开关
+
+[Rule]
+#DOMAIN-SUFFIX, sm.cn
+DOMAIN-SUFFIX, acz.youku.com
+DOMAIN-SUFFIX, adx-core.youku.com
+DOMAIN-SUFFIX, adx-open-service.youku.com
+DOMAIN-SUFFIX, rhdc-acs.youku.com
+DOMAIN-SUFFIX, partner.uc.cn
+DOMAIN-SUFFIX, ubixioe.com
+DOMAIN-SUFFIX, uczzd.cn
+DOMAIN-SUFFIX, ranfenghd.com
+DOMAIN-SUFFIX, zconfig.alibabausercontent.com
+DOMAIN-SUFFIX, bgg.baidu.com
+DOMAIN-SUFFIX, gdt.qq.com
+DOMAIN-SUFFIX, sdk.e.qq.com
+DOMAIN-SUFFIX, mazu.m.qq.com
+DOMAIN-SUFFIX, snowflake.qq.com
+DOMAIN-SUFFIX, cad.youku.com
+DOMAIN-SUFFIX, sjarvis.taobao.com
+DOMAIN, adsmind.ugdtimg.com
+DOMAIN, amdc.m.youku.com
+DOMAIN, apiv4-iyes.youku.com
+DOMAIN, httpdns.alicdn.com
+DOMAIN, iyes.youku.com
+DOMAIN, mc.atm.youku.com
+DOMAIN, pl.cp31.ott.cibntv.net
+DOMAIN, m-vali.cp31.ott.cibntv.net
+DOMAIN, vali-g1.cp31.ott.cibntv.net
+DOMAIN, vali-ugc.cp31.ott.cibntv.net
+DOMAIN, yk-ssp.ad.youku.com
+DOMAIN, ykad-data.youku.com
+DOMAIN, ad.mobile.youku.com
+DOMAIN-SUFFIX,atm.youku.com
+DOMAIN-SUFFIX,actives.youku.com
+DOMAIN-SUFFIX,ad.api.3g.tudou.com
+DOMAIN-SUFFIX,ad.api.3g.youku.com
+DOMAIN-SUFFIX,ad.api.mobile.youku.com
+DOMAIN-SUFFIX,store.tv.api.3g.youku.com
+DOMAIN-SUFFIX,store.xl.api.3g.youku.com
+DOMAIN-SUFFIX,a-dxk.play.api.3g.youku.com
+DOMAIN-SUFFIX,b.smartvideo.youku.com
+DOMAIN-SUFFIX,c.yes.youku.com
+DOMAIN-SUFFIX,das.api.youku.com
+DOMAIN-SUFFIX,das.mobile.youku.com
+DOMAIN-SUFFIX,dev-push.m.youku.com
+DOMAIN-SUFFIX,dl.g.youku.com
+DOMAIN-SUFFIX,dmapp.youku.com
+DOMAIN-SUFFIX,gamex.mobile.youku.com
+DOMAIN-SUFFIX,hudong.pl.youku.com
+DOMAIN-SUFFIX,huodong.pl.youku.com
+DOMAIN-SUFFIX,huodong.vip.youku.com
+DOMAIN-SUFFIX,hz.youku.com
+DOMAIN-SUFFIX,l.ykimg.com
+DOMAIN-SUFFIX,lstat.youku.com
+DOMAIN-SUFFIX,m.yes.youku.com
+DOMAIN-SUFFIX,mobilemsg.youku.com
+DOMAIN-SUFFIX,msg.youku.com
+DOMAIN-SUFFIX,myes.youku.com
+DOMAIN-SUFFIX,p.l.youku.com
+DOMAIN-SUFFIX,passport-log.youku.com
+DOMAIN-SUFFIX,p-log.ykimg.com
+DOMAIN-SUFFIX,push.m.youku.com
+DOMAIN-SUFFIX,r.l.youku.com
+DOMAIN-SUFFIX,s.p.youku.com
+DOMAIN-SUFFIX,sdk.api.gamex.mobile.youku.com
+DOMAIN-SUFFIX,sdk.m.youku.com
+DOMAIN-SUFFIX,stat.youku.com
+DOMAIN-SUFFIX,tdrec.youku.com
+DOMAIN-SUFFIX,test.ott.youku.com
+DOMAIN-SUFFIX,urchin.lstat.youku.com
+DOMAIN-SUFFIX,v.l.youku.com
+DOMAIN-SUFFIX,val.api.youku.com
+DOMAIN-SUFFIX,wan.youku.com
+DOMAIN-SUFFIX,ykatr.youku.com
+DOMAIN-SUFFIX,ykrec.youku.com
+IP-CIDR, 223.111.27.248/32, no-resolve
+
+
+[Rewrite]
+# 播放页弹窗动图
+^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.(pisp\.scripts\.get|xspace\.play\.position\.preload\.query|xspace\.poplayer\.position\.query) reject-dict
+
+
+[Script]
+# 播放详情页,首页信息流,顶部tab,我的页面,评论区
+http-response ^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.columbus\.(gateway\.new\.execute|home\.feed|home\.query|uc\.query|ycp\.query) script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=优酷, enable={yzku_enable}
+# 底部tab
+http-response ^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.haidai\.lantern\.appconfig\.get script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=优酷底部tab, enable={yzku_enable}
+# 青少年模式弹窗
+http-response ^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.huluwa\.dispatcher\.youthmode\.config2 script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=优酷青少年模式弹窗, enable={yzku_enable}
+# 搜索列表
+http-response ^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.soku\.yksearch script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=优酷搜索列表, enable={yzku_enable}
+# 热剧弹窗
+http-response ^https?:\/\/push\.m\.youku\.com\/collect-api\/get_push_interval_config_wx\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=优酷热剧弹窗, enable={yzku_enable}
+# 开屏广告
+http-response ^https?:\/\/un-acs\.youku\.com\/gw\/mtop\.youku\.play\.ups\.appinfo\.get script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=优酷开屏广告, enable={yzku_enable}
+
+
+[MITM]
+hostname = acs.youku.com, push.m.youku.com, un-acs.youku.com

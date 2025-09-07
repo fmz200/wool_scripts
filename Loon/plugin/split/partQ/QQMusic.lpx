@@ -1,0 +1,57 @@
+#!name=QQ音乐
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partQ/QQMusic.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rule]
+DOMAIN, adstats.tencentmusic.com
+DOMAIN, ad.tencentmusic.com
+DOMAIN, adcdn.tencentmusic.com
+DOMAIN, adcdn6.tencentmusic.com
+DOMAIN, adexpo.tencentmusic.com
+DOMAIN, adclick.tencentmusic.com
+DOMAIN, otheve.beacon.qq.com
+DOMAIN, monitor.music.qq.com
+DOMAIN, stat.y.qq.com
+DOMAIN, tmead.y.qq.com-NO-DROP
+DOMAIN, oth.str.mdt.qq.com
+DOMAIN, h.trace.qq.com
+DOMAIN, sdk.e.qq.com
+DOMAIN, p.l.qq.com
+DOMAIN, us.l.qq.com
+DOMAIN, tangram.e.qq.com
+DOMAIN, tmeadbak.y.qq.com-NO-DROP
+DOMAIN-SUFFIX, imtmp.net
+DOMAIN, tmeadcomm.y.qq.com
+DOMAIN, ad.tencentmusic.com
+DOMAIN, adstats.tencentmusic.com
+DOMAIN, tmead.y.qq.com
+DOMAIN-SUFFIX, rqd.qq.com
+DOMAIN-SUFFIX, wup.imtt.qq.com
+DOMAIN-SUFFIX, gdt.qq.com
+DOMAIN-SUFFIX, android.rqd.qq.com
+DOMAIN-SUFFIX, e.qq.com
+DOMAIN-SUFFIX, v.gdt.qq.com
+DOMAIN, amsweb-cdn-gz-1258344696.file.myqcloud.com
+DOMAIN, wallpaper-1258344696.file.myqcloud.com
+DOMAIN, xs.gdt.qq.com
+IP-CIDR, 120.222.240.171/32, no-resolve
+
+
+[Rewrite]
+^https?:\/\/us\.l\.qq\.com\/exapp reject
+^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/t_splash_info\/ reject
+^https?:\/\/.+?\/music\/common\/upload\/t_splash_info\/ reject
+^https?:\/\/y\.gtimg\.cn\/music\/common\/\/upload\/kg_ad/.*?\d{4}\.jpg reject-img
+^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/targeted_ads reject-img
+^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/music\/common\/upload\/t_splash_info\/ reject
+^https:\/\/music\.y\.qq\.com\/maproxy\/getPbCompressAd reject
+
+
+[MITM]
+hostname = us.l.qq.com, y.gtimg.cn, music.y.qq.com

@@ -1,0 +1,49 @@
+#!name=酷我音乐
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partK/KuwoMusic.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Argument]
+kuwoybyt_enable = switch,true,false,tag=酷我音乐-脚本开关
+
+[Rule]
+DOMAIN, mobilead.kuwo.cn
+DOMAIN, rich.kuwo.cn
+DOMAIN-KEYWORD,rich.kuwo.cn
+DOMAIN-KEYWORD,mobilead.kuwo.cn
+DOMAIN-SUFFIX,c.kuwo.cn
+DOMAIN-SUFFIX,deliver.kuwo.cn
+DOMAIN-SUFFIX,game.kuwo.cn
+DOMAIN-SUFFIX,kuwoyy.com
+DOMAIN-SUFFIX,kwmsg.kuwo.cn
+DOMAIN-SUFFIX,msclick2.kuwo.cn
+DOMAIN-SUFFIX,msphoneclick.kuwo.cn
+DOMAIN-SUFFIX,updatepage.kuwo.cn
+DOMAIN-SUFFIX,wa.kuwo.cn
+DOMAIN-SUFFIX,webstat.kuwo.cn
+DOMAIN-SUFFIX,mobilead.kuwo.cn
+DOMAIN-SUFFIX,rich.kuwo.cn
+
+
+
+[Rewrite]
+# 广告
+^https?:\/\/audiobookpay\.kuwo\.cn\/a\.p\?op=get_advertright_endtime reject-dict
+
+
+[Script]
+http-response ^https?:\/\/(mgxhtj|nmobi|searchrecterm)\.kuwo\.cn\/(mgxh|mobi|recterm)\.s script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuwo/kuwo.js, requires-body=true, timeout=60, tag=酷我音乐, enable={kuwoybyt_enable}
+# 会员
+http-response ^https?:\/\/audiobookpay\.kuwo\.cn\/a\.p script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuwo/kuwo.js, requires-body=true, timeout=60, tag=酷我音乐, enable={kuwoybyt_enable}
+http-response ^https?:\/\/musicpay\.kuwo\.cn\/music\.pay script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuwo/kuwo.js, requires-body=true, timeout=60, tag=酷我音乐, enable={kuwoybyt_enable}
+http-response ^https?:\/\/vip1\.kuwo\.cn\/vip\/(enc\/user\/vip\?op=ui|v\d\/theme\?op=gd) script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuwo/kuwo.js, requires-body=true, timeout=60, tag=酷我音乐, enable={kuwoybyt_enable}
+http-response ^https?:\/\/vip1\.kuwo\.cn\/vip\/v\d\/user\/vip\?op=ui script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuwo/kuwo.js, requires-body=true, timeout=60, tag=酷我音乐, enable={kuwoybyt_enable}
+
+
+[MITM]
+hostname = audiobookpay.kuwo.cn, mgxhtj.kuwo.cn, nmobi.kuwo.cn, searchrecterm.kuwo.cn, musicpay.kuwo.cn, vip1.kuwo.cn

@@ -1,0 +1,45 @@
+#!name=人人视频
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partR/RenRenVideo.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Argument]
+rfrfuipk_enable = switch,true,false,tag=人人视频-脚本开关
+
+[Rewrite]
+# RRTV_屏蔽軟件更新
+^https?:\/\/api\.rr\.tv\/.*?Version reject
+# RRTV_屏蔽限時彈窗
+https://api.rr.tv/storage/business/rootName/app/homePage\?dataType=JSON reject-dict
+
+
+[Script]
+# RRTV_level_info
+http-response ^https?:\/\/api\.rr\.tv\/\w{3}\/level\/info script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js, requires-body=true, timeout=60, tag=rrtv_json, enable={rfrfuipk_enable}
+# RRTV_去除首頁廣告
+http-response https://api.rr.tv/v3plus/index/channel\?pageNum=1&position=CHANNEL_INDEX script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js, requires-body=true, timeout=60, tag=rrtv_json, enable={rfrfuipk_enable}
+# RRTV_去除廣場tab
+http-response ^https?:\/\/api\.rr\.tv\/app\/config\/h5NativeBar script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js, requires-body=true, timeout=60, tag=rrtv_json, enable={rfrfuipk_enable}
+# RRTV_去除商城廣告
+http-response ^https?:\/\/api\.rr\.tv\/v3plus\/index\/channel\?pageNum=1&position=CHANNEL_MY script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js, requires-body=true, timeout=60, tag=rrtv_json, enable={rfrfuipk_enable}
+# RRTV_Ad_List
+http-response ^https?:\/\/api\.rr\.tv\/user\/privilege\/list script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js, requires-body=true, timeout=60, tag=rrtv_json, enable={rfrfuipk_enable}
+# RRTV_Ad_All
+http-response ^https?:\/\/api\.rr\.tv\/ad\/getAll script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js, requires-body=true, timeout=60, tag=rrtv_json, enable={rfrfuipk_enable}
+# RRTV_Get_Drama
+http-response ^https?:\/\/api\.rr\.tv\/drama\/app\/get_combined_drama_detail script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js, requires-body=true, timeout=60, tag=rrtv_json, enable={rfrfuipk_enable}
+# RRTV_Watch_V4
+http-response https://api.rr.tv/watch/v4 script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js, requires-body=true, timeout=60, tag=rrtv_json, enable={rfrfuipk_enable}
+# RRTV_User_Info
+http-response https://api.rr.tv/user/profile script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js, requires-body=true, timeout=60, tag=rrtv_json, enable={rfrfuipk_enable}
+
+
+
+
+[MITM]
+hostname = api.rr.tv

@@ -1,0 +1,38 @@
+#!name=今日头条
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partJ/JinRongToutiao.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rule]
+DOMAIN, dm.toutiao.com
+DOMAIN-KEYWORD,ad.toutiao.com
+DOMAIN-KEYWORD,clk.gentags.net
+DOMAIN-KEYWORD,dm.toutiao.com
+DOMAIN-KEYWORD,dm.pstatp.com
+DOMAIN-KEYWORD,dm.bytedance.com
+DOMAIN-KEYWORD,uop.umeng.com
+DOMAIN-KEYWORD,m.suning.com
+DOMAIN-KEYWORD,adshare.toutiao.com
+DOMAIN-KEYWORD,tunion-api.m.taobao.com
+DOMAIN-KEYWORD,s1.pstatp.com
+DOMAIN-KEYWORD,s2.pstatp.com
+DOMAIN-KEYWORD,s3.pstatp.com
+DOMAIN-KEYWORD,a3.pstatp.com
+DOMAIN-KEYWORD,a3.bytecdn.cn
+DOMAIN, ad.toutiao.com
+DOMAIN, dsp.toutiao.com
+
+
+[Rewrite]
+# 感谢【Jörgen Frecht】分享
+^https?:\/\/p\d\.pstatp.com\/origin reject
+^https?:\/\/pb\d\.pstatp.com\/origin reject
+
+
+[MITM]
+hostname = p*.pstatp.com

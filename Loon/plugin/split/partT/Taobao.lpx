@@ -1,0 +1,67 @@
+#!name=淘宝
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partT/Taobao.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Argument]
+tcbc_enable = switch,true,false,tag=淘宝-脚本开关
+
+[Rule]
+DOMAIN-SUFFIX,apoll.m.taobao.com
+DOMAIN-SUFFIX,h-adashx.ut.taobao.com
+DOMAIN-SUFFIX,w.m.taobao.com
+DOMAIN, tunion-api.m.taobao.com
+DOMAIN-SUFFIX,re.m.taobao.com
+DOMAIN-SUFFIX,agoodm.m.taobao.com
+DOMAIN-SUFFIX,ai.taobao.com
+DOMAIN-SUFFIX,api.waptest.taobao.com
+DOMAIN-SUFFIX,dsp.simba.taobao.com
+DOMAIN-SUFFIX,fav.simba.taobao.com
+DOMAIN-SUFFIX,m.simba.taobao.com
+DOMAIN-SUFFIX,mclick.simba.taobao.com
+DOMAIN-SUFFIX,re.taobao.com
+DOMAIN-SUFFIX,redirect.simba.taobao.com
+DOMAIN-SUFFIX,simba.m.taobao.com
+DOMAIN-SUFFIX,srd.simba.taobao.com
+DOMAIN-SUFFIX,temai.taobao.com
+DOMAIN-SUFFIX,textlink.simba.taobao.com
+DOMAIN-SUFFIX,unitacs.m.taobao.com
+DOMAIN-SUFFIX,acs4baichuan.m.taobao.com
+DOMAIN-SUFFIX,adashbc.ut.taobao.com
+DOMAIN-SUFFIX,adash-c.ut.taobao.com
+DOMAIN-SUFFIX,adashxgc.ut.taobao.com
+DOMAIN-SUFFIX,adashx4yt.m.taobao.com
+DOMAIN-SUFFIX,tunion-api.m.taobao.com
+DOMAIN-SUFFIX,tns.simba.taobao.com
+DOMAIN-SUFFIX,click.mz.simba.taobao.com
+DOMAIN-SUFFIX,click.simba.taobao.com
+DOMAIN-SUFFIX,click.tz.simba.taobao.com
+DOMAIN-SUFFIX,stat.simba.taobao.com
+DOMAIN-SUFFIX,m-adash.m.taobao.com
+DOMAIN-SUFFIX,adashbc.m.taobao.com
+
+
+[Rewrite]
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv reject-dict
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimama\.etao\.config\.query\/.+?etao_advertise reject-dict
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit reject-dict
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.etao\.noah\.query\/.+tao_splash reject-dict
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise reject-dict
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get reject-dict
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome reject-dict
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources reject-dict
+^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(volvo\.secondfloor\.getconfig|wireless\.home\.newface\.awesome\.get) reject-dict
+
+
+[Script]
+http-response ^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get) script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/myBlockAds.js, requires-body=true, timeout=60, tag=淘宝, enable={tcbc_enable}
+http-response ^https?:\/\/poplayer\.template\.alibaba\.com\/\w+\.json script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/myBlockAds.js, requires-body=true, timeout=60, tag=淘宝, enable={tcbc_enable}
+
+
+[MITM]
+hostname = acs.m.taobao.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com

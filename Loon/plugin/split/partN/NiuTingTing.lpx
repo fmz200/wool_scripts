@@ -1,0 +1,19 @@
+#!name=牛听听
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partN/NiuTingTing.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rewrite]
+^https:\/\/gateway\.benewtech\.cn\/resources-app\/app\/startup\/prepage reject-dict
+^https:\/\/ntt-app\.benewtech\.cn\/v6\/user\/\d+\/messages\/event reject-dict
+
+
+
+
+[MITM]
+hostname = gateway.benewtech.cn, ntt-app.benewtech.cn

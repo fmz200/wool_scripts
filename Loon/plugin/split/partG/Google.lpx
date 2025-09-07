@@ -1,0 +1,46 @@
+#!name=谷歌
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partG/Google.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rule]
+DOMAIN-SUFFIX,google-analytics.com
+DOMAIN, safebrowsing.googleapis.com
+DOMAIN-SUFFIX,doubleclick.net
+DOMAIN-SUFFIX,googleadservices.com
+DOMAIN-SUFFIX,googleadsserving.cn
+DOMAIN-SUFFIX,googlesyndication.com
+DOMAIN-SUFFIX,googletagservices.com
+DOMAIN-SUFFIX,googletagmanager.com
+DOMAIN-SUFFIX,video-ad-stats.googlesyndication.com
+DOMAIN-SUFFIX,tpc.googlesyndication.com
+DOMAIN-SUFFIX,pagead.google.com
+DOMAIN-SUFFIX,pagead.l.google.com
+DOMAIN-SUFFIX,pagead2.googlesyndication.com
+DOMAIN-SUFFIX,pagead-tpc.l.google.com
+DOMAIN-SUFFIX,mobileads.google.com
+DOMAIN-SUFFIX,googlecommerce.com
+DOMAIN-SUFFIX,blaaaa12.googlecode.com
+DOMAIN-SUFFIX,badad.googleplex.com
+DOMAIN-SUFFIX,afs.googlesyndication.com
+DOMAIN-SUFFIX,afd.l.google.com
+DOMAIN-SUFFIX,www.googleadservices.com
+DOMAIN-SUFFIX,www.google-analytics.com
+DOMAIN, ads.youtube.com
+
+
+[Rewrite]
+# 如开启可自行添加主机名，但似乎已不可MITM
+^https?:\/\/.+\.googleapis.com/.+ad_break reject-img
+^https?:\/\/.+\.googleapis.com/.+log_event reject-img
+^https?:\/\/.+\.googleapis.com/adsmeasurement reject-img
+^https?:\/\/pagead2\.googlesyndication\.com\/pagead\/ reject-img
+
+
+[MITM]
+hostname = *.googleapis.com, pagead2.googlesyndication.com

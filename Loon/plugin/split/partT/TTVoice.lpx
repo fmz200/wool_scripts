@@ -1,0 +1,17 @@
+#!name=TT语音
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partT/TTVoice.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rewrite]
+# 开屏广告 个别图片误杀 如开启可自行添加主机名
+^https?:\/\/ga-album-cdnqn\.52tt\.com\/prod-yunying\/.+.jpg reject-dict
+
+
+[MITM]
+hostname = ga-album-cdnqn.52tt.com

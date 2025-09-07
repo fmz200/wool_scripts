@@ -1,0 +1,18 @@
+#!name=工时记录
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partG/GongShiJiLu.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rewrite]
+^https?:\/\/yun\.tuitiger\.com\/mami-media reject-200
+^https?:\/\/mi\.gdt\.qq\.com\/gdt_mview\.fcg reject
+^https?:\/\/open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ reject
+
+
+[MITM]
+hostname = yun.tuitiger.com, mi.gdt.qq.com, open.e.kuaishou.com

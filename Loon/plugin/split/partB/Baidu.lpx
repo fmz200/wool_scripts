@@ -1,0 +1,180 @@
+#!name=百度
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partB/Baidu.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rule]
+DOMAIN-SUFFIX,duapps.com
+DOMAIN-SUFFIX,cpro.baidu.com
+DOMAIN-SUFFIX,pos.baidu.com
+DOMAIN, afd.baidu.com
+DOMAIN, als.baidu.com
+DOMAIN, duclick.baidu.com
+DOMAIN, mobads.baidu.com
+DOMAIN, mobads-logs.baidu.com
+DOMAIN, nadvideo2.baidu.com
+DOMAIN, nsclick.baidu.com
+DOMAIN-SUFFIX,bce.baidu.com
+DOMAIN-SUFFIX,bar.baidu.com
+DOMAIN-SUFFIX,baiduyubaidu.com
+DOMAIN-SUFFIX,baidutv.baidu.com
+DOMAIN-SUFFIX,baichuan.baidu.com
+DOMAIN-SUFFIX,appc.baidu.com
+DOMAIN-SUFFIX,anquan.baidu.com
+DOMAIN-SUFFIX,adscdn.baidu.com
+DOMAIN-SUFFIX,adm.baidu.com
+DOMAIN-SUFFIX,ad.player.baidu.com
+DOMAIN-SUFFIX,a.baidu.com
+DOMAIN-SUFFIX,antivirus.baidu.com
+DOMAIN-SUFFIX,baifen.music.baidu.com
+DOMAIN-SUFFIX,banlv.baidu.com
+DOMAIN-SUFFIX,cm.baidu.com
+DOMAIN-SUFFIX,cpro.zhidao.baidu.com
+DOMAIN-SUFFIX,cleaner.baidu.com
+DOMAIN-SUFFIX,cjhq.baidu.com
+DOMAIN-SUFFIX,cb.baidu.com
+DOMAIN-SUFFIX,c.baidu.com
+DOMAIN-SUFFIX,btlaunch.baidu.com
+DOMAIN-SUFFIX,bdplus.baidu.com
+DOMAIN-SUFFIX,cbjs.baidu.com
+DOMAIN-SUFFIX,cpro2.baidu.com
+DOMAIN-SUFFIX,cpu-admin.baidu.com
+DOMAIN-SUFFIX,10086.cn.baidu.cdn.yiwk.com
+DOMAIN-SUFFIX,360baidus.com
+DOMAIN-SUFFIX,app.ibaiducdn.com
+DOMAIN-SUFFIX,baidu.cybcyw.com
+DOMAIN-SUFFIX,baidu.dsp.tansuotv.com
+DOMAIN-SUFFIX,baidu.greenxf.cn
+DOMAIN-SUFFIX,baidu.jz5u.net
+DOMAIN-SUFFIX,baiduace.com
+DOMAIN-SUFFIX,baidujs.cnys.com
+DOMAIN-SUFFIX,baidulao.com
+DOMAIN-SUFFIX,baidut.github.io
+DOMAIN-SUFFIX,baidu-union-js.xiachufang.com
+DOMAIN-SUFFIX,baidu-union-pos.xiachufang.com
+DOMAIN-SUFFIX,baiduzhidahao.cc
+DOMAIN-SUFFIX,cpro.baidu.cn
+DOMAIN-SUFFIX,crs.baidu.com
+DOMAIN-SUFFIX,datax.baidu.com
+DOMAIN-SUFFIX,dl.client.baidu.com
+DOMAIN-SUFFIX,dl.ops.baidu.com
+DOMAIN-SUFFIX,dl1sw.baidu.com
+DOMAIN-SUFFIX,dl2.bav.baidu.com
+DOMAIN-SUFFIX,dlsw.baidu.com
+DOMAIN-SUFFIX,dlsw.br.baidu.com
+DOMAIN-SUFFIX,dl-vip.bav.baidu.com
+DOMAIN-SUFFIX,dl-vip.pcfaster.baidu.co.th
+DOMAIN-SUFFIX,download.bav.baidu.com
+DOMAIN-SUFFIX,download.sd.baidu.com
+DOMAIN-SUFFIX,drmcmm.baidu.com
+DOMAIN-SUFFIX,duiwai.baidu.com
+DOMAIN-SUFFIX,dxp.baidu.com
+DOMAIN-SUFFIX,dzl.baidu.com
+DOMAIN-SUFFIX,e.baidu.com
+DOMAIN-SUFFIX,eclick.baidu.com
+DOMAIN-SUFFIX,eiv.baidu.com
+DOMAIN-SUFFIX,em.baidu.com
+DOMAIN-SUFFIX,entry.baidu.com
+DOMAIN-SUFFIX,ers.baidu.com
+DOMAIN-SUFFIX,fclick.baidu.com
+DOMAIN-SUFFIX,feed.baidu.com
+DOMAIN-SUFFIX,fexclick.baidu.com
+DOMAIN-SUFFIX,g.baidu.com
+DOMAIN-SUFFIX,gimg.baidu.com
+DOMAIN-SUFFIX,guanjia.baidu.com
+DOMAIN-SUFFIX,hc.baidu.com
+DOMAIN-SUFFIX,hdj.baidu.com
+DOMAIN-SUFFIX,hpd.baidu.com
+DOMAIN-SUFFIX,idm-su.baidu.com
+DOMAIN-SUFFIX,iebar.baidu.com
+DOMAIN-SUFFIX,ikcode.baidu.com
+DOMAIN-SUFFIX,iwanad.baidu.com
+DOMAIN-SUFFIX,j.br.baidu.com
+DOMAIN-SUFFIX,jb.mbaidu.top
+DOMAIN-SUFFIX,js.mbaidu.top
+DOMAIN-SUFFIX,kstj.baidu.com
+DOMAIN-SUFFIX,m.baidu.com.yiqisee.cn
+DOMAIN-SUFFIX,m.baidu.com.zhiduo.org
+DOMAIN-SUFFIX,m1.baidu.com
+DOMAIN-SUFFIX,ma.baidu.com
+DOMAIN-SUFFIX,mpro.baidu.com
+DOMAIN-SUFFIX,msite.baidu.com
+DOMAIN-SUFFIX,mssp.baidu.com
+DOMAIN-SUFFIX,mtj.baidu.com
+DOMAIN-SUFFIX,neirong.baidu.com
+DOMAIN-SUFFIX,nlog.baidu.com
+DOMAIN-SUFFIX,nsclickvideo.baidu.com
+DOMAIN-SUFFIX,openrcv.baidu.com
+DOMAIN-SUFFIX,paimgcdn.baidu.com
+DOMAIN-SUFFIX,pc.videoclick.baidu.com
+DOMAIN-SUFFIX,push.zhanzhang.baidu.com
+DOMAIN-SUFFIX,qianclick.baidu.com
+DOMAIN-SUFFIX,release.baidu.com
+DOMAIN-SUFFIX,river.zhidao.baidu.com
+DOMAIN-SUFFIX,rj.baidu.com
+DOMAIN-SUFFIX,rplog.baidu.com
+DOMAIN-SUFFIX,s.baidu.com
+DOMAIN-SUFFIX,sclick.baidu.com
+DOMAIN-SUFFIX,sestat.baidu.com
+DOMAIN-SUFFIX,shadu.baidu.com
+DOMAIN-SUFFIX,sobar.baidu.com
+DOMAIN-SUFFIX,sobartop.baidu.com
+DOMAIN-SUFFIX,spcode.baidu.com
+DOMAIN-SUFFIX,tk.baidu.com
+DOMAIN-SUFFIX,tkweb.baidu.com
+DOMAIN-SUFFIX,toolbar.baidu.com
+DOMAIN-SUFFIX,tuijian.baidu.com
+DOMAIN-SUFFIX,tuisong.baidu.com
+DOMAIN-SUFFIX,ucstat.baidu.com
+DOMAIN-SUFFIX,ulic.baidu.com
+DOMAIN-SUFFIX,ulog.imap.baidu.com
+DOMAIN-SUFFIX,union.baidu.com
+DOMAIN-SUFFIX,union.baidustatic.guannin.com
+DOMAIN-SUFFIX,unionimage.baidu.com
+DOMAIN-SUFFIX,utility.baidu.com
+DOMAIN-SUFFIX,utk.baidu.com
+DOMAIN-SUFFIX,videopush.baidu.com
+DOMAIN-SUFFIX,w.gdown.baidu.com
+DOMAIN-SUFFIX,w.x.baidu.com
+DOMAIN-SUFFIX,wangmeng.baidu.com
+DOMAIN-SUFFIX,weishi.baidu.com
+DOMAIN-SUFFIX,wisepush.video.baidu.com
+DOMAIN-SUFFIX,wm.baidu.com
+DOMAIN-SUFFIX,yingxiao.baidu.com
+DOMAIN-SUFFIX,znsv.baidu.com
+DOMAIN-SUFFIX,baidustatic.com
+DOMAIN-SUFFIX,als.baidu.com
+DOMAIN-SUFFIX,duclick.baidu.com
+DOMAIN-SUFFIX,hm.baidu.com
+DOMAIN-SUFFIX,hmma.baidu.com
+DOMAIN-SUFFIX,mobads.baidu.com
+DOMAIN-SUFFIX,mobads-logs.baidu.com
+DOMAIN-SUFFIX,nsclick.baidu.com
+DOMAIN, hm.baidu.com
+DOMAIN, hmma.baidu.com
+
+
+[Rewrite]
+^https?:\/\/fcvbjbcebos\.baidu\.com\/.+.mp4 reject
+^https?:\/\/fcvbjbcebos\.baidu\.com\/.+?\.mp4 reject-img
+^https?:\/\/cover\.baidu\.com\/cover\/page\/dspSwitchAds\/ reject
+^https?:\/\/baichuan\.baidu\.com\/rs\/adpmobile\/launch reject
+^https?:\/\/api\d\.tuisong\.baidu\.com reject-img
+^https?:\/\/afd\.baidu\.com\/afd\/entry reject
+^https?:\/\/als\.baidu\.com\/clog\/clog reject
+^https?:\/\/mobads\.baidu\.com\/cpro\/ui\/mads.+ reject
+^https?:\/\/issuecdn\.baidupcs\.com\/issue\/netdisk\/guanggao\/ reject-200
+^https?:\/\/[\s\S]*\.baidu\.com/.*?ad[xs]\.php reject-img
+^https?:\/\/t\d{2}\.baidu\.com reject-img
+^https?:\/\/log.+?baidu\.com reject
+^https?:\/\/sa\d\.tuisong\.baidu\.com reject-img
+^https?:\/\/www.baidu.com\/?action=static&ms=1&version=css_page_2@0.*? reject
+
+
+[MITM]
+hostname = www.baidu.com, fcvbjbcebos.baidu.com, cover.baidu.com, baichuan.baidu.com, api*.tuisong.baidu.com, afd.baidu.com, mobads.baidu.com, issuecdn.baidupcs.com, update.pan.baidu.com, sa*.tuisong.baidu.com, m.baidu.com, sofire.baidu.com

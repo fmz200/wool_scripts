@@ -1,0 +1,29 @@
+#!name=12123
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/part1/12123.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rule]
+DOMAIN-SUFFIX, v3.fstats.xyz
+DOMAIN-SUFFIX, wss.haoyundmn.com
+DOMAIN-SUFFIX, new.xiongzhangad.com
+DOMAIN-SUFFIX, alexametrics.com
+DOMAIN-KEYWORD, in-page-push
+
+
+
+
+[Rewrite]
+#^https?:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery reject
+^https?:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$ reject
+
+
+
+
+[MITM]
+hostname = gab.122.gov.cn

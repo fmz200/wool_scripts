@@ -1,0 +1,32 @@
+#!name=搜狗
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partS/Sogou.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rule]
+DOMAIN-SUFFIX,epro.sogou.com
+DOMAIN-SUFFIX,golden1.sogou.com
+DOMAIN-SUFFIX,inte.sogou.com
+DOMAIN-SUFFIX,inte.sogoucdn.com
+DOMAIN-SUFFIX,lu.sogoucdn.com
+DOMAIN-SUFFIX,theta.sogoucdn.com
+DOMAIN-SUFFIX,uranus.sogou.com
+DOMAIN-SUFFIX,123.sogou.com
+DOMAIN-SUFFIX,a1click.cpc.sogou.com
+DOMAIN-SUFFIX,adsence.sogou.com
+DOMAIN-SUFFIX,adstream.123.sogoucdn.com
+DOMAIN-SUFFIX,amfi.gou.sogou.com
+DOMAIN-SUFFIX,art.theta.sogoucdn.com
+DOMAIN-SUFFIX,athena.wan.sogou.com
+DOMAIN-SUFFIX,bazinga.mse.sogou.com
+DOMAIN-SUFFIX,bite.theta.sogoucdn.com
+DOMAIN-SUFFIX,brand.sogou.com
+DOMAIN-SUFFIX,bsiet.husky.sogou.com
+# 屏蔽京东和搜狗收集信息 @jFrecht
+DOMAIN-SUFFIX,jdqd.jd.com
+DOMAIN-SUFFIX,shouji.sougou.com

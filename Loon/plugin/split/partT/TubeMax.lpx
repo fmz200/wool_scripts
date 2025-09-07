@@ -1,0 +1,28 @@
+#!name=TubeMax
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partT/TubeMax.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rule]
+DOMAIN-SUFFIX,adjust.com
+DOMAIN-SUFFIX,applvn.com
+DOMAIN-SUFFIX,app-measurement.com
+DOMAIN-SUFFIX,pangle.io
+DOMAIN-SUFFIX,applovin.com
+DOMAIN-SUFFIX,appier.net
+DOMAIN-SUFFIX,adsmoloco.com
+DOMAIN-SUFFIX,adcanvas.com
+
+
+[Rewrite]
+# 感谢【可莉】分享
+^https?:\/\/.*\.i18n-pglstatp\.com\/obj\/ad-pattern-sg reject
+
+
+[MITM]
+hostname = *.i18n-pglstatp.com

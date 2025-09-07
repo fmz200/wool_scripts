@@ -1,0 +1,29 @@
+#!name=车来了
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partC/CheLaiLe.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rule]
+DOMAIN-SUFFIX,atrace.chelaile.net.cn
+DOMAIN, logs.chelaile.net.cn
+DOMAIN, ad.chelaile.net.cn
+
+
+
+[Rewrite]
+^https?:\/\/pic1\.chelaile\.net\.cn\/adv\/ reject
+^https?:\/\/(api|atrace)\.chelaile\.net\.cn\/adpub\/ reject
+^https?:\/\/api\.chelaile\.net\.cn\/goocity\/advert\/ reject
+^https?:\/\/atrace\.chelaile\.net\.cn\/adpub\/ reject-img
+^https?:\/\/atrace\.chelaile\.net\.cn\/exhibit\?&adv_image reject-img
+^https?:\/\/web\.chelaile\.net\.cn\/api\/adpub\/ad reject
+^https?:\/\/cdn\.\w{3}\.chelaileapp\.cn\/(api\/)?adpub reject
+
+
+[MITM]
+hostname = pic1.chelaile.net.cn, api.chelaile.net.cn, atrace.chelaile.net.cn, web.chelaile.net.cn, cdn.*.chelaileapp.cn

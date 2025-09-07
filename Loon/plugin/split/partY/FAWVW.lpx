@@ -1,0 +1,23 @@
+#!name=一汽大众
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partY/FAWVW.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rewrite]
+# 感谢【向晚】分享
+^https?:\/\/oneapp-api\.faw-vw\.com\/search\/firstPage\/getPromptList\/v1\?.* response-body-json-jq '. = { returnStatus: "SUCCEED", hasMore: false, data: [] }'
+^https?:\/\/oneapp-api\.faw-vw\.com\/benefits\/benefitsCard\/getInfo\/v1\?.* response-body-json-jq '. = { returnStatus: "SUCCEED", hasMore: false, data: [] }'
+^https?:\/\/oneapp-api\.faw-vw\.com\/content\/booth\/getBoothList\/v1\?.*showPositionCode=VWAPP_HOME_BUOY response-body-json-jq '. = { returnStatus: "SUCCEED", hasMore: false, data: [] }'
+^https?:\/\/oneapp-api\.faw-vw\.com\/content\/booth\/getBoothList\/v1\?.*showPositionCode=VWAPP_(ICE|MEB)_(OPEN_SCREEN_ADS|CAR_ZHIHU_COLLEGE) response-body-json-jq '. = { returnStatus: "SUCCEED", hasMore: false, data: [] }'
+^https?:\/\/oneapp-api\.faw-vw\.com\/content\/booth\/getBoothList\/v1\?.*showPositionCode=VWAPP_(ICE|MEB)_HOME_(OWNER_BANNER|PROSPECTS_BANNER|CUSTOM_BANNER|KONGO|CUSTOM_KONGO) response-body-json-jq '. = { returnStatus: "SUCCEED", hasMore: false, data: [] }'
+^https?:\/\/oneapp-api\.faw-vw\.com\/content\/(customize\/getCustomizePageName|recommend\/getRecommendInfoFlows|activity\/getSquareActivityList|theme\/getThemeList|post\/getPostsByTags|evaluate\/getEvaluateCards)\/v1\?.* response-body-json-jq '. = { returnStatus: "SUCCEED", hasMore: false, data: [] }'
+^https?:\/\/oneapp-api\.faw-vw\.com\/content\/(collection\/getCollectionList)\/v1\?.* response-body-json-jq '. = { returnStatus: "SUCCEED", hasMore: false, data: {} }'
+
+
+[MITM]
+hostname = oneapp-api.faw-vw.com

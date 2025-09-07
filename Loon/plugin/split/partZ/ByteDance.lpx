@@ -1,0 +1,29 @@
+#!name=字节跳动
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partZ/ByteDance.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rule]
+DOMAIN, ad.zijieapi.com
+DOMAIN, applog.zijieapi.com
+DOMAIN-SUFFIX,-normal-lq.zijieapi.com
+
+
+[Rewrite]
+#^https?:\/\/.+\.pstatp\.com\/img\/ad reject-200
+^https?:\/\/.+\.(amemv|musical|snssdk|tiktokv)\.com\/(api|motor)\/ad\/ reject-200
+^https?:\/\/.+\.snssdk\.com\/motor\/operation\/activity\/display\/config\/V2\/ reject-200
+^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/ad\/ reject
+^https?:\/\/[\w-]+\.snssdk\.com\/.+_ad\/ reject
+^https?:\/\/.+\.amemv\.com\/.+app_log reject-img
+^https?:\/\/.+\.amemv\.com\/.+report reject-img
+^https?:\/\/.+\.amemv\.com\/.+stats reject-img
+
+
+[MITM]
+hostname = *.pstatp.com, amemv.com, musical.com, snssdk.com, tiktokv.com, dsp.toutiao.com

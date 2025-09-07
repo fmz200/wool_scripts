@@ -1,0 +1,26 @@
+#!name=58同城
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/part5/58TongCheng.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rule]
+DOMAIN, track.58.com
+DOMAIN, tracklog.58.com
+
+
+
+
+[Rewrite]
+^https?:\/\/.+?\.58cdn\.com\.cn\/brandads\/ reject-200
+^https?:\/\/app\.58\.com\/api\/home\/(advertising|appadv)\/ reject
+^https?:\/\/app\.58\.com\/api\/home\/invite\/popupAdv reject-200
+^https?:\/\/app\.58\.com\/api\/log\/ reject
+
+
+[MITM]
+hostname = *.58cdn.com.cn, app.58.com

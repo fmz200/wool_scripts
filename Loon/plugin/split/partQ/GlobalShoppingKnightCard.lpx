@@ -1,0 +1,20 @@
+#!name=全球购骑士卡
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partQ/GlobalShoppingKnightCard.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rewrite]
+# 开屏广告 感谢【Kook】分享
+^https?:\/\/facade-api\.black-unique\.com\/app\/v1\/startScreen\?cityId=102923&channelId=0&width=1170&height=2532 reject-dict
+^https?:\/\/facade-api\.black-unique\.com\/app\/v1\/startScreen\?.* reject-dict
+^https?:\/\/facade-api\.black-unique\.com\/advertise\/v1\/get\?cityId=102923&positions=mine_popup reject-dict
+^https?:\/\/facade-api\.black-unique\.com\/advertise\/v1\/get\?.* reject-dict
+
+
+[MITM]
+hostname = facade-api.black-unique.com

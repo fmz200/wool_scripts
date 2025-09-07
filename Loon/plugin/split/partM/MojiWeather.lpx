@@ -1,0 +1,22 @@
+#!name=墨迹天气
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partM/MojiWeather.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rule]
+DOMAIN-KEYWORD,fds.api.moji.com
+DOMAIN-KEYWORD,me.api.moji.com
+DOMAIN-KEYWORD,android.bugly.qq.com
+DOMAIN-KEYWORD,av1.xdrig.com
+DOMAIN-KEYWORD,adash.man.aliyuncs.com
+DOMAIN-KEYWORD,v1.log.moji.com
+DOMAIN-KEYWORD,ad.api.moji.com
+DOMAIN, ad.api.moji.com
+DOMAIN, adlaunch.moji.com
+DOMAIN, ads.mojicdn.com
+DOMAIN, v1.log.moji.com

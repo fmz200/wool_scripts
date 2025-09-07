@@ -1,0 +1,26 @@
+#!name=网易邮箱
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partW/NetEaseMail.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rewrite]
+^https?:\/\/p[^4](c)?\.music\.126\.net\/\w+==\/10995\d{13}\.jpg$ reject-img
+^https?:\/\/p\.c\.music\.126.net\/.*?jpg$ reject
+^https?:\/\/img1.126.net\/.+dpi=\w{7,8} reject
+^https?:\/\/img1.126.net\/channel14\/ reject
+^https?:\/\/iadmusicmat\.music.126.net\/.*?jpg$ reject
+^https?:\/\/p\d\.music\.126\.net\/\w+==\/\d+\.jpg$ reject
+^https?:\/\/www.icourse163.org\/.*?(Advertisement) reject-img
+^https?:\/\/nex.163.com\/q reject
+^https?:\/\/g1.163.com\/madfeedback reject
+^https?:\/\/www\.icourse163\.org\/mob\/j\/v1\/mobRecommendRPCBean\.getMaxWeightAdvertisement\.rpc reject-200
+^https?:\/\/interface3?\.music\.163\.com/eapi/(ad|abtest|sp|hot|store|mlog|search/(specialkeyword|defaultkeyword|hot)) reject-img
+
+
+[MITM]
+hostname = *.music.126.net, img1.126.net, www.icourse163.org, nex.163.com, g1.163.com, client.mail.163.com, c.m.163.com, interface*.music.163.com

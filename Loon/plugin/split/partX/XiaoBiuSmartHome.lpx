@@ -1,0 +1,17 @@
+#!name=小Biu智家
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partX/XiaoBiuSmartHome.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rewrite]
+# 开屏广告 感谢【别人别我】分享
+^https?:\/\/shcss\.suning\.com\/shcss-web\/api\/appImage\/queryAppImage\.do reject-200
+
+
+[MITM]
+hostname = shcss.suning.com

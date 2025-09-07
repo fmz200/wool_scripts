@@ -656,10 +656,6 @@ DOMAIN, o2o-ad-log-gateway.alibaba.com
 
 
 # >>>>>>>>>>>>>>> ✅ K ✅ <<<<<<<<<<<<<<
-# > Keep
-DOMAIN, apm.gotokeep.com
-DOMAIN, kad.gotokeep.com
-
 # > 快乐广播
 DOMAIN, ad.hpplay.cn
 DOMAIN, adc.hpplay.cn
@@ -1366,12 +1362,6 @@ DOMAIN, adsehera.ximalaya.com
 DOMAIN, adse.wsa.ximalaya.com
 DOMAIN, adbehavior.ximalaya.com
 DOMAIN, adbehavior.wsa.ximalaya.com
-
-# > 小红书
-DOMAIN, ads-img-qc.xhscdn.com
-DOMAIN, ads-video-al.xhscdn.com
-DOMAIN, ads-video-qc.xhscdn.com
-DOMAIN, t-ads.xiaohongshu.com
 
 # > 小米
 DOMAIN, data.mistat.xiaomi.com

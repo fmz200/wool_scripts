@@ -1,0 +1,35 @@
+#!name=高德地图
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partG/AutoNavi.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rule]
+DOMAIN-SUFFIX,adiu.amap.com
+DOMAIN, aboard.apilocate.amap.com
+DOMAIN, apiinit.amap.com
+DOMAIN, icloud-amap.com
+DOMAIN, logs.amap.com
+DOMAIN-SUFFIX,dualstack-logs.amap.com
+DOMAIN-SUFFIX,logs.amap.com
+DOMAIN-SUFFIX,optimus-ads.amap.com
+DOMAIN-SUFFIX,page.amap.com
+DOMAIN, optimus-ads.amap.com
+DOMAIN, optimus-ads.amap.com.w.alikunlun.com
+DOMAIN-SUFFIX,shouji.sougou.com
+DOMAIN, u51.me
+DOMAIN-SUFFIX,u51.me
+
+
+[Rewrite]
+^https?:\/\/m5\.amap\.com\/ws\/shield\/dsp\/app\/startup\/init\? reject-dict
+^https?:\/\/m5\.amap\.com\/ws\/valueadded\/ reject
+^https?://optimus-ads.amap.com/uploadimg/[a-zA-Z0-9]+.gif reject-200
+
+
+[MITM]
+hostname = m*.amap.com, optimus-ads.amap.com

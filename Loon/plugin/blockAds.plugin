@@ -44,7 +44,7 @@ bdduditu_enable = switch,true,false,tag=百度地图-脚本开关
 bddutpba_enable = switch,true,false,tag=百度贴吧-脚本开关
 lawson_enable = switch,true,false,tag=罗森点点-脚本开关
 
-# > 哔哩哔哩
+# 哔哩哔哩
 showUpList=select,"show","hide","auto",tag=[动态]中[最常访问]的显示方式,desc=show: 始终显示\n- hide: 始终隐藏\n- auto: 仅当列表中存在直播状态时显示
 purifyTopReplies=switch,true,tag=[评论区]过滤置顶评论广告,desc=true: 开启\n- false: 关闭
 purifyWebpage=switch,true,tag=净化内嵌网页,desc=true: 开启\n- false: 关闭
@@ -89,7 +89,7 @@ quda_enable = switch,true,false,tag=去哒-脚本开关
 reddit_enable = switch,true,false,tag=Reddit-脚本开关
 rfrfuipk_enable = switch,true,false,tag=人人视频-脚本开关
 
-# > Spotify
+# Spotify
 tab=switch, true, tag=Spotify-移除底栏创建按钮, desc=此开关控制是否移除底栏创建按钮
 useractivity=switch, true, tag=Spotify-启用Apple设备接力, desc=此开关控制是否使用Apple设备接力
 
@@ -101,7 +101,7 @@ tgxyxbwf_enable = switch,true,false,tag=腾讯新闻-脚本开关
 vgtime_enable = switch,true,false,tag=vgTime-脚本开关
 lmjpxmvi_enable = switch,true,false,tag=解除微信链接限制-脚本开关
 
-# > 网易云音乐
+# 网易云音乐
 MY = switch,true,tag=网易云音乐-[隐藏底部]漫游标签
 DT = switch,false,tag=网易云音乐-[隐藏底部]笔记标签
 FX = switch,true,tag=网易云音乐-[隐藏底部]发现标签
@@ -168,6 +168,8 @@ DOMAIN, httpdns.n.netease.com, REJECT
 DOMAIN, httpdns.calorietech.com, REJECT
 # 拦截广告下发
 DOMAIN, hc-ssp.sm.cn, REJECT
+DOMAIN, apm.gotokeep.com, REJECT
+DOMAIN, kad.gotokeep.com, REJECT
 
 # > 快递100
 # 感谢【可莉🅥】分享
@@ -425,6 +427,10 @@ DOMAIN, httpdns.music.163.com, REJECT
 
 # >>>>>>>>>>>>>>> ✅ X ✅ <<<<<<<<<<<<<<
 # > 小红书
+DOMAIN, ads-img-qc.xhscdn.com
+DOMAIN, ads-video-al.xhscdn.com
+DOMAIN, ads-video-qc.xhscdn.com
+DOMAIN, t-ads.xiaohongshu.com
 AND, ((PROTOCOL, QUIC), (DOMAIN-SUFFIX, xiaohongshu.com)), REJECT
 
 # > 闲鱼
@@ -3968,6 +3974,7 @@ http:\/\/.+\.gamersky.com/.+/lists/getListElements response-body-json-jq '.listE
 
 # >>>>>>>>>>>>>>> ✅ 1 ✅ <<<<<<<<<<<<<<
 # > 12306
+# hostname = ad.12306.cn
 http-request ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/12306.js, requires-body=true, timeout=60, tag=12306, enable={12306_enable}
 
 

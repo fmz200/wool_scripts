@@ -1,0 +1,53 @@
+#!name=叮咚买菜
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partD/DingDongMaiCai.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Argument]
+ddmc_enable = switch,true,false,tag=叮咚买菜-脚本开关
+
+[Rule]
+DOMAIN, trackercollect.ddxq.mobi
+DOMAIN, ddfs-public.ddimg.mobi
+DOMAIN, rttrack.ddxq.mobi
+
+
+[Rewrite]
+# 开屏广告
+^https?:\/\/maicai\.api\.ddxq\.mobi\/advert\/ reject
+# 首页弹窗
+^https?:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/getHomeAdPop reject
+# VIP开通弹窗
+^https?:\/\/maicai\.api\.ddxq\.mobi\/vip\/getVipAd reject-dict
+# 首页悬浮窗
+^https?:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/newDetails response-body-replace-regex suspension fmz200
+# 我的页VIP栏净化
+^https?:\/\/gw\.api\.ddxq\.mobi\/vip-app-service\/vip\/my\/page\/advertising reject
+# 我的页弹窗(暂未启用)
+^https:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/queryMyPagePopup reject-dict
+# 我的页-猜你喜欢
+^https?:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/userLike reject-dict
+# 购物车顶部VIP横条
+^https?:\/\/maicai\.api\.ddxq\.mobi\/cart\/vipGuide reject-dict
+# 购物车-猜你喜欢
+^https?:\/\/maicai\.api\.ddxq\.mobi\/order\/getRecommend reject-dict
+
+
+[Script]
+# 开屏广告及首页推荐流及底部状态栏优化
+http-response ^https?:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/(?>bottomNavi|homeFlowDetail) script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/ddxq.js, requires-body=true, timeout=60, tag=叮咚买菜, enable={ddmc_enable}
+# 右下角AI
+http-response ^https?:\/\/maicai\.api\.ddxq\.mobi\/tool\/getConfig script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/ddxq.js, requires-body=true, timeout=60, tag=叮咚买菜, enable={ddmc_enable}
+# 我的页净化
+http-response ^https?:\/\/user\.api\.ddxq\.mobi\/userportal-service\/api\/v\d\/user\/queryMyPage script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/ddxq.js, requires-body=true, timeout=60, tag=叮咚买菜, enable={ddmc_enable}
+
+
+
+
+[MITM]
+hostname = maicai.api.ddxq.mobi, gw.api.ddxq.mobi, user.api.ddxq.mobi

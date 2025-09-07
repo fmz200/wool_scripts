@@ -1,0 +1,35 @@
+#!name=搜狐
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partS/Sohu.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rule]
+DOMAIN-SUFFIX,ad.sohu.com
+DOMAIN-SUFFIX,ads.sohu.com
+DOMAIN-SUFFIX,aty.sohu.com
+DOMAIN, hui.sohu.com
+
+
+[Rewrite]
+^https?:\/\/api\.k\.sohu\.com\/api\/news\/adsense reject-200
+^https?:\/\/pic\.k\.sohu\.com\/img8\/wb\/tj\/ reject-200
+^https?:\/\/s1\.api\.tv\.itc\.cn\/v4\/mobile\/control\/switch\.json reject-200
+^https?:\/\/(api|api-bk\d+)\.tv\.sohu\.com\/agg\/api\/app\/config\/bootstrap reject
+^https?:\/\/agn\.aty\.sohu\.com\/m? reject-img
+^https?:\/\/api\.k\.sohu\.com\/api\/channel\/ad\/ reject-img
+^https?:\/\/hui\.sohu\.com\/predownload2\/? reject-img
+^https?:\/\/m\.aty\.sohu\.com\/openload? reject-img
+^https?:\/\/mmg\.aty\.sohu\.com\/mqs? reject-img
+^https?:\/\/mmg\.aty\.sohu\.com\/pvlog? reject-img
+^https?:\/\/photocdn\.sohu\.com\/tvmobilemvms reject-img
+^https?:\/\/pic\.k\.sohu\.com\/img\d\/wb\/tj\/ reject
+^https?:\/\/s\.go\.sohu\.com\/adgtr\/\?gbcode= reject-img
+
+
+[MITM]
+hostname = *.souhu.com

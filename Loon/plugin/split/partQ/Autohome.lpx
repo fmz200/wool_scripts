@@ -1,0 +1,34 @@
+#!name=汽车之家
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partQ/Autohome.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rule]
+DOMAIN-KEYWORD,adm3.autoimg.cn
+DOMAIN-KEYWORD,collectionpv.che168.com
+DOMAIN-KEYWORD,adproxy.autohome.com
+DOMAIN-KEYWORD,applogapi.autohome.com
+DOMAIN, adproxy.autohome.com.cn
+DOMAIN, rd.autohome.com.cn
+DOMAIN, al.autohome.com.cn
+DOMAIN, applogapi.autohome.com.cn
+DOMAIN, adm0.autoimg.cn
+DOMAIN, adm1.autoimg.cn
+DOMAIN, adm2.autoimg.cn
+DOMAIN, adm3.autoimg.cn
+
+
+
+
+[Rewrite]
+^https?:\/\/adproxy\.autohome\.com\.cn\/AdvertiseService\/ reject-img
+^https?:\/\/app2\.autoimg\.cn\/apppdfs\/ reject-img
+
+
+[MITM]
+hostname = adproxy.autohome.com.cn, app2.autoimg.cn

@@ -1,0 +1,30 @@
+#!name=韩剧TV
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partH/HanJuTV.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rule]
+DOMAIN,mi.gdt.qq.com,REJECT
+DOMAIN,adsmind.ugdtimg.com,REJECT
+DOMAIN,pgdt.ugdtimg.com,REJECT
+DOMAIN,v2mi.gdt.qq.com,REJECT
+DOMAIN,da.bridgeturbo.com,REJECT
+DOMAIN,adx-os.bridgeturbo.com,REJECT
+DOMAIN,adx-bj.anythinktech.com,REJECT
+DOMAIN,mobads.baidu.com,REJECT
+
+
+
+
+[Rewrite]
+^https?:\/\/gfp\.veta\.naver\.com\/adcall\? reject
+^https?:\/\/api\.hanju\.koudaibaobao\.com\/api\/carp\/kp\? reject
+
+
+[MITM]
+hostname = gfp.veta.naver.com, api.hanju.koudaibaobao.com

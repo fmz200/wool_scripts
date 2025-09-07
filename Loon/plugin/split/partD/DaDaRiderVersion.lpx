@@ -1,0 +1,19 @@
+#!name=达达骑士版
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partD/DaDaRiderVersion.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rewrite]
+# 开屏广告，弹窗广告，首页置顶轮播广告 感谢【T大G】分享
+^https?:\/\/delivery-api\.imdada\.cn\/v2_0\/dada\/promote\/imax\?privacyParam reject-dict
+^https?:\/\/delivery-api\.imdada\.cn\/v1_0\/transporter\/screen\/ads_list reject-dict
+^https?:\/\/delivery-api\.imdada\.cn\/v1_0\/transporter\/ad reject-dict
+
+
+[MITM]
+hostname = delivery-api.imdada.cn

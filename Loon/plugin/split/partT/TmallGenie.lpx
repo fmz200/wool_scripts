@@ -1,0 +1,18 @@
+#!name=天猫精灵
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partT/TmallGenie.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rewrite]
+^https?:\/\/ossgw.alicdn.com\/creatives-assets\/image\/ reject-200
+# 这一条规则会影响淘宝正常运行，需要增加headers判断 user-agent: %E6%B7%98%E5%AE%9D/40491997
+#^https?:\/\/zconfig\.alibabausercontent\.com\/zconfig reject
+
+
+[MITM]
+hostname = ossgw.alicdn.com, zconfig.alibabausercontent.com

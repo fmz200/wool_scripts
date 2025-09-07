@@ -1,0 +1,32 @@
+#!name=脉脉
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partM/Maimai.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Argument]
+mdmd_enable = switch,true,false,tag=脉脉-脚本开关
+
+[Rewrite]
+# 感谢【可莉】分享
+# 开屏广告、职位页面横幅
+^https:\/\/(h3\.)?open\.taou\.com\/maimai\/adshow\? reject-dict
+# 赠送礼物 横幅
+^https:\/\/(h3\.)?open\.taou\.com\/maimai\/pay\/v5\/check_gift\? reject-dict
+# 帖子文末推广卡片
+^https:\/\/(h3\.)?open\.taou\.com\/maimai\/go_gossip_darwin\/external\/v2\/query_flow_cards\? reject-dict
+
+
+[Script]
+# 帖子末尾 看过此贴的用户也在看
+http-response ^https:\/\/(h3\.)?open\.taou\.com\/maimai\/feed\/v6\/detail_recommend_feeds\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/maimai/maimai_ads.js, requires-body=true, timeout=60, tag=脉脉帖子末尾, enable={mdmd_enable}
+# 移除信息流和评论区大块广告 信息流广告focus_feed / 评论区广告gossip_detail_comment / 评论区广告feed_detail_comment?
+http-response ^https:\/\/(h3\.)?open\.taou\.com\/maimai\/(feed|gossip)\/v\d\/(focus_feed|gossip_detail_comment|feed_detail_comment?)\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/maimai/maimai_ads.js, requires-body=true, timeout=60, tag=脉脉, enable={mdmd_enable}
+
+
+[MITM]
+hostname = open.taou.com, h3.open.taou.com
