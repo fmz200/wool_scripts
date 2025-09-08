@@ -1,0 +1,24 @@
+#!name=阿里云盘
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partA/AlibabaCloudDrive.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#!arguments=alyp_enable:true
+
+[Map Local]
+^https:\/\/api\.alipan\.com\/adrive\/v1\/file\/getTopFolders data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/member\.alipan\.com\/v2\/activity\/sign_in_luckyBottle data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[Script]
+阿里云盘 = type=http-response, pattern=^https:\/\/api\.alipan\.com\/apps\/v2\/users\/home\/(news|widgets), script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/adrive/adrive.js, requires-body=true, timeout=60
+
+阿里云盘 = type=http-response, pattern=^https:\/\/member\.alipan\.com\/v1\/users\/onboard_list, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/adrive/adrive.js, requires-body=true, timeout=60
+
+[MITM]
+hostname = %APPEND% api.alipan.com, member.alipan.com
+

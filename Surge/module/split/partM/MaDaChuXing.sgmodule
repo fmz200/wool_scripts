@@ -1,0 +1,41 @@
+#!name=马达出行
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partM/MaDaChuXing.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[Map Local]
+# 开屏广告
+^https:\/\/mada-travel\.17u\.cn\/mdapi\/config\/ads data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 我的会员中心
+^https:\/\/mada-travel\.17u\.cn\/mdapi\/config\/mine data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 首页下方推广
+^https:\/\/mada-travel\.17u\.cn\/mdapi\/config\/tabAct data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 屏蔽更新
+^http:\/\/ebk\.17u\.cn\/tctrafficappversionadmin\/api\/getLatestVersionApp data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/ggc\.miguvideo\.com\/v1\/iflyad\/deliverysystem\/direct\/ data-type=tiny-gif status-code=200
+
+^https?:\/\/public-deliver9\.miguvideo\.com\/deliver\/site\/batchMatch\/mergeSpot\/miguvideo\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/recommend-dy\.miguvideo\.com\/recommend-dynamic\/dataSource\/v1\/recommend\/merge data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/app-sc\.miguvideo\.com\/app-management\/v1\/staticcache\/settings\/miguvideo\/SHARE_PIC data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/common-sc\.miguvideo\.com\/videoActivity\/activityList\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+#^https?:\/\/display-sc\.miguvideo\.com\/display\/v3\/static\/PERSONAL_CENTER\/ reject-dict
+^https?:\/\/ggx.+\.miguvideo\.com\/request\/sdk.+[^?]*$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/ggic\d+.miguvideo\.com\/ad\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% ggc.miguvideo.com, public-deliver9.miguvideo.com, display*-sc.miguvideo.com, recommend-dy.miguvideo.com, app-sc.miguvideo.com, common-sc.miguvideo.com, ggx*.miguvideo.com, ggic*.miguvideo.com
+

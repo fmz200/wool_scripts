@@ -1,0 +1,48 @@
+#!name=谷歌
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partG/Google.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[Rule]
+DOMAIN-SUFFIX,google-analytics.com,REJECT
+DOMAIN,safebrowsing.googleapis.com,REJECT
+DOMAIN-SUFFIX,doubleclick.net,REJECT
+DOMAIN-SUFFIX,googleadservices.com,REJECT
+DOMAIN-SUFFIX,googleadsserving.cn,REJECT
+DOMAIN-SUFFIX,googlesyndication.com,REJECT
+DOMAIN-SUFFIX,googletagservices.com,REJECT
+DOMAIN-SUFFIX,googletagmanager.com,REJECT
+DOMAIN-SUFFIX,video-ad-stats.googlesyndication.com,REJECT
+DOMAIN-SUFFIX,tpc.googlesyndication.com,REJECT
+DOMAIN-SUFFIX,pagead.google.com,REJECT
+DOMAIN-SUFFIX,pagead.l.google.com,REJECT
+DOMAIN-SUFFIX,pagead2.googlesyndication.com,REJECT
+DOMAIN-SUFFIX,pagead-tpc.l.google.com,REJECT
+DOMAIN-SUFFIX,mobileads.google.com,REJECT
+DOMAIN-SUFFIX,googlecommerce.com,REJECT
+DOMAIN-SUFFIX,blaaaa12.googlecode.com,REJECT
+DOMAIN-SUFFIX,badad.googleplex.com,REJECT
+DOMAIN-SUFFIX,afs.googlesyndication.com,REJECT
+DOMAIN-SUFFIX,afd.l.google.com,REJECT
+DOMAIN-SUFFIX,www.googleadservices.com,REJECT
+DOMAIN-SUFFIX,www.google-analytics.com,REJECT
+DOMAIN,ads.youtube.com,REJECT
+
+[Map Local]
+# 如开启可自行添加主机名，但似乎已不可MITM
+^https?:\/\/.+\.googleapis.com/.+ad_break data-type=tiny-gif status-code=200
+
+^https?:\/\/.+\.googleapis.com/.+log_event data-type=tiny-gif status-code=200
+
+^https?:\/\/.+\.googleapis.com/adsmeasurement data-type=tiny-gif status-code=200
+
+^https?:\/\/pagead2\.googlesyndication\.com\/pagead\/ data-type=tiny-gif status-code=200
+
+[MITM]
+hostname = %APPEND% *.googleapis.com, pagead2.googlesyndication.com
+

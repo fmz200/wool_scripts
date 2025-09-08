@@ -1,0 +1,21 @@
+#!name=ONE
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partO/ONE.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[URL Rewrite]
+^https?:\/\/app\.api\.d3yuiw4\.com\/api\/app\/ad - reject
+^https?:\/\/api\.21ec74\.com\/v2\.5\/ad - reject
+
+[Map Local]
+# 开屏广告
+^https?:\/\/v3\.wufazhuce\.com:8000\/api\/adpreloadlist data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% v3.wufazhuce.com, app.api.d3yuiw4.com, api.21ec74.com
+

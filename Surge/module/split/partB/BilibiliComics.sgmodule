@@ -1,0 +1,32 @@
+#!name=哔哩哔哩漫画
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partA/BilibiliComics.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#!arguments=bilimanhua_enable:true
+
+[Map Local]
+^https?:\/\/i\d\.hdslb\.com\/bfs\/fawkes data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/i\d\.hdslb\.com\/bfs\/manga-static\/\w+\.(jpg|png)$ data-type=text data=" " status-code=200
+
+^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Recommend|Flash|ListFlash|GetBubbles|GetActivityTab|GetCommonBanner|GetComicConfigPicList) data-type=text data=" " status-code=200
+
+^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Shop\/GetShopItems data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/manga\.bilibili\.com\/twirp\/user\.v\d\.SeasonV\d\/GetSeasonInfo data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/manga\.bilibili\.com\/twirp\/user\.v\d\.Read\/ActInfo data-type=text data=" " status-code=200
+
+[Script]
+哔哩哔哩漫画 = type=http-response, pattern=^https?:\/\/manga\.bilibili\.com\/twirp\/user\.v\d\.User\/UCenterConf, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/bilibiliManga.js, requires-body=true, timeout=60
+
+哔哩哔哩漫画 = type=http-response, pattern=^https?:\/\/manga\.bilibili\.com\/twirp\/user\.v\d\.User\/GetInitInfo, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/bilibiliManga.js, requires-body=true, timeout=60
+
+[MITM]
+hostname = %APPEND% manga.bilibili.com, i*.hdslb.com
+

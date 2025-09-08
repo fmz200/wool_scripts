@@ -1,0 +1,57 @@
+#!name=Line
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partL/Line.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[Rule]
+URL-REGEX,"^https:\/\/a\.line\.me\/lass\/api\/v\d\/ads$",REJECT-DROP
+URL-REGEX,"^https:\/\/a\.line\.me\/oa\/v\d\/e$",REJECT-DROP
+URL-REGEX,"^https:\/\/a\.line\.me\/cs\/v\d\/oa$",REJECT-DROP
+URL-REGEX,"^https:\/\/w\.line\.me\/adp\/api\/ad\/v\d\/",REJECT-DROP
+URL-REGEX,"^https:\/\/crs-event\.line\.me\/v\d\/imp",REJECT-DROP
+URL-REGEX,"^https:\/\/obs\.line-scdn\.net\/0h.+\/(o|m)\d+x\d+$",REJECT-DROP
+URL-REGEX,"^https:\/\/obs\.line-scdn\.net\/0hGH\d",REJECT-DROP
+URL-REGEX,"^https:\/\/obs\.line-scdn\.net\/0h.+\/\d+p\.mp4$",REJECT-DROP
+URL-REGEX,"^https:\/\/scdn\.line-apps\.com\/lan\/image\/line\/bannerImageEvent\/",REJECT-DROP
+URL-REGEX,"^https:\/\/scdn\.line-apps\.com\/lan\/document\/pageEvent\/line\/ios\/",REJECT-DROP
+URL-REGEX,"^https:\/\/sch\.line\.me\/api\/v\d\/ads$",REJECT-DROP
+URL-REGEX,"^https:\/\/uts-front\.line-apps\.com\/event$",REJECT-DROP
+URL-REGEX,"^https:\/\/uts-front\.line-apps\.com\/settings$",REJECT-DROP
+
+[URL Rewrite]
+^https:\/\/ad\.line-scdn\.net\/0h - reject
+^https:\/\/gw\.line\.naver\.jp\/ext\/lgfp\/lad\/v1$ - reject
+^https:\/\/gw\.line\.naver\.jp\/lass\/api\/v1\/ads$ - reject
+^https:\/\/gw\.line\.naver\.jp\/tr\/event$ - reject
+^https:\/\/lan\.line\.me\/v1\/line\/ios - reject
+^https:\/\/legy\.line-apps\.com:443\/ext\/lgfp\/lad\/v1$ - reject
+^https:\/\/legy\.line-apps\.com:443\/ext\/smartch\/banner\/sch\/v1$ - reject
+^https:\/\/legy\.line-apps\.com\/line\.gcs\.GcsModuleService\/GetModulesByModuleIds$ - reject
+^https:\/\/legy\.line-apps\.com:443\/tr\/event$ - reject
+^https:\/\/buy\.line\.me\/api\/graphql\?variables - reject
+^https:\/\/cix\.line-apps\.com\/R4\? - reject
+^https:\/\/scdn\.line-apps\.com\/appresources\/moretab\/list\.json - reject
+^https:\/\/static\.line-scdn\.net\/ad-sdk\/ - reject
+^https:\/\/nelo2-col\.linecorp\.com\/_store$ - reject
+
+[Map Local]
+^https:\/\/a\.line\.me\/er\/lads\/v\d\/ei\? data-type=tiny-gif status-code=200
+
+^https:\/\/a\.line\.me\/er\/l.*\/v\d\/event\/image data-type=tiny-gif status-code=200
+
+^https:\/\/ec-bot-obs\.line-scdn\.net\/0h[-0-9a-zA-Z_]{50,} data-type=tiny-gif status-code=200
+
+^https:\/\/web-mmap-pay\.line-apps\.com\/tw\/liff\/campaign\/v1\/aggregate\/ad\/banner\/ data-type=tiny-gif status-code=200
+
+^https:\/\/obs\.line-scdn\.net\/r\/linecrs\/.+\/m180x180$ data-type=tiny-gif status-code=200
+
+^https:\/\/d\.line-scdn\.net\/lcp-prod-photo\/20.+\.(jpg|jpeg|png) data-type=tiny-gif status-code=200
+
+[MITM]
+hostname = %APPEND% a.line.me, ad.line-scdn.net, w.line.me, gw.line.naver.jp, lan.line.me, buy.line.me, crs-event.line.me, obs.line-scdn.net, d.line-scdn.net, scdn.line-apps.com, sch.line.me, static.line-scdn.net, nelo2-col.linecorp.com, uts-front.line-apps.com, cix.line-apps.com, legy.line-apps.com, ec-bot-obs.line-scdn.net
+

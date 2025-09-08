@@ -1,0 +1,17 @@
+#!name=汇付天下
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partH/HuifuWorld.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#!arguments=hftx_enable:true
+
+[Script]
+# 感谢【可莉】分享
+汇付天下 = type=http-response, pattern=^https:\/\/mcsp\.cloudpnr\.com\/api\/miniapp\/popular\/T_MINIAPP$, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/huifutianxia_ads.js, requires-body=true, timeout=60
+
+汇付天下 = type=http-response, pattern=^https:\/\/saas-ad\.cloudpnr\.com\/huifuad-base-api\/api\/tactics\/ad, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/huifutianxia_ads.js, requires-body=true, timeout=60
+

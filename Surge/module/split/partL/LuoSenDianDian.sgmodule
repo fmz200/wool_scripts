@@ -1,0 +1,22 @@
+#!name=罗森点点
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partL/LuoSenDianDian.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#!arguments=lawson_enable:true
+
+[Map Local]
+^https:\/\/plt\.yorentown\.com\/pltapp\/v1\/banner data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[Script]
+罗森点点 = type=http-response, pattern=^https:\/\/lawsonapi\.yorentown\.com\/area\/sh-lawson\/app\/v1\/, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/lawson.js, requires-body=true, timeout=60
+
+罗森点点 = type=http-response, pattern=^https:\/\/lawsonapi\.yorentown\.com\/portal\/app\/globalLaunch\/listAdvert, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/lawson.js, requires-body=true, timeout=60
+
+[MITM]
+hostname = %APPEND% plt.yorentown.com, lawsonapi.yorentown.com
+

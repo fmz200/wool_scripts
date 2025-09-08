@@ -1,0 +1,18 @@
+#!name=网易严选
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partW/NetEaseYanxuan.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[URL Rewrite]
+https://support.you.163.com/appversync/check.do - reject
+^https?:\/\/m\.you\.163\.com\/activity\/popWindow - reject
+^https?:\/\/yanxuan\.nosdn\.127\.net\/.*\.mp4 - reject
+
+[MITM]
+hostname = %APPEND% support.you.163.com, m.you.163.com, yanxuan.nosdn.127.net
+

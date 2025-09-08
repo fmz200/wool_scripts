@@ -1,0 +1,32 @@
+#!name=转转
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partZ/ZhuanZhuan.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#!arguments=vrvr_enable:true
+
+[Body Rewrite]
+http-response ^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getfeedflowinfo\? userRed fmz200
+http-response ^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getchoicegoodsinfos infoData fmz200
+
+[Map Local]
+^https?:\/\/app\.zhuanzhuan\.com\/zzx\/transfer\/getConfigInfo data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/app\.zhuanzhuan\.com\/zzopen\/popwindow\/getallpopwin\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzlogic\/getOpenScreen data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 转转右下角悬浮广告
+^https?:\/\/app\.zhuanzhuan\.com\/zz\/transfer\/userred\?scene=homePage data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[Script]
+# “我的”页面去除冗余的模块
+转转 = type=http-response, pattern=^https?:\/\/app\.zhuanzhuan\.com\/zz\/transfer\/getmyprofilev3, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/zhuanzhuan/zhuanzhuan.js, requires-body=true, timeout=60
+
+[MITM]
+hostname = %APPEND% app.zhuanzhuan.com
+

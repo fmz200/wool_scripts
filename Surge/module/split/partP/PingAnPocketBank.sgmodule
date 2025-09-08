@@ -1,0 +1,20 @@
+#!name=平安口袋银行
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partP/PingAnPocketBank.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[Map Local]
+^https?:\/\/cdn\.sdb\.com\.cn\/widget\/magic-module-sprite\/general-banner data-type=text data=" " status-code=200
+
+^https?:\/\/cdn\.sdb\.com\.cn\/widget\/magic-module-sprite\/dialog-normal data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/cdn\.sdb\.com\.cn\/widget\/pb\/pb-plugins-recomend-content data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% cdn.sdb.com.cn
+

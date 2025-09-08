@@ -1,0 +1,27 @@
+#!name=万词王
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partW/WanCiWang.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[URL Rewrite]
+# 移除开屏
+^https?:\/\/wanciwangdata\.oss-cn-beijing\.aliyuncs\.com\/startup\/resource\/content.+ - reject
+
+[Map Local]
+# 移除banner广告
+^https?:\/\/recite\.perfectlingo\.com\/api\/recite\/app-act\/act-list.+ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 移除底部广告
+^https?:\/\/recite\.perfectlingo\.com\/api\/recite\/content-recommend\/v\d\/get-by-uid.+ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 移除悬浮广告
+^https?:\/\/recite\.perfectlingo\.com\/api\/recite\/floating-window\/v\d\/get-show.+ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% wanciwangdata.oss-cn-beijing.aliyuncs.com, recite.perfectlingo.com
+

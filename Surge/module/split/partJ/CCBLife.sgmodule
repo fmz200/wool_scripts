@@ -1,0 +1,43 @@
+#!name=建行生活
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partJ/CCBLife.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#!arguments=jhsh_enable:true
+
+[Rule]
+# 内置饿了么外卖弹窗, REJECT
+DOMAIN,o2o-ad-log-gateway.alibaba.com,REJECT
+
+[URL Rewrite]
+^https?:\/\/waimai-guide\.ele\.me\/\w+\/mtop\.alsc\.wamai\.store\.detail\.miniapp\.popup - reject
+^https?:\/\/waimai-guide\.ele\.me\/\w+\/mtop\.venus\.shopcouponpopupservice\.getshopcouponspopup - reject
+
+[Body Rewrite]
+http-response ^https?:\/\/yunbusiness\.ccb\.com\/basic_service\/txCtrl\? "TAG_AD_INFO" "fmz200"
+http-response ^https?:\/\/waimai-guide\.ele\.me\/\w+\/mtop\.venus\.shopresourceservice\.getshopresource posterList fmz200
+
+[Map Local]
+# 首页横幅广告
+^https?:\/\/yunbusiness\.ccb\.com\/clp_service\/txCtrl\?txcode=A3341A(002|006|009|119|120) data-type=text data=" " status-code=200
+
+^https?:\/\/yunbusiness\.ccb\.com\/clp_service\/txCtrl\?txcode=A3341C147 data-type=text data=" " status-code=200
+
+# 内置饿了么
+^https?:\/\/waimai-guide\.ele\.me\/\w+\/mtop\.alsc\.eleme\.\w+\.trigger\.respond data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/yunbusiness\.ccb\.com\/basic_service\/txCtrl\?txcode=A3341AB05 data-type=file data="https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ccbLife/A3341AB05.json" status-code=200 header="Content-Type:application/json"
+
+[Script]
+建行生活 = type=http-response, pattern=^https?:\/\/yunbusiness\.ccb\.com\/basic_service\/txCtrl\?txcode=A3341AB04, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ccbLife/ccbLifeAds.js, requires-body=true, timeout=60
+
+# 内置饿了么
+建行生活内置饿了么 = type=http-response, pattern=^https?:\/\/g\.alicdn\.com\/.*o2o-ad, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/alicdn.js, requires-body=true, timeout=60
+
+[MITM]
+hostname = %APPEND% yunbusiness.ccb.com, g.alicdn.com, waimai-guide.ele.me
+

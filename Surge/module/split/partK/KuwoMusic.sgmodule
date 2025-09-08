@@ -1,0 +1,48 @@
+#!name=酷我音乐
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partK/KuwoMusic.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#!arguments=kuwoybyt_enable:true
+
+[Rule]
+DOMAIN,mobilead.kuwo.cn,REJECT
+DOMAIN,rich.kuwo.cn,REJECT
+DOMAIN-KEYWORD,rich.kuwo.cn,REJECT
+DOMAIN-KEYWORD,mobilead.kuwo.cn,REJECT
+DOMAIN-SUFFIX,c.kuwo.cn,REJECT
+DOMAIN-SUFFIX,deliver.kuwo.cn,REJECT
+DOMAIN-SUFFIX,game.kuwo.cn,REJECT
+DOMAIN-SUFFIX,kuwoyy.com,REJECT
+DOMAIN-SUFFIX,kwmsg.kuwo.cn,REJECT
+DOMAIN-SUFFIX,msclick2.kuwo.cn,REJECT
+DOMAIN-SUFFIX,msphoneclick.kuwo.cn,REJECT
+DOMAIN-SUFFIX,updatepage.kuwo.cn,REJECT
+DOMAIN-SUFFIX,wa.kuwo.cn,REJECT
+DOMAIN-SUFFIX,webstat.kuwo.cn,REJECT
+DOMAIN-SUFFIX,mobilead.kuwo.cn,REJECT
+DOMAIN-SUFFIX,rich.kuwo.cn,REJECT
+
+[Map Local]
+# 广告
+^https?:\/\/audiobookpay\.kuwo\.cn\/a\.p\?op=get_advertright_endtime data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[Script]
+酷我音乐 = type=http-response, pattern=^https?:\/\/(mgxhtj|nmobi|searchrecterm)\.kuwo\.cn\/(mgxh|mobi|recterm)\.s, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuwo/kuwo.js, requires-body=true, timeout=60
+
+# 会员
+酷我音乐 = type=http-response, pattern=^https?:\/\/audiobookpay\.kuwo\.cn\/a\.p, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuwo/kuwo.js, requires-body=true, timeout=60
+
+酷我音乐 = type=http-response, pattern=^https?:\/\/musicpay\.kuwo\.cn\/music\.pay, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuwo/kuwo.js, requires-body=true, timeout=60
+
+酷我音乐 = type=http-response, pattern=^https?:\/\/vip1\.kuwo\.cn\/vip\/(enc\/user\/vip\?op=ui|v\d\/theme\?op=gd), script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuwo/kuwo.js, requires-body=true, timeout=60
+
+酷我音乐 = type=http-response, pattern=^https?:\/\/vip1\.kuwo\.cn\/vip\/v\d\/user\/vip\?op=ui, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuwo/kuwo.js, requires-body=true, timeout=60
+
+[MITM]
+hostname = %APPEND% audiobookpay.kuwo.cn, mgxhtj.kuwo.cn, nmobi.kuwo.cn, searchrecterm.kuwo.cn, musicpay.kuwo.cn, vip1.kuwo.cn
+

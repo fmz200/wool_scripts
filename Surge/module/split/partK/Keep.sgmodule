@@ -1,0 +1,66 @@
+#!name=Keep
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partK/Keep.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#!arguments=keep_enable:true
+
+[Rule]
+# 拦截HTTPDNS
+DOMAIN,httpdns.n.netease.com,REJECT
+DOMAIN,httpdns.calorietech.com,REJECT
+# 拦截广告下发
+DOMAIN,hc-ssp.sm.cn,REJECT
+DOMAIN,apm.gotokeep.com,REJECT
+DOMAIN,kad.gotokeep.com,REJECT
+
+[URL Rewrite]
+# 屏蔽应用内弹窗
+^https?:\/\/api\.gotokeep\.com\/guide-webapp\/v\d\/popup\/getPopUp - reject
+# 屏蔽部分启动弹窗
+^https?:\/\/api\.gotokeep\.com\/kprime\/v\d\/popups\/primeGuide - reject
+# 屏蔽开屏广告请求
+^https?:\/\/kad\.gotokeep\.com\/op-engine-webapp\/v\d\/ad - reject
+# 屏蔽青少年弹窗
+^https?:\/\/api.gotokeep.com/cauchy/growth/init - reject
+# 屏蔽搜索栏自动填充词
+^https?:\/\/api\.gotokeep\.com\/search\/v\d\/default\/keyword\/list - reject
+# 屏蔽热词
+^https?:\/\/api\.gotokeep\.com\/search\/v\d\/hotword\/list - reject
+# 屏蔽hotCourse
+^https?:\/\/api\.gotokeep\.com\/search\/v\d\/hotCourse\/list - reject
+# 屏蔽adwebapp
+^https?:\/\/api\.gotokeep\.com\/op-engine-webapp\/v\d\/ad - reject
+# 屏蔽广告预加载
+^https?:\/\/api\.gotokeep\.com\/ads\/v\d\/ads\/preload - reject
+# 屏蔽adbox
+^https?:\/\/api\.gotokeep\.com\/training\/box\/config - reject
+# 屏蔽更新
+^https?:\/\/api\.gotokeep\.com\/anno\/v\d\/upgrade\/check - reject
+
+[Map Local]
+^https?:\/\/static1\.keepcdn\.com\/ark_optimus\/202\d\/*\/*\/.*.(png|jpg) data-type=text data=" " status-code=200
+
+[Script]
+# 我的页面去推广
+keep = type=http-response, pattern=^https?:\/\/api\.gotokeep\.com\/athena\/v\d\/people\/my$, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js, requires-body=true, timeout=60
+
+# 应用底部栏净化
+keep = type=http-response, pattern=^https?:\/\/api\.gotokeep\.com\/config\/v\d\/basic, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js, requires-body=true, timeout=60
+
+# 发现页处理
+keep = type=http-response, pattern=^https?:\/\/api\.gotokeep\.com\/homepage\/v\d\/tab, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js, requires-body=true, timeout=60
+
+# 课程预览页广告
+keep = type=http-response, pattern=^https?:\/\/api\.gotokeep\.com\/nuocha\/course\/v\d/\w+\/preview, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js, requires-body=true, timeout=60
+
+# 我的运动页面去除下方推荐
+keep = type=http-response, pattern=^https?:\/\/api\.gotokeep\.com\/sportpage\/sport\/v\d\/mysport, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js, requires-body=true, timeout=60
+
+[MITM]
+hostname = %APPEND% api.gotokeep.com, kad.gotokeep.com, static1.keepcdn.com
+

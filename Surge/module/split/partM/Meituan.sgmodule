@@ -1,0 +1,23 @@
+#!name=美团
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partM/Meituan.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[Rule]
+DOMAIN,flowplus.meituan.net,REJECT
+DOMAIN-SUFFIX,analytics.meituan.net,REJECT
+DOMAIN-SUFFIX,meituan.xn,REJECT
+DOMAIN-SUFFIX,meituan.yoga,REJECT
+DOMAIN-SUFFIX,meituangov.cn,REJECT
+DOMAIN-SUFFIX,report.meituan.com,REJECT
+DOMAIN-SUFFIX,wmlog.meituan.com,REJECT
+DOMAIN-SUFFIX,ad.e.waimai.sankuai.com,REJECT
+DOMAIN-SUFFIX,mads.meituan.com,REJECT
+DOMAIN-SUFFIX,dreport.meituan.net,REJECT
+DOMAIN-SUFFIX,d.meituan.net,REJECT
+

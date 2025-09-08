@@ -1,0 +1,28 @@
+#!name=苏打校园APP
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partS/SuDaXiaoYuanAPP.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#!arguments=sudaxnyr_enable:true
+
+[Map Local]
+^https?:\/\/api\.sodalife\.xyz\/v1\/posters\?location=SODA_APP%3AHOME%3ABOTTOM data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/api\.sodalife\.xyz\/v1\/posters\?location=SODA_APP%3AHOME%3ACENTER data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/api\.sodalife\.xyz\/v1\/posters\?location=SODA_APP%3AMINE%3ABOTTOM data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/api\.sodalife\.xyz\/v1\/posters\?location=SODA_APP%3AREWARDS%3ACENTER data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/api\.sodalife\.xyz\/v1\/goods data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[Script]
+苏打校园APP = type=http-response, pattern=^https?:\/\/api\.sodalife\.xyz\/v1\/posters\?location=SODA_APP%3AHOME%3ATOP, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soda.js, requires-body=true, timeout=60
+
+[MITM]
+hostname = %APPEND% api.sodalife.xyz
+

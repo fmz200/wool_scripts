@@ -1,0 +1,39 @@
+#!name=起点读书
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partQ/QiDianReading.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[URL Rewrite]
+^https?:\/\/mage\.if\.qidian\.com\/argus\/api\/v\d\/client\/getsplashscreen - reject
+^https?://magev6.if.qidian.com/argus/api/v1/client/iosad - reject
+^https?://magev6.if.qidian.com/argus/api/v1/bookshelf/getad - reject
+^https?://magev6.if.qidian.com/argus/api/v4/client/getsplashscreen? - reject
+^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/adv\/getadvlistbatch - reject
+
+[Map Local]
+^https?:\/\/qidian\.qpic\.cn\/qidian_common data-type=tiny-gif status-code=200
+
+^https?:\/\/mage\.if\.qidian\.com\/Atom\.axd\/Api\/Client\/GetConfIOS data-type=tiny-gif status-code=200
+
+# 起点读书投票、章末免费领取章节卡等
+^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/adv data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/followsubscribe data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 我的界面内测推广
+^http[s]?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/bookshelf\/refresh data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 书架置顶推广(保留签到移除花哨背景)
+^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/bookshelf\/getTopOperation data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 发现上面的图标屏蔽
+^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v2\/adv\/getadvlistbatch data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% qidian.qpic.cn, mage.if.qidian.com, magev6.if.qidian.com
+

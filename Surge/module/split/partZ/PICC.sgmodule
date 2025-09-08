@@ -1,0 +1,24 @@
+#!name=中国人保
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partZ/PICC.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[URL Rewrite]
+# 人保头条
+^https?:\/\/zgrb\.epicc\.com\.cn\/G-HAPP\/h\/headlines\/queryHeadlines - reject
+
+[Map Local]
+# 启动开屏
+^https?:\/\/zgrb\.epicc\.com\.cn\/G-HAPP\/a\/update\/startupPage\/v data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 猜你喜欢
+^https?:\/\/zgrb\.epicc\.com\.cn\/G-HAPP\/a\/config\/guessYouLike\/v data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% zgrb.epicc.com.cn
+

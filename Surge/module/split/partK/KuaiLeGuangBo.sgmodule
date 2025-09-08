@@ -1,0 +1,23 @@
+#!name=快乐广播
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partK/KuaiLeGuangBo.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[Rule]
+DOMAIN,ad.hpplay.cn,REJECT
+DOMAIN,adc.hpplay.cn,REJECT
+DOMAIN,adcdn.hpplay.cn,REJECT
+DOMAIN,adeng.hpplay.cn,REJECT
+DOMAIN,pin.hpplay.cn,REJECT
+DOMAIN,rp.hpplay.cn,REJECT
+DOMAIN,rpt.hpplay.cn,REJECT
+DOMAIN-SUFFIX,e.kuaishou.com,REJECT
+DOMAIN-SUFFIX,cm.downloader.commercial.kuaishou.com,REJECT
+DOMAIN-SUFFIX,cm.ad.gifshow.com,REJECT
+DOMAIN-SUFFIX,cm.kwad.com,REJECT
+

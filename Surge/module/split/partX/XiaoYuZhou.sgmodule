@@ -1,0 +1,28 @@
+#!name=小宇宙
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partX/XiaoYuZhou.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[Body Rewrite]
+http-response-jq ^https?:\/\/api\.xiaoyuzhoufm\.com\/v1\/discovery-feed\/list '.data |= map(select(.type != "DISCOVERY_HEADER" and .type != "DISCOVERY_BANNER"))'
+
+[Map Local]
+# 移除开屏广告
+^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/flash data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 移除单集总结和ai总结
+^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/ai data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 移除搜索框内容
+^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/search\/get data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/category data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% api.xiaoyuzhoufm.com
+

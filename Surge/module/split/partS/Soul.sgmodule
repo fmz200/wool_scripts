@@ -1,0 +1,68 @@
+#!name=Soul
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partS/Soul.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#!arguments=soul_enable:true
+
+[Rule]
+DOMAIN,soul-ad.soulapp.cn,REJECT
+DOMAIN,ad-r.soulapp.cn,REJECT
+DOMAIN,ad-reward.soulapp.cn,REJECT
+DOMAIN-SUFFIX,cdn.soulapp.cn,REJECT
+IP-CIDR,47.56.131.76/32,REJECT,no-resolve
+IP-CIDR,47.97.215.55/32,REJECT,no-resolve
+IP-CIDR,47.99.42.29/32,REJECT,no-resolve
+IP-CIDR,120.27.235.201/32,REJECT,no-resolve
+IP-CIDR,121.196.197.147/32,REJECT,no-resolve
+
+[URL Rewrite]
+# 国际版Soul去广告
+^https?:\/\/api-global\.soulapp\.me\/app\/open\/get - reject
+
+[Map Local]
+# 信息流，帖子详情页等各种广告
+^https?:\/\/ssp\.soulapp\.cn\/api\/q data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/ssp\.soulapp\.cn\/api\/ad\/config data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/chat-live\.soulapp\.cn\/live\/planet\/recListV2 data-type=text data=" " status-code=200
+
+^https?:\/\/api-chat\.soulapp\.cn\/chat\/entrance\/first data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[Script]
+# 替换信息收集
+req_replace_body = type=http-request, pattern=^https:\/\/data-collector\.soulapp\.cn\/api\/data\/report\/v\d, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/template/req_replace_body.js, requires-body=true, timeout=60
+
+# 青少年模式弹窗
+soul_ads = type=http-response, pattern=^https?:\/\/api-account\.soulapp\.cn\/teenager\/config, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js, requires-body=true, timeout=60
+
+soul_ads = type=http-response, pattern=^https?:\/\/api-a\.soulapp\.cn\/v2\/post\/gift\/list, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js, requires-body=true, timeout=60
+
+soul_ads = type=http-response, pattern=^https?:\/\/api-a\.soulapp\.cn\/official\/scene\/module, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js, requires-body=true, timeout=60
+
+soul_ads = type=http-response, pattern=^https?:\/\/api-user\.soulapp\.cn\/furion\/position\/content, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js, requires-body=true, timeout=60
+
+soul_ads = type=http-response, pattern=^https?:\/\/api-user\.soulapp\.cn\/v\d\/planet\/config, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js, requires-body=true, timeout=60
+
+soul_ads = type=http-response, pattern=^https?:\/\/api-chat\.soulapp\.cn\/chat\/limitInfo, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js, requires-body=true, timeout=60
+
+soul_ads = type=http-response, pattern=^https?:\/\/post\.soulapp\.cn\/hot\/soul\/rank, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js, requires-body=true, timeout=60
+
+soul_ads = type=http-response, pattern=^https?:\/\/post\.soulapp\.cn\/v\d\/post\/homepage\/guide\/card, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js, requires-body=true, timeout=60
+
+soul_ads = type=http-response, pattern=^https?:\/\/post\.soulapp\.cn\/v\d\/post\/recSquare\/subTabs, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js, requires-body=true, timeout=60
+
+soul_ads = type=http-response, pattern=^https?:\/\/chat-live\.soulapp\.cn\/chatroom\/chatClassifyRoomList, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js, requires-body=true, timeout=60
+
+soul_ads = type=http-response, pattern=^https?:\/\/gateway-mobile-gray\.soulapp\.cn\/mobile\/app\/version\/queryIos, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js, requires-body=true, timeout=60
+
+soul_ads = type=http-response, pattern=^https?:\/\/47\.110\.187\.87\/winterfell\/v2\/getIpByDomain, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js, requires-body=true, timeout=60
+
+[MITM]
+hostname = %APPEND% 47.110.187.87, ssp.soulapp.cn, chat-live.soulapp.cn, api-chat.soulapp.cn, api-account.soulapp.cn, api-global.soulapp.me, api-a.soulapp.cn, api-pay.soulapp.cn, gateway-mobile-gray.soulapp.cn, post.soulapp.cn, api-user.soulapp.cn
+

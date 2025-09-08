@@ -1,0 +1,85 @@
+#!name=芒果TV
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partM/MangoTV.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#!arguments=mhgotv_enable:true
+
+[Rule]
+DOMAIN,dflow.bz.mgtv.com,REJECT
+DOMAIN,encounter.bz.mgtv.com,REJECT
+DOMAIN,floor.bz.mgtv.com,REJECT
+DOMAIN,img.da.mgtv.com,REJECT
+DOMAIN,layer.bz.mgtv.com,REJECT
+DOMAIN,mob.bz.mgtv.com,REJECT
+DOMAIN,mobile.da.mgtv.com,REJECT
+DOMAIN,rc-topic-api.bz.mgtv.com,REJECT
+DOMAIN,v2.da.mgtv.com,REJECT
+DOMAIN,video.da.mgtv.com,REJECT
+DOMAIN,vip.bz.mgtv.com,REJECT
+DOMAIN,ys.da.mgtv.com,REJECT
+DOMAIN-SUFFIX,mobile2.da.mgtv.com,REJECT
+DOMAIN-SUFFIX,cdn.cmop.mgtv.com,REJECT
+DOMAIN-SUFFIX,cmop.mgtv.com,REJECT
+DOMAIN-SUFFIX,imgaliyun.da.mgtv.com,REJECT
+DOMAIN-SUFFIX,imgaliyun.res.mgtv.com,REJECT
+DOMAIN-SUFFIX,m2.da.mgtv.com,REJECT
+DOMAIN-SUFFIX,mobaliyun.res.mgtv.com,REJECT
+DOMAIN-SUFFIX,pc.da.mgtv.com,REJECT
+DOMAIN-SUFFIX,pc1.da.mgtv.com,REJECT
+DOMAIN-SUFFIX,pcvideoaliyun.titan.mgtv.com,REJECT
+DOMAIN-SUFFIX,pcvideoyd.titan.mgtv.com,REJECT
+DOMAIN-SUFFIX,pcweb.v1.mgtv.com,REJECT
+DOMAIN-SUFFIX,py.da.mgtv.com,REJECT
+DOMAIN-SUFFIX,web.da.mgtv.com,REJECT
+DOMAIN-SUFFIX,x.da.mgtv.com,REJECT
+DOMAIN-SUFFIX,y.da.mgtv.com,REJECT
+DOMAIN-SUFFIX,da.mgtv.com,REJECT
+
+[URL Rewrite]
+# 无用请求
+^https?:\/\/[\d\.]+:\d{5}\/\?cmd=indexes - reject
+
+[Map Local]
+# 首页左上角推广
+^https?:\/\/[\d\.]+\/odin\/c1\/(channel\/ads|skin\/config)\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 底部tab红点
+^https?:\/\/damang\.api\.mgtv\.com\/station\/album\/red\/dot\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 播放器界面
+^https?:\/\/hb-boom\.api\.mgtv\.com\/release\/pullReleaseInfo data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 升级弹窗
+^https?:\/\/mobile\.api\.mgtv\.com\/v2\/mobile\/checkUpdate\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 搜索框填充词
+^https?:\/\/mobileso\.bz\.mgtv\.com\/spotlight\/search\/v1\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[Script]
+# 我的页面
+芒果TV我的页面 = type=http-response, pattern=^https?:\/\/me\.bz\.mgtv\.com\/v3\/module\/list\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60
+
+# 首页信息流,顶部tab
+芒果TV首页信息流,顶部tab = type=http-response, pattern=^https?:\/\/mob-st\.bz\.mgtv\.com\/odin\/c1\/channel\/index\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60
+
+芒果TV = type=http-response, pattern=^https?:\/\/dc2?\.bz\.mgtv\.com\/dynamic\/v1\/channel\/(index|vrsList)\/\w, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60
+
+# 底部tab
+芒果TV底部tab = type=http-response, pattern=^https?:\/\/mobile\.api\.mgtv\.com\/mobile\/config\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60
+
+# 播放详情页
+芒果TV播放详情页 = type=http-response, pattern=^https?:\/\/mobile\.api\.mgtv\.com\/v10\/video\/info\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60
+
+芒果TV播放详情页 = type=http-response, pattern=^https?:\/\/mobile-thor\.api\.mgtv\.com\/v1\/vod\/info\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60
+
+# 搜索框填充词
+芒果TV搜索框填充词 = type=http-response, pattern=^https?:\/\/mobileso\.bz\.mgtv\.com\/mobile\/recommend\/v2\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60
+
+[MITM]
+hostname = %APPEND% *.mgtv.com
+

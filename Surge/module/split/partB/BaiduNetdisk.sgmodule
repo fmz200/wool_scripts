@@ -1,0 +1,32 @@
+#!name=百度网盘
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partB/BaiduNetdisk.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[URL Rewrite]
+^https?:\/\/pan\.baidu\.com\/rest\/\d\.\d\/pcs\/adx - reject
+^https?:\/\/pan\.baidu\.com\/rest\/2\.0\/pcs\/ad - reject
+^https?:\/\/pan\.baidu\.com\/act\/v\d\/(bchannel|welfare)\/list - reject
+^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry - reject
+^https?:\/\/pan\.baidu\.com\/pmall\/order\/privilege\/info - reject
+^https?:\/\/pan\.baidu\.com\/rest\/.+\/pcs\/adx - reject
+^https?:\/\/pan\.baidu\.com\/api\/useractivity\/activity - reject
+^https?:\/\/pan\.baidu\.com\/act\/.+\/bchannel\/list - reject
+^https?:\/\/pan\.baidu\.com\/api\/certuser\/get - reject
+^https?:\/\/pan\.baidu\.com\/component\/view\/(1510|1130)\?vip - reject
+^https?:\/\/ndstatic\.cdn\.bcebos\.com\/activity\/welfare\/js\/.+\.js - reject
+^https?:\/\/ndstatic\.cdn\.bcebos\.com\/activity\/welfare\/index\.html - reject
+^https?:\/\/staticsns\.cdn\.bcebos\.com\/amis\/.+/banner.png - reject
+^https?:\/\/issuecdn\.baidupcs\.com\/issue\/netdisk\/guanggao - reject
+^https?:\/\/update\.pan\.baidu\.com\/statistics - reject
+^https?:\/\/fc-video\.cdn\.bcebos\.com - reject
+^https?:\/\/rp\.hpplay\.cn\/logouts - reject
+
+[MITM]
+hostname = %APPEND% pan.baidu.com, ndstatic.cdn.bcebos.com, staticsns.cdn.bcebos.com, issuecdn.baidupcs.com, update.pan.baidu.com, fc-video.cdn.bcebos.com, rp.hpplay.cn
+

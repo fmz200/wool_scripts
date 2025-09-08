@@ -1,0 +1,23 @@
+#!name=咪咕视频
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partM/MiguVideo.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[Rule]
+DOMAIN-SUFFIX,ad.cmvideo.cn,REJECT
+DOMAIN,ggc.cmvideo.cn,REJECT
+DOMAIN,ggv.cmvideo.cn,REJECT
+DOMAIN,ggx.cmvideo.cn,REJECT
+DOMAIN,ggx03.miguvideo.com,REJECT
+DOMAIN,ggic03.miguvideo.com,REJECT
+DOMAIN,ggmk.miguvideo.com,REJECT
+DOMAIN,ggadoffline.miguvideo.com,REJECT
+
+[Script]
+咪咕视频个人中心去广告 = type=http-response, pattern=^https?:\/\/display-sc\.miguvideo\.com\/display\/v3\/static\/PERSONAL_CENTER$, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/refs/heads/main/Scripts/miguvideo/miguvideo_ads.js, requires-body=true, timeout=60
+

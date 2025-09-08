@@ -1,0 +1,38 @@
+#!name=京东
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partJ/JD.com.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#!arguments=jkds_enable:true
+
+[Rule]
+DOMAIN-SUFFIX,jzt.jd.com,REJECT
+DOMAIN-SUFFIX,img-x.jd.com,REJECT
+DOMAIN-SUFFIX,du.jd.com,REJECT
+DOMAIN-SUFFIX,c-nfa.jd.com,REJECT
+DOMAIN-SUFFIX,cm.jd.com,REJECT
+DOMAIN-SUFFIX,jddebug.com,REJECT
+DOMAIN-KEYWORD,policy.jd.com,REJECT
+DOMAIN-KEYWORD,kepler.jd.com,REJECT
+DOMAIN-KEYWORD,bdsp.x.jd.com,REJECT
+DOMAIN-KEYWORD,keplerapi.jd.com,REJECT
+DOMAIN-KEYWORD,mapi.m.jd.com,REJECT
+# 屏蔽DNS, REJECT
+DOMAIN,dns.jd.com,REJECT
+IP-CIDR,101.124.19.122/32,REJECT,no-resolve
+IP-CIDR6,2402:db40:5100:1011::5/128,REJECT,no-resolve
+
+[URL Rewrite]
+# 禁京东直播小窗
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=getWidgetV1052 - reject
+
+[Script]
+京东 = type=http-response, pattern=^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome), script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingdong/jingdong.js, requires-body=true, timeout=60
+
+[MITM]
+hostname = %APPEND% api.m.jd.com, dns.jd.com
+

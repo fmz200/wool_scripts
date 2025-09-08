@@ -1,0 +1,33 @@
+#!name=广告联盟
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/part!!/AffiliateMarketing.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[Rule]
+# 若有问题自行设置白名单, REJECT
+DOMAIN-SUFFIX,miaozhen.com,REJECT
+DOMAIN-KEYWORD,-ad-sign.byteimg.com,REJECT
+DOMAIN-KEYWORD,-tos.pstatp.com,REJECT
+DOMAIN-KEYWORD,asiad.byteactivity,REJECT
+DOMAIN-KEYWORD,pangolin-sdk-toutiao,REJECT
+DOMAIN-KEYWORD,pglstatp-toutiao,REJECT
+DOMAIN-KEYWORD,pangolin.snssdk.com,REJECT
+DOMAIN-KEYWORD,video-cn.snssdk.com,REJECT
+DOMAIN-SUFFIX,getui.com,REJECT
+DOMAIN-SUFFIX,getui.net,REJECT
+DOMAIN-SUFFIX,gepush.com,REJECT
+DOMAIN-SUFFIX,igexin.com,REJECT
+DOMAIN-SUFFIX,log.aliyuncs.com,REJECT
+DOMAIN-SUFFIX,zlsdk.1rtb.net,REJECT
+DOMAIN-SUFFIX,ott.cibntv.net,REJECT
+DOMAIN-SUFFIX,cdntips.net,REJECT
+DOMAIN-SUFFIX,tfogc.com,REJECT
+DOMAIN-SUFFIX,file.myqcloud.com,REJECT
+DOMAIN-KEYWORD,volc,REJECT
+DOMAIN-KEYWORD,umeng,REJECT
+

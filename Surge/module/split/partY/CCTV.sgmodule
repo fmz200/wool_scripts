@@ -1,0 +1,35 @@
+#!name=央视
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partY/CCTV.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[Rule]
+DOMAIN,galaxy.bjcathay.com,REJECT
+DOMAIN,mdrecv.app.cntvwb.cn,REJECT
+DOMAIN,sdapprecv.app.cntvwb.cn,REJECT
+DOMAIN,vdapprecv.app.cntvwb.cn,REJECT
+DOMAIN-SUFFIX,a.cctv.com,REJECT
+DOMAIN-SUFFIX,ad.cctv.com,REJECT
+DOMAIN-SUFFIX,ad.cntv.cn,REJECT
+DOMAIN-SUFFIX,adguanggao.eee114.com,REJECT
+DOMAIN-SUFFIX,afp.qiyi.com,REJECT
+DOMAIN-SUFFIX,cctv.adsunion.com,REJECT
+DOMAIN-SUFFIX,d.cntv.cn,REJECT
+DOMAIN-SUFFIX,de.pandora.xiaomi.com,REJECT
+DOMAIN-SUFFIX,mishop.pandora.xiaomi.com,REJECT
+DOMAIN-SUFFIX,cws-cctv.conviva.com,REJECT
+DOMAIN-SUFFIX,mdrecv.app.cntvwb.cn,REJECT
+DOMAIN-SUFFIX,sdapprecv.app.cntvwb.cn,REJECT
+DOMAIN-SUFFIX,vdapprecv.app.cntvwb.cn,REJECT
+
+[Map Local]
+^https?:\/\/www\.cntv\.cn\/nettv\/adp\/ data-type=text data=" " status-code=200
+
+[MITM]
+hostname = %APPEND% www.cntv.cn
+

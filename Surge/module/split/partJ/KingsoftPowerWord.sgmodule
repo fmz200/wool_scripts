@@ -1,0 +1,33 @@
+#!name=金山词霸
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partJ/KingsoftPowerWord.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[Rule]
+DOMAIN,ad-stat.ksosoft.com,REJECT
+DOMAIN,img.auction-ads.wpscdn.cn,REJECT
+DOMAIN,counter.kingsoft.com,REJECT
+DOMAIN,counter.ksosoft.com,REJECT
+DOMAIN,minfo.wps.cn,REJECT
+DOMAIN,mobad.ijinshan.com,REJECT
+DOMAIN,ups.ksmobile.net,REJECT
+DOMAIN,ws.ksmobile.net,REJECT
+
+[URL Rewrite]
+^https?:\/\/dict-mobile\.iciba\.com\/interface\/index\.php\?.+(c=ad|collectFeedsAdShowCount|KSFeedsAdCardViewController) - reject
+^https?:\/\/mobile-pic\.cache\.iciba\.com\/feeds_ad\/ - reject
+^https?:\/\/.+?\.kingsoft-office-service\.com - reject
+
+[Map Local]
+^https?:\/\/service\.iciba\.com\/popo\/open\/screens\/v\d\?adjson data-type=text data=" " status-code=200
+
+^https?:\/\/\w+?\.kingsoft-office-service\.com\/ad data-type=text data=" " status-code=200
+
+[MITM]
+hostname = %APPEND% dict-mobile.iciba.com, mobile-pic.cache.iciba.com, service.iciba.com, *.kingsoft-office-service.com
+

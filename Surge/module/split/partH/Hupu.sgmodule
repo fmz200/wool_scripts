@@ -1,0 +1,33 @@
+#!name=虎扑
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partH/Hupu.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[Rule]
+DOMAIN,adx.hupu.com,REJECT
+DOMAIN,adx-api.hupu.com,REJECT
+DOMAIN,goblin.hupu.com,REJECT
+
+[URL Rewrite]
+^https?:\/\/games\.mobileapi\.hupu\.com\/.+?\/(interfaceAdMonitor|interfaceAd)\/ - reject
+^https?:\/\/games\.mobileapi\.hupu\.com\/.+?\/status\/init - reject
+^https?:\/\/games\.mobileapi\.hupu\.com\/\d\/(?:\d\.){2}\d\/status\/init - reject
+^https?:\/\/goblin\.hupu\.com\/.+\/interfaceAd\/getOther - reject
+
+[Map Local]
+^https?:\/\/games\.mobileapi\.hupu\.com\/.+?\/(search|interfaceAdMonitor|status|hupuBbsPm)/(hotkey|init|hupuBbsPm)\. data-type=tiny-gif status-code=200
+
+^https?:\/\/du\.hupucdn\.com\/\w+h\d{4} data-type=tiny-gif status-code=200
+
+^https?:\/\/i\d\.hoopchina\.com\.cn/blogfile\//d+\//d+\/BbsImg\.(?<=(big.(png|jpg)))$ data-type=tiny-gif status-code=200
+
+^https?:\/\/i1\.hoopchina\.com\.cn\/blogfile\/.+_\d{3}x\d{4} data-type=tiny-gif status-code=200
+
+[MITM]
+hostname = %APPEND% games.mobileapi.hupu.com, du.hupucdn.com, i*.hoopchina.com.cn, goblin.hupu.com
+

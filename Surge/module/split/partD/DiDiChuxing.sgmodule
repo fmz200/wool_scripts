@@ -1,0 +1,40 @@
+#!name=滴滴出行
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partD/DiDiChuxing.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#!arguments=didiiuxk_enable:true
+
+[Map Local]
+^https?:\/\/hd\.xiaojukeji\.com\/d data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[Script]
+滴滴出行 = type=http-response, pattern=^https?:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, timeout=60
+
+滴滴出行 = type=http-response, pattern=^https?:\/\/freight\.xiaojukeji\.com\/gateway, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, timeout=60
+
+滴滴出行 = type=http-response, pattern=^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/xpget, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, timeout=60
+
+滴滴出行 = type=http-response, pattern=^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, timeout=60
+
+滴滴出行 = type=http-response, pattern=^https?:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/other\/fast, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, timeout=60
+
+#http-response ^https?:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/core script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, timeout=60, tag=滴滴出行
+滴滴出行 = type=http-response, pattern=^https?:\/\/conf\.diditaxi\.com\.cn\/dynamic\/conf, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, timeout=60
+
+滴滴出行 = type=http-response, pattern=^https?:\/\/common\.diditaxi\.com\.cn\/common\/v\d\/usercenter\/me, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, timeout=60
+
+滴滴出行 = type=http-response, pattern=^https?:\/\/daijia\.kuaidadi\.com\/gateway, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, timeout=60
+
+滴滴出行 = type=http-response, pattern=^https?:\/\/daijia\.kuaidadi\.com:443\/gateway, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, timeout=60
+
+# 微信小程序个人中心净化 感谢【TEXAS】分享
+微信小程序个人中心净化 = type=http-response, pattern=^https?:\/\/common\.diditaxi\.com\.cn\/common\/v5, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, timeout=60
+
+[MITM]
+hostname = %APPEND% res.xiaojukeji.com, common.diditaxi.com.cn, hd.xiaojukeji.com, freight.xiaojukeji.com, daijia.kuaidadi.com, ct.xiaojukeji.com, conf.diditaxi.com.cn
+

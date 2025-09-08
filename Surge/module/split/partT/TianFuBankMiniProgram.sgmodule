@@ -1,0 +1,22 @@
+#!name=天府银行小程序
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partT/TianFuBankMiniProgram.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[Body Rewrite]
+http-response ^https?:\/\/chl\.tf\.cn\/channelmg\/sys\/socso\/order\/queryOrderInfo "imgUrl" response-body
+
+[Map Local]
+^https?:\/\/chl\.tf\.cn\/channelmg\/sys\/socso\/socsonew\/queryIsRealNameAdertInfo data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 首页弹窗广告
+^https?:\/\/wechat\.tf\.cn\/mini-financial\/model\/queryPopup data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% chl.tf.cn, wechat.tf.cn
+

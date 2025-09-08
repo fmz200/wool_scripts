@@ -1,0 +1,43 @@
+#!name=前程无忧 51Job
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partQ/51Job.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#!arguments=51job_enable:true,51job_enable:true
+
+[URL Rewrite]
+^https?:\/\/appapi\.51job(app)?\.com\/api\/market\/(adtrace|get_launch|get_prompt) - reject
+^https?:\/\/cupid\.51job(app)?\.com\/open\/index\/recommend-infos - reject
+# 去广告 (需卸载App重装) img01.51jobcdn.com
+^https:\/\/img01\.51jobcdn\.com\/im\/mkt/(?:tg/((19|20)\d{2})banner/(?!jcgz2/)|\d{4}/bd/\d{4}/).*\.jpg - reject
+# 开屏及营销广告
+^https?:\/\/appapi\.51job(app)?\.com\/api\/market\/(?>adtrace|get_launch|get_prompt) - reject
+# 顶部弹窗
+^https?:\/\/cupid\.51job(app)?\.com\/open\/guide\/home-page-top - reject
+# 首页右上角浮窗及右边浮标
+^https?:\/\/cupid\.51job(app)?\.com\/open\/user-task\/user\/task\/init - reject
+# 弹窗广告
+^https?:\/\/cupid\.51job(app)?\.com\/launch-hub\/open\/noauth\/popUp - reject
+
+[Map Local]
+# 屏蔽更新
+^https?:\/\/appapi\.51job(app)?\.com\/api\/util\/get_version data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/cupid\.51job(app)?\.com\/open\/noauth\/index\/last-version data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 底栏中央活动标
+^https?:\/\/cupid\.51job(app)?\.com\/open\/index\/notice-infos data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[Script]
+51job = type=http-response, pattern=^https?:\/\/cupid\.51job(app)?\.com\/open\/noauth\/recommend\/job-tab-dynamic, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/51job.js, requires-body=true, timeout=60
+
+# 我的页净化
+去哒 = type=http-response, pattern=^https?:\/\/cupid\.51job(app)?\.com\/open\/my-page\/, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/51job.js, requires-body=true, timeout=60
+
+[MITM]
+hostname = %APPEND% appapi.51job*.com, cupid.51job*.comhostname
+

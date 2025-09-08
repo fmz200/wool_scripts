@@ -1,0 +1,22 @@
+#!name=滴滴青桔
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partD/DiDiBike.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[Rule]
+#DOMAIN-KEYWORD, pt-starimg.didistatic.com, REJECT
+IP-CIDR,203.107.1.1/24,REJECT,no-resolve
+
+[Map Local]
+^https?:\/\/pt-starimg\.didistatic\.com\/static\/starimg\/node\/.*.(jpg|png|gif) data-type=text data=" " status-code=200
+
+^https?:\/\/omgup[0-9]{1}\.xiaojukeji\.com\/api data-type=text data=" " status-code=200
+
+[MITM]
+hostname = %APPEND% pt-starimg.didistatic.com, omgup*.xiaojukeji.com
+

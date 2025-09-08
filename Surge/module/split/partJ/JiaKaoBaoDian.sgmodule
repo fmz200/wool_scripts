@@ -1,0 +1,21 @@
+#!name=驾考宝典
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partJ/JiaKaoBaoDian.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[URL Rewrite]
+^https?:\/\/\w+\.kakamobi\.cn\/api\/open\/v\d\/advert-sdk\/ - reject
+
+[Map Local]
+^https?:\/\/789\.kakamobi\.cn\/.+adver data-type=tiny-gif status-code=200
+
+^https?:\/\/smart\.789\.image\.mucang\.cn\/advert data-type=tiny-gif status-code=200
+
+[MITM]
+hostname = %APPEND% *.kakamobi.cn, smart.789.image.mucang.cn
+

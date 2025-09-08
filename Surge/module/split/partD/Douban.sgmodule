@@ -1,0 +1,24 @@
+#!name=豆瓣
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partD/Douban.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[URL Rewrite]
+^https?:\/\/img\d\.doubanio\.com\/view\/dale-online\/dale_ad\/ - reject
+^https?:\/\/frodo\.douban\.com\/api\/v2\/movie\/banner - reject
+^https?:\/\/erebor\.douban\.com\/count\/\?ad= - reject
+
+[Map Local]
+# 如开启可自行添加主机名 img*.douban.com, frodo.douban.com, erebor.douban.com
+^https?:\/\/api\.douban\.com\/v\d\/app_ads\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/api\.douban\.com\/b.*\/common_ads\?.* data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% api.douban.com
+

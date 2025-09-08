@@ -1,0 +1,52 @@
+#!name=网易有道词典
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partW/NetEaseYoudaoDictionary.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#!arguments=whyiyzdccidm_enable:true
+
+[URL Rewrite]
+# 其他
+^https?:\/\/oimage([a-z])([0-9])\.ydstatic\.com\/.+adpublish - reject
+
+[Map Local]
+# 翻译广告
+^https?:\/\/dict\.youdao\.com\/course\/tab\/translateTab data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 首次查词弹窗
+^https?:\/\/api-overmind\.youdao\.com\/openapi\/get\/luna\/dict\/dict-mobile\/prod\/dictCommonConfig data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 首页弹窗
+^https?:\/\/cdke\.youdao\.com\/course3\/recommend\/dict\/startup data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 搜索预想
+^https?:\/\/dict\.youdao\.com\/commonsearch data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 会员优惠券弹窗
+^https?:\/\/dict\.youdao\.com\/vip\/activity\/couponinfo data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 首页左上角福利中心
+^https?:\/\/dict\.youdao\.com\/dictusertask\/system data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 会员界面横幅广告
+^https?:\/\/dictvip-business\.youdao\.com\/home\/ad data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/oimage\w\d\.ydstatic\.com\/image\?.+?=adpublish data-type=tiny-gif status-code=200
+
+^https?:\/\/dsp-impr2\.youdao\.com\/adload data-type=text data=" " status-code=200
+
+^https?:\/\/impservice\.dictapp\.youdao\.com\/imp\/request data-type=tiny-gif status-code=200
+
+^https?:\/\/oral\.youdao\.com\/oral\/adInfo data-type=tiny-gif status-code=200
+
+[Script]
+# 首页净化，学习Tab界面净化，首页听读训练净化
+网易有道词典 = type=http-response, pattern=^https?:\/\/dict\.youdao\.com\/(homepage\/promotion|course\/tab\/home|homepage\/tile), script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/youdao/dict-youdao-ad.js, requires-body=true, timeout=60
+
+[MITM]
+hostname = %APPEND% dict.youdao.com, api-overmind.youdao.com, cdke.youdao.com, dictvip-business.youdao.com, dsp-impr2.youdao.com, impservice.dictapp.youdao.com, oral.youdao.com, oimage*.ydstatic.com
+

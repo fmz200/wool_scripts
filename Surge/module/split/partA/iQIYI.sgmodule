@@ -1,0 +1,111 @@
+#!name=爱奇艺
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partA/iQIYI.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#!arguments=aiqiyi_enable:true
+
+[Rule]
+DOMAIN,api.iqiyi.com,REJECT
+DOMAIN,cr-status.iqiyi.com,REJECT
+DOMAIN,f74f7f7765f8a2f6.ngaa.net.cn,REJECT
+DOMAIN,ef-dongfeng.tanx.com,REJECT
+DOMAIN,iqiyim.adtrack.enlightent.cn,REJECT
+DOMAIN,dig.bdurl.net,REJECT
+DOMAIN,t7z.cupid.iqiyi.com,REJECT
+DOMAIN,t7z.cupid.ptqy.gitv.tv,REJECT
+DOMAIN-SUFFIX,cupid.iqiyi.com,REJECT
+DOMAIN-SUFFIX,t7z.cupid.iqiyi.com,REJECT
+DOMAIN-SUFFIX,static-s.iqiyi.com,REJECT
+DOMAIN-SUFFIX,a.ckm.iqiyi.com,REJECT
+DOMAIN-SUFFIX,ad.m.iqiyi.com,REJECT
+DOMAIN-SUFFIX,afp.iqiyi.com,REJECT
+DOMAIN-SUFFIX,api.cupid.iqiyi.com,REJECT
+DOMAIN-SUFFIX,api.cupid.qiyi.com,REJECT
+DOMAIN-SUFFIX,c.uaa.iqiyi.com,REJECT
+DOMAIN-SUFFIX,cloudpush.iqiyi.com,REJECT
+DOMAIN-SUFFIX,cm.passport.iqiyi.com,REJECT
+DOMAIN-SUFFIX,count.game.pps.tv,REJECT
+DOMAIN-SUFFIX,cupid.iqiyi.com,REJECT
+DOMAIN-SUFFIX,emoticon.sns.iqiyi.com,REJECT
+DOMAIN-SUFFIX,gamecenter.iqiyi.com,REJECT
+DOMAIN-SUFFIX,mbdlog.iqiyi.com,REJECT
+DOMAIN-SUFFIX,msg.iqiyi.com,REJECT
+DOMAIN-SUFFIX,msg.video.qiyi.com,REJECT
+DOMAIN-SUFFIX,msg2.video.qiyi.com,REJECT
+DOMAIN-SUFFIX,static.g.iqiyi.com,REJECT
+DOMAIN-SUFFIX,static.g.ppstream.com,REJECT
+DOMAIN-SUFFIX,store.iqiyi.com,REJECT
+DOMAIN-SUFFIX,tracker.sns.iqiyi.com,REJECT
+DOMAIN-SUFFIX,yuedu.iqiyi.com,REJECT
+DOMAIN-SUFFIX,msga.cupid.iqiyi.com,REJECT
+DOMAIN-SUFFIX,nl.notice.iqiyi.com,REJECT
+DOMAIN-SUFFIX,nl.rcd.iqiyi.com,REJECT
+DOMAIN-SUFFIX,notice.iqiyi.com,REJECT
+DOMAIN-SUFFIX,noxagile.duapp.com,REJECT
+DOMAIN-SUFFIX,paopao.iqiyi.com,REJECT
+DOMAIN-SUFFIX,policy.video.iqiyi.com,REJECT
+DOMAIN-SUFFIX,ifacelog.iqiyi.com,REJECT
+IP-CIDR,203.107.63.154/32,REJECT,no-resolve
+IP-CIDR,101.227.97.240/32,REJECT,no-resolve
+IP-CIDR,101.227.200.11/32,REJECT,no-resolve
+IP-CIDR,101.227.200.28/32,REJECT,no-resolve
+IP-CIDR,124.192.153.42/32,REJECT,no-resolve
+
+[Map Local]
+# 播放页开通会员提示
+^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v2\/show\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 播放页多余动效
+^https?:\/\/iface2\.iqiyi\.com\/ivos\/interact\/video\/data\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 播放页升级白金会员按钮
+^https?:\/\/iface2\.iqiyi\.com\/video\/3\.0\/v_interface_proxy\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 青少年弹窗
+^https?:\/\/iface2\.iqiyi\.com\/views_pop\/3\.0\/pop_control\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[Script]
+# 首页信息流广告
+爱奇艺首页信息流广告 = type=http-response, pattern=^https?:\/\/[\d\.]+\/3f1\/cards\.iqiyi\.com\/(views_home\/3\.0\/qy_home|waterfall\/3\.0\/feed)\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60
+
+爱奇艺首页信息流广告 = type=http-response, pattern=^https?:\/\/access\.if\.iqiyi\.com\/3f1\/cards\.iqiyi\.com\/(views_category\/3\.0\/category_home|views_home\/3\.0\/qy_home|waterfall\/3\.0\/feed)\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60
+
+爱奇艺首页信息流广告 = type=http-response, pattern=^https?:\/\/cards\.iqiyi\.com\/views_category\/3\.0\/(category_home|categorylib_content|film_hybrid)\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60
+
+爱奇艺首页信息流广告 = type=http-response, pattern=^https?:\/\/cards\.iqiyi\.com\/(views_home\/3\.0\/qy_home|waterfall\/3\.0\/feed)\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60
+
+# 播放详情页
+爱奇艺播放详情页广告 = type=http-response, pattern=^https?:\/\/cards\.iqiyi\.com\/views_plt\/3\.0\/player_tabs_v2\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60
+
+# 搜索页列表
+爱奇艺搜索页列表广告 = type=http-response, pattern=^https?:\/\/cards\.iqiyi\.com\/views_search\/3\.0\/(hot_query_)?search\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60
+
+# 评论区
+爱奇艺评论区 = type=http-response, pattern=^https?:\/\/comment-card\.iqiyi\.com\/views_comment\/3\.0\/long_video_comments\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60
+
+# 我的页面菜单
+爱奇艺我的页面菜单 = type=http-response, pattern=^https?:\/\/iface2\.iqiyi\.com\/aggregate\/3\.0\/getMyMenus\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60
+
+# 首页左上角天气
+爱奇艺首页左上角天气 = type=http-response, pattern=^https?:\/\/iface2\.iqiyi\.com\/control\/3\.0\/init_proxy\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60
+
+# 通用控制,各tab页二楼
+爱奇艺通用控制,各tab页二楼 = type=http-response, pattern=^https?:\/\/iface2\.iqiyi\.com\/fusion\/3\.0\/common_switch\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60
+
+# 底部tab,顶部tab
+爱奇艺底部tab,顶部tab = type=http-response, pattern=^https?:\/\/iface2\.iqiyi\.com\/views\/3\.0\/(bottom_theme|home_top_menu)\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60
+
+# 搜索框填充词
+爱奇艺搜索框填充词 = type=http-response, pattern=^https?:\/\/search\.video\.iqiyi\.com\/q\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60
+
+# 开屏广告,播放广告
+爱奇艺开屏广告,播放广告 = type=http-response, pattern=^https?:\/\/(kjp|t7z)\.cupid\.iqiyi\.com\/mixer\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60
+
+[MITM]
+hostname = %APPEND% -i.vip.iqiyi.com, *.iqiyi.com
+

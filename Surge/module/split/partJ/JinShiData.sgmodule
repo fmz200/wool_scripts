@@ -1,0 +1,17 @@
+#!name=金十数据
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partJ/JinShiData.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[URL Rewrite]
+# 开屏广告和应用内弹窗
+^https?:\/\/jad-api\.jin10\.com\/ad - reject
+
+[MITM]
+hostname = %APPEND% jad-api.jin10.com
+

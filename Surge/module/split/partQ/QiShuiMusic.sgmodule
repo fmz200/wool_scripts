@@ -1,0 +1,97 @@
+#!name=汽水音乐
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partQ/QiShuiMusic.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[Rule]
+AND,((DOMAIN-KEYWORD,api100-core-quic-),(DOMAIN-SUFFIX,amemv.com)),REJECT
+AND,((DOMAIN-KEYWORD,api100-normal-quic-),(DOMAIN-SUFFIX,amemv.com)),REJECT
+AND,((DOMAIN-KEYWORD,api100-normal-quic-aweme-),(DOMAIN-SUFFIX,amemv.com)),REJECT
+AND,((DOMAIN-KEYWORD,api100-quic-core-),(DOMAIN-SUFFIX,amemv.com)),REJECT
+AND,((DOMAIN-KEYWORD,api100-quic-normal-),(DOMAIN-SUFFIX,amemv.com)),REJECT
+AND,((DOMAIN-KEYWORD,frontier-aweme-),(AND,((OR,((DOMAIN-KEYWORD,-ipa.),(DOMAIN-KEYWORD,-ipainner.),(DOMAIN-KEYWORD,-origin.),(DOMAIN-KEYWORD,-ipainner-))),(OR,((DOMAIN-SUFFIX,snssdk.com),(DOMAIN-SUFFIX,amemv.com)))))),REJECT
+AND,((DOMAIN-KEYWORD,frontier100-aweme),(DOMAIN-SUFFIX,amemv.com)),REJECT
+AND,((DOMAIN-KEYWORD,ma5-normal-),(DOMAIN-SUFFIX,zijieapi.com)),REJECT
+AND,((DOMAIN-KEYWORD,polaris5-normal-),(DOMAIN-SUFFIX,zijieapi.com)),REJECT
+AND,((DOMAIN-KEYWORD,webcast100-ws-c-),(DOMAIN-SUFFIX,amemv.com)),REJECT
+AND,((DOMAIN-KEYWORD,tnc),(AND,((OR,((DOMAIN-KEYWORD,-bjlgy),(DOMAIN-KEYWORD,-alisc),(DOMAIN-KEYWORD,-aliec),(DOMAIN-KEYWORD,-alisg))),(OR,((DOMAIN-SUFFIX,snssdk.com),(DOMAIN-SUFFIX,isnssdk.com),(DOMAIN-SUFFIX,toutiaoapi.com),(DOMAIN-SUFFIX,bytedance.com),(DOMAIN-SUFFIX,zijieapi.com)))))),REJECT
+DOMAIN,frontier-aweme-hl.snssdk.com,REJECT
+DOMAIN,frontier-aweme.snssdk.com,REJECT
+DOMAIN,frontier-quic-test.bytedance.com,REJECT
+AND,((IP-CIDR,110.249.199.75/32,no-resolve),(DEST-PORT,6443)),REJECT
+AND,((IP-CIDR,111.225.147.191/32,no-resolve),(DEST-PORT,6443)),REJECT
+AND,((IP-CIDR,111.63.61.101/32,no-resolve),(DEST-PORT,6443)),REJECT
+AND,((IP-CIDR,220.243.141.0/32,no-resolve),(DEST-PORT,6443)),REJECT
+AND,((DOMAIN-KEYWORD,-ad-),(DOMAIN-SUFFIX,byteimg.com)),REJECT
+AND,((DOMAIN-KEYWORD,-ttam-),(DOMAIN-SUFFIX,ibyteimg.com)),REJECT
+AND,((DOMAIN-KEYWORD,ssdk-),(DOMAIN-SUFFIX,pangle.io)),REJECT
+AND,((DOMAIN-KEYWORD,pangolin),(DOMAIN-SUFFIX,sgsnssdk.com)),REJECT
+AND,((DOMAIN-KEYWORD,lf),(DOMAIN-KEYWORD,-short.bytetos.com)),REJECT
+AND,((DOMAIN-KEYWORD,v),(DOMAIN-KEYWORD,-be-pack.pglstatp-toutiao.com)),REJECT
+AND,((DOMAIN-KEYWORD,sf),(DOMAIN-KEYWORD,-be-pack.pglstatp-toutiao.com)),REJECT
+AND,((DOMAIN-KEYWORD,s),(DOMAIN-KEYWORD,-fe-scm.pglstatp-toutiao.com)),REJECT
+AND,((DOMAIN-KEYWORD,sf),(DOMAIN-KEYWORD,-ttcdn-tos.pstatp.com)),REJECT
+AND,((DOMAIN-KEYWORD,sf),(DOMAIN-KEYWORD,-static.i18n-pglstatp.com)),REJECT
+AND,((DOMAIN-KEYWORD,if),(DOMAIN-KEYWORD,-analytics.bytescm.com)),REJECT
+AND,((DOMAIN-KEYWORD,lf),(DOMAIN-KEYWORD,-analytics.bytescm.com)),REJECT
+AND,((DOMAIN-KEYWORD,lf),(DOMAIN-KEYWORD,-analytics.bytescm.com)),REJECT
+AND,((DOMAIN-KEYWORD,ads),(DOMAIN-KEYWORD,normal),(DOMAIN-SUFFIX,zijieapi.com)),REJECT
+AND,((DOMAIN-KEYWORD,api),(DOMAIN-KEYWORD,-access-),(DOMAIN-SUFFIX,pangle.io)),REJECT
+AND,((DOMAIN-KEYWORD,api),(DOMAIN-KEYWORD,-log-),(DOMAIN-SUFFIX,pangle.io)),REJECT
+AND,((DOMAIN-KEYWORD,api),(DOMAIN-KEYWORD,-dual-event-),(DOMAIN-SUFFIX,pangle.io)),REJECT
+AND,((DOMAIN-KEYWORD,api),(DOMAIN-KEYWORD,pangolin),(DOMAIN-SUFFIX,sgsnssdk.com)),REJECT
+AND,((DOMAIN-KEYWORD,ads),(DOMAIN-KEYWORD,-normal-lq),(DOMAIN-SUFFIX,zijieapi.com)),REJECT
+URL-REGEX,"^http:\/\/p\d+-be-pack-sign\.pglstatp-toutiao\.com\/(ad-app-package|web\.business\.image)\/",REJECT
+DOMAIN,mon.zijieapi.com,REJECT
+DOMAIN,i.snssdk.com,REJECT
+DOMAIN,is.snssdk.com,REJECT
+DOMAIN,bds.snssdk.com,REJECT
+DOMAIN,dm.bytedance.com,REJECT
+DOMAIN,dm.pstatp.com,REJECT
+DOMAIN,dm.toutiao.com,REJECT
+DOMAIN,log.snssdk.com,REJECT
+DOMAIN,s3a.pstatp.com,REJECT
+DOMAIN,sdfp.snssdk.com,REJECT
+DOMAIN,tosv.boe.byted.org,REJECT
+DOMAIN,tosv.byted.org,REJECT
+DOMAIN,extlog.snssdk.com,REJECT
+DOMAIN,mssdk-bu.bytedance.com,REJECT
+DOMAIN,toblog.ctobsnssdk.com,REJECT
+DOMAIN,mssdk.volces.com,REJECT
+DOMAIN,pangolin.snssdk.com,REJECT
+DOMAIN,gromore.pangolin-sdk-toutiao.com,REJECT
+DOMAIN-KEYWORD,-ad-sign.byteimg.com,REJECT
+# DOMAIN-KEYWORD, api-access.pangolin-sdk-toutiao, REJECT // 被复写替代
+DOMAIN-KEYWORD,log-api.pangolin-sdk-toutiao,REJECT
+DOMAIN-KEYWORD,-ad.byteoversea.com,REJECT
+DOMAIN-KEYWORD,video-cn.snssdk.com,REJECT
+DOMAIN-KEYWORD,asiad.byteactivity,REJECT
+
+[URL Rewrite]
+# 字节跳动广告
+^https:\/\/ether-pack\.pangolin-sdk-toutiao\.com\/union\/endcard\/ - reject
+^https:\/\/api-access\.pangolin-sdk-toutiao\d?\.com\/api\/ad\/ - reject
+^https:\/\/sf\d+-fe-tos\.pglstatp-toutiao\.com\/obj\/ad-pattern\/ - reject
+^https:\/\/lf-cdn-tos\.bytescm\.com\/obj\/static\/ad\/ - reject
+
+[Body Rewrite]
+http-response-jq ^https:\/\/beta-luna\.douyin\.com\/luna\/card\? 'if (getpath(["card_items",0]) | has("priority_display")) then (setpath(["card_items",0,"priority_display"]; false)) else . end'
+http-response-jq ^https:\/\/beta-luna\.douyin\.com\/luna\/card\? 'if (getpath(["card_items",0]) | has("is_show")) then (setpath(["card_items",0,"is_show"]; false)) else . end'
+http-response-jq ^https:\/\/beta-luna\.douyin\.com\/luna\/card\? 'if (getpath([]) | has("preview_guide")) then (setpath(["preview_guide"]; null)) else . end'
+http-response-jq ^https:\/\/beta-luna\.douyin\.com\/luna\/more-panel\? 'delpaths([["blocks",1]])'
+
+[Map Local]
+# 发现页面 正在直播
+^https:\/\/webcast-open\.douyin\.com\/webcast\/openapi\/feed\/\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 邀请开通会员弹窗
+^https:\/\/beta-luna\.douyin\.com\/luna\/commerce\/v2\/commerce_info\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% webcast-open.douyin.com, beta-luna.douyin.com, ether-pack.pangolin-sdk-toutiao.com, api-access.pangolin-sdk-toutiao?.com, sf*-fe-tos.pglstatp-toutiao.com, lf-cdn-tos.bytescm.com
+

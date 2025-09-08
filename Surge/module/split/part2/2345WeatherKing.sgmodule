@@ -1,0 +1,17 @@
+#!name=2345天气王
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/part2/2345WeatherKing.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[Map Local]
+# 底下百家号广告 感谢【 🐈‍⬛👮】分享
+^http?:\/\/tianqi\.2345\.com\/api\/content\/getContentFeeds\.php data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% tianqi.2345.com
+

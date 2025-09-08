@@ -1,0 +1,31 @@
+#!name=闪动校园
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partS/ShanDongXiaoYuan.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[Map Local]
+# 去除ai视频
+^https:\/\/api\.huachenjie\.com\/run-front\/ai\/getAICategory data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 去除顶部横幅
+^https:\/\/api\.huachenjie\.com\/run-front\/home\/sports\/getPopup data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 去除首页广告
+^https:\/\/api\.huachenjie\.com\/run-front\/ad data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 去除“我”页面下方福袋
+^http:\/\/ad\.shunchangzhixing\.com\/getAd data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 去除开屏广告
+^https:\/\/open\.e\.kuaishou\.cn\/rest\/e\/v3\/open data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/zlsdk\.1rtb\.net\/sdk\/req_ad\?sdk_version=\d+\.\d+\.\d+\.\d+&device_os=iOS&accept_ad_type=\d+&app_id=\d+&pid=\d+&sdk_version_code=\d+ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% api.huachenjie.com, open.e.kuaishou.cn, ad.shunchangzhixing.com, zlsdk.1rtb.net
+

@@ -1,0 +1,25 @@
+#!name=携程
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partX/Ctrip.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[URL Rewrite]
+# 开屏去广告
+^https?:\/\/ma-adx\.ctrip\.com\/_ma\.gif - reject
+^https?:\/\/mbd\.baidu\.com\/newspage\/api\/getmobads\?page\=landingshare - reject
+
+[Map Local]
+# 更新弹窗 APP降级8.40.0版本搭配去开屏广告规则，目前没有出现MITM失败等其他问题 如开启可自行添加主机名 m.ctrip.com
+^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/[0-9]{5}\/json\/getTimeZoneServerIpList\?__gw_os=IOS data-type=text data=" " status-code=200
+
+# 8.47.0以上版本会有部分图片加载不出来
+^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/13916\/json\/tripAds data-type=text data=" " status-code=200
+
+[MITM]
+hostname = %APPEND% m.ctrip.com, ma-adx.ctrip.com, mbd.baidu.com
+

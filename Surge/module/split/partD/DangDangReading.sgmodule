@@ -1,0 +1,19 @@
+#!name=当当阅读
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partD/DangDangReading.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[URL Rewrite]
+^https?:\/\/e\.dangdang\.com\/media\/api.+\?action=getDeviceStartPage - reject
+^https?:\/\/e\.dangdang\.com\/.+?getDeviceStartPage - reject
+^https?:\/\/api\.dangdang\.com\/mapi\d\/mobile\/init - reject
+^https?:\/\/mapi\.dangdang\.com\/index\.php\?action=init - reject
+
+[MITM]
+hostname = %APPEND% e.dangdang.com, api.dangdang.com, mapi.dangdang.com
+

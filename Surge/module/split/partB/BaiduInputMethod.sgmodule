@@ -1,0 +1,34 @@
+#!name=百度输入法
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partB/BaiduInputMethod.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[URL Rewrite]
+^https?:\/\/r6\.mo\.baidu\.com\/res\/file/advertisement\/files\/.+\.jpg - reject
+^https?:\/\/res\.mi\.baidu\.com\/imeres\/ime-res\/advertisement\/files\/.+\.jpg - reject
+^https?:\/\/mime\.baidu\.com\/v5\/activity\/advertisementnonrealtime - reject
+^https?:\/\/mime\.baidu\.com\/v5\/start_screen_ads\/list - reject
+^https?:\/\/mime\.baidu\.com\/v5\/hotpatch\/check\?hotpatch - reject
+
+[Map Local]
+# 百度输入法开屏
+^https?:\/\/mime\.baidu\.com\/v5\/start_screen_ads/list data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 应用内灵感语录 输入页面推荐里语录
+^https?:\/\/mime\.baidu\.com\/sapi\/v1\/lccorpus\/(applist|pannellist) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 输入法点击图标
+^https?:\/\/mime\.baidu\.com\/sapi\/v1\/circle\/joinedlist data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/mime\.baidu\.com\/commer\/pocket_api\/enterprise_list data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/mbd\.baidu\.com\/ccs\/v1\/start\/confsync\?appname=baidu_input data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% r6.mo.baidu.com, res.mi.baidu.com, mime.baidu.com, mbd.baidu.com
+

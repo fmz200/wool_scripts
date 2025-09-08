@@ -1,0 +1,29 @@
+#!name=波点音乐
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partB/BoDianMusic.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[Map Local]
+# 开屏广告 感谢【林夕】分享
+^https?:\/\/bd-api\.kuwo\.cn\/api\/service\/finds\/module\?moduleId data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/bd-api\.kuwo\.cn\/api\/service\/banner\/myPage\?uid data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/bd-api\.kuwo\.cn\/api\/play\/listening\/entrance\/music\?musicId data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/h5app\.kuwo\.cn\/m\/kwtemplatePage\/index\.html\?id=1157&app=bodianhdzx data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/h5app\.kuwo\.cn\/m\/bdvipact2205\/index\.html\?fromsrc=huodong data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/bodianimgcdn\.kuwo\.cn\/images\/0e83c1821cd2681de08e20bec73d1e75 data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/bodianimgcdn\.kuwo\.cn\/images\/198c0b313fe9e53b03240c7b30b4acc9 data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% bd-api.kuwo.cn, h5app.kuwo.cn, bodianimgcdn.kuwo.cn
+

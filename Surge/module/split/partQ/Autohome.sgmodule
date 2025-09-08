@@ -1,0 +1,32 @@
+#!name=汽车之家
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partQ/Autohome.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[Rule]
+DOMAIN-KEYWORD,adm3.autoimg.cn,REJECT
+DOMAIN-KEYWORD,collectionpv.che168.com,REJECT
+DOMAIN-KEYWORD,adproxy.autohome.com,REJECT
+DOMAIN-KEYWORD,applogapi.autohome.com,REJECT
+DOMAIN,adproxy.autohome.com.cn,REJECT
+DOMAIN,rd.autohome.com.cn,REJECT
+DOMAIN,al.autohome.com.cn,REJECT
+DOMAIN,applogapi.autohome.com.cn,REJECT
+DOMAIN,adm0.autoimg.cn,REJECT
+DOMAIN,adm1.autoimg.cn,REJECT
+DOMAIN,adm2.autoimg.cn,REJECT
+DOMAIN,adm3.autoimg.cn,REJECT
+
+[Map Local]
+^https?:\/\/adproxy\.autohome\.com\.cn\/AdvertiseService\/ data-type=tiny-gif status-code=200
+
+^https?:\/\/app2\.autoimg\.cn\/apppdfs\/ data-type=tiny-gif status-code=200
+
+[MITM]
+hostname = %APPEND% adproxy.autohome.com.cn, app2.autoimg.cn
+

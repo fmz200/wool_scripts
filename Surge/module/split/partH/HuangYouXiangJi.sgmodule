@@ -1,0 +1,22 @@
+#!name=黄油相机
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partH/HuangYouXiangJi.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[Rule]
+# 开屏广告 感谢#Dragon分享, REJECT
+DOMAIN-SUFFIX,anythinktech.com,REJECT
+DOMAIN-SUFFIX,adkwai.com,REJECT
+DOMAIN-SUFFIX,mob.com,REJECT
+
+[URL Rewrite]
+^https?:\/\/api4\.bybutter\.com\/v\d\/app\/placements\/\d\/advertisements - reject
+
+[MITM]
+hostname = %APPEND% api4.bybutter.com
+

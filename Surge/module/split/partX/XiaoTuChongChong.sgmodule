@@ -1,0 +1,21 @@
+#!name=小兔充充
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partX/XiaoTuChongChong.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#!arguments=xntuisis_enable:true
+
+[URL Rewrite]
+# 小程序净化
+^https?:\/\/ad\.xiaotucc\.com\/advert - reject
+
+[Script]
+小兔充充 = type=http-response, pattern=^https?:\/\/mapi\.xiaotucc\.com\/(mall\/main|main_page\/index\/getActivity), script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaotucc.js, requires-body=true, timeout=60
+
+[MITM]
+hostname = %APPEND% ad.xiaotucc.com, mapi.xiaotucc.com
+

@@ -1,0 +1,28 @@
+#!name=买单吧
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partM/MaiDanBa.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#!arguments=mddjba_enable:true
+
+[Rule]
+DOMAIN-KEYWORD,c-hzgt2.getui.com,REJECT
+
+[URL Rewrite]
+^https?:\/\/creditcard\.bankcomm\.(com|cn)\/tfimg\/public00\/M00\/[a-zA-Z0-9]{2}\/[a-zA-Z0-9]{2}\/[a-zA-Z0-9-]{30}\.(jpg|jpeg) - reject
+
+[Map Local]
+^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/mappweb_interface\/common\/(qryPopAds|qryLaunchAds)\.do data-type=text data=" " status-code=200
+
+^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/mappweb_interaction\/appInfo\/appNewestVersion data-type=text data=" " status-code=200
+
+[Script]
+mdb = type=http-response, pattern=^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/rcg\/index\.html\?callbackurl=rcg\/index\.html&orclogin=1&, script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/mdb.js, requires-body=true, timeout=60
+
+[MITM]
+hostname = %APPEND% creditcardapp.bankcomm.cn, creditcardapp.bankcomm.com, creditcard.bankcomm.cn, creditcard.bankcomm.com
+

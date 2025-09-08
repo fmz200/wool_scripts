@@ -1,0 +1,46 @@
+#!name=搜狐
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partS/Sohu.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[Rule]
+DOMAIN-SUFFIX,ad.sohu.com,REJECT
+DOMAIN-SUFFIX,ads.sohu.com,REJECT
+DOMAIN-SUFFIX,aty.sohu.com,REJECT
+DOMAIN,hui.sohu.com,REJECT
+
+[URL Rewrite]
+^https?:\/\/(api|api-bk\d+)\.tv\.sohu\.com\/agg\/api\/app\/config\/bootstrap - reject
+^https?:\/\/pic\.k\.sohu\.com\/img\d\/wb\/tj\/ - reject
+
+[Map Local]
+^https?:\/\/api\.k\.sohu\.com\/api\/news\/adsense data-type=text data=" " status-code=200
+
+^https?:\/\/pic\.k\.sohu\.com\/img8\/wb\/tj\/ data-type=text data=" " status-code=200
+
+^https?:\/\/s1\.api\.tv\.itc\.cn\/v4\/mobile\/control\/switch\.json data-type=text data=" " status-code=200
+
+^https?:\/\/agn\.aty\.sohu\.com\/m? data-type=tiny-gif status-code=200
+
+^https?:\/\/api\.k\.sohu\.com\/api\/channel\/ad\/ data-type=tiny-gif status-code=200
+
+^https?:\/\/hui\.sohu\.com\/predownload2\/? data-type=tiny-gif status-code=200
+
+^https?:\/\/m\.aty\.sohu\.com\/openload? data-type=tiny-gif status-code=200
+
+^https?:\/\/mmg\.aty\.sohu\.com\/mqs? data-type=tiny-gif status-code=200
+
+^https?:\/\/mmg\.aty\.sohu\.com\/pvlog? data-type=tiny-gif status-code=200
+
+^https?:\/\/photocdn\.sohu\.com\/tvmobilemvms data-type=tiny-gif status-code=200
+
+^https?:\/\/s\.go\.sohu\.com\/adgtr\/\?gbcode= data-type=tiny-gif status-code=200
+
+[MITM]
+hostname = %APPEND% *.souhu.com
+

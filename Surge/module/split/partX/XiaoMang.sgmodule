@@ -1,0 +1,30 @@
+#!name=小芒
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partX/XiaoMang.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#!arguments=xnmh_enable:true
+
+[Map Local]
+# 我的页面-猜你喜欢
+^https:\/\/mgesq\.api\.mgtv\.com\/v2\/goods\/guess_you_like data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 我的页面-
+https://mgesq.api.mgtv.com/v2/user/center/icon data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 搜索排行榜单
+^https:\/\/mgesq\.api\.mgtv\.com\/search\/goods\/rank data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 底部按钮、我的页面左上角
+^https:\/\/mgesq\.api\.mgtv\.com\/user\/center\/config data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[Script]
+小芒APP主页广告 = type=http-response, pattern=https://mgesq.api.mgtv.com/dsl/index.+, script-path=https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/AdBlock/xmApp/xmApp.js, requires-body=true, timeout=60
+
+[MITM]
+hostname = %APPEND% mgesq.api.mgtv.com, *.hitv.com
+

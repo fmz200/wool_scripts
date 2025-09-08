@@ -1,0 +1,186 @@
+#!name=百度
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partB/Baidu.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[Rule]
+DOMAIN-SUFFIX,duapps.com,REJECT
+DOMAIN-SUFFIX,cpro.baidu.com,REJECT
+DOMAIN-SUFFIX,pos.baidu.com,REJECT
+DOMAIN,afd.baidu.com,REJECT
+DOMAIN,als.baidu.com,REJECT
+DOMAIN,duclick.baidu.com,REJECT
+DOMAIN,mobads.baidu.com,REJECT
+DOMAIN,mobads-logs.baidu.com,REJECT
+DOMAIN,nadvideo2.baidu.com,REJECT
+DOMAIN,nsclick.baidu.com,REJECT
+DOMAIN-SUFFIX,bce.baidu.com,REJECT
+DOMAIN-SUFFIX,bar.baidu.com,REJECT
+DOMAIN-SUFFIX,baiduyubaidu.com,REJECT
+DOMAIN-SUFFIX,baidutv.baidu.com,REJECT
+DOMAIN-SUFFIX,baichuan.baidu.com,REJECT
+DOMAIN-SUFFIX,appc.baidu.com,REJECT
+DOMAIN-SUFFIX,anquan.baidu.com,REJECT
+DOMAIN-SUFFIX,adscdn.baidu.com,REJECT
+DOMAIN-SUFFIX,adm.baidu.com,REJECT
+DOMAIN-SUFFIX,ad.player.baidu.com,REJECT
+DOMAIN-SUFFIX,a.baidu.com,REJECT
+DOMAIN-SUFFIX,antivirus.baidu.com,REJECT
+DOMAIN-SUFFIX,baifen.music.baidu.com,REJECT
+DOMAIN-SUFFIX,banlv.baidu.com,REJECT
+DOMAIN-SUFFIX,cm.baidu.com,REJECT
+DOMAIN-SUFFIX,cpro.zhidao.baidu.com,REJECT
+DOMAIN-SUFFIX,cleaner.baidu.com,REJECT
+DOMAIN-SUFFIX,cjhq.baidu.com,REJECT
+DOMAIN-SUFFIX,cb.baidu.com,REJECT
+DOMAIN-SUFFIX,c.baidu.com,REJECT
+DOMAIN-SUFFIX,btlaunch.baidu.com,REJECT
+DOMAIN-SUFFIX,bdplus.baidu.com,REJECT
+DOMAIN-SUFFIX,cbjs.baidu.com,REJECT
+DOMAIN-SUFFIX,cpro2.baidu.com,REJECT
+DOMAIN-SUFFIX,cpu-admin.baidu.com,REJECT
+DOMAIN-SUFFIX,10086.cn.baidu.cdn.yiwk.com,REJECT
+DOMAIN-SUFFIX,360baidus.com,REJECT
+DOMAIN-SUFFIX,app.ibaiducdn.com,REJECT
+DOMAIN-SUFFIX,baidu.cybcyw.com,REJECT
+DOMAIN-SUFFIX,baidu.dsp.tansuotv.com,REJECT
+DOMAIN-SUFFIX,baidu.greenxf.cn,REJECT
+DOMAIN-SUFFIX,baidu.jz5u.net,REJECT
+DOMAIN-SUFFIX,baiduace.com,REJECT
+DOMAIN-SUFFIX,baidujs.cnys.com,REJECT
+DOMAIN-SUFFIX,baidulao.com,REJECT
+DOMAIN-SUFFIX,baidut.github.io,REJECT
+DOMAIN-SUFFIX,baidu-union-js.xiachufang.com,REJECT
+DOMAIN-SUFFIX,baidu-union-pos.xiachufang.com,REJECT
+DOMAIN-SUFFIX,baiduzhidahao.cc,REJECT
+DOMAIN-SUFFIX,cpro.baidu.cn,REJECT
+DOMAIN-SUFFIX,crs.baidu.com,REJECT
+DOMAIN-SUFFIX,datax.baidu.com,REJECT
+DOMAIN-SUFFIX,dl.client.baidu.com,REJECT
+DOMAIN-SUFFIX,dl.ops.baidu.com,REJECT
+DOMAIN-SUFFIX,dl1sw.baidu.com,REJECT
+DOMAIN-SUFFIX,dl2.bav.baidu.com,REJECT
+DOMAIN-SUFFIX,dlsw.baidu.com,REJECT
+DOMAIN-SUFFIX,dlsw.br.baidu.com,REJECT
+DOMAIN-SUFFIX,dl-vip.bav.baidu.com,REJECT
+DOMAIN-SUFFIX,dl-vip.pcfaster.baidu.co.th,REJECT
+DOMAIN-SUFFIX,download.bav.baidu.com,REJECT
+DOMAIN-SUFFIX,download.sd.baidu.com,REJECT
+DOMAIN-SUFFIX,drmcmm.baidu.com,REJECT
+DOMAIN-SUFFIX,duiwai.baidu.com,REJECT
+DOMAIN-SUFFIX,dxp.baidu.com,REJECT
+DOMAIN-SUFFIX,dzl.baidu.com,REJECT
+DOMAIN-SUFFIX,e.baidu.com,REJECT
+DOMAIN-SUFFIX,eclick.baidu.com,REJECT
+DOMAIN-SUFFIX,eiv.baidu.com,REJECT
+DOMAIN-SUFFIX,em.baidu.com,REJECT
+DOMAIN-SUFFIX,entry.baidu.com,REJECT
+DOMAIN-SUFFIX,ers.baidu.com,REJECT
+DOMAIN-SUFFIX,fclick.baidu.com,REJECT
+DOMAIN-SUFFIX,feed.baidu.com,REJECT
+DOMAIN-SUFFIX,fexclick.baidu.com,REJECT
+DOMAIN-SUFFIX,g.baidu.com,REJECT
+DOMAIN-SUFFIX,gimg.baidu.com,REJECT
+DOMAIN-SUFFIX,guanjia.baidu.com,REJECT
+DOMAIN-SUFFIX,hc.baidu.com,REJECT
+DOMAIN-SUFFIX,hdj.baidu.com,REJECT
+DOMAIN-SUFFIX,hpd.baidu.com,REJECT
+DOMAIN-SUFFIX,idm-su.baidu.com,REJECT
+DOMAIN-SUFFIX,iebar.baidu.com,REJECT
+DOMAIN-SUFFIX,ikcode.baidu.com,REJECT
+DOMAIN-SUFFIX,iwanad.baidu.com,REJECT
+DOMAIN-SUFFIX,j.br.baidu.com,REJECT
+DOMAIN-SUFFIX,jb.mbaidu.top,REJECT
+DOMAIN-SUFFIX,js.mbaidu.top,REJECT
+DOMAIN-SUFFIX,kstj.baidu.com,REJECT
+DOMAIN-SUFFIX,m.baidu.com.yiqisee.cn,REJECT
+DOMAIN-SUFFIX,m.baidu.com.zhiduo.org,REJECT
+DOMAIN-SUFFIX,m1.baidu.com,REJECT
+DOMAIN-SUFFIX,ma.baidu.com,REJECT
+DOMAIN-SUFFIX,mpro.baidu.com,REJECT
+DOMAIN-SUFFIX,msite.baidu.com,REJECT
+DOMAIN-SUFFIX,mssp.baidu.com,REJECT
+DOMAIN-SUFFIX,mtj.baidu.com,REJECT
+DOMAIN-SUFFIX,neirong.baidu.com,REJECT
+DOMAIN-SUFFIX,nlog.baidu.com,REJECT
+DOMAIN-SUFFIX,nsclickvideo.baidu.com,REJECT
+DOMAIN-SUFFIX,openrcv.baidu.com,REJECT
+DOMAIN-SUFFIX,paimgcdn.baidu.com,REJECT
+DOMAIN-SUFFIX,pc.videoclick.baidu.com,REJECT
+DOMAIN-SUFFIX,push.zhanzhang.baidu.com,REJECT
+DOMAIN-SUFFIX,qianclick.baidu.com,REJECT
+DOMAIN-SUFFIX,release.baidu.com,REJECT
+DOMAIN-SUFFIX,river.zhidao.baidu.com,REJECT
+DOMAIN-SUFFIX,rj.baidu.com,REJECT
+DOMAIN-SUFFIX,rplog.baidu.com,REJECT
+DOMAIN-SUFFIX,s.baidu.com,REJECT
+DOMAIN-SUFFIX,sclick.baidu.com,REJECT
+DOMAIN-SUFFIX,sestat.baidu.com,REJECT
+DOMAIN-SUFFIX,shadu.baidu.com,REJECT
+DOMAIN-SUFFIX,sobar.baidu.com,REJECT
+DOMAIN-SUFFIX,sobartop.baidu.com,REJECT
+DOMAIN-SUFFIX,spcode.baidu.com,REJECT
+DOMAIN-SUFFIX,tk.baidu.com,REJECT
+DOMAIN-SUFFIX,tkweb.baidu.com,REJECT
+DOMAIN-SUFFIX,toolbar.baidu.com,REJECT
+DOMAIN-SUFFIX,tuijian.baidu.com,REJECT
+DOMAIN-SUFFIX,tuisong.baidu.com,REJECT
+DOMAIN-SUFFIX,ucstat.baidu.com,REJECT
+DOMAIN-SUFFIX,ulic.baidu.com,REJECT
+DOMAIN-SUFFIX,ulog.imap.baidu.com,REJECT
+DOMAIN-SUFFIX,union.baidu.com,REJECT
+DOMAIN-SUFFIX,union.baidustatic.guannin.com,REJECT
+DOMAIN-SUFFIX,unionimage.baidu.com,REJECT
+DOMAIN-SUFFIX,utility.baidu.com,REJECT
+DOMAIN-SUFFIX,utk.baidu.com,REJECT
+DOMAIN-SUFFIX,videopush.baidu.com,REJECT
+DOMAIN-SUFFIX,w.gdown.baidu.com,REJECT
+DOMAIN-SUFFIX,w.x.baidu.com,REJECT
+DOMAIN-SUFFIX,wangmeng.baidu.com,REJECT
+DOMAIN-SUFFIX,weishi.baidu.com,REJECT
+DOMAIN-SUFFIX,wisepush.video.baidu.com,REJECT
+DOMAIN-SUFFIX,wm.baidu.com,REJECT
+DOMAIN-SUFFIX,yingxiao.baidu.com,REJECT
+DOMAIN-SUFFIX,znsv.baidu.com,REJECT
+DOMAIN-SUFFIX,baidustatic.com,REJECT
+DOMAIN-SUFFIX,als.baidu.com,REJECT
+DOMAIN-SUFFIX,duclick.baidu.com,REJECT
+DOMAIN-SUFFIX,hm.baidu.com,REJECT
+DOMAIN-SUFFIX,hmma.baidu.com,REJECT
+DOMAIN-SUFFIX,mobads.baidu.com,REJECT
+DOMAIN-SUFFIX,mobads-logs.baidu.com,REJECT
+DOMAIN-SUFFIX,nsclick.baidu.com,REJECT
+DOMAIN,hm.baidu.com,REJECT
+DOMAIN,hmma.baidu.com,REJECT
+
+[URL Rewrite]
+^https?:\/\/fcvbjbcebos\.baidu\.com\/.+.mp4 - reject
+^https?:\/\/cover\.baidu\.com\/cover\/page\/dspSwitchAds\/ - reject
+^https?:\/\/baichuan\.baidu\.com\/rs\/adpmobile\/launch - reject
+^https?:\/\/afd\.baidu\.com\/afd\/entry - reject
+^https?:\/\/als\.baidu\.com\/clog\/clog - reject
+^https?:\/\/mobads\.baidu\.com\/cpro\/ui\/mads.+ - reject
+^https?:\/\/log.+?baidu\.com - reject
+^https?:\/\/www.baidu.com\/?action=static&ms=1&version=css_page_2@0.*? - reject
+
+[Map Local]
+^https?:\/\/fcvbjbcebos\.baidu\.com\/.+?\.mp4 data-type=tiny-gif status-code=200
+
+^https?:\/\/api\d\.tuisong\.baidu\.com data-type=tiny-gif status-code=200
+
+^https?:\/\/issuecdn\.baidupcs\.com\/issue\/netdisk\/guanggao\/ data-type=text data=" " status-code=200
+
+^https?:\/\/[\s\S]*\.baidu\.com/.*?ad[xs]\.php data-type=tiny-gif status-code=200
+
+^https?:\/\/t\d{2}\.baidu\.com data-type=tiny-gif status-code=200
+
+^https?:\/\/sa\d\.tuisong\.baidu\.com data-type=tiny-gif status-code=200
+
+[MITM]
+hostname = %APPEND% www.baidu.com, fcvbjbcebos.baidu.com, cover.baidu.com, baichuan.baidu.com, api*.tuisong.baidu.com, afd.baidu.com, mobads.baidu.com, issuecdn.baidupcs.com, update.pan.baidu.com, sa*.tuisong.baidu.com, m.baidu.com, sofire.baidu.com
+

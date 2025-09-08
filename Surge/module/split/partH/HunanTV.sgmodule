@@ -1,0 +1,23 @@
+#!name=湖南卫视
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partH/HunanTV.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[Rule]
+DOMAIN-SUFFIX,da.hunantv.com,REJECT
+DOMAIN-SUFFIX,log.hunantv.com,REJECT
+DOMAIN-SUFFIX,v2.hunantv.com,REJECT
+DOMAIN-SUFFIX,click.hunantv.com,REJECT
+DOMAIN-SUFFIX,mp4.res.hunantv.com,REJECT
+DOMAIN-SUFFIX,res.hunantv.com,REJECT
+DOMAIN-SUFFIX,x.da.hunantv.com,REJECT
+DOMAIN-SUFFIX,x1.da.hunantv.com,REJECT
+DOMAIN-SUFFIX,y.da.hunantv.com,REJECT
+DOMAIN-SUFFIX,log.v2.hunantv.com,REJECT
+DOMAIN-SUFFIX,v2.log.hunantv.com,REJECT
+

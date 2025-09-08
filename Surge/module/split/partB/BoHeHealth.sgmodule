@@ -1,0 +1,43 @@
+#!name=薄荷健康
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partA/BoHeHealth.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#!arguments=bohejmkh_enable:true
+
+[Map Local]
+# 记录 悬浮部件
+^https:\/\/api\.boohee\.com\/meta-interface\/v1\/index\/page_float_bubbles\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 记录 发布
+^https:\/\/api\.boohee\.com\/meta-interface\/v1\/index\/tool_buttons\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 记录 搜索发现
+^https:\/\/api\.boohee\.com\/app-interface\/v1\/search\/search\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 记录 消息 通知 横幅推广
+^https:\/\/status\.boohee\.com\/api\/v1\/merged_messages$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 弹窗配置
+^https:\/\/bohe\.sfo-tx-shanghai-01\.saas\.sensorsdata\.cn\/api\/v2\/sfo\/user_popup_configs\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 绑定设备 横幅推广
+^https:\/\/api\.boohee\.com\/meta-interface\/v1\/index\/sensor-banners\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[Script]
+# 记录 大家都在看data.recom_cards / 底部按钮data.recom_btns
+薄荷健康 = type=http-response, pattern=^https:\/\/api\.boohee\.com\/meta-interface\/v2\/index\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bohe/bohe_ads.js, requires-body=true, timeout=60
+
+# 广场 推荐 红标data.tabs[1].badge /轮播图data.recommend_ads
+薄荷健康 = type=http-response, pattern=^https:\/\/api\.boohee\.com\/meta-interface\/v1\/index\/plaza\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bohe/bohe_ads.js, requires-body=true, timeout=60
+
+# 代谢中心 顶部轮播图top_banner / 免费问诊推广diagnos_config / 合作医疗机构partner_hospital / 医患问答question_answer / 热门商品product / 品牌大事件brand_story
+薄荷健康 = type=http-response, pattern=^https:\/\/api\.boohee\.com\/open-interface\/v1\/string\/market_page\?title=metabolism_config$, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bohe/bohe_ads.js, requires-body=true, timeout=60
+
+[MITM]
+hostname = %APPEND% api.boohee.com, bohe.sfo-tx-shanghai-01.saas.sensorsdata.cn, lego.boohee.com, status.boohee.com
+

@@ -1,0 +1,21 @@
+#!name=lofter
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partL/Lofter.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[Map Local]
+# 开屏广告 感谢@林夕分享
+^https?:\/\/ad\.lofter.com\/v1\.1\/yitou\/madr data-type=text data=" " status-code=200
+
+^https?:\/\/images\.pinduoduo\.com\/marketing\_api data-type=text data=" " status-code=200
+
+^https?:\/\/lofter\.lf127\.net\/ad\-material data-type=text data=" " status-code=200
+
+[MITM]
+hostname = %APPEND% ad.lofter.com, images.pinduoduo.com, lofter.lf127.net
+

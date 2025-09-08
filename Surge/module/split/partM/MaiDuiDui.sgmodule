@@ -1,0 +1,30 @@
+#!name=埋堆堆
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partM/MaiDuiDui.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[URL Rewrite]
+^https?:\/\/tower\.ubixioe\.com\/mob\/mediation - reject
+^https?:\/\/sdk1xyajs\.data\.kuiniuca\.com - reject
+
+[Map Local]
+^https?:\/\/mob\.mddcloud\.com\.cn\/adApi\/advert\/(first|third)part\/advertList data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/t-dsp\.pinduoduo\.com data-type=text data=" " status-code=200
+
+^https?:\/\/mobads-pre-config\.cdn\.bcebos\.com\/preload\.php data-type=text data=" " status-code=200
+
+^https?:\/\/sfo\.mddcloud\.com\.cn\/api\/v\d\/sfo\/popup_displays? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/toblog\.ctobsnssdk\.com data-type=text data=" " status-code=200
+
+^https?:\/\/conf-darwin\.xycdn\.com data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% sfo.mddcloud.com.cn, mob.mddcloud.com.cn, toblog.ctobsnssdk.com, t-dsp.pinduoduo.com, mobads-pre-config.cdn.bcebos.com, sdk1xyajs.data.kuiniuca.com, conf-darwin.xycdn.com, *.ubixioe.com
+

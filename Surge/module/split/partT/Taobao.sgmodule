@@ -1,0 +1,72 @@
+#!name=淘宝
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partT/Taobao.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#!arguments=tcbc_enable:true
+
+[Rule]
+DOMAIN-SUFFIX,apoll.m.taobao.com,REJECT
+DOMAIN-SUFFIX,h-adashx.ut.taobao.com,REJECT
+DOMAIN-SUFFIX,w.m.taobao.com,REJECT
+DOMAIN,tunion-api.m.taobao.com,REJECT
+DOMAIN-SUFFIX,re.m.taobao.com,REJECT
+DOMAIN-SUFFIX,agoodm.m.taobao.com,REJECT
+DOMAIN-SUFFIX,ai.taobao.com,REJECT
+DOMAIN-SUFFIX,api.waptest.taobao.com,REJECT
+DOMAIN-SUFFIX,dsp.simba.taobao.com,REJECT
+DOMAIN-SUFFIX,fav.simba.taobao.com,REJECT
+DOMAIN-SUFFIX,m.simba.taobao.com,REJECT
+DOMAIN-SUFFIX,mclick.simba.taobao.com,REJECT
+DOMAIN-SUFFIX,re.taobao.com,REJECT
+DOMAIN-SUFFIX,redirect.simba.taobao.com,REJECT
+DOMAIN-SUFFIX,simba.m.taobao.com,REJECT
+DOMAIN-SUFFIX,srd.simba.taobao.com,REJECT
+DOMAIN-SUFFIX,temai.taobao.com,REJECT
+DOMAIN-SUFFIX,textlink.simba.taobao.com,REJECT
+DOMAIN-SUFFIX,unitacs.m.taobao.com,REJECT
+DOMAIN-SUFFIX,acs4baichuan.m.taobao.com,REJECT
+DOMAIN-SUFFIX,adashbc.ut.taobao.com,REJECT
+DOMAIN-SUFFIX,adash-c.ut.taobao.com,REJECT
+DOMAIN-SUFFIX,adashxgc.ut.taobao.com,REJECT
+DOMAIN-SUFFIX,adashx4yt.m.taobao.com,REJECT
+DOMAIN-SUFFIX,tunion-api.m.taobao.com,REJECT
+DOMAIN-SUFFIX,tns.simba.taobao.com,REJECT
+DOMAIN-SUFFIX,click.mz.simba.taobao.com,REJECT
+DOMAIN-SUFFIX,click.simba.taobao.com,REJECT
+DOMAIN-SUFFIX,click.tz.simba.taobao.com,REJECT
+DOMAIN-SUFFIX,stat.simba.taobao.com,REJECT
+DOMAIN-SUFFIX,m-adash.m.taobao.com,REJECT
+DOMAIN-SUFFIX,adashbc.m.taobao.com,REJECT
+
+[Map Local]
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimama\.etao\.config\.query\/.+?etao_advertise data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.etao\.noah\.query\/.+tao_splash data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(volvo\.secondfloor\.getconfig|wireless\.home\.newface\.awesome\.get) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[Script]
+淘宝 = type=http-response, pattern=^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get), script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/myBlockAds.js, requires-body=true, timeout=60
+
+淘宝 = type=http-response, pattern=^https?:\/\/poplayer\.template\.alibaba\.com\/\w+\.json, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/myBlockAds.js, requires-body=true, timeout=60
+
+[MITM]
+hostname = %APPEND% acs.m.taobao.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com
+

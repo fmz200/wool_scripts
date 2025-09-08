@@ -1,0 +1,16 @@
+#!name=crunchyroll
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partC/Crunchyroll.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[Body Rewrite]
+http-response ^https?:\/\/beta-api\.crunchyroll\.com\/cms offset_ms":\d+ offset_ms":99999999999999
+
+[MITM]
+hostname = %APPEND% beta-api.crunchyroll.com
+

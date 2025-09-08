@@ -1,0 +1,33 @@
+#!name=华住会
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partH/HuazhuClub.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[URL Rewrite]
+# 开屏广告
+^https?:\/\/appapi\.huazhu\.com:\d+\/client\/app\/getAppStartPage\/ - reject
+
+[Map Local]
+# 推荐信息
+^https?:\/\/hweb-hotel\.huazhu\.com\/home\/queryRecommond data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 新客专享: queryNewNotice | 天天特惠四方格: querySelectHotel | 华住品牌: queryHotelBrand | 华住商城: queryMall | 华住世界: huazhuWorld
+^https?:\/\/hweb-hotel\.huazhu\.com\/{1,2}home\/(?>queryNewNotice|querySelectHotel|queryHotelBrand|queryMall|huazhuWorld) data-type=text data=" " status-code=200
+
+# 弹窗广告
+^https?:\/\/hweb-manager\.huazhu\.com\/notice\/getAppPopupNotifyAlert data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 更新屏蔽
+^https?:\/\/hweb-manager\.huazhu\.com\/bundle\/upgrade\/check data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 搜索酒店上方Banner
+^https?:\/\/hweb-manager\.huazhu\.com\/hotels\/ad\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% appapi.huazhu.com, hweb-hotel.huazhu.com, hweb-manager.huazhu.com
+

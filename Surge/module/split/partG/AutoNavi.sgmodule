@@ -1,0 +1,37 @@
+#!name=高德地图
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partG/AutoNavi.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[Rule]
+DOMAIN-SUFFIX,adiu.amap.com,REJECT
+DOMAIN,aboard.apilocate.amap.com,REJECT
+DOMAIN,apiinit.amap.com,REJECT
+DOMAIN,icloud-amap.com,REJECT
+DOMAIN,logs.amap.com,REJECT
+DOMAIN-SUFFIX,dualstack-logs.amap.com,REJECT
+DOMAIN-SUFFIX,logs.amap.com,REJECT
+DOMAIN-SUFFIX,optimus-ads.amap.com,REJECT
+DOMAIN-SUFFIX,page.amap.com,REJECT
+DOMAIN,optimus-ads.amap.com,REJECT
+DOMAIN,optimus-ads.amap.com.w.alikunlun.com,REJECT
+DOMAIN-SUFFIX,shouji.sougou.com,REJECT
+DOMAIN,u51.me,REJECT
+DOMAIN-SUFFIX,u51.me,REJECT
+
+[URL Rewrite]
+^https?:\/\/m5\.amap\.com\/ws\/valueadded\/ - reject
+
+[Map Local]
+^https?:\/\/m5\.amap\.com\/ws\/shield\/dsp\/app\/startup\/init\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?://optimus-ads.amap.com/uploadimg/[a-zA-Z0-9]+.gif data-type=text data=" " status-code=200
+
+[MITM]
+hostname = %APPEND% m*.amap.com, optimus-ads.amap.com
+

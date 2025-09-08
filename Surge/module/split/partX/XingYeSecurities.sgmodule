@@ -1,0 +1,17 @@
+#!name=兴业证券
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partX/XingYeSecurities.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[Map Local]
+# 优理宝（3秒倒计时,任意位置点一下即可跳过）
+^https?:\/\/static.xyzq.cn\/image\/splash\/opera3.*.jpg data-type=text data=" " status-code=200
+
+[MITM]
+hostname = %APPEND% static.xyzq.cn
+
