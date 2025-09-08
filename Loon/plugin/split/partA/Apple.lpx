@@ -9,30 +9,30 @@
 #############################################
 
 [Rule]
-DOMAIN, advertising.apple.com
-DOMAIN, api-adservices.apple.com
-DOMAIN, apple.comscoreresearch.com
-DOMAIN, banners.itunes.apple.com
-DOMAIN, iad.apple.com
-DOMAIN, iadcontent.apple.com
-DOMAIN, iadctest.qwapi.com
-DOMAIN, iadmoo.apple.com
-DOMAIN, iadworkbench.apple.com
-DOMAIN, launch.apple.com
-DOMAIN, metrics.apple.com
-DOMAIN, qwapi.apple.com
-DOMAIN, securemetrics.apple.com
-DOMAIN, webproxy-advp.iad-apple.com
-DOMAIN, webproxy-advp.iad-apple.com.akadns.net
-DOMAIN-SUFFIX,advp.apple.com
-DOMAIN-SUFFIX,iadsdk.apple.com
-# 安全浏览限制解除
-DOMAIN, lookup.api.bsb.baidu.com
-DOMAIN, proxy.safebrowsing.apple
-DOMAIN, safebrowsing.g.applimg.com
-DOMAIN, safebrowsing.googleapis.com
-DOMAIN, safebrowsing.urlsec.qq.com
-DOMAIN, token.safebrowsing.apple
-DOMAIN, vs6.bj2ct.u3.ucweb.com
-DOMAIN-SUFFIX,safebrowsing.apple
-DOMAIN-SUFFIX,u3.ucweb.com
+DOMAIN, advertising.apple.com, REJECT
+DOMAIN, api-adservices.apple.com, REJECT
+DOMAIN, apple.comscoreresearch.com, REJECT
+DOMAIN, banners.itunes.apple.com, REJECT
+DOMAIN, iad.apple.com, REJECT
+DOMAIN, iadcontent.apple.com, REJECT
+DOMAIN, iadctest.qwapi.com, REJECT
+DOMAIN, iadmoo.apple.com, REJECT
+DOMAIN, iadworkbench.apple.com, REJECT
+DOMAIN, launch.apple.com, REJECT
+DOMAIN, metrics.apple.com, REJECT
+DOMAIN, qwapi.apple.com, REJECT
+DOMAIN, securemetrics.apple.com, REJECT
+DOMAIN, webproxy-advp.iad-apple.com, REJECT
+DOMAIN, webproxy-advp.iad-apple.com.akadns.net, REJECT
+DOMAIN-SUFFIX,advp.apple.com, REJECT
+DOMAIN-SUFFIX,iadsdk.apple.com, REJECT
+# 安全浏览限制解除, REJECT
+DOMAIN, lookup.api.bsb.baidu.com, REJECT
+DOMAIN, proxy.safebrowsing.apple, REJECT
+DOMAIN, safebrowsing.g.applimg.com, REJECT
+DOMAIN, safebrowsing.googleapis.com, REJECT
+DOMAIN, safebrowsing.urlsec.qq.com, REJECT
+DOMAIN, token.safebrowsing.apple, REJECT
+DOMAIN, vs6.bj2ct.u3.ucweb.com, REJECT
+DOMAIN-SUFFIX,safebrowsing.apple, REJECT
+DOMAIN-SUFFIX,u3.ucweb.com, REJECT

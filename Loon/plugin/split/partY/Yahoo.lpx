@@ -9,15 +9,15 @@
 #############################################
 
 [Rule]
-DOMAIN-SUFFIX,adserver.yahoo.com
-DOMAIN-SUFFIX,adspecs.yahoo.com
-DOMAIN-SUFFIX,advertising.yahoo.com
-DOMAIN-SUFFIX,gemini.yahoo.com
-DOMAIN, admarketing.yahoo.net
-DOMAIN, ads.auctions.yahoo.com
-DOMAIN, ads.finance.yahoo.com
-DOMAIN, ads.yahoo.com
-DOMAIN, ads.yahoo.de
+DOMAIN-SUFFIX,adserver.yahoo.com, REJECT
+DOMAIN-SUFFIX,adspecs.yahoo.com, REJECT
+DOMAIN-SUFFIX,advertising.yahoo.com, REJECT
+DOMAIN-SUFFIX,gemini.yahoo.com, REJECT
+DOMAIN, admarketing.yahoo.net, REJECT
+DOMAIN, ads.auctions.yahoo.com, REJECT
+DOMAIN, ads.finance.yahoo.com, REJECT
+DOMAIN, ads.yahoo.com, REJECT
+DOMAIN, ads.yahoo.de, REJECT
 
 
 [Rewrite]

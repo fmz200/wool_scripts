@@ -9,5 +9,5 @@
 #############################################
 
 [Rule]
-DOMAIN, adnew.wifi8.com
-DOMAIN, adfile.wifi8.com
+DOMAIN, adnew.wifi8.com, REJECT
+DOMAIN, adfile.wifi8.com, REJECT

@@ -12,10 +12,10 @@
 bdduditu_enable = switch,true,false,tag=百度地图-脚本开关
 
 [Rule]
-DOMAIN, afd.baidu.com
-DOMAIN, afdconf.baidu.com
-DOMAIN, httpdns.baidubce.com
-DOMAIN, lc.map.baidu.com
+DOMAIN, afd.baidu.com, REJECT
+DOMAIN, afdconf.baidu.com, REJECT
+DOMAIN, httpdns.baidubce.com, REJECT
+DOMAIN, lc.map.baidu.com, REJECT
 
 
 [Rewrite]

@@ -9,8 +9,8 @@
 #############################################
 
 [Rule]
-DOMAIN, track.tenjin.com
-DOMAIN, track.tenjin.io
-DOMAIN, errlog.umeng.com
-DOMAIN, lf9-cdn-tos.bytegecko.com
-DOMAIN, novel.pangolin-sdk-toutiao.com
+DOMAIN, track.tenjin.com, REJECT
+DOMAIN, track.tenjin.io, REJECT
+DOMAIN, errlog.umeng.com, REJECT
+DOMAIN, lf9-cdn-tos.bytegecko.com, REJECT
+DOMAIN, novel.pangolin-sdk-toutiao.com, REJECT

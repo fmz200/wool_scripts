@@ -12,10 +12,10 @@
 xnhsuu_enable = switch,true,false,tag=小红书-脚本开关
 
 [Rule]
-DOMAIN, ads-img-qc.xhscdn.com
-DOMAIN, ads-video-al.xhscdn.com
-DOMAIN, ads-video-qc.xhscdn.com
-DOMAIN, t-ads.xiaohongshu.com
+DOMAIN, ads-img-qc.xhscdn.com, REJECT
+DOMAIN, ads-video-al.xhscdn.com, REJECT
+DOMAIN, ads-video-qc.xhscdn.com, REJECT
+DOMAIN, t-ads.xiaohongshu.com, REJECT
 AND, ((PROTOCOL, QUIC), (DOMAIN-SUFFIX, xiaohongshu.com)), REJECT
 
 

@@ -9,8 +9,8 @@
 #############################################
 
 [Rule]
-DOMAIN-SUFFIX,beacon.sina.com.cn
-DOMAIN, u1.img.mobile.sina.cn
-DOMAIN, sax.sina.com.cn
-DOMAIN, saxs.sina.com.cn
-DOMAIN, saxn.sina.com.cn
+DOMAIN-SUFFIX,beacon.sina.com.cn, REJECT
+DOMAIN, u1.img.mobile.sina.cn, REJECT
+DOMAIN, sax.sina.com.cn, REJECT
+DOMAIN, saxs.sina.com.cn, REJECT
+DOMAIN, saxn.sina.com.cn, REJECT

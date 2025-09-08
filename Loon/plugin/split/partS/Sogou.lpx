@@ -9,24 +9,24 @@
 #############################################
 
 [Rule]
-DOMAIN-SUFFIX,epro.sogou.com
-DOMAIN-SUFFIX,golden1.sogou.com
-DOMAIN-SUFFIX,inte.sogou.com
-DOMAIN-SUFFIX,inte.sogoucdn.com
-DOMAIN-SUFFIX,lu.sogoucdn.com
-DOMAIN-SUFFIX,theta.sogoucdn.com
-DOMAIN-SUFFIX,uranus.sogou.com
-DOMAIN-SUFFIX,123.sogou.com
-DOMAIN-SUFFIX,a1click.cpc.sogou.com
-DOMAIN-SUFFIX,adsence.sogou.com
-DOMAIN-SUFFIX,adstream.123.sogoucdn.com
-DOMAIN-SUFFIX,amfi.gou.sogou.com
-DOMAIN-SUFFIX,art.theta.sogoucdn.com
-DOMAIN-SUFFIX,athena.wan.sogou.com
-DOMAIN-SUFFIX,bazinga.mse.sogou.com
-DOMAIN-SUFFIX,bite.theta.sogoucdn.com
-DOMAIN-SUFFIX,brand.sogou.com
-DOMAIN-SUFFIX,bsiet.husky.sogou.com
-# 屏蔽京东和搜狗收集信息 @jFrecht
-DOMAIN-SUFFIX,jdqd.jd.com
-DOMAIN-SUFFIX,shouji.sougou.com
+DOMAIN-SUFFIX,epro.sogou.com, REJECT
+DOMAIN-SUFFIX,golden1.sogou.com, REJECT
+DOMAIN-SUFFIX,inte.sogou.com, REJECT
+DOMAIN-SUFFIX,inte.sogoucdn.com, REJECT
+DOMAIN-SUFFIX,lu.sogoucdn.com, REJECT
+DOMAIN-SUFFIX,theta.sogoucdn.com, REJECT
+DOMAIN-SUFFIX,uranus.sogou.com, REJECT
+DOMAIN-SUFFIX,123.sogou.com, REJECT
+DOMAIN-SUFFIX,a1click.cpc.sogou.com, REJECT
+DOMAIN-SUFFIX,adsence.sogou.com, REJECT
+DOMAIN-SUFFIX,adstream.123.sogoucdn.com, REJECT
+DOMAIN-SUFFIX,amfi.gou.sogou.com, REJECT
+DOMAIN-SUFFIX,art.theta.sogoucdn.com, REJECT
+DOMAIN-SUFFIX,athena.wan.sogou.com, REJECT
+DOMAIN-SUFFIX,bazinga.mse.sogou.com, REJECT
+DOMAIN-SUFFIX,bite.theta.sogoucdn.com, REJECT
+DOMAIN-SUFFIX,brand.sogou.com, REJECT
+DOMAIN-SUFFIX,bsiet.husky.sogou.com, REJECT
+# 屏蔽京东和搜狗收集信息 @jFrecht, REJECT
+DOMAIN-SUFFIX,jdqd.jd.com, REJECT
+DOMAIN-SUFFIX,shouji.sougou.com, REJECT

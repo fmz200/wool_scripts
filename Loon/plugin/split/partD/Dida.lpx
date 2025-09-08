@@ -9,7 +9,7 @@
 #############################################
 
 [Rule]
-DOMAIN-KEYWORD,image.bianxianmao.com
+DOMAIN-KEYWORD,image.bianxianmao.com, REJECT
 
 
 [Rewrite]

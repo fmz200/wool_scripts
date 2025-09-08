@@ -9,14 +9,14 @@
 #############################################
 
 [Rule]
-DOMAIN-SUFFIX,ad.cmvideo.cn
-DOMAIN, ggc.cmvideo.cn
-DOMAIN, ggv.cmvideo.cn
-DOMAIN, ggx.cmvideo.cn
-DOMAIN, ggx03.miguvideo.com
-DOMAIN, ggic03.miguvideo.com
-DOMAIN, ggmk.miguvideo.com
-DOMAIN, ggadoffline.miguvideo.com
+DOMAIN-SUFFIX,ad.cmvideo.cn, REJECT
+DOMAIN, ggc.cmvideo.cn, REJECT
+DOMAIN, ggv.cmvideo.cn, REJECT
+DOMAIN, ggx.cmvideo.cn, REJECT
+DOMAIN, ggx03.miguvideo.com, REJECT
+DOMAIN, ggic03.miguvideo.com, REJECT
+DOMAIN, ggmk.miguvideo.com, REJECT
+DOMAIN, ggadoffline.miguvideo.com, REJECT
 
 
 [Script]

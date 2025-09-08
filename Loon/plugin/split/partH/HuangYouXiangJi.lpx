@@ -9,10 +9,10 @@
 #############################################
 
 [Rule]
-# 开屏广告 感谢#Dragon分享
-DOMAIN-SUFFIX,anythinktech.com
-DOMAIN-SUFFIX,adkwai.com
-DOMAIN-SUFFIX,mob.com
+# 开屏广告 感谢#Dragon分享, REJECT
+DOMAIN-SUFFIX,anythinktech.com, REJECT
+DOMAIN-SUFFIX,adkwai.com, REJECT
+DOMAIN-SUFFIX,mob.com, REJECT
 
 
 

@@ -9,6 +9,6 @@
 #############################################
 
 [Rule]
-DOMAIN-SUFFIX,hoisin.coocaa.com
-DOMAIN-SUFFIX,hoisin.coocaatv.com
-DOMAIN, data-hoisin.coocaa.com
+DOMAIN-SUFFIX,hoisin.coocaa.com, REJECT
+DOMAIN-SUFFIX,hoisin.coocaatv.com, REJECT
+DOMAIN, data-hoisin.coocaa.com, REJECT

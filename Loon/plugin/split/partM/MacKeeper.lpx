@@ -9,4 +9,4 @@
 #############################################
 
 [Rule]
-DOMAIN-SUFFIX,zryydi.com
+DOMAIN-SUFFIX,zryydi.com, REJECT

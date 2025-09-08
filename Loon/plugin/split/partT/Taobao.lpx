@@ -12,38 +12,38 @@
 tcbc_enable = switch,true,false,tag=淘宝-脚本开关
 
 [Rule]
-DOMAIN-SUFFIX,apoll.m.taobao.com
-DOMAIN-SUFFIX,h-adashx.ut.taobao.com
-DOMAIN-SUFFIX,w.m.taobao.com
-DOMAIN, tunion-api.m.taobao.com
-DOMAIN-SUFFIX,re.m.taobao.com
-DOMAIN-SUFFIX,agoodm.m.taobao.com
-DOMAIN-SUFFIX,ai.taobao.com
-DOMAIN-SUFFIX,api.waptest.taobao.com
-DOMAIN-SUFFIX,dsp.simba.taobao.com
-DOMAIN-SUFFIX,fav.simba.taobao.com
-DOMAIN-SUFFIX,m.simba.taobao.com
-DOMAIN-SUFFIX,mclick.simba.taobao.com
-DOMAIN-SUFFIX,re.taobao.com
-DOMAIN-SUFFIX,redirect.simba.taobao.com
-DOMAIN-SUFFIX,simba.m.taobao.com
-DOMAIN-SUFFIX,srd.simba.taobao.com
-DOMAIN-SUFFIX,temai.taobao.com
-DOMAIN-SUFFIX,textlink.simba.taobao.com
-DOMAIN-SUFFIX,unitacs.m.taobao.com
-DOMAIN-SUFFIX,acs4baichuan.m.taobao.com
-DOMAIN-SUFFIX,adashbc.ut.taobao.com
-DOMAIN-SUFFIX,adash-c.ut.taobao.com
-DOMAIN-SUFFIX,adashxgc.ut.taobao.com
-DOMAIN-SUFFIX,adashx4yt.m.taobao.com
-DOMAIN-SUFFIX,tunion-api.m.taobao.com
-DOMAIN-SUFFIX,tns.simba.taobao.com
-DOMAIN-SUFFIX,click.mz.simba.taobao.com
-DOMAIN-SUFFIX,click.simba.taobao.com
-DOMAIN-SUFFIX,click.tz.simba.taobao.com
-DOMAIN-SUFFIX,stat.simba.taobao.com
-DOMAIN-SUFFIX,m-adash.m.taobao.com
-DOMAIN-SUFFIX,adashbc.m.taobao.com
+DOMAIN-SUFFIX,apoll.m.taobao.com, REJECT
+DOMAIN-SUFFIX,h-adashx.ut.taobao.com, REJECT
+DOMAIN-SUFFIX,w.m.taobao.com, REJECT
+DOMAIN, tunion-api.m.taobao.com, REJECT
+DOMAIN-SUFFIX,re.m.taobao.com, REJECT
+DOMAIN-SUFFIX,agoodm.m.taobao.com, REJECT
+DOMAIN-SUFFIX,ai.taobao.com, REJECT
+DOMAIN-SUFFIX,api.waptest.taobao.com, REJECT
+DOMAIN-SUFFIX,dsp.simba.taobao.com, REJECT
+DOMAIN-SUFFIX,fav.simba.taobao.com, REJECT
+DOMAIN-SUFFIX,m.simba.taobao.com, REJECT
+DOMAIN-SUFFIX,mclick.simba.taobao.com, REJECT
+DOMAIN-SUFFIX,re.taobao.com, REJECT
+DOMAIN-SUFFIX,redirect.simba.taobao.com, REJECT
+DOMAIN-SUFFIX,simba.m.taobao.com, REJECT
+DOMAIN-SUFFIX,srd.simba.taobao.com, REJECT
+DOMAIN-SUFFIX,temai.taobao.com, REJECT
+DOMAIN-SUFFIX,textlink.simba.taobao.com, REJECT
+DOMAIN-SUFFIX,unitacs.m.taobao.com, REJECT
+DOMAIN-SUFFIX,acs4baichuan.m.taobao.com, REJECT
+DOMAIN-SUFFIX,adashbc.ut.taobao.com, REJECT
+DOMAIN-SUFFIX,adash-c.ut.taobao.com, REJECT
+DOMAIN-SUFFIX,adashxgc.ut.taobao.com, REJECT
+DOMAIN-SUFFIX,adashx4yt.m.taobao.com, REJECT
+DOMAIN-SUFFIX,tunion-api.m.taobao.com, REJECT
+DOMAIN-SUFFIX,tns.simba.taobao.com, REJECT
+DOMAIN-SUFFIX,click.mz.simba.taobao.com, REJECT
+DOMAIN-SUFFIX,click.simba.taobao.com, REJECT
+DOMAIN-SUFFIX,click.tz.simba.taobao.com, REJECT
+DOMAIN-SUFFIX,stat.simba.taobao.com, REJECT
+DOMAIN-SUFFIX,m-adash.m.taobao.com, REJECT
+DOMAIN-SUFFIX,adashbc.m.taobao.com, REJECT
 
 
 [Rewrite]

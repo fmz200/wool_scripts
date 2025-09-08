@@ -9,7 +9,7 @@
 #############################################
 
 [Rule]
-DOMAIN, ads.aplus.pptv.com
-DOMAIN, ads.aplusapi.pptv.com
-DOMAIN, asimgs.pplive.cn
-DOMAIN, de.as.pptv.com
+DOMAIN, ads.aplus.pptv.com, REJECT
+DOMAIN, ads.aplusapi.pptv.com, REJECT
+DOMAIN, asimgs.pplive.cn, REJECT
+DOMAIN, de.as.pptv.com, REJECT

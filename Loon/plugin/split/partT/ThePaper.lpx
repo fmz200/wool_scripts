@@ -9,6 +9,6 @@
 #############################################
 
 [Rule]
-DOMAIN, admonitor.thepaper.cn
-DOMAIN, adpai.thepaper.cn
-DOMAIN, imgadpai.thepaper.cn
+DOMAIN, admonitor.thepaper.cn, REJECT
+DOMAIN, adpai.thepaper.cn, REJECT
+DOMAIN, imgadpai.thepaper.cn, REJECT

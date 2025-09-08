@@ -9,4 +9,4 @@
 #############################################
 
 [Rule]
-DOMAIN-SUFFIX,bayescom.com
+DOMAIN-SUFFIX,bayescom.com, REJECT

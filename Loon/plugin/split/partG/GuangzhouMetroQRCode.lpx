@@ -9,5 +9,5 @@
 #############################################
 
 [Rule]
-# 多个广告 感谢CtrlMusic🐓分享
-DOMAIN, apis.alenable.com
+# 多个广告 感谢CtrlMusic🐓分享, REJECT
+DOMAIN, apis.alenable.com, REJECT

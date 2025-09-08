@@ -12,9 +12,9 @@
 ddmc_enable = switch,true,false,tag=叮咚买菜-脚本开关
 
 [Rule]
-DOMAIN, trackercollect.ddxq.mobi
-DOMAIN, ddfs-public.ddimg.mobi
-DOMAIN, rttrack.ddxq.mobi
+DOMAIN, trackercollect.ddxq.mobi, REJECT
+DOMAIN, ddfs-public.ddimg.mobi, REJECT
+DOMAIN, rttrack.ddxq.mobi, REJECT
 
 
 [Rewrite]

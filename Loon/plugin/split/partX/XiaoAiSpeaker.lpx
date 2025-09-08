@@ -9,7 +9,7 @@
 #############################################
 
 [Rule]
-DOMAIN, mistat.xiaomi.com
+DOMAIN, mistat.xiaomi.com, REJECT
 
 
 [Rewrite]

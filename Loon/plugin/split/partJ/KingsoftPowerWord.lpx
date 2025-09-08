@@ -9,14 +9,14 @@
 #############################################
 
 [Rule]
-DOMAIN, ad-stat.ksosoft.com
-DOMAIN, img.auction-ads.wpscdn.cn
-DOMAIN, counter.kingsoft.com
-DOMAIN, counter.ksosoft.com
-DOMAIN, minfo.wps.cn
-DOMAIN, mobad.ijinshan.com
-DOMAIN, ups.ksmobile.net
-DOMAIN, ws.ksmobile.net
+DOMAIN, ad-stat.ksosoft.com, REJECT
+DOMAIN, img.auction-ads.wpscdn.cn, REJECT
+DOMAIN, counter.kingsoft.com, REJECT
+DOMAIN, counter.ksosoft.com, REJECT
+DOMAIN, minfo.wps.cn, REJECT
+DOMAIN, mobad.ijinshan.com, REJECT
+DOMAIN, ups.ksmobile.net, REJECT
+DOMAIN, ws.ksmobile.net, REJECT
 
 
 [Rewrite]

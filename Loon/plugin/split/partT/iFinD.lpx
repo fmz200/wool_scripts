@@ -9,8 +9,8 @@
 #############################################
 
 [Rule]
-DOMAIN, adm.10jqka.com.cn
-DOMAIN, stat.10jqka.com.cn
+DOMAIN, adm.10jqka.com.cn, REJECT
+DOMAIN, stat.10jqka.com.cn, REJECT
 
 
 [Rewrite]

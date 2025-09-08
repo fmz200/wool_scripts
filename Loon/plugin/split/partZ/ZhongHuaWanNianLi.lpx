@@ -9,9 +9,9 @@
 #############################################
 
 [Rule]
-DOMAIN-KEYWORD,lkme.cc
-DOMAIN-KEYWORD,api.freed.so
-DOMAIN-KEYWORD,log-dmp.suishenyun.cn
-DOMAIN-KEYWORD,client-dmp.suishenyun.cn
-DOMAIN-KEYWORD,pc.suishenyun.net
-DOMAIN-KEYWORD,v0-client-lz.rili.cn
+DOMAIN-KEYWORD,lkme.cc, REJECT
+DOMAIN-KEYWORD,api.freed.so, REJECT
+DOMAIN-KEYWORD,log-dmp.suishenyun.cn, REJECT
+DOMAIN-KEYWORD,client-dmp.suishenyun.cn, REJECT
+DOMAIN-KEYWORD,pc.suishenyun.net, REJECT
+DOMAIN-KEYWORD,v0-client-lz.rili.cn, REJECT

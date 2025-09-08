@@ -9,4 +9,4 @@
 #############################################
 
 [Rule]
-DOMAIN-SUFFIX,giocdn.com
+DOMAIN-SUFFIX,giocdn.com, REJECT

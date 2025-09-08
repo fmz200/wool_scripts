@@ -9,8 +9,8 @@
 #############################################
 
 [Rule]
-DOMAIN, adx.yiche.com
-DOMAIN, log.ycapp.yiche.com
+DOMAIN, adx.yiche.com, REJECT
+DOMAIN, log.ycapp.yiche.com, REJECT
 
 
 [Rewrite]

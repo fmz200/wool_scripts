@@ -9,32 +9,32 @@
 #############################################
 
 [Rule]
-DOMAIN, i.snssdk.com
-DOMAIN, i-lq.snssdk.com
-DOMAIN, dig.bdurl.net
-DOMAIN, activity-ag.awemeughun.com
-DOMAIN, mcs.snssdk.com
-DOMAIN, tnc3-alisc1.snssdk.com
-DOMAIN, security-lq.snssdk.com
-DOMAIN, tnc3-aliec2.snssdk.com
-#DOMAIN, is.snssdk.com
-DOMAIN, i.snssdk.com
-DOMAIN, v6-novelapp.ixigua.com
-DOMAIN, msync-im1-vip6-std.easemob.com
-DOMAIN, apd-pcdnwxlogin.teg.tencent-cloud.net
-DOMAIN, api.iegadp.qq.com
-DOMAIN-SUFFIX, novelapp.ixigua.com
-DOMAIN-SUFFIX, default.ixigua.com
-DOMAIN-SUFFIX, byteorge.com
-# 下面两条误杀严重导致懂车帝无法正常使用
-#DOMAIN-SUFFIX, bytegoofy.com
-#DOMAIN-SUFFIX, bytedance.com
-IP-CIDR, 49.71.37.101/32, no-resolve
-IP-CIDR, 117.71.105.23/32, no-resolve
-IP-CIDR, 218.94.207.205/32, no-resolve
-IP-CIDR, 117.92.229.188/32, no-resolve
-IP-CIDR, 101.36.166.16/32, no-resolve
-IP-CIDR, 180.96.2.114/32, no-resolve
+DOMAIN, i.snssdk.com, REJECT
+DOMAIN, i-lq.snssdk.com, REJECT
+DOMAIN, dig.bdurl.net, REJECT
+DOMAIN, activity-ag.awemeughun.com, REJECT
+DOMAIN, mcs.snssdk.com, REJECT
+DOMAIN, tnc3-alisc1.snssdk.com, REJECT
+DOMAIN, security-lq.snssdk.com, REJECT
+DOMAIN, tnc3-aliec2.snssdk.com, REJECT
+#DOMAIN, is.snssdk.com, REJECT
+DOMAIN, i.snssdk.com, REJECT
+DOMAIN, v6-novelapp.ixigua.com, REJECT
+DOMAIN, msync-im1-vip6-std.easemob.com, REJECT
+DOMAIN, apd-pcdnwxlogin.teg.tencent-cloud.net, REJECT
+DOMAIN, api.iegadp.qq.com, REJECT
+DOMAIN-SUFFIX, novelapp.ixigua.com, REJECT
+DOMAIN-SUFFIX, default.ixigua.com, REJECT
+DOMAIN-SUFFIX, byteorge.com, REJECT
+# 下面两条误杀严重导致懂车帝无法正常使用, REJECT
+#DOMAIN-SUFFIX, bytegoofy.com, REJECT
+#DOMAIN-SUFFIX, bytedance.com, REJECT
+IP-CIDR, 49.71.37.101/32, no-resolve, REJECT
+IP-CIDR, 117.71.105.23/32, no-resolve, REJECT
+IP-CIDR, 218.94.207.205/32, no-resolve, REJECT
+IP-CIDR, 117.92.229.188/32, no-resolve, REJECT
+IP-CIDR, 101.36.166.16/32, no-resolve, REJECT
+IP-CIDR, 180.96.2.114/32, no-resolve, REJECT
 
 
 [Rewrite]

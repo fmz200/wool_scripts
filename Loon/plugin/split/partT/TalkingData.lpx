@@ -9,4 +9,4 @@
 #############################################
 
 [Rule]
-DOMAIN-SUFFIX,cpatrk.net
+DOMAIN-SUFFIX,cpatrk.net, REJECT

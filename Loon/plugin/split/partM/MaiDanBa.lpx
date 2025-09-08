@@ -12,7 +12,7 @@
 mddjba_enable = switch,true,false,tag=买单吧-脚本开关
 
 [Rule]
-DOMAIN-KEYWORD,c-hzgt2.getui.com
+DOMAIN-KEYWORD,c-hzgt2.getui.com, REJECT
 
 
 [Rewrite]

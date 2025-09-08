@@ -9,23 +9,23 @@
 #############################################
 
 [Rule]
-DOMAIN, galaxy.bjcathay.com
-DOMAIN, mdrecv.app.cntvwb.cn
-DOMAIN, sdapprecv.app.cntvwb.cn
-DOMAIN, vdapprecv.app.cntvwb.cn
-DOMAIN-SUFFIX,a.cctv.com
-DOMAIN-SUFFIX,ad.cctv.com
-DOMAIN-SUFFIX,ad.cntv.cn
-DOMAIN-SUFFIX,adguanggao.eee114.com
-DOMAIN-SUFFIX,afp.qiyi.com
-DOMAIN-SUFFIX,cctv.adsunion.com
-DOMAIN-SUFFIX,d.cntv.cn
-DOMAIN-SUFFIX,de.pandora.xiaomi.com
-DOMAIN-SUFFIX,mishop.pandora.xiaomi.com
-DOMAIN-SUFFIX,cws-cctv.conviva.com
-DOMAIN-SUFFIX,mdrecv.app.cntvwb.cn
-DOMAIN-SUFFIX,sdapprecv.app.cntvwb.cn
-DOMAIN-SUFFIX,vdapprecv.app.cntvwb.cn
+DOMAIN, galaxy.bjcathay.com, REJECT
+DOMAIN, mdrecv.app.cntvwb.cn, REJECT
+DOMAIN, sdapprecv.app.cntvwb.cn, REJECT
+DOMAIN, vdapprecv.app.cntvwb.cn, REJECT
+DOMAIN-SUFFIX,a.cctv.com, REJECT
+DOMAIN-SUFFIX,ad.cctv.com, REJECT
+DOMAIN-SUFFIX,ad.cntv.cn, REJECT
+DOMAIN-SUFFIX,adguanggao.eee114.com, REJECT
+DOMAIN-SUFFIX,afp.qiyi.com, REJECT
+DOMAIN-SUFFIX,cctv.adsunion.com, REJECT
+DOMAIN-SUFFIX,d.cntv.cn, REJECT
+DOMAIN-SUFFIX,de.pandora.xiaomi.com, REJECT
+DOMAIN-SUFFIX,mishop.pandora.xiaomi.com, REJECT
+DOMAIN-SUFFIX,cws-cctv.conviva.com, REJECT
+DOMAIN-SUFFIX,mdrecv.app.cntvwb.cn, REJECT
+DOMAIN-SUFFIX,sdapprecv.app.cntvwb.cn, REJECT
+DOMAIN-SUFFIX,vdapprecv.app.cntvwb.cn, REJECT
 
 
 [Rewrite]

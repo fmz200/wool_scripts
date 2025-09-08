@@ -9,4 +9,4 @@
 #############################################
 
 [Rule]
-DOMAIN-SUFFIX,kuaizip.com
+DOMAIN-SUFFIX,kuaizip.com, REJECT

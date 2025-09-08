@@ -9,8 +9,8 @@
 #############################################
 
 [Rule]
-DOMAIN-SUFFIX,webp2p.letv.com
-DOMAIN, ark.letv.com
-DOMAIN, emma-414870e223.huodonghezi.com
-DOMAIN, g3.letv.com
-DOMAIN, n.mark.letv.com
+DOMAIN-SUFFIX,webp2p.letv.com, REJECT
+DOMAIN, ark.letv.com, REJECT
+DOMAIN, emma-414870e223.huodonghezi.com, REJECT
+DOMAIN, g3.letv.com, REJECT
+DOMAIN, n.mark.letv.com, REJECT

@@ -9,12 +9,12 @@
 #############################################
 
 [Rule]
-DOMAIN, ad.21cn.com
-DOMAIN, ad.k.21cn.com
-DOMAIN, admarket.21cn.com
-DOMAIN, adshows.21cn.com
-IP-CIDR, 122.229.8.47/32, no-resolve
-IP-CIDR, 122.229.29.89/32, no-resolve
+DOMAIN, ad.21cn.com, REJECT
+DOMAIN, ad.k.21cn.com, REJECT
+DOMAIN, admarket.21cn.com, REJECT
+DOMAIN, adshows.21cn.com, REJECT
+IP-CIDR, 122.229.8.47/32, no-resolve, REJECT
+IP-CIDR, 122.229.29.89/32, no-resolve, REJECT
 
 
 [Rewrite]

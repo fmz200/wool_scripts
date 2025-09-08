@@ -9,23 +9,23 @@
 #############################################
 
 [Rule]
-DOMAIN, dm.toutiao.com
-DOMAIN-KEYWORD,ad.toutiao.com
-DOMAIN-KEYWORD,clk.gentags.net
-DOMAIN-KEYWORD,dm.toutiao.com
-DOMAIN-KEYWORD,dm.pstatp.com
-DOMAIN-KEYWORD,dm.bytedance.com
-DOMAIN-KEYWORD,uop.umeng.com
-DOMAIN-KEYWORD,m.suning.com
-DOMAIN-KEYWORD,adshare.toutiao.com
-DOMAIN-KEYWORD,tunion-api.m.taobao.com
-DOMAIN-KEYWORD,s1.pstatp.com
-DOMAIN-KEYWORD,s2.pstatp.com
-DOMAIN-KEYWORD,s3.pstatp.com
-DOMAIN-KEYWORD,a3.pstatp.com
-DOMAIN-KEYWORD,a3.bytecdn.cn
-DOMAIN, ad.toutiao.com
-DOMAIN, dsp.toutiao.com
+DOMAIN, dm.toutiao.com, REJECT
+DOMAIN-KEYWORD,ad.toutiao.com, REJECT
+DOMAIN-KEYWORD,clk.gentags.net, REJECT
+DOMAIN-KEYWORD,dm.toutiao.com, REJECT
+DOMAIN-KEYWORD,dm.pstatp.com, REJECT
+DOMAIN-KEYWORD,dm.bytedance.com, REJECT
+DOMAIN-KEYWORD,uop.umeng.com, REJECT
+DOMAIN-KEYWORD,m.suning.com, REJECT
+DOMAIN-KEYWORD,adshare.toutiao.com, REJECT
+DOMAIN-KEYWORD,tunion-api.m.taobao.com, REJECT
+DOMAIN-KEYWORD,s1.pstatp.com, REJECT
+DOMAIN-KEYWORD,s2.pstatp.com, REJECT
+DOMAIN-KEYWORD,s3.pstatp.com, REJECT
+DOMAIN-KEYWORD,a3.pstatp.com, REJECT
+DOMAIN-KEYWORD,a3.bytecdn.cn, REJECT
+DOMAIN, ad.toutiao.com, REJECT
+DOMAIN, dsp.toutiao.com, REJECT
 
 
 [Rewrite]

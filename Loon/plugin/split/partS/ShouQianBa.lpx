@@ -9,8 +9,8 @@
 #############################################
 
 [Rule]
-# 买单小程序去广告
-DOMAIN, ads-shopping.shouqianba.com
+# 买单小程序去广告, REJECT
+DOMAIN, ads-shopping.shouqianba.com, REJECT
 
 
 [Rewrite]

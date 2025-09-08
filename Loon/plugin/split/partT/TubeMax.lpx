@@ -9,14 +9,14 @@
 #############################################
 
 [Rule]
-DOMAIN-SUFFIX,adjust.com
-DOMAIN-SUFFIX,applvn.com
-DOMAIN-SUFFIX,app-measurement.com
-DOMAIN-SUFFIX,pangle.io
-DOMAIN-SUFFIX,applovin.com
-DOMAIN-SUFFIX,appier.net
-DOMAIN-SUFFIX,adsmoloco.com
-DOMAIN-SUFFIX,adcanvas.com
+DOMAIN-SUFFIX,adjust.com, REJECT
+DOMAIN-SUFFIX,applvn.com, REJECT
+DOMAIN-SUFFIX,app-measurement.com, REJECT
+DOMAIN-SUFFIX,pangle.io, REJECT
+DOMAIN-SUFFIX,applovin.com, REJECT
+DOMAIN-SUFFIX,appier.net, REJECT
+DOMAIN-SUFFIX,adsmoloco.com, REJECT
+DOMAIN-SUFFIX,adcanvas.com, REJECT
 
 
 [Rewrite]

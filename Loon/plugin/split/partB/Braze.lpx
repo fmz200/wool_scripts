@@ -9,27 +9,27 @@
 #############################################
 
 [Rule]
-DOMAIN-SUFFIX,iad.appboy.com
-DOMAIN-SUFFIX,iad-03.appboy.com
-DOMAIN-SUFFIX,iad-01.braze.com
-DOMAIN-SUFFIX,iad-02.braze.com
-DOMAIN-SUFFIX,iad-03.braze.com
-DOMAIN-SUFFIX,iad-04.braze.com
-DOMAIN-SUFFIX,iad-05.braze.com
-DOMAIN-SUFFIX,iad-06.braze.com
-DOMAIN-SUFFIX,iad-08.braze.com
+DOMAIN-SUFFIX,iad.appboy.com, REJECT
+DOMAIN-SUFFIX,iad-03.appboy.com, REJECT
+DOMAIN-SUFFIX,iad-01.braze.com, REJECT
+DOMAIN-SUFFIX,iad-02.braze.com, REJECT
+DOMAIN-SUFFIX,iad-03.braze.com, REJECT
+DOMAIN-SUFFIX,iad-04.braze.com, REJECT
+DOMAIN-SUFFIX,iad-05.braze.com, REJECT
+DOMAIN-SUFFIX,iad-06.braze.com, REJECT
+DOMAIN-SUFFIX,iad-08.braze.com, REJECT
 
-DOMAIN-SUFFIX,alienskins.cn
-DOMAIN-SUFFIX,anydeskchina.cn
-DOMAIN-SUFFIX,betterzipcn.com
-DOMAIN-SUFFIX,dongmansoft.com
-DOMAIN-SUFFIX,earmasterchina.cn
-DOMAIN-SUFFIX,folxchina.cn
-DOMAIN-SUFFIX,hypeapp.cn
-DOMAIN-SUFFIX,idmchina.net
-DOMAIN-SUFFIX,imazingchina.com
-DOMAIN-SUFFIX,luping.net.cn
-DOMAIN-SUFFIX,mindmanager.cn
-DOMAIN-SUFFIX,officesoftcn.com
-DOMAIN-SUFFIX,photozoomchina.com
-DOMAIN-SUFFIX,xitongqingli.com
+DOMAIN-SUFFIX,alienskins.cn, REJECT
+DOMAIN-SUFFIX,anydeskchina.cn, REJECT
+DOMAIN-SUFFIX,betterzipcn.com, REJECT
+DOMAIN-SUFFIX,dongmansoft.com, REJECT
+DOMAIN-SUFFIX,earmasterchina.cn, REJECT
+DOMAIN-SUFFIX,folxchina.cn, REJECT
+DOMAIN-SUFFIX,hypeapp.cn, REJECT
+DOMAIN-SUFFIX,idmchina.net, REJECT
+DOMAIN-SUFFIX,imazingchina.com, REJECT
+DOMAIN-SUFFIX,luping.net.cn, REJECT
+DOMAIN-SUFFIX,mindmanager.cn, REJECT
+DOMAIN-SUFFIX,officesoftcn.com, REJECT
+DOMAIN-SUFFIX,photozoomchina.com, REJECT
+DOMAIN-SUFFIX,xitongqingli.com, REJECT

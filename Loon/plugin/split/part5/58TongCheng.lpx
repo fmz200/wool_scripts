@@ -9,8 +9,8 @@
 #############################################
 
 [Rule]
-DOMAIN, track.58.com
-DOMAIN, tracklog.58.com
+DOMAIN, track.58.com, REJECT
+DOMAIN, tracklog.58.com, REJECT
 
 
 

@@ -9,13 +9,13 @@
 #############################################
 
 [Rule]
-DOMAIN, cdn-new-ad.wtzw.com
-DOMAIN, a-remad.qm989.com
-DOMAIN, mobads.baidu.com
-DOMAIN-SUFFIX,gdt.qq.com
-DOMAIN, qzs.gdtimg.com
-DOMAIN, mobads-pre-config.cdn.bcebos.com
-DOMAIN, pgdt.ugdtimg.com
+DOMAIN, cdn-new-ad.wtzw.com, REJECT
+DOMAIN, a-remad.qm989.com, REJECT
+DOMAIN, mobads.baidu.com, REJECT
+DOMAIN-SUFFIX,gdt.qq.com, REJECT
+DOMAIN, qzs.gdtimg.com, REJECT
+DOMAIN, mobads-pre-config.cdn.bcebos.com, REJECT
+DOMAIN, pgdt.ugdtimg.com, REJECT
 
 
 [Rewrite]

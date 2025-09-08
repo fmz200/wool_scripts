@@ -9,7 +9,7 @@
 #############################################
 
 [Rule]
-DOMAIN-KEYWORD,mpos-pic.helipay.com
+DOMAIN-KEYWORD,mpos-pic.helipay.com, REJECT
 
 
 [Rewrite]

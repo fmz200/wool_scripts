@@ -9,5 +9,5 @@
 #############################################
 
 [Rule]
-DOMAIN, track.tiara.daum.net
-DOMAIN, track.tiara.kakao.com
+DOMAIN, track.tiara.daum.net, REJECT
+DOMAIN, track.tiara.kakao.com, REJECT

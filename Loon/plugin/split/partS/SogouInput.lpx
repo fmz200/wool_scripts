@@ -9,8 +9,8 @@
 #############################################
 
 [Rule]
-# DOMAIN-SUFFIX, business-cdn.shouji.sogou.com, reject
-DOMAIN-SUFFIX, push-service-ios.sginput.qq.com, reject
+# DOMAIN-SUFFIX, business-cdn.shouji.sogou.com, reject, REJECT
+DOMAIN-SUFFIX, push-service-ios.sginput.qq.com, reject, REJECT
 
 
 [Rewrite]

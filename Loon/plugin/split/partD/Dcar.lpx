@@ -9,5 +9,5 @@
 #############################################
 
 [Rule]
-DOMAIN-KEYWORD,p3-pack.byteimg.com
-DOMAIN-KEYWORD,p6-pack.byteimg.com
+DOMAIN-KEYWORD,p3-pack.byteimg.com, REJECT
+DOMAIN-KEYWORD,p6-pack.byteimg.com, REJECT

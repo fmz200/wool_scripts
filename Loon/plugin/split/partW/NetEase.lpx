@@ -9,20 +9,20 @@
 #############################################
 
 [Rule]
-DOMAIN-SUFFIX,dsp.youdao.com
-DOMAIN-SUFFIX,union.youdao.com
-DOMAIN, ad.bn.netease.com
-DOMAIN, ad.yixin.im
-DOMAIN, admusicpic.music.126.net
-DOMAIN, g1.163.com
-DOMAIN, gorgon.youdao.com
-DOMAIN, iad.g.163.com
-DOMAIN, iadmat.nosdn.127.net
-DOMAIN, iadmusicmat.music.126.net
-DOMAIN, iadmusicmatvideo.music.126.net
-DOMAIN, impservice.dictapp.youdao.com
-DOMAIN, impservice.youdao.com
-DOMAIN, n.3g.163.com
-DOMAIN, nex.163.com
-DOMAIN, yt-adp.nosdn.127.net
-DOMAIN, yt-adp.ws.126.net
+DOMAIN-SUFFIX,dsp.youdao.com, REJECT
+DOMAIN-SUFFIX,union.youdao.com, REJECT
+DOMAIN, ad.bn.netease.com, REJECT
+DOMAIN, ad.yixin.im, REJECT
+DOMAIN, admusicpic.music.126.net, REJECT
+DOMAIN, g1.163.com, REJECT
+DOMAIN, gorgon.youdao.com, REJECT
+DOMAIN, iad.g.163.com, REJECT
+DOMAIN, iadmat.nosdn.127.net, REJECT
+DOMAIN, iadmusicmat.music.126.net, REJECT
+DOMAIN, iadmusicmatvideo.music.126.net, REJECT
+DOMAIN, impservice.dictapp.youdao.com, REJECT
+DOMAIN, impservice.youdao.com, REJECT
+DOMAIN, n.3g.163.com, REJECT
+DOMAIN, nex.163.com, REJECT
+DOMAIN, yt-adp.nosdn.127.net, REJECT
+DOMAIN, yt-adp.ws.126.net, REJECT

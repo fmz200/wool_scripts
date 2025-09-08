@@ -9,11 +9,11 @@
 #############################################
 
 [Rule]
-DOMAIN-SUFFIX, v3.fstats.xyz
-DOMAIN-SUFFIX, wss.haoyundmn.com
-DOMAIN-SUFFIX, new.xiongzhangad.com
-DOMAIN-SUFFIX, alexametrics.com
-DOMAIN-KEYWORD, in-page-push
+DOMAIN-SUFFIX, v3.fstats.xyz, REJECT
+DOMAIN-SUFFIX, wss.haoyundmn.com, REJECT
+DOMAIN-SUFFIX, new.xiongzhangad.com, REJECT
+DOMAIN-SUFFIX, alexametrics.com, REJECT
+DOMAIN-KEYWORD, in-page-push, REJECT
 
 
 

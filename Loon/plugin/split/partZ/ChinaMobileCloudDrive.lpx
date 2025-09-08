@@ -9,7 +9,7 @@
 #############################################
 
 [Rule]
-DOMAIN, ad.mcloud.139.com
+DOMAIN, ad.mcloud.139.com, REJECT
 
 
 [Rewrite]

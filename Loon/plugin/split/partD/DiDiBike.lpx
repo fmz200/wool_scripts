@@ -9,9 +9,9 @@
 #############################################
 
 [Rule]
-# 支付界面图片有误杀
-#DOMAIN-KEYWORD, pt-starimg.didistatic.com
-IP-CIDR, 203.107.1.1/24, no-resolve
+# 支付界面图片有误杀, REJECT
+#DOMAIN-KEYWORD, pt-starimg.didistatic.com, REJECT
+IP-CIDR, 203.107.1.1/24, no-resolve, REJECT
 
 
 [Rewrite]

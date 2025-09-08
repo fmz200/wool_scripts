@@ -9,6 +9,6 @@
 #############################################
 
 [Rule]
-DOMAIN, dispatcher.360in.com
-DOMAIN, ad.360in.com
-DOMAIN, exp.360in.com
+DOMAIN, dispatcher.360in.com, REJECT
+DOMAIN, ad.360in.com, REJECT
+DOMAIN, exp.360in.com, REJECT

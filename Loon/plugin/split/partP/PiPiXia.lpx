@@ -9,7 +9,7 @@
 #############################################
 
 [Rule]
-# 推荐视频不能预览
-DOMAIN-KEYWORD,log-api.pangolin-sdk-toutiao-b.com
-DOMAIN-KEYWORD,log-api.pangolin-sdk-toutiao.com
-DOMAIN-KEYWORD,api-access.pangolin-sdk-toutiao.com
+# 推荐视频不能预览, REJECT
+DOMAIN-KEYWORD,log-api.pangolin-sdk-toutiao-b.com, REJECT
+DOMAIN-KEYWORD,log-api.pangolin-sdk-toutiao.com, REJECT
+DOMAIN-KEYWORD,api-access.pangolin-sdk-toutiao.com, REJECT

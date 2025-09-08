@@ -9,7 +9,7 @@
 #############################################
 
 [Rule]
-DOMAIN-KEYWORD,talk.bz.getui.com
+DOMAIN-KEYWORD,talk.bz.getui.com, REJECT
 
 
 [Rewrite]

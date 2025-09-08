@@ -9,6 +9,6 @@
 #############################################
 
 [Rule]
-DOMAIN, richmanapi.jxedt.com
-DOMAIN, richmanmain.jxedt.com
-DOMAIN, richmanrules.jxedt.com
+DOMAIN, richmanapi.jxedt.com, REJECT
+DOMAIN, richmanmain.jxedt.com, REJECT
+DOMAIN, richmanrules.jxedt.com, REJECT

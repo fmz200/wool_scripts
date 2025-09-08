@@ -9,7 +9,7 @@
 #############################################
 
 [Rule]
-DOMAIN, sdkconfig.ad.xiaomi.com
+DOMAIN, sdkconfig.ad.xiaomi.com, REJECT
 
 
 [Rewrite]

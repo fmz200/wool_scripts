@@ -12,8 +12,8 @@
 jhsh_enable = switch,true,false,tag=建行生活-脚本开关
 
 [Rule]
-# 内置饿了么外卖弹窗
-DOMAIN, o2o-ad-log-gateway.alibaba.com
+# 内置饿了么外卖弹窗, REJECT
+DOMAIN, o2o-ad-log-gateway.alibaba.com, REJECT
 
 
 

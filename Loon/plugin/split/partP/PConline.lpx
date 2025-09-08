@@ -9,9 +9,9 @@
 #############################################
 
 [Rule]
-DOMAIN, ad-analysis.pconline.com.cn
-DOMAIN, iad0ssl.pcauto.com.cn
-DOMAIN, iad0ssl.pconline.com.cn
-DOMAIN, imgad0.pcauto.com.cn
-DOMAIN, imgad0.pconline.com.cn
-DOMAIN, ivy.pchouse.com.cn
+DOMAIN, ad-analysis.pconline.com.cn, REJECT
+DOMAIN, iad0ssl.pcauto.com.cn, REJECT
+DOMAIN, iad0ssl.pconline.com.cn, REJECT
+DOMAIN, imgad0.pcauto.com.cn, REJECT
+DOMAIN, imgad0.pconline.com.cn, REJECT
+DOMAIN, ivy.pchouse.com.cn, REJECT

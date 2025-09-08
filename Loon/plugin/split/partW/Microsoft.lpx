@@ -9,9 +9,9 @@
 #############################################
 
 [Rule]
-DOMAIN-SUFFIX,ads.msn.com
-DOMAIN-SUFFIX,ads1.msn.com
-DOMAIN-SUFFIX,ads2.msn.com
-DOMAIN-SUFFIX,bingads.microsoft.com
-DOMAIN-SUFFIX,rads.msn.com
-DOMAIN, mobileads.msn.com
+DOMAIN-SUFFIX,ads.msn.com, REJECT
+DOMAIN-SUFFIX,ads1.msn.com, REJECT
+DOMAIN-SUFFIX,ads2.msn.com, REJECT
+DOMAIN-SUFFIX,bingads.microsoft.com, REJECT
+DOMAIN-SUFFIX,rads.msn.com, REJECT
+DOMAIN, mobileads.msn.com, REJECT

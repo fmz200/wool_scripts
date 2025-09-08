@@ -9,8 +9,8 @@
 #############################################
 
 [Rule]
-DOMAIN, adsp.xunlei.com
-DOMAIN, etl.xlmc.sandai.net
+DOMAIN, adsp.xunlei.com, REJECT
+DOMAIN, etl.xlmc.sandai.net, REJECT
 
 
 [Rewrite]

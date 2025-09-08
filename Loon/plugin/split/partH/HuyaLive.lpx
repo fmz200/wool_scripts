@@ -9,13 +9,13 @@
 #############################################
 
 [Rule]
-# 开屏广告
-DOMAIN, pp-cdnfile2pcdn.msstatic.com
-DOMAIN, livewebbs2pcdn.msstatic.com
-DOMAIN, huyafile.msstatic.com
-DOMAIN, livewebbs2.msstatic.com
-DOMAIN, business.msstatic.com
-DOMAIN-SUFFIX,v1d.szbdyd.com
+# 开屏广告, REJECT
+DOMAIN, pp-cdnfile2pcdn.msstatic.com, REJECT
+DOMAIN, livewebbs2pcdn.msstatic.com, REJECT
+DOMAIN, huyafile.msstatic.com, REJECT
+DOMAIN, livewebbs2.msstatic.com, REJECT
+DOMAIN, business.msstatic.com, REJECT
+DOMAIN-SUFFIX,v1d.szbdyd.com, REJECT
 
 
 [Rewrite]

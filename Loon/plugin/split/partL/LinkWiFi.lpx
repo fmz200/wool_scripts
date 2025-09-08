@@ -9,6 +9,6 @@
 #############################################
 
 [Rule]
-DOMAIN, a.wkanx.com
-DOMAIN, cwx.lianwangtech.com
-DOMAIN, c1wx.lianwangtech.com
+DOMAIN, a.wkanx.com, REJECT
+DOMAIN, cwx.lianwangtech.com, REJECT
+DOMAIN, c1wx.lianwangtech.com, REJECT

@@ -9,9 +9,9 @@
 #############################################
 
 [Rule]
-DOMAIN, ad.zijieapi.com
-DOMAIN, applog.zijieapi.com
-DOMAIN-SUFFIX,-normal-lq.zijieapi.com
+DOMAIN, ad.zijieapi.com, REJECT
+DOMAIN, applog.zijieapi.com, REJECT
+DOMAIN-SUFFIX,-normal-lq.zijieapi.com, REJECT
 
 
 [Rewrite]

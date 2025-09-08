@@ -12,13 +12,13 @@
 bddutpba_enable = switch,true,false,tag=百度贴吧-脚本开关
 
 [Rule]
-# 屏蔽域名dns查询
-IP-CIDR, 180.76.76.200/32, no-resolve
-DOMAIN-KEYWORD,api.sobot.com
-DOMAIN-SUFFIX,cm.ad.bilibili.com
-DOMAIN-SUFFIX,cm.adcommon.bilibili.com
-DOMAIN-SUFFIX,cm.game.bilibili.com
-DOMAIN-SUFFIX,cm.track.biligame.bilibili.com
+# 屏蔽域名dns查询, REJECT
+IP-CIDR, 180.76.76.200/32, no-resolve, REJECT
+DOMAIN-KEYWORD,api.sobot.com, REJECT
+DOMAIN-SUFFIX,cm.ad.bilibili.com, REJECT
+DOMAIN-SUFFIX,cm.adcommon.bilibili.com, REJECT
+DOMAIN-SUFFIX,cm.game.bilibili.com, REJECT
+DOMAIN-SUFFIX,cm.track.biligame.bilibili.com, REJECT
 
 
 [Script]

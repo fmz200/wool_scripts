@@ -9,14 +9,14 @@
 #############################################
 
 [Rule]
-DOMAIN, flowplus.meituan.net
-DOMAIN-SUFFIX,analytics.meituan.net
-DOMAIN-SUFFIX,meituan.xn
-DOMAIN-SUFFIX,meituan.yoga
-DOMAIN-SUFFIX,meituangov.cn
-DOMAIN-SUFFIX,report.meituan.com
-DOMAIN-SUFFIX,wmlog.meituan.com
-DOMAIN-SUFFIX,ad.e.waimai.sankuai.com
-DOMAIN-SUFFIX,mads.meituan.com
-DOMAIN-SUFFIX,dreport.meituan.net
-DOMAIN-SUFFIX,d.meituan.net
+DOMAIN, flowplus.meituan.net, REJECT
+DOMAIN-SUFFIX,analytics.meituan.net, REJECT
+DOMAIN-SUFFIX,meituan.xn, REJECT
+DOMAIN-SUFFIX,meituan.yoga, REJECT
+DOMAIN-SUFFIX,meituangov.cn, REJECT
+DOMAIN-SUFFIX,report.meituan.com, REJECT
+DOMAIN-SUFFIX,wmlog.meituan.com, REJECT
+DOMAIN-SUFFIX,ad.e.waimai.sankuai.com, REJECT
+DOMAIN-SUFFIX,mads.meituan.com, REJECT
+DOMAIN-SUFFIX,dreport.meituan.net, REJECT
+DOMAIN-SUFFIX,d.meituan.net, REJECT

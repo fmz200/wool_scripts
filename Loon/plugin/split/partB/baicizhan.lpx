@@ -9,5 +9,5 @@
 #############################################
 
 [Rule]
-DOMAIN, advertise.baicizhan.com
-DOMAIN, advertise.baicizhan.org
+DOMAIN, advertise.baicizhan.com, REJECT
+DOMAIN, advertise.baicizhan.org, REJECT

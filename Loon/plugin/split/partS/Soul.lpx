@@ -12,15 +12,15 @@
 soul_enable = switch,true,false,tag=Soul-脚本开关
 
 [Rule]
-DOMAIN, soul-ad.soulapp.cn
-DOMAIN, ad-r.soulapp.cn
-DOMAIN, ad-reward.soulapp.cn
-DOMAIN-SUFFIX,cdn.soulapp.cn
-IP-CIDR, 47.56.131.76/32, no-resolve
-IP-CIDR, 47.97.215.55/32, no-resolve
-IP-CIDR, 47.99.42.29/32, no-resolve
-IP-CIDR, 120.27.235.201/32, no-resolve
-IP-CIDR, 121.196.197.147/32, no-resolve
+DOMAIN, soul-ad.soulapp.cn, REJECT
+DOMAIN, ad-r.soulapp.cn, REJECT
+DOMAIN, ad-reward.soulapp.cn, REJECT
+DOMAIN-SUFFIX,cdn.soulapp.cn, REJECT
+IP-CIDR, 47.56.131.76/32, no-resolve, REJECT
+IP-CIDR, 47.97.215.55/32, no-resolve, REJECT
+IP-CIDR, 47.99.42.29/32, no-resolve, REJECT
+IP-CIDR, 120.27.235.201/32, no-resolve, REJECT
+IP-CIDR, 121.196.197.147/32, no-resolve, REJECT
 
 
 [Rewrite]

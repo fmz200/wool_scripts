@@ -9,5 +9,5 @@
 #############################################
 
 [Rule]
-DOMAIN, adsfs.oppomobile.com
-DOMAIN-SUFFIX,ads.oppomobile.com
+DOMAIN, adsfs.oppomobile.com, REJECT
+DOMAIN-SUFFIX,ads.oppomobile.com, REJECT

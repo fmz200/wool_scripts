@@ -9,6 +9,6 @@
 #############################################
 
 [Rule]
-DOMAIN, adv-adlog.variflight.com
-DOMAIN, adv-ads.variflight.com
-DOMAIN, app-ad.variflight.com
+DOMAIN, adv-adlog.variflight.com, REJECT
+DOMAIN, adv-ads.variflight.com, REJECT
+DOMAIN, app-ad.variflight.com, REJECT

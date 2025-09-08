@@ -9,6 +9,6 @@
 #############################################
 
 [Rule]
-DOMAIN, acdn.adnxs.com
-DOMAIN, mediation.adnxs.com
-DOMAIN, sin3-ib.adnxs.com
+DOMAIN, acdn.adnxs.com, REJECT
+DOMAIN, mediation.adnxs.com, REJECT
+DOMAIN, sin3-ib.adnxs.com, REJECT

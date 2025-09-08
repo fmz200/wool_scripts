@@ -9,14 +9,14 @@
 #############################################
 
 [Rule]
-DOMAIN-KEYWORD,fds.api.moji.com
-DOMAIN-KEYWORD,me.api.moji.com
-DOMAIN-KEYWORD,android.bugly.qq.com
-DOMAIN-KEYWORD,av1.xdrig.com
-DOMAIN-KEYWORD,adash.man.aliyuncs.com
-DOMAIN-KEYWORD,v1.log.moji.com
-DOMAIN-KEYWORD,ad.api.moji.com
-DOMAIN, ad.api.moji.com
-DOMAIN, adlaunch.moji.com
-DOMAIN, ads.mojicdn.com
-DOMAIN, v1.log.moji.com
+DOMAIN-KEYWORD,fds.api.moji.com, REJECT
+DOMAIN-KEYWORD,me.api.moji.com, REJECT
+DOMAIN-KEYWORD,android.bugly.qq.com, REJECT
+DOMAIN-KEYWORD,av1.xdrig.com, REJECT
+DOMAIN-KEYWORD,adash.man.aliyuncs.com, REJECT
+DOMAIN-KEYWORD,v1.log.moji.com, REJECT
+DOMAIN-KEYWORD,ad.api.moji.com, REJECT
+DOMAIN, ad.api.moji.com, REJECT
+DOMAIN, adlaunch.moji.com, REJECT
+DOMAIN, ads.mojicdn.com, REJECT
+DOMAIN, v1.log.moji.com, REJECT

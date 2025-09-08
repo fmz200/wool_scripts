@@ -9,5 +9,5 @@
 #############################################
 
 [Rule]
-#DOMAIN-suffix, applovin.com
-#DOMAIN-suffix, applvn.com
+#DOMAIN-suffix, applovin.com, REJECT
+#DOMAIN-suffix, applvn.com, REJECT

@@ -9,6 +9,6 @@
 #############################################
 
 [Rule]
-DOMAIN, js.users.51.la
-DOMAIN, mc.51.la
-DOMAIN, wc.51.la
+DOMAIN, js.users.51.la, REJECT
+DOMAIN, mc.51.la, REJECT
+DOMAIN, wc.51.la, REJECT

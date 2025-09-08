@@ -9,4 +9,4 @@
 #############################################
 
 [Rule]
-DOMAIN-SUFFIX,tappx.com
+DOMAIN-SUFFIX,tappx.com, REJECT

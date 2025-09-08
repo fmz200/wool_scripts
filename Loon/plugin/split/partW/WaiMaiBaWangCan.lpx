@@ -9,6 +9,6 @@
 #############################################
 
 [Rule]
-# 去开屏 
-DOMAIN-SUFFIX, ad.gameley.com
-DOMAIN-SUFFIX, zlsdk.1rtb.net
+# 去开屏 , REJECT
+DOMAIN-SUFFIX, ad.gameley.com, REJECT
+DOMAIN-SUFFIX, zlsdk.1rtb.net, REJECT

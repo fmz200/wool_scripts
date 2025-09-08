@@ -9,11 +9,11 @@
 #############################################
 
 [Rule]
-DOMAIN-KEYWORD,cm-10-134.getui.com
-DOMAIN-KEYWORD,sdk.open.talk.getui.com
-DOMAIN-KEYWORD,cm-10-35.getui.com
-DOMAIN-KEYWORD,c-hzgt2.getui.com
-DOMAIN-SUFFIX,sdk.open.talk.igexin.com
+DOMAIN-KEYWORD,cm-10-134.getui.com, REJECT
+DOMAIN-KEYWORD,sdk.open.talk.getui.com, REJECT
+DOMAIN-KEYWORD,cm-10-35.getui.com, REJECT
+DOMAIN-KEYWORD,c-hzgt2.getui.com, REJECT
+DOMAIN-SUFFIX,sdk.open.talk.igexin.com, REJECT
 
 
 [Rewrite]

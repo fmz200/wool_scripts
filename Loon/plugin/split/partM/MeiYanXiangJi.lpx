@@ -9,6 +9,6 @@
 #############################################
 
 [Rule]
-# 去首页和轮播广告
-DOMAIN, adui.tg.meitu.com
-DOMAIN, aaid.uyunad.com
+# 去首页和轮播广告, REJECT
+DOMAIN, adui.tg.meitu.com, REJECT
+DOMAIN, aaid.uyunad.com, REJECT

@@ -9,10 +9,10 @@
 #############################################
 
 [Rule]
-DOMAIN-SUFFIX,ad.sohu.com
-DOMAIN-SUFFIX,ads.sohu.com
-DOMAIN-SUFFIX,aty.sohu.com
-DOMAIN, hui.sohu.com
+DOMAIN-SUFFIX,ad.sohu.com, REJECT
+DOMAIN-SUFFIX,ads.sohu.com, REJECT
+DOMAIN-SUFFIX,aty.sohu.com, REJECT
+DOMAIN, hui.sohu.com, REJECT
 
 
 [Rewrite]

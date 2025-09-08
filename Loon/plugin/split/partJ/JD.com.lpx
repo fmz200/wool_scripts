@@ -12,21 +12,21 @@
 jkds_enable = switch,true,false,tag=京东-脚本开关
 
 [Rule]
-DOMAIN-SUFFIX,jzt.jd.com
-DOMAIN-SUFFIX,img-x.jd.com
-DOMAIN-SUFFIX,du.jd.com
-DOMAIN-SUFFIX,c-nfa.jd.com
-DOMAIN-SUFFIX,cm.jd.com
-DOMAIN-SUFFIX,jddebug.com
-DOMAIN-KEYWORD,policy.jd.com
-DOMAIN-KEYWORD,kepler.jd.com
-DOMAIN-KEYWORD,bdsp.x.jd.com
-DOMAIN-KEYWORD,keplerapi.jd.com
-DOMAIN-KEYWORD,mapi.m.jd.com
-# 屏蔽DNS
-DOMAIN, dns.jd.com
-IP-CIDR, 101.124.19.122/32, no-resolve
-IP-CIDR6,2402:db40:5100:1011::5/128, no-resolve
+DOMAIN-SUFFIX,jzt.jd.com, REJECT
+DOMAIN-SUFFIX,img-x.jd.com, REJECT
+DOMAIN-SUFFIX,du.jd.com, REJECT
+DOMAIN-SUFFIX,c-nfa.jd.com, REJECT
+DOMAIN-SUFFIX,cm.jd.com, REJECT
+DOMAIN-SUFFIX,jddebug.com, REJECT
+DOMAIN-KEYWORD,policy.jd.com, REJECT
+DOMAIN-KEYWORD,kepler.jd.com, REJECT
+DOMAIN-KEYWORD,bdsp.x.jd.com, REJECT
+DOMAIN-KEYWORD,keplerapi.jd.com, REJECT
+DOMAIN-KEYWORD,mapi.m.jd.com, REJECT
+# 屏蔽DNS, REJECT
+DOMAIN, dns.jd.com, REJECT
+IP-CIDR, 101.124.19.122/32, no-resolve, REJECT
+IP-CIDR6,2402:db40:5100:1011::5/128, no-resolve, REJECT
 
 
 [Rewrite]

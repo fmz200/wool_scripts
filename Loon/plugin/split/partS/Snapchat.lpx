@@ -9,5 +9,5 @@
 #############################################
 
 [Rule]
-DOMAIN, ads.snapchat.com
-DOMAIN, adsapi.snapchat.com
+DOMAIN, ads.snapchat.com, REJECT
+DOMAIN, adsapi.snapchat.com, REJECT

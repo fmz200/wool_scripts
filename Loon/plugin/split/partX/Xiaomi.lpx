@@ -9,5 +9,5 @@
 #############################################
 
 [Rule]
-DOMAIN, data.mistat.xiaomi.com
-DOMAIN, tracking.intl.miui.com
+DOMAIN, data.mistat.xiaomi.com, REJECT
+DOMAIN, tracking.intl.miui.com, REJECT

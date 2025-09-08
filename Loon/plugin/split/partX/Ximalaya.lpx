@@ -9,11 +9,11 @@
 #############################################
 
 [Rule]
-DOMAIN, adse.ximalaya.com
-DOMAIN, adsehera.ximalaya.com
-DOMAIN, adse.wsa.ximalaya.com
-DOMAIN, adbehavior.ximalaya.com
-DOMAIN, adbehavior.wsa.ximalaya.com
+DOMAIN, adse.ximalaya.com, REJECT
+DOMAIN, adsehera.ximalaya.com, REJECT
+DOMAIN, adse.wsa.ximalaya.com, REJECT
+DOMAIN, adbehavior.ximalaya.com, REJECT
+DOMAIN, adbehavior.wsa.ximalaya.com, REJECT
 
 
 [Rewrite]

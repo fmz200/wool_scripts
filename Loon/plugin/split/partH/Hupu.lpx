@@ -9,9 +9,9 @@
 #############################################
 
 [Rule]
-DOMAIN, adx.hupu.com
-DOMAIN, adx-api.hupu.com
-DOMAIN, goblin.hupu.com
+DOMAIN, adx.hupu.com, REJECT
+DOMAIN, adx-api.hupu.com, REJECT
+DOMAIN, goblin.hupu.com, REJECT
 
 
 [Rewrite]

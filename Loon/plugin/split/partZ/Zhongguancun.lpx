@@ -9,5 +9,5 @@
 #############################################
 
 [Rule]
-DOMAIN, apppv.zol.com.cn
-DOMAIN, pvnapp.zol.com.cn
+DOMAIN, apppv.zol.com.cn, REJECT
+DOMAIN, pvnapp.zol.com.cn, REJECT

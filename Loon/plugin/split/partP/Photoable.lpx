@@ -9,5 +9,5 @@
 #############################################
 
 [Rule]
-DOMAIN, regist.fotoable.com
-DOMAIN, cdn.adapi.fotoable.com
+DOMAIN, regist.fotoable.com, REJECT
+DOMAIN, cdn.adapi.fotoable.com, REJECT

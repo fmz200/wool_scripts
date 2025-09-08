@@ -9,10 +9,10 @@
 #############################################
 
 [Rule]
-DOMAIN-SUFFIX,deliver.ifeng.com
-DOMAIN, api.newad.ifeng.com
-DOMAIN, ifengad.3g.ifeng.com
+DOMAIN-SUFFIX,deliver.ifeng.com, REJECT
+DOMAIN, api.newad.ifeng.com, REJECT
+DOMAIN, ifengad.3g.ifeng.com, REJECT
 
-DOMAIN-SUFFIX,gozendata.com
-DOMAIN-SUFFIX,gzads.com
-DOMAIN-SUFFIX,gz-data.com
+DOMAIN-SUFFIX,gozendata.com, REJECT
+DOMAIN-SUFFIX,gzads.com, REJECT
+DOMAIN-SUFFIX,gz-data.com, REJECT

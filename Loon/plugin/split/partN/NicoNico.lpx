@@ -9,4 +9,4 @@
 #############################################
 
 [Rule]
-DOMAIN, ads.nicovideo.jp
+DOMAIN, ads.nicovideo.jp, REJECT

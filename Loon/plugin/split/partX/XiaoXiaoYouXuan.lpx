@@ -9,18 +9,18 @@
 #############################################
 
 [Rule]
-DOMAIN-SUFFIX, api-htp.beizi.biz
-DOMAIN-SUFFIX, yfanads.com
-DOMAIN-SUFFIX, 1rtb.net
-DOMAIN-SUFFIX, adwangmai.com
-DOMAIN-SUFFIX, yunxinfw.com
-DOMAIN-SUFFIX, bridgeoos.com
-DOMAIN-SUFFIX, cloooud.com
-DOMAIN-SUFFIX, baihemob.com
-DOMAIN-SUFFIX, ad.bwton.com
-DOMAIN-SUFFIX, api.wxcjgg.cn
-DOMAIN-SUFFIX, shunchangzhixing.com
-IP-CIDR, 114.132.165.205/32
+DOMAIN-SUFFIX, api-htp.beizi.biz, REJECT
+DOMAIN-SUFFIX, yfanads.com, REJECT
+DOMAIN-SUFFIX, 1rtb.net, REJECT
+DOMAIN-SUFFIX, adwangmai.com, REJECT
+DOMAIN-SUFFIX, yunxinfw.com, REJECT
+DOMAIN-SUFFIX, bridgeoos.com, REJECT
+DOMAIN-SUFFIX, cloooud.com, REJECT
+DOMAIN-SUFFIX, baihemob.com, REJECT
+DOMAIN-SUFFIX, ad.bwton.com, REJECT
+DOMAIN-SUFFIX, api.wxcjgg.cn, REJECT
+DOMAIN-SUFFIX, shunchangzhixing.com, REJECT
+IP-CIDR, 114.132.165.205/32, REJECT
 
 
 [Rewrite]

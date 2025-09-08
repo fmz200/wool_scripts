@@ -9,6 +9,6 @@
 #############################################
 
 [Rule]
-DOMAIN, ad.qingting.fm
-DOMAIN, adlaunch.qingting.fm
-DOMAIN, ad-cdn.qingting.fm
+DOMAIN, ad.qingting.fm, REJECT
+DOMAIN, adlaunch.qingting.fm, REJECT
+DOMAIN, ad-cdn.qingting.fm, REJECT

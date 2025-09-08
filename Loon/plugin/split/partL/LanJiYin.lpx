@@ -9,8 +9,8 @@
 #############################################
 
 [Rule]
-# 弹窗还在，需要手动关闭
-DOMAIN-KEYWORD,medicine.lanjiyin.com.cn
+# 弹窗还在，需要手动关闭, REJECT
+DOMAIN-KEYWORD,medicine.lanjiyin.com.cn, REJECT
 
 
 [Rewrite]

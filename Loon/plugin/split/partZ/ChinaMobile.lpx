@@ -9,7 +9,7 @@
 #############################################
 
 [Rule]
-IP-CIDR, 120.240.95.37/32, no-resolve
+IP-CIDR, 120.240.95.37/32, no-resolve, REJECT
 
 
 [Rewrite]

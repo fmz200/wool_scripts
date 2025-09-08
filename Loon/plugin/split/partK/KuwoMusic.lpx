@@ -12,22 +12,22 @@
 kuwoybyt_enable = switch,true,false,tag=酷我音乐-脚本开关
 
 [Rule]
-DOMAIN, mobilead.kuwo.cn
-DOMAIN, rich.kuwo.cn
-DOMAIN-KEYWORD,rich.kuwo.cn
-DOMAIN-KEYWORD,mobilead.kuwo.cn
-DOMAIN-SUFFIX,c.kuwo.cn
-DOMAIN-SUFFIX,deliver.kuwo.cn
-DOMAIN-SUFFIX,game.kuwo.cn
-DOMAIN-SUFFIX,kuwoyy.com
-DOMAIN-SUFFIX,kwmsg.kuwo.cn
-DOMAIN-SUFFIX,msclick2.kuwo.cn
-DOMAIN-SUFFIX,msphoneclick.kuwo.cn
-DOMAIN-SUFFIX,updatepage.kuwo.cn
-DOMAIN-SUFFIX,wa.kuwo.cn
-DOMAIN-SUFFIX,webstat.kuwo.cn
-DOMAIN-SUFFIX,mobilead.kuwo.cn
-DOMAIN-SUFFIX,rich.kuwo.cn
+DOMAIN, mobilead.kuwo.cn, REJECT
+DOMAIN, rich.kuwo.cn, REJECT
+DOMAIN-KEYWORD,rich.kuwo.cn, REJECT
+DOMAIN-KEYWORD,mobilead.kuwo.cn, REJECT
+DOMAIN-SUFFIX,c.kuwo.cn, REJECT
+DOMAIN-SUFFIX,deliver.kuwo.cn, REJECT
+DOMAIN-SUFFIX,game.kuwo.cn, REJECT
+DOMAIN-SUFFIX,kuwoyy.com, REJECT
+DOMAIN-SUFFIX,kwmsg.kuwo.cn, REJECT
+DOMAIN-SUFFIX,msclick2.kuwo.cn, REJECT
+DOMAIN-SUFFIX,msphoneclick.kuwo.cn, REJECT
+DOMAIN-SUFFIX,updatepage.kuwo.cn, REJECT
+DOMAIN-SUFFIX,wa.kuwo.cn, REJECT
+DOMAIN-SUFFIX,webstat.kuwo.cn, REJECT
+DOMAIN-SUFFIX,mobilead.kuwo.cn, REJECT
+DOMAIN-SUFFIX,rich.kuwo.cn, REJECT
 
 
 

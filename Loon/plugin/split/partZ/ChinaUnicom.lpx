@@ -9,7 +9,7 @@
 #############################################
 
 [Rule]
-DOMAIN-SUFFIX,m1.ad.10010.com
+DOMAIN-SUFFIX,m1.ad.10010.com, REJECT
 
 
 [Rewrite]

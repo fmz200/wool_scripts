@@ -12,7 +12,7 @@
 meiyou_enable = switch,true,false,tag=美柚-脚本开关
 
 [Rule]
-DOMAIN,ad.seeyouyima.com
+DOMAIN,ad.seeyouyima.com, REJECT
 
 
 [Rewrite]

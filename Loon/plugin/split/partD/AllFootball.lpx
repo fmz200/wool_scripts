@@ -9,7 +9,7 @@
 #############################################
 
 [Rule]
-DOMAIN-KEYWORD,apimg.qunliao.info
+DOMAIN-KEYWORD,apimg.qunliao.info, REJECT
 
 
 [Rewrite]

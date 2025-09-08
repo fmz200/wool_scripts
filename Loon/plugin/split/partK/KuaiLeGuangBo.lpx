@@ -9,14 +9,14 @@
 #############################################
 
 [Rule]
-DOMAIN, ad.hpplay.cn
-DOMAIN, adc.hpplay.cn
-DOMAIN, adcdn.hpplay.cn
-DOMAIN, adeng.hpplay.cn
-DOMAIN, pin.hpplay.cn
-DOMAIN, rp.hpplay.cn
-DOMAIN, rpt.hpplay.cn
-DOMAIN-SUFFIX,e.kuaishou.com
-DOMAIN-SUFFIX,cm.downloader.commercial.kuaishou.com
-DOMAIN-SUFFIX,cm.ad.gifshow.com
-DOMAIN-SUFFIX,cm.kwad.com
+DOMAIN, ad.hpplay.cn, REJECT
+DOMAIN, adc.hpplay.cn, REJECT
+DOMAIN, adcdn.hpplay.cn, REJECT
+DOMAIN, adeng.hpplay.cn, REJECT
+DOMAIN, pin.hpplay.cn, REJECT
+DOMAIN, rp.hpplay.cn, REJECT
+DOMAIN, rpt.hpplay.cn, REJECT
+DOMAIN-SUFFIX,e.kuaishou.com, REJECT
+DOMAIN-SUFFIX,cm.downloader.commercial.kuaishou.com, REJECT
+DOMAIN-SUFFIX,cm.ad.gifshow.com, REJECT
+DOMAIN-SUFFIX,cm.kwad.com, REJECT

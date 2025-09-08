@@ -12,35 +12,35 @@
 mhgotv_enable = switch,true,false,tag=芒果TV-脚本开关
 
 [Rule]
-DOMAIN, dflow.bz.mgtv.com
-DOMAIN, encounter.bz.mgtv.com
-DOMAIN, floor.bz.mgtv.com
-DOMAIN, img.da.mgtv.com
-DOMAIN, layer.bz.mgtv.com
-DOMAIN, mob.bz.mgtv.com
-DOMAIN, mobile.da.mgtv.com
-DOMAIN, rc-topic-api.bz.mgtv.com
-DOMAIN, v2.da.mgtv.com
-DOMAIN, video.da.mgtv.com
-DOMAIN, vip.bz.mgtv.com
-DOMAIN, ys.da.mgtv.com
-DOMAIN-SUFFIX,mobile2.da.mgtv.com
-DOMAIN-SUFFIX,cdn.cmop.mgtv.com
-DOMAIN-SUFFIX,cmop.mgtv.com
-DOMAIN-SUFFIX,imgaliyun.da.mgtv.com
-DOMAIN-SUFFIX,imgaliyun.res.mgtv.com
-DOMAIN-SUFFIX,m2.da.mgtv.com
-DOMAIN-SUFFIX,mobaliyun.res.mgtv.com
-DOMAIN-SUFFIX,pc.da.mgtv.com
-DOMAIN-SUFFIX,pc1.da.mgtv.com
-DOMAIN-SUFFIX,pcvideoaliyun.titan.mgtv.com
-DOMAIN-SUFFIX,pcvideoyd.titan.mgtv.com
-DOMAIN-SUFFIX,pcweb.v1.mgtv.com
-DOMAIN-SUFFIX,py.da.mgtv.com
-DOMAIN-SUFFIX,web.da.mgtv.com
-DOMAIN-SUFFIX,x.da.mgtv.com
-DOMAIN-SUFFIX,y.da.mgtv.com
-DOMAIN-SUFFIX,da.mgtv.com
+DOMAIN, dflow.bz.mgtv.com, REJECT
+DOMAIN, encounter.bz.mgtv.com, REJECT
+DOMAIN, floor.bz.mgtv.com, REJECT
+DOMAIN, img.da.mgtv.com, REJECT
+DOMAIN, layer.bz.mgtv.com, REJECT
+DOMAIN, mob.bz.mgtv.com, REJECT
+DOMAIN, mobile.da.mgtv.com, REJECT
+DOMAIN, rc-topic-api.bz.mgtv.com, REJECT
+DOMAIN, v2.da.mgtv.com, REJECT
+DOMAIN, video.da.mgtv.com, REJECT
+DOMAIN, vip.bz.mgtv.com, REJECT
+DOMAIN, ys.da.mgtv.com, REJECT
+DOMAIN-SUFFIX,mobile2.da.mgtv.com, REJECT
+DOMAIN-SUFFIX,cdn.cmop.mgtv.com, REJECT
+DOMAIN-SUFFIX,cmop.mgtv.com, REJECT
+DOMAIN-SUFFIX,imgaliyun.da.mgtv.com, REJECT
+DOMAIN-SUFFIX,imgaliyun.res.mgtv.com, REJECT
+DOMAIN-SUFFIX,m2.da.mgtv.com, REJECT
+DOMAIN-SUFFIX,mobaliyun.res.mgtv.com, REJECT
+DOMAIN-SUFFIX,pc.da.mgtv.com, REJECT
+DOMAIN-SUFFIX,pc1.da.mgtv.com, REJECT
+DOMAIN-SUFFIX,pcvideoaliyun.titan.mgtv.com, REJECT
+DOMAIN-SUFFIX,pcvideoyd.titan.mgtv.com, REJECT
+DOMAIN-SUFFIX,pcweb.v1.mgtv.com, REJECT
+DOMAIN-SUFFIX,py.da.mgtv.com, REJECT
+DOMAIN-SUFFIX,web.da.mgtv.com, REJECT
+DOMAIN-SUFFIX,x.da.mgtv.com, REJECT
+DOMAIN-SUFFIX,y.da.mgtv.com, REJECT
+DOMAIN-SUFFIX,da.mgtv.com, REJECT
 
 
 

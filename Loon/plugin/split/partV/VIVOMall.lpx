@@ -9,4 +9,4 @@
 #############################################
 
 [Rule]
-DOMAIN-KEYWORD,paradisestatic.vivo.com.cn
+DOMAIN-KEYWORD,paradisestatic.vivo.com.cn, REJECT

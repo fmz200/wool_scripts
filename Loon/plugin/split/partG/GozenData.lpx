@@ -9,6 +9,6 @@
 #############################################
 
 [Rule]
-DOMAIN-SUFFIX, gozendata.com
-DOMAIN-SUFFIX, gzads.com
-DOMAIN-SUFFIX, gz-data.com
+DOMAIN-SUFFIX, gozendata.com, REJECT
+DOMAIN-SUFFIX, gzads.com, REJECT
+DOMAIN-SUFFIX, gz-data.com, REJECT

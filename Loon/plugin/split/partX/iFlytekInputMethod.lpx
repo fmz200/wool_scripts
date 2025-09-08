@@ -9,7 +9,7 @@
 #############################################
 
 [Rule]
-DOMAIN-KEYWORD,ossp.voicecloud.cn
-DOMAIN-KEYWORD,bj.imp.voiceads.cn
-DOMAIN-KEYWORD,m.panda.voiceads.cn
-DOMAIN-KEYWORD,iflyad.bj.openstorage.cn
+DOMAIN-KEYWORD,ossp.voicecloud.cn, REJECT
+DOMAIN-KEYWORD,bj.imp.voiceads.cn, REJECT
+DOMAIN-KEYWORD,m.panda.voiceads.cn, REJECT
+DOMAIN-KEYWORD,iflyad.bj.openstorage.cn, REJECT

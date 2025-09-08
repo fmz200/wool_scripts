@@ -5,6 +5,7 @@
     "axios": "^1.7.8",
     "crypto-js": "^4.2.0",
     "dotenv": "^16.3.2",
+    "fs-extra": "^11.3.1",
     "got": "^14.0.0",
     "https-proxy-agent": "^7.0.2",
     "node-fetch": "^3.3.1",

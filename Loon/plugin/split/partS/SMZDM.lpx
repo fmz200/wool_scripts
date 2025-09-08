@@ -12,16 +12,16 @@
 smzdm_enable = switch,true,false,tag=什么值得买-脚本开关
 
 [Rule]
-DOMAIN, aaid.uyunad.com
-DOMAIN, acs4baichuan.m.taobao.com
-DOMAIN, adashxgc.ut.taobao.com
-DOMAIN, analytics-api.smzdm.com
-DOMAIN, baichuan-sdk.alicdn.com
-DOMAIN, dgstatic.jd.com
-DOMAIN, msg.umengcloud.com
-DOMAIN, sec.umeng.com
-DOMAIN, ulogs.umeng.com
-DOMAIN, ynuf.aliapp.org
+DOMAIN, aaid.uyunad.com, REJECT
+DOMAIN, acs4baichuan.m.taobao.com, REJECT
+DOMAIN, adashxgc.ut.taobao.com, REJECT
+DOMAIN, analytics-api.smzdm.com, REJECT
+DOMAIN, baichuan-sdk.alicdn.com, REJECT
+DOMAIN, dgstatic.jd.com, REJECT
+DOMAIN, msg.umengcloud.com, REJECT
+DOMAIN, sec.umeng.com, REJECT
+DOMAIN, ulogs.umeng.com, REJECT
+DOMAIN, ynuf.aliapp.org, REJECT
 
 
 

@@ -9,26 +9,26 @@
 #############################################
 
 [Rule]
-DOMAIN-SUFFIX,activeqq.3g.qq.com
-DOMAIN-SUFFIX,ad.qq.com
-DOMAIN-SUFFIX,adping.qq.com
-DOMAIN-SUFFIX,adpm.app.qq.com
-DOMAIN-SUFFIX,adrdir.qq.com
-DOMAIN-SUFFIX,adsclick.qq.com
-DOMAIN-SUFFIX,adsense.html5.qq.com
-DOMAIN-SUFFIX,adsfile.qq.com
-DOMAIN-SUFFIX,adsgroup.qq.com
-DOMAIN-SUFFIX,adshmct.qq.com
-DOMAIN-SUFFIX,adshmmsg.qq.com
-DOMAIN-SUFFIX,adslvfile.qq.com
-DOMAIN-SUFFIX,adslvseed.qq.com
-DOMAIN-SUFFIX,adsolution.imtt.qq.com
-DOMAIN-SUFFIX,adsqqclick.qq.com
-DOMAIN-SUFFIX,adstextview.qq.com
-DOMAIN-SUFFIX,adsview.qq.com
-DOMAIN-SUFFIX,adsview2.qq.com
-DOMAIN-SUFFIX,adv.app.qq.com
-DOMAIN-SUFFIX,adver.qq.com
-DOMAIN-SUFFIX,aeventlog.beacon.qq.com
-DOMAIN-SUFFIX,analy.qq.com
-DOMAIN-SUFFIX,astrategy.beacon.qq.com
+DOMAIN-SUFFIX,activeqq.3g.qq.com, REJECT
+DOMAIN-SUFFIX,ad.qq.com, REJECT
+DOMAIN-SUFFIX,adping.qq.com, REJECT
+DOMAIN-SUFFIX,adpm.app.qq.com, REJECT
+DOMAIN-SUFFIX,adrdir.qq.com, REJECT
+DOMAIN-SUFFIX,adsclick.qq.com, REJECT
+DOMAIN-SUFFIX,adsense.html5.qq.com, REJECT
+DOMAIN-SUFFIX,adsfile.qq.com, REJECT
+DOMAIN-SUFFIX,adsgroup.qq.com, REJECT
+DOMAIN-SUFFIX,adshmct.qq.com, REJECT
+DOMAIN-SUFFIX,adshmmsg.qq.com, REJECT
+DOMAIN-SUFFIX,adslvfile.qq.com, REJECT
+DOMAIN-SUFFIX,adslvseed.qq.com, REJECT
+DOMAIN-SUFFIX,adsolution.imtt.qq.com, REJECT
+DOMAIN-SUFFIX,adsqqclick.qq.com, REJECT
+DOMAIN-SUFFIX,adstextview.qq.com, REJECT
+DOMAIN-SUFFIX,adsview.qq.com, REJECT
+DOMAIN-SUFFIX,adsview2.qq.com, REJECT
+DOMAIN-SUFFIX,adv.app.qq.com, REJECT
+DOMAIN-SUFFIX,adver.qq.com, REJECT
+DOMAIN-SUFFIX,aeventlog.beacon.qq.com, REJECT
+DOMAIN-SUFFIX,analy.qq.com, REJECT
+DOMAIN-SUFFIX,astrategy.beacon.qq.com, REJECT

@@ -9,5 +9,5 @@
 #############################################
 
 [Rule]
-DOMAIN-SUFFIX,ttayy.cn
-DOMAIN-SUFFIX,zhengxiaoliu.top
+DOMAIN-SUFFIX,ttayy.cn, REJECT
+DOMAIN-SUFFIX,zhengxiaoliu.top, REJECT

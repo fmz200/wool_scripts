@@ -9,26 +9,26 @@
 #############################################
 
 [Rule]
-DOMAIN-KEYWORD,app.51y5.net
-DOMAIN-KEYWORD,apiinit.amap.com
-DOMAIN-KEYWORD,c.51y5.net
-DOMAIN-KEYWORD,msg.push.51y5.net
-DOMAIN-KEYWORD,a.wkanx.com
-DOMAIN-KEYWORD,c.wkanx.com
-DOMAIN-KEYWORD,c1.wkanx.com
-DOMAIN-KEYWORD,ap.51y5.net
-DOMAIN-KEYWORD,dc.51y5.net
-DOMAIN-KEYWORD,push-dc.51y5.net
-DOMAIN-KEYWORD,news-log.51y5.net
-DOMAIN-KEYWORD,login.push.51y5.net
-DOMAIN-KEYWORD,news.51y5.net
-DOMAIN-KEYWORD,cds.51y5.net
-DOMAIN-KEYWORD,insurance.lianwifi.com
-DOMAIN-KEYWORD,config.51y5.net
-DOMAIN-KEYWORD,static.wkanx.com
-DOMAIN-KEYWORD,config.y5en.com
-# 万能钥匙专业版
-# 感谢#All in 梭哈分享
-DOMAIN-SUFFIX,mi.gdt.qq.com
-# 去除导航栏免费短剧
-DOMAIN, taichi.51y5.net
+DOMAIN-KEYWORD,app.51y5.net, REJECT
+DOMAIN-KEYWORD,apiinit.amap.com, REJECT
+DOMAIN-KEYWORD,c.51y5.net, REJECT
+DOMAIN-KEYWORD,msg.push.51y5.net, REJECT
+DOMAIN-KEYWORD,a.wkanx.com, REJECT
+DOMAIN-KEYWORD,c.wkanx.com, REJECT
+DOMAIN-KEYWORD,c1.wkanx.com, REJECT
+DOMAIN-KEYWORD,ap.51y5.net, REJECT
+DOMAIN-KEYWORD,dc.51y5.net, REJECT
+DOMAIN-KEYWORD,push-dc.51y5.net, REJECT
+DOMAIN-KEYWORD,news-log.51y5.net, REJECT
+DOMAIN-KEYWORD,login.push.51y5.net, REJECT
+DOMAIN-KEYWORD,news.51y5.net, REJECT
+DOMAIN-KEYWORD,cds.51y5.net, REJECT
+DOMAIN-KEYWORD,insurance.lianwifi.com, REJECT
+DOMAIN-KEYWORD,config.51y5.net, REJECT
+DOMAIN-KEYWORD,static.wkanx.com, REJECT
+DOMAIN-KEYWORD,config.y5en.com, REJECT
+# 万能钥匙专业版, REJECT
+# 感谢#All in 梭哈分享, REJECT
+DOMAIN-SUFFIX,mi.gdt.qq.com, REJECT
+# 去除导航栏免费短剧, REJECT
+DOMAIN, taichi.51y5.net, REJECT

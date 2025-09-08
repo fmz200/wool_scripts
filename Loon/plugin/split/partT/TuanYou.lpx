@@ -9,4 +9,4 @@
 #############################################
 
 [Rule]
-DOMAIN-KEYWORD,img1.czb365.com
+DOMAIN-KEYWORD,img1.czb365.com, REJECT

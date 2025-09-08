@@ -9,4 +9,4 @@
 #############################################
 
 [Rule]
-DOMAIN, geo2.adobe.com
+DOMAIN, geo2.adobe.com, REJECT

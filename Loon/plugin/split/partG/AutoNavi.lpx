@@ -9,20 +9,20 @@
 #############################################
 
 [Rule]
-DOMAIN-SUFFIX,adiu.amap.com
-DOMAIN, aboard.apilocate.amap.com
-DOMAIN, apiinit.amap.com
-DOMAIN, icloud-amap.com
-DOMAIN, logs.amap.com
-DOMAIN-SUFFIX,dualstack-logs.amap.com
-DOMAIN-SUFFIX,logs.amap.com
-DOMAIN-SUFFIX,optimus-ads.amap.com
-DOMAIN-SUFFIX,page.amap.com
-DOMAIN, optimus-ads.amap.com
-DOMAIN, optimus-ads.amap.com.w.alikunlun.com
-DOMAIN-SUFFIX,shouji.sougou.com
-DOMAIN, u51.me
-DOMAIN-SUFFIX,u51.me
+DOMAIN-SUFFIX,adiu.amap.com, REJECT
+DOMAIN, aboard.apilocate.amap.com, REJECT
+DOMAIN, apiinit.amap.com, REJECT
+DOMAIN, icloud-amap.com, REJECT
+DOMAIN, logs.amap.com, REJECT
+DOMAIN-SUFFIX,dualstack-logs.amap.com, REJECT
+DOMAIN-SUFFIX,logs.amap.com, REJECT
+DOMAIN-SUFFIX,optimus-ads.amap.com, REJECT
+DOMAIN-SUFFIX,page.amap.com, REJECT
+DOMAIN, optimus-ads.amap.com, REJECT
+DOMAIN, optimus-ads.amap.com.w.alikunlun.com, REJECT
+DOMAIN-SUFFIX,shouji.sougou.com, REJECT
+DOMAIN, u51.me, REJECT
+DOMAIN-SUFFIX,u51.me, REJECT
 
 
 [Rewrite]

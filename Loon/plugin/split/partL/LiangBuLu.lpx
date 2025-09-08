@@ -9,7 +9,7 @@
 #############################################
 
 [Rule]
-DOMAIN-SUFFIX,admobile.top
+DOMAIN-SUFFIX,admobile.top, REJECT
 
 
 [Rewrite]

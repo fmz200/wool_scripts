@@ -9,7 +9,7 @@
 #############################################
 
 [Rule]
-DOMAIN, ad.51wnl-cq.com
-DOMAIN, adextra.51wnl-cq.com
-DOMAIN, log.51wnl-cq.com
-DOMAIN, r.51wnl-cq.com
+DOMAIN, ad.51wnl-cq.com, REJECT
+DOMAIN, adextra.51wnl-cq.com, REJECT
+DOMAIN, log.51wnl-cq.com, REJECT
+DOMAIN, r.51wnl-cq.com, REJECT
