@@ -501,10 +501,6 @@ DOMAIN, dispatcher.360in.com
 DOMAIN, ad.360in.com
 DOMAIN, exp.360in.com
 
-# > 车来乐
-DOMAIN, atrace.chelaile.net.cn
-DOMAIN, logs.chelaile.net.cn
-
 # > 创维
 DOMAIN-SUFFIX,hoisin.coocaa.com
 DOMAIN-SUFFIX,hoisin.coocaatv.com
@@ -2694,8 +2690,6 @@ DOMAIN-SUFFIX, cnnic.net.cn
 DOMAIN-SUFFIX, funshion.net.cn
 DOMAIN-SUFFIX, jnsz.net.cn
 DOMAIN-SUFFIX, a1.0s.net.cn
-DOMAIN-SUFFIX, atrace.chelaile.net.cn
-DOMAIN-SUFFIX, logs.chelaile.net.cn
 DOMAIN-SUFFIX, pb.funshion.net.cn
 DOMAIN-SUFFIX, f.qcwzx.net.cn
 DOMAIN-SUFFIX, dimg1.sz.net.cn

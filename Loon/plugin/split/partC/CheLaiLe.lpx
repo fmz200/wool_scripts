@@ -1,4 +1,4 @@
-#!name=车来乐
+#!name=车来了
 #!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
 #!author=奶思
 #!homepage=https://github.com/fmz200/wool_scripts
@@ -10,7 +10,7 @@
 
 [Rule]
 DOMAIN, atrace.chelaile.net.cn, REJECT
-DOMAIN, logs.chelaile.net.cn, REJECTREJECT
+DOMAIN, logs.chelaile.net.cn, REJECT
 DOMAIN, ad.chelaile.net.cn, REJECT
 
 
