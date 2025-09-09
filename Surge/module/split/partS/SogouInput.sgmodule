@@ -9,8 +9,8 @@
 #!date=2025-08-21 22:37:00
 
 [Rule]
-# DOMAIN-SUFFIX, business-cdn.shouji.sogou.com, reject, REJECT
-DOMAIN-SUFFIX,"push-service-ios.sginput.qq.com, reject",REJECT
+# DOMAIN-SUFFIX, business-cdn.shouji.sogou.com, REJECT
+DOMAIN-SUFFIX, push-service-ios.sginput.qq.com, REJECT
 
 [URL Rewrite]
 # 开屏广告

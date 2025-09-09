@@ -64,11 +64,77 @@ DOMAIN-KEYWORD, in-page-push
 
 
 # >>>>>>>>>>>>>>> ✅ 2 ✅ <<<<<<<<<<<<<<
-
+# > 2345
+DOMAIN-SUFFIX, 2345.cn
+DOMAIN-SUFFIX, 2345at.com
+DOMAIN-SUFFIX, dl.2345.com
+DOMAIN-SUFFIX, download.2345.com
+DOMAIN-SUFFIX, ggcode.2345.com
+DOMAIN-SUFFIX, houtai.2345.com
+DOMAIN-SUFFIX, jifen.2345.com
+DOMAIN-SUFFIX, minipage.2345.com
+DOMAIN-SUFFIX, wan.2345.com
+DOMAIN-SUFFIX, zhushou.2345.com
+DOMAIN-SUFFIX, tg.jifen.2345.com
+DOMAIN-SUFFIX, update.minipage.2345.com
+DOMAIN-SUFFIX, g.wan.2345.com
 
 
 # >>>>>>>>>>>>>>> ✅ 3 ✅ <<<<<<<<<<<<<<
+# > 360
+DOMAIN-SUFFIX, 3600.com
+DOMAIN-SUFFIX, 360640.com
+DOMAIN-SUFFIX, 360jiaquan.com
+DOMAIN-SUFFIX, 360safego.com
+DOMAIN-SUFFIX, 365safego.com
+DOMAIN-SUFFIX, 366safego.com
+DOMAIN-SUFFIX, pjogndc8ixoidna.360doc.cn
+DOMAIN-SUFFIX, w5sac788c1.360doc.cn
+DOMAIN-SUFFIX, 360shopping.com.cn
+DOMAIN-SUFFIX, cps.360buy.com
+DOMAIN-SUFFIX, eclick.360doc.com
+DOMAIN-SUFFIX, ad.360in.com
+DOMAIN-SUFFIX, dl.360safe.com
+DOMAIN-SUFFIX, down.360safe.com
+DOMAIN-SUFFIX, inst.360safe.com
+DOMAIN-SUFFIX, update.360safe.com
+DOMAIN-SUFFIX, kuaikan.netmon.360safe.com
+DOMAIN-SUFFIX, ini.update.360safe.com
+DOMAIN-SUFFIX, display.360totalsecurity.com
+DOMAIN-SUFFIX, hot.m.shouji.360tpcdn.com
+DOMAIN-SUFFIX, ad.360yield.com
+DOMAIN-SUFFIX, guess.h.qhimg.com
+DOMAIN-SUFFIX, top.h.qhimg.com
+DOMAIN-SUFFIX, jspassport.ssl.qhimg.com
+DOMAIN-SUFFIX, top.h.qhmsg.com
+DOMAIN-SUFFIX, hs.qhupdate.com
+DOMAIN-SUFFIX, res.qhupdate.com
+DOMAIN-SUFFIX, s.qhupdate.com
+DOMAIN-SUFFIX, haostat.qihoo.com
+DOMAIN-SUFFIX, sh.qihoo.com
+DOMAIN-SUFFIX, s.sh.qihoo.com
+DOMAIN-SUFFIX, spro.so.com
+DOMAIN-SUFFIX, mbrowser.news.so.com
+DOMAIN-SUFFIX, tran.news.so.com
 
+# > 37wan (37玩)
+DOMAIN-SUFFIX, 37wan.cn
+DOMAIN-SUFFIX, 37wan.com
+DOMAIN-SUFFIX, ad9377.com
+DOMAIN-SUFFIX, b9377h.com
+DOMAIN-SUFFIX, badao37.net
+DOMAIN-SUFFIX, biz37.net
+DOMAIN-SUFFIX, e9377f.com
+DOMAIN-SUFFIX, h9377c.com
+DOMAIN-SUFFIX, hi9377.com
+DOMAIN-SUFFIX, ja9377.com
+DOMAIN-SUFFIX, ku9377.com
+DOMAIN-SUFFIX, ne9377.com
+DOMAIN-SUFFIX, s9377.com
+DOMAIN-SUFFIX, si9377.com
+DOMAIN-SUFFIX, tg.m.37.com
+DOMAIN-SUFFIX, uw9377.com
+DOMAIN-SUFFIX, x9377a.com
 
 
 # >>>>>>>>>>>>>>> ✅ 4 ✅ <<<<<<<<<<<<<<
@@ -82,6 +148,15 @@ DOMAIN, adextra.51wnl-cq.com
 DOMAIN, log.51wnl-cq.com
 DOMAIN, r.51wnl-cq.com
 
+# > 51.com
+DOMAIN-SUFFIX, 51link.com
+DOMAIN-SUFFIX, 51network.com
+DOMAIN-SUFFIX, 51la
+DOMAIN-SUFFIX, 51.la
+DOMAIN-SUFFIX, 51la.net
+DOMAIN-SUFFIX, tc.51la.net
+DOMAIN-SUFFIX, js.users.51.la
+
 # > 51.LA
 DOMAIN, js.users.51.la
 DOMAIN, mc.51.la
@@ -90,6 +165,21 @@ DOMAIN, wc.51.la
 # > 58同城
 DOMAIN, track.58.com
 DOMAIN, tracklog.58.com
+DOMAIN-SUFFIX, 58mingri.cn
+DOMAIN-SUFFIX, 58mingtian.cn
+DOMAIN-SUFFIX, sc.58mingtian.cn
+DOMAIN-SUFFIX, t1.58cdn.com.cn
+DOMAIN-SUFFIX, t2.58cdn.com.cn
+DOMAIN-SUFFIX, t3.58cdn.com.cn
+DOMAIN-SUFFIX, adshow.58.com
+DOMAIN-SUFFIX, brandshow.58.com
+DOMAIN-SUFFIX, jing.58.com
+DOMAIN-SUFFIX, jumpluna.58.com
+DOMAIN-SUFFIX, news.58.com
+DOMAIN-SUFFIX, track.58.com
+DOMAIN-SUFFIX, tracklog.58.com
+DOMAIN-SUFFIX, zzpush.58.com
+DOMAIN-SUFFIX, jump.luna.58.com
 
 
 
@@ -141,6 +231,21 @@ DOMAIN, token.safebrowsing.apple
 DOMAIN, vs6.bj2ct.u3.ucweb.com
 DOMAIN-SUFFIX,safebrowsing.apple
 DOMAIN-SUFFIX,u3.ucweb.com
+
+> AdColony
+DOMAIN-SUFFIX, adcolony.com
+
+# > Amazon
+DOMAIN-SUFFIX, amazon-adsystem.com
+DOMAIN-SUFFIX, mads.amazon.com
+DOMAIN-SUFFIX, sdb.amazonaws.com
+DOMAIN-SUFFIX, airpushmarketing.s3.amazonaws.com
+DOMAIN-SUFFIX, epowernetworktrackerimages.s3.amazonaws.com
+DOMAIN-SUFFIX, gateways.s3.amazonaws.com
+DOMAIN-SUFFIX, kbnetworkz.s3.amazonaws.com
+DOMAIN-SUFFIX, secretmedia.s3.amazonaws.com
+DOMAIN-SUFFIX, smblock.s3.amazonaws.com
+DOMAIN-SUFFIX, whistleout.s3.amazonaws.com
 
 # > 阿里云
 IP-CIDR, 203.107.1.1/24, no-resolve
@@ -459,6 +564,18 @@ DOMAIN, rttrack.ddxq.mobi
 
 
 # >>>>>>>>>>>>>>> ✅ F ✅ <<<<<<<<<<<<<<
+# > Facebook
+DOMAIN-SUFFIX, facebookma.cn
+DOMAIN-SUFFIX, atdmt.com
+DOMAIN-SUFFIX, staticxx.facebook.com
+
+# > Flurry
+DOMAIN-SUFFIX, flurry.com
+DOMAIN-SUFFIX, ad.flurry.com
+DOMAIN-SUFFIX, adlog.flurry.com
+DOMAIN-SUFFIX, proton.flurry.com
+DOMAIN-SUFFIX, flurry.cachefly.net
+
 # > 番茄小说
 DOMAIN, i.snssdk.com
 DOMAIN, i-lq.snssdk.com
@@ -1026,8 +1143,8 @@ DOMAIN-SUFFIX,jdqd.jd.com
 DOMAIN-SUFFIX,shouji.sougou.com
 
 # > 搜狗输入法
-# DOMAIN-SUFFIX, business-cdn.shouji.sogou.com, reject
-DOMAIN-SUFFIX, push-service-ios.sginput.qq.com, reject
+# DOMAIN-SUFFIX, business-cdn.shouji.sogou.com
+DOMAIN-SUFFIX, push-service-ios.sginput.qq.com
 
 # > 深圳通微信小程序
 DOMAIN-SUFFIX,wxsnsdythumb.wxs.qq.com
@@ -1574,6 +1691,23 @@ DOMAIN-SUFFIX,zhengxiaoliu.top
 DOMAIN, ad.zijieapi.com
 DOMAIN, applog.zijieapi.com
 DOMAIN-SUFFIX,-normal-lq.zijieapi.com
+DOMAIN-SUFFIX, dm.bytedance.com
+DOMAIN-SUFFIX, xlog-va.byteoversea.com
+DOMAIN-SUFFIX, tosv.byted.org
+DOMAIN-SUFFIX, tosv.boe.byted.org
+DOMAIN-SUFFIX, extlog.snssdk.com
+DOMAIN-SUFFIX, sdfp.snssdk.com
+DOMAIN-SUFFIX, temai.snssdk.com
+DOMAIN-SUFFIX, xlog.snssdk.com
+DOMAIN-SUFFIX, ad.toutiao.com
+DOMAIN-SUFFIX, dm.toutiao.com
+DOMAIN-SUFFIX, dsp.toutiao.com
+DOMAIN-SUFFIX, nativeapp.toutiao.com
+DOMAIN-SUFFIX, partner.toutiao.com
+DOMAIN-SUFFIX, track.toutiao.com
+DOMAIN-SUFFIX, dm.pstatp.com
+DOMAIN-SUFFIX, pb3.pstatp.com
+DOMAIN-SUFFIX, s3a.pstatp.com
 
 # > 招钱进宝
 # 广告联盟已包含
