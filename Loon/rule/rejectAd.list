@@ -226,7 +226,7 @@ DOMAIN, vs6.bj2ct.u3.ucweb.com
 DOMAIN-SUFFIX,safebrowsing.apple
 DOMAIN-SUFFIX,u3.ucweb.com
 
-> AdColony
+# > AdColony
 DOMAIN-SUFFIX, adcolony.com
 
 # > Amazon
