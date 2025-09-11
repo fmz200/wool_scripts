@@ -8,6 +8,8 @@
     "fs-extra": "^11.3.1",
     "got": "^14.0.0",
     "https-proxy-agent": "^7.0.2",
+    "image-size": "^2.0.2",
+    "jimp": "^1.6.0",
     "node-fetch": "^3.3.1",
     "node-schedule": "^2.1.1",
     "pinyin": "^4.0.0",
