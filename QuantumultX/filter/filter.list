@@ -341,7 +341,7 @@ host, vs6.bj2ct.u3.ucweb.com, reject
 host-suffix, safebrowsing.apple, reject
 host-suffix, u3.ucweb.com, reject
 
-> AdColony
+# > AdColony
 host-suffix, adcolony.com, reject
 
 # > Amazon
