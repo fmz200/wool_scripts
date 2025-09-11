@@ -784,7 +784,7 @@ host-suffix, proton.flurry.com, reject
 host-suffix, flurry.cachefly.net, reject
 
 # > 番茄小说
-host-suffix, byteimg.com, DIRECT, reject
+host-suffix, byteimg.com, DIRECT
 host, i.snssdk.com, REJECT
 host, i-lq.snssdk.com, REJECT
 host, dig.bdurl.net, REJECT
