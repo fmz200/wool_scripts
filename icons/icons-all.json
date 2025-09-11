@@ -1,6 +1,6 @@
 {
   "name": "fmz200の图标库",
-  "description": "收集一些自己常用的图标，尺寸为108px或144px，数量约1587个，更新日期：2025-07-29 19:00:00",
+  "description": "收集一些自己常用的图标，尺寸为108px或144px，数量约1590个，更新日期：2025-09-11 21:00:00",
   "icons": [
     {
       "name": "fmz200",
@@ -1539,12 +1539,16 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Quantumult_X_7.png"
     },
     {
-      "name": "Quantumult_X",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Quantumult_X.png"
+      "name": "Quantumult X",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/QuantumultX.png"
     },
     {
-      "name": "Quantumult_X-02",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Quantumult_X-02.png"
+      "name": "Quantumult X",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/QuantumultX_01.png"
+    },
+    {
+      "name": "Quantumult X",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/QuantumultX_02.png"
     },
     {
       "name": "Loon1",
