@@ -328,7 +328,7 @@ host-suffix, ereg.wip3.adobe.com, reject
 host-suffix, lmlicenses.wip4.adobe.com, reject 
 
 # > Adobe Flash China Special Edition
-DOMAIN, geo2.adobe.com
+host, geo2.adobe.com, reject
 
 # > AdRoll
 host-suffix, adroll.com, reject 
@@ -1220,7 +1220,7 @@ host-suffix, proton.flurry.com, reject
 host-suffix, flurry.cachefly.net, reject
 
 # > 番茄小说
-host-suffix, byteimg.com, DIRECT
+host-suffix, byteimg.com, reject
 host, i.snssdk.com, REJECT
 host, i-lq.snssdk.com, REJECT
 host, dig.bdurl.net, REJECT
@@ -3360,15 +3360,15 @@ host-suffix, whalecloud.com, reject
 host-suffix, feedback.whalecloud.com, reject
 
 # > Waps
-DOMAIN-SUFFIX, waps.cn
-DOMAIN-SUFFIX, app.waps.cn
-DOMAIN-SUFFIX, wapx.cn
-DOMAIN-SUFFIX, app.wapx.cn
-DOMAIN-SUFFIX, appcdn.wapx.cn
-DOMAIN-SUFFIX, imgcdn.wapx.cn
-DOMAIN-SUFFIX, push.wapx.cn
-DOMAIN-SUFFIX, wapscdn.wapx.cn
-DOMAIN-SUFFIX, wapx.com
+host-suffix, waps.cn, reject
+host-suffix, app.waps.cn, reject
+host-suffix, wapx.cn, reject
+host-suffix, app.wapx.cn, reject
+host-suffix, appcdn.wapx.cn, reject
+host-suffix, imgcdn.wapx.cn, reject
+host-suffix, push.wapx.cn, reject
+host-suffix, wapscdn.wapx.cn, reject
+host-suffix, wapx.com, reject
 
 # > Winbaicai (白菜)
 host-suffix, winbaicai.com, reject
