@@ -8,7 +8,7 @@
 #!tg-group=https://t.me/lanjieguanggao
 #!tag=去广告, fmz200, 奶思
 #!system=ios
-#!date=2025-09-04 22:22:00
+#!date=2025-09-13 11:22:00
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 
 #!arguments=动态最常访问:auto,创作中心:0,过滤置顶评论广告:1,空降助手:bilibili.airborne,净化内嵌网页:bilibili.webpage,日志等级:info
@@ -2755,10 +2755,10 @@ https://mgesq.api.mgtv.com/v2/user/center/icon data-type=text data="{}" status-c
 ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/surprisebox\/(?:get_style|open|submit_action) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 ^https?:\/\/www\.xiaohongshu\.com\/api\/marketing\/box\/trigger\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 # 信息流
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/note\/guide\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/note\/detailfeed\/preload\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/guide\/user_banner data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/(v\d\/ads\/resource|v\d\/hey\/\w+\/hey_gallery) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/note\/guide\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/note\/detailfeed\/preload\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/guide\/user_banner data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/(v\d+\/ads\/resource|v\d+\/hey\/\w+\/hey_gallery) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 # 评论区图片水印
 ^https?:\/\/ci\.xiaohongshu\.com\/system_config\/watermark data-type=tiny-gif status-code=200
 
@@ -3570,24 +3570,24 @@ NetEaseCloudMusic_foll = type=http-response, pattern=^https?:\/\/(ipv4|interface
 香蕉是一种水果 = type=http-response, pattern=^https?:\/\/.+?\.(pipi|fuli|xiang(jiao|xiang))apps\.com\/(ucp\/index|getGlobalData|(\/|)vod\/reqplay\/), script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/xjsp.js, requires-body=true, timeout=60
 
 # 搜索页
-小红书搜索页 = type=http-response, pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/(banner|hot)_list, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, timeout=60
+小红书搜索页 = type=http-response, pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/search\/(banner|hot)_list, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, timeout=60
 
-小红书搜索页 = type=http-response, pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/(hint|trending)\?, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, timeout=60
+小红书搜索页 = type=http-response, pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/search\/(hint|trending)\?, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, timeout=60
 
-小红书搜索页 = type=http-response, pattern=^https?:\/\/(so|edith)\.xiaohongshu\.com\/api\/sns\/v\d\/search\/notes\?, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, timeout=60
+小红书搜索页 = type=http-response, pattern=^https?:\/\/(so|edith)\.xiaohongshu\.com\/api\/sns\/v\d+\/search\/notes\?, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, timeout=60
 
 # 开屏广告
-小红书开屏广告 = type=http-response, pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/config\?, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, timeout=60
+小红书开屏广告 = type=http-response, pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/system_service\/config\?, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, timeout=60
 
-小红书开屏广告 = type=http-response, pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/splash_config, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, timeout=60
+小红书开屏广告 = type=http-response, pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/system_service\/splash_config, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, timeout=60
 
 # 详情页,小部件
-小红书详情页 = type=http-response, pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/note\/widgets, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, timeout=60
+小红书详情页 = type=http-response, pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/note\/widgets, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, timeout=60
 
 # 图片水印,视频水印
-小红书图片视频水印 = type=http-response, pattern=^https?:\/\/(edith|rec|www)\.xiaohongshu\.com\/api\/sns\/v\d\/note\/(imagefeed|live_photo\/save), script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, timeout=60
+小红书图片视频水印 = type=http-response, pattern=^https?:\/\/(edith|rec|www)\.xiaohongshu\.com\/api\/sns\/v\d+\/note\/(imagefeed|live_photo\/save), script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, timeout=60
 
-小红书图片视频水印 = type=http-response, pattern=^https?:\/\/(edith|rec|www)\.xiaohongshu\.com\/api\/sns\/v\d\/(followfeed|homefeed)\?, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, timeout=60
+小红书图片视频水印 = type=http-response, pattern=^https?:\/\/(edith|rec|www)\.xiaohongshu\.com\/api\/sns\/v\d+\/(followfeed|homefeed)\?, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, timeout=60
 
 小红书图片视频水印 = type=http-response, pattern=^https?:\/\/(edith|rec|www)\.xiaohongshu\.com\/api\/sns\/(v2\/note\/feed|v3\/note\/videofeed)\?, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, timeout=60
 
