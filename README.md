@@ -8,7 +8,7 @@
 ![GitHub issues](https://img.shields.io/github/issues/fmz200/wool_scripts?color=1E90FF&style=for-the-badge)
 ![Github Codelines](https://img.shields.io/tokei/lines/github/fmz200/wool_scripts?style=for-the-badge)
 ![GitHub](https://img.shields.io/github/license/fmz200/wool_scripts?style=for-the-badge)
-[![](https://img.shields.io/badge/-t.me/quguanggao-3db6f1?style=for-the-badge&logo=Telegram&logoColor=2ca5e0)](https://t.me/lanjieguanggao)
+[![](https://img.shields.io/badge/-t.me/inaisi-3db6f1?style=for-the-badge&logo=Telegram&logoColor=2ca5e0)](https://t.me/inaisi)
 
 <br />
 
@@ -182,5 +182,7 @@ https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/Douyin.list
 
 ## 💹 访问量统计
 
-![Visitor Count](https://profile-counter.glitch.me/fmz200/count.svg)
+![Visitor Count](https://visitor-badge.laobi.icu/badge?page_id=fmz200.wool_scripts)
+
+<!---   ![Visitor Count](https://profile-counter.glitch.me/fmz200/count.svg)    --->
 
