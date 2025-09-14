@@ -1301,7 +1301,7 @@ http:\/\/ad\.myfriday\.cn\/d\/json\/1\.1 reject
 ^https?:\/\/m5\.amap\.com\/ws\/valueadded\/ reject
 ^https?://optimus-ads.amap.com/uploadimg/[a-zA-Z0-9]+.gif reject-200
 
-# > 谷歌
+# > Google
 # hostname = *.googleapis.com, pagead2.googlesyndication.com
 # 如开启可自行添加主机名，但似乎已不可MITM
 ^https?:\/\/.+\.googleapis.com/.+ad_break reject-img
@@ -2621,7 +2621,7 @@ https://apis.lifeweek.com.cn/api/baseConfig/getIosNewConfig reject
 
 
 # >>>>>>>>>>>>>>> ✅ T ✅ <<<<<<<<<<<<<<
-# Talkatone
+# > Talkatone
 # hostname = alt-r.my.com, imgx.jampp.com
 ^https?:\/\/alt-r\.my\.com\/mobile reject-dict
 ^https?:\/\/imgx\.jampp\.com\/imgsrv\/tn reject-img
@@ -2641,7 +2641,7 @@ https://apis.lifeweek.com.cn/api/baseConfig/getIosNewConfig reject
 # 感谢【可莉】分享
 ^https?:\/\/.*\.i18n-pglstatp\.com\/obj\/ad-pattern-sg reject
 
-# > top-widget
+# > Top Widgets
 # hostname = top-widgets-api.xiaozujian.com
 ^https?:\/\/top-widgets-api\.xiaozujian\.com\/api\/ad\/config reject
 
@@ -3630,7 +3630,7 @@ http-response ^https?:\/\/www\.myusmile\.online\/user\/plaqueTopic\/selectByType
 # hostname = restapi.iyunmai.com
 ^https?:\/\/restapi\.iyunmai\.com\/api\/ios\/ad\/ reject-200
 
-# > 央视
+# > 央视网
 # hostname = www.cntv.cn
 ^https?:\/\/www\.cntv\.cn\/nettv\/adp\/ reject-200
 

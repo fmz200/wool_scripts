@@ -345,10 +345,6 @@
 # hostname = mres.aibank.com
 ^https?:\/\/mres\.aibank\.com\/app\/resource\/cim\/cim0000001\/.+\.jpg url reject-200
 
-# > 哔哩哔哩
-# hostname = app.bilibili.com, api.bilibili.com, api.live.bilibili.com, grpc.biliapi.net
-# QuanX不适配规则，已删除
-
 # > 哔哩哔哩漫画
 # hostname = manga.bilibili.com, i*.hdslb.com
 ^https?:\/\/i\d\.hdslb\.com\/bfs\/fawkes url reject-dict
@@ -968,7 +964,7 @@ http:\/\/ad\.myfriday\.cn\/d\/json\/1\.1 url reject
 ^https?:\/\/m5\.amap\.com\/ws\/valueadded\/ url reject
 ^https?://optimus-ads.amap.com/uploadimg/[a-zA-Z0-9]+.gif url reject-200
 
-# > 谷歌
+# > Google
 # hostname = *.googleapis.com, pagead2.googlesyndication.com
 # 如开启可自行添加主机名，但似乎已不可MITM
 ^https?:\/\/.+\.googleapis.com/.+ad_break url reject-img
@@ -2474,7 +2470,7 @@ https://apis.lifeweek.com.cn/api/baseConfig/getIosNewConfig url reject
 # 感谢【可莉】分享
 ^https?:\/\/.*\.i18n-pglstatp\.com\/obj\/ad-pattern-sg url reject
 
-# > top-widget
+# > Top Widgets
 # hostname = top-widgets-api.xiaozujian.com
 ^https?:\/\/top-widgets-api\.xiaozujian\.com\/api\/ad\/config url reject
 
