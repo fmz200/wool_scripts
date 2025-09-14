@@ -1,4 +1,4 @@
-#!name=Adobe Flash China Special Edition
+#!name=Adobe
 #!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
 #!author=奶思
 #!homepage=https://github.com/fmz200/wool_scripts
@@ -9,7 +9,8 @@
 #############################################
 
 [Rule]
-DOMAIN, geo2.adobe.com, REJECTns-3.adobe.com , REJECT
+DOMAIN-SUFFIX, 3dns-2.adobe.com , REJECT
+DOMAIN-SUFFIX, 3dns-3.adobe.com , REJECT
 DOMAIN-SUFFIX, activate.adobe.com , REJECT
 DOMAIN-SUFFIX, activate-sea.adobe.com , REJECT
 DOMAIN-SUFFIX, activate-sjc0.adobe.com , REJECT

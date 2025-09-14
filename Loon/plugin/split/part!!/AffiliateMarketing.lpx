@@ -1,0 +1,626 @@
+#!name=广告联盟
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/part!!/AffiliateMarketing.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rule]
+# 若有问题自行设置白名单, REJECT
+DOMAIN-SUFFIX, miaozhen.com, REJECT
+DOMAIN-KEYWORD, -ad-sign.byteimg.com, REJECT
+DOMAIN-KEYWORD, -tos.pstatp.com, REJECT
+DOMAIN-KEYWORD, asiad.byteactivity, REJECT
+DOMAIN-KEYWORD, pangolin-sdk-toutiao, REJECT
+DOMAIN-KEYWORD, pglstatp-toutiao, REJECT
+DOMAIN-KEYWORD, pangolin.snssdk.com, REJECT
+DOMAIN-KEYWORD, video-cn.snssdk.com, REJECT
+DOMAIN-SUFFIX, getui.com, REJECT
+DOMAIN-SUFFIX, getui.net, REJECT
+DOMAIN-SUFFIX, gepush.com, REJECT
+DOMAIN-SUFFIX, igexin.com, REJECT
+DOMAIN-SUFFIX, log.aliyuncs.com, REJECT
+DOMAIN-SUFFIX, zlsdk.1rtb.net, REJECT
+DOMAIN-SUFFIX, ott.cibntv.net, REJECT
+DOMAIN-SUFFIX, cdntips.net, REJECT
+DOMAIN-SUFFIX, tfogc.com, REJECT
+DOMAIN-SUFFIX, file.myqcloud.com, REJECT
+DOMAIN-KEYWORD, volc, REJECT
+DOMAIN-KEYWORD, umeng, REJECT
+# Ad-Stir, REJECT
+DOMAIN-SUFFIX, ad-stir.com , REJECT
+
+# Adadapted, REJECT
+DOMAIN-SUFFIX, adadapted.com , REJECT
+DOMAIN-SUFFIX, ads.adadapted.com , REJECT
+
+# AdChina, REJECT
+DOMAIN-SUFFIX, adchina.com , REJECT
+DOMAIN-SUFFIX, adchina.io , REJECT
+
+# AddThis, REJECT
+DOMAIN-SUFFIX, addthis.com , REJECT
+DOMAIN-SUFFIX, addthisedge.com , REJECT
+
+# Adform, REJECT
+DOMAIN-KEYWORD, adform , REJECT
+
+# Adhouyi (广告后台), REJECT
+DOMAIN-SUFFIX, ad.adhouyi.cn , REJECT
+DOMAIN-SUFFIX, adhouyi.com , REJECT
+
+# Adinall, REJECT
+DOMAIN-SUFFIX, adinall.com , REJECT
+
+# Adition, REJECT
+DOMAIN-SUFFIX, ad8.adfarm1.adition.com , REJECT
+DOMAIN-SUFFIX, dsp.adfarm1.adition.com , REJECT
+
+# Adjust, REJECT
+DOMAIN-SUFFIX, adjust.io , REJECT
+
+# Admarvel, REJECT
+DOMAIN-SUFFIX, admarvel.com, REJECT
+
+# AdRoll, REJECT
+DOMAIN-SUFFIX, adroll.com , REJECT
+
+# Adtaily, REJECT
+DOMAIN-SUFFIX, adtaily.com , REJECT
+
+# Adups, REJECT
+DOMAIN-SUFFIX, fota4.adups.cn , REJECT
+DOMAIN-SUFFIX, adups.com , REJECT
+
+# Adview, REJECT
+DOMAIN-SUFFIX, adview.cn , REJECT
+
+# Adwo, REJECT
+DOMAIN-SUFFIX, adwo.com , REJECT
+
+# Adzerk, REJECT
+DOMAIN-SUFFIX, adzerk.net , REJECT
+
+# Ad-m.asia, REJECT
+DOMAIN-SUFFIX, sync-dsp.ad-m.asia, REJECT
+
+# AdColony, REJECT
+DOMAIN-SUFFIX, adcolony.com, REJECT
+
+# AerServ, REJECT
+DOMAIN-SUFFIX, aerserv.com , REJECT
+
+# Airpush, REJECT
+DOMAIN-SUFFIX, airpush.com, REJECT
+
+# App-Adforce, REJECT
+DOMAIN-SUFFIX, app-adforce.jp, REJECT
+
+# Appadhoc, REJECT
+DOMAIN-SUFFIX, appadhoc.com, REJECT
+DOMAIN-SUFFIX, sdk.appadhoc.com, REJECT
+
+# AppsFlyer, REJECT
+DOMAIN-SUFFIX, appsflyer.com, REJECT
+
+# Appdriver, REJECT
+DOMAIN-SUFFIX, appdriver.cn, REJECT
+DOMAIN-SUFFIX, appdriver.com.cn, REJECT
+
+# Cacafly, REJECT
+DOMAIN-SUFFIX, ad.cacafly.com, REJECT
+DOMAIN-SUFFIX, cacafly.net, REJECT
+
+# Casale Media, REJECT
+DOMAIN-SUFFIX, casalemedia.com, REJECT
+DOMAIN-SUFFIX, as.casalemedia.com, REJECT
+DOMAIN-SUFFIX, ssum.casalemedia.com, REJECT
+
+# Chartboost, REJECT
+DOMAIN-SUFFIX, chartboost.com, REJECT
+
+# Clicki, REJECT
+DOMAIN-SUFFIX, clicki.cn, REJECT
+
+# CNZZ, REJECT
+DOMAIN-SUFFIX, cnzz.com, REJECT
+DOMAIN-SUFFIX, s96.cnzz.com, REJECT
+
+# Criteo, REJECT
+DOMAIN-SUFFIX, criteo.com, REJECT
+DOMAIN-SUFFIX, criteo.net, REJECT
+DOMAIN-SUFFIX, dis.crieto.com, REJECT
+DOMAIN-SUFFIX, cas.criteo.com, REJECT
+DOMAIN-SUFFIX, dis.criteo.com, REJECT
+DOMAIN-SUFFIX, gum.criteo.com, REJECT
+DOMAIN-SUFFIX, rtax.criteo.com, REJECT
+DOMAIN-SUFFIX, widget.criteo.com, REJECT
+DOMAIN-SUFFIX, dis.us.criteo.com, REJECT
+
+# comScore, REJECT
+DOMAIN-SUFFIX, scorecardresearch.com, REJECT
+DOMAIN-SUFFIX, b.scorecardresearch.com, REJECT
+DOMAIN-SUFFIX, sb.scorecardresearch.com, REJECT
+DOMAIN-SUFFIX, udm.scorecardresearch.com, REJECT
+
+# Dianjoy, REJECT
+DOMAIN-SUFFIX, dianjoy.com, REJECT
+DOMAIN-SUFFIX, a.dianjoy.com, REJECT
+DOMAIN-SUFFIX, fast-cdn.dianjoy.com, REJECT
+
+# Dianru, REJECT
+DOMAIN-SUFFIX, dianru.com, REJECT
+DOMAIN-SUFFIX, api.dianru.com, REJECT
+DOMAIN-SUFFIX, api.android.dianru.com, REJECT
+
+# dtscout, REJECT
+DOMAIN-KEYWORD, dtscout, REJECT
+DOMAIN-SUFFIX, dtscout.com, REJECT
+
+# Exoclick, REJECT
+DOMAIN-SUFFIX, main.exoclick.com, REJECT
+DOMAIN-SUFFIX, syndication.exoclick.com, REJECT
+
+# Exosrv, REJECT
+DOMAIN-SUFFIX, exosrv.com, REJECT
+DOMAIN-SUFFIX, ads.exosrv.com, REJECT
+
+# Flurry, REJECT
+DOMAIN-SUFFIX, flurry.com, REJECT
+DOMAIN-SUFFIX, ad.flurry.com, REJECT
+DOMAIN-SUFFIX, adlog.flurry.com, REJECT
+DOMAIN-SUFFIX, proton.flurry.com, REJECT
+DOMAIN-SUFFIX, flurry.cachefly.net, REJECT
+
+# Guomob (果盟), REJECT
+DOMAIN-SUFFIX, guomob.com, REJECT
+
+# GrowingIO, REJECT
+DOMAIN-SUFFIX, giocdn.com, REJECT
+DOMAIN-SUFFIX, growingio.com, REJECT
+DOMAIN-SUFFIX, api.growingio.com, REJECT
+DOMAIN-SUFFIX, apihk.growingio.com, REJECT
+DOMAIN-SUFFIX, crashapi.growingio.com, REJECT
+DOMAIN-SUFFIX, t.growingio.com, REJECT
+DOMAIN-SUFFIX, tags.growingio.com, REJECT
+
+# iClick, REJECT
+DOMAIN-SUFFIX, mfan.iclick.com.cn, REJECT
+
+# Innity, REJECT
+DOMAIN-SUFFIX, innity.com, REJECT
+DOMAIN-SUFFIX, avn.innity.com, REJECT
+DOMAIN-SUFFIX, cast.innity.com, REJECT
+DOMAIN-SUFFIX, innity.net, REJECT
+DOMAIN-SUFFIX, cdn.innity.net, REJECT
+DOMAIN-SUFFIX, cdn.media.innity.net, REJECT
+DOMAIN-SUFFIX, ssl-cdn.media.innity.net, REJECT
+
+# Inveno, REJECT
+DOMAIN-SUFFIX, business.inveno.com, REJECT
+DOMAIN-SUFFIX, malacca.inveno.com, REJECT
+DOMAIN-SUFFIX, zuimeitianqi.inveno.com, REJECT
+
+# InMobi, REJECT
+DOMAIN-SUFFIX, inmobi.cn, REJECT
+DOMAIN-SUFFIX, inmobicdn.cn, REJECT
+DOMAIN-SUFFIX, inmobi.com, REJECT
+DOMAIN-SUFFIX, inmobi.net, REJECT
+DOMAIN-SUFFIX, inmobicdn.net, REJECT
+
+# IronSource, REJECT
+DOMAIN-SUFFIX, ironsrc.com, REJECT
+DOMAIN-SUFFIX, supersonic.com, REJECT
+DOMAIN-SUFFIX, supersonicads.com, REJECT
+
+# iPinYou (品友互动), REJECT
+DOMAIN-SUFFIX, ipinyou.com, REJECT
+
+# Jesgoo, REJECT
+DOMAIN-SUFFIX, jesgoo.com, REJECT
+DOMAIN-SUFFIX, cdn.jesgoo.com, REJECT
+DOMAIN-SUFFIX, rcv.jesgoo.com, REJECT
+
+# JuicyAds, REJECT
+DOMAIN-SUFFIX, juicyads.com, REJECT
+DOMAIN-SUFFIX, juicyads.in, REJECT
+DOMAIN-SUFFIX, adserver.juicyads.com, REJECT
+DOMAIN-SUFFIX, img.jizzads.com, REJECT
+
+# Kejet, REJECT
+DOMAIN-SUFFIX, kejet.com, REJECT
+DOMAIN-SUFFIX, as.kejet.com, REJECT
+DOMAIN-SUFFIX, code.kejet.com, REJECT
+DOMAIN-SUFFIX, dmacore.kejet.com, REJECT
+DOMAIN-SUFFIX, kejet.net, REJECT
+DOMAIN-SUFFIX, as.kejet.net, REJECT
+DOMAIN-SUFFIX, aw.kejet.net, REJECT
+DOMAIN-SUFFIX, ck.kejet.net, REJECT
+DOMAIN-SUFFIX, cmarket.kejet.net, REJECT
+DOMAIN-SUFFIX, dmacore.kejet.net, REJECT
+DOMAIN-SUFFIX, dmp.kejet.net, REJECT
+DOMAIN-SUFFIX, ec.kejet.net, REJECT
+DOMAIN-SUFFIX, hzdmacore.kejet.net, REJECT
+DOMAIN-SUFFIX, m.kejet.net, REJECT
+DOMAIN-SUFFIX, rtb-p.kejet.net, REJECT
+
+# Keyrun, REJECT
+DOMAIN-SUFFIX, keyrun.cn, REJECT
+DOMAIN-SUFFIX, c1.keyrun.cn, REJECT
+DOMAIN-SUFFIX, keyrun.com, REJECT
+
+# Kissmetrics, REJECT
+DOMAIN-SUFFIX, kissmetrics.com, REJECT
+
+# Krux, REJECT
+DOMAIN-SUFFIX, krux.net, REJECT
+
+# 酷云互动, REJECT
+DOMAIN-SUFFIX, config.kuyun.com, REJECT
+DOMAIN-SUFFIX, logonext.tv.kuyun.com, REJECT
+
+# Kochava, REJECT
+DOMAIN-SUFFIX, kochava.com, REJECT
+
+# Leadbolt, REJECT
+DOMAIN-SUFFIX, leadbolt.net, REJECT
+DOMAIN-SUFFIX, ad.leadbolt.net, REJECT
+DOMAIN-SUFFIX, api.leadbolt.net, REJECT
+DOMAIN-SUFFIX, leadboltads.net, REJECT
+DOMAIN-SUFFIX, ad.leadboltads.net, REJECT
+DOMAIN-SUFFIX, leadboltapps.net, REJECT
+DOMAIN-SUFFIX, ad.leadboltapps.net, REJECT
+DOMAIN-SUFFIX, leadboltmobile.net, REJECT
+DOMAIN-SUFFIX, ad.leadboltmobile.net, REJECT
+
+# Localytics, REJECT
+DOMAIN-SUFFIX, localytics.com, REJECT
+
+# 亿动广告传媒, REJECT
+DOMAIN-SUFFIX, madserving.com, REJECT
+DOMAIN-SUFFIX, ad.madserving.com, REJECT
+DOMAIN-SUFFIX, adv.madserving.com, REJECT
+DOMAIN-SUFFIX, appsrv1.madserving.com, REJECT
+DOMAIN-SUFFIX, appsrv4.madserving.com, REJECT
+DOMAIN-SUFFIX, clk.madserving.com, REJECT
+DOMAIN-SUFFIX, imp.madserving.com, REJECT
+DOMAIN-SUFFIX, clk.pdb.madserving.com, REJECT
+DOMAIN-SUFFIX, imp.pdb.madserving.com, REJECT
+DOMAIN-SUFFIX, madhouse.cn, REJECT
+
+# Marketgid, REJECT
+DOMAIN-SUFFIX, marketgid.com, REJECT
+DOMAIN-SUFFIX, ag-gb.marketgid.com, REJECT
+DOMAIN-SUFFIX, cdn.marketgid.com, REJECT
+DOMAIN-SUFFIX, counter.marketgid.com, REJECT
+DOMAIN-SUFFIX, imgg.marketgid.com, REJECT
+DOMAIN-SUFFIX, jsc.marketgid.com, REJECT
+DOMAIN-SUFFIX, wsp.marketgid.com, REJECT
+
+# 聚胜万合, REJECT
+DOMAIN-SUFFIX, mediav.com, REJECT
+
+# MGID, REJECT
+DOMAIN-SUFFIX, mgid.com, REJECT
+DOMAIN-SUFFIX, aa-gb.mgid.com, REJECT
+DOMAIN-SUFFIX, ab-gb.mgid.com, REJECT
+DOMAIN-SUFFIX, ac-gb.mgid.com, REJECT
+DOMAIN-SUFFIX, ad-gb.mgid.com, REJECT
+DOMAIN-SUFFIX, ae-gb.mgid.com, REJECT
+DOMAIN-SUFFIX, aj-gb.mgid.com, REJECT
+DOMAIN-SUFFIX, imgg.mgid.com, REJECT
+DOMAIN-SUFFIX, jsc.mgid.com, REJECT
+DOMAIN-SUFFIX, usr.mgid.com, REJECT
+DOMAIN-SUFFIX, aa.goodsblock.mgid.com, REJECT
+DOMAIN-SUFFIX, ab.goodsblock.mgid.com, REJECT
+
+# Millennial Media, REJECT
+DOMAIN-SUFFIX, millennialmedia.com, REJECT
+DOMAIN-SUFFIX, cdn.millennialmedia.com, REJECT
+DOMAIN-SUFFIX, images.millennialmedia.com, REJECT
+
+# Mixpanel, REJECT
+DOMAIN-SUFFIX, mxpnl.com, REJECT
+
+# Moat, REJECT
+DOMAIN-SUFFIX, moatads.com, REJECT
+DOMAIN-SUFFIX, geo.moatads.com, REJECT
+DOMAIN-SUFFIX, js.moatads.com, REJECT
+DOMAIN-SUFFIX, px.moatads.com, REJECT
+DOMAIN-SUFFIX, z.moatads.com, REJECT
+
+# 创智汇聚, REJECT
+DOMAIN-SUFFIX, cca.mob.com, REJECT
+DOMAIN-SUFFIX, api.cmt.mob.com, REJECT
+DOMAIN-SUFFIX, c.data.mob.com, REJECT
+DOMAIN-SUFFIX, devs.data.mob.com, REJECT
+DOMAIN-SUFFIX, m.data.mob.com, REJECT
+DOMAIN-SUFFIX, api.exc.mob.com, REJECT
+DOMAIN-SUFFIX, api.share.mob.com, REJECT
+
+# Mobfox, REJECT
+DOMAIN-SUFFIX, mobfox.com, REJECT
+DOMAIN-SUFFIX, my.mobfox.com, REJECT
+
+# 魔窗, REJECT
+DOMAIN-SUFFIX, magicwindow.cn, REJECT
+
+# Mathtag, REJECT
+DOMAIN-KEYWORD, mathtag, REJECT
+DOMAIN-SUFFIX, mathtag.com, REJECT
+DOMAIN-SUFFIX, pixel.mathtag.com, REJECT
+DOMAIN-SUFFIX, sync.mathtag.com, REJECT
+
+# 艾德思奇（adSage）, REJECT
+DOMAIN-SUFFIX, mobisage.cn, REJECT
+DOMAIN-SUFFIX, config.mobisage.cn, REJECT
+
+# MoPub（Twitter 公司旗下的移动广告服务平台）, REJECT
+DOMAIN-SUFFIX, mopub.com, REJECT
+
+# NetworkBench (听云), REJECT
+DOMAIN-SUFFIX, networkbench.com, REJECT
+
+# NicoNico, REJECT
+DOMAIN, ads.nicovideo.jp, REJECT
+
+# Onetad, REJECT
+DOMAIN-SUFFIX, onetad.com, REJECT
+DOMAIN-SUFFIX, code11.onetad.com, REJECT
+DOMAIN-SUFFIX, code12.onetad.com, REJECT
+DOMAIN-SUFFIX, pic1.onetad.com, REJECT
+DOMAIN-SUFFIX, pic2.onetad.com, REJECT
+DOMAIN-SUFFIX, pic3.onetad.com, REJECT
+DOMAIN-SUFFIX, pic8.onetad.com, REJECT
+DOMAIN-SUFFIX, ww10.onetad.com, REJECT
+DOMAIN-SUFFIX, ww101.onetad.com, REJECT
+DOMAIN-SUFFIX, ww11.onetad.com, REJECT
+DOMAIN-SUFFIX, ww12.onetad.com, REJECT
+DOMAIN-SUFFIX, ww13.onetad.com, REJECT
+DOMAIN-SUFFIX, ww202.onetad.com, REJECT
+DOMAIN-SUFFIX, ww34.onetad.com, REJECT
+DOMAIN-SUFFIX, ww346.onetad.com, REJECT
+DOMAIN-SUFFIX, ww360.onetad.com, REJECT
+DOMAIN-SUFFIX, ww363.onetad.com, REJECT
+DOMAIN-SUFFIX, ww366.onetad.com, REJECT
+DOMAIN-SUFFIX, ww78.onetad.com, REJECT
+DOMAIN-SUFFIX, ww8.onetad.com, REJECT
+DOMAIN-SUFFIX, ww9.onetad.com, REJECT
+DOMAIN-SUFFIX, wwv.onetad.com, REJECT
+
+# OpenX, REJECT
+DOMAIN-SUFFIX, openx.net, REJECT
+
+# Optimizely, REJECT
+DOMAIN-SUFFIX, optimizelyapis.com, REJECT
+
+# Oracle, REJECT
+DOMAIN-SUFFIX, bluekai.com, REJECT
+
+# Pagechoice, REJECT
+DOMAIN-SUFFIX, pagechoice.com, REJECT
+DOMAIN-SUFFIX, pagechoice.net, REJECT
+DOMAIN-SUFFIX, col.pagechoice.net, REJECT
+DOMAIN-SUFFIX, dap.pagechoice.net, REJECT
+DOMAIN-SUFFIX, images.pagechoice.net, REJECT
+DOMAIN-SUFFIX, motu.pagechoice.net, REJECT
+DOMAIN-SUFFIX, sit.pagechoice.net, REJECT
+
+# Plista, REJECT
+DOMAIN-SUFFIX, plista.com, REJECT
+DOMAIN-SUFFIX, click-cn.plista.com, REJECT
+DOMAIN-SUFFIX, farm-cn.plista.com, REJECT
+
+# Pubnative, REJECT
+DOMAIN-SUFFIX, pubnative.net, REJECT
+
+# PopAds, REJECT
+DOMAIN-SUFFIX, popads.net, REJECT
+DOMAIN-SUFFIX, c1.popads.net, REJECT
+DOMAIN-SUFFIX, c2.popads.net, REJECT
+DOMAIN-SUFFIX, serve.popads.net, REJECT
+
+# PubMatic, REJECT
+DOMAIN-SUFFIX, pubmatic.com, REJECT
+
+# Qtmojo, REJECT
+DOMAIN-SUFFIX, qtmojo.cn, REJECT
+DOMAIN-SUFFIX, 1.qtmojo.cn, REJECT
+DOMAIN-SUFFIX, creatim.qtmojo.cn, REJECT
+DOMAIN-SUFFIX, wmcdn.qtmojo.cn, REJECT
+DOMAIN-SUFFIX, qtmojo.com, REJECT
+
+# Qumi (趣米), REJECT
+DOMAIN-SUFFIX, qumi.com, REJECT
+DOMAIN-SUFFIX, apt.qumi.com, REJECT
+DOMAIN-SUFFIX, cut.qumi.com, REJECT
+DOMAIN-SUFFIX, exp.qumi.com, REJECT
+
+# Quantcast, REJECT
+DOMAIN-SUFFIX, quantcount.com, REJECT
+DOMAIN-SUFFIX, quantserve.com, REJECT
+DOMAIN-SUFFIX, cms.quantserve.com, REJECT
+DOMAIN-SUFFIX, edge.quantserve.com, REJECT
+DOMAIN-SUFFIX, pixel.quantserve.com, REJECT
+DOMAIN-SUFFIX, secure.quantserve.com, REJECT
+
+# Rayjump, REJECT
+DOMAIN-SUFFIX, rayjump.com, REJECT
+DOMAIN-SUFFIX, net.rayjump.com, REJECT
+DOMAIN-SUFFIX, setting.rayjump.com, REJECT
+
+# Rubicon Project, REJECT
+DOMAIN-SUFFIX, rubiconproject.com, REJECT
+DOMAIN-SUFFIX, beacon-us-sjc1.rubiconproject.com, REJECT
+DOMAIN-SUFFIX, eus.rubiconproject.com, REJECT
+DOMAIN-SUFFIX, optimized-by.rubiconproject.com, REJECT
+DOMAIN-SUFFIX, pixel.rubiconproject.com, REJECT
+DOMAIN-SUFFIX, secure-assets.rubiconproject.com, REJECT
+DOMAIN-SUFFIX, tap.rubiconproject.com, REJECT
+DOMAIN-SUFFIX, tap-cdn.rubiconproject.com, REJECT
+DOMAIN-SUFFIX, tap-t.rubiconproject.com, REJECT
+DOMAIN-SUFFIX, token.rubiconproject.com, REJECT
+DOMAIN-SUFFIX, usync.aws.rubiconproject.com, REJECT
+
+# Smart AdServer, REJECT
+DOMAIN-SUFFIX, smartadserver.com, REJECT
+DOMAIN-SUFFIX, cdn1.smartadserver.com, REJECT
+DOMAIN-SUFFIX, ww251.smartadserver.com, REJECT
+DOMAIN-SUFFIX, ww881.smartadserver.com, REJECT
+DOMAIN-SUFFIX, www6.smartadserver.com, REJECT
+
+# Snapmobile, REJECT
+DOMAIN-SUFFIX, snap.snapmobile.asia, REJECT
+DOMAIN-SUFFIX, snapmobileasia.net, REJECT
+DOMAIN-SUFFIX, selfie.snapmobileasia.net, REJECT
+
+# StatCounter, REJECT
+DOMAIN-SUFFIX, statcounter.com, REJECT
+DOMAIN-SUFFIX, c.statcounter.com, REJECT
+DOMAIN-SUFFIX, c1.statcounter.com, REJECT
+DOMAIN-SUFFIX, c2.statcounter.com, REJECT
+DOMAIN-SUFFIX, secure.statcounter.com, REJECT
+
+# Segment, REJECT
+DOMAIN-SUFFIX, segment.com, REJECT
+DOMAIN-SUFFIX, segment.io, REJECT
+DOMAIN-SUFFIX, cdn-settings.segment.com, REJECT
+DOMAIN-SUFFIX, mobile-service.segment.com, REJECT
+
+# Sigmob, REJECT
+DOMAIN-SUFFIX, adservice.sigmob.cn, REJECT
+
+# Sizmek, REJECT
+DOMAIN-SUFFIX, serving-sys.com, REJECT
+DOMAIN-SUFFIX, activity.serving-sys.com, REJECT
+DOMAIN-SUFFIX, bs.serving-sys.com, REJECT
+DOMAIN-SUFFIX, bsch.serving-sys.com, REJECT
+DOMAIN-SUFFIX, datacapture.serving-sys.com, REJECT
+DOMAIN-SUFFIX, ds.serving-sys.com, REJECT
+DOMAIN-SUFFIX, ds-ll.serving-sys.com, REJECT
+DOMAIN-SUFFIX, secure-ds.serving-sys.com, REJECT
+DOMAIN-SUFFIX, us.bs.serving-sys.com, REJECT
+
+# Smaato, REJECT
+DOMAIN-SUFFIX, smaato.net, REJECT
+
+# StartApp, REJECT
+DOMAIN-SUFFIX, startapp.com, REJECT
+DOMAIN-SUFFIX, startappexchange.com, REJECT
+DOMAIN-SUFFIX, startappservice.com, REJECT
+DOMAIN-SUFFIX, lp.startapp.com, REJECT
+DOMAIN-SUFFIX, init.startappexchange.com, REJECT
+DOMAIN-SUFFIX, dts.akamai.startappexchange.com, REJECT
+DOMAIN-SUFFIX, images.startappservice.com, REJECT
+DOMAIN-SUFFIX, req.startappservice.com, REJECT
+
+# Taptica, REJECT
+DOMAIN-SUFFIX, clk.taptica.com, REJECT
+
+# TGBus, REJECT
+DOMAIN-SUFFIX, vista.tgbusdata.cn, REJECT
+DOMAIN-SUFFIX, vista.tgbus.com, REJECT
+
+# Touclick, REJECT
+DOMAIN-SUFFIX, touclick.com, REJECT
+DOMAIN-SUFFIX, cap.touclick.com, REJECT
+DOMAIN-SUFFIX, ver.touclick.com, REJECT
+
+# Trafficfactory, REJECT
+DOMAIN-SUFFIX, trafficfactory.biz, REJECT
+DOMAIN-SUFFIX, media.trafficfactory.biz, REJECT
+DOMAIN-SUFFIX, rpc-php.trafficfactory.biz, REJECT
+
+# Trafficjunky, REJECT
+DOMAIN-SUFFIX, trafficjunky.com, REJECT
+DOMAIN-SUFFIX, trafficjunky.net, REJECT
+DOMAIN-SUFFIX, media.trafficjunky.net, REJECT
+DOMAIN-SUFFIX, vz-cdn.trafficjunky.net, REJECT
+
+# TalkingData, REJECT
+DOMAIN-SUFFIX, talkingdata.com, REJECT
+DOMAIN-SUFFIX, talkingdata.net, REJECT
+DOMAIN-SUFFIX, tenddata.com, REJECT
+DOMAIN-SUFFIX, gaandroid.talkingdata.net, REJECT
+DOMAIN-SUFFIX, tdcv3.talkingdata.net, REJECT
+DOMAIN-SUFFIX, u.talkingdata.net, REJECT
+DOMAIN-SUFFIX, cpatrk.net, REJECT
+
+# Tapad, REJECT
+DOMAIN-SUFFIX, tapad.com, REJECT
+DOMAIN-SUFFIX, pixel.tapad.com, REJECT
+
+# Tapjoy, REJECT
+DOMAIN-SUFFIX, tapjoy.cn, REJECT
+DOMAIN-SUFFIX, tapjoy.com, REJECT
+DOMAIN-SUFFIX, tapjoyads.com, REJECT
+DOMAIN-SUFFIX, ws.tapjoyads.com, REJECT
+
+# 推啊 (Tuia), REJECT
+DOMAIN-SUFFIX, tuia.cn, REJECT
+DOMAIN-SUFFIX, engine.tuia.cn, REJECT
+DOMAIN-SUFFIX, yun.tuia.cn, REJECT
+
+# VigLink, REJECT
+DOMAIN-SUFFIX, viglink.com, REJECT
+DOMAIN-SUFFIX, api.viglink.com, REJECT
+DOMAIN-SUFFIX, cdn.viglink.com, REJECT
+DOMAIN, apicdn.viglink.com, REJECT
+DOMAIN, mc.viglink.com, REJECT
+DOMAIN, ns2.viglink.com, REJECT
+DOMAIN, ns3.viglink.com, REJECT
+DOMAIN, ns4.viglink.com, REJECT
+DOMAIN, qa.viglink.com, REJECT
+
+# Voiceads, REJECT
+DOMAIN-SUFFIX, agr.voiceads.cn, REJECT
+DOMAIN-SUFFIX, ws.voiceads.cn, REJECT
+DOMAIN-SUFFIX, voiceads.com, REJECT
+
+# Vungle, REJECT
+DOMAIN-SUFFIX, vungle.cn, REJECT
+
+# Vpon, REJECT
+DOMAIN-SUFFIX, vpon.com, REJECT
+DOMAIN-SUFFIX, beta.vpon.com, REJECT
+DOMAIN-SUFFIX, biz.vpon.com, REJECT
+DOMAIN-SUFFIX, fw.vpon.com, REJECT
+DOMAIN-SUFFIX, jira.vpon.com, REJECT
+DOMAIN-SUFFIX, m.vpon.com, REJECT
+DOMAIN-SUFFIX, tw.adon.vpon.com, REJECT
+DOMAIN-SUFFIX, tw.api.vpon.com, REJECT
+DOMAIN-SUFFIX, cn.pub.vpon.com, REJECT
+DOMAIN-SUFFIX, tw.pub.vpon.com, REJECT
+
+# Yandex, REJECT
+DOMAIN-SUFFIX, st.yandexadexchange.net, REJECT
+DOMAIN-SUFFIX, ads.yandex.com, REJECT
+
+# Yengo, REJECT
+DOMAIN-SUFFIX, st.yengo.com, REJECT
+
+# 亿起发, REJECT
+DOMAIN-SUFFIX, yiqifa.com, REJECT
+
+# 优效平台, REJECT
+DOMAIN-SUFFIX, youxiaoad.com, REJECT
+DOMAIN-SUFFIX, api.youxiaoad.com, REJECT
+DOMAIN-SUFFIX, source.youxiaoad.com, REJECT
+DOMAIN-SUFFIX, ssp.youxiaoad.com, REJECT
+DOMAIN-SUFFIX, sspapi.youxiaoad.com, REJECT
+
+# 指点传媒, REJECT
+DOMAIN-SUFFIX, zhidian3g.cn, REJECT
+DOMAIN-SUFFIX, ad.zhidian3g.cn, REJECT
+DOMAIN-SUFFIX, soft.zhidian3g.cn, REJECT
+
+# 诸葛智能, REJECT
+DOMAIN, zgsdk.zhugeio.com, REJECT
+
+# Zedo, REJECT
+DOMAIN-SUFFIX, zedo.com, REJECT
+DOMAIN-SUFFIX, d8.zedo.com, REJECT
+DOMAIN-SUFFIX, z1.zedo.com, REJECT
