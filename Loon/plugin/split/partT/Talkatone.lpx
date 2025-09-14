@@ -10,3 +10,12 @@
 
 [Rule]
 DOMAIN-SUFFIX,tappx.com, REJECT
+
+
+[Rewrite]
+^https?:\/\/alt-r\.my\.com\/mobile reject-dict
+^https?:\/\/imgx\.jampp\.com\/imgsrv\/tn reject-img
+
+
+[MITM]
+hostname = alt-r.my.com, imgx.jampp.com

@@ -8,6 +8,15 @@
 #!date=2025-08-21 22:37:00
 #############################################
 
+[Rule]
+# DOMAIN-SUFFIX, sis.jpush.io, REJECT
+# DOMAIN-SUFFIX, s.jpush.cn, REJECT
+# DOMAIN-SUFFIX, jpush.cn, REJECT
+# DOMAIN-SUFFIX, im64.jpush.cn, REJECT
+# DOMAIN-SUFFIX, im.jpush.cn, REJECT
+# DOMAIN-SUFFIX, jpush.html5.qq.com, REJECT
+
+
 [Rewrite]
 ^https?:\/\/wap.bank\.ecitic\.com:6443\/NMBFOServer\/cbframework\.do\?act=CUBEPAGEDATA reject-200
 # 开屏广告

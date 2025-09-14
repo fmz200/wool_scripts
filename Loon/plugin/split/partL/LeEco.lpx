@@ -9,8 +9,22 @@
 #############################################
 
 [Rule]
-DOMAIN-SUFFIX,webp2p.letv.com, REJECT
-DOMAIN, ark.letv.com, REJECT
 DOMAIN, emma-414870e223.huodonghezi.com, REJECT
-DOMAIN, g3.letv.com, REJECT
-DOMAIN, n.mark.letv.com, REJECT
+DOMAIN-SUFFIX,webp2p.letv.com, REJECT
+DOMAIN-SUFFIX, ark.letv.com, REJECT
+DOMAIN-SUFFIX, dc.letv.com, REJECT
+DOMAIN-SUFFIX, fz.letv.com, REJECT
+DOMAIN-SUFFIX, g3.letv.com, REJECT
+DOMAIN-SUFFIX, minisite.letv.com, REJECT
+DOMAIN-SUFFIX, pro.letv.com, REJECT
+DOMAIN-SUFFIX, stat.letv.com, REJECT
+DOMAIN-SUFFIX, pro.hoye.letv.com, REJECT
+DOMAIN-SUFFIX, msg.m.letv.com, REJECT
+DOMAIN-SUFFIX, static.app.m.letv.com, REJECT
+DOMAIN-SUFFIX, n.mark.letv.com, REJECT
+DOMAIN-SUFFIX, 1.letvlive.com, REJECT
+DOMAIN-SUFFIX, 2.letvlive.com, REJECT
+DOMAIN-SUFFIX, api.game.letvstore.com, REJECT
+DOMAIN-SUFFIX, api.push.le.com, REJECT
+DOMAIN-SUFFIX, cn.api.push.le.com, REJECT
+DOMAIN-SUFFIX, guang.lesports.com, REJECT

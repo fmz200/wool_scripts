@@ -8,6 +8,11 @@
 #!date=2025-08-21 22:37:00
 #############################################
 
+[Rule]
+DOMAIN-SUFFIX, erebor.douban.com, REJECT
+DOMAIN-SUFFIX, ad.doubanio.com, REJECT
+
+
 [Rewrite]
 # 如开启可自行添加主机名 img*.douban.com, frodo.douban.com, erebor.douban.com
 ^https?:\/\/api\.douban\.com\/v\d\/app_ads\/ reject-dict

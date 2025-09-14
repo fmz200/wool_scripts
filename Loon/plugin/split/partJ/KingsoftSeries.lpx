@@ -1,0 +1,44 @@
+#!name=金山系 (Kingsoft)
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partJ/KingsoftSeries.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rule]
+DOMAIN-SUFFIX, an.m.liebao.cn, REJECT
+DOMAIN-SUFFIX, cr.m.liebao.cn, REJECT
+DOMAIN-SUFFIX, cms.an.m.liebao.cn, REJECT
+DOMAIN-SUFFIX, j.wan.liebao.cn, REJECT
+DOMAIN-SUFFIX, 1.wps.cn, REJECT
+DOMAIN-SUFFIX, android-lrcresource.wps.cn, REJECT
+DOMAIN-SUFFIX, ic.wps.cn, REJECT
+DOMAIN-SUFFIX, ios-informationplatform.wps.cn, REJECT
+DOMAIN-SUFFIX, minfo.wps.cn, REJECT
+DOMAIN-SUFFIX, mostat.wps.cn, REJECT
+DOMAIN-SUFFIX, moupdate10332052.wps.cn, REJECT
+DOMAIN-SUFFIX, pcfg.wps.cn, REJECT
+DOMAIN-SUFFIX, img1.pcfg.cache.wps.cn, REJECT
+DOMAIN-SUFFIX, crashes.mo.wps.cn, REJECT
+DOMAIN-SUFFIX, img.auction-ads.wpscdn.cn, REJECT
+DOMAIN-SUFFIX, mo.res.wpscdn.cn, REJECT
+DOMAIN-SUFFIX, mobad.ijinshan.com, REJECT
+DOMAIN-SUFFIX, mlb.did.ijinshan.com, REJECT
+DOMAIN-SUFFIX, apns.ios.ijinshan.com, REJECT
+DOMAIN-SUFFIX, cdnimg.liehu.ijinshan.com, REJECT
+DOMAIN-SUFFIX, bp.mobad.ijinshan.com, REJECT
+DOMAIN-SUFFIX, rcv.mobad.ijinshan.com, REJECT
+DOMAIN-SUFFIX, sdk.mobad.ijinshan.com, REJECT
+DOMAIN-SUFFIX, unconf.mobad.ijinshan.com, REJECT
+DOMAIN-SUFFIX, rcmd.pop.ijinshan.com, REJECT
+DOMAIN-SUFFIX, pop.sjk.ijinshan.com, REJECT
+DOMAIN-SUFFIX, d.union.ijinshan.com, REJECT
+DOMAIN-SUFFIX, dl.union.ijinshan.com, REJECT
+DOMAIN-SUFFIX, counter.kingsoft.com, REJECT
+DOMAIN-SUFFIX, bu1.duba.com, REJECT
+DOMAIN-SUFFIX, bu2.duba.com, REJECT
+DOMAIN-SUFFIX, docer.com, REJECT
+DOMAIN-SUFFIX, iciba.com, REJECT

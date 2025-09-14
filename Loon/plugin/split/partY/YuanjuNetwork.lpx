@@ -1,0 +1,20 @@
+#!name=元聚网络（漫画岛，追书神器，甜瓜小说）
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partY/YuanjuNetwork.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rule]
+DOMAIN-SUFFIX, d.1391.com, REJECT
+DOMAIN-SUFFIX, lyapi.1391.com, REJECT
+DOMAIN-SUFFIX, lyjk.1391.com, REJECT
+DOMAIN-SUFFIX, mhd.1391.com, REJECT
+DOMAIN-SUFFIX, mhdpay.1391.com, REJECT
+DOMAIN-SUFFIX, mhdtestks3.1391.com, REJECT
+DOMAIN-SUFFIX, mhdufile.1391.com, REJECT
+DOMAIN-SUFFIX, mhjk.1391.com, REJECT
+DOMAIN-SUFFIX, sqtpks3.1391.com, REJECT

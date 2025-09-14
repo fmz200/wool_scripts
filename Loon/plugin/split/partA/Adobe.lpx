@@ -9,4 +9,29 @@
 #############################################
 
 [Rule]
-DOMAIN, geo2.adobe.com, REJECT
+DOMAIN, geo2.adobe.com, REJECTns-3.adobe.com , REJECT
+DOMAIN-SUFFIX, activate.adobe.com , REJECT
+DOMAIN-SUFFIX, activate-sea.adobe.com , REJECT
+DOMAIN-SUFFIX, activate-sjc0.adobe.com , REJECT
+DOMAIN-SUFFIX, adobe-dns.adobe.com , REJECT
+DOMAIN-SUFFIX, adobe-dns-2.adobe.com , REJECT
+DOMAIN-SUFFIX, adobe-dns-3.adobe.com , REJECT
+DOMAIN-SUFFIX, ereg.adobe.com , REJECT
+DOMAIN-SUFFIX, get3.adobe.com , REJECT
+DOMAIN-SUFFIX, hl2rcv.adobe.com , REJECT
+DOMAIN-SUFFIX, practivate.adobe.com , REJECT
+DOMAIN-SUFFIX, wip3.adobe.com , REJECT
+DOMAIN-SUFFIX, wwis-dubc1-vip60.adobe.com , REJECT
+DOMAIN-SUFFIX, lm.licenses.adobe.com , REJECT
+DOMAIN-SUFFIX, na2m-pr.licenses.adobe.com , REJECT
+DOMAIN-SUFFIX, na1r.services.adobe.com , REJECT
+DOMAIN-SUFFIX, hlrcv.stage.adobe.com , REJECT
+DOMAIN-SUFFIX, activate.wip3.adobe.com , REJECT
+DOMAIN-SUFFIX, ereg.wip3.adobe.com , REJECT
+DOMAIN-SUFFIX, lmlicenses.wip4.adobe.com , REJECT
+# Marketo, REJECT
+DOMAIN-SUFFIX, marketo.com, REJECT
+DOMAIN-SUFFIX, asia.marketo.com, REJECT
+DOMAIN-SUFFIX, pages2.marketo.com, REJECT
+DOMAIN-SUFFIX, marketo.net, REJECT
+DOMAIN-SUFFIX, munchkin.marketo.net, REJECT

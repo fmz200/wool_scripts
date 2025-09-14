@@ -9,11 +9,15 @@
 #############################################
 
 [Rule]
-DOMAIN, adse.ximalaya.com, REJECT
 DOMAIN, adsehera.ximalaya.com, REJECT
 DOMAIN, adse.wsa.ximalaya.com, REJECT
 DOMAIN, adbehavior.ximalaya.com, REJECT
 DOMAIN, adbehavior.wsa.ximalaya.com, REJECT
+DOMAIN-SUFFIX, ad.ximalaya.com, REJECT
+DOMAIN-SUFFIX, adse.ximalaya.com, REJECT
+DOMAIN-SUFFIX, adse-v2.ximalaya.com, REJECT
+DOMAIN-SUFFIX, open.ximalaya.com, REJECT
+DOMAIN-SUFFIX, upos-app.ximalaya.com, REJECT
 
 
 [Rewrite]
@@ -58,8 +62,6 @@ DOMAIN, adbehavior.wsa.ximalaya.com, REJECT
 ^https:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/subscribe\/v\d\/subscribe\/recommend\? reject-dict
 
 ^https:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/mobile-user\/v\d\/purchased\/recommend\/ reject-dict
-
-
 
 
 [MITM]

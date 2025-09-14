@@ -8,6 +8,12 @@
 #!date=2025-08-21 22:37:00
 #############################################
 
+[Rule]
+DOMAIN-SUFFIX, n-st.vip.com, REJECT
+DOMAIN-SUFFIX, api.union.vip.com, REJECT
+DOMAIN-SUFFIX, ms.vipstatic.com, REJECT
+
+
 [Rewrite]
 ^https?:\/\/b\.appsimg\.com\/upload\/momin reject
 ^https?:\/\/mapi\.appvipshop\.com\/vips-mobile\/rest\/activity\/advertisement\/get reject-200

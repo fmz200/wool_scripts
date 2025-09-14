@@ -1,15 +1,21 @@
-#!name=财新
+#!name=财新网
 #!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
 #!author=奶思
 #!homepage=https://github.com/fmz200/wool_scripts
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
-#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partC/CaiXin.lpx
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partC/Caixin.lpx
 #!tg-group=https://t.me/lanjieguanggao
 #!date=2025-08-21 22:37:00
 #############################################
 
 [Argument]
 cdxb_enable = switch,true,false,tag=财新-脚本开关
+
+[Rule]
+DOMAIN-SUFFIX, apollo.caixin.com, REJECT
+DOMAIN-SUFFIX, logstat.caixin.com, REJECT
+DOMAIN-SUFFIX, promote.caixin.com, REJECT
+
 
 [Script]
 http-response ^https?:\/\/gg\.caixin\.com\/s\?z=caixin&op=1&c=3362 script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/caixin/caixinAd.js, requires-body=true, timeout=60, tag=财新广告, enable={cdxb_enable}

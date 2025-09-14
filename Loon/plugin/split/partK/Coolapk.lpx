@@ -11,6 +11,12 @@
 [Argument]
 kuan_enable = switch,true,false,tag=酷安-脚本开关
 
+[Rule]
+# 广告联盟已包含, REJECT
+
+
+
+
 [Rewrite]
 # ^https?:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch reject-dict
 

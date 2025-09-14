@@ -11,6 +11,16 @@
 [Argument]
 rfrfuipk_enable = switch,true,false,tag=人人视频-脚本开关
 
+[Rule]
+DOMAIN-SUFFIX, ad.rr.tv, REJECT
+DOMAIN-SUFFIX, ebp.renren.com, REJECT
+DOMAIN-SUFFIX, jebe.renren.com, REJECT
+DOMAIN-SUFFIX, bolt.jebe.renren.com, REJECT
+DOMAIN-SUFFIX, cupid.jebe.renren.com, REJECT
+DOMAIN-SUFFIX, shaft.jebe.renren.com, REJECT
+DOMAIN-SUFFIX, xray.jebe.renren.com, REJECT
+
+
 [Rewrite]
 # RRTV_屏蔽軟件更新
 ^https?:\/\/api\.rr\.tv\/.*?Version reject

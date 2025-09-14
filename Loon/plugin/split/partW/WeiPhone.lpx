@@ -8,6 +8,13 @@
 #!date=2025-08-21 22:37:00
 #############################################
 
+[Rule]
+# 广告联盟已包含, REJECT
+#DOMAIN-SUFFIX, aoodoo.feng.com, REJECT
+#DOMAIN-SUFFIX, push.feng.com, REJECT
+#DOMAIN-SUFFIX, aoodoo.weiphone.com, REJECT
+
+
 [Rewrite]
 ^https?:\/\/api\.wfdata\.club\/v\d\/yesfeng\/(infoCenterAd|yesList) reject
 

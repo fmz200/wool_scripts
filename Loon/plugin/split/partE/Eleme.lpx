@@ -8,6 +8,16 @@
 #!date=2025-08-21 22:37:00
 #############################################
 
+[Rule]
+DOMAIN-SUFFIX, app-monitor.ele.me, REJECT
+DOMAIN-SUFFIX, client-api.ele.me, REJECT
+DOMAIN-SUFFIX, grand.ele.me, REJECT
+DOMAIN-SUFFIX, mobile-pubt.ele.me, REJECT
+DOMAIN-SUFFIX, newton-api.ele.me, REJECT
+
+
+
+
 [Rewrite]
 # 开屏广告
 ^https?:\/\/elemecdn\.com\/.+\/sitemap reject

@@ -64,3 +64,4 @@ DOMAIN-SUFFIX,log.web.kugou.com, REJECT
 DOMAIN-SUFFIX,kgmobilestat.kugou.com, REJECT
 DOMAIN-SUFFIX,kgmobilestatbak.kugou.com, REJECT
 DOMAIN-SUFFIX,mobilelog.kugou.com, REJECT
+DOMAIN-SUFFIX, ad.kugou.com, REJECT

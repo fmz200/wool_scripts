@@ -9,5 +9,21 @@
 #############################################
 
 [Rule]
-DOMAIN, apppv.zol.com.cn, REJECT
-DOMAIN, pvnapp.zol.com.cn, REJECT
+DOMAIN-SUFFIX, apppv.zol.com.cn, REJECT
+DOMAIN-SUFFIX, cpro.zol.com.cn, REJECT
+DOMAIN-SUFFIX, dynamic.zol.com.cn, REJECT
+DOMAIN-SUFFIX, imp.zol.com.cn, REJECT
+DOMAIN-SUFFIX, js.zol.com.cn, REJECT
+DOMAIN-SUFFIX, mstat.zol.com.cn, REJECT
+DOMAIN-SUFFIX, pv.zol.com.cn, REJECT
+DOMAIN-SUFFIX, pvc.zol.com.cn, REJECT
+DOMAIN-SUFFIX, pvm.zol.com.cn, REJECT
+DOMAIN-SUFFIX, pvmsite.zol.com.cn, REJECT
+DOMAIN-SUFFIX, pvnapp.zol.com.cn, REJECT
+DOMAIN-SUFFIX, pvsite.zol.com.cn, REJECT
+DOMAIN-SUFFIX, pvtest.zol.com.cn, REJECT
+DOMAIN-SUFFIX, wappv.zol.com.cn, REJECT
+DOMAIN-SUFFIX, ydjs.zol.com.cn, REJECT
+DOMAIN-SUFFIX, afp.zol-img.com.cn, REJECT
+DOMAIN-SUFFIX, pic.zol-img.com.cn, REJECT
+DOMAIN-SUFFIX, api.zol.com, REJECT

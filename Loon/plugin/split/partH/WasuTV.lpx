@@ -1,0 +1,19 @@
+#!name=华数TV
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partH/WasuTV.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rule]
+DOMAIN-SUFFIX, acsystem.wasu.cn, REJECT
+DOMAIN-SUFFIX, afp.wasu.cn, REJECT
+DOMAIN-SUFFIX, afpcreative.wasu.cn, REJECT
+DOMAIN-SUFFIX, collector.wasu.cn, REJECT
+DOMAIN-SUFFIX, delivery.wasu.cn, REJECT
+DOMAIN-SUFFIX, delivery-pc.wasu.cn, REJECT
+DOMAIN-SUFFIX, adsystem.wasu.tv, REJECT
+DOMAIN-SUFFIX, adwasu.tv, REJECT

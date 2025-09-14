@@ -8,6 +8,14 @@
 #!date=2025-08-21 22:37:00
 #############################################
 
+[Rule]
+;DOMAIN, js-ad.a.yximgs.com, REJECT
+DOMAIN-SUFFIX, e.kuaishou.com, REJECT
+DOMAIN-SUFFIX, cm.downloader.commercial.kuaishou.com, REJECT
+DOMAIN-SUFFIX, cm.ad.gifshow.com, REJECT
+DOMAIN-SUFFIX, cm.kwad.com, REJECT
+
+
 [Rewrite]
 ^https:\/\/(apissl|az2-api(-js|-idc)?)\.(gifshow|ksapisrv)\.com\/rest\/system\/startup\? response-body-json-del reskinConfig sidebarExSquareStyle.moreList sidebarExSquareStyle.topList
 ^https:\/\/(apissl|az2-api(-js|-idc)?)\.(gifshow|ksapisrv)\.com\/rest\/system\/startup\? response-body-json-jq '.sidebarExSquareStyle.commonlyUsedList |= map(select(.title == "设置" or .title == "历史记录" or .title == "草稿箱" or .title == "我的钱包" or .title == "小程序" or .title == "未成年人模式" or .title == "官方客服" or .title == "内容偏好" or .title == "离线模式" or .title == "稍后再看" or .title == "举报中心" or .title == "挂件"))'

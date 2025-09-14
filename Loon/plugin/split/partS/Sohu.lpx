@@ -13,6 +13,25 @@ DOMAIN-SUFFIX,ad.sohu.com, REJECT
 DOMAIN-SUFFIX,ads.sohu.com, REJECT
 DOMAIN-SUFFIX,aty.sohu.com, REJECT
 DOMAIN, hui.sohu.com, REJECT
+DOMAIN-SUFFIX, adnet.sohu.com, REJECT
+DOMAIN-SUFFIX, corp.sohu.com, REJECT
+DOMAIN-SUFFIX, cpc.sohu.com, REJECT
+DOMAIN-SUFFIX, go.sohu.com, REJECT
+DOMAIN-SUFFIX, hui.sohu.com, REJECT
+DOMAIN-SUFFIX, images.sohu.com, REJECT
+DOMAIN-SUFFIX, suvset.sohu.com, REJECT
+DOMAIN-SUFFIX, track.sohu.com, REJECT
+DOMAIN-SUFFIX, doc.go.sohu.com, REJECT
+DOMAIN-SUFFIX, i.go.sohu.com, REJECT
+DOMAIN-SUFFIX, imp.go.sohu.com, REJECT
+DOMAIN-SUFFIX, s.go.sohu.com, REJECT
+DOMAIN-SUFFIX, t.go.sohu.com, REJECT
+DOMAIN-SUFFIX, txt.go.sohu.com, REJECT
+DOMAIN-SUFFIX, x1.go.sohu.com, REJECT
+DOMAIN-SUFFIX, xls.go.sohu.com, REJECT
+DOMAIN-SUFFIX, ad.mail.sohu.com, REJECT
+DOMAIN-SUFFIX, 3rd.t.sohu.com, REJECT
+DOMAIN-SUFFIX, 888.tv.sohu.com, REJECT
 
 
 [Rewrite]

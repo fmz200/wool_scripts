@@ -1,0 +1,48 @@
+#!name=360
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/part3/360.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rule]
+DOMAIN-SUFFIX, 3600.com, REJECT
+DOMAIN-SUFFIX, 360640.com, REJECT
+DOMAIN-SUFFIX, 360jiaquan.com, REJECT
+DOMAIN-SUFFIX, 360safego.com, REJECT
+DOMAIN-SUFFIX, 365safego.com, REJECT
+DOMAIN-SUFFIX, 366safego.com, REJECT
+DOMAIN-SUFFIX, pjogndc8ixoidna.360doc.cn, REJECT
+DOMAIN-SUFFIX, w5sac788c1.360doc.cn, REJECT
+DOMAIN-SUFFIX, 360shopping.com.cn, REJECT
+DOMAIN-SUFFIX, cps.360buy.com, REJECT
+DOMAIN-SUFFIX, eclick.360doc.com, REJECT
+DOMAIN-SUFFIX, ad.360in.com, REJECT
+DOMAIN-SUFFIX, dl.360safe.com, REJECT
+DOMAIN-SUFFIX, down.360safe.com, REJECT
+DOMAIN-SUFFIX, inst.360safe.com, REJECT
+DOMAIN-SUFFIX, update.360safe.com, REJECT
+DOMAIN-SUFFIX, kuaikan.netmon.360safe.com, REJECT
+DOMAIN-SUFFIX, ini.update.360safe.com, REJECT
+DOMAIN-SUFFIX, display.360totalsecurity.com, REJECT
+DOMAIN-SUFFIX, hot.m.shouji.360tpcdn.com, REJECT
+DOMAIN-SUFFIX, ad.360yield.com, REJECT
+DOMAIN-SUFFIX, guess.h.qhimg.com, REJECT
+DOMAIN-SUFFIX, top.h.qhimg.com, REJECT
+DOMAIN-SUFFIX, jspassport.ssl.qhimg.com, REJECT
+DOMAIN-SUFFIX, top.h.qhmsg.com, REJECT
+DOMAIN-SUFFIX, hs.qhupdate.com, REJECT
+DOMAIN-SUFFIX, res.qhupdate.com, REJECT
+DOMAIN-SUFFIX, s.qhupdate.com, REJECT
+DOMAIN-SUFFIX, haostat.qihoo.com, REJECT
+DOMAIN-SUFFIX, sh.qihoo.com, REJECT
+DOMAIN-SUFFIX, s.sh.qihoo.com, REJECT
+DOMAIN-SUFFIX, spro.so.com, REJECT
+DOMAIN-SUFFIX, mbrowser.news.so.com, REJECT
+DOMAIN-SUFFIX, tran.news.so.com, REJECT
+DOMAIN-SUFFIX, 360safe.com, REJECT
+DOMAIN-SUFFIX, 360.cn, REJECT
+DOMAIN-SUFFIX, 360.com, REJECT

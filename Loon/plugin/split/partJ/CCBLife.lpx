@@ -16,7 +16,6 @@ jhsh_enable = switch,true,false,tag=建行生活-脚本开关
 DOMAIN, o2o-ad-log-gateway.alibaba.com, REJECT
 
 
-
 [Rewrite]
 # 首页横幅广告
 ^https?:\/\/yunbusiness\.ccb\.com\/clp_service\/txCtrl\?txcode=A3341A(002|006|009|119|120) reject-200

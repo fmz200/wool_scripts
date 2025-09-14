@@ -11,6 +11,7 @@
 [Rule]
 DOMAIN, adm.10jqka.com.cn, REJECT
 DOMAIN, stat.10jqka.com.cn, REJECT
+DOMAIN-SUFFIX, ad.thsi.cn, REJECT
 
 
 [Rewrite]

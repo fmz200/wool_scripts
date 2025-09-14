@@ -1,0 +1,30 @@
+#!name=悠易互通
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partY/YoyiInteractive.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rule]
+DOMAIN-SUFFIX, yoyi.com.cn, REJECT
+DOMAIN-SUFFIX, aim.yoyi.com.cn, REJECT
+DOMAIN-SUFFIX, air.yoyi.com.cn, REJECT
+DOMAIN-SUFFIX, amps.yoyi.com.cn, REJECT
+DOMAIN-SUFFIX, atm.yoyi.com.cn, REJECT
+DOMAIN-SUFFIX, d.yoyi.com.cn, REJECT
+DOMAIN-SUFFIX, databank.yoyi.com.cn, REJECT
+DOMAIN-SUFFIX, m.yoyi.com.cn, REJECT
+DOMAIN-SUFFIX, mapping.yoyi.com.cn, REJECT
+DOMAIN-SUFFIX, databank.air.yoyi.com.cn, REJECT
+DOMAIN-SUFFIX, log2.air.yoyi.com.cn, REJECT
+DOMAIN-SUFFIX, g.rs.yoyi.com.cn, REJECT
+DOMAIN-SUFFIX, h.sora.yoyi.com.cn, REJECT
+DOMAIN-SUFFIX, z.sora.yoyi.com.cn, REJECT
+DOMAIN-SUFFIX, yoyi.tv, REJECT
+DOMAIN-SUFFIX, d.yoyi.tv, REJECT
+DOMAIN-SUFFIX, js.yoyi.tv, REJECT
+DOMAIN-SUFFIX, g.d.yoyi.tv, REJECT
+DOMAIN-SUFFIX, t.d.yoyi.tv, REJECT

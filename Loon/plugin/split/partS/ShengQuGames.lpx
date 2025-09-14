@@ -8,6 +8,10 @@
 #!date=2025-08-21 22:37:00
 #############################################
 
+[Rule]
+DOMAIN-SUFFIX, adrs.sdo.com, REJECT
+
+
 [Rewrite]
 ^https?:\/\/daoyu\.sdo\.com\/api\/userCommon\/getAppStartAd reject
 

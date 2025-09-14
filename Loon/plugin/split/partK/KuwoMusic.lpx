@@ -28,7 +28,7 @@ DOMAIN-SUFFIX,wa.kuwo.cn, REJECT
 DOMAIN-SUFFIX,webstat.kuwo.cn, REJECT
 DOMAIN-SUFFIX,mobilead.kuwo.cn, REJECT
 DOMAIN-SUFFIX,rich.kuwo.cn, REJECT
-
+DOMAIN-SUFFIX, ad.kuwo.cn, REJECT
 
 
 [Rewrite]

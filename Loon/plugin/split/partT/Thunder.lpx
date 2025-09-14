@@ -9,8 +9,22 @@
 #############################################
 
 [Rule]
-DOMAIN, adsp.xunlei.com, REJECT
-DOMAIN, etl.xlmc.sandai.net, REJECT
+DOMAIN-SUFFIX, adsp.xunlei.com, REJECT
+DOMAIN-SUFFIX, static-xl9-ssl.xunlei.com, REJECT
+DOMAIN-SUFFIX, biz.live.xunlei.com, REJECT
+DOMAIN-SUFFIX, ct.niu.xunlei.com, REJECT
+DOMAIN-SUFFIX, mou.niu.xunlei.com, REJECT
+DOMAIN-SUFFIX, scene.vip.xunlei.com, REJECT
+DOMAIN-SUFFIX, tw13b093.sandai.net, REJECT
+DOMAIN-SUFFIX, xlmc.sandai.net, REJECT
+DOMAIN-SUFFIX, cpm.cm.sandai.net, REJECT
+DOMAIN-SUFFIX, master.wap.dphub.sandai.net, REJECT
+DOMAIN-SUFFIX, idx.m.hub.sandai.net, REJECT
+DOMAIN-SUFFIX, liveupdate.mac.sandai.net, REJECT
+DOMAIN-SUFFIX, hub5pn.wap.sandai.net, REJECT
+DOMAIN-SUFFIX, etl.xlmc.sandai.net, REJECT
+DOMAIN-SUFFIX, test.api.xlmc.sandai.net, REJECT
+DOMAIN-SUFFIX, pre.api.tw06.xlmc.sandai.net, REJECT
 
 
 [Rewrite]

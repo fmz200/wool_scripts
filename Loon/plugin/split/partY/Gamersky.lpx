@@ -8,6 +8,11 @@
 #!date=2025-08-21 22:37:00
 #############################################
 
+[Rule]
+DOMAIN-SUFFIX, ja.gamersky.com, REJECT
+DOMAIN-SUFFIX, ja1.gamersky.com, REJECT
+
+
 [Rewrite]
 # 移除开屏广告、列表广告
 ^http:\/\/.+\.gamersky\.com\/.+\/adSystem\/ad\/.+ reject-dict

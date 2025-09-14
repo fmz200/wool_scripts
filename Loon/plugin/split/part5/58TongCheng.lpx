@@ -11,8 +11,21 @@
 [Rule]
 DOMAIN, track.58.com, REJECT
 DOMAIN, tracklog.58.com, REJECT
-
-
+DOMAIN-SUFFIX, 58mingri.cn, REJECT
+DOMAIN-SUFFIX, 58mingtian.cn, REJECT
+DOMAIN-SUFFIX, sc.58mingtian.cn, REJECT
+DOMAIN-SUFFIX, t1.58cdn.com.cn, REJECT
+DOMAIN-SUFFIX, t2.58cdn.com.cn, REJECT
+DOMAIN-SUFFIX, t3.58cdn.com.cn, REJECT
+DOMAIN-SUFFIX, adshow.58.com, REJECT
+DOMAIN-SUFFIX, brandshow.58.com, REJECT
+DOMAIN-SUFFIX, jing.58.com, REJECT
+DOMAIN-SUFFIX, jumpluna.58.com, REJECT
+DOMAIN-SUFFIX, news.58.com, REJECT
+DOMAIN-SUFFIX, track.58.com, REJECT
+DOMAIN-SUFFIX, tracklog.58.com, REJECT
+DOMAIN-SUFFIX, zzpush.58.com, REJECT
+DOMAIN-SUFFIX, jump.luna.58.com, REJECT
 
 
 [Rewrite]

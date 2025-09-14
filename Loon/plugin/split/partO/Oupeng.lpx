@@ -1,0 +1,17 @@
+#!name=Oupeng (欧朋)
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partO/Oupeng.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rule]
+DOMAIN-SUFFIX, ezine.oupeng.com, REJECT
+DOMAIN-SUFFIX, img-ad.oupeng.com, REJECT
+DOMAIN-SUFFIX, notify.oupeng.com, REJECT
+DOMAIN-SUFFIX, startup.oupeng.com, REJECT
+DOMAIN-SUFFIX, c.bxb.oupeng.com, REJECT
+DOMAIN-SUFFIX, r.bxb.oupeng.com, REJECT

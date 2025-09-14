@@ -1,4 +1,4 @@
-#!name=谷歌
+#!name=Google
 #!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
 #!author=奶思
 #!homepage=https://github.com/fmz200/wool_scripts
@@ -12,6 +12,7 @@
 DOMAIN-SUFFIX,google-analytics.com, REJECT
 DOMAIN, safebrowsing.googleapis.com, REJECT
 DOMAIN-SUFFIX,doubleclick.net, REJECT
+DOMAIN-SUFFIX,doubleclick.com, REJECT
 DOMAIN-SUFFIX,googleadservices.com, REJECT
 DOMAIN-SUFFIX,googleadsserving.cn, REJECT
 DOMAIN-SUFFIX,googlesyndication.com, REJECT
@@ -32,6 +33,35 @@ DOMAIN-SUFFIX,afd.l.google.com, REJECT
 DOMAIN-SUFFIX,www.googleadservices.com, REJECT
 DOMAIN-SUFFIX,www.google-analytics.com, REJECT
 DOMAIN, ads.youtube.com, REJECT
+DOMAIN-SUFFIX, cmshow.gtimg.cn, REJECT
+DOMAIN-SUFFIX, discuz.gtimg.cn, REJECT
+DOMAIN-SUFFIX, gu.qlogo.cn, REJECT
+DOMAIN-SUFFIX, py.qlogo.cn, REJECT
+DOMAIN-SUFFIX, py2.qlogo.cn, REJECT
+DOMAIN-SUFFIX, app-measurement.com, REJECT
+DOMAIN-SUFFIX, admob.com, REJECT
+DOMAIN-SUFFIX, crashlytics.com, REJECT
+DOMAIN-SUFFIX, pagespeed-mod, REJECT
+DOMAIN-SUFFIX, csi.gstatic.com, REJECT
+DOMAIN-SUFFIX, beacon.gtimg.com, REJECT
+DOMAIN-SUFFIX, bla.gtimg.com, REJECT
+DOMAIN-SUFFIX, lb.gtimg.com, REJECT
+DOMAIN-SUFFIX, pgdt.gtimg.com, REJECT
+DOMAIN-SUFFIX, ra.gtimg.com, REJECT
+DOMAIN-SUFFIX, splashqqlive.gtimg.com, REJECT
+DOMAIN-SUFFIX, swa.gtimg.com, REJECT
+DOMAIN-SUFFIX, tui.gtimg.com, REJECT
+DOMAIN-SUFFIX, wa.gtimg.com, REJECT
+DOMAIN-SUFFIX, wb.gtimg.com, REJECT
+DOMAIN-SUFFIX, e.crashlytics.com, REJECT
+DOMAIN-SUFFIX, setting.crashlytics.com, REJECT
+DOMAIN-SUFFIX, settings.crashlytics.com, REJECT
+DOMAIN-SUFFIX, gcdn.2mdn.net, REJECT
+DOMAIN-SUFFIX, s0.2mdn.net, REJECT
+DOMAIN-SUFFIX, s1.2mdn.net, REJECT
+DOMAIN-SUFFIX, pgdt.ugdtimg.com, REJECT
+DOMAIN-SUFFIX, adclick.g.doublecklick.net, REJECT
+
 
 
 [Rewrite]

@@ -12,6 +12,23 @@
 DOMAIN, ad.zijieapi.com, REJECT
 DOMAIN, applog.zijieapi.com, REJECT
 DOMAIN-SUFFIX,-normal-lq.zijieapi.com, REJECT
+DOMAIN-SUFFIX, dm.bytedance.com, REJECT
+DOMAIN-SUFFIX, xlog-va.byteoversea.com, REJECT
+DOMAIN-SUFFIX, tosv.byted.org, REJECT
+DOMAIN-SUFFIX, tosv.boe.byted.org, REJECT
+DOMAIN-SUFFIX, extlog.snssdk.com, REJECT
+DOMAIN-SUFFIX, sdfp.snssdk.com, REJECT
+DOMAIN-SUFFIX, temai.snssdk.com, REJECT
+DOMAIN-SUFFIX, xlog.snssdk.com, REJECT
+DOMAIN-SUFFIX, ad.toutiao.com, REJECT
+DOMAIN-SUFFIX, dm.toutiao.com, REJECT
+DOMAIN-SUFFIX, dsp.toutiao.com, REJECT
+DOMAIN-SUFFIX, nativeapp.toutiao.com, REJECT
+DOMAIN-SUFFIX, partner.toutiao.com, REJECT
+DOMAIN-SUFFIX, track.toutiao.com, REJECT
+DOMAIN-SUFFIX, dm.pstatp.com, REJECT
+DOMAIN-SUFFIX, pb3.pstatp.com, REJECT
+DOMAIN-SUFFIX, s3a.pstatp.com, REJECT
 
 
 [Rewrite]

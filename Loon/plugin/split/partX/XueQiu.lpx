@@ -8,6 +8,14 @@
 #!date=2025-08-21 22:37:00
 #############################################
 
+[Rule]
+DOMAIN-SUFFIX, ad.xueqiu.com, REJECT
+# 可以去掉倒计时，但是误杀很多图片，默认关闭, REJECT
+# DOMAIN-KEYWORD, xqimg.imedao.com, REJECT
+
+
+
+
 [Rewrite]
 ^https:\/\/api\.xueqiu\.com\/snowpard\/launch_strategy\/query\.json\?channel=1&height=932 reject-dict
 ^https:\/\/open\.xueqiu\.com\/mpaas\/config\/content\?.+home_visitor_relation_config reject-dict

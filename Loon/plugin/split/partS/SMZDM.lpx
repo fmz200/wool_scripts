@@ -22,8 +22,7 @@ DOMAIN, msg.umengcloud.com, REJECT
 DOMAIN, sec.umeng.com, REJECT
 DOMAIN, ulogs.umeng.com, REJECT
 DOMAIN, ynuf.aliapp.org, REJECT
-
-
+DOMAIN-SUFFIX, res-ga.smzdm.com, REJECT
 
 
 [Rewrite]

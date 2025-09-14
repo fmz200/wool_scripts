@@ -1,0 +1,30 @@
+#!name=Amazon
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partA/Amazon.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+[Rule]
+DOMAIN-SUFFIX, amazon-adsystem.com, REJECT
+DOMAIN-SUFFIX, mads.amazon.com, REJECT
+DOMAIN-SUFFIX, sdb.amazonaws.com, REJECT
+DOMAIN-SUFFIX, airpushmarketing.s3.amazonaws.com, REJECT
+DOMAIN-SUFFIX, epowernetworktrackerimages.s3.amazonaws.com, REJECT
+DOMAIN-SUFFIX, gateways.s3.amazonaws.com, REJECT
+DOMAIN-SUFFIX, kbnetworkz.s3.amazonaws.com, REJECT
+DOMAIN-SUFFIX, secretmedia.s3.amazonaws.com, REJECT
+DOMAIN-SUFFIX, smblock.s3.amazonaws.com, REJECT
+DOMAIN-SUFFIX, whistleout.s3.amazonaws.com, REJECT
+
+
+[Rewrite]
+^https?:\/\/api-cslp-emt\.amazon\.cn\/gateway\/content\/widget\/popup reject-200
+^https?:\/\/api-cslp-emt\.amazon\.cn\/gateway\/recommend reject-dict
+
+
+[MITM]
+hostname = api-cslp-emt.amazon.cn

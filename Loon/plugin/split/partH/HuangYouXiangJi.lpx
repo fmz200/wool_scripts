@@ -15,7 +15,6 @@ DOMAIN-SUFFIX,adkwai.com, REJECT
 DOMAIN-SUFFIX,mob.com, REJECT
 
 
-
 [Rewrite]
 ^https?:\/\/api4\.bybutter\.com\/v\d\/app\/placements\/\d\/advertisements reject
 

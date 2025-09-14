@@ -21,8 +21,27 @@ DOMAIN, adm0.autoimg.cn, REJECT
 DOMAIN, adm1.autoimg.cn, REJECT
 DOMAIN, adm2.autoimg.cn, REJECT
 DOMAIN, adm3.autoimg.cn, REJECT
-
-
+DOMAIN-SUFFIX, adm0.autoimg.cn, REJECT
+DOMAIN-SUFFIX, adm1.autoimg.cn, REJECT
+DOMAIN-SUFFIX, adm2.autoimg.cn, REJECT
+DOMAIN-SUFFIX, adm3.autoimg.cn, REJECT
+DOMAIN-SUFFIX, 33.autohome.com.cn, REJECT
+DOMAIN-SUFFIX, adproxy.autohome.com.cn, REJECT
+DOMAIN-SUFFIX, al.autohome.com.cn, REJECT
+DOMAIN-SUFFIX, applogapi.autohome.com.cn, REJECT
+DOMAIN-SUFFIX, c.autohome.com.cn, REJECT
+DOMAIN-SUFFIX, cmx.autohome.com.cn, REJECT
+DOMAIN-SUFFIX, dspmnt.autohome.com.cn, REJECT
+DOMAIN-SUFFIX, pcd.autohome.com.cn, REJECT
+DOMAIN-SUFFIX, pcmx.autohome.com.cn, REJECT
+DOMAIN-SUFFIX, pvx.autohome.com.cn, REJECT
+DOMAIN-SUFFIX, rd.autohome.com.cn, REJECT
+DOMAIN-SUFFIX, rdx.autohome.com.cn, REJECT
+DOMAIN-SUFFIX, pv.alert.autohome.com.cn, REJECT
+DOMAIN-SUFFIX, activity.app.autohome.com.cn, REJECT
+DOMAIN-SUFFIX, public.app.autohome.com.cn, REJECT
+DOMAIN-SUFFIX, push.app.autohome.com.cn, REJECT
+DOMAIN-SUFFIX, h.pcd.autohome.com.cn, REJECT
 
 
 [Rewrite]

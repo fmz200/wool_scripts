@@ -1,4 +1,4 @@
-#!name=雅虎
+#!name=Yahoo
 #!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
 #!author=奶思
 #!homepage=https://github.com/fmz200/wool_scripts
@@ -9,6 +9,38 @@
 #############################################
 
 [Rule]
+DOMAIN-SUFFIX, adss.yahoo.com, REJECT
+DOMAIN-SUFFIX, beap-bc.yahoo.com, REJECT
+DOMAIN-SUFFIX, comet.yahoo.com, REJECT
+DOMAIN-SUFFIX, geo.yahoo.com, REJECT
+DOMAIN-SUFFIX, marketingsolutions.yahoo.com, REJECT
+DOMAIN-SUFFIX, p3p.yahoo.com, REJECT
+DOMAIN-SUFFIX, themis.yahoo.com, REJECT
+DOMAIN-SUFFIX, ysm.yahoo.com, REJECT
+DOMAIN-SUFFIX, us.adserver.yahoo.com, REJECT
+DOMAIN-SUFFIX, beap.adss.yahoo.com, REJECT
+DOMAIN-SUFFIX, clicks.beap.bc.yahoo.com, REJECT
+DOMAIN-SUFFIX, aliunion.cn.yahoo.com, REJECT
+DOMAIN-SUFFIX, cm.p4p.cn.yahoo.com, REJECT
+DOMAIN-SUFFIX, n.gemini.yahoo.com, REJECT
+DOMAIN-SUFFIX, doubleplay-conf-yql.media.yahoo.com, REJECT
+DOMAIN-SUFFIX, ws.progrss.yahoo.com, REJECT
+DOMAIN-SUFFIX, analytics.query.yahoo.com, REJECT
+DOMAIN-SUFFIX, locdrop.query.yahoo.com, REJECT
+DOMAIN-SUFFIX, onepush.query.yahoo.com, REJECT
+DOMAIN-SUFFIX, iframe.travel.yahoo.com, REJECT
+DOMAIN-SUFFIX, m.yap.yahoo.com, REJECT
+DOMAIN-SUFFIX, pr.ybp.yahoo.com, REJECT
+DOMAIN-SUFFIX, pr-bh.ybp.yahoo.com, REJECT
+DOMAIN-SUFFIX, js-apac-ss.ysm.yahoo.com, REJECT
+DOMAIN-SUFFIX, w.homes.yahoo.net, REJECT
+DOMAIN-SUFFIX, yieldmanager.com, REJECT
+DOMAIN-SUFFIX, ard.yahoo.co.jp, REJECT
+DOMAIN-SUFFIX, yads.yahoo.co.jp, REJECT
+DOMAIN-SUFFIX, yeas.yahoo.co.jp, REJECT
+DOMAIN-SUFFIX, rd.ane.yahoo.co.jp, REJECT
+DOMAIN-SUFFIX, bc.geocities.yahoo.co.jp, REJECT
+DOMAIN-SUFFIX, im.ov.yahoo.co.jp, REJECT
 DOMAIN-SUFFIX,adserver.yahoo.com, REJECT
 DOMAIN-SUFFIX,adspecs.yahoo.com, REJECT
 DOMAIN-SUFFIX,advertising.yahoo.com, REJECT

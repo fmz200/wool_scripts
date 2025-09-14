@@ -18,11 +18,13 @@ DOMAIN-SUFFIX,du.jd.com, REJECT
 DOMAIN-SUFFIX,c-nfa.jd.com, REJECT
 DOMAIN-SUFFIX,cm.jd.com, REJECT
 DOMAIN-SUFFIX,jddebug.com, REJECT
-DOMAIN-KEYWORD,policy.jd.com, REJECT
-DOMAIN-KEYWORD,kepler.jd.com, REJECT
-DOMAIN-KEYWORD,bdsp.x.jd.com, REJECT
-DOMAIN-KEYWORD,keplerapi.jd.com, REJECT
-DOMAIN-KEYWORD,mapi.m.jd.com, REJECT
+DOMAIN-SUFFIX,policy.jd.com, REJECT
+DOMAIN-SUFFIX,kepler.jd.com, REJECT
+DOMAIN-SUFFIX,bdsp.x.jd.com, REJECT
+DOMAIN-SUFFIX,keplerapi.jd.com, REJECT
+DOMAIN-SUFFIX,mapi.m.jd.com, REJECT
+DOMAIN-SUFFIX, ad.3.cn, REJECT
+DOMAIN-SUFFIX, jd.c-ptsp.com.cn, REJECT
 # 屏蔽DNS, REJECT
 DOMAIN, dns.jd.com, REJECT
 IP-CIDR, 101.124.19.122/32, no-resolve, REJECT

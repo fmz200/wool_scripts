@@ -15,3 +15,7 @@ DOMAIN-KEYWORD,log-dmp.suishenyun.cn, REJECT
 DOMAIN-KEYWORD,client-dmp.suishenyun.cn, REJECT
 DOMAIN-KEYWORD,pc.suishenyun.net, REJECT
 DOMAIN-KEYWORD,v0-client-lz.rili.cn, REJECT
+DOMAIN-SUFFIX, ad.51wnl.com, REJECT
+DOMAIN-SUFFIX, ad-android.51wnl.com, REJECT
+DOMAIN-SUFFIX, ad.51wnl-cq.com, REJECT
+DOMAIN-SUFFIX, adextra.51wnl-cq.com, REJECT

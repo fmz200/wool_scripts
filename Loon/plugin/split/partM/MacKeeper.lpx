@@ -9,4 +9,8 @@
 #############################################
 
 [Rule]
-DOMAIN-SUFFIX,zryydi.com, REJECT
+DOMAIN-SUFFIX, mackeeper.com, REJECT
+DOMAIN-SUFFIX, download.mackeeper.com, REJECT
+DOMAIN-SUFFIX, event.mackeeper.com, REJECT
+DOMAIN-SUFFIX, mackeeperapp.mackeeper.com, REJECT
+DOMAIN-SUFFIX, zryydi.com, REJECT

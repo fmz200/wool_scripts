@@ -8,6 +8,26 @@
 #!date=2025-08-21 22:37:00
 #############################################
 
+[Rule]
+DOMAIN-SUFFIX, adapi.lenovogame.com, REJECT
+DOMAIN-SUFFIX, adcore.lenovomm.com, REJECT
+DOMAIN-SUFFIX, ams.lenovomm.com, REJECT
+DOMAIN-SUFFIX, fsr.lenovomm.com, REJECT
+DOMAIN-SUFFIX, fus.lenovomm.com, REJECT
+DOMAIN-SUFFIX, imfsr.lenovomm.com, REJECT
+DOMAIN-SUFFIX, lds.lenovomm.com, REJECT
+DOMAIN-SUFFIX, mfsr.lenovomm.com, REJECT
+DOMAIN-SUFFIX, pbs.lenovomm.com, REJECT
+DOMAIN-SUFFIX, prw.lenovomm.com, REJECT
+DOMAIN-SUFFIX, psb.lenovomm.com, REJECT
+DOMAIN-SUFFIX, pushapi.lenovomm.com, REJECT
+DOMAIN-SUFFIX, sdac.lenovomm.com, REJECT
+DOMAIN-SUFFIX, susapi.lenovomm.com, REJECT
+DOMAIN-SUFFIX, uss-pid.lenovomm.com, REJECT
+DOMAIN-SUFFIX, wth.lenovomm.com, REJECT
+DOMAIN-SUFFIX, yx.lenovomm.com, REJECT
+
+
 [Rewrite]
 ^https?:\/\/api\.club\.lenovo\.cn\/common\/open_ad reject
 

@@ -8,6 +8,21 @@
 #!date=2025-08-21 22:37:00
 #############################################
 
+[Rule]
+DOMAIN-SUFFIX, corp.meitu.com, REJECT
+DOMAIN-SUFFIX, gg.meitu.com, REJECT
+DOMAIN-SUFFIX, message.meitu.com, REJECT
+DOMAIN-SUFFIX, tuiguang.meitu.com, REJECT
+DOMAIN-SUFFIX, xiuxiu.android.dl.meitu.com, REJECT
+DOMAIN-SUFFIX, adui.tg.meitu.com, REJECT
+DOMAIN-SUFFIX, rabbit.tg.meitu.com, REJECT
+DOMAIN-SUFFIX, meitubeauty.meitudata.com, REJECT
+DOMAIN-SUFFIX, xiuxiu.mobile.meitudata.com, REJECT
+DOMAIN-SUFFIX, dc.meitustat.com, REJECT
+DOMAIN-SUFFIX, mdc.meitustat.com, REJECT
+DOMAIN-SUFFIX, rabbit.meitustat.com, REJECT
+
+
 [Rewrite]
 ^https?:\/\/mea\.meitudata\.com\/kaiping reject
 ^https?:\/\/adui\.tg\.meitu\.com reject-dict

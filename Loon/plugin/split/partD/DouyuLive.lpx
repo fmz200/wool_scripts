@@ -8,6 +8,12 @@
 #!date=2025-08-21 22:37:00
 #############################################
 
+[Rule]
+DOMAIN-SUFFIX, wan.douyu.com, REJECT
+DOMAIN-SUFFIX, g.wan.douyu.com, REJECT
+DOMAIN-SUFFIX, dotcounter.douyutv.com, REJECT
+
+
 [Rewrite]
 ^https?:\/\/daoyu\.sdo\.com\/api\/userCommon\/getAppStartAd reject
 ^https?:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo reject-dict

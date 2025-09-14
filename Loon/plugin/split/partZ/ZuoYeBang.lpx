@@ -8,6 +8,11 @@
 #!date=2025-08-21 22:37:00
 #############################################
 
+[Rule]
+DOMAIN-SUFFIX, bu01.zybang.com, REJECT
+DOMAIN-SUFFIX, bu02.zybang.com, REJECT
+
+
 [Rewrite]
 ^https?:\/\/(syh|www)\.zybang\.com\/adx\/ reject-200
 
