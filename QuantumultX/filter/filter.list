@@ -870,7 +870,6 @@ host-suffix, atdmt.com, reject
 host-suffix, staticxx.facebook.com, reject
 
 # > 番茄小说
-host-suffix, byteimg.com, reject
 host, i.snssdk.com, REJECT
 host, i-lq.snssdk.com, REJECT
 host, dig.bdurl.net, REJECT
