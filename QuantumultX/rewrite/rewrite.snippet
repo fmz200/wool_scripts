@@ -449,7 +449,7 @@
 # hostname = js-ad.ayximgs.com
 ^https?:\/\/js-ad\.ayximgs\.com\.ad-universe-cdn\.hzhcbkj\.cn\/xgapp\.php\/v2\/top_notice url reject
 
-# > csdn
+# > CSDN
 # hostname = app-gw.csdn.net, gw.csdn.net
 # 感谢【Jörgen Frecht】分享
 ^https?:\/\/app-gw\.csdn\.net\/silkroad-api\/api\/v\d\/assemble\/list\/pub\/channel\/app_open_screen_ad url reject
@@ -520,7 +520,7 @@ http:\/\/ad\.myfriday\.cn\/d\/json\/1\.1 url reject
 # 开屏广告
 ^https?:\/\/ios-api\.lucklyworld\.com\/v6\/api\/config\/startup url reject-dict
 
-# > 财新
+# > 财新网
 # hostname = gg.caixin.com
 ^https?:\/\/gg\.caixin\.com\/s\?z=caixin&op=1&c=3362 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/caixin/caixinAd.js
 
@@ -2233,7 +2233,7 @@ https://api.rr.tv/storage/business/rootName/app/homePage\?dataType=JSON url reje
 # 会导致视频下载转码失败
 #^https?:\/\/api\.shenyin\.name\/stay-fork\/browse\/featured$ url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/stay.js
 
-# > 苏宁
+# > 苏宁易购
 # hostname = mpcs.suning.com, image.suning.com, luckman.suning.com
 ^https?:\/\/mpcs\.suning\.com\/mpcs\/dm\/getDmInfo url reject
 ^https?:\/\/image\.suning\.cn\/uimg\/ma\/ad\/ url reject-200
@@ -3498,7 +3498,7 @@ https://mgesq.api.mgtv.com/dsl/index.+ url script-response-body https://raw.gith
 ^https?:\/\/img\.allahall\.com\/img\/59\/6a13a75dfe46ebfdac96bd27ef098885\.jpg url reject
 ^https?:\/\/app\.zhoudamozi\.com\/ad\/.+ url reject-200
 
-# > 雅虎
+# > Yahoo
 # hostname = m.yap.yahoo.com
 ^https?:\/\/m\.yap\.yahoo\.com\/v\d{2}\/getAds\.do url reject
 
@@ -3598,7 +3598,7 @@ https://mgesq.api.mgtv.com/dsl/index.+ url script-response-body https://raw.gith
 # hostname = *.yuxueyuan.cn
 ^https?:\/\/.*\.yuxueyuan\.cn\/yxy-api-gateway\/api\/json\/advert\/getsAdStartScreen url reject-200
 
-# > 亚马逊
+# > 亚马逊（Amazon）
 # hostname = api-cslp-emt.amazon.cn
 ^https?:\/\/api-cslp-emt\.amazon\.cn\/gateway\/content\/widget\/popup url reject-200
 ^https?:\/\/api-cslp-emt\.amazon\.cn\/gateway\/recommend url reject-dict

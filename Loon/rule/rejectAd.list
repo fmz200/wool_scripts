@@ -245,7 +245,7 @@ DOMAIN, vs6.bj2ct.u3.ucweb.com
 DOMAIN-SUFFIX,safebrowsing.apple
 DOMAIN-SUFFIX,u3.ucweb.com
 
-# > Amazon
+# > 亚马逊（Amazon）
 DOMAIN-SUFFIX, amazon-adsystem.com
 DOMAIN-SUFFIX, mads.amazon.com
 DOMAIN-SUFFIX, sdb.amazonaws.com
@@ -792,7 +792,7 @@ DOMAIN-SUFFIX, a.dangdang.com
 DOMAIN-SUFFIX, schprompt.dangdang.com
 DOMAIN-SUFFIX, t.dangdang.com
 
-# > 斗鱼
+# > 斗鱼直播
 DOMAIN-SUFFIX, wan.douyu.com
 DOMAIN-SUFFIX, g.wan.douyu.com
 DOMAIN-SUFFIX, dotcounter.douyutv.com
@@ -943,7 +943,7 @@ DOMAIN-SUFFIX, c1.ifengimg.com
 DOMAIN-SUFFIX, click1n.soufun.com
 DOMAIN-SUFFIX, countubn.light.soufun.com
 
-# > 飞常准 VariFlight
+# > 飞常准
 DOMAIN, adv-adlog.variflight.com
 DOMAIN, adv-ads.variflight.com
 DOMAIN, app-ad.variflight.com
@@ -1057,7 +1057,7 @@ DOMAIN-SUFFIX,u51.me
 # 多个广告 感谢CtrlMusic🐓分享
 DOMAIN, apis.alenable.com
 
-# > 国美
+# > 国美电器
 DOMAIN-SUFFIX, prom.gome.com.cn
 
 # > 国双 (Gridsum)
@@ -1422,7 +1422,7 @@ DOMAIN-SUFFIX, adm.leju.com
 DOMAIN-SUFFIX, src.leju.com
 DOMAIN-SUFFIX, staticadm.leju.com
 
-# > 联想 (Lenovo)
+# > 联想
 DOMAIN-SUFFIX, adapi.lenovogame.com
 DOMAIN-SUFFIX, adcore.lenovomm.com
 DOMAIN-SUFFIX, ams.lenovomm.com
@@ -1576,7 +1576,7 @@ DOMAIN-SUFFIX,d.meituan.net
 DOMAIN, adui.tg.meitu.com
 DOMAIN, aaid.uyunad.com
 
-# > 美图秀秀 (Meitu)
+# > 美图秀秀
 DOMAIN-SUFFIX, corp.meitu.com
 DOMAIN-SUFFIX, gg.meitu.com
 DOMAIN-SUFFIX, message.meitu.com
@@ -1773,6 +1773,8 @@ DOMAIN-KEYWORD,api-access.pangolin-sdk-toutiao.com
 DOMAIN, admonitor.thepaper.cn
 DOMAIN, adpai.thepaper.cn
 DOMAIN, imgadpai.thepaper.cn
+DOMAIN-SUFFIX, ad.thepaper.cn
+DOMAIN-SUFFIX, imgad.thepaper.cn
 
 
 
@@ -2087,13 +2089,6 @@ DOMAIN-SUFFIX, img01.taotaosou.cn
 DOMAIN-SUFFIX, re.taotaosou.com
 DOMAIN-SUFFIX, show.kc.taotaosou.com
 
-# > ThePaper (澎湃)
-DOMAIN-SUFFIX, ad.thepaper.cn
-DOMAIN-SUFFIX, imgad.thepaper.cn
-
-# > Thsi.cn (同花顺)
-DOMAIN-SUFFIX, ad.thsi.cn
-
 # > Tumblr
 DOMAIN-SUFFIX, 92x.tumblr.com
 DOMAIN-SUFFIX, its-dori.tumblr.com
@@ -2217,6 +2212,7 @@ DOMAIN-SUFFIX, p.tencentmind.com
 # > 同花顺
 DOMAIN, adm.10jqka.com.cn
 DOMAIN, stat.10jqka.com.cn
+DOMAIN-SUFFIX, ad.thsi.cn
 
 # > 迅雷
 DOMAIN-SUFFIX, adsp.xunlei.com
@@ -2239,13 +2235,13 @@ DOMAIN-SUFFIX, pre.api.tw06.xlmc.sandai.net
 # > 团油
 DOMAIN-KEYWORD,img1.czb365.com
 
-# > 同盾 (Tongdun)
+# > 同盾
 DOMAIN-SUFFIX, fraudmetrix.cn
 DOMAIN-SUFFIX, fp.fraudmetrix.cn
 DOMAIN-SUFFIX, fptest.fraudmetrix.cn
 DOMAIN-SUFFIX, statictest.fraudmetrix.cn
 
-# > 太平洋网络 (PConline)
+# > 太平洋电脑
 DOMAIN-SUFFIX, iad0ssl.pcauto.com.cn
 DOMAIN-SUFFIX, imgad0.pcauto.com.cn
 DOMAIN-SUFFIX, ivy.pcauto.com.cn
@@ -2576,7 +2572,7 @@ DOMAIN-SUFFIX, clkservice.mail.youdao.com
 DOMAIN-SUFFIX, clkservice.union.youdao.com
 DOMAIN-SUFFIX, log.yex.youdao.com
 
-# > 威锋网
+# > 威锋
 # 广告联盟已包含
 #DOMAIN-SUFFIX, aoodoo.feng.com
 #DOMAIN-SUFFIX, push.feng.com

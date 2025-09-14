@@ -241,7 +241,7 @@ host, vs6.bj2ct.u3.ucweb.com, reject
 host-suffix, safebrowsing.apple, reject
 host-suffix, u3.ucweb.com, reject
 
-# > Amazon
+# > 亚马逊（Amazon）
 host-suffix, amazon-adsystem.com, reject
 host-suffix, mads.amazon.com, reject
 host-suffix, sdb.amazonaws.com, reject
@@ -783,7 +783,7 @@ host-suffix, a.dangdang.com, reject
 host-suffix, schprompt.dangdang.com, reject
 host-suffix, t.dangdang.com, reject
 
-# > 斗鱼
+# > 斗鱼直播
 host-suffix, wan.douyu.com, reject
 host-suffix, g.wan.douyu.com, reject
 host-suffix, dotcounter.douyutv.com, reject
@@ -934,7 +934,7 @@ host-suffix, c1.ifengimg.com, reject
 host-suffix, click1n.soufun.com, reject
 host-suffix, countubn.light.soufun.com, reject
 
-# > 飞常准 VariFlight
+# > 飞常准
 host, adv-adlog.variflight.com, reject
 host, adv-ads.variflight.com, reject
 host, app-ad.variflight.com, reject
@@ -1048,7 +1048,7 @@ host-suffix, u51.me, reject
 # 多个广告 感谢CtrlMusic🐓分享
 host, apis.alenable.com, reject
 
-# > 国美
+# > 国美电器
 host-suffix, prom.gome.com.cn, reject
 
 # > 国双 (Gridsum)
@@ -1414,7 +1414,7 @@ host-suffix, adm.leju.com, reject
 host-suffix, src.leju.com, reject
 host-suffix, staticadm.leju.com, reject
 
-# > 联想 (Lenovo)
+# > 联想
 host-suffix, adapi.lenovogame.com, reject
 host-suffix, adcore.lenovomm.com, reject
 host-suffix, ams.lenovomm.com, reject
@@ -1568,7 +1568,7 @@ host-suffix, d.meituan.net, reject
 host, adui.tg.meitu.com, reject
 host, aaid.uyunad.com, reject
 
-# > 美图秀秀 (Meitu)
+# > 美图秀秀
 host-suffix, corp.meitu.com, reject
 host-suffix, gg.meitu.com, reject
 host-suffix, message.meitu.com, reject
@@ -1776,6 +1776,8 @@ host-keyword, api-access.pangolin-sdk-toutiao.com, reject
 host, admonitor.thepaper.cn, reject
 host, adpai.thepaper.cn, reject
 host, imgadpai.thepaper.cn, reject
+host-suffix, ad.thepaper.cn, reject
+host-suffix, imgad.thepaper.cn, reject
 
 
 
@@ -2093,13 +2095,6 @@ host-suffix, img01.taotaosou.cn, reject
 host-suffix, re.taotaosou.com, reject
 host-suffix, show.kc.taotaosou.com, reject
 
-# > ThePaper (澎湃)
-host-suffix, ad.thepaper.cn, reject
-host-suffix, imgad.thepaper.cn, reject
-
-# > Thsi.cn (同花顺)
-host-suffix, ad.thsi.cn, reject
-
 # > Tumblr
 host-suffix, 92x.tumblr.com, reject
 host-suffix, its-dori.tumblr.com, reject
@@ -2224,6 +2219,7 @@ host-suffix, p.tencentmind.com, reject
 # > 同花顺
 host, adm.10jqka.com.cn, reject
 host, stat.10jqka.com.cn, reject
+host-suffix, ad.thsi.cn, reject
 
 # > 迅雷
 host-suffix, adsp.xunlei.com, reject
@@ -2246,13 +2242,13 @@ host-suffix, pre.api.tw06.xlmc.sandai.net, reject
 # > 团油
 host-keyword, img1.czb365.com, reject
 
-# > 同盾 (Tongdun)
+# > 同盾
 host-suffix, fraudmetrix.cn, reject
 host-suffix, fp.fraudmetrix.cn, reject
 host-suffix, fptest.fraudmetrix.cn, reject
 host-suffix, statictest.fraudmetrix.cn, reject
 
-# > 太平洋网络 (PConline)
+# > 太平洋电脑
 host-suffix, iad0ssl.pcauto.com.cn, reject
 host-suffix, imgad0.pcauto.com.cn, reject
 host-suffix, ivy.pcauto.com.cn, reject
@@ -2593,7 +2589,7 @@ host-suffix, log.yex.youdao.com, reject
 host-suffix, ad.gameley.com, reject
 host-suffix, zlsdk.1rtb.net, reject
 
-# > 威锋网
+# > 威锋
 # 广告联盟已包含
 #host-suffix, aoodoo.feng.com
 #host-suffix, push.feng.com
