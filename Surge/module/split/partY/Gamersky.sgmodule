@@ -8,6 +8,10 @@
 #!tg-group=https://t.me/lanjieguanggao
 #!date=2025-08-21 22:37:00
 
+[Rule]
+DOMAIN-SUFFIX,ja.gamersky.com,REJECT
+DOMAIN-SUFFIX,ja1.gamersky.com,REJECT
+
 [Body Rewrite]
 http-response-jq http:\/\/.+\.gamersky.com/.+/lists/getListElements '.listElements |= map(select(has("adCategory") | not))'
 

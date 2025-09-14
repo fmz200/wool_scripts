@@ -8,6 +8,9 @@
 #!tg-group=https://t.me/lanjieguanggao
 #!date=2025-08-21 22:37:00
 
+[Rule]
+DOMAIN-SUFFIX,ad.xueqiu.com,REJECT
+
 [Map Local]
 ^https:\/\/api\.xueqiu\.com\/snowpard\/launch_strategy\/query\.json\?channel=1&height=932 data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 

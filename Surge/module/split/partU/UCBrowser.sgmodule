@@ -120,4 +120,19 @@ DOMAIN,mercury-sdk.snssdk.com,REJECT
 DOMAIN,tbm.snssdk.com,REJECT
 DOMAIN,toblog.ctobsnssdk.com,REJECT
 DOMAIN,tnc3-aliec2.snssdk.com,REJECT
+DOMAIN-SUFFIX,kwurl.ucweb.com,REJECT
+DOMAIN-SUFFIX,uc9.ucweb.com,REJECT
+DOMAIN-SUFFIX,ucus.ucweb.com,REJECT
+DOMAIN-SUFFIX,up4.ucweb.com,REJECT
+DOMAIN-SUFFIX,wap3.ucweb.com,REJECT
+DOMAIN-SUFFIX,adn.insight.ucweb.com,REJECT
+DOMAIN-SUFFIX,hk.napi.ucweb.com,REJECT
+DOMAIN-SUFFIX,sea.napi.ucweb.com,REJECT
+DOMAIN-SUFFIX,bjcu.u3.ucweb.com,REJECT
+DOMAIN-SUFFIX,vs8.gzct.u3.ucweb.com,REJECT
+DOMAIN-SUFFIX,vs19.gzcu.u3.ucweb.com,REJECT
+DOMAIN-SUFFIX,vs2.gzcu.u3.ucweb.com,REJECT
+DOMAIN-SUFFIX,vs7.gzcu.u3.ucweb.com,REJECT
+DOMAIN-SUFFIX,vs8.gzcu.u3.ucweb.com,REJECT
+DOMAIN-SUFFIX,slot.union.ucweb.com,REJECT
 

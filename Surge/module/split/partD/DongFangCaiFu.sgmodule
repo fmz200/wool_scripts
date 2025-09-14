@@ -8,6 +8,11 @@
 #!tg-group=https://t.me/lanjieguanggao
 #!date=2025-08-21 22:37:00
 
+[Rule]
+DOMAIN-SUFFIX,bduserlog.eastmoney.com,REJECT
+DOMAIN-SUFFIX,js4.eastmoney.com,REJECT
+DOMAIN-SUFFIX,same.eastmoney.com,REJECT
+
 [URL Rewrite]
 ^https?:\/\/emdcadvertise\.eastmoney\.com\/infoService\/v\d - reject
 

@@ -9,9 +9,11 @@
 #!date=2025-08-21 22:37:00
 
 [Rule]
-DOMAIN,adx.hupu.com,REJECT
-DOMAIN,adx-api.hupu.com,REJECT
-DOMAIN,goblin.hupu.com,REJECT
+DOMAIN-SUFFIX,adx.hupu.com,REJECT
+DOMAIN-SUFFIX,adx-api.hupu.com,REJECT
+DOMAIN-SUFFIX,goblin.hupu.com,REJECT
+DOMAIN-SUFFIX,orz.hupu.com,REJECT
+DOMAIN-SUFFIX,cc.dace.hupu.com,REJECT
 
 [URL Rewrite]
 ^https?:\/\/games\.mobileapi\.hupu\.com\/.+?\/(interfaceAdMonitor|interfaceAd)\/ - reject

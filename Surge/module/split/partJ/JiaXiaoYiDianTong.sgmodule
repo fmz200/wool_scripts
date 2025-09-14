@@ -8,6 +8,11 @@
 #!tg-group=https://t.me/lanjieguanggao
 #!date=2025-08-21 22:37:00
 
+[Rule]
+DOMAIN,richmanapi.jxedt.com,REJECT
+DOMAIN,richmanmain.jxedt.com,REJECT
+DOMAIN,richmanrules.jxedt.com,REJECT
+
 [URL Rewrite]
 # 开屏广告 感谢【jinlvei】分享
 ^https?:\/\/richmanrules\.ksedt\.com\/intellectWaterfall(Bidding)?\/find - reject

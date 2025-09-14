@@ -1,0 +1,33 @@
+#!name=魅族 (Meizu)
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partM/Meizu.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[Rule]
+DOMAIN-SUFFIX,api-flow.flyme.cn,REJECT
+DOMAIN-SUFFIX,bro.flyme.cn,REJECT
+DOMAIN-SUFFIX,t-e.flyme.cn,REJECT
+DOMAIN-SUFFIX,t-flow.flyme.cn,REJECT
+DOMAIN-SUFFIX,aider-res.meizu.com,REJECT
+DOMAIN-SUFFIX,api-game.meizu.com,REJECT
+DOMAIN-SUFFIX,api-push.meizu.com,REJECT
+DOMAIN-SUFFIX,cal.meizu.com,REJECT
+DOMAIN-SUFFIX,game-res.meizu.com,REJECT
+DOMAIN-SUFFIX,infocenter.meizu.com,REJECT
+DOMAIN-SUFFIX,openapi-news.meizu.com,REJECT
+DOMAIN-SUFFIX,reader.meizu.com,REJECT
+DOMAIN-SUFFIX,tongji-res1.meizu.com,REJECT
+DOMAIN-SUFFIX,uxip.meizu.com,REJECT
+DOMAIN-SUFFIX,umid.orion.meizu.com,REJECT
+DOMAIN-SUFFIX,ebook.res.meizu.com,REJECT
+DOMAIN-SUFFIX,game.res.meizu.com,REJECT
+DOMAIN-SUFFIX,push.res.meizu.com,REJECT
+DOMAIN-SUFFIX,reader.res.meizu.com,REJECT
+DOMAIN-SUFFIX,upush.res.meizu.com,REJECT
+DOMAIN-SUFFIX,aries.mzres.com,REJECT
+

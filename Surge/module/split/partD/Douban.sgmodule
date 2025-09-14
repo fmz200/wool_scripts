@@ -8,6 +8,10 @@
 #!tg-group=https://t.me/lanjieguanggao
 #!date=2025-08-21 22:37:00
 
+[Rule]
+DOMAIN-SUFFIX,erebor.douban.com,REJECT
+DOMAIN-SUFFIX,ad.doubanio.com,REJECT
+
 [URL Rewrite]
 ^https?:\/\/img\d\.doubanio\.com\/view\/dale-online\/dale_ad\/ - reject
 ^https?:\/\/frodo\.douban\.com\/api\/v2\/movie\/banner - reject

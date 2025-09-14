@@ -9,6 +9,15 @@
 #!date=2025-08-21 22:37:00
 #!arguments=rfrfuipk_enable:true
 
+[Rule]
+DOMAIN-SUFFIX,ad.rr.tv,REJECT
+DOMAIN-SUFFIX,ebp.renren.com,REJECT
+DOMAIN-SUFFIX,jebe.renren.com,REJECT
+DOMAIN-SUFFIX,bolt.jebe.renren.com,REJECT
+DOMAIN-SUFFIX,cupid.jebe.renren.com,REJECT
+DOMAIN-SUFFIX,shaft.jebe.renren.com,REJECT
+DOMAIN-SUFFIX,xray.jebe.renren.com,REJECT
+
 [URL Rewrite]
 # RRTV_屏蔽軟件更新
 ^https?:\/\/api\.rr\.tv\/.*?Version - reject

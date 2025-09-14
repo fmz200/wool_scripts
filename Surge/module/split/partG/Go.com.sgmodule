@@ -1,0 +1,21 @@
+#!name=Go.com
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partG/Go.com.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[Rule]
+DOMAIN-SUFFIX,ad.go.com,REJECT
+DOMAIN-SUFFIX,adimages.go.com,REJECT
+DOMAIN-SUFFIX,ngads.go.com,REJECT
+DOMAIN-SUFFIX,w88.go.com,REJECT
+DOMAIN-SUFFIX,verdict.abc.go.com,REJECT
+DOMAIN-SUFFIX,oascentral.abclocal.go.com,REJECT
+DOMAIN-SUFFIX,dcapps.disney.go.com,REJECT
+DOMAIN-SUFFIX,adsatt.espn.go.com,REJECT
+DOMAIN-SUFFIX,seavideo-ak.espn.go.com,REJECT
+

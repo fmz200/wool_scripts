@@ -8,6 +8,10 @@
 #!tg-group=https://t.me/lanjieguanggao
 #!date=2025-08-21 22:37:00
 
+[Rule]
+DOMAIN-SUFFIX,bu01.zybang.com,REJECT
+DOMAIN-SUFFIX,bu02.zybang.com,REJECT
+
 [Map Local]
 ^https?:\/\/(syh|www)\.zybang\.com\/adx\/ data-type=text data=" " status-code=200
 

@@ -1,4 +1,4 @@
-#!name=腾讯
+#!name=腾讯系
 #!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
 #!author=奶思
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
@@ -32,4 +32,20 @@ DOMAIN-SUFFIX,adver.qq.com,REJECT
 DOMAIN-SUFFIX,aeventlog.beacon.qq.com,REJECT
 DOMAIN-SUFFIX,analy.qq.com,REJECT
 DOMAIN-SUFFIX,astrategy.beacon.qq.com,REJECT
+DOMAIN-SUFFIX,rp.crasheye.cn,REJECT
+DOMAIN-SUFFIX,cmshow.gtimg.cn,REJECT
+DOMAIN-SUFFIX,discuz.gtimg.cn,REJECT
+DOMAIN-SUFFIX,gu.qlogo.cn,REJECT
+DOMAIN-SUFFIX,py.qlogo.cn,REJECT
+DOMAIN-SUFFIX,py2.qlogo.cn,REJECT
+DOMAIN-SUFFIX,beacon.gtimg.com,REJECT
+DOMAIN-SUFFIX,bla.gtimg.com,REJECT
+DOMAIN-SUFFIX,lb.gtimg.com,REJECT
+DOMAIN-SUFFIX,pgdt.gtimg.com,REJECT
+DOMAIN-SUFFIX,ra.gtimg.com,REJECT
+DOMAIN-SUFFIX,splashqqlive.gtimg.com,REJECT
+DOMAIN-SUFFIX,swa.gtimg.com,REJECT
+DOMAIN-SUFFIX,tui.gtimg.com,REJECT
+DOMAIN-SUFFIX,wa.gtimg.com,REJECT
+DOMAIN-SUFFIX,wb.gtimg.com,REJECT
 

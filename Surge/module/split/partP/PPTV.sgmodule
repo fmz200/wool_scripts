@@ -13,4 +13,14 @@ DOMAIN,ads.aplus.pptv.com,REJECT
 DOMAIN,ads.aplusapi.pptv.com,REJECT
 DOMAIN,asimgs.pplive.cn,REJECT
 DOMAIN,de.as.pptv.com,REJECT
+DOMAIN-SUFFIX,afp.pplive.com,REJECT
+DOMAIN-SUFFIX,gas.data.pplive.com,REJECT
+DOMAIN-SUFFIX,plt.data.pplive.com,REJECT
+DOMAIN-SUFFIX,web.data.pplive.com,REJECT
+DOMAIN-SUFFIX,pp2.pptv.com,REJECT
+DOMAIN-SUFFIX,stat.pptv.com,REJECT
+DOMAIN-SUFFIX,app.aplus.pptv.com,REJECT
+DOMAIN-SUFFIX,as.aplus.pptv.com,REJECT
+DOMAIN-SUFFIX,jp.as.pptv.com,REJECT
+DOMAIN-SUFFIX,static.g.pptv.com,REJECT
 

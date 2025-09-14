@@ -1,0 +1,35 @@
+#!name=太平洋电脑
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partT/PConline.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[Rule]
+DOMAIN-SUFFIX,iad0ssl.pcauto.com.cn,REJECT
+DOMAIN-SUFFIX,imgad0.pcauto.com.cn,REJECT
+DOMAIN-SUFFIX,ivy.pcauto.com.cn,REJECT
+DOMAIN-SUFFIX,ivy.pcbaby.com.cn,REJECT
+DOMAIN-SUFFIX,ivy.pchouse.com.cn,REJECT
+DOMAIN-SUFFIX,ivy.pclady.com.cn,REJECT
+DOMAIN-SUFFIX,ad-analysis.pconline.com.cn,REJECT
+DOMAIN-SUFFIX,count5.pconline.com.cn,REJECT
+DOMAIN-SUFFIX,count6.pconline.com.cn,REJECT
+DOMAIN-SUFFIX,iad0ssl.pconline.com.cn,REJECT
+DOMAIN-SUFFIX,imgad0.pconline.com.cn,REJECT
+DOMAIN-SUFFIX,ivy.pconline.com.cn,REJECT
+
+[URL Rewrite]
+^https?:\/\/agent-count\.pconline\.com\.cn\/counter\/adAnalyse\/ - reject
+^https?:\/\/mrobot\.(pcauto|pconline)\.com\.cn\/v\d\/ad\dp - reject
+^https?:\/\/mrobot\.pcauto\.com\.cn\/xsp\/s\/auto\/info\/(ad|preload) - reject
+
+[Map Local]
+^https?:\/\/mrobot\.pconline\.com\.cn\/s\/onlineinfo\/ad\/ data-type=text data=" " status-code=200
+
+[MITM]
+hostname = %APPEND% mrobot.pconline.com.cn, mrobot.pcauto.com.cn, agent-count.pconline.com.cn
+

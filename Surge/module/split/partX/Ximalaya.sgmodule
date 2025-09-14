@@ -9,11 +9,15 @@
 #!date=2025-08-21 22:37:00
 
 [Rule]
-DOMAIN,adse.ximalaya.com,REJECT
 DOMAIN,adsehera.ximalaya.com,REJECT
 DOMAIN,adse.wsa.ximalaya.com,REJECT
 DOMAIN,adbehavior.ximalaya.com,REJECT
 DOMAIN,adbehavior.wsa.ximalaya.com,REJECT
+DOMAIN-SUFFIX,ad.ximalaya.com,REJECT
+DOMAIN-SUFFIX,adse.ximalaya.com,REJECT
+DOMAIN-SUFFIX,adse-v2.ximalaya.com,REJECT
+DOMAIN-SUFFIX,open.ximalaya.com,REJECT
+DOMAIN-SUFFIX,upos-app.ximalaya.com,REJECT
 
 [Body Rewrite]
 http-response-jq ^https:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/discovery-feed\/v\d\/mix\/ '.heData |= map(select(.item.list[].bizType != "SceneListenCard"))'

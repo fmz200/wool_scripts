@@ -157,6 +157,20 @@ DOMAIN-SUFFIX,mobads-logs.baidu.com,REJECT
 DOMAIN-SUFFIX,nsclick.baidu.com,REJECT
 DOMAIN,hm.baidu.com,REJECT
 DOMAIN,hmma.baidu.com,REJECT
+DOMAIN-SUFFIX,bdtongfei.cn,REJECT
+DOMAIN-SUFFIX,mobads.baidu.com,REJECT
+DOMAIN-SUFFIX,ecma.bdimg.com,REJECT
+DOMAIN-SUFFIX,ecmb.bdimg.com,REJECT
+DOMAIN-SUFFIX,ecmc.bdimg.com,REJECT
+DOMAIN-SUFFIX,pups.bdimg.com,REJECT
+DOMAIN-SUFFIX,su.bdimg.com,REJECT
+DOMAIN-SUFFIX,mipcache.bdstatic.com,REJECT
+DOMAIN-SUFFIX,su.bdstatic.com,REJECT
+DOMAIN-SUFFIX,zz.bdstatic.com,REJECT
+DOMAIN-SUFFIX,bcebos.com,REJECT
+DOMAIN-SUFFIX,baidustatic.com,REJECT
+DOMAIN-SUFFIX,bdstatic.com,REJECT
+DOMAIN-SUFFIX,duapps.com,REJECT
 
 [URL Rewrite]
 ^https?:\/\/fcvbjbcebos\.baidu\.com\/.+.mp4 - reject

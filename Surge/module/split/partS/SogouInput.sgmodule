@@ -10,7 +10,7 @@
 
 [Rule]
 # DOMAIN-SUFFIX, business-cdn.shouji.sogou.com, REJECT
-DOMAIN-SUFFIX, push-service-ios.sginput.qq.com, REJECT
+DOMAIN-SUFFIX,push-service-ios.sginput.qq.com,REJECT
 
 [URL Rewrite]
 # 开屏广告

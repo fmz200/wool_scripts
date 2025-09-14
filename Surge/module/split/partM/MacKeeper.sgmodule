@@ -9,5 +9,9 @@
 #!date=2025-08-21 22:37:00
 
 [Rule]
+DOMAIN-SUFFIX,mackeeper.com,REJECT
+DOMAIN-SUFFIX,download.mackeeper.com,REJECT
+DOMAIN-SUFFIX,event.mackeeper.com,REJECT
+DOMAIN-SUFFIX,mackeeperapp.mackeeper.com,REJECT
 DOMAIN-SUFFIX,zryydi.com,REJECT
 

@@ -8,6 +8,13 @@
 #!tg-group=https://t.me/lanjieguanggao
 #!date=2025-08-21 22:37:00
 
+[Rule]
+DOMAIN,admonitor.thepaper.cn,REJECT
+DOMAIN,adpai.thepaper.cn,REJECT
+DOMAIN,imgadpai.thepaper.cn,REJECT
+DOMAIN-SUFFIX,ad.thepaper.cn,REJECT
+DOMAIN-SUFFIX,imgad.thepaper.cn,REJECT
+
 [URL Rewrite]
 ^https?:\/\/adpai\.thepaper\.cn\/.+&ad= - reject
 

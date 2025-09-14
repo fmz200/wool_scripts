@@ -1,0 +1,23 @@
+#!name=风行网
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partF/Funshion.lpx
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+
+[Rule]
+DOMAIN-SUFFIX,pb.funshion.net.cn,REJECT
+DOMAIN-SUFFIX,ad.funshion.org.cn,REJECT
+DOMAIN-SUFFIX,adk.funshion.com,REJECT
+DOMAIN-SUFFIX,adm.funshion.com,REJECT
+DOMAIN-SUFFIX,conf.funshion.com,REJECT
+DOMAIN-SUFFIX,pub.funshion.com,REJECT
+DOMAIN-SUFFIX,vas.funshion.com,REJECT
+DOMAIN-SUFFIX,vs.funshion.com,REJECT
+DOMAIN-SUFFIX,aa0.pub.funshion.com,REJECT
+DOMAIN-SUFFIX,aa1.pub.funshion.com,REJECT
+DOMAIN-SUFFIX,rt.funshion.net,REJECT
+
