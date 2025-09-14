@@ -1,4 +1,4 @@
-#!name=Adobe Flash China Special Edition
+#!name=Adobe
 #!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
 #!author=奶思
 #!homepage=https://github.com/fmz200/wool_scripts
@@ -9,7 +9,33 @@
 #############################################
 
 
-host, geo2.adobe.com, reject
+host-suffix, 3dns-2.adobe.com, reject 
+host-suffix, 3dns-3.adobe.com, reject 
+host-suffix, activate.adobe.com, reject 
+host-suffix, activate-sea.adobe.com, reject 
+host-suffix, activate-sjc0.adobe.com, reject 
+host-suffix, adobe-dns.adobe.com, reject 
+host-suffix, adobe-dns-2.adobe.com, reject 
+host-suffix, adobe-dns-3.adobe.com, reject 
+host-suffix, ereg.adobe.com, reject 
+host-suffix, get3.adobe.com, reject 
+host-suffix, hl2rcv.adobe.com, reject 
+host-suffix, practivate.adobe.com, reject 
+host-suffix, wip3.adobe.com, reject 
+host-suffix, wwis-dubc1-vip60.adobe.com, reject 
+host-suffix, lm.licenses.adobe.com, reject 
+host-suffix, na2m-pr.licenses.adobe.com, reject 
+host-suffix, na1r.services.adobe.com, reject 
+host-suffix, hlrcv.stage.adobe.com, reject 
+host-suffix, activate.wip3.adobe.com, reject 
+host-suffix, ereg.wip3.adobe.com, reject 
+host-suffix, lmlicenses.wip4.adobe.com, reject 
+# Marketo
+host-suffix, marketo.com, reject
+host-suffix, asia.marketo.com, reject
+host-suffix, pages2.marketo.com, reject
+host-suffix, marketo.net, reject
+host-suffix, munchkin.marketo.net, reject
 
 https:\/\/this-is-an-example\.com\/example\/ url reject-dict
 
