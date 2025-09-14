@@ -15,7 +15,7 @@ DOMAIN, ads-shopping.shouqianba.com, REJECT
 
 [Rewrite]
 # 买单小程序去广告
-^https?:\/\/api\.pinduoduo\.com\/api\/ktt_gateway\/activity\/feeds\/personal_home_page\/ reject
+# ^https?:\/\/api\.pinduoduo\.com\/api\/ktt_gateway\/activity\/feeds\/personal_home_page\/ reject
 
 
 [MITM]

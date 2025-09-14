@@ -2613,7 +2613,7 @@ https://apis.lifeweek.com.cn/api/baseConfig/getIosNewConfig reject
 # > 收钱吧
 # hostname = api.pinduoduo.com
 # 买单小程序去广告
-^https?:\/\/api\.pinduoduo\.com\/api\/ktt_gateway\/activity\/feeds\/personal_home_page\/ reject
+# ^https?:\/\/api\.pinduoduo\.com\/api\/ktt_gateway\/activity\/feeds\/personal_home_page\/ reject
 
 # > 省省回头车
 # hostname = www.ymm56.com
