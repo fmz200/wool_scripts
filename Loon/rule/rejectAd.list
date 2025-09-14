@@ -608,20 +608,6 @@ DOMAIN-SUFFIX,mobads-logs.baidu.com
 DOMAIN-SUFFIX,nsclick.baidu.com
 DOMAIN, hm.baidu.com
 DOMAIN, hmma.baidu.com
-DOMAIN-SUFFIX, bdtongfei.cn
-DOMAIN-SUFFIX, mobads.baidu.com
-DOMAIN-SUFFIX, ecma.bdimg.com
-DOMAIN-SUFFIX, ecmb.bdimg.com
-DOMAIN-SUFFIX, ecmc.bdimg.com
-DOMAIN-SUFFIX, pups.bdimg.com
-DOMAIN-SUFFIX, su.bdimg.com
-DOMAIN-SUFFIX, mipcache.bdstatic.com
-DOMAIN-SUFFIX, su.bdstatic.com
-DOMAIN-SUFFIX, zz.bdstatic.com
-DOMAIN-SUFFIX, bcebos.com
-DOMAIN-SUFFIX, baidustatic.com
-DOMAIN-SUFFIX, bdstatic.com
-DOMAIN-SUFFIX, duapps.com
 
 # > 百度地图
 DOMAIN, afd.baidu.com
@@ -1325,7 +1311,7 @@ DOMAIN-SUFFIX,cm.ad.gifshow.com
 DOMAIN-SUFFIX,cm.kwad.com
 
 # > 快手
-;DOMAIN, js-ad.a.yximgs.com
+# DOMAIN, js-ad.a.yximgs.com
 DOMAIN-SUFFIX, e.kuaishou.com
 DOMAIN-SUFFIX, cm.downloader.commercial.kuaishou.com
 DOMAIN-SUFFIX, cm.ad.gifshow.com
