@@ -1153,7 +1153,7 @@ DOMAIN-SUFFIX, 3dm.huya.com
 
 # > 哈啰
 # 大部分图片无法正常加载
-# DOMAIN-KEYWORD, assets.51downapp.cn, reject
+# DOMAIN-KEYWORD, assets.51downapp.cn
 
 # > 黄油相机
 # 开屏广告 感谢#Dragon分享
@@ -1325,11 +1325,11 @@ DOMAIN-SUFFIX,cm.ad.gifshow.com
 DOMAIN-SUFFIX,cm.kwad.com
 
 # > 快手
-;DOMAIN, js-ad.a.yximgs.com, reject
-DOMAIN-SUFFIX, e.kuaishou.com, reject
-DOMAIN-SUFFIX, cm.downloader.commercial.kuaishou.com, reject
-DOMAIN-SUFFIX, cm.ad.gifshow.com, reject
-DOMAIN-SUFFIX, cm.kwad.com, reject
+;DOMAIN, js-ad.a.yximgs.com
+DOMAIN-SUFFIX, e.kuaishou.com
+DOMAIN-SUFFIX, cm.downloader.commercial.kuaishou.com
+DOMAIN-SUFFIX, cm.ad.gifshow.com
+DOMAIN-SUFFIX, cm.kwad.com
 
 # > 快压zip
 DOMAIN-SUFFIX,kuaizip.com
@@ -3191,12 +3191,12 @@ IP-CIDR, 122.229.8.47/32, no-resolve
 IP-CIDR, 122.229.29.89/32, no-resolve
 
 # > 中信银行
-# DOMAIN-SUFFIX, sis.jpush.io, reject
-# DOMAIN-SUFFIX, s.jpush.cn, reject
-# DOMAIN-SUFFIX, jpush.cn, reject
-# DOMAIN-SUFFIX, im64.jpush.cn, reject
-# DOMAIN-SUFFIX, im.jpush.cn, reject
-# DOMAIN-SUFFIX, jpush.html5.qq.com, reject
+# DOMAIN-SUFFIX, sis.jpush.io
+# DOMAIN-SUFFIX, s.jpush.cn
+# DOMAIN-SUFFIX, jpush.cn
+# DOMAIN-SUFFIX, im64.jpush.cn
+# DOMAIN-SUFFIX, im.jpush.cn
+# DOMAIN-SUFFIX, jpush.html5.qq.com
 
 # > 中华万年历
 DOMAIN-KEYWORD,lkme.cc
