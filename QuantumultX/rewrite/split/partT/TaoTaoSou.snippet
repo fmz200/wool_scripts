@@ -1,0 +1,19 @@
+#!name=淘淘搜
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partT/TaoTaoSou.snippet
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+
+host-suffix, img.taotaosou.cn, reject
+host-suffix, img01.taotaosou.cn, reject
+host-suffix, re.taotaosou.com, reject
+host-suffix, show.kc.taotaosou.com, reject
+
+https:\/\/this-is-an-example\.com\/example\/ url reject-dict
+
+hostname = this-is-an-example.com

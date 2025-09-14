@@ -9,6 +9,11 @@
 #############################################
 
 
+host, afd.baidu.com, reject
+host, afdconf.baidu.com, reject
+host, httpdns.baidubce.com, reject
+host, lc.map.baidu.com, reject
+
 ^https?:\/\/dss0\.bdstatic\.com\/-0U0bnSm1A5BphGlnYG\/ url reject-200
 ^https?:\/\/dss0\.bdstatic\.com\/.+/tam-ogel\/.+\.(jpg|mp4) url reject
 ^https?:\/\/tb1\.bdstatic\.com\/tb\/cms\/ngmis\/adsense\/*.jpg url reject

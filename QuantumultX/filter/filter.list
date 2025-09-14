@@ -241,7 +241,7 @@ host, vs6.bj2ct.u3.ucweb.com, reject
 host-suffix, safebrowsing.apple, reject
 host-suffix, u3.ucweb.com, reject
 
-# > 亚马逊（Amazon）
+# > Amazon
 host-suffix, amazon-adsystem.com, reject
 host-suffix, mads.amazon.com, reject
 host-suffix, sdb.amazonaws.com, reject
@@ -2427,17 +2427,9 @@ host-keyword, stsdk.vivoglobal.com, reject
 # > VIVO商城
 host-keyword, paradisestatic.vivo.com.cn, reject
 
-# > 唯品会
-host-suffix, n-st.vip.com, reject
-host-suffix, api.union.vip.com, reject
-host-suffix, ms.vipstatic.com, reject
-
 
 
 # >>>>>>>>>>>>>>> ✅ W ✅ <<<<<<<<<<<<<<
-# > 豌豆荚
-host-suffix, push.wandoujia.com, reject
-
 # > Whale Cloud (鲸云)
 host-suffix, whalecloud.com, reject
 host-suffix, feedback.whalecloud.com, reject
@@ -2588,6 +2580,14 @@ host-suffix, log.yex.youdao.com, reject
 # 去开屏
 host-suffix, ad.gameley.com, reject
 host-suffix, zlsdk.1rtb.net, reject
+
+# > 豌豆荚
+host-suffix, push.wandoujia.com, reject
+
+# > 唯品会
+host-suffix, n-st.vip.com, reject
+host-suffix, api.union.vip.com, reject
+host-suffix, ms.vipstatic.com, reject
 
 # > 威锋
 # 广告联盟已包含

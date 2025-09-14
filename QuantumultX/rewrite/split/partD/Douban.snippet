@@ -9,6 +9,9 @@
 #############################################
 
 
+host-suffix, erebor.douban.com, reject
+host-suffix, ad.doubanio.com, reject
+
 # 如开启可自行添加主机名 img*.douban.com, frodo.douban.com, erebor.douban.com
 ^https?:\/\/api\.douban\.com\/v\d\/app_ads\/ url reject-dict
 ^https?:\/\/api\.douban\.com\/b.*\/common_ads\?.* url reject-dict

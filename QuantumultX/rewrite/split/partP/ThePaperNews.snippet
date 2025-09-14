@@ -9,6 +9,12 @@
 #############################################
 
 
+host, admonitor.thepaper.cn, reject
+host, adpai.thepaper.cn, reject
+host, imgadpai.thepaper.cn, reject
+host-suffix, ad.thepaper.cn, reject
+host-suffix, imgad.thepaper.cn, reject
+
 ^https?:\/\/adpai\.thepaper\.cn\/.+&ad= url reject
 
 hostname = adpai.thepaper.cn

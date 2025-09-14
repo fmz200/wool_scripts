@@ -1,0 +1,22 @@
+#!name=中华网
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partZ/ChinaCom.snippet
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+
+host-suffix, union.china.com.cn, reject
+host-suffix, dvs.china.com, reject
+host-suffix, dvsend.china.com, reject
+host-suffix, dvser.china.com, reject
+host-suffix, dvser02.china.com, reject
+host-suffix, sssvd.china.com, reject
+host-suffix, rank.hit.china.com, reject
+
+https:\/\/this-is-an-example\.com\/example\/ url reject-dict
+
+hostname = this-is-an-example.com

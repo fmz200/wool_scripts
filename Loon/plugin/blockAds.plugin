@@ -553,6 +553,11 @@ IP-CIDR6, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT, no-resolve
 # hostname = sso.ifanr.com
 ^https?:\/\/sso\.ifanr\.com\/jiong\/IOS\/appso\/splash\/ reject
 
+# > Amazon
+# hostname = api-cslp-emt.amazon.cn
+^https?:\/\/api-cslp-emt\.amazon\.cn\/gateway\/content\/widget\/popup reject-200
+^https?:\/\/api-cslp-emt\.amazon\.cn\/gateway\/recommend reject-dict
+
 # > 阿里巴巴
 # hostname = acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com
 ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.fliggy\.crm\.screen\.(allresource|predict) reject-dict
@@ -3665,11 +3670,6 @@ http-response ^https?:\/\/www\.myusmile\.online\/user\/plaqueTopic\/selectByType
 # > 育学园
 # hostname = *.yuxueyuan.cn
 ^https?:\/\/.*\.yuxueyuan\.cn\/yxy-api-gateway\/api\/json\/advert\/getsAdStartScreen reject-200
-
-# > 亚马逊（Amazon）
-# hostname = api-cslp-emt.amazon.cn
-^https?:\/\/api-cslp-emt\.amazon\.cn\/gateway\/content\/widget\/popup reject-200
-^https?:\/\/api-cslp-emt\.amazon\.cn\/gateway\/recommend reject-dict
 
 # > 亚朵开屏
 # hostname = api2.yaduo.com

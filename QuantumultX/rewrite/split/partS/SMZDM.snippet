@@ -19,6 +19,7 @@ host, msg.umengcloud.com, REJECT
 host, sec.umeng.com, REJECT
 host, ulogs.umeng.com, REJECT
 host, ynuf.aliapp.org, REJECT
+host-suffix, res-ga.smzdm.com, reject
 
 ^https?:\/\/haojia\.m\.smzdm\.com\/detail_modul\/other_modul\? url reject-dict
 ^https?:\/\/haojia\.m\.smzdm\.com\/detail_modul\/user_related_modul\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/smzdm/smzdm_ads.js

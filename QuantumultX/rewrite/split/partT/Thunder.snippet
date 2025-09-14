@@ -9,8 +9,22 @@
 #############################################
 
 
-host, adsp.xunlei.com, reject
-host, etl.xlmc.sandai.net, reject
+host-suffix, adsp.xunlei.com, reject
+host-suffix, static-xl9-ssl.xunlei.com, reject
+host-suffix, biz.live.xunlei.com, reject
+host-suffix, ct.niu.xunlei.com, reject
+host-suffix, mou.niu.xunlei.com, reject
+host-suffix, scene.vip.xunlei.com, reject
+host-suffix, tw13b093.sandai.net, reject
+host-suffix, xlmc.sandai.net, reject
+host-suffix, cpm.cm.sandai.net, reject
+host-suffix, master.wap.dphub.sandai.net, reject
+host-suffix, idx.m.hub.sandai.net, reject
+host-suffix, liveupdate.mac.sandai.net, reject
+host-suffix, hub5pn.wap.sandai.net, reject
+host-suffix, etl.xlmc.sandai.net, reject
+host-suffix, test.api.xlmc.sandai.net, reject
+host-suffix, pre.api.tw06.xlmc.sandai.net, reject
 
 ^https?:\/\/images\.client\.vip\.xunlei\.com\/.+?\/advert\/ url reject-200
 ^https?:\/\/api-shoulei-ssl\.xunlei\.com\/flowhub\/v\d\/slots:batchGet url reject-200

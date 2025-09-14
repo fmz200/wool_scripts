@@ -245,7 +245,7 @@ DOMAIN, vs6.bj2ct.u3.ucweb.com
 DOMAIN-SUFFIX,safebrowsing.apple
 DOMAIN-SUFFIX,u3.ucweb.com
 
-# > 亚马逊（Amazon）
+# > Amazon
 DOMAIN-SUFFIX, amazon-adsystem.com
 DOMAIN-SUFFIX, mads.amazon.com
 DOMAIN-SUFFIX, sdb.amazonaws.com
@@ -2419,17 +2419,9 @@ DOMAIN-KEYWORD,stsdk.vivoglobal.com
 # > VIVO商城
 DOMAIN-KEYWORD,paradisestatic.vivo.com.cn
 
-# > 唯品会
-DOMAIN-SUFFIX, n-st.vip.com
-DOMAIN-SUFFIX, api.union.vip.com
-DOMAIN-SUFFIX, ms.vipstatic.com
-
 
 
 # >>>>>>>>>>>>>>> ✅ W ✅ <<<<<<<<<<<<<<
-# > 豌豆荚
-DOMAIN-SUFFIX, push.wandoujia.com
-
 # > Whale Cloud (鲸云)
 DOMAIN-SUFFIX, whalecloud.com
 DOMAIN-SUFFIX, feedback.whalecloud.com
@@ -2577,6 +2569,14 @@ DOMAIN-SUFFIX, log.yex.youdao.com
 #DOMAIN-SUFFIX, aoodoo.feng.com
 #DOMAIN-SUFFIX, push.feng.com
 #DOMAIN-SUFFIX, aoodoo.weiphone.com
+
+# > 豌豆荚
+DOMAIN-SUFFIX, push.wandoujia.com
+
+# > 唯品会
+DOMAIN-SUFFIX, n-st.vip.com
+DOMAIN-SUFFIX, api.union.vip.com
+DOMAIN-SUFFIX, ms.vipstatic.com
 
 # > 歪麦霸王餐
 # 去开屏 

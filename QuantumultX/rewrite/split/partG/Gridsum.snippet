@@ -1,0 +1,27 @@
+#!name=国双 (Gridsum)
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partG/Gridsum.snippet
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+
+host-suffix, gridsumdissector.cn, reject
+host-suffix, recv-vd.gridsumdissector.cn, reject
+host-suffix, gridsumdissector.com, reject
+host-suffix, cfg-md.gridsumdissector.com, reject
+host-suffix, cfg-vd.gridsumdissector.com, reject
+host-suffix, diag-vd.gridsumdissector.com, reject
+host-suffix, diag-wd.gridsumdissector.com, reject
+host-suffix, geo.gridsumdissector.com, reject
+host-suffix, impression.gridsumdissector.com, reject
+host-suffix, recv-wd.gridsumdissector.com, reject
+host-suffix, sso-cas.gridsumdissector.com, reject
+host-suffix, g.gridsum.com, reject
+
+https:\/\/this-is-an-example\.com\/example\/ url reject-dict
+
+hostname = this-is-an-example.com

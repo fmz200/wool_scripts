@@ -1,4 +1,4 @@
-#!name=苏宁
+#!name=苏宁易购
 #!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
 #!author=奶思
 #!homepage=https://github.com/fmz200/wool_scripts
@@ -8,6 +8,12 @@
 #!date=2025-08-21 22:37:00
 #############################################
 
+
+host-suffix, show.suning.beer, reject
+host-suffix, apm.suning.cn, reject
+host-suffix, mads.suning.com, reject
+host-suffix, ssac.suning.com, reject
+host-suffix, tad.suning.com, reject
 
 ^https?:\/\/mpcs\.suning\.com\/mpcs\/dm\/getDmInfo url reject
 ^https?:\/\/image\.suning\.cn\/uimg\/ma\/ad\/ url reject-200

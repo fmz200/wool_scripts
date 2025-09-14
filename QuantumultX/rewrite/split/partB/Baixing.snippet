@@ -1,0 +1,21 @@
+#!name=百姓网
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partB/Baixing.snippet
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+
+host-suffix, admx.baixing.com, reject
+host-suffix, tu.baixing.com, reject
+host-suffix, d.admx.baixing.com, reject
+host-suffix, bd-js.baixing.net, reject
+host-suffix, bd-s.baixing.net, reject
+host-suffix, script-bd.baixing.net, reject
+
+https:\/\/this-is-an-example\.com\/example\/ url reject-dict
+
+hostname = this-is-an-example.com

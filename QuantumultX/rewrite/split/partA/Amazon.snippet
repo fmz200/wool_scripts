@@ -1,0 +1,26 @@
+#!name=Amazon
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partA/Amazon.snippet
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+
+host-suffix, amazon-adsystem.com, reject
+host-suffix, mads.amazon.com, reject
+host-suffix, sdb.amazonaws.com, reject
+host-suffix, airpushmarketing.s3.amazonaws.com, reject
+host-suffix, epowernetworktrackerimages.s3.amazonaws.com, reject
+host-suffix, gateways.s3.amazonaws.com, reject
+host-suffix, kbnetworkz.s3.amazonaws.com, reject
+host-suffix, secretmedia.s3.amazonaws.com, reject
+host-suffix, smblock.s3.amazonaws.com, reject
+host-suffix, whistleout.s3.amazonaws.com, reject
+
+^https?:\/\/api-cslp-emt\.amazon\.cn\/gateway\/content\/widget\/popup url reject-200
+^https?:\/\/api-cslp-emt\.amazon\.cn\/gateway\/recommend url reject-dict
+
+hostname = api-cslp-emt.amazon.cn

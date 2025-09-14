@@ -9,6 +9,9 @@
 #############################################
 
 
+host-suffix, ja.gamersky.com, reject
+host-suffix, ja1.gamersky.com, reject
+
 # 移除开屏广告、列表广告
 ^http:\/\/.+\.gamersky\.com\/.+\/adSystem\/ad\/.+ url reject-dict
 https://.+\.gamersky.com/v1/statisticAd url reject-dict

@@ -125,6 +125,11 @@
 # hostname = sso.ifanr.com
 ^https?:\/\/sso\.ifanr\.com\/jiong\/IOS\/appso\/splash\/ url reject
 
+# > Amazon
+# hostname = api-cslp-emt.amazon.cn
+^https?:\/\/api-cslp-emt\.amazon\.cn\/gateway\/content\/widget\/popup url reject-200
+^https?:\/\/api-cslp-emt\.amazon\.cn\/gateway\/recommend url reject-dict
+
 # > 阿里巴巴
 # hostname = acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com
 ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.fliggy\.crm\.screen\.(allresource|predict) url reject-dict
@@ -3597,11 +3602,6 @@ https://mgesq.api.mgtv.com/dsl/index.+ url script-response-body https://raw.gith
 # > 育学园
 # hostname = *.yuxueyuan.cn
 ^https?:\/\/.*\.yuxueyuan\.cn\/yxy-api-gateway\/api\/json\/advert\/getsAdStartScreen url reject-200
-
-# > 亚马逊（Amazon）
-# hostname = api-cslp-emt.amazon.cn
-^https?:\/\/api-cslp-emt\.amazon\.cn\/gateway\/content\/widget\/popup url reject-200
-^https?:\/\/api-cslp-emt\.amazon\.cn\/gateway\/recommend url reject-dict
 
 # > 亚朵开屏
 # hostname = api2.yaduo.com

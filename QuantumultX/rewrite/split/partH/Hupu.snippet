@@ -9,9 +9,11 @@
 #############################################
 
 
-host, adx.hupu.com, reject
-host, adx-api.hupu.com, reject
-host, goblin.hupu.com, reject
+host-suffix, adx.hupu.com, reject
+host-suffix, adx-api.hupu.com, reject
+host-suffix, goblin.hupu.com, reject
+host-suffix, orz.hupu.com, reject
+host-suffix, cc.dace.hupu.com, reject
 
 ^https?:\/\/games\.mobileapi\.hupu\.com\/.+?\/(interfaceAdMonitor|interfaceAd)\/ url reject
 ^https?:\/\/games\.mobileapi\.hupu\.com\/.+?\/(search|interfaceAdMonitor|status|hupuBbsPm)/(hotkey|init|hupuBbsPm)\. url reject-img

@@ -1,0 +1,23 @@
+#!name=笑容加
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partX/XiaoRongJia.snippet
+#!tg-group=https://t.me/lanjieguanggao
+#!date=2025-08-21 22:37:00
+#############################################
+
+
+# 屏蔽更新提示
+^https?:\/\/myusmile\.online\/user\/version\/requestAppUpdate url reject-dict
+# 屏蔽固件更新
+^https?:\/\/myusmile\.online\/user\/version\/requestFirmwareUpdate\/ url reject
+# 商城页弹窗
+^https?:\/\/wemallh5\.usmile\.com\/api\/sp-portal\/store\/usmile\/activity\/dayCheck\?pop url reject-dict
+# 首页弹窗
+^https?:\/\/www\.myusmile\.online\/user\/userTagRecord\/popup url reject
+# 我的页推广
+^https?:\/\/www\.myusmile\.online\/user\/plaqueTopic\/selectByType url script-response-body https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/usmile.js
+
+hostname = myusmile.online, wemallh5.usmile.com, www.myusmile.online

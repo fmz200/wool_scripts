@@ -1,4 +1,4 @@
-#!name=谷歌
+#!name=Google
 #!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
 #!author=奶思
 #!homepage=https://github.com/fmz200/wool_scripts
@@ -32,6 +32,34 @@ host-suffix, afd.l.google.com, reject
 host-suffix, www.googleadservices.com, reject
 host-suffix, www.google-analytics.com, reject
 host, ads.youtube.com, reject
+host-suffix, cmshow.gtimg.cn, reject
+host-suffix, discuz.gtimg.cn, reject
+host-suffix, gu.qlogo.cn, reject
+host-suffix, py.qlogo.cn, reject
+host-suffix, py2.qlogo.cn, reject
+host-suffix, app-measurement.com, reject
+host-suffix, admob.com, reject
+host-suffix, crashlytics.com, reject
+host-suffix, pagespeed-mod, reject
+host-suffix, csi.gstatic.com, reject
+host-suffix, beacon.gtimg.com, reject
+host-suffix, bla.gtimg.com, reject
+host-suffix, lb.gtimg.com, reject
+host-suffix, pgdt.gtimg.com, reject
+host-suffix, ra.gtimg.com, reject
+host-suffix, splashqqlive.gtimg.com, reject
+host-suffix, swa.gtimg.com, reject
+host-suffix, tui.gtimg.com, reject
+host-suffix, wa.gtimg.com, reject
+host-suffix, wb.gtimg.com, reject
+host-suffix, e.crashlytics.com, reject
+host-suffix, setting.crashlytics.com, reject
+host-suffix, settings.crashlytics.com, reject
+host-suffix, gcdn.2mdn.net, reject
+host-suffix, s0.2mdn.net, reject
+host-suffix, s1.2mdn.net, reject
+host-suffix, pgdt.ugdtimg.com, reject
+host-suffix, adclick.g.doublecklick.net, reject
 
 # 如开启可自行添加主机名，但似乎已不可MITM
 ^https?:\/\/.+\.googleapis.com/.+ad_break url reject-img
