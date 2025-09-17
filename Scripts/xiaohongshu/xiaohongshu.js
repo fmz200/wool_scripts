@@ -392,10 +392,10 @@ function imageEnhance(jsonStr) {
   const imageQuality = $.getdata("fmz200.xiaohongshu.imageQuality");
   console.log(`Image Quality: ${imageQuality}`);
   if (imageQuality === "original") { // 原始分辨率，PNG格式的图片，占用空间比较大
-    console.log("画质修改为-原始分辨率");
+    console.log("画质设置为-原始分辨率");
     jsonStr = jsonStr.replace(/\?imageView2\/2[^&]*(?:&redImage\/frame\/0)/, "?imageView2/0/format/png&redImage/frame/0");
   } else { // 高像素输出
-    console.log("画质修改为-高像素输出");
+    console.log("画质设置为-高像素输出");
     const regex1 = /imageView2\/2\/w\/\d+\/format/g;
     jsonStr = jsonStr.replace(regex1, `imageView2/2/w/2160/format`);
 
