@@ -2877,10 +2877,6 @@ DOMAIN, ads.cup.com.cn
 DOMAIN-SUFFIX, ad.yunzhijia.com
 
 # > 优酷
-DOMAIN-SUFFIX, acz.youku.com
-DOMAIN-SUFFIX, adx-core.youku.com
-DOMAIN-SUFFIX, adx-open-service.youku.com
-DOMAIN-SUFFIX, rhdc-acs.youku.com
 DOMAIN-SUFFIX, partner.uc.cn
 DOMAIN-SUFFIX, ubixioe.com
 DOMAIN-SUFFIX, uczzd.cn
@@ -2891,64 +2887,65 @@ DOMAIN-SUFFIX, gdt.qq.com
 DOMAIN-SUFFIX, sdk.e.qq.com
 DOMAIN-SUFFIX, mazu.m.qq.com
 DOMAIN-SUFFIX, snowflake.qq.com
+DOMAIN-SUFFIX, acz.youku.com
+DOMAIN-SUFFIX, adx-core.youku.com
+DOMAIN-SUFFIX, adx-open-service.youku.com
+DOMAIN-SUFFIX, rhdc-acs.youku.com
 DOMAIN-SUFFIX, cad.youku.com
 DOMAIN-SUFFIX, sjarvis.taobao.com
+DOMAIN, httpdns.alicdn.com
 DOMAIN, adsmind.ugdtimg.com
 DOMAIN, amdc.m.youku.com
 DOMAIN, apiv4-iyes.youku.com
-DOMAIN, httpdns.alicdn.com
 DOMAIN, iyes.youku.com
 DOMAIN, mc.atm.youku.com
+DOMAIN, yk-ssp.ad.youku.com
+DOMAIN, ykad-data.youku.com
+DOMAIN, ad.mobile.youku.com
+DOMAIN-SUFFIX, ad.api.3g.tudou.com
+DOMAIN-SUFFIX, ad.api.3g.youku.com
+DOMAIN-SUFFIX, ad.api.mobile.youku.com
+DOMAIN-SUFFIX, gamex.mobile.youku.com
 # DOMAIN, pl.cp31.ott.cibntv.net
 # DOMAIN, m-vali.cp31.ott.cibntv.net
 # DOMAIN, vali-g1.cp31.ott.cibntv.net
 # DOMAIN, vali-ugc.cp31.ott.cibntv.net
-DOMAIN, yk-ssp.ad.youku.com
-DOMAIN, ykad-data.youku.com
-DOMAIN, ad.mobile.youku.com
-DOMAIN-SUFFIX, actives.youku.com
-DOMAIN-SUFFIX, ad.api.3g.tudou.com
-DOMAIN-SUFFIX, ad.api.3g.youku.com
-DOMAIN-SUFFIX, ad.api.mobile.youku.com
-DOMAIN-SUFFIX, store.tv.api.3g.youku.com
-DOMAIN-SUFFIX, store.xl.api.3g.youku.com
-DOMAIN-SUFFIX, a-dxk.play.api.3g.youku.com
-DOMAIN-SUFFIX, b.smartvideo.youku.com
-DOMAIN-SUFFIX, c.yes.youku.com
-DOMAIN-SUFFIX, das.api.youku.com
-DOMAIN-SUFFIX, das.mobile.youku.com
-DOMAIN-SUFFIX, dev-push.m.youku.com
-DOMAIN-SUFFIX, dl.g.youku.com
-DOMAIN-SUFFIX, dmapp.youku.com
-DOMAIN-SUFFIX, gamex.mobile.youku.com
-DOMAIN-SUFFIX, hudong.pl.youku.com
-DOMAIN-SUFFIX, huodong.pl.youku.com
-DOMAIN-SUFFIX, huodong.vip.youku.com
-DOMAIN-SUFFIX, hz.youku.com
-DOMAIN-SUFFIX, l.ykimg.com
+#DOMAIN-SUFFIX, actives.youku.com
+#DOMAIN-SUFFIX, store.tv.api.3g.youku.com
+#DOMAIN-SUFFIX, store.xl.api.3g.youku.com
+#DOMAIN-SUFFIX, a-dxk.play.api.3g.youku.com
+#DOMAIN-SUFFIX, b.smartvideo.youku.com
+#DOMAIN-SUFFIX, c.yes.youku.com
+#DOMAIN-SUFFIX, das.api.youku.com
+#DOMAIN-SUFFIX, das.mobile.youku.com
+#DOMAIN-SUFFIX, dev-push.m.youku.com
+#DOMAIN-SUFFIX, dl.g.youku.com
+#DOMAIN-SUFFIX, dmapp.youku.com
+#DOMAIN-SUFFIX, hudong.pl.youku.com
+#DOMAIN-SUFFIX, huodong.pl.youku.com
+#DOMAIN-SUFFIX, huodong.vip.youku.com
+#DOMAIN-SUFFIX, hz.youku.com
 DOMAIN-SUFFIX, lstat.youku.com
-DOMAIN-SUFFIX, m.yes.youku.com
-DOMAIN-SUFFIX ,mobilemsg.youku.com
-DOMAIN-SUFFIX, msg.youku.com
-DOMAIN-SUFFIX, myes.youku.com
+#DOMAIN-SUFFIX, m.yes.youku.com
+#DOMAIN-SUFFIX ,mobilemsg.youku.com
+#DOMAIN-SUFFIX, msg.youku.com
+#DOMAIN-SUFFIX, myes.youku.com
 DOMAIN-SUFFIX, p.l.youku.com
 DOMAIN-SUFFIX, r.l.youku.com
-DOMAIN-SUFFIX, passport-log.youku.com
+DOMAIN-SUFFIX, v.l.youku.com
+DOMAIN-SUFFIX, l.ykimg.com
 DOMAIN-SUFFIX, p-log.ykimg.com
 DOMAIN-SUFFIX, push.m.youku.com
 DOMAIN-SUFFIX, s.p.youku.com
-DOMAIN-SUFFIX, sdk.api.gamex.mobile.youku.com
 DOMAIN-SUFFIX, sdk.m.youku.com
 DOMAIN-SUFFIX, stat.youku.com
 DOMAIN-SUFFIX, tdrec.youku.com
 DOMAIN-SUFFIX, test.ott.youku.com
-DOMAIN-SUFFIX, urchin.lstat.youku.com
-DOMAIN-SUFFIX, v.l.youku.com
-DOMAIN-SUFFIX, val.api.youku.com
-DOMAIN-SUFFIX, wan.youku.com
-DOMAIN-SUFFIX, ykatr.youku.com
-DOMAIN-SUFFIX, ykrec.youku.com
-IP-CIDR, 223.111.27.248/32, no-resolve
+#DOMAIN-SUFFIX, urchin.lstat.youku.com
+#DOMAIN-SUFFIX, val.api.youku.com
+#DOMAIN-SUFFIX, wan.youku.com
+#DOMAIN-SUFFIX, ykatr.youku.com
+#DOMAIN-SUFFIX, ykrec.youku.com
 
 # > 游民星空
 DOMAIN-SUFFIX, ja.gamersky.com
