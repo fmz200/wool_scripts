@@ -2899,10 +2899,10 @@ DOMAIN, apiv4-iyes.youku.com
 DOMAIN, httpdns.alicdn.com
 DOMAIN, iyes.youku.com
 DOMAIN, mc.atm.youku.com
-DOMAIN, pl.cp31.ott.cibntv.net
-DOMAIN, m-vali.cp31.ott.cibntv.net
-DOMAIN, vali-g1.cp31.ott.cibntv.net
-DOMAIN, vali-ugc.cp31.ott.cibntv.net
+# DOMAIN, pl.cp31.ott.cibntv.net
+# DOMAIN, m-vali.cp31.ott.cibntv.net
+# DOMAIN, vali-g1.cp31.ott.cibntv.net
+# DOMAIN, vali-ugc.cp31.ott.cibntv.net
 DOMAIN, yk-ssp.ad.youku.com
 DOMAIN, ykad-data.youku.com
 DOMAIN, ad.mobile.youku.com
