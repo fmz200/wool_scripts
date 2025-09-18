@@ -9,38 +9,6 @@
 #############################################
 
 [Rule]
-DOMAIN-KEYWORD,m.atm.youku.com, REJECT
-DOMAIN-KEYWORD,adp.atm.youku.com, REJECT
-DOMAIN-KEYWORD,clickc.admaster.com, REJECT
-DOMAIN-KEYWORD,count.atm.youku.com, REJECT
-DOMAIN-KEYWORD,ems.youku.com, REJECT
-DOMAIN-KEYWORD,fans.m.tmall.com, REJECT
-DOMAIN-KEYWORD,r1.ykimg.com, REJECT
-DOMAIN-KEYWORD,v.admaster.com, REJECT
-DOMAIN-KEYWORD,v2.reachmax.cn, REJECT
-DOMAIN-KEYWORD,val.atm.youku.com, REJECT
-DOMAIN-KEYWORD,server.m.pp.cn, REJECT
-DOMAIN-KEYWORD,puds.ucweb.com, REJECT
-DOMAIN-KEYWORD,wgo.mmstat.com, REJECT
-DOMAIN-KEYWORD,log.cs.pp.cn, REJECT
-DOMAIN-KEYWORD,applog.uc.cn, REJECT
-DOMAIN-KEYWORD,afpapi.alimama.com, REJECT
-DOMAIN-KEYWORD,a.9game.cn, REJECT
-DOMAIN-KEYWORD,track.uc.cn, REJECT
-DOMAIN-KEYWORD,adtrack.ucweb.com, REJECT
-DOMAIN-KEYWORD,utp-dmp.ucweb.com, REJECT
-DOMAIN-KEYWORD,utp.ucweb.com, REJECT
-DOMAIN-KEYWORD,huichuan.sm.cn, REJECT
-DOMAIN-KEYWORD,ynuf.alipay.com, REJECT
-DOMAIN-KEYWORD,pdds.ucweb.com, REJECT
-DOMAIN-KEYWORD,js.union-wifi.com, REJECT
-DOMAIN-KEYWORD,www.qmlog.cn, REJECT
-DOMAIN-KEYWORD,cpu.baidu.com, REJECT
-DOMAIN-KEYWORD,caclick.baidu.com, REJECT
-DOMAIN-KEYWORD,rescn.u3.ucweb.com, REJECT
-DOMAIN-KEYWORD,editor.sm.cn, REJECT
-DOMAIN-KEYWORD,fc-video.cdn.bcebos.com, REJECT
-DOMAIN-KEYWORD,vs10.bj2ct.u3.ucweb.com, REJECT
 DOMAIN, safe.ucweb.com, REJECT
 DOMAIN, px.ucweb.com, REJECT
 DOMAIN, navigis.uc.cn, REJECT
@@ -56,21 +24,15 @@ DOMAIN, coral.uc.cn, REJECT
 DOMAIN, wolong-dsp.sm.cn, REJECT
 DOMAIN, cartoonapi.uc.cn, REJECT
 DOMAIN, umessage-online-zb.uc.cn, REJECT
-DOMAIN, sealine.youku.com, REJECT
 DOMAIN, api.c.uc.cn, REJECT
 DOMAIN, aid.m.taobao.com, REJECT
 DOMAIN, cms.uc.cn, REJECT
 DOMAIN, applog-perf.uc.cn, REJECT
-DOMAIN-SUFFIX,m.atm.youku.com, REJECT
-DOMAIN-SUFFIX,adp.atm.youku.com, REJECT
 DOMAIN-SUFFIX,clickc.admaster.com.cn, REJECT
-DOMAIN-SUFFIX,count.atm.youku.com, REJECT
-DOMAIN-SUFFIX,ems.youku.com, REJECT
 DOMAIN-SUFFIX,fans.m.tmall.com, REJECT
 DOMAIN-SUFFIX,r1.ykimg.com, REJECT
 DOMAIN-SUFFIX,v.admaster.com.cn, REJECT
 DOMAIN-SUFFIX,v2.reachmax.cn, REJECT
-DOMAIN-SUFFIX,val.atm.youku.com, REJECT
 DOMAIN-SUFFIX,server.m.pp.cn, REJECT
 DOMAIN-SUFFIX,puds.ucweb.com, REJECT
 DOMAIN-SUFFIX,wgo.mmstat.com, REJECT

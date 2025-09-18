@@ -12,123 +12,75 @@
 yzku_enable = switch,true,false,tag=优酷-脚本开关
 
 [Rule]
-DOMAIN-SUFFIX, acz.youku.com, REJECT
-DOMAIN-SUFFIX, adx-core.youku.com, REJECT
-DOMAIN-SUFFIX, adx-open-service.youku.com, REJECT
-DOMAIN-SUFFIX, rhdc-acs.youku.com, REJECT
 DOMAIN-SUFFIX, partner.uc.cn, REJECT
 DOMAIN-SUFFIX, ubixioe.com, REJECT
 DOMAIN-SUFFIX, uczzd.cn, REJECT
 DOMAIN-SUFFIX, ranfenghd.com, REJECT
 DOMAIN-SUFFIX, zconfig.alibabausercontent.com, REJECT
 DOMAIN-SUFFIX, bgg.baidu.com, REJECT
-DOMAIN-SUFFIX, gdt.qq.com, REJECT
-DOMAIN-SUFFIX, sdk.e.qq.com, REJECT
-DOMAIN-SUFFIX, mazu.m.qq.com, REJECT
-DOMAIN-SUFFIX, snowflake.qq.com, REJECT
-DOMAIN-SUFFIX, cad.youku.com, REJECT
-DOMAIN-SUFFIX, sjarvis.taobao.com, REJECT
+# DOMAIN-SUFFIX, gdt.qq.com, REJECT
+# DOMAIN-SUFFIX, sdk.e.qq.com, REJECT
+# DOMAIN-SUFFIX, mazu.m.qq.com, REJECT
+# DOMAIN-SUFFIX, snowflake.qq.com, REJECT
+# DOMAIN-SUFFIX, acz.youku.com, REJECT
+DOMAIN-SUFFIX, adx-core.youku.com, REJECT
+DOMAIN-SUFFIX, adx-open-service.youku.com, REJECT
+DOMAIN-SUFFIX, rhdc-acs.youku.com, REJECT
+# DOMAIN-SUFFIX, cad.youku.com, REJECT
+# DOMAIN-SUFFIX, sjarvis.taobao.com, REJECT
+DOMAIN, httpdns.alicdn.com, REJECT
 DOMAIN, adsmind.ugdtimg.com, REJECT
 DOMAIN, amdc.m.youku.com, REJECT
 DOMAIN, apiv4-iyes.youku.com, REJECT
-DOMAIN, httpdns.alicdn.com, REJECT
-DOMAIN, iyes.youku.com, REJECT
-DOMAIN, mc.atm.youku.com, REJECT
-DOMAIN, pl.cp31.ott.cibntv.net, REJECT
-DOMAIN, m-vali.cp31.ott.cibntv.net, REJECT
-DOMAIN, vali-g1.cp31.ott.cibntv.net, REJECT
-DOMAIN, vali-ugc.cp31.ott.cibntv.net, REJECT
+# DOMAIN, iyes.youku.com, REJECT
+# DOMAIN, mc.atm.youku.com, REJECT
 DOMAIN, yk-ssp.ad.youku.com, REJECT
 DOMAIN, ykad-data.youku.com, REJECT
 DOMAIN, ad.mobile.youku.com, REJECT
-DOMAIN-SUFFIX,atm.youku.com, REJECT
-DOMAIN-SUFFIX,actives.youku.com, REJECT
-DOMAIN-SUFFIX,ad.api.3g.tudou.com, REJECT
-DOMAIN-SUFFIX,ad.api.3g.youku.com, REJECT
-DOMAIN-SUFFIX,ad.api.mobile.youku.com, REJECT
-DOMAIN-SUFFIX,store.tv.api.3g.youku.com, REJECT
-DOMAIN-SUFFIX,store.xl.api.3g.youku.com, REJECT
-DOMAIN-SUFFIX,a-dxk.play.api.3g.youku.com, REJECT
-DOMAIN-SUFFIX,b.smartvideo.youku.com, REJECT
-DOMAIN-SUFFIX,c.yes.youku.com, REJECT
-DOMAIN-SUFFIX,das.api.youku.com, REJECT
-DOMAIN-SUFFIX,das.mobile.youku.com, REJECT
-DOMAIN-SUFFIX,dev-push.m.youku.com, REJECT
-DOMAIN-SUFFIX,dl.g.youku.com, REJECT
-DOMAIN-SUFFIX,dmapp.youku.com, REJECT
-DOMAIN-SUFFIX,gamex.mobile.youku.com, REJECT
-DOMAIN-SUFFIX,hudong.pl.youku.com, REJECT
-DOMAIN-SUFFIX,huodong.pl.youku.com, REJECT
-DOMAIN-SUFFIX,huodong.vip.youku.com, REJECT
-DOMAIN-SUFFIX,hz.youku.com, REJECT
-DOMAIN-SUFFIX,l.ykimg.com, REJECT
-DOMAIN-SUFFIX,lstat.youku.com, REJECT
-DOMAIN-SUFFIX,m.yes.youku.com, REJECT
-DOMAIN-SUFFIX,mobilemsg.youku.com, REJECT
-DOMAIN-SUFFIX,msg.youku.com, REJECT
-DOMAIN-SUFFIX,myes.youku.com, REJECT
-DOMAIN-SUFFIX,p.l.youku.com, REJECT
-DOMAIN-SUFFIX,passport-log.youku.com, REJECT
-DOMAIN-SUFFIX,p-log.ykimg.com, REJECT
-DOMAIN-SUFFIX,push.m.youku.com, REJECT
-DOMAIN-SUFFIX,r.l.youku.com, REJECT
-DOMAIN-SUFFIX,s.p.youku.com, REJECT
-DOMAIN-SUFFIX,sdk.api.gamex.mobile.youku.com, REJECT
-DOMAIN-SUFFIX,sdk.m.youku.com, REJECT
-DOMAIN-SUFFIX,stat.youku.com, REJECT
-DOMAIN-SUFFIX,tdrec.youku.com, REJECT
-DOMAIN-SUFFIX,test.ott.youku.com, REJECT
-DOMAIN-SUFFIX,urchin.lstat.youku.com, REJECT
-DOMAIN-SUFFIX,v.l.youku.com, REJECT
-DOMAIN-SUFFIX,val.api.youku.com, REJECT
-DOMAIN-SUFFIX,wan.youku.com, REJECT
-DOMAIN-SUFFIX,ykatr.youku.com, REJECT
-DOMAIN-SUFFIX,ykrec.youku.com, REJECT
-DOMAIN-SUFFIX, actives.youku.com, REJECT
-DOMAIN-SUFFIX, dmapp.youku.com, REJECT
-DOMAIN-SUFFIX, hz.youku.com, REJECT
-DOMAIN-SUFFIX, lstat.youku.com, REJECT
-DOMAIN-SUFFIX, mobilemsg.youku.com, REJECT
-DOMAIN-SUFFIX, msg.youku.com, REJECT
-DOMAIN-SUFFIX, myes.youku.com, REJECT
-DOMAIN-SUFFIX, passport-log.youku.com, REJECT
-DOMAIN-SUFFIX, stat.youku.com, REJECT
-DOMAIN-SUFFIX, tdrec.youku.com, REJECT
-DOMAIN-SUFFIX, wan.youku.com, REJECT
-DOMAIN-SUFFIX, ykatr.youku.com, REJECT
-DOMAIN-SUFFIX, ykrec.youku.com, REJECT
+DOMAIN-SUFFIX, ad.api.3g.tudou.com, REJECT
 DOMAIN-SUFFIX, ad.api.3g.youku.com, REJECT
-DOMAIN-SUFFIX, a-dxk.play.api.3g.youku.com, REJECT
-DOMAIN-SUFFIX, store.tv.api.3g.youku.com, REJECT
-DOMAIN-SUFFIX, store.xl.api.3g.youku.com, REJECT
-DOMAIN-SUFFIX, das.api.youku.com, REJECT
-DOMAIN-SUFFIX, val.api.youku.com, REJECT
-DOMAIN-SUFFIX, ipm.atm.youku.com, REJECT
-DOMAIN-SUFFIX, service.danmu.youku.com, REJECT
-DOMAIN-SUFFIX, dl.g.youku.com, REJECT
+DOMAIN-SUFFIX, ad.api.mobile.youku.com, REJECT
+DOMAIN-SUFFIX, gamex.mobile.youku.com, REJECT
+# DOMAIN, pl.cp31.ott.cibntv.net, REJECT
+# DOMAIN, m-vali.cp31.ott.cibntv.net, REJECT
+# DOMAIN, vali-g1.cp31.ott.cibntv.net, REJECT
+# DOMAIN, vali-ugc.cp31.ott.cibntv.net, REJECT
+# DOMAIN-SUFFIX, actives.youku.com, REJECT
+# DOMAIN-SUFFIX, store.tv.api.3g.youku.com, REJECT
+# DOMAIN-SUFFIX, store.xl.api.3g.youku.com, REJECT
+# DOMAIN-SUFFIX, a-dxk.play.api.3g.youku.com, REJECT
+# DOMAIN-SUFFIX, b.smartvideo.youku.com, REJECT
+# DOMAIN-SUFFIX, c.yes.youku.com, REJECT
+# DOMAIN-SUFFIX, das.api.youku.com, REJECT
+# DOMAIN-SUFFIX, das.mobile.youku.com, REJECT
+# DOMAIN-SUFFIX, dev-push.m.youku.com, REJECT
+# DOMAIN-SUFFIX, push.m.youku.com, REJECT
+# DOMAIN-SUFFIX, sdk.m.youku.com, REJECT
+# DOMAIN-SUFFIX, dl.g.youku.com, REJECT
+# DOMAIN-SUFFIX, dmapp.youku.com, REJECT
+# DOMAIN-SUFFIX, hudong.pl.youku.com, REJECT
+# DOMAIN-SUFFIX, huodong.pl.youku.com, REJECT
+# DOMAIN-SUFFIX, huodong.vip.youku.com, REJECT
+# DOMAIN-SUFFIX, hz.youku.com, REJECT
+# DOMAIN-SUFFIX, lstat.youku.com, REJECT
+# DOMAIN-SUFFIX, m.yes.youku.com, REJECT
+# DOMAIN-SUFFIX ,mobilemsg.youku.com, REJECT
+# DOMAIN-SUFFIX, msg.youku.com, REJECT
+# DOMAIN-SUFFIX, myes.youku.com, REJECT
 DOMAIN-SUFFIX, p.l.youku.com, REJECT
 DOMAIN-SUFFIX, r.l.youku.com, REJECT
 DOMAIN-SUFFIX, v.l.youku.com, REJECT
-DOMAIN-SUFFIX, urchin.lstat.youku.com, REJECT
-DOMAIN-SUFFIX, dev-push.m.youku.com, REJECT
-DOMAIN-SUFFIX, push.m.youku.com, REJECT
-DOMAIN-SUFFIX, sdk.m.youku.com, REJECT
-DOMAIN-SUFFIX, ad.mobile.youku.com, REJECT
-DOMAIN-SUFFIX, das.mobile.youku.com, REJECT
-DOMAIN-SUFFIX, gamex.mobile.youku.com, REJECT
-DOMAIN-SUFFIX, ad.api.mobile.youku.com, REJECT
-DOMAIN-SUFFIX, sdk.api.gamex.mobile.youku.com, REJECT
-DOMAIN-SUFFIX, test.ott.youku.com, REJECT
-DOMAIN-SUFFIX, s.p.youku.com, REJECT
-DOMAIN-SUFFIX, hudong.pl.youku.com, REJECT
-DOMAIN-SUFFIX, huodong.pl.youku.com, REJECT
-DOMAIN-SUFFIX, b.smartvideo.youku.com, REJECT
-DOMAIN-SUFFIX, huodong.vip.youku.com, REJECT
-DOMAIN-SUFFIX, c.yes.youku.com, REJECT
-DOMAIN-SUFFIX, m.yes.youku.com, REJECT
 DOMAIN-SUFFIX, l.ykimg.com, REJECT
 DOMAIN-SUFFIX, p-log.ykimg.com, REJECT
-IP-CIDR, 223.111.27.248/32, no-resolve, REJECT
+DOMAIN-SUFFIX, s.p.youku.com, REJECT
+DOMAIN-SUFFIX, tdrec.youku.com, REJECT
+DOMAIN-SUFFIX, test.ott.youku.com, REJECT
+# DOMAIN-SUFFIX, stat.youku.com, REJECT
+# DOMAIN-SUFFIX, urchin.lstat.youku.com, REJECT
+# DOMAIN-SUFFIX, val.api.youku.com, REJECT
+# DOMAIN-SUFFIX, wan.youku.com, REJECT
+# DOMAIN-SUFFIX, ykatr.youku.com, REJECT
+# DOMAIN-SUFFIX, ykrec.youku.com, REJECT
 
 
 [Rewrite]
