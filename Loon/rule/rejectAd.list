@@ -9,7 +9,7 @@
 #!system = iOS, iPadOS
 #!system_version =
 #!loon_version =
-#!date=2025-09-10 20:00:17
+#!date=2025-09-18 19:37:00
 #!support=约9392行
 #!proxy-select=REJECT
 #############################################
@@ -78,12 +78,6 @@ DOMAIN-SUFFIX, g.wan.2345.com
 
 # >>>>>>>>>>>>>>> ✅ 3 ✅ <<<<<<<<<<<<<<
 # > 360
-DOMAIN-SUFFIX, 3600.com
-DOMAIN-SUFFIX, 360640.com
-DOMAIN-SUFFIX, 360jiaquan.com
-DOMAIN-SUFFIX, 360safego.com
-DOMAIN-SUFFIX, 365safego.com
-DOMAIN-SUFFIX, 366safego.com
 DOMAIN-SUFFIX, pjogndc8ixoidna.360doc.cn
 DOMAIN-SUFFIX, w5sac788c1.360doc.cn
 DOMAIN-SUFFIX, 360shopping.com.cn
@@ -91,9 +85,6 @@ DOMAIN-SUFFIX, cps.360buy.com
 DOMAIN-SUFFIX, eclick.360doc.com
 DOMAIN-SUFFIX, ad.360in.com
 DOMAIN-SUFFIX, dl.360safe.com
-DOMAIN-SUFFIX, down.360safe.com
-DOMAIN-SUFFIX, inst.360safe.com
-DOMAIN-SUFFIX, update.360safe.com
 DOMAIN-SUFFIX, kuaikan.netmon.360safe.com
 DOMAIN-SUFFIX, ini.update.360safe.com
 DOMAIN-SUFFIX, display.360totalsecurity.com
@@ -112,9 +103,6 @@ DOMAIN-SUFFIX, s.sh.qihoo.com
 DOMAIN-SUFFIX, spro.so.com
 DOMAIN-SUFFIX, mbrowser.news.so.com
 DOMAIN-SUFFIX, tran.news.so.com
-DOMAIN-SUFFIX, 360safe.com
-DOMAIN-SUFFIX, 360.cn
-DOMAIN-SUFFIX, 360.com
 
 # > 365日历
 DOMAIN-SUFFIX, ad.365rili.com
@@ -275,80 +263,80 @@ DOMAIN-SUFFIX, dw.xcar.com.cn
 DOMAIN-SUFFIX, pv.xcar.com.cn
 
 # > 阿里系
-DOMAIN-SUFFIX, alistatic.cn
-DOMAIN-SUFFIX, cnzz.cn
-DOMAIN-SUFFIX, sinaaliyun.cn
-DOMAIN-SUFFIX, taobaoaliyun.cn
-DOMAIN-SUFFIX, taobayun.cn
-DOMAIN-SUFFIX, ucaliyun.cn
-DOMAIN-SUFFIX, p4p.1688.com
-DOMAIN-SUFFIX, aecpm.alicdn.com
-DOMAIN-SUFFIX, afp.alicdn.com
-DOMAIN-SUFFIX, afpmm.alicdn.com
-DOMAIN-SUFFIX, asearch.alicdn.com
-DOMAIN-SUFFIX, atanx.alicdn.com
-DOMAIN-SUFFIX, atanx2.alicdn.com
-DOMAIN-SUFFIX, gen.alicdn.com
-DOMAIN-SUFFIX, gma.alicdn.com
-DOMAIN-SUFFIX, nbsdk-baichuan.alicdn.com
-DOMAIN-SUFFIX, strip.alicdn.com
-DOMAIN-SUFFIX, unidesk.alicdn.com
-DOMAIN-SUFFIX, g.aligames.com
-DOMAIN-SUFFIX, optimus-ads.amap.com.w.alikunlun.com
-DOMAIN-SUFFIX, osfota.cdn.aliyun.com
-DOMAIN-SUFFIX, oa-panther.data.aliyun.com
-#DOMAIN-SUFFIX, oss-accelerate.aliyuncs.com
-DOMAIN-SUFFIX, dressimage.img-cn-beijing.aliyuncs.com
-DOMAIN-SUFFIX, adash.man.aliyuncs.com
-DOMAIN-SUFFIX, ooss.oss.aliyuncs.com
-DOMAIN-SUFFIX, cc58.oss-cn-beijing.aliyuncs.com
-DOMAIN-SUFFIX, img-dsp.oss-cn-beijing.aliyuncs.com
-DOMAIN-SUFFIX, xz-development.oss-cn-beijing.aliyuncs.com
-DOMAIN-SUFFIX, com-eonsun-owl.oss-cn-hangzhou.aliyuncs.com
-DOMAIN-SUFFIX, com-eonsun-owl-user.oss-cn-hangzhou.aliyuncs.com
-DOMAIN-SUFFIX, cootek-dialer-download.oss-cn-hangzhou.aliyuncs.com
-DOMAIN-SUFFIX, fs-uc-nearme-com-cn.oss-cn-hangzhou.aliyuncs.com
-DOMAIN-SUFFIX, cdn-ads.oss-cn-shanghai.aliyuncs.com
-DOMAIN-SUFFIX, jiayi1.oss-cn-shanghai.aliyuncs.com
-DOMAIN-SUFFIX, aliyuncss.com
-DOMAIN-SUFFIX, aliyunxin.com
-DOMAIN-SUFFIX, p4psearch.china.alibaba.com
-DOMAIN-SUFFIX, crm-eve.b2b.alibaba-inc.com
-DOMAIN-SUFFIX, huichuan-mc.sm.cn
-DOMAIN-SUFFIX, image.zzd.sm.cn
-DOMAIN-SUFFIX, tanx.com
-DOMAIN-SUFFIX, mmstat.com
-DOMAIN-SUFFIX, ac.mmstat.com
-DOMAIN-SUFFIX, go.mmstat.com
-DOMAIN-SUFFIX, gxb.mmstat.com
-DOMAIN-SUFFIX, hz.mmstat.com
-DOMAIN-SUFFIX, p3p.mmstat.com
-DOMAIN-SUFFIX, res.mmstat.com
-DOMAIN-SUFFIX, yt.mmstat.com
-DOMAIN-SUFFIX, tbaocdn.com
-DOMAIN-SUFFIX, strip.taobaocdn.com
-DOMAIN-SUFFIX, alog.umeng.co
-DOMAIN-SUFFIX, alog.umeng.com
-DOMAIN-SUFFIX, alogs.umeng.com
-DOMAIN-SUFFIX, ar.umeng.com
-DOMAIN-SUFFIX, errlog.umeng.com
-DOMAIN-SUFFIX, plbslog.umeng.com
-DOMAIN-SUFFIX, ulogs.umeng.com
-DOMAIN-SUFFIX, alog.umengcloud.com
-DOMAIN-SUFFIX, alogs.umengcloud.com
-DOMAIN-SUFFIX, ulogs.umengcloud.com
-DOMAIN-SUFFIX, hao.uc.cn
-DOMAIN-SUFFIX, woodpecker.uc.cn
-DOMAIN-SUFFIX, api.mp.uc.cn
-DOMAIN-SUFFIX, api.open.uc.cn
-DOMAIN-SUFFIX, puds.test.uae.uc.cn
-DOMAIN-SUFFIX, picture.duokan.com
-DOMAIN-SUFFIX, v2.fm.n.duokanbox.com
-DOMAIN-SUFFIX, app-monitor.ele.me
-DOMAIN-SUFFIX, client-api.ele.me
-DOMAIN-SUFFIX, grand.ele.me
-DOMAIN-SUFFIX, mobile-pubt.ele.me
-DOMAIN-SUFFIX, newton-api.ele.me
+# DOMAIN-SUFFIX, alistatic.cn
+# DOMAIN-SUFFIX, cnzz.cn
+# DOMAIN-SUFFIX, sinaaliyun.cn
+# DOMAIN-SUFFIX, taobaoaliyun.cn
+# DOMAIN-SUFFIX, taobayun.cn
+# DOMAIN-SUFFIX, ucaliyun.cn
+# DOMAIN-SUFFIX, p4p.1688.com
+# DOMAIN-SUFFIX, aecpm.alicdn.com
+# DOMAIN-SUFFIX, afp.alicdn.com
+# DOMAIN-SUFFIX, afpmm.alicdn.com
+# DOMAIN-SUFFIX, asearch.alicdn.com
+# DOMAIN-SUFFIX, atanx.alicdn.com
+# DOMAIN-SUFFIX, atanx2.alicdn.com
+# DOMAIN-SUFFIX, gen.alicdn.com
+# DOMAIN-SUFFIX, gma.alicdn.com
+# DOMAIN-SUFFIX, nbsdk-baichuan.alicdn.com
+# DOMAIN-SUFFIX, strip.alicdn.com
+# DOMAIN-SUFFIX, unidesk.alicdn.com
+# DOMAIN-SUFFIX, g.aligames.com
+# DOMAIN-SUFFIX, optimus-ads.amap.com.w.alikunlun.com
+# DOMAIN-SUFFIX, osfota.cdn.aliyun.com
+# DOMAIN-SUFFIX, oa-panther.data.aliyun.com
+# DOMAIN-SUFFIX, oss-accelerate.aliyuncs.com
+# DOMAIN-SUFFIX, dressimage.img-cn-beijing.aliyuncs.com
+# DOMAIN-SUFFIX, adash.man.aliyuncs.com
+# DOMAIN-SUFFIX, ooss.oss.aliyuncs.com
+# DOMAIN-SUFFIX, cc58.oss-cn-beijing.aliyuncs.com
+# DOMAIN-SUFFIX, img-dsp.oss-cn-beijing.aliyuncs.com
+# DOMAIN-SUFFIX, xz-development.oss-cn-beijing.aliyuncs.com
+# DOMAIN-SUFFIX, com-eonsun-owl.oss-cn-hangzhou.aliyuncs.com
+# DOMAIN-SUFFIX, com-eonsun-owl-user.oss-cn-hangzhou.aliyuncs.com
+# DOMAIN-SUFFIX, cootek-dialer-download.oss-cn-hangzhou.aliyuncs.com
+# DOMAIN-SUFFIX, fs-uc-nearme-com-cn.oss-cn-hangzhou.aliyuncs.com
+# DOMAIN-SUFFIX, cdn-ads.oss-cn-shanghai.aliyuncs.com
+# DOMAIN-SUFFIX, jiayi1.oss-cn-shanghai.aliyuncs.com
+# DOMAIN-SUFFIX, aliyuncss.com
+# DOMAIN-SUFFIX, aliyunxin.com
+# DOMAIN-SUFFIX, p4psearch.china.alibaba.com
+# DOMAIN-SUFFIX, crm-eve.b2b.alibaba-inc.com
+# DOMAIN-SUFFIX, huichuan-mc.sm.cn
+# DOMAIN-SUFFIX, image.zzd.sm.cn
+# DOMAIN-SUFFIX, tanx.com
+# DOMAIN-SUFFIX, mmstat.com
+# DOMAIN-SUFFIX, ac.mmstat.com
+# DOMAIN-SUFFIX, go.mmstat.com
+# DOMAIN-SUFFIX, gxb.mmstat.com
+# DOMAIN-SUFFIX, hz.mmstat.com
+# DOMAIN-SUFFIX, p3p.mmstat.com
+# DOMAIN-SUFFIX, res.mmstat.com
+# DOMAIN-SUFFIX, yt.mmstat.com
+# DOMAIN-SUFFIX, tbaocdn.com
+# DOMAIN-SUFFIX, strip.taobaocdn.com
+# DOMAIN-SUFFIX, alog.umeng.co
+# DOMAIN-SUFFIX, alog.umeng.com
+# DOMAIN-SUFFIX, alogs.umeng.com
+# DOMAIN-SUFFIX, ar.umeng.com
+# DOMAIN-SUFFIX, errlog.umeng.com
+# DOMAIN-SUFFIX, plbslog.umeng.com
+# DOMAIN-SUFFIX, ulogs.umeng.com
+# DOMAIN-SUFFIX, alog.umengcloud.com
+# DOMAIN-SUFFIX, alogs.umengcloud.com
+# DOMAIN-SUFFIX, ulogs.umengcloud.com
+# DOMAIN-SUFFIX, hao.uc.cn
+# DOMAIN-SUFFIX, woodpecker.uc.cn
+# DOMAIN-SUFFIX, api.mp.uc.cn
+# DOMAIN-SUFFIX, api.open.uc.cn
+# DOMAIN-SUFFIX, puds.test.uae.uc.cn
+# DOMAIN-SUFFIX, picture.duokan.com
+# DOMAIN-SUFFIX, v2.fm.n.duokanbox.com
+# DOMAIN-SUFFIX, app-monitor.ele.me
+# DOMAIN-SUFFIX, client-api.ele.me
+# DOMAIN-SUFFIX, grand.ele.me
+# DOMAIN-SUFFIX, mobile-pubt.ele.me
+# DOMAIN-SUFFIX, newton-api.ele.me
 
 # > 阿里云
 IP-CIDR, 203.107.1.1/24, no-resolve
@@ -2216,38 +2204,6 @@ DOMAIN-SUFFIX, urbanairship.com
 DOMAIN-SUFFIX, combine.urbanairship.com
 
 # > UC浏览器
-DOMAIN-KEYWORD,m.atm.youku.com
-DOMAIN-KEYWORD,adp.atm.youku.com
-DOMAIN-KEYWORD,clickc.admaster.com
-DOMAIN-KEYWORD,count.atm.youku.com
-DOMAIN-KEYWORD,ems.youku.com
-DOMAIN-KEYWORD,fans.m.tmall.com
-DOMAIN-KEYWORD,r1.ykimg.com
-DOMAIN-KEYWORD,v.admaster.com
-DOMAIN-KEYWORD,v2.reachmax.cn
-DOMAIN-KEYWORD,val.atm.youku.com
-DOMAIN-KEYWORD,server.m.pp.cn
-DOMAIN-KEYWORD,puds.ucweb.com
-DOMAIN-KEYWORD,wgo.mmstat.com
-DOMAIN-KEYWORD,log.cs.pp.cn
-DOMAIN-KEYWORD,applog.uc.cn
-DOMAIN-KEYWORD,afpapi.alimama.com
-DOMAIN-KEYWORD,a.9game.cn
-DOMAIN-KEYWORD,track.uc.cn
-DOMAIN-KEYWORD,adtrack.ucweb.com
-DOMAIN-KEYWORD,utp-dmp.ucweb.com
-DOMAIN-KEYWORD,utp.ucweb.com
-DOMAIN-KEYWORD,huichuan.sm.cn
-DOMAIN-KEYWORD,ynuf.alipay.com
-DOMAIN-KEYWORD,pdds.ucweb.com
-DOMAIN-KEYWORD,js.union-wifi.com
-DOMAIN-KEYWORD,www.qmlog.cn
-DOMAIN-KEYWORD,cpu.baidu.com
-DOMAIN-KEYWORD,caclick.baidu.com
-DOMAIN-KEYWORD,rescn.u3.ucweb.com
-DOMAIN-KEYWORD,editor.sm.cn
-DOMAIN-KEYWORD,fc-video.cdn.bcebos.com
-DOMAIN-KEYWORD,vs10.bj2ct.u3.ucweb.com
 DOMAIN, safe.ucweb.com
 DOMAIN, px.ucweb.com
 DOMAIN, navigis.uc.cn
@@ -2263,21 +2219,15 @@ DOMAIN, coral.uc.cn
 DOMAIN, wolong-dsp.sm.cn
 DOMAIN, cartoonapi.uc.cn
 DOMAIN, umessage-online-zb.uc.cn
-DOMAIN, sealine.youku.com
 DOMAIN, api.c.uc.cn
 DOMAIN, aid.m.taobao.com
 DOMAIN, cms.uc.cn
 DOMAIN, applog-perf.uc.cn
-DOMAIN-SUFFIX,m.atm.youku.com
-DOMAIN-SUFFIX,adp.atm.youku.com
 DOMAIN-SUFFIX,clickc.admaster.com.cn
-DOMAIN-SUFFIX,count.atm.youku.com
-DOMAIN-SUFFIX,ems.youku.com
 DOMAIN-SUFFIX,fans.m.tmall.com
 DOMAIN-SUFFIX,r1.ykimg.com
 DOMAIN-SUFFIX,v.admaster.com.cn
 DOMAIN-SUFFIX,v2.reachmax.cn
-DOMAIN-SUFFIX,val.atm.youku.com
 DOMAIN-SUFFIX,server.m.pp.cn
 DOMAIN-SUFFIX,puds.ucweb.com
 DOMAIN-SUFFIX,wgo.mmstat.com
@@ -2883,22 +2833,22 @@ DOMAIN-SUFFIX, uczzd.cn
 DOMAIN-SUFFIX, ranfenghd.com
 DOMAIN-SUFFIX, zconfig.alibabausercontent.com
 DOMAIN-SUFFIX, bgg.baidu.com
-DOMAIN-SUFFIX, gdt.qq.com
-DOMAIN-SUFFIX, sdk.e.qq.com
-DOMAIN-SUFFIX, mazu.m.qq.com
-DOMAIN-SUFFIX, snowflake.qq.com
-DOMAIN-SUFFIX, acz.youku.com
+# DOMAIN-SUFFIX, gdt.qq.com
+# DOMAIN-SUFFIX, sdk.e.qq.com
+# DOMAIN-SUFFIX, mazu.m.qq.com
+# DOMAIN-SUFFIX, snowflake.qq.com
+# DOMAIN-SUFFIX, acz.youku.com
 DOMAIN-SUFFIX, adx-core.youku.com
 DOMAIN-SUFFIX, adx-open-service.youku.com
 DOMAIN-SUFFIX, rhdc-acs.youku.com
-DOMAIN-SUFFIX, cad.youku.com
-DOMAIN-SUFFIX, sjarvis.taobao.com
+# DOMAIN-SUFFIX, cad.youku.com
+# DOMAIN-SUFFIX, sjarvis.taobao.com
 DOMAIN, httpdns.alicdn.com
 DOMAIN, adsmind.ugdtimg.com
 DOMAIN, amdc.m.youku.com
 DOMAIN, apiv4-iyes.youku.com
-DOMAIN, iyes.youku.com
-DOMAIN, mc.atm.youku.com
+# DOMAIN, iyes.youku.com
+# DOMAIN, mc.atm.youku.com
 DOMAIN, yk-ssp.ad.youku.com
 DOMAIN, ykad-data.youku.com
 DOMAIN, ad.mobile.youku.com
@@ -2910,42 +2860,42 @@ DOMAIN-SUFFIX, gamex.mobile.youku.com
 # DOMAIN, m-vali.cp31.ott.cibntv.net
 # DOMAIN, vali-g1.cp31.ott.cibntv.net
 # DOMAIN, vali-ugc.cp31.ott.cibntv.net
-#DOMAIN-SUFFIX, actives.youku.com
-#DOMAIN-SUFFIX, store.tv.api.3g.youku.com
-#DOMAIN-SUFFIX, store.xl.api.3g.youku.com
-#DOMAIN-SUFFIX, a-dxk.play.api.3g.youku.com
-#DOMAIN-SUFFIX, b.smartvideo.youku.com
-#DOMAIN-SUFFIX, c.yes.youku.com
-#DOMAIN-SUFFIX, das.api.youku.com
-#DOMAIN-SUFFIX, das.mobile.youku.com
-#DOMAIN-SUFFIX, dev-push.m.youku.com
-#DOMAIN-SUFFIX, dl.g.youku.com
-#DOMAIN-SUFFIX, dmapp.youku.com
-#DOMAIN-SUFFIX, hudong.pl.youku.com
-#DOMAIN-SUFFIX, huodong.pl.youku.com
-#DOMAIN-SUFFIX, huodong.vip.youku.com
-#DOMAIN-SUFFIX, hz.youku.com
-DOMAIN-SUFFIX, lstat.youku.com
-#DOMAIN-SUFFIX, m.yes.youku.com
-#DOMAIN-SUFFIX ,mobilemsg.youku.com
-#DOMAIN-SUFFIX, msg.youku.com
-#DOMAIN-SUFFIX, myes.youku.com
+# DOMAIN-SUFFIX, actives.youku.com
+# DOMAIN-SUFFIX, store.tv.api.3g.youku.com
+# DOMAIN-SUFFIX, store.xl.api.3g.youku.com
+# DOMAIN-SUFFIX, a-dxk.play.api.3g.youku.com
+# DOMAIN-SUFFIX, b.smartvideo.youku.com
+# DOMAIN-SUFFIX, c.yes.youku.com
+# DOMAIN-SUFFIX, das.api.youku.com
+# DOMAIN-SUFFIX, das.mobile.youku.com
+# DOMAIN-SUFFIX, dev-push.m.youku.com
+# DOMAIN-SUFFIX, push.m.youku.com
+# DOMAIN-SUFFIX, sdk.m.youku.com
+# DOMAIN-SUFFIX, dl.g.youku.com
+# DOMAIN-SUFFIX, dmapp.youku.com
+# DOMAIN-SUFFIX, hudong.pl.youku.com
+# DOMAIN-SUFFIX, huodong.pl.youku.com
+# DOMAIN-SUFFIX, huodong.vip.youku.com
+# DOMAIN-SUFFIX, hz.youku.com
+# DOMAIN-SUFFIX, lstat.youku.com
+# DOMAIN-SUFFIX, m.yes.youku.com
+# DOMAIN-SUFFIX ,mobilemsg.youku.com
+# DOMAIN-SUFFIX, msg.youku.com
+# DOMAIN-SUFFIX, myes.youku.com
 DOMAIN-SUFFIX, p.l.youku.com
 DOMAIN-SUFFIX, r.l.youku.com
 DOMAIN-SUFFIX, v.l.youku.com
 DOMAIN-SUFFIX, l.ykimg.com
 DOMAIN-SUFFIX, p-log.ykimg.com
-DOMAIN-SUFFIX, push.m.youku.com
 DOMAIN-SUFFIX, s.p.youku.com
-DOMAIN-SUFFIX, sdk.m.youku.com
-DOMAIN-SUFFIX, stat.youku.com
 DOMAIN-SUFFIX, tdrec.youku.com
 DOMAIN-SUFFIX, test.ott.youku.com
-#DOMAIN-SUFFIX, urchin.lstat.youku.com
-#DOMAIN-SUFFIX, val.api.youku.com
-#DOMAIN-SUFFIX, wan.youku.com
-#DOMAIN-SUFFIX, ykatr.youku.com
-#DOMAIN-SUFFIX, ykrec.youku.com
+# DOMAIN-SUFFIX, stat.youku.com
+# DOMAIN-SUFFIX, urchin.lstat.youku.com
+# DOMAIN-SUFFIX, val.api.youku.com
+# DOMAIN-SUFFIX, wan.youku.com
+# DOMAIN-SUFFIX, ykatr.youku.com
+# DOMAIN-SUFFIX, ykrec.youku.com
 
 # > 游民星空
 DOMAIN-SUFFIX, ja.gamersky.com
