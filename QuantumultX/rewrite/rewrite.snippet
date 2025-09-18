@@ -2982,10 +2982,6 @@ https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/user\/follow\/users\/mix
 ^https:\/\/stock\.xueqiu\.com\/v5\/stock\/group\/recommend\/default\/list\.json url reject-dict
 ^https:\/\/api\.xueqiu\.com\/livestream\/structure\/live\/hotCard\.json url reject-dict
 
-# > 下厨房
-# hostname = api.xiachufang.com
-^https?:\/\/api\.xiachufang\.com\/v\d\/ad/ url reject
-
 # > 兴业银行
 # hostname = images.cib.com.cn
 # 首页会有一小部分图片误杀
@@ -3204,10 +3200,11 @@ https://mgesq.api.mgtv.com/dsl/index.+ url script-response-body https://raw.gith
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit\/ url reject
 
 # > 下厨房
-# hostname = *.pglstatp-toutiao.com, res1.hubcloud.com.cn
+# hostname = *.pglstatp-toutiao.com, res1.hubcloud.com.cn, api.xiachufang.com
 # 去开屏
 ^http?:\/\/.*\.pglstatp-toutiao\.com url reject-200
 ^http:\/\/res1\.hubcloud\.com\.cn url reject-200
+^https?:\/\/api\.xiachufang\.com\/v\d\/ad/ url reject
 
 # > 厦门航空
 # hostname = mobileapi.xiamenair.com

@@ -9,8 +9,9 @@
 #############################################
 
 
-^https?:\/\/api\.xiachufang\.com\/v\d\/ad/ url reject# 去开屏
+# 去开屏
 ^http?:\/\/.*\.pglstatp-toutiao\.com url reject-200
 ^http:\/\/res1\.hubcloud\.com\.cn url reject-200
+^https?:\/\/api\.xiachufang\.com\/v\d\/ad/ url reject
 
-hostname = *.pglstatp-toutiao.com, res1.hubcloud.com.cn
+hostname = *.pglstatp-toutiao.com, res1.hubcloud.com.cn, api.xiachufang.com
