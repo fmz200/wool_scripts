@@ -9,7 +9,7 @@
 #!system = iOS, iPadOS
 #!system_version =
 #!loon_version =
-#!date=2025-09-18 19:37:00
+#!date=2025-09-19 13:37:00
 #!support=约9392行
 #!proxy-select=REJECT
 #############################################
@@ -2566,6 +2566,8 @@ DOMAIN-KEYWORD,mpos-pic.helipay.com
 DOMAIN, mistat.xiaomi.com
 
 # > 晓晓优选
+DOMAIN-SUFFIX, fancyapi.com
+DOMAIN-SUFFIX, ad.richmob.cn
 DOMAIN-SUFFIX, api-htp.beizi.biz
 DOMAIN-SUFFIX, yfanads.com
 DOMAIN-SUFFIX, 1rtb.net
@@ -2577,7 +2579,7 @@ DOMAIN-SUFFIX, baihemob.com
 DOMAIN-SUFFIX, ad.bwton.com
 DOMAIN-SUFFIX, api.wxcjgg.cn
 DOMAIN-SUFFIX, shunchangzhixing.com
-IP-CIDR, 114.132.165.205/32
+IP-CIDR, 114.132.165.205/32, no-resolve
 
 # > 新浪
 DOMAIN-SUFFIX, ad.sina.com.cn
