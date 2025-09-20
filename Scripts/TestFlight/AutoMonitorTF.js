@@ -51,10 +51,12 @@ const userAgents = [
     // await randomDelay(10);
     // 执行
     let appId = appIdInfo;
+    let appName = null;
     if (appIdInfo.includes("#")) {
       appId = appIdInfo.split("#")[0].trim();
+      appName = appIdInfo.split("#")[1].trim();
     }
-    await autoPost(appId, appIdInfo);
+    await autoPost(appId, appName, appIdInfo);
     counter++;
   }
 
@@ -62,7 +64,7 @@ const userAgents = [
   $.done();
 })();
 
-function autoPost(appId, appIdInfo) {
+function autoPost(appId, appName, appIdInfo) {
   const url = `https://testflight.apple.com/join/${appId}`;
   const header = {
     'User-Agent': `${getRandomUA()}`,
@@ -75,8 +77,8 @@ function autoPost(appId, appIdInfo) {
       console.log(error);
       // console.log("2、打印resp，包括headers，status，body");
       // console.log(resp);
-      console.log("3、打印data，这是响应体");
-      console.log(data);
+      // console.log("3、打印data，这是响应体");
+      // console.log(data);
 
       if (resp.status === 404) {
         console.log(`[D] ${url} → 不存在 ⚠️`);
@@ -87,7 +89,7 @@ function autoPost(appId, appIdInfo) {
         console.log(`[?] ${url} → 返回状态码: ${resp.status}`);
         resolve();
       }
-      
+
       if (error == null) {
         // 检查状态 F
         if (/版本的测试员已满|This beta is full/.test(data)) {
@@ -105,7 +107,11 @@ function autoPost(appId, appIdInfo) {
           if (isNode) {
             $.nodeNotifyMsg.push(`[${appIdInfo}]可加入，URL: ${url}`);
           } else {
-            await sendMsg(`[${appIdInfo}]可加入`, "点击此通知可直接跳转加入", {"open-url": url, "media-url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/testflight.png"});
+            const subMsg = appName || appId;
+            await sendMsg(`[${subMsg}]可加入,点击此通知可直接跳转加入`, {
+              "open-url": url,
+              "media-url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/testflight.png"
+            });
           }
           resolve();
         }
