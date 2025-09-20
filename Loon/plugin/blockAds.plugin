@@ -1241,7 +1241,7 @@ http:\/\/ad\.myfriday\.cn\/d\/json\/1\.1 reject
 # hostname = static.95508.com
 # 开屏广告
 ^https?:\/\/static\.95508\.com\/mmg\/images\/ads\/.+\/(.+1125?.+2436|.+%.+%|.+_.+_) reject-dict
-^https?:\/\/static\.95508\.com\/mmg\/ciop\/sysabbr\/cmep\/images\/apppopupads reject-dict
+^https?:\/\/static\.95508\.com\/mmg\/ciop\/sysabbr\/cmep\/images\/(apppopupads|popupads) reject-dict
 
 # > 福享太平
 # hostname = ecloud.tppension.cntaiping.com
