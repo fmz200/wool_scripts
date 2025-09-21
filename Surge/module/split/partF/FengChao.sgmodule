@@ -15,5 +15,5 @@
 ^https?:\/\/consumer\.fcbox\.com\/v\d\/ad\/ - reject
 
 [MITM]
-hostname = %APPEND% external.fcbox.com, dsp.fcbox.com, consumer.fcbox.com
+hostname = %APPEND% external.fcbox.com, dsp.fcbox.com, consumer.fcbox.com, rtm.fcbox.com
 
