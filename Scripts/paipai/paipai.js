@@ -28,7 +28,7 @@ if (url.includes("functionId=dbd.auction.detail.history")) {
     }
   }); */
   const newItem = {
-    userNickname: "历史获拍价👇🏻",
+    userNickname: "历史获拍价",
     endTime: 1753891200000, // 2025-07-31 00:00:00
     userImage: null,
     offerPrice: "---"
