@@ -66,7 +66,7 @@ if (url.includes("functionId=paipai.auction.bidrecords")) {
         endTime: null,
         created: item.endTime,
         modified: null,
-        userImage: '',
+        userImage: 'https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/paipai.png',
         currentPrice: null,
         newPrice: null,
         entryId: null,
