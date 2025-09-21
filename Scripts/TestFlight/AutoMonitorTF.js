@@ -12,7 +12,7 @@ const isNode = $.isNode();
 const notify = isNode ? require('./sendNotify') : '';
 $.nodeNotifyMsg = []; // nodeJS合并通知
 
-let TF_APP_ID = isNode ? process.env["fmz200_TF_APP_ID"] : $.getdata("fmz200_TF_APP_ID");
+const TF_APP_ID = isNode ? process.env["fmz200_TF_APP_ID"] : $.getdata("fmz200_TF_APP_ID");
 const userAgents = [
   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
   "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_6_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
@@ -73,37 +73,37 @@ function autoPost(appId, appName, appIdInfo) {
   return new Promise(function (resolve) {
     $.get({url: url, headers: header}, async function (error, resp, data) {
       console.log("❤️ 查询appId情况响应");
-      console.log("1、打印error");
-      console.log(error);
+      // console.log("1、打印error");
+      // console.log(error);
       // console.log("2、打印resp，包括headers，status，body");
       // console.log(resp);
       // console.log("3、打印data，这是响应体");
       // console.log(data);
 
       if (resp.status === 404) {
-        console.log(`[D] ${url} → 不存在 ⚠️`);
+        console.log(`[D] ${appIdInfo} → 不存在 ⚠️`);
         resolve();
       }
 
       if (resp.status !== 200) {
-        console.log(`[?] ${url} → 返回状态码: ${resp.status}`);
+        console.log(`[?] ${appIdInfo} → 返回状态码: ${resp.status}`);
         resolve();
       }
 
       if (error == null) {
         // 检查状态 F
         if (/版本的测试员已满|This beta is full/.test(data)) {
-          console.log(`[F] ${url} → 已满`);
+          console.log(`[F] ${appIdInfo} → 已满`);
           resolve();
         }
         // 检查状态 N
         else if (/版本目前不接受任何新测试员|This beta isn't accepting any new testers/.test(data)) {
-          console.log(`[N] ${url} → 暂不接受新成员`);
+          console.log(`[N] ${appIdInfo} → 暂不接受新成员`);
           resolve();
         }
         // 检查状态 Y，这里的“To join the”有两个地方其实不太准确，但是确实是可以加入的（上面的匹配不到默认是可以加入的）
         else if (/要加入 Beta 版|To join the/.test(data)) {
-          console.log(`[Y] ${url} → 可加入`);
+          console.log(`[Y] ${appIdInfo} → 可加入`);
           if (isNode) {
             $.nodeNotifyMsg.push(`[${appIdInfo}]可加入，URL: ${url}`);
           } else {
@@ -115,8 +115,10 @@ function autoPost(appId, appName, appIdInfo) {
           }
           resolve();
         }
+      } else {
+        console.log("something went wrong!");
+        resolve();
       }
-      resolve();
     })
   })
 }
