@@ -117,7 +117,7 @@ https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/Douyin.list
 | # | 重写     | `App&小程序净化合集` | [cleanup.snippet](https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/cleanup.snippet)                       | [fmz200](https://github.com/fmz200) | 常见的微信小程序净化（有误杀慎用）           | 暂无                                                     |
 | # | 分流     | `去广告合集`       | [filter.list](https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/filter.list)                     | [fmz200](https://github.com/fmz200) | 无                           | [点击查看](./QuantumultX/filter/00-How-To-Use-Filter.md)   |
 | # | 分流     | `屏蔽苹果系统更新`    | [blockAppleUpdate.list](https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/filter/blockAppleUpdate.list) | [fmz200](https://github.com/fmz200) | 有效                          | [点击查看](./QuantumultX/filter/00-How-To-Use-Filter.md)   |
-| # | Task订阅 | `Task订阅`      | [fmz200_tasks.json](https://raw.githubusercontent.com/fmz200/wool_scripts/main/boxjs/fmz200_tasks.json)                      | [fmz200](https://github.com/fmz200) | 需要先获取cookie或token再运行        | 暂无                                                     |
+| # | Task订阅 | `Task订阅`      | [fmz200_tasks.json](https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/tasks/fmz200_tasks.json)          | [fmz200](https://github.com/fmz200) | 需要先获取cookie或token再运行        | 暂无                                                     |
 
 > ⚠️ 当远程图标更新时如果你的图表库不更新多半是缓存的问题，请手动清理图标缓存(`点击右下角风车->划到最下面->选择其他设置->找到资源模块`，选择`删除图片缓存`)，并重启 Quantumult X，远程图标会重新下载并生效。
 
