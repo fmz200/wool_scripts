@@ -11,6 +11,7 @@
 [Rewrite]
 ^https:\/\/dsp\.fcbox\.com\/adSearch\/get\? reject
 ^https:\/\/external\.fcbox\.com\/wxgw\/post\/suggestion\/query reject
+^https:\/\/rtm\.fcbox\.com\/rtsWeb\/api\/resource\/ad\/queryAd reject
 # 已无法MITM
 ^https?:\/\/consumer\.fcbox\.com\/v\d\/ad\/ reject
 

@@ -10,6 +10,39 @@
 
 [Rule]
 DOMAIN-SUFFIX,tappx.com, REJECT
+DOMAIN-SUFFIX,impression.link, REJECT
+DOMAIN-SUFFIX,jampp.com, REJECT
+DOMAIN-SUFFIX,adrta.com, REJECT
+DOMAIN-SUFFIX,googlesyndication-cn.com, REJECT
+DOMAIN-SUFFIX,doubleclick-cn.net, REJECT
+DOMAIN-SUFFIX,fonts.gstatic.cn, REJECT
+DOMAIN-SUFFIX,pomodoromedia.com, REJECT
+DOMAIN-SUFFIX,zemanta.com, REJECT
+DOMAIN-SUFFIX,mobilefuse.com, REJECT
+DOMAIN-SUFFIX,outbrainimg.com, REJECT
+DOMAIN-SUFFIX,trustarc.com, REJECT
+DOMAIN-SUFFIX,truste.com, REJECT
+DOMAIN-SUFFIX,adsrvr.org, REJECT
+DOMAIN-SUFFIX,outbrain.com, REJECT
+DOMAIN-SUFFIX,inhousedsp.com, REJECT
+DOMAIN-SUFFIX,i.sng.link, REJECT
+DOMAIN-SUFFIX,inner-active.mobi, REJECT
+DOMAIN-SUFFIX,richmob.cn, REJECT
+DOMAIN-SUFFIX,amazon-adsystem.com, REJECT
+DOMAIN-SUFFIX,ads.pubmatic.com, REJECT
+DOMAIN-SUFFIX,bidder.criteo.com, REJECT
+DOMAIN-SUFFIX,gum.criteo.com, REJECT
+DOMAIN-SUFFIX,smaato.net, REJECT
+DOMAIN-SUFFIX,spadsync.com, REJECT
+DOMAIN-SUFFIX,ads.inmobi.com, REJECT
+DOMAIN-SUFFIX,akamaized.net, REJECT
+DOMAIN-SUFFIX,spadsync.com, REJECT
+DOMAIN-SUFFIX,tpc.googlesyndication.com, REJECT
+DOMAIN-SUFFIX,googleadsserving.cn, REJECT
+DOMAIN-SUFFIX,googleads.g.doubleclick.net, REJECT
+DOMAIN-SUFFIX,inner-active.mobi, REJECT
+DOMAIN-SUFFIX,4dvertible.com, REJECT
+DOMAIN-SUFFIX,smadex.com, REJECT
 
 
 [Rewrite]
