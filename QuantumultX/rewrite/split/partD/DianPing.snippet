@@ -10,8 +10,26 @@
 
 
 # 开屏广告
+^https?:\/\/103\.37\.155\.60\/fetch url reject
+^https?:\/\/catdot\.dianping\.com\/broker-service\/hijack url reject
+^https?:\/\/mapi\.dianping\.com\/mapi\/operating\/(?>indexopsmodules|loadsplashconfig) url reject
+^https?:\/\/mapi\.dianping\.com\/mapi\/intelliindex url reject-dict
+^https?:\/\/mapi\.dianping\.com\/wdrpreload\/userprediction url reject
+^https?:\/\/mapi\.dianping\.com\/adshopping url reject
 ^https?:\/\/img\.meituan\.net\/dpmobile\/ url script-response-body https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/dianping.js
-#^https?:\/\/img\.meituan\.net\/dpmobile\/.+93241\.png url reject-dict
-#^https?:\/\/img\.meituan\.net\/dpmobile\/.*.(gif|jpg) url reject-200
+^https?:\/\/img\.meituan\.net\/goodsawardpic\/\w+\.(?!gif)\w+$ url script-response-body https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/dianping.js
+^https?:\/\/img\.meituan\.net\/goodsawardpic\/\w+\.gif url reject-img
+^https?:\/\/p\.meituan\.com\/api\/privacy\/config url reject
+^https?:\/\/rms\.meituan\.com\/api\/v\d\/rmsmina\/c\/queryWechatAdvertisement url reject-dict
+^https?:\/\/www\.dpfile\.com\/app\/fecommonservice-lottie\/ugc-write-done\/media url reject
+^https?:\/\/www\.dpfile\.com\/picasso\/picasso-qa\/src\/AnswerList\/AnswerList-bundle url reject
+^https?:\/\/www\.dpfile\.com\/sc\/indexpromotion url reject
+^https?:\/\/catfront\.dianping\.com\/api\/metric\?v=\d&p=rn_gcbu_mrn-joy-poidetail url reject
+^https?:\/\/awp-assets\.meituan\.net\/hfe\/fep\/\w+\.json url reject
+^https?:\/\/s3plus\.meituan\.net\/ocean-blk-index\/index\/blk_conf url reject
+^https?:\/\/p\d\.meituan\.net\/nrpresourcevenus\/\w+\.gif url reject-img
+^https?:\/\/p\d\.meituan\.net\/travelcube\/(?!c129a661)\w+\.gif url reject-img
+^https?:\/\/ddplus\.meituan\.net\/v\d\/mss_\w+\/(?>ehc|titansx|ddblue|edfu)\/ url reject
+^https?:\/\/ddplus\.meituan\.net\/v\d\/mss_\w+\/picassovc url script-response-body https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/dianping.js
 
-hostname = img.meituan.net
+hostname = 103.37.155.60, *.dianping.com, img.meituan.net, p.meituan.com, rms.meituan.com, www.dpfile.com, awp-assets.meituan.net, s3plus.meituan.net, p*.meituan.net, ddplus.meituan.net
