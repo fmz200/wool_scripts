@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 微博去广告
- * @date 2025-07-30 14:30:17
+ * @date 2025-09-23 15:15:17
  */
 
 let url = $request.url;
@@ -12,6 +12,7 @@ try {
   // 1、首次点击发现按钮
   if (url.includes("/search/finder?")) {
     console.log('进入发现页...');
+    resp_data.channelInfo.channels[0].titleInfo.style.selectTextColor = "#333333";
     processPayload(resp_data.channelInfo.channels[0].payload);
     removeChannelsTabs(resp_data.channelInfo.channels);
     if (resp_data.header?.data?.items) {
@@ -181,6 +182,12 @@ function processPayload(payload) {
   if (!payload) {
     return;
   }
+
+  // 删除搜索栏的“大家正在搜”
+  if (payload.loadedInfo?.searchBarContent) {
+    delete payload.loadedInfo.searchBarContent;
+  }
+
   if (payload.items[0].items) {
     removeCommonAds(payload.items[0].items);
   }
