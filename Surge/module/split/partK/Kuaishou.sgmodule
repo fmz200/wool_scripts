@@ -9,6 +9,7 @@
 #!date=2025-08-21 22:37:00
 
 [Rule]
+# DOMAIN, js-ad.a.yximgs.com, REJECT
 DOMAIN-SUFFIX,e.kuaishou.com,REJECT
 DOMAIN-SUFFIX,cm.downloader.commercial.kuaishou.com,REJECT
 DOMAIN-SUFFIX,cm.ad.gifshow.com,REJECT

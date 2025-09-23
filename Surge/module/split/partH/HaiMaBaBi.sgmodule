@@ -9,10 +9,10 @@
 #!date=2025-08-21 22:37:00
 
 [Map Local]
-^https?:\/\/39\.98\.135\.211\/admin\/filter\/crowdFunding\/getNewProductData data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https?:\/\/hmbaby\.simshine\.cn\/admin\/filter\/crowdFunding\/getNewProductData data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
-^https?:\/\/39\.98\.135\.211\/admin\/filter\/advert\/getAdvertLists data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https?:\/\/hmbaby\.simshine\.cn\/admin\/filter\/advert\/getAdvertLists data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [MITM]
-hostname = %APPEND% 39.98.135.211
+hostname = %APPEND% hmbaby.simshine.cn
 

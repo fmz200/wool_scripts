@@ -9,6 +9,8 @@
 #!date=2025-08-21 22:37:00
 
 [Rule]
+DOMAIN-SUFFIX,fancyapi.com,REJECT
+DOMAIN-SUFFIX,ad.richmob.cn,REJECT
 DOMAIN-SUFFIX,api-htp.beizi.biz,REJECT
 DOMAIN-SUFFIX,yfanads.com,REJECT
 DOMAIN-SUFFIX,1rtb.net,REJECT
@@ -20,7 +22,7 @@ DOMAIN-SUFFIX,baihemob.com,REJECT
 DOMAIN-SUFFIX,ad.bwton.com,REJECT
 DOMAIN-SUFFIX,api.wxcjgg.cn,REJECT
 DOMAIN-SUFFIX,shunchangzhixing.com,REJECT
-IP-CIDR,114.132.165.205/32,REJECT
+IP-CIDR,114.132.165.205/32,REJECT,no-resolve
 
 [URL Rewrite]
 # 弹窗广告
