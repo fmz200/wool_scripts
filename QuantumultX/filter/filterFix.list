@@ -4,7 +4,7 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/filterFix.list
-#!tg-group=https://t.me/lanjieguanggao
+#!tg-channel=https://t.me/inaisi
 #!date=2025-07-19 10:10:00
 #############################################
 # > "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容

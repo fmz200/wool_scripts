@@ -4,26 +4,26 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partZ/CIBN.lpx
-#!tg-group=https://t.me/lanjieguanggao
-#!date=2025-08-21 22:37:00
+#!tg-channel=https://t.me/inaisi
+#!date=2025-09-24 21:46:58
 #############################################
 
 [Rule]
-DOMAIN-SUFFIX, api.adv.ott.cibntv.net, REJECT
-DOMAIN-SUFFIX, adinf.cp11.ott.cibntv.net, REJECT
-DOMAIN-SUFFIX, adstat.cp11.ott.cibntv.net, REJECT
-DOMAIN-SUFFIX, apklog.cp11.ott.cibntv.net, REJECT
-DOMAIN-SUFFIX, cachenotice.cp11.ott.cibntv.net, REJECT
-DOMAIN-SUFFIX, ark.cp21.ott.cibntv.net, REJECT
-DOMAIN-SUFFIX, dc.cp21.ott.cibntv.net, REJECT
-DOMAIN-SUFFIX, atm.cp31.ott.cibntv.net, REJECT
-DOMAIN-SUFFIX, ipm.atm.cp31.ott.cibntv.net, REJECT
-DOMAIN-SUFFIX, val.atm.cp31.ott.cibntv.net, REJECT
-DOMAIN-SUFFIX, valf.atm.cp31.ott.cibntv.net, REJECT
-DOMAIN-SUFFIX, aty.cp45.ott.cibntv.net, REJECT
-DOMAIN-SUFFIX, agn.aty.cp45.ott.cibntv.net, REJECT
-DOMAIN-SUFFIX, m.aty.cp45.ott.cibntv.net, REJECT
-DOMAIN-SUFFIX, mmg.aty.cp45.ott.cibntv.net, REJECT
-DOMAIN-SUFFIX, de.as.cp61.ott.cibntv.net, REJECT
-DOMAIN-SUFFIX, lives.l.cp81.ott.cibntv.net, REJECT
-DOMAIN-SUFFIX, news-l.play.cp81.ott.cibntv.net, REJECT
+# DOMAIN-SUFFIX, api.adv.ott.cibntv.net, REJECT
+# DOMAIN-SUFFIX, adinf.cp11.ott.cibntv.net, REJECT
+# DOMAIN-SUFFIX, adstat.cp11.ott.cibntv.net, REJECT
+# DOMAIN-SUFFIX, apklog.cp11.ott.cibntv.net, REJECT
+# DOMAIN-SUFFIX, cachenotice.cp11.ott.cibntv.net, REJECT
+# DOMAIN-SUFFIX, ark.cp21.ott.cibntv.net, REJECT
+# DOMAIN-SUFFIX, dc.cp21.ott.cibntv.net, REJECT
+# DOMAIN-SUFFIX, atm.cp31.ott.cibntv.net, REJECT
+# DOMAIN-SUFFIX, ipm.atm.cp31.ott.cibntv.net, REJECT
+# DOMAIN-SUFFIX, val.atm.cp31.ott.cibntv.net, REJECT
+# DOMAIN-SUFFIX, valf.atm.cp31.ott.cibntv.net, REJECT
+# DOMAIN-SUFFIX, aty.cp45.ott.cibntv.net, REJECT
+# DOMAIN-SUFFIX, agn.aty.cp45.ott.cibntv.net, REJECT
+# DOMAIN-SUFFIX, m.aty.cp45.ott.cibntv.net, REJECT
+# DOMAIN-SUFFIX, mmg.aty.cp45.ott.cibntv.net, REJECT
+# DOMAIN-SUFFIX, de.as.cp61.ott.cibntv.net, REJECT
+# DOMAIN-SUFFIX, lives.l.cp81.ott.cibntv.net, REJECT
+# DOMAIN-SUFFIX, news-l.play.cp81.ott.cibntv.net, REJECT

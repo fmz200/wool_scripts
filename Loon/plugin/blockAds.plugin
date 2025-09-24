@@ -4,7 +4,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/AdblockPlus.png
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/blockAds.plugin
-#!tg-group=https://t.me/lanjieguanggao
+#!tg-channel=https://t.me/inaisi
 #!category=奶思的模块
 #!tag=去广告, fmz200, 奶思
 #!system=iOS, iPadOS
@@ -4091,6 +4091,9 @@ http-response ^https?:\/\/search\.video\.iqiyi\.com\/q\? script-path=https://raw
 # 开屏广告,播放广告
 http-response ^https?:\/\/(kjp|t7z)\.cupid\.iqiyi\.com\/mixer\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=爱奇艺开屏广告,播放广告, enable={aiqiyi_enable}
 
+
+
+# >>>>>>>>>>>>>>> ✅ B ✅ <<<<<<<<<<<<<<
 # > Blued
 # 登录后个人界面广告
 http-response ^https?:\/\/social\.blued\.cn\/users\/.+\/more\/ios\?v=2 script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/blued.js, requires-body=true, timeout=60, tag=blued登录后个人界面广告, enable={blued_enable}

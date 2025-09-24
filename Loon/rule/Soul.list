@@ -4,7 +4,7 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/Soul.list
-#!tg-group=https://t.me/lanjieguanggao
+#!tg-channel=https://t.me/inaisi
 #!update=2024-06-01 23:15:00
 #############################################
 # 1.2.3.4/24      /24表示网络的子网掩码长度，即前24位是网络部分，后8位是主机部分。这种表示法常用于描述特定范围内的IP地址

@@ -4,8 +4,8 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partY/Youku.lpx
-#!tg-group=https://t.me/lanjieguanggao
-#!date=2025-08-21 22:37:00
+#!tg-channel=https://t.me/inaisi
+#!date=2025-09-24 21:46:58
 #############################################
 
 [Argument]
@@ -41,10 +41,6 @@ DOMAIN-SUFFIX, ad.api.3g.tudou.com, REJECT
 DOMAIN-SUFFIX, ad.api.3g.youku.com, REJECT
 DOMAIN-SUFFIX, ad.api.mobile.youku.com, REJECT
 DOMAIN-SUFFIX, gamex.mobile.youku.com, REJECT
-# DOMAIN, pl.cp31.ott.cibntv.net, REJECT
-# DOMAIN, m-vali.cp31.ott.cibntv.net, REJECT
-# DOMAIN, vali-g1.cp31.ott.cibntv.net, REJECT
-# DOMAIN, vali-ugc.cp31.ott.cibntv.net, REJECT
 # DOMAIN-SUFFIX, actives.youku.com, REJECT
 # DOMAIN-SUFFIX, store.tv.api.3g.youku.com, REJECT
 # DOMAIN-SUFFIX, store.xl.api.3g.youku.com, REJECT
