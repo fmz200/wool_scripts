@@ -29,12 +29,12 @@ DOMAIN-SUFFIX, byteorge.com, REJECT
 # 下面两条误杀严重导致懂车帝无法正常使用, REJECT
 #DOMAIN-SUFFIX, bytegoofy.com, REJECT
 #DOMAIN-SUFFIX, bytedance.com, REJECT
-IP-CIDR, 49.71.37.101/32, no-resolve, REJECT
-IP-CIDR, 117.71.105.23/32, no-resolve, REJECT
-IP-CIDR, 218.94.207.205/32, no-resolve, REJECT
-IP-CIDR, 117.92.229.188/32, no-resolve, REJECT
-IP-CIDR, 101.36.166.16/32, no-resolve, REJECT
-IP-CIDR, 180.96.2.114/32, no-resolve, REJECT
+IP-CIDR, 49.71.37.101/32, REJECT, no-resolve
+IP-CIDR, 117.71.105.23/32, REJECT, no-resolve
+IP-CIDR, 218.94.207.205/32, REJECT, no-resolve
+IP-CIDR, 117.92.229.188/32, REJECT, no-resolve
+IP-CIDR, 101.36.166.16/32, REJECT, no-resolve
+IP-CIDR, 180.96.2.114/32, REJECT, no-resolve
 
 
 [Rewrite]

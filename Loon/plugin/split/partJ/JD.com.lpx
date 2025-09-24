@@ -27,8 +27,8 @@ DOMAIN-SUFFIX, ad.3.cn, REJECT
 DOMAIN-SUFFIX, jd.c-ptsp.com.cn, REJECT
 # 屏蔽DNS, REJECT
 DOMAIN, dns.jd.com, REJECT
-IP-CIDR, 101.124.19.122/32, no-resolve, REJECT
-IP-CIDR6,2402:db40:5100:1011::5/128, no-resolve, REJECT
+IP-CIDR, 101.124.19.122/32, REJECT, no-resolve
+IP-CIDR6,2402:db40:5100:1011::5/128, REJECT, no-resolve
 
 
 [Rewrite]

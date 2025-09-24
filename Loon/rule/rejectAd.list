@@ -760,7 +760,7 @@ DOMAIN-SUFFIX, g.wan.douyu.com
 DOMAIN-SUFFIX, dotcounter.douyutv.com
 
 # > Dr.Peng
-#IP-CIDR, 10.72.25.0/24
+#IP-CIDR, 10.72.25.0/24, no-resolve
 IP-CIDR, 211.161.101.110/32, no-resolve
 
 # > 叮嗒出行

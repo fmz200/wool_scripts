@@ -52,11 +52,11 @@ DOMAIN-SUFFIX,noxagile.duapp.com, REJECT
 DOMAIN-SUFFIX,paopao.iqiyi.com, REJECT
 DOMAIN-SUFFIX,policy.video.iqiyi.com, REJECT
 DOMAIN-SUFFIX,ifacelog.iqiyi.com, REJECT
-IP-CIDR, 203.107.63.154/32, no-resolve, REJECT
-IP-CIDR, 101.227.97.240/32, no-resolve, REJECT
-IP-CIDR, 101.227.200.11/32, no-resolve, REJECT
-IP-CIDR, 101.227.200.28/32, no-resolve, REJECT
-IP-CIDR, 124.192.153.42/32, no-resolve, REJECT
+IP-CIDR, 203.107.63.154/32, REJECT, no-resolve
+IP-CIDR, 101.227.97.240/32, REJECT, no-resolve
+IP-CIDR, 101.227.200.11/32, REJECT, no-resolve
+IP-CIDR, 101.227.200.28/32, REJECT, no-resolve
+IP-CIDR, 124.192.153.42/32, REJECT, no-resolve
 
 
 

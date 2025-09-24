@@ -9,4 +9,4 @@
 #############################################
 
 [Rule]
-IP-CIDR, 114.119.160.0/21, no-resolve, REJECT
+IP-CIDR, 114.119.160.0/21, REJECT, no-resolve

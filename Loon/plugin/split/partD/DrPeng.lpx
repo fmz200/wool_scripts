@@ -9,5 +9,5 @@
 #############################################
 
 [Rule]
-#IP-CIDR, 10.72.25.0/24, REJECT
-IP-CIDR, 211.161.101.110/32, no-resolve, REJECT
+#IP-CIDR, 10.72.25.0/24, REJECT, no-resolve
+IP-CIDR, 211.161.101.110/32, REJECT, no-resolve

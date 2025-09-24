@@ -22,7 +22,7 @@ DOMAIN-SUFFIX, baihemob.com, REJECT
 DOMAIN-SUFFIX, ad.bwton.com, REJECT
 DOMAIN-SUFFIX, api.wxcjgg.cn, REJECT
 DOMAIN-SUFFIX, shunchangzhixing.com, REJECT
-IP-CIDR, 114.132.165.205/32, no-resolve, REJECT
+IP-CIDR, 114.132.165.205/32, REJECT, no-resolve
 
 
 [Rewrite]
