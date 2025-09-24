@@ -159,6 +159,36 @@ host-suffix, imp.xgo.com.cn, reject
 
 
 # >>>>>>>>>>>>>>> ✅ 9 ✅ <<<<<<<<<<<<<<
+# 9to5Mac
+# 网页版去广告
+host-suffix,ad-delivery.net,REJECT
+host-suffix,spot.im,REJECT
+host-suffix,revjet.com,REJECT
+host-suffix,dotomi.com,REJECT
+host-suffix,intentiq.com,REJECT
+host-suffix,temu.com,REJECT
+host-suffix,adsafeprotected.com,REJECT
+host-suffix,optable.co,REJECT
+host-suffix,stackadapt.com,REJECT
+host-suffix,gumgum.com,REJECT
+host-suffix,kargo.com,REJECT
+host-suffix,a-mo.net,REJECT
+host-suffix,3lift.com,REJECT
+host-suffix,bidswitch.net,REJECT
+host-suffix,ninthdecimal.com,REJECT
+host-suffix,turn.com,REJECT
+host-suffix,33across.com,REJECT
+host-suffix,aidemsrv.com,REJECT
+host-suffix,js7k.com,REJECT
+host-suffix,sharethrough.com,REJECT
+host-suffix,1rx.io,REJECT
+host-suffix,tynt.com,REJECT
+host-suffix,a47b.com,REJECT
+host-suffix,teads.tv,REJECT
+host-suffix,logger.adthrive.com,REJECT
+host-suffix,ads.stickyadstv.com,REJECT
+host-suffix,adnxs.com,REJECT
+host-suffix,presage.io,REJECT
 
 
 
