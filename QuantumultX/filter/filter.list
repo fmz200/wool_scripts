@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/filter.list
 #!tg-group=https://t.me/lanjieguanggao
-#!date=2025-09-19 13:37:00
+#!date=2025-09-24 15:00:00
 #!support=约9760行
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
@@ -161,34 +161,34 @@ host-suffix, imp.xgo.com.cn, reject
 # >>>>>>>>>>>>>>> ✅ 9 ✅ <<<<<<<<<<<<<<
 # 9to5Mac
 # 网页版去广告
-host-suffix,ad-delivery.net,REJECT
-host-suffix,spot.im,REJECT
-host-suffix,revjet.com,REJECT
-host-suffix,dotomi.com,REJECT
-host-suffix,intentiq.com,REJECT
-host-suffix,temu.com,REJECT
-host-suffix,adsafeprotected.com,REJECT
-host-suffix,optable.co,REJECT
-host-suffix,stackadapt.com,REJECT
-host-suffix,gumgum.com,REJECT
-host-suffix,kargo.com,REJECT
-host-suffix,a-mo.net,REJECT
-host-suffix,3lift.com,REJECT
-host-suffix,bidswitch.net,REJECT
-host-suffix,ninthdecimal.com,REJECT
-host-suffix,turn.com,REJECT
-host-suffix,33across.com,REJECT
-host-suffix,aidemsrv.com,REJECT
-host-suffix,js7k.com,REJECT
-host-suffix,sharethrough.com,REJECT
-host-suffix,1rx.io,REJECT
-host-suffix,tynt.com,REJECT
-host-suffix,a47b.com,REJECT
-host-suffix,teads.tv,REJECT
-host-suffix,logger.adthrive.com,REJECT
-host-suffix,ads.stickyadstv.com,REJECT
-host-suffix,adnxs.com,REJECT
-host-suffix,presage.io,REJECT
+host-suffix, ad-delivery.net, reject
+host-suffix, spot.im, reject
+host-suffix, revjet.com, reject
+host-suffix, dotomi.com, reject
+host-suffix, intentiq.com, reject
+host-suffix, temu.com, reject
+host-suffix, adsafeprotected.com, reject
+host-suffix, optable.co, reject
+host-suffix, stackadapt.com, reject
+host-suffix, gumgum.com, reject
+host-suffix, kargo.com, reject
+host-suffix, a-mo.net, reject
+host-suffix, 3lift.com, reject
+host-suffix, bidswitch.net, reject
+host-suffix, ninthdecimal.com, reject
+host-suffix, turn.com, reject
+host-suffix, 33across.com, reject
+host-suffix, aidemsrv.com, reject
+host-suffix, js7k.com, reject
+host-suffix, sharethrough.com, reject
+host-suffix, 1rx.io, reject
+host-suffix, tynt.com, reject
+host-suffix, a47b.com, reject
+host-suffix, teads.tv, reject
+host-suffix, logger.adthrive.com, reject
+host-suffix, ads.stickyadstv.com, reject
+host-suffix, adnxs.com, reject
+host-suffix, presage.io, reject
 
 
 
@@ -1831,7 +1831,7 @@ host-suffix, beacon.qq.com, reject
 host-suffix, v.gdt.qq.com, reject
 host, amsweb-cdn-gz-1258344696.file.myqcloud.com, REJECT
 host, wallpaper-1258344696.file.myqcloud.com, REJECT
-host, xs.gdt.qq.com,REJECT
+host, xs.gdt.qq.com, reject
 IP-CIDR, 120.222.240.171/32, REJECT
 
 # > 蜻蜓FM
@@ -2145,39 +2145,39 @@ host-suffix, adcanvas.com, reject
 
 # > Talkatone
 host-suffix, tappx.com, reject
-host-suffix,impression.link,REJECT
-host-suffix,jampp.com,REJECT
-host-suffix,adrta.com,REJECT
-host-suffix,googlesyndication-cn.com,REJECT
-host-suffix,doubleclick-cn.net,REJECT
-host-suffix,fonts.gstatic.cn,REJECT
-host-suffix,pomodoromedia.com,REJECT
-host-suffix,zemanta.com,REJECT
-host-suffix,mobilefuse.com,REJECT
-host-suffix,outbrainimg.com,REJECT
-host-suffix,trustarc.com,REJECT
-host-suffix,truste.com,REJECT
-host-suffix,adsrvr.org,REJECT
-host-suffix,outbrain.com,REJECT
-host-suffix,inhousedsp.com,REJECT
-host-suffix,i.sng.link,REJECT
-host-suffix,inner-active.mobi,REJECT
-host-suffix,richmob.cn,REJECT
-host-suffix,amazon-adsystem.com,REJECT
-host-suffix,ads.pubmatic.com,REJECT
-host-suffix,bidder.criteo.com,REJECT
-host-suffix,gum.criteo.com,REJECT
-host-suffix,smaato.net,REJECT
-host-suffix,spadsync.com,REJECT
-host-suffix,ads.inmobi.com,REJECT
-host-suffix,akamaized.net,REJECT
-host-suffix,spadsync.com,REJECT
-host-suffix,tpc.googlesyndication.com,REJECT
-host-suffix,googleadsserving.cn,REJECT
-host-suffix,googleads.g.doubleclick.net,REJECT
-host-suffix,inner-active.mobi,REJECT
-host-suffix,4dvertible.com,REJECT
-host-suffix,smadex.com,REJECT
+host-suffix, impression.link, reject
+host-suffix, jampp.com, reject
+host-suffix, adrta.com, reject
+host-suffix, googlesyndication-cn.com, reject
+host-suffix, doubleclick-cn.net, reject
+host-suffix, fonts.gstatic.cn, reject
+host-suffix, pomodoromedia.com, reject
+host-suffix, zemanta.com, reject
+host-suffix, mobilefuse.com, reject
+host-suffix, outbrainimg.com, reject
+host-suffix, trustarc.com, reject
+host-suffix, truste.com, reject
+host-suffix, adsrvr.org, reject
+host-suffix, outbrain.com, reject
+host-suffix, inhousedsp.com, reject
+host-suffix, i.sng.link, reject
+host-suffix, inner-active.mobi, reject
+host-suffix, richmob.cn, reject
+host-suffix, amazon-adsystem.com, reject
+host-suffix, ads.pubmatic.com, reject
+host-suffix, bidder.criteo.com, reject
+host-suffix, gum.criteo.com, reject
+host-suffix, smaato.net, reject
+host-suffix, spadsync.com, reject
+host-suffix, ads.inmobi.com, reject
+host-suffix, akamaized.net, reject
+host-suffix, spadsync.com, reject
+host-suffix, tpc.googlesyndication.com, reject
+host-suffix, googleadsserving.cn, reject
+host-suffix, googleads.g.doubleclick.net, reject
+host-suffix, inner-active.mobi, reject
+host-suffix, 4dvertible.com, reject
+host-suffix, smadex.com, reject
 
 # > 天神
 host, track.tenjin.com, reject
@@ -2191,7 +2191,7 @@ host-suffix, apoll.m.taobao.com, reject
 host-suffix, h-adashx.ut.taobao.com, reject
 host-suffix, w.m.taobao.com, reject
 host, tunion-api.m.taobao.com, reject
-;host-suffix, ai.m.taobao.com, reject
+# host-suffix, ai.m.taobao.com, reject
 host-suffix, re.m.taobao.com, reject
 host-suffix, agoodm.m.taobao.com, reject
 host-suffix, ai.taobao.com, reject
