@@ -2921,10 +2921,6 @@ DOMAIN-SUFFIX, ad.api.3g.tudou.com
 DOMAIN-SUFFIX, ad.api.3g.youku.com
 DOMAIN-SUFFIX, ad.api.mobile.youku.com
 DOMAIN-SUFFIX, gamex.mobile.youku.com
-# DOMAIN, pl.cp31.ott.cibntv.net
-# DOMAIN, m-vali.cp31.ott.cibntv.net
-# DOMAIN, vali-g1.cp31.ott.cibntv.net
-# DOMAIN, vali-ugc.cp31.ott.cibntv.net
 # DOMAIN-SUFFIX, actives.youku.com
 # DOMAIN-SUFFIX, store.tv.api.3g.youku.com
 # DOMAIN-SUFFIX, store.xl.api.3g.youku.com
@@ -3135,24 +3131,24 @@ DOMAIN-SUFFIX, same.chinadaily.com.cn
 DOMAIN-SUFFIX, usercollection.chinadaily.com.cn
 
 # > 中国国际广播电视网络台（CIBN）
-DOMAIN-SUFFIX, api.adv.ott.cibntv.net
-DOMAIN-SUFFIX, adinf.cp11.ott.cibntv.net
-DOMAIN-SUFFIX, adstat.cp11.ott.cibntv.net
-DOMAIN-SUFFIX, apklog.cp11.ott.cibntv.net
-DOMAIN-SUFFIX, cachenotice.cp11.ott.cibntv.net
-DOMAIN-SUFFIX, ark.cp21.ott.cibntv.net
-DOMAIN-SUFFIX, dc.cp21.ott.cibntv.net
-DOMAIN-SUFFIX, atm.cp31.ott.cibntv.net
-DOMAIN-SUFFIX, ipm.atm.cp31.ott.cibntv.net
-DOMAIN-SUFFIX, val.atm.cp31.ott.cibntv.net
-DOMAIN-SUFFIX, valf.atm.cp31.ott.cibntv.net
-DOMAIN-SUFFIX, aty.cp45.ott.cibntv.net
-DOMAIN-SUFFIX, agn.aty.cp45.ott.cibntv.net
-DOMAIN-SUFFIX, m.aty.cp45.ott.cibntv.net
-DOMAIN-SUFFIX, mmg.aty.cp45.ott.cibntv.net
-DOMAIN-SUFFIX, de.as.cp61.ott.cibntv.net
-DOMAIN-SUFFIX, lives.l.cp81.ott.cibntv.net
-DOMAIN-SUFFIX, news-l.play.cp81.ott.cibntv.net
+# DOMAIN-SUFFIX, api.adv.ott.cibntv.net
+# DOMAIN-SUFFIX, adinf.cp11.ott.cibntv.net
+# DOMAIN-SUFFIX, adstat.cp11.ott.cibntv.net
+# DOMAIN-SUFFIX, apklog.cp11.ott.cibntv.net
+# DOMAIN-SUFFIX, cachenotice.cp11.ott.cibntv.net
+# DOMAIN-SUFFIX, ark.cp21.ott.cibntv.net
+# DOMAIN-SUFFIX, dc.cp21.ott.cibntv.net
+# DOMAIN-SUFFIX, atm.cp31.ott.cibntv.net
+# DOMAIN-SUFFIX, ipm.atm.cp31.ott.cibntv.net
+# DOMAIN-SUFFIX, val.atm.cp31.ott.cibntv.net
+# DOMAIN-SUFFIX, valf.atm.cp31.ott.cibntv.net
+# DOMAIN-SUFFIX, aty.cp45.ott.cibntv.net
+# DOMAIN-SUFFIX, agn.aty.cp45.ott.cibntv.net
+# DOMAIN-SUFFIX, m.aty.cp45.ott.cibntv.net
+# DOMAIN-SUFFIX, mmg.aty.cp45.ott.cibntv.net
+# DOMAIN-SUFFIX, de.as.cp61.ott.cibntv.net
+# DOMAIN-SUFFIX, lives.l.cp81.ott.cibntv.net
+# DOMAIN-SUFFIX, news-l.play.cp81.ott.cibntv.net
 
 # > 中国平安
 DOMAIN-SUFFIX, events.pingan.com
@@ -3209,7 +3205,6 @@ DOMAIN-SUFFIX, gepush.com
 DOMAIN-SUFFIX, igexin.com
 DOMAIN-SUFFIX, log.aliyuncs.com
 DOMAIN-SUFFIX, zlsdk.1rtb.net
-DOMAIN-SUFFIX, ott.cibntv.net
 DOMAIN-SUFFIX, cdntips.net
 DOMAIN-SUFFIX, tfogc.com
 DOMAIN-SUFFIX, file.myqcloud.com
