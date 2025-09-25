@@ -28,7 +28,7 @@ function startAction() {
         obj.data.realtime = obj.data.realtime.filter(item => item.rank !== null);
       }
     }
-    if (url.includes("type=hot")) { // "热搜"tab页
+    if (url.includes("type=hot") || url.includes("last_tab=hot")) { // "热搜"tab页
       if (obj.data?.hotgov) {
         console.log("删除'热搜'多余热搜条目1💕");
         delete obj.data.hotgov;
@@ -39,7 +39,7 @@ function startAction() {
       }
       if (obj.data?.realtime) {
         console.log("删除'热搜'多余热搜条目3💕");
-        obj.data.realtime = obj.data.realtime.filter(item => item.is_ad !== 1 && item.rank !== null);
+        obj.data.realtime = obj.data.realtime.filter(item => item.is_ad !== 1);
       }
     }
   }
