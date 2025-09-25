@@ -39,7 +39,7 @@ function startAction() {
       }
       if (obj.data?.realtime) {
         console.log("删除'热搜'多余热搜条目3💕");
-        obj.data.realtime = obj.data.realtime.filter(item => item.is_ad !== 1);
+        obj.data.realtime = obj.data.realtime.filter(item => item.is_ad !== 1 && item.rank !== null);
       }
     }
   }
