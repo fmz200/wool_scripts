@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/AI.list
 #!tg-channel=https://t.me/inaisi
-#!date=2025-07-11 16:39:08
+#!date=2025-10-03 21:12:08
 #############################################
 
 # OpenAI ChatGPT
@@ -13,11 +13,11 @@ AND, ((DOMAIN-KEYWORD, chatgpt-async-webps-prod-), (DOMAIN-SUFFIX, webpubsub.azu
 AND, ((DOMAIN-KEYWORD, openaicom-api-), (DOMAIN-SUFFIX, azurefd.net))
 DOMAIN, chatgpt.livekit.cloud
 DOMAIN, host.livekit.cloud
+DOMAIN-SUFFIX, turn.livekit.cloud
 DOMAIN, openai.com.cdn.cloudflare.net
 DOMAIN, openaiapi-site.azureedge.net
 DOMAIN, openaicomproductionae4b.blob.core.windows.net
 DOMAIN, production-openaicom-storage.azureedge.net
-DOMAIN, turn.livekit.cloud
 DOMAIN-SUFFIX, chat.com
 DOMAIN-SUFFIX, chatgpt.com
 DOMAIN-SUFFIX, oaistatic.com
