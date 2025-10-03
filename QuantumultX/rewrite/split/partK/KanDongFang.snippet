@@ -1,15 +1,18 @@
-#!name=看东方
+#!name=看东方（百视TV）
 #!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
 #!author=奶思
 #!homepage=https://github.com/fmz200/wool_scripts
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partK/KanDongFang.snippet
 #!tg-group=https://t.me/QuantumultXCommunity
-#!date=2025-09-24 21:46:46
+#!date=2025-10-03 10:35:20
 #############################################
 
 
 # 开屏广告 感谢【树先生】分享
 ^https:\/\/bp-api\.bestv\.com\.cn\/cms\/api\/free\/open\/advertisingV2 url reject-dict
+# 开屏广告 感谢【Wish】分享
+^https:\/\/bp-api\.bestv\.cn\/cms\/api\/free\/open\/advertisingV2 url jsonjq-response-body '.dt = []'
+^https:\/\/bp-api\.bestv\.cn\/cms\/api\/c\/search\/hot\/v(2|4) url jsonjq-response-body '.dt.hot = [] | .dt.recommand = [] | .dt.bannerList = []'
 
-hostname = bp-api.bestv.com.cn
+hostname = bp-api.bestv.com.cn, bp-api.bestv.cn

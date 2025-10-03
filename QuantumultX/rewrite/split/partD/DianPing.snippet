@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partD/DianPing.snippet
 #!tg-group=https://t.me/QuantumultXCommunity
-#!date=2025-09-24 21:46:46
+#!date=2025-10-03 10:35:20
 #############################################
 
 
@@ -16,9 +16,7 @@
 ^https?:\/\/mapi\.dianping\.com\/mapi\/intelliindex url reject-dict
 ^https?:\/\/mapi\.dianping\.com\/wdrpreload\/userprediction url reject
 ^https?:\/\/mapi\.dianping\.com\/adshopping url reject
-^https?:\/\/img\.meituan\.net\/dpmobile\/ url script-response-body https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/dianping.js
-^https?:\/\/img\.meituan\.net\/goodsawardpic\/\w+\.(?!gif)\w+$ url script-response-body https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/dianping.js
-^https?:\/\/img\.meituan\.net\/goodsawardpic\/\w+\.gif url reject-img
+^https?:\/\/img\.meituan\.net\/(?>dpmobile|goodsawardpic)\/ url script-response-body https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/dianping.js
 ^https?:\/\/p\.meituan\.com\/api\/privacy\/config url reject
 ^https?:\/\/rms\.meituan\.com\/api\/v\d\/rmsmina\/c\/queryWechatAdvertisement url reject-dict
 ^https?:\/\/www\.dpfile\.com\/app\/fecommonservice-lottie\/ugc-write-done\/media url reject

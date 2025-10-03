@@ -4,9 +4,9 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!category=奶思的模块
 #!homepage=https://github.com/fmz200/wool_scripts
-#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partQ/QuanMinGeGe.sgmodule
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partQ/QuanMinGeGe.lpx
 #!tg-channel=https://t.me/inaisi
-#!date=2025-08-21 22:37:00
+#!date=2025-09-24 21:46:58
 
 [Map Local]
 ^https?:\/\/y\.gtimg\.cn\/music\/common\/\/upload\/kg_ad\/.+?\d{3,4}x\d{4} data-type=text data=" " status-code=200
