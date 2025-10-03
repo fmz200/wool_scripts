@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/filter.list
 #!tg-channel=https://t.me/inaisi
-#!date=2025-09-24 15:00:00
+#!date=2025-10-03 21:55:00
 #!support=约9760行
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
@@ -189,6 +189,7 @@ host-suffix, logger.adthrive.com, reject
 host-suffix, ads.stickyadstv.com, reject
 host-suffix, adnxs.com, reject
 host-suffix, presage.io, reject
+host-suffix, mradx.net, reject
 
 
 

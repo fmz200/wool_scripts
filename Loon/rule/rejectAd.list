@@ -9,7 +9,7 @@
 #!system = iOS, iPadOS
 #!system_version =
 #!loon_version =
-#!date=2025-09-24 15:00:00
+#!date=2025-10-03 21:55:00
 #!support=约9392行
 #!proxy-select=REJECT
 #############################################
@@ -193,6 +193,7 @@ DOMAIN-SUFFIX, logger.adthrive.com
 DOMAIN-SUFFIX, ads.stickyadstv.com
 DOMAIN-SUFFIX, adnxs.com
 DOMAIN-SUFFIX, presage.io
+DOMAIN-SUFFIX, mradx.net
 
 
 
