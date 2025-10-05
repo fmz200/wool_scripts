@@ -10,7 +10,7 @@
 #!system = iOS, iPadOS
 #!system_version = 
 #!loon_version = 
-#!date=2025-07-30 14:30:17
+#!date=2025-10-05 16:30:17
 #############################################
 # > "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # > "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -57,7 +57,12 @@ host, bootpreload.uve.weibo.com, reject
 # 热门视频 | 热推荐
 ^https?:\/\/api\.weibo\.cn\/\d\/(cardlist\?v_f=\d|ad\/weibointl\?) WeiboOverseas url-and-header echo-response text/html echo-response https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/template/reject-dict.json
 ^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=hot_search_users WeiboOverseas url-and-header echo-response text/html echo-response https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/template/reject-dict.json
+^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=get_coopen_ads WeiboOverseas url-and-header echo-response text/html echo-response https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/template/reject-dict.json
 
+# 微博轻享版热搜词
+^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=get_searching_info WeiboOverseas url-and-header reject-dict
+# 微博轻享版banner广告
+^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=trends& WeiboOverseas url-and-header jsonjq-response-body 'del(.data.banner)'
 # 趋势页 | 开屏广告 | 用户中心 | 热搜置顶 | 我的页面 尊享专属 | 瀑布流去广告
 ^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?(ct=(feed&a=trends|user&a=get_searching_info)|a=(get_coopen_ads|user_center|search_topic|open_app&auth|icon_center)) WeiboOverseas url-and-header script-response-body https://raw.githubusercontent.com/Keywos/rule/master/script/weibo_us/js/index.js
 ^https?:\/\/api\.weibo\.cn\/\d\/statuses\/.*timeline WeiboOverseas url-and-header script-response-body https://raw.githubusercontent.com/Keywos/rule/master/script/weibo_us/js/index.js

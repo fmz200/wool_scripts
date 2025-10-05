@@ -8,7 +8,7 @@
 #!tg-channel=https://t.me/inaisi
 #!tag=去广告, 微博, fmz200
 #!system=ios
-#!date=2025-07-30 14:30:17
+#!date=2025-10-05 16:30:17
 
 [Rule]
 # 收集用户信息，上传用户日志的请求
@@ -54,12 +54,16 @@ DOMAIN,adpinpai.video.weibocdn.com,REJECT
 
 [Body Rewrite]
 http-response-jq ^https:\/\/api\.weibo\.cn\/2\/cardlist\? 'del(.items[] | select(.category == "group"))'
+# 微博轻享版banner广告
+http-response-jq ^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=trends& 'del(.data.banner)'
 
 [Map Local]
 # 热门视频 | 热推荐
 ^https?:\/\/api\.weibo\.c(n|om)\/\d\/(cardlist\?v_f=\d|ad\/weibointl\?) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=hot_search_users data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+# 微博轻享版热搜词
+^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=get_searching_info data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 # 私信中绿洲的擦边诱导推广
 ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=treehole&auth= data-type=text data="{}" status-code=200 header="Content-Type:application/json"
