@@ -44,8 +44,8 @@
         }
       ],
       "icons": [
-        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/xiaohongshu.png",
-        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/xiaohongshu.png"
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/xiaohongshu.png",
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/xiaohongshu.png"
       ],
       "author": "@fmz200",
       "repo": "https://github.com/fmz200/wool_scripts"
@@ -321,8 +321,8 @@
         }
       ],
       "icons": [
-        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/xxyx.jpeg",
-        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/xxyx.jpeg"
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/xxyx_01.png",
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/xxyx_01.png"
       ]
     },
     {
@@ -477,8 +477,8 @@
       "author": "@fmz200",
       "repo": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/TestFlight/AutoJoinTF.js",
       "icons": [
-        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/erdongchanyo/TestFlight.png",
-        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/erdongchanyo/TestFlight.png"
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/TestFlight_03.png",
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/TestFlight_03.png"
       ]
     },
     {

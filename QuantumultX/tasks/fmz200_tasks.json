@@ -2,7 +2,7 @@
   "name": "fmz200のTasks",
   "description": "收集一些自用的定时任务，更新日期：2025-09-21 00:11:00",
   "task": [
-    "0 * * * * ? https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/TestFlight/AutoMonitorTF.js, tag=监控TestFlight位置, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/erdongchanyo/TestFlight.png, enabled=true",
+    "0 * * * * ? https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/TestFlight/AutoMonitorTF.js, tag=监控TestFlight位置, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/TestFlight_01.png, enabled=true",
     "0 0/3 * * * ? https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/TestFlight/AutoJoinTF.js, tag=自动加入TestFlight, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/TestFlight_01.png, enabled=true",
     "0 7,11,17 * * * https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, tag=阿里云盘签到, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/AliYunDrive.png, enabled=true",
     "10 0,8,12,18 * * * https://raw.githubusercontent.com/passerby-b/didi_fruit/main/dd_fruit.js, tag=滴滴橙心果园, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/didi.png, enabled=true",
