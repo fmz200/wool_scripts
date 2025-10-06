@@ -3646,7 +3646,7 @@ https://mgesq.api.mgtv.com/v2/user/center/icon data-type=text data="{}" status-c
 
 # > 晓晓优选
 # 多余模块
-^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/vajra data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+# ^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/vajra data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 # > 小熊拦截
 # 去除更新弹窗

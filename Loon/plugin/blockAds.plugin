@@ -3292,7 +3292,7 @@ https://mgesq.api.mgtv.com/v2/user/center/icon reject-dict
 # > 晓晓优选
 # hostname = xxyx-client-api.xiaoxiaoyouxuan.com, statistic.live.126.net
 # 多余模块
-^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/vajra reject-dict
+# ^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/vajra reject-dict
 # 弹窗广告
 ^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/agent_ad reject
 # 右下角的悬浮广告
