@@ -110,7 +110,7 @@ function autoPost(appId, appName, appIdInfo) {
             const subMsg = appName || appId;
             await sendMsg(`[${subMsg}]可加入,点击此通知可直接跳转加入`, {
               "open-url": url,
-              "media-url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/testflight.png"
+              "media-url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/TestFlight_01.png"
             });
           }
           resolve();
