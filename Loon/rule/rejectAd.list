@@ -842,7 +842,6 @@ DOMAIN-SUFFIX, atdmt.com
 DOMAIN-SUFFIX, staticxx.facebook.com
 
 # > 番茄小说
-DOMAIN, i.snssdk.com
 DOMAIN, i-lq.snssdk.com
 DOMAIN, dig.bdurl.net
 DOMAIN, activity-ag.awemeughun.com
@@ -851,7 +850,7 @@ DOMAIN, tnc3-alisc1.snssdk.com
 DOMAIN, security-lq.snssdk.com
 DOMAIN, tnc3-aliec2.snssdk.com
 #DOMAIN, is.snssdk.com
-DOMAIN, i.snssdk.com
+#DOMAIN, i.snssdk.com
 DOMAIN, v6-novelapp.ixigua.com
 DOMAIN, msync-im1-vip6-std.easemob.com
 DOMAIN, apd-pcdnwxlogin.teg.tencent-cloud.net

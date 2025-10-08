@@ -889,7 +889,6 @@ host-suffix, atdmt.com, reject
 host-suffix, staticxx.facebook.com, reject
 
 # > 番茄小说
-host, i.snssdk.com, REJECT
 host, i-lq.snssdk.com, REJECT
 host, dig.bdurl.net, REJECT
 host, activity-ag.awemeughun.com, REJECT
@@ -898,7 +897,7 @@ host, tnc3-alisc1.snssdk.com, REJECT
 host, security-lq.snssdk.com, REJECT
 host, tnc3-aliec2.snssdk.com, REJECT
 #host, is.snssdk.com, REJECT
-host, i.snssdk.com, REJECT
+#host, i.snssdk.com, REJECT
 host, v6-novelapp.ixigua.com, REJECT
 host-suffix, novelapp.ixigua.com, REJECT
 host-suffix, default.ixigua.com, REJECT
