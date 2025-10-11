@@ -5,6 +5,7 @@
   "icon": "https://avatars.githubusercontent.com/u/57740735?s=60&v=4",
   "repo": "https://github.com/fmz200/wool_scripts",
   "desc": "订阅大多都支持多账号，协定数据格式如下：有主键的用JSON，没有主键的拼接用#分割用@。\n例如{\"uid1\": \"token1\", \"uid2\": \"token2\",\"uid3\": \"token3\"}和uid1#token1@uid2#token2@uid3#token3",
+  "raw": "https://raw.githubusercontent.com/fmz200/wool_scripts/refs/heads/main/boxjs/fmz200_boxjs.json",
   "date": "更新日期：2025-08-10 10:00:00",
   "apps": [
     {
