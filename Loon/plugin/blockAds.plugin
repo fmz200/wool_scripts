@@ -2677,7 +2677,7 @@ https://apis.lifeweek.com.cn/api/baseConfig/getIosNewConfig reject
 
 # > TruthSocial
 # hostname = truthsocial.com
-^https?:\/\/truthsocial\.com\/api\/v5\/truth\/ads reject
+^https?:\/\/truthsocial\.com\/api\/v\d\/truth\/ads reject
 
 # > 台铃智能
 # hostname = www.tailgdd.com

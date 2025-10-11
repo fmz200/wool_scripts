@@ -9,7 +9,7 @@
 #############################################
 
 [Rewrite]
-^https?:\/\/truthsocial\.com\/api\/v5\/truth\/ads reject
+^https?:\/\/truthsocial\.com\/api\/v\d\/truth\/ads reject
 
 
 [MITM]

@@ -1245,7 +1245,7 @@ https://ios.sspai.com/api/v3/recommend/page/get\?ad.*ios_home_modal - reject
 ^https?:\/\/wx\.17u\.cn\/xcxhomeapi\/((aggregator\/index)|(home\/(screen|banner|converge)))$ - reject
 
 # > TruthSocial
-^https?:\/\/truthsocial\.com\/api\/v5\/truth\/ads - reject
+^https?:\/\/truthsocial\.com\/api\/v\d\/truth\/ads - reject
 
 # > TubeMax
 # 感谢【可莉】分享

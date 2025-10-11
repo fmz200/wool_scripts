@@ -9,7 +9,7 @@
 #!date=2025-09-24 21:46:58
 
 [URL Rewrite]
-^https?:\/\/truthsocial\.com\/api\/v5\/truth\/ads - reject
+^https?:\/\/truthsocial\.com\/api\/v\d\/truth\/ads - reject
 
 [MITM]
 hostname = %APPEND% truthsocial.com
