@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 微博去广告
- * @date 2025-09-23 15:15:17
+ * @date 2025-10-12 10:15:00
  */
 
 let url = $request.url;
@@ -44,7 +44,7 @@ try {
         subItem.items = subItem.items.filter(group => group.data.promotion == null && !group.data.itemid.includes("c_type:51"));
         break;
       } else if (subItem.items) {
-        subItem.items = subItem.items.filter(group => group.data.promotion == null && !group.data.itemid.includes("c_type:51"));
+        subItem.items = subItem.items.filter(group => group.data.promotion == null && !group.data.itemid.includes("c_type:51") && !group.data.itemid.includes("region_data"));
       }
     }
   }

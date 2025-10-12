@@ -10,7 +10,7 @@
 #!system = iOS, iPadOS
 #!system_version = 
 #!loon_version = 
-#!date=2025-10-05 16:30:17
+#!date=2025-10-12 10:15:00
 #############################################
 # > "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
 # > "reject-200"    策略返回 HTTP 状态码 200,不附带任何额外内容
@@ -78,6 +78,7 @@ host, bootpreload.uve.weibo.com, reject
 ^https:\/\/api\.weibo\.cn\/2\/!\/huati\/discovery_home_bottom_channels Weibo url-and-header reject-dict
 ^https:\/\/api\.weibo\.cn\/2\/!\/chaohua\/discovery\/home_bottom\/switch Weibo url-and-header reject-dict
 ^https:\/\/api\.weibo\.cn\/2\/!\/was\/finder\/searchbarchange\? Weibo url-and-header reject-dict
+^https:\/\/api\.weibo\.cn\/2\/push\/info\? Weibo url-and-header reject-dict
 
 # 搜索页面净化
 # ^https?:\/\/api\.weibo\.cn\/2\/cardlist\? url jsonjq-response-body 'del(.items[] | select(.category == "group"))'

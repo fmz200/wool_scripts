@@ -8,7 +8,7 @@
 #!tg-channel=https://t.me/inaisi
 #!tag=去广告, 微博, fmz200
 #!system=ios
-#!date=2025-10-05 16:30:17
+#!date=2025-10-12 10:15:00
 
 [Rule]
 # 收集用户信息，上传用户日志的请求
@@ -60,7 +60,6 @@ http-response-jq ^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=trends& '
 [Map Local]
 # 热门视频 | 热推荐
 ^https?:\/\/api\.weibo\.c(n|om)\/\d\/(cardlist\?v_f=\d|ad\/weibointl\?) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-
 ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=hot_search_users data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 # 微博轻享版热搜词
 ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=get_searching_info data-type=text data="{}" status-code=200 header="Content-Type:application/json"
@@ -76,65 +75,35 @@ http-response-jq ^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=trends& '
 
 # 开屏广告
 ^https?:\/\/bootrealtime\.uve\.weibo\.com\/v\d\/ad\/realtime data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-
 ^https?:\/\/bootpreload\.uve\.weibo\.com\/v\d\/ad\/preload data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 # 微博长文章推广
 ^https:\/\/card\.weibo\.com\/article\/m\/aj\/(reward|uvead)\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-
 ^https:\/\/weibo\.com\/ttarticle\/x\/m\/aj\/(reward|uvead)\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 # 微博
 ^https:\/\/api\.weibo\.cn\/2\/!\/huati\/discovery_home_bottom_channels data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-
 ^https:\/\/api\.weibo\.cn\/2\/!\/chaohua\/discovery\/home_bottom\/switch data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-
 ^https:\/\/api\.weibo\.cn\/2\/!\/was\/finder\/searchbarchange\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/api\.weibo\.cn\/2\/push\/info\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [Script]
-# 微博移除发现页广告
 微博移除发现页广告 = type=http-response, pattern=^https?:\/\/m?api\.weibo\.c(n|om)\/2\/search\/(finder|container_timeline|container_discover)\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body=true, timeout=60
-
-# 微博热搜页面广告
 微博热搜页面广告 = type=http-response, pattern=^https?:\/\/m?api\.weibo\.c(n|om)\/2\/(page|flowpage)\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body=true, timeout=60
-
-# 微博话题页面广告
 微博话题页面广告 = type=http-response, pattern=^https?:\/\/m?api\.weibo\.c(n|om)\/2\/searchall\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body=true, timeout=60
-
-# 微博超话页面广告
 微博超话页面广告 = type=http-response, pattern=^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/container_timeline_topicpage\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body=true, timeout=60
-
-# 微博超话tab页净化
 微博超话tab页净化 = type=http-response, pattern=^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/container_timeline_topic\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body=true, timeout=60
-
-# 微博详情页面广告
 微博详情页面广告 = type=http-response, pattern=^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/extend\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body=true, timeout=60
-
 微博详情页面广告 = type=http-response, pattern=^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/container_detail\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body=true, timeout=60
-
-# 微博最顶部的tab页分组
 微博最顶部的tab页分组 = type=http-response, pattern=^https?:\/\/m?api\.weibo\.c(n|om)\/2\/groups\/allgroups\/v2, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body=true, timeout=60
-
-# 微博评论区广告
 微博评论区广告 = type=http-response, pattern=^https?:\/\/m?api\.weibo\.c(n|om)\/2\/comments\/mix_comments\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body=true, timeout=60
 微博评论区广告 = type=http-response, pattern=^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/(container_detail_comment|container_detail_mix)\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body=true, timeout=60
-
-# 微博转发区广告
 微博转发区广告 = type=http-response, pattern=^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/container_detail_forward\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body=true, timeout=60
 微博转发区广告 = type=http-response, pattern=^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/repost_timeline\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_main.js, requires-body=true, timeout=60
-
-# 微博去广告以及去除各部分推广模块 - cherish
 微博去广告以及去除各部分推广模块 = type=http-response, pattern=^https?:\/\/m?api\.weibo\.c(n|om)/2/(cardlist|searchall|page|messageflow|statuses/(unread_)?friends(/|_)timeline|groups/timeline|statuses/(container_timeline|container_timeline_hot|unread_hot_timeline|extend|video_mixtimeline)|profile/(me|container_timeline)|video/(community_tab|remind_info|tiny_stream_video_list)|checkin/show|\!/live/media_homelist|comments/build_comments|container/get_item), script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_main.js, requires-body=true, timeout=60
-
 微博去广告以及去除各部分推广模块 = type=http-response, pattern=^https?:\/\/(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua), script-path=https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_launch.js, requires-body=true, timeout=60
-
-# 自定义tab皮肤
 自定义tab皮肤 = type=http-response, pattern=^https?:\/\/m?api\.weibo\.c(n|om)\/2\/!\/client\/light_skin, script-path=https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_main.js, requires-body=true, timeout=60
-
-# 非会员设置tab皮肤 - cherish
 非会员设置tab皮肤 = type=http-response, pattern=^https?:\/\/new\.vip\.weibo\.c(n|om)\/littleskin\/preview, script-path=https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_main.js, requires-body=true, timeout=60
-
-# 解锁微博会员APP图标
 解锁微博会员APP图标 = type=http-response, pattern=^https?:\/\/new\.vip\.weibo\.c(n|om)\/aj\/appicon\/list, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/weibo/weibo_vip.js, requires-body=true, timeout=60
 
 [MITM]
