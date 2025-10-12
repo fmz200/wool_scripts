@@ -1,6 +1,6 @@
 {
   "name": "fmz200の图标库",
-  "description": "收集一些自己常用的图标，尺寸为108px或144px，数量约1590个，更新日期：2025-10-07 10:00:00",
+  "description": "收集一些自己常用的图标，尺寸为108px或144px，数量约1590个，更新日期：2025-10-12 10:43:00",
   "icons": [
     {
       "name": "fmz200",
@@ -2845,6 +2845,10 @@
     {
       "name": "Weibo-45",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo-45.png"
+    },
+    {
+      "name": "Weibo",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo-46.png"
     },
     {
       "name": "WeiboTalk",
