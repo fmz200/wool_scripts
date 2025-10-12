@@ -3207,7 +3207,8 @@ DOMAIN-SUFFIX, log.aliyuncs.com
 DOMAIN-SUFFIX, zlsdk.1rtb.net
 DOMAIN-SUFFIX, cdntips.net
 DOMAIN-SUFFIX, tfogc.com
-DOMAIN-KEYWORD, volc
+#DOMAIN-KEYWORD, volc
+AND,((DOMAIN-KEYWORD,volc),(NOT,((DOMAIN,volcengine-kdocs-cache.wpscdn.cn),(DOMAIN,vod-settings.volcvod.com),(DOMAIN,volcano-image.hitup.cn))))
 DOMAIN-KEYWORD, umeng
 # Ad-Stir
 DOMAIN-SUFFIX, ad-stir.com 
