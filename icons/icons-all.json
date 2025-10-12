@@ -1,6 +1,6 @@
 {
   "name": "fmz200の图标库",
-  "description": "收集一些自己常用的图标，尺寸为108px或144px，数量约1590个，更新日期：2025-10-12 10:43:00",
+  "description": "收集一些自己常用的图标，尺寸为108px或144px，数量约1590个，更新日期：2025-10-12 15:43:00",
   "icons": [
     {
       "name": "fmz200",
@@ -1199,6 +1199,10 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/GoogleDrive.png"
     },
     {
+      "name": "Googlevoice",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Googlevoice.png"
+    },
+    {
       "name": "Googlevoice_02",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Googlevoice_02.png"
     },
@@ -1207,8 +1211,8 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Googlevoice_03.png"
     },
     {
-      "name": "Googlevoice",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Googlevoice.png"
+      "name": "Grok",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Grok.png"
     },
     {
       "name": "Han",
@@ -1891,8 +1895,12 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/OpenL.jpeg"
     },
     {
-      "name": "oracle",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/oracle.png"
+      "name": "oracle 甲骨文",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Oracle_01.png"
+    },
+    {
+      "name": "oracle 甲骨文",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Oracle_02.png"
     },
     {
       "name": "Orange",
