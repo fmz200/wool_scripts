@@ -635,7 +635,6 @@ host-suffix, su.bdstatic.com, reject
 host-suffix, zz.bdstatic.com, reject
 host-suffix, bcebos.com, reject
 host-suffix, baidustatic.com, reject
-host-suffix, bdstatic.com, reject
 host-suffix, duapps.com, reject
 
 # > 百度地图
