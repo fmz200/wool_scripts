@@ -1,12 +1,10 @@
 #!name=晓晓优选
 #!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
 #!author=奶思
-#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!category=奶思的模块
 #!homepage=https://github.com/fmz200/wool_scripts
-#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partX/XiaoXiaoYouXuan.lpx
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partX/XiaoXiaoYouXuan.sgmodule
 #!tg-channel=https://t.me/inaisi
-#!date=2025-09-24 21:46:58
 
 [Rule]
 DOMAIN-SUFFIX,fancyapi.com,REJECT
@@ -25,6 +23,9 @@ DOMAIN-SUFFIX,shunchangzhixing.com,REJECT
 IP-CIDR,114.132.165.205/32,REJECT,no-resolve
 
 [URL Rewrite]
+^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/get_big_module_bottom_ad - reject
+^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/get_index_activity_list_ad - reject
+^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/bottom_banner - reject
 # 弹窗广告
 ^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/agent_ad - reject
 # 右下角的悬浮广告
@@ -32,10 +33,6 @@ IP-CIDR,114.132.165.205/32,REJECT,no-resolve
 ^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/client\/urban\/activity\/index\/data\?agentId=12 - reject
 # 禁止上报设备信息
 ^https?:\/\/statistic\.live\.126\.net\/statics\/report\/common\/form - reject
-
-[Map Local]
-# 多余模块
-^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/vajra data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [MITM]
 hostname = %APPEND% xxyx-client-api.xiaoxiaoyouxuan.com, statistic.live.126.net

@@ -1,12 +1,10 @@
 #!name=广告联盟
 #!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
 #!author=奶思
-#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!category=奶思的模块
 #!homepage=https://github.com/fmz200/wool_scripts
-#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/part!!/AffiliateMarketing.lpx
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/part!!/AffiliateMarketing.sgmodule
 #!tg-channel=https://t.me/inaisi
-#!date=2025-09-24 21:46:58
 
 [Rule]
 # 若有问题自行设置白名单, REJECT
@@ -26,7 +24,7 @@ DOMAIN-SUFFIX,log.aliyuncs.com,REJECT
 DOMAIN-SUFFIX,zlsdk.1rtb.net,REJECT
 DOMAIN-SUFFIX,cdntips.net,REJECT
 DOMAIN-SUFFIX,tfogc.com,REJECT
-#DOMAIN-KEYWORD,volc,REJECT
+AND,((NOT,((DOMAIN,volcengine-kdocs-cache.wpscdn.cn))),(NOT,((DOMAIN,vod-settings.volcvod.com))),(NOT,((DOMAIN,volcengine-kdocs-cache.wpscdn.cn))),(OR,((DOMAIN-KEYWORD,volc)))),REJECT
 DOMAIN-KEYWORD,umeng,REJECT
 # Ad-Stir, REJECT
 DOMAIN-SUFFIX,ad-stir.com,REJECT

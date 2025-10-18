@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/part!!/AffiliateMarketing.lpx
 #!tg-channel=https://t.me/inaisi
-#!date=2025-10-03 10:36:53
+#!date=
 #############################################
 
 [Rule]
@@ -27,6 +27,7 @@ DOMAIN-SUFFIX, zlsdk.1rtb.net, REJECT
 DOMAIN-SUFFIX, cdntips.net, REJECT
 DOMAIN-SUFFIX, tfogc.com, REJECT
 #DOMAIN-KEYWORD, volc, REJECT
+AND,((NOT,((DOMAIN,volcengine-kdocs-cache.wpscdn.cn))), (NOT,((DOMAIN,vod-settings.volcvod.com))), (NOT,((DOMAIN,volcengine-kdocs-cache.wpscdn.cn))), (OR,((DOMAIN-KEYWORD,volc)))), REJECT
 DOMAIN-KEYWORD, umeng, REJECT
 # Ad-Stir, REJECT
 DOMAIN-SUFFIX, ad-stir.com , REJECT

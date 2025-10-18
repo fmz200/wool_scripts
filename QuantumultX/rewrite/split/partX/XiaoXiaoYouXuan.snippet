@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partX/XiaoXiaoYouXuan.snippet
 #!tg-group=https://t.me/QuantumultXCommunity
-#!date=2025-10-03 10:35:20
+#!date=undefined
 #############################################
 
 
@@ -25,7 +25,10 @@ host-suffix, shunchangzhixing.com, REJECT
 IP-CIDR, 114.132.165.205/32, REJECT
 
 # 多余模块
-^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/vajra url reject-dict
+# ^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/vajra url reject-dict
+^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/get_big_module_bottom_ad url reject
+^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/get_index_activity_list_ad url reject
+^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/bottom_banner url reject
 # 弹窗广告
 ^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/agent_ad url reject
 #^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/newcomer_ad url reject-dict

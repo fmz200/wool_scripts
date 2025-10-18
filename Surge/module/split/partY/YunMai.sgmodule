@@ -1,12 +1,10 @@
 #!name=云麦
 #!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
 #!author=奶思
-#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!category=奶思的模块
 #!homepage=https://github.com/fmz200/wool_scripts
-#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partY/YunMai.lpx
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partY/YunMai.sgmodule
 #!tg-channel=https://t.me/inaisi
-#!date=2025-09-24 21:46:58
 
 [Map Local]
 ^https?:\/\/restapi\.iyunmai\.com\/api\/ios\/ad\/ data-type=text data=" " status-code=200

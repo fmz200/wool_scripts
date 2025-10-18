@@ -1,12 +1,10 @@
 #!name=21经济网
 #!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
 #!author=奶思
-#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!category=奶思的模块
 #!homepage=https://github.com/fmz200/wool_scripts
-#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/part2/21EconomicNet.lpx
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/part2/21EconomicNet.sgmodule
 #!tg-channel=https://t.me/inaisi
-#!date=2025-09-24 21:46:58
 
 [URL Rewrite]
 ^https?:\/\/api\.21jingji\.com\/ad\/ - reject

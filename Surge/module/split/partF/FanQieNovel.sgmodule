@@ -1,15 +1,12 @@
 #!name=番茄小说
 #!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
 #!author=奶思
-#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!category=奶思的模块
 #!homepage=https://github.com/fmz200/wool_scripts
-#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partF/FanQieNovel.lpx
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partF/FanQieNovel.sgmodule
 #!tg-channel=https://t.me/inaisi
-#!date=2025-09-24 21:46:57
 
 [Rule]
-DOMAIN,i.snssdk.com,REJECT
 DOMAIN,i-lq.snssdk.com,REJECT
 DOMAIN,dig.bdurl.net,REJECT
 DOMAIN,activity-ag.awemeughun.com,REJECT
@@ -17,8 +14,7 @@ DOMAIN,mcs.snssdk.com,REJECT
 DOMAIN,tnc3-alisc1.snssdk.com,REJECT
 DOMAIN,security-lq.snssdk.com,REJECT
 DOMAIN,tnc3-aliec2.snssdk.com,REJECT
-#DOMAIN, is.snssdk.com, REJECT
-DOMAIN,i.snssdk.com,REJECT
+#DOMAIN, i.snssdk.com, REJECT
 DOMAIN,v6-novelapp.ixigua.com,REJECT
 DOMAIN,msync-im1-vip6-std.easemob.com,REJECT
 DOMAIN,apd-pcdnwxlogin.teg.tencent-cloud.net,REJECT

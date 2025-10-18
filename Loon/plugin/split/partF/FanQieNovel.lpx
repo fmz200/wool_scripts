@@ -5,11 +5,10 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partF/FanQieNovel.lpx
 #!tg-channel=https://t.me/inaisi
-#!date=2025-10-03 10:36:53
+#!date=
 #############################################
 
 [Rule]
-DOMAIN, i.snssdk.com, REJECT
 DOMAIN, i-lq.snssdk.com, REJECT
 DOMAIN, dig.bdurl.net, REJECT
 DOMAIN, activity-ag.awemeughun.com, REJECT
@@ -18,7 +17,7 @@ DOMAIN, tnc3-alisc1.snssdk.com, REJECT
 DOMAIN, security-lq.snssdk.com, REJECT
 DOMAIN, tnc3-aliec2.snssdk.com, REJECT
 #DOMAIN, is.snssdk.com, REJECT
-DOMAIN, i.snssdk.com, REJECT
+#DOMAIN, i.snssdk.com, REJECT
 DOMAIN, v6-novelapp.ixigua.com, REJECT
 DOMAIN, msync-im1-vip6-std.easemob.com, REJECT
 DOMAIN, apd-pcdnwxlogin.teg.tencent-cloud.net, REJECT
