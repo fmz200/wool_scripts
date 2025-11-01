@@ -75,16 +75,16 @@ host, bootpreload.uve.weibo.com, reject
 ############################################# 微博国内版去广告 #############################################
 # User-Agent: Weibo/83823 (iPhone; iOS 17.2; Scale/3.00)
 
-^https:\/\/api\.weibo\.cn\/2\/!\/huati\/discovery_home_bottom_channels Weibo url-and-header reject-dict
-^https:\/\/api\.weibo\.cn\/2\/!\/chaohua\/discovery\/home_bottom\/switch Weibo url-and-header reject-dict
-^https:\/\/api\.weibo\.cn\/2\/!\/was\/finder\/searchbarchange\? Weibo url-and-header reject-dict
-^https:\/\/api\.weibo\.cn\/2\/push\/info\? Weibo url-and-header reject-dict
+^https:\/\/m?api\.weibo\.c(n|om)\/2\/!\/huati\/discovery_home_bottom_channels Weibo url-and-header reject-dict
+^https:\/\/m?api\.weibo\.c(n|om)\/2\/!\/chaohua\/discovery\/home_bottom\/switch Weibo url-and-header reject-dict
+^https:\/\/m?api\.weibo\.c(n|om)\/2\/!\/was\/finder\/searchbarchange\? Weibo url-and-header reject-dict
+^https:\/\/m?api\.weibo\.c(n|om)\/2\/push\/info\? Weibo url-and-header reject-dict
 
 # 搜索页面净化
-# ^https?:\/\/api\.weibo\.cn\/2\/cardlist\? url jsonjq-response-body 'del(.items[] | select(.category == "group"))'
+# ^https?:\/\/m?api\.weibo\.c(n|om)\/2\/cardlist\? url jsonjq-response-body 'del(.items[] | select(.category == "group"))'
 
 # 似乎没用的请求，收集用户信息
-^https?:\/\/api\.weibo\.c(n|om)\/2\/(push\/active|client\/addlog_batch|ad\/preload) Weibo url-and-header script-request-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/template/req_replace_body.js
+^https?:\/\/m?api\.weibo\.c(n|om)\/2\/(push\/active|client\/addlog_batch|ad\/preload) Weibo url-and-header script-request-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/template/req_replace_body.js
 
 # 屏蔽首页左上角每日的弹窗tips
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d/push/daily Weibo url-and-header reject-dict

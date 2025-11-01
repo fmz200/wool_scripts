@@ -82,13 +82,13 @@ DOMAIN, adpinpai.video.weibocdn.com, REJECT
 ^https:\/\/card\.weibo\.com\/article\/m\/aj\/(reward|uvead)\? reject-dict
 ^https:\/\/weibo\.com\/ttarticle\/x\/m\/aj\/(reward|uvead)\? reject-dict
 # 微博
-^https?:\/\/api\.weibo\.cn\/2\/!\/huati\/discovery_home_bottom_channels reject-dict
-^https?:\/\/api\.weibo\.cn\/2\/!\/chaohua\/discovery\/home_bottom\/switch reject-dict
-^https?:\/\/api\.weibo\.cn\/2\/!\/was\/finder\/searchbarchange\? reject-dict
-^https?:\/\/api\.weibo\.cn\/2\/logservice\/service\? reject
-^https?:\/\/api\.weibo\.cn\/2\/push\/info\? reject
+^https?:\/\/m?api\.weibo\.c(n|om)\/2\/!\/huati\/discovery_home_bottom_channels reject-dict
+^https?:\/\/m?api\.weibo\.c(n|om)\/2\/!\/chaohua\/discovery\/home_bottom\/switch reject-dict
+^https?:\/\/m?api\.weibo\.c(n|om)\/2\/!\/was\/finder\/searchbarchange\? reject-dict
+^https?:\/\/m?api\.weibo\.c(n|om)\/2\/logservice\/service\? reject
+^https?:\/\/m?api\.weibo\.c(n|om)\/2\/push\/info\? reject
 # 搜索页面净化
-^https?:\/\/api\.weibo\.cn\/2\/cardlist\? response-body-json-jq 'del(.items[] | select(.category == "group"))'
+^https?:\/\/m?api\.weibo\.c(n|om)\/2\/cardlist\? response-body-json-jq 'del(.items[] | select(.category == "group"))'
 
 [Script]
 # 微博移除发现页广告
