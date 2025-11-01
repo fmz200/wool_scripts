@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 微博去广告
- * @date 2025-10-12 10:15:00
+ * @date 2025-11-01 17:15:00
  */
 
 let url = $request.url;
@@ -224,8 +224,8 @@ function removeHeaderAds(headerItems) {
 
 function removeCommonAds(items) {
   // 模块类型，不在里面的都计划删除
-  // 17：微博热搜，101：热门微博
-  const cardTypes = [17, 101];
+  // 17：微博热搜，235：新版微博热搜，101：热门微博
+  const cardTypes = [17, 235, 101];
 
   let firstVerticalFound = false;
   for (let i = 0; i < items.length; i++) {
@@ -249,8 +249,11 @@ function removeCommonAds(items) {
     }
     // 1.1、"微博热搜"模块
     if (card_type === 17) {
-      console.log('处理微博热搜模块💕💕');
+      console.log('处理微博热搜模块17💕');
       removeHotSearchAds(items[i].data.group);
+    } else if (card_type === 235) {
+      console.log('处理微博热搜模块235💕');
+      removeHotSearchAds(items[i].data.channel_list[0]?.group);
     }
     // 118横版广告图片 182热议话题 217错过了热词 247横版视频广告 236微博趋势
     // 删除信息流中的图片广告、推广
