@@ -158,8 +158,6 @@ https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/Douyin.list
 - [@blackmatrix7](https://github.com/blackmatrix7)
 - [@chavyleung](https://github.com/chavyleung)
 - [@chengkongyiban](https://github.com/chengkongyiban)
-- [@DivineEngine](https://github.com/DivineEngine)
-- [@I-am-R-E](https://github.com/I-am-R-E)
 - [@Keywos](https://github.com/Keywos)
 - [@kokoryh](https://github.com/kokoryh)
 - [@KOP-XIAO](https://github.com/KOP-XIAO)
