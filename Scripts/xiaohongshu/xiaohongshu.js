@@ -67,6 +67,7 @@ if (url.includes("/system_service/splash_config")) {
 }
 
 if (url.includes("/note/imagefeed?") || url.includes("/note/feed?")) {
+  console.log('打印原body：' + JSON.stringify(obj));
   // 信息流 图片
   if (obj?.data?.length > 0) {
     if (obj.data[0]?.note_list?.length > 0) {
