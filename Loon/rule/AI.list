@@ -26,12 +26,14 @@ DOMAIN-SUFFIX, openai.com
 DOMAIN-SUFFIX, sora.com
 
 # Apple Intelligence
-DOMAIN, apple-relay.apple.com
-DOMAIN, apple-relay.cloudflare.com
-DOMAIN, apple-relay.fastly-edge.com
-DOMAIN, cp4.cloudflare.com
-DOMAIN, guzzoni.apple.com
-DOMAIN-SUFFIX, smoot.apple.com
+DOMAIN-SUFFIX,apple-relay.apple.com,Proxy
+DOMAIN-SUFFIX,apple-relay.fastly-edge.com,Proxy
+DOMAIN-SUFFIX,apple-relay.cloudflare.com,Proxy
+DOMAIN-SUFFIX,gateway.icloud.com,Proxy
+DOMAIN-SUFFIX,guzzoni.apple.com,Proxy
+DOMAIN-SUFFIX,cp4.cloudflare.com,Proxy
+DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com,Proxy
+DOMAIN-SUFFIX,apps.mzstatic.com,Proxy
 
 # GitHub Copilot
 DOMAIN, api.githubcopilot.com
