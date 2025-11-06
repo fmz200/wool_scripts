@@ -106,7 +106,7 @@ if (url.includes("/note/imagefeed?") || url.includes("/note/feed?")) {
 if (url.includes("/note/live_photo/save")) {
   console.log('原body：' + rsp_body);
   const rsp = $.getdata("fmz200.xiaohongshu.feed.rsp");
-  console.log("读取缓存key：fmz200.xiaohongshu.feed.rsp");
+  console.log("读取缓存key[fmz200.xiaohongshu.feed.rsp]的值：" + rsp);
   // console.log("读取缓存val：" + rsp);
   if (rsp == null || rsp.length === 0) {
     console.log('缓存无内容，返回原body');
