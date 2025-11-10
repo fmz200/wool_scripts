@@ -117,7 +117,6 @@ DOMAIN-SUFFIX, d7.sinaimg.cn, REJECT
 DOMAIN-SUFFIX, d8.sinaimg.cn, REJECT
 DOMAIN-SUFFIX, newspush.sinajs.cn, REJECT
 DOMAIN-SUFFIX, rs.sinajs.cn, REJECT
-DOMAIN-SUFFIX, tjs.sjs.sinajs.cn, REJECT
 DOMAIN-SUFFIX, sinaalicdn.com, REJECT
 DOMAIN-SUFFIX, oascentral.sina.com, REJECT
 DOMAIN-SUFFIX, pfpip.sina.com, REJECT

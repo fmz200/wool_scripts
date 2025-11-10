@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/filter.list
 #!tg-channel=https://t.me/inaisi
-#!date=2025-10-03 21:55:00
+#!date=2025-11-10 08:17:00
 #!support=约9760行
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
@@ -2700,6 +2700,12 @@ host-keyword, mpos-pic.helipay.com, reject
 host, mistat.xiaomi.com, reject
 
 # > 晓晓优选
+host-SUFFIX, 1sapp.com, REJECT
+host-SUFFIX, aiclk.com, REJECT
+host-SUFFIX, adbiding.com, REJECT
+host-SUFFIX, xwpbj.com, REJECT
+host-SUFFIX, qttunion.com, REJECT
+host-SUFFIX, qiyukf.com, REJECT
 host-SUFFIX, fancyapi.com, REJECT
 host-SUFFIX, ad.richmob.cn, REJECT
 host-SUFFIX, api-htp.beizi.biz, REJECT
@@ -2824,7 +2830,6 @@ host-suffix, d7.sinaimg.cn, reject
 host-suffix, d8.sinaimg.cn, reject
 host-suffix, newspush.sinajs.cn, reject
 host-suffix, rs.sinajs.cn, reject
-host-suffix, tjs.sjs.sinajs.cn, reject
 host-suffix, sinaalicdn.com, reject
 host-suffix, oascentral.sina.com, reject
 host-suffix, pfpip.sina.com, reject
