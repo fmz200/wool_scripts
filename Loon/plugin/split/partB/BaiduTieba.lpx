@@ -9,18 +9,18 @@
 #############################################
 
 [Argument]
-bddutpba_enable = switch,true,false,tag=百度贴吧-脚本开关
+per_filter_video_thread = select,"0","1",tag=百度贴吧-推荐页不展示视频贴,desc=设置为1则推荐页不展示视频贴
 
 [Rule]
+DOMAIN, 180.76.76.200, REJECT
 # 屏蔽域名dns查询, REJECT
 IP-CIDR, 180.76.76.200/32, REJECT, no-resolve
-DOMAIN-KEYWORD,api.sobot.com, REJECT
-DOMAIN-SUFFIX,cm.ad.bilibili.com, REJECT
-DOMAIN-SUFFIX,cm.adcommon.bilibili.com, REJECT
-DOMAIN-SUFFIX,cm.game.bilibili.com, REJECT
-DOMAIN-SUFFIX,cm.track.biligame.bilibili.com, REJECT
 
 
 [Script]
-http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/(c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)$|tiebaads\/commonbatch|c\/s\/sync$) script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-json.js, requires-body=true, timeout=60, tag=百度贴吧广告, enable={bddutpba_enable}
-http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js, requires-body=true, binary-body-mode=true, timeout=60, tag=百度贴吧广告, enable={bddutpba_enable}
+http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/(c\/(s\/sync|f\/(ad\/getSplashAd|frs\/(page|threadlist|generalTabList)|pb\/(pic)?page|excellent\/personalized))$|tiebaads\/commonbatch\?) script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-json.js, requires-body=true, timeout=10, tag=贴吧json
+http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/(b\/ad\/adBid|f\/(frs\/(page|threadlist|generalTabList)|ad\/getFeedAd|pb\/page|excellent\/personalized))\?cmd script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js, requires-body=true, binary-body-mode=true, timeout=10, tag=贴吧proto, argument=[{per_filter_video_thread}]
+
+
+[MITM]
+hostname = tiebac.baidu.com

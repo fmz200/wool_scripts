@@ -9,6 +9,12 @@
 #############################################
 
 [Rule]
+DOMAIN-SUFFIX, 1sapp.com, REJECT
+DOMAIN-SUFFIX, aiclk.com, REJECT
+DOMAIN-SUFFIX, adbiding.com, REJECT
+DOMAIN-SUFFIX, xwpbj.com, REJECT
+DOMAIN-SUFFIX, qiyukf.com, REJECT
+DOMAIN-SUFFIX, qttunion.com, REJECT
 DOMAIN-SUFFIX, fancyapi.com, REJECT
 DOMAIN-SUFFIX, ad.richmob.cn, REJECT
 DOMAIN-SUFFIX, api-htp.beizi.biz, REJECT
@@ -29,6 +35,7 @@ IP-CIDR, 114.132.165.205/32, REJECT, no-resolve
 ^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/get_big_module_bottom_ad reject
 ^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/get_index_activity_list_ad reject
 ^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/bottom_banner reject
+^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/new_banner\? reject
 # 多余模块
 # ^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/vajra reject-dict
 # 弹窗广告

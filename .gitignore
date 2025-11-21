@@ -33,4 +33,4 @@ navEditor.xml
 # CodeStream ignored files
 /codestream.xml
 # node依赖
-./node_modules
+/node_modules
