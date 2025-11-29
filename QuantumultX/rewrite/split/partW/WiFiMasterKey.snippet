@@ -1,4 +1,4 @@
-#!name=WIFI万能钥匙
+#!name=WiFi万能钥匙
 #!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
 #!author=奶思
 #!homepage=https://github.com/fmz200/wool_scripts
@@ -8,6 +8,30 @@
 #!date=undefined
 #############################################
 
+
+host-keyword, app.51y5.net, reject
+host-keyword, apiinit.amap.com, reject
+host-keyword, c.51y5.net, reject
+host-keyword, msg.push.51y5.net, reject
+host-keyword, a.wkanx.com, reject
+host-keyword, c.wkanx.com, reject
+host-keyword, c1.wkanx.com, reject
+host-keyword, ap.51y5.net, reject
+host-keyword, dc.51y5.net, reject
+host-keyword, push-dc.51y5.net, reject
+host-keyword, news-log.51y5.net, reject
+host-keyword, login.push.51y5.net, reject
+host-keyword, news.51y5.net, reject
+host-keyword, cds.51y5.net, reject
+host-keyword, insurance.lianwifi.com, reject
+host-keyword, config.51y5.net, reject
+host-keyword, static.wkanx.com, reject
+host-keyword, config.y5en.com, reject
+# 万能钥匙专业版
+# 感谢【All in 梭哈】分享
+host-suffix, mi.gdt.qq.com, reject
+# 去除导航栏免费短剧
+host, taichi.51y5.net, reject
 
 # 首页弹窗广告
 ^https?:\/\/cds\.wifi188\.com\/feeds\.sec url reject-dict

@@ -1,0 +1,15 @@
+#!name=爱牵挂care
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partA/AiQianGua.sgmodule
+#!tg-channel=https://t.me/inaisi
+
+[Map Local]
+# 去开屏，感谢【也許】投稿
+^https?:\/\/manager\.aiqiangua\.com:8080\/AqgNews\/api\/start_ad\.do data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% manager.aiqiangua.com
+

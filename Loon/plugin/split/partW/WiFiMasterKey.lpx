@@ -1,4 +1,4 @@
-#!name=WIFI万能钥匙
+#!name=WiFi万能钥匙
 #!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
 #!author=奶思
 #!homepage=https://github.com/fmz200/wool_scripts
@@ -8,13 +8,11 @@
 #!date=
 #############################################
 
-[Rewrite]
-# 首页弹窗广告
-^https?:\/\/cds\.wifi188\.com\/feeds\.sec reject-dict
-
-
-[MITM]
-hostname = cds.wifi188.comAIN-KEYWORD,msg.push.51y5.net, REJECT
+[Rule]
+DOMAIN-KEYWORD,app.51y5.net, REJECT
+DOMAIN-KEYWORD,apiinit.amap.com, REJECT
+DOMAIN-KEYWORD,c.51y5.net, REJECT
+DOMAIN-KEYWORD,msg.push.51y5.net, REJECT
 DOMAIN-KEYWORD,a.wkanx.com, REJECT
 DOMAIN-KEYWORD,c.wkanx.com, REJECT
 DOMAIN-KEYWORD,c1.wkanx.com, REJECT
@@ -34,3 +32,12 @@ DOMAIN-KEYWORD,config.y5en.com, REJECT
 DOMAIN-SUFFIX,mi.gdt.qq.com, REJECT
 # 去除导航栏免费短剧, REJECT
 DOMAIN, taichi.51y5.net, REJECT
+
+
+[Rewrite]
+# 首页弹窗广告
+^https?:\/\/cds\.wifi188\.com\/feeds\.sec reject-dict
+
+
+[MITM]
+hostname = cds.wifi188.com

@@ -1,0 +1,17 @@
+#!name=美丽修行
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partM/MeiLiXiuXing.lpx
+#!tg-channel=https://t.me/inaisi
+#!date=
+#############################################
+
+[Script]
+# 去除开屏 首页广告 美修盒广告 我的页面广告
+http-response ^https:\/\/api\.bevol\.com\/(?:appmain\/app\/home\/page|usercenter\/account\/info|personal\/page|appmain\/app\/home\/launch|trialbox\/shop\/app\/homePage)$ script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/refs/heads/main/mlxx.js, requires-body=true, timeout=60, tag=美丽修行广告
+
+
+[MITM]
+hostname = api.bevol.com

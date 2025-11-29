@@ -2915,7 +2915,7 @@ https://apis.lifeweek.com.cn/api/baseConfig/getIosNewConfig reject
 # hostname = ios.wps.cn, mobile-pic.cache.iciba.com
 ^https?:\/\/ios\.wps\.cn\/ad-statistics-service reject
 
-# > WIFI万能钥匙
+# > WiFi万能钥匙
 # hostname = cds.wifi188.com
 # 首页弹窗广告
 ^https?:\/\/cds\.wifi188\.com\/feeds\.sec reject-dict

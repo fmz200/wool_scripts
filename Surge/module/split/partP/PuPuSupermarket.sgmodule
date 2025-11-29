@@ -17,7 +17,7 @@
 ^https:\/\/j1\.pupuapi\.com\/client\/member_card\/index\/my - reject
 
 [Body Rewrite]
-http-response-jq ^https:\/\/j1\.pupuapi\.com\/client\/notification\/message_center\/unread_number .data = []
+http-response-jq ^https:\/\/j1\.pupuapi\.com\/client\/notification\/message_center\/unread_number '.data = []'
 
 [Map Local]
 # 搜索框页面热榜
