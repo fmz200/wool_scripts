@@ -12,6 +12,7 @@ try {
   // 1、首次点击发现按钮
   if (url.includes("/search/finder?")) {
     console.log('进入发现页...');
+    console.log(body);
     resp_data.channelInfo.channels[0].titleInfo.style.selectTextColor = "#333333";
     processPayload(resp_data.channelInfo.channels[0].payload);
     removeChannelsTabs(resp_data.channelInfo.channels);
