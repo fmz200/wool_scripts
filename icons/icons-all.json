@@ -1,6 +1,6 @@
 {
   "name": "fmz200の图标库",
-  "description": "收集一些自己常用的图标，尺寸为108px或144px，数量约1590个，更新日期：2025-10-12 15:43:00",
+  "description": "收集一些自己常用的图标，尺寸为108px或144px，数量约1590个，更新日期：2025-12-03 19:43:00",
   "icons": [
     {
       "name": "fmz200",
@@ -1087,8 +1087,12 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Gcp.png"
     },
     {
-      "name": "GfwEmby",
-      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/GfwEmby.png"
+      "name": "Gemini",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Gemini_01.png"
+    },
+    {
+      "name": "Gemini",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Gemini_02.png"
     },
     {
       "name": "GiffGaff",
