@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 微博去广告
- * @date 2025-11-01 17:15:00
+ * @date 2025-12-08 20:15:00
  */
 
 let url = $request.url;
@@ -18,6 +18,9 @@ try {
     removeChannelsTabs(resp_data.channelInfo.channels);
     if (resp_data.header?.data?.items) {
       removeHeaderAds(resp_data.header.data.items);
+    }
+    if (resp_data.header?.insert_data) {
+      delete resp_data.header.insert_data;
     }
   }
 
