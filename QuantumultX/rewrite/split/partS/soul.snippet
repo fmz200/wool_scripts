@@ -13,11 +13,11 @@ host, soul-ad.soulapp.cn, reject
 host, ad-r.soulapp.cn, reject
 host, ad-reward.soulapp.cn, reject
 host-suffix, cdn.soulapp.cn, reject
-IP-CIDR, 47.56.131.76/32, REJECT
-IP-CIDR, 47.97.215.55/32, REJECT
-IP-CIDR, 47.99.42.29/32, REJECT
-IP-CIDR, 120.27.235.201/32, REJECT
-IP-CIDR, 121.196.197.147/32, REJECT
+IP-CIDR, 47.56.131.76/32, reject
+IP-CIDR, 47.97.215.55/32, reject
+IP-CIDR, 47.99.42.29/32, reject
+IP-CIDR, 120.27.235.201/32, reject
+IP-CIDR, 121.196.197.147/32, reject
 
 # 替换信息收集
 ^https:\/\/data-collector\.soulapp\.cn\/api\/data\/report\/v\d url script-request-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/template/req_replace_body.js

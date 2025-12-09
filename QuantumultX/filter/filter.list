@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/filter.list
 #!tg-channel=https://t.me/inaisi
-#!date=2025-11-10 08:17:00
+#!date=2025-12-09 21:49:00
 #!support=约9760行
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
@@ -888,31 +888,31 @@ host-suffix, atdmt.com, reject
 host-suffix, staticxx.facebook.com, reject
 
 # > 番茄小说
-host, i-lq.snssdk.com, REJECT
-host, dig.bdurl.net, REJECT
-host, activity-ag.awemeughun.com, REJECT
-host, mcs.snssdk.com, REJECT
-host, tnc3-alisc1.snssdk.com, REJECT
-host, security-lq.snssdk.com, REJECT
-host, tnc3-aliec2.snssdk.com, REJECT
-#host, is.snssdk.com, REJECT
-#host, i.snssdk.com, REJECT
-host, v6-novelapp.ixigua.com, REJECT
-host-suffix, novelapp.ixigua.com, REJECT
-host-suffix, default.ixigua.com, REJECT
-host, msync-im1-vip6-std.easemob.com, REJECT
-host, apd-pcdnwxlogin.teg.tencent-cloud.net, REJECT
-host, api.iegadp.qq.com, REJECT
-host-suffix, byteorge.com, REJECT
+host, i-lq.snssdk.com, reject
+host, dig.bdurl.net, reject
+host, activity-ag.awemeughun.com, reject
+host, mcs.snssdk.com, reject
+host, tnc3-alisc1.snssdk.com, reject
+host, security-lq.snssdk.com, reject
+host, tnc3-aliec2.snssdk.com, reject
+#host, is.snssdk.com, reject
+#host, i.snssdk.com, reject
+host, v6-novelapp.ixigua.com, reject
+host-suffix, novelapp.ixigua.com, reject
+host-suffix, default.ixigua.com, reject
+host, msync-im1-vip6-std.easemob.com, reject
+host, apd-pcdnwxlogin.teg.tencent-cloud.net, reject
+host, api.iegadp.qq.com, reject
+host-suffix, byteorge.com, reject
 # 下面两条误杀严重导致懂车帝无法正常使用
-#host-suffix, bytegoofy.com, REJECT
-#host-suffix, bytedance.com, REJECT
-IP-CIDR, 49.71.37.101/32, REJECT
-IP-CIDR, 117.71.105.23/32, REJECT
-IP-CIDR, 218.94.207.205/32, REJECT
-IP-CIDR, 117.92.229.188/32, REJECT
-IP-CIDR, 101.36.166.16/32, REJECT
-IP-CIDR, 180.96.2.114/32, REJECT
+#host-suffix, bytegoofy.com, reject
+#host-suffix, bytedance.com, reject
+IP-CIDR, 49.71.37.101/32, reject
+IP-CIDR, 117.71.105.23/32, reject
+IP-CIDR, 218.94.207.205/32, reject
+IP-CIDR, 117.92.229.188/32, reject
+IP-CIDR, 101.36.166.16/32, reject
+IP-CIDR, 180.96.2.114/32, reject
 
 # > 风行网
 host-suffix, pb.funshion.net.cn, reject
@@ -1799,24 +1799,24 @@ host-suffix, imgad.thepaper.cn, reject
 
 # >>>>>>>>>>>>>>> ✅ Q ✅ <<<<<<<<<<<<<<
 # > QQ音乐
-host, adstats.tencentmusic.com, REJECT
-host, ad.tencentmusic.com, REJECT
-host, adcdn.tencentmusic.com, REJECT
-host, adcdn6.tencentmusic.com, REJECT
-host, adexpo.tencentmusic.com, REJECT
-host, adclick.tencentmusic.com, REJECT
-host, otheve.beacon.qq.com, REJECT
-host, monitor.music.qq.com, REJECT
-host, stat.y.qq.com, REJECT
-host, tmead.y.qq.com, REJECT
-host, oth.str.mdt.qq.com, REJECT
-host, h.trace.qq.com, REJECT
-host, sdk.e.qq.com, REJECT
-host, p.l.qq.com, REJECT
-host, us.l.qq.com, REJECT
-host, tangram.e.qq.com, REJECT
-host, tmeadbak.y.qq.com, REJECT
-host-suffix, imtmp.net, REJECT
+host, adstats.tencentmusic.com, reject
+host, ad.tencentmusic.com, reject
+host, adcdn.tencentmusic.com, reject
+host, adcdn6.tencentmusic.com, reject
+host, adexpo.tencentmusic.com, reject
+host, adclick.tencentmusic.com, reject
+host, otheve.beacon.qq.com, reject
+host, monitor.music.qq.com, reject
+host, stat.y.qq.com, reject
+host, tmead.y.qq.com, reject
+host, oth.str.mdt.qq.com, reject
+host, h.trace.qq.com, reject
+host, sdk.e.qq.com, reject
+host, p.l.qq.com, reject
+host, us.l.qq.com, reject
+host, tangram.e.qq.com, reject
+host, tmeadbak.y.qq.com, reject
+host-suffix, imtmp.net, reject
 host, tmeadcomm.y.qq.com, reject
 host, ad.tencentmusic.com, reject
 host, adstats.tencentmusic.com, reject
@@ -1828,10 +1828,10 @@ host-suffix, android.rqd.qq.com, reject
 host-suffix, e.qq.com, reject
 host-suffix, beacon.qq.com, reject
 host-suffix, v.gdt.qq.com, reject
-host, amsweb-cdn-gz-1258344696.file.myqcloud.com, REJECT
-host, wallpaper-1258344696.file.myqcloud.com, REJECT
+host, amsweb-cdn-gz-1258344696.file.myqcloud.com, reject
+host, wallpaper-1258344696.file.myqcloud.com, reject
 host, xs.gdt.qq.com, reject
-IP-CIDR, 120.222.240.171/32, REJECT
+IP-CIDR, 120.222.240.171/32, reject
 
 # > 蜻蜓FM
 host, ad.qingting.fm, reject
@@ -1839,13 +1839,13 @@ host, adlaunch.qingting.fm, reject
 host, ad-cdn.qingting.fm, reject
 
 # > 七猫小说
-host, cdn-new-ad.wtzw.com, REJECT
-host, a-remad.qm989.com, REJECT
-host, mobads.baidu.com, REJECT
-host-suffix, gdt.qq.com, REJECT
-host, qzs.gdtimg.com, REJECT
-host, mobads-pre-config.cdn.bcebos.com, REJECT
-host, pgdt.ugdtimg.com, REJECT
+host, cdn-new-ad.wtzw.com, reject
+host, a-remad.qm989.com, reject
+host, mobads.baidu.com, reject
+host-suffix, gdt.qq.com, reject
+host, qzs.gdtimg.com, reject
+host, mobads-pre-config.cdn.bcebos.com, reject
+host, pgdt.ugdtimg.com, reject
 
 # > 汽车之家
 host-keyword, adm3.autoimg.cn, reject
@@ -1917,11 +1917,11 @@ host, soul-ad.soulapp.cn, reject
 host, ad-r.soulapp.cn, reject
 host, ad-reward.soulapp.cn, reject
 host-suffix, cdn.soulapp.cn, reject
-IP-CIDR, 47.56.131.76/32, REJECT
-IP-CIDR, 47.97.215.55/32, REJECT
-IP-CIDR, 47.99.42.29/32, REJECT
-IP-CIDR, 120.27.235.201/32, REJECT
-IP-CIDR, 121.196.197.147/32, REJECT
+IP-CIDR, 47.56.131.76/32, reject
+IP-CIDR, 47.97.215.55/32, reject
+IP-CIDR, 47.99.42.29/32, reject
+IP-CIDR, 120.27.235.201/32, reject
+IP-CIDR, 121.196.197.147/32, reject
 
 # > Snapchat
 host, ads.snapchat.com, reject
@@ -2055,16 +2055,16 @@ host-suffix, wxsnsdythumb.wxs.qq.com, reject
 host, ads-shopping.shouqianba.com, reject
 
 # > 什么值得买
-host, aaid.uyunad.com, REJECT
-host, acs4baichuan.m.taobao.com, REJECT
-host, adashxgc.ut.taobao.com, REJECT
-host, analytics-api.smzdm.com, REJECT
-host, baichuan-sdk.alicdn.com, REJECT
-host, dgstatic.jd.com, REJECT
-host, msg.umengcloud.com, REJECT
-host, sec.umeng.com, REJECT
-host, ulogs.umeng.com, REJECT
-host, ynuf.aliapp.org, REJECT
+host, aaid.uyunad.com, reject
+host, acs4baichuan.m.taobao.com, reject
+host, adashxgc.ut.taobao.com, reject
+host, analytics-api.smzdm.com, reject
+host, baichuan-sdk.alicdn.com, reject
+host, dgstatic.jd.com, reject
+host, msg.umengcloud.com, reject
+host, sec.umeng.com, reject
+host, ulogs.umeng.com, reject
+host, ynuf.aliapp.org, reject
 host-suffix, res-ga.smzdm.com, reject
 
 # > 手机中国
@@ -2615,10 +2615,10 @@ host-keyword, m.panda.voiceads.cn, reject
 host-keyword, iflyad.bj.openstorage.cn, reject
 
 # > 喜马拉雅
-host, adsehera.ximalaya.com, REJECT
-host, adse.wsa.ximalaya.com, REJECT
-host, adbehavior.ximalaya.com, REJECT
-host, adbehavior.wsa.ximalaya.com, REJECT
+host, adsehera.ximalaya.com, reject
+host, adse.wsa.ximalaya.com, reject
+host, adbehavior.ximalaya.com, reject
+host, adbehavior.wsa.ximalaya.com, reject
 host-suffix, ad.ximalaya.com, reject
 host-suffix, adse.ximalaya.com, reject
 host-suffix, adse-v2.ximalaya.com, reject
@@ -2700,26 +2700,28 @@ host-keyword, mpos-pic.helipay.com, reject
 host, mistat.xiaomi.com, reject
 
 # > 晓晓优选
-host-SUFFIX, 1sapp.com, REJECT
-host-SUFFIX, aiclk.com, REJECT
-host-SUFFIX, adbiding.com, REJECT
-host-SUFFIX, xwpbj.com, REJECT
-host-SUFFIX, qttunion.com, REJECT
-host-SUFFIX, qiyukf.com, REJECT
-host-SUFFIX, fancyapi.com, REJECT
-host-SUFFIX, ad.richmob.cn, REJECT
-host-SUFFIX, api-htp.beizi.biz, REJECT
+host-suffix, adintl.cn, reject
+host-suffix, zhangyuyidong.cn, reject
+host-suffix, 1sapp.com, reject
+host-suffix, aiclk.com, reject
+host-suffix, adbiding.com, reject
+host-suffix, xwpbj.com, reject
+host-suffix, qttunion.com, reject
+host-suffix, qiyukf.com, reject
+host-suffix, fancyapi.com, reject
+host-suffix, ad.richmob.cn, reject
+host-suffix, api-htp.beizi.biz, reject
 host-suffix, yfanads.com, reject
 host-suffix, 1rtb.net, reject
 host-suffix, adwangmai.com, reject
-host-suffix, yunxinfw.com, REJECT
-host-suffix, bridgeoos.com, REJECT
-host-suffix, cloooud.com, REJECT
-host-suffix, baihemob.com, REJECT
-host-suffix, ad.bwton.com, REJECT
-host-suffix, api.wxcjgg.cn, REJECT
-host-suffix, shunchangzhixing.com, REJECT
-IP-CIDR, 114.132.165.205/32, REJECT
+host-suffix, yunxinfw.com, reject
+host-suffix, bridgeoos.com, reject
+host-suffix, cloooud.com, reject
+host-suffix, baihemob.com, reject
+host-suffix, ad.bwton.com, reject
+host-suffix, api.wxcjgg.cn, reject
+host-suffix, shunchangzhixing.com, reject
+IP-CIDR, 114.132.165.205/32, reject
 
 # > 新浪
 host-suffix, ad.sina.com.cn, reject

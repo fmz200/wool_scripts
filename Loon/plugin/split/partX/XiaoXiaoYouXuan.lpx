@@ -9,6 +9,8 @@
 #############################################
 
 [Rule]
+DOMAIN-SUFFIX, adintl.cn, REJECT
+DOMAIN-SUFFIX, zhangyuyidong.cn, REJECT
 DOMAIN-SUFFIX, 1sapp.com, REJECT
 DOMAIN-SUFFIX, aiclk.com, REJECT
 DOMAIN-SUFFIX, adbiding.com, REJECT

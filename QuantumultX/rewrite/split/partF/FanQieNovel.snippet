@@ -9,31 +9,31 @@
 #############################################
 
 
-host, i-lq.snssdk.com, REJECT
-host, dig.bdurl.net, REJECT
-host, activity-ag.awemeughun.com, REJECT
-host, mcs.snssdk.com, REJECT
-host, tnc3-alisc1.snssdk.com, REJECT
-host, security-lq.snssdk.com, REJECT
-host, tnc3-aliec2.snssdk.com, REJECT
-#host, is.snssdk.com, REJECT
-#host, i.snssdk.com, REJECT
-host, v6-novelapp.ixigua.com, REJECT
-host-suffix, novelapp.ixigua.com, REJECT
-host-suffix, default.ixigua.com, REJECT
-host, msync-im1-vip6-std.easemob.com, REJECT
-host, apd-pcdnwxlogin.teg.tencent-cloud.net, REJECT
-host, api.iegadp.qq.com, REJECT
-host-suffix, byteorge.com, REJECT
+host, i-lq.snssdk.com, reject
+host, dig.bdurl.net, reject
+host, activity-ag.awemeughun.com, reject
+host, mcs.snssdk.com, reject
+host, tnc3-alisc1.snssdk.com, reject
+host, security-lq.snssdk.com, reject
+host, tnc3-aliec2.snssdk.com, reject
+#host, is.snssdk.com, reject
+#host, i.snssdk.com, reject
+host, v6-novelapp.ixigua.com, reject
+host-suffix, novelapp.ixigua.com, reject
+host-suffix, default.ixigua.com, reject
+host, msync-im1-vip6-std.easemob.com, reject
+host, apd-pcdnwxlogin.teg.tencent-cloud.net, reject
+host, api.iegadp.qq.com, reject
+host-suffix, byteorge.com, reject
 # 下面两条误杀严重导致懂车帝无法正常使用
-#host-suffix, bytegoofy.com, REJECT
-#host-suffix, bytedance.com, REJECT
-IP-CIDR, 49.71.37.101/32, REJECT
-IP-CIDR, 117.71.105.23/32, REJECT
-IP-CIDR, 218.94.207.205/32, REJECT
-IP-CIDR, 117.92.229.188/32, REJECT
-IP-CIDR, 101.36.166.16/32, REJECT
-IP-CIDR, 180.96.2.114/32, REJECT
+#host-suffix, bytegoofy.com, reject
+#host-suffix, bytedance.com, reject
+IP-CIDR, 49.71.37.101/32, reject
+IP-CIDR, 117.71.105.23/32, reject
+IP-CIDR, 218.94.207.205/32, reject
+IP-CIDR, 117.92.229.188/32, reject
+IP-CIDR, 101.36.166.16/32, reject
+IP-CIDR, 180.96.2.114/32, reject
 
 # 去章末广告
 ^https?:\/\/.+\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/(get_ads|stats|settings)\/ url reject
