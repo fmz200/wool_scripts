@@ -1,7 +1,7 @@
 /**
- * @author fmz200
+ * @author fmz200，Baby
  * @function 小红书去广告、净化、解除下载限制、画质增强等
- * @date 2025-09-09 20:10:00
+ * @date 2025-12-10 22:10:00
  * @quote @RuCu6
  */
 
@@ -169,6 +169,23 @@ if (url.includes("/v4/note/videofeed")) {
   let videoData = [];
   if (obj.data?.length > 0) {
     for (let item of obj.data) {
+      // 强制开启权限
+      if (item?.media_save_config) {
+        item.media_save_config.disable_save = false;
+        item.media_save_config.disable_watermark = true;
+        item.media_save_config.disable_weibo_cover = true;
+      }
+
+      // 处理 function_switch (修复按钮置灰)
+      if (item?.function_switch?.length > 0) {
+        for (let switchItem of item.function_switch) {
+          if (switchItem.type === "video_download") {
+            switchItem.enable = true;
+            if (switchItem.reason) delete switchItem.reason;
+          }
+        }
+      }
+
       // 添加下载按钮（如果未存在）
       if (item?.share_info?.function_entries?.length > 0) {
         const hasDownload = item.share_info.function_entries.some(entry => entry.type === "video_download");
@@ -178,17 +195,31 @@ if (url.includes("/v4/note/videofeed")) {
         }
       }
 
-      // 提取 H.265 视频流
+      // 提取最佳视频流 (修复逻辑：分辨率相同优先选码率高的)
       const h265List = item?.video_info_v2?.media?.stream?.h265 || [];
-      if (!Array.isArray(h265List) || h265List.length === 0) {
-        console.log(`无 h265 视频: ${item.id}`);
-        continue;
+      const h264List = item?.video_info_v2?.media?.stream?.h264 || [];
+
+      let selectedStream = null;
+
+      // 排序函数：优先分辨率面积，其次平均码率
+      const sortStream = (a, b) => {
+        const resA = (a.width || 0) * (a.height || 0);
+        const resB = (b.width || 0) * (b.height || 0);
+        if (resB !== resA) return resB - resA; // 面积从大到小
+        return (b.avg_bitrate || 0) - (a.avg_bitrate || 0); // 码率从大到小
+      };
+
+      if (Array.isArray(h265List) && h265List.length > 0) {
+        // 过滤有效链接并排序
+        const sorted = h265List.filter(v => !!v.master_url).sort(sortStream);
+        if (sorted.length > 0) selectedStream = sorted[0];
       }
 
-      // 分辨率从高到低排序
-      const sortedList = h265List.filter(v => !!v.master_url && !!v.height).sort((a, b) => b.height - a.height);
-      // 选择分辨率最高的
-      let selectedStream = sortedList[0];
+      // 降级策略：如果没有 H265，尝试 H264
+      if (!selectedStream && Array.isArray(h264List) && h264List.length > 0) {
+        const sorted = h264List.filter(v => !!v.master_url).sort(sortStream);
+        if (sorted.length > 0) selectedStream = sorted[0];
+      }
 
       // 存入缓存数组
       if (item?.id && selectedStream?.master_url) {
@@ -198,6 +229,7 @@ if (url.includes("/v4/note/videofeed")) {
         };
         console.log(`提取成功 ➜ ${item.id} → ${selectedStream.stream_desc}`);
         videoData.push(data);
+        console.log(`[缓存] ID:${item.id} | 规格:${selectedStream.quality_type} | 码率:${selectedStream.avg_bitrate}`);
       } else {
         console.log(`未找到可用视频: ${item.id}`);
       }
