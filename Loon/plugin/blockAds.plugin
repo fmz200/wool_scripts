@@ -492,7 +492,7 @@ IP-CIDR6, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT, no-resolve
 
 # > 36kr
 # hostname = gateway.36kr.com
-^https?:\/\/gateway\.36kr\.com\/api\/adx\/ad\/show reject
+# ^https?:\/\/gateway\.36kr\.com\/api\/adx\/ad\/show reject
 
 
 
