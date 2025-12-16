@@ -1,7 +1,7 @@
 /**
  * @auther @fmz200
  * @function 微博去广告
- * @date 2025-06-05 15:33:23
+ * @date 2025-12-16 21:33:23
  * @quote zmqcherish
  */
 
@@ -152,10 +152,7 @@ function isAd(data) {
 	if (data.ads_material_info?.is_ads) {
 		return true;
 	}
-	if (data.is_ad === 1) {
-		return true;
-	}
-	return false;
+	return data.is_ad === 1;
 }
 
 // 判断首页流 感兴趣的超话
@@ -197,49 +194,50 @@ function removeRepost(data) {
 }
 
 function removeMain(data) {
-	if (!data.items) {
-		return data;
-	}
-	let newItems = [];
-	for (let item of data.items) {
-		if (checkJunkTopic(item)) {
-			continue;
-		}
-		if (!isAd(item.data)) {
-			// 无水印图片，但画质较低
-			if (item.data?.pic_infos) {
-				for (let key in item.data.pic_infos) {
-					let picture = item.data.pic_infos[key];
-					let high_url = picture.original.url.replace("orh1080", "oslarge");
-					// console.log('set high_url ' + high_url);
-					picture.largest.url = high_url;
-					picture.thumbnail.url = high_url;
-					picture.large.url = high_url;
-					picture.middleplus.url = high_url;
-					picture.mw2000.url = high_url;
-					picture.bmiddle.url = high_url;
-					// console.log('set high_url success');
-				}
-			}
-			// 删除一条微博下面的图片广告（测试功能）
-			if (item.data?.extend_info?.shopwindow_cards) {
-				delete item.data.extend_info.shopwindow_cards
-			}
-			if (item.data?.extend_info?.ad_semantic_brand) {
-				delete item.data.extend_info.ad_semantic_brand
-			}
-			if (item.data?.semantic_brand_params) {
-				delete item.data.semantic_brand_params;
-			}
-			if (item.data?.common_struct) {
-				delete item.data.common_struct;
-			}
-			newItems.push(item);
-		}
-	}
-	data.items = newItems;
-	log('removeMain success');
-	return data;
+  if (!data.items) {
+    return data;
+  }
+  let newItems = [];
+  for (let item of data.items) {
+    if (checkJunkTopic(item)) {
+      continue;
+    }
+
+    const src = item.data ?? item.status; // ⭐ 关键新增
+
+    if (!isAd(src)) {
+      // 无水印图片，但画质较低
+      if (src?.pic_infos) {
+        for (let key in src.pic_infos) {
+          let picture = src.pic_infos[key];
+          let high_url = picture.original.url.replace("orh1080", "oslarge");
+          picture.largest.url = high_url;
+          picture.thumbnail.url = high_url;
+          picture.large.url = high_url;
+          picture.middleplus.url = high_url;
+          picture.mw2000.url = high_url;
+          picture.bmiddle.url = high_url;
+        }
+      }
+      // 删除一条微博下面的图片广告（测试功能）
+      if (src?.extend_info?.shopwindow_cards) {
+        delete src.extend_info.shopwindow_cards;
+      }
+      if (src?.extend_info?.ad_semantic_brand) {
+        delete src.extend_info.ad_semantic_brand;
+      }
+      if (src?.semantic_brand_params) {
+        delete src.semantic_brand_params;
+      }
+      if (src?.common_struct) {
+        delete src.common_struct;
+      }
+      newItems.push(item);
+    }
+  }
+  data.items = newItems;
+  log('removeMain success');
+  return data;
 }
 
 function topicHandler(data) {
