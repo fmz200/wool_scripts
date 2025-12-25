@@ -33,7 +33,7 @@ DOMAIN-SUFFIX,gum.criteo.com,REJECT
 DOMAIN-SUFFIX,smaato.net,REJECT
 DOMAIN-SUFFIX,spadsync.com,REJECT
 DOMAIN-SUFFIX,ads.inmobi.com,REJECT
-DOMAIN-SUFFIX,akamaized.net,REJECT
+#DOMAIN-SUFFIX,akamaized.net,REJECT
 DOMAIN-SUFFIX,spadsync.com,REJECT
 DOMAIN-SUFFIX,tpc.googlesyndication.com,REJECT
 DOMAIN-SUFFIX,googleadsserving.cn,REJECT

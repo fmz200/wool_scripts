@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/filter.list
 #!tg-channel=https://t.me/inaisi
-#!date=2025-12-09 21:49:00
+#!date=2025-12-25 20:30:00
 #!support=约9760行
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
@@ -2168,7 +2168,7 @@ host-suffix, gum.criteo.com, reject
 host-suffix, smaato.net, reject
 host-suffix, spadsync.com, reject
 host-suffix, ads.inmobi.com, reject
-host-suffix, akamaized.net, reject
+#host-suffix, akamaized.net, reject
 host-suffix, spadsync.com, reject
 host-suffix, tpc.googlesyndication.com, reject
 host-suffix, googleadsserving.cn, reject
