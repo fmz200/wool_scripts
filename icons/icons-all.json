@@ -1,6 +1,6 @@
 {
   "name": "fmz200の图标库",
-  "description": "收集一些自己常用的图标，尺寸为108px或144px，数量约1590个，更新日期：2025-12-03 19:43:00",
+  "description": "收集一些自己常用的图标，尺寸为108px或144px，数量约1590个，更新日期：2026-01-12 22:50:00",
   "icons": [
     {
       "name": "fmz200",
@@ -1971,6 +1971,10 @@
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/pinduoduo.png"
     },
     {
+      "name": "pinduoduo",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/pinduoduo_01.png"
+    },
+    {
       "name": "PinYun",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/PinYun.png"
     },
@@ -2941,6 +2945,10 @@
     {
       "name": "xiaohongshu",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/xiaohongshu.png"
+    },
+    {
+      "name": "xiaohongshu",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/xiaohongshu_01.png"
     },
     {
       "name": "xiaomi",
