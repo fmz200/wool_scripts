@@ -1,7 +1,7 @@
 /**
  * @author fmz200，Baby
  * @function 小红书去广告、净化、解除下载限制、画质增强等
- * @date 2025-12-10 22:10:00
+ * @date 2026-01-18 23:10:00
  * @quote @RuCu6
  */
 
@@ -87,6 +87,26 @@ if (url.includes("/note/imagefeed?") || url.includes("/note/feed?")) {
             item.share_info.function_entries.unshift(addItem);
           }
         }
+        // 新版下载限制
+        if (Array.isArray(item.function_switch)) {
+          item.function_switch.forEach(item => {
+            if (item?.type === 'image_download') {
+              item.enable = true;
+            }
+          });
+        }
+        // 复制权限
+        const options = item.note_text_press_options;
+        if (Array.isArray(options)) {
+          const hasCopy = options.some(item => item.key === 'copy');
+          if (!hasCopy) {
+            options.push({
+              key: 'copy',
+              extra: ''
+            });
+          }
+        }
+
         // 处理帖子引用的标签
         if (item.hash_tag) {
           item.hash_tag = item.hash_tag.filter(tag => tag.type !== "interact_vote");
