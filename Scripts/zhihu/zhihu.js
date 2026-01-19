@@ -1,4 +1,4 @@
-// 2024-10-15 10:50
+// 2026-01-19 20:50:00
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -70,8 +70,8 @@ if (url.includes("/answers/v2/") || url.includes("/articles/v2/")) {
   }
 } else if (url.includes("/commercial_api/app_float_layer")) {
   // 悬浮图标
-  if ("feed_egg" in obj) {
-    delete obj;
+  if (obj?.feed_egg) {
+    delete obj.feed_egg;
   }
 } else if (url.includes("/feed/render/tab/config")) {
   // 首页二级标签 白名单 live直播 edu人工智能AI
