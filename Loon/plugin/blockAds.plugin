@@ -10,7 +10,7 @@
 #!system=iOS, iPadOS
 #!system_version = 
 #!loon_version = 
-#!date=2026-01-21 21:00:00
+#!date=2026-01-29 10:00:00
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
@@ -2500,7 +2500,7 @@ https://api.rr.tv/storage/business/rootName/app/homePage\?dataType=JSON reject-d
 
 # > 四川航空
 # hostname = mapi.sichuanair.com
-^https?:\/\/mapi\.sichuanair\.com\/zt\/tribeport\/encrypt_translate_key reject-200
+# ^https?:\/\/mapi\.sichuanair\.com\/zt\/tribeport\/encrypt_translate_key reject-200
 
 # > 搜狐
 # hostname = *.souhu.com
@@ -4201,7 +4201,7 @@ http-response ^https?:\/\/user\.api\.ddxq\.mobi\/userportal-service\/api\/v\d\/u
 
 # >>>>>>>>>>>>>>> ✅ F ✅ <<<<<<<<<<<<<<
 # > Flightradar24
-http-response ^https?:\/\/mobile\.flightradar24\.com\/mobile\/(user-session|subscribe) script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/Flightradar24.js, requires-body=true, timeout=60, tag=Flightradar24解锁, enable={flightradar24_enable}
+# http-response ^https?:\/\/mobile\.flightradar24\.com\/mobile\/(user-session|subscribe) script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/Flightradar24.js, requires-body=true, timeout=60, tag=Flightradar24解锁, enable={flightradar24_enable}
 
 # > 飞客茶馆
 http-response ^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=threadpost&.+?&page=1 script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/fly.js, requires-body=true, timeout=60, tag=飞客茶馆, enable={fwke_enable}
