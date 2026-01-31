@@ -3589,13 +3589,10 @@ https?:\/\/(ipv4|interface\d?)\.music\.163.com\/e?api\/ad data-type=text data="{
 # > 小蚕霸王餐
 # 去广告（这个域名其实已经在分流中拒绝）
 ^https?:\/\/zlsdk\.1rtb\.net\/sdk\/req_ad data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-
 # 首页横幅推广
 ^https:\/\/web2\.realtech-inc\.com\/oss\/xc-app-assets\/configs\/common\/theme\.json data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-
 # 开屏广告
 ^https:\/\/sdk\.1rtb\.net\/sdk\/req_ad\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-
 # 更新弹窗
 ^https:\/\/gw\.xiaocantech\.com\/g\/pa data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 

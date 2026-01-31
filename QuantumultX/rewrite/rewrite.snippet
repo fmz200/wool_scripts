@@ -10,7 +10,7 @@
 #!system = iOS, iPadOS
 #!system_version = 
 #!loon_version = 
-#!date=2026-01-29 10:00:00
+#!date=2026-01-31 10:00:00
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
@@ -3147,7 +3147,7 @@ https://mgesq.api.mgtv.com/dsl/index.+ url script-response-body https://raw.gith
 # 去广告（这个域名其实已经在分流中拒绝）
 ^https?:\/\/zlsdk\.1rtb\.net\/sdk\/req_ad url reject-dict
 # 红包推广
-^https:\/\/gw\.xiaocantech\.com\/rpc GetBannerList url-and-header reject-dict
+^https:\/\/gw\.xiaocantech\.com\/rpc BatchMatchPlacement|WaitClaimedPoints|GetBannerList url-and-header reject-dict
 # 首页横幅推广
 ^https:\/\/web2\.realtech-inc\.com\/oss\/xc-app-assets\/configs\/common\/theme\.json url reject-dict
 # 开屏广告
