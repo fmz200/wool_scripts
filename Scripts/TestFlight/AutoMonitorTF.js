@@ -1,7 +1,7 @@
 /**
  @author fmz200
  @function 监控TF是否可加入，支持大部分代理工具包括 QX，Loon，Surge，Egern，Stash，ShadowRocket，青龙
- @date 2025-09-21 00:30:00
+ @date 2026-02-17 14:50:00
 
  定时任务
  30 * * * * ? https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/TestFlight/AutoMonitorTF.js
@@ -60,7 +60,7 @@ const userAgents = [
     counter++;
   }
 
-  if (isNode) await sendMsg($.nodeNotifyMsg.join("\n"), "");
+  if (isNode && $.nodeNotifyMsg.length>0) await sendMsg($.nodeNotifyMsg.join("\n"), "");
   $.done();
 })();
 
