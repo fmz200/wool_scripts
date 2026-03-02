@@ -323,7 +323,7 @@ http-response ^https:\/\/mobile-consumer-sapp\.chery\.cn\/web\/user\/current\/de
 # >>>>>>>>>>>>>>> ✅ R ✅ <<<<<<<<<<<<<<
 # > 人人视频
 # hostname = 
-http-request ^https:\/\/api\.rr\.tv\/user\/profile script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.cookie.js, timeout=60, tag=人人视频.cookie
+# http-request ^https:\/\/api\.rr\.tv\/user\/profile script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.cookie.js, timeout=60, tag=人人视频.cookie
 
 
 
@@ -471,8 +471,8 @@ http-request ^https:\/\/getconfig-globalapi\.zymk\.cn\/app_api\/* script-path=ht
 
 # > 字幕组
 # hostname = 
-http-request ^https?:\/\/(www\.)?rrys2020\.com\/?.? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zimuzu/zimuzu.cookie.js, timeout=60, tag=字幕组.cookie
-http-request ^http:\/\/ios.zmzapi.com\/index.php.*a=(mobile_)?login script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zimuzu/zimuzu.cookie.js, timeout=60, tag=字幕组.cookie
+# http-request ^https?:\/\/(www\.)?rrys2020\.com\/?.? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zimuzu/zimuzu.cookie.js, timeout=60, tag=字幕组.cookie
+# http-request ^http:\/\/ios.zmzapi.com\/index.php.*a=(mobile_)?login script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zimuzu/zimuzu.cookie.js, timeout=60, tag=字幕组.cookie
 
 # > 智行火车
 # hostname = 

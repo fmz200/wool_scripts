@@ -161,7 +161,7 @@ qczjSign = type=http-request, pattern=^http:\/\/mobile\.app\.autohome\.com\.cn\/
 奇瑞汽车App获取多账号token = type=http-response, pattern=^https:\/\/mobile-consumer-sapp\.chery\.cn\/web\/user\/current\/details\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cookie/get_cookie.js, requires-body=true, timeout=60
 
 # hostname = 
-人人视频.cookie = type=http-request, pattern=^https:\/\/api\.rr\.tv\/user\/profile, script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.cookie.js, timeout=60
+# 人人视频.cookie = type=http-request, pattern=^https:\/\/api\.rr\.tv\/user\/profile, script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.cookie.js, timeout=60
 
 # hostname = 
 什么值得买 = type=http-request, pattern=^https:\/\/user-api\.smzdm\.com\/users\/info, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cookie/get_cookie.js, timeout=60
@@ -267,9 +267,8 @@ wps.cookie = type=http-request, pattern=^https:\/\/zt.wps.cn\/2018\/docer_check_
 知音漫客 = type=http-request, pattern=^https:\/\/getconfig-globalapi\.zymk\.cn\/app_api\/*, script-path=https://raw.githubusercontent.com/XidNDD/2020scripts/master/zymkSign.js, requires-body=true, timeout=60
 
 # hostname = 
-字幕组.cookie = type=http-request, pattern=^https?:\/\/(www\.)?rrys2020\.com\/?.?, script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zimuzu/zimuzu.cookie.js, timeout=60
-
-字幕组.cookie = type=http-request, pattern=^http:\/\/ios.zmzapi.com\/index.php.*a=(mobile_)?login, script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zimuzu/zimuzu.cookie.js, timeout=60
+# 字幕组.cookie = type=http-request, pattern=^https?:\/\/(www\.)?rrys2020\.com\/?.?, script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zimuzu/zimuzu.cookie.js, timeout=60
+# 字幕组.cookie = type=http-request, pattern=^http:\/\/ios.zmzapi.com\/index.php.*a=(mobile_)?login, script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zimuzu/zimuzu.cookie.js, timeout=60
 
 # hostname = 
 智行火车.cookie = type=http-request, pattern=^https:\/\/m\.ctrip\.com/restapi/soa2/14593/json/attendanceDay?, script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zxhc/zxhc.cookie.js, requires-body=true, timeout=60
