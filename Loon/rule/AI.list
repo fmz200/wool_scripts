@@ -1,11 +1,11 @@
 #!name=AI分流合集
 #!desc=选择支持的地区
-#!author=lodepuly
+#!author=lodepuly, fmz200
 #!homepage=https://github.com/fmz200/wool_scripts
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/AI.list
 #!tg-channel=https://t.me/inaisi
-#!date=2025-10-03 21:12:08
+#!date=2026-03-31 16:50:08
 #############################################
 
 # OpenAI ChatGPT
@@ -29,6 +29,7 @@ DOMAIN-SUFFIX, sora.com
 DOMAIN-SUFFIX,apple-relay.apple.com
 DOMAIN-SUFFIX,apple-relay.fastly-edge.com
 DOMAIN-SUFFIX,apple-relay.cloudflare.com
+DOMAIN-SUFFIX,apple-relay.akamaized.net
 DOMAIN-SUFFIX,gateway.icloud.com
 DOMAIN-SUFFIX,guzzoni.apple.com
 DOMAIN-SUFFIX,cp4.cloudflare.com
@@ -61,6 +62,8 @@ DOMAIN, proactivebackend-pa.googleapis.com
 # Anthropic Claude
 DOMAIN-SUFFIX, anthropic.com
 DOMAIN-SUFFIX, claude.ai
+DOMAIN-SUFFIX, claude.com
+DOMAIN-SUFFIX, clau.de
 DOMAIN-SUFFIX, claudeusercontent.com
 IP-CIDR, 160.79.104.0/23, no-resolve
 IP-CIDR6, 2607:6bc0::/48, no-resolve
