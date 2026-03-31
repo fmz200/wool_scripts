@@ -2,7 +2,7 @@
   "dependencies": {
     "@vitalets/google-translate-api": "^9.2.1",
     "adm-zip": "^0.5.10",
-    "axios": "^1.7.8",
+    "axios": "1.13.5",
     "cheerio": "^1.1.2",
     "crypto-js": "^4.2.0",
     "dotenv": "^16.3.2",
@@ -17,7 +17,8 @@
     "request": "^2.88.2",
     "sharp": "^0.32.6",
     "sqlite3": "^5.1.7",
-    "terser": "^5.26.0"
+    "terser": "^5.26.0",
+    "xlsx": "^0.18.5"
   },
   "name": "wool_scripts",
   "description": "## 致敬开源精神 净化网络环境",
