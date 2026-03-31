@@ -9,7 +9,7 @@
 #!system = iOS, iPadOS
 #!system_version =
 #!loon_version =
-#!date=2025-12-25 20:30:00
+#!date=2026-03-31 23:00:00
 #!support=约9392行
 #!proxy-select=REJECT
 #############################################
@@ -839,6 +839,8 @@ DOMAIN-SUFFIX, staticxx.facebook.com
 
 # > 番茄小说
 DOMAIN, i-lq.snssdk.com
+DOMAIN, is-lq.snssdk.com
+DOMAIN, ug-sinfonlinea.bytedance.com
 DOMAIN, dig.bdurl.net
 DOMAIN, activity-ag.awemeughun.com
 DOMAIN, mcs.snssdk.com
