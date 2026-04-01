@@ -10,7 +10,7 @@
 #!system = iOS, iPadOS
 #!system_version = 
 #!loon_version = 
-#!date=2026-01-31 10:00:00
+#!date=2026-04-01 16:51:00
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
@@ -1671,8 +1671,6 @@ http:\/\/dili.sqcosmos.com\/jiekou\/endpage\/ad url reject-dict
 ^https?:\/\/s3plus\.meituan\.net\/ocean-blk-index\/index\/blk_conf_73\.json url reject-dict
 ^https?:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\.zip$ url reject-dict
 ^http:\/\/59\.82\.113\.10\/amdc\/mobileDispatch\?appkey=213807& url reject-dict
-# 美团订单详情页更多推荐
-^https?:\/\/apimobile\.meituan\.com\/group\/v1\/recommend\/unity\/recommends url reject-dict
 
 # > 美团众包
 # hostname = peisongapi.meituan.com

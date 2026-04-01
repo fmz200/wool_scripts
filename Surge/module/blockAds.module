@@ -8,7 +8,7 @@
 #!tg-channel=https://t.me/inaisi
 #!tag=去广告, fmz200, 奶思
 #!system=ios
-#!date=2026-03-29 23:50:00
+#!date=2026-04-01 16:51:00
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 #!arguments=12306_enable:true
 
@@ -2750,21 +2750,12 @@ http:\/\/dili.sqcosmos.com\/jiekou\/endpage\/ad data-type=text data="{}" status-
 
 # > 美团 & 美团外卖
 ^https?:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-
 ^https?:\/\/(s3plus|flowplus)\.meituan\.net\/v\d\/\w+\/linglong\/\w+\.(gif|jpg|mp4) data-type=tiny-gif status-code=200
-
 ^https?:\/\/img\.meituan\.net\/bizad\/bizad_brandCpt_\d+\.jpg data-type=tiny-gif status-code=200
-
 ^https?:\/\/img\.meituan\.net\/goodsawardpic\/[a-f0-9]+\.png\.webp data-type=tiny-gif status-code=200
-
 ^https?:\/\/s3plus\.meituan\.net\/ocean-blk-index\/index\/blk_conf_73\.json data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-
 ^https?:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\.zip$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-
 ^http:\/\/59\.82\.113\.10\/amdc\/mobileDispatch\?appkey=213807& data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-
-# 美团订单详情页更多推荐
-^https?:\/\/apimobile\.meituan\.com\/group\/v1\/recommend\/unity\/recommends data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 # > 美团充电宝小程序
 ^https?:\/\/cdb\.meituan\.com\/marketing\/source\/getPageSlotList data-type=text data="{}" status-code=200 header="Content-Type:application/json"
