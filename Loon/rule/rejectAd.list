@@ -1519,12 +1519,11 @@ DOMAIN-SUFFIX, rads.msn.com
 DOMAIN-SUFFIX, ad.mama.cn
 
 # > 美团
-DOMAIN, flowplus.meituan.net
-DOMAIN-SUFFIX,analytics.meituan.net
 DOMAIN-SUFFIX,meituan.xn
 DOMAIN-SUFFIX,meituan.yoga
 DOMAIN-SUFFIX,meituangov.cn
 DOMAIN-SUFFIX,report.meituan.com
+DOMAIN-SUFFIX,analytics.meituan.net
 DOMAIN-SUFFIX,wmlog.meituan.com
 DOMAIN-SUFFIX,ad.e.waimai.sankuai.com
 DOMAIN-SUFFIX,mads.meituan.com
