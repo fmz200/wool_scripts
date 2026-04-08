@@ -31,4 +31,4 @@ http-request ^https:\/\/www\.coolapk\.com\/link.* script-path=https://raw.github
 
 
 [MITM]
-hostname = api.coolapk.com
+hostname = api.coolapk.com, www.coolapk.com
