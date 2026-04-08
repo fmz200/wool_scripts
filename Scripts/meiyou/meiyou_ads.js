@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 美柚app去广告&净化
- * @date 2025-05-16 09:20:00
+ * @date 2026-04-08 14:20:00
  */
 
 const $ = new Env("美柚app去广告&净化");
@@ -18,12 +18,17 @@ try {
   mod_rsp = JSON.parse(rsp_body);
 
   if (req_url.includes("/api/configs?")) {
+    // HTTP dns
+    delete mod_rsp.data.apptech.httpdnsback;
+
     delete mod_rsp.data.meetyou_app_setting.root_tab.moneytab_title;
     delete mod_rsp.data.meetyou_app_setting.root_tab.moneytab_icon;
     delete mod_rsp.data.meetyou_app_setting.root_tab.moneytab_icon_highlighted;
   }
 
   if (req_url.includes("/api/configs/batch?")) {
+    // HTTP dns
+    delete mod_rsp.data.apptech.httpdnsback;
     // 启动页图片
     delete mod_rsp.data.meetyou_app_setting.launch_page;
     // 打开通知，及时接收重要消息
