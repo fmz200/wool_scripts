@@ -164,31 +164,34 @@ function notifyDone(title, body) {
 }
 
 // 执行开始
-if (typeof $request !== 'undefined' && $request) { // 抓包获取签到参数
-    console.log("开始获取签到参数");
-    const capture = {
-        url: $request.url,
-        paramsRaw: parseRawQuery($request.url),
-        headers: normalizeHeaderNameMap($request.headers || {})
-    };
-    // $prefs.setValueForKey(JSON.stringify(capture), ckKey);
-    $.write(JSON.stringify(capture), ckKey);
-    const keys = Object.keys(capture.paramsRaw).filter(k => k !== 'sign').join(', ');
-    // notifyDone('✅ 参数抓取成功', `已保存请求头+参数`);
-    $.notify('PingMe签到参数获取成功✅', '已保存请求头+参数', '');
-    console.log(`【${scriptName}】capture:\n${JSON.stringify(capture, null, 2)}`);
-    // $done({});
-    $.done();
-} else { // 签到
-    console.log("开始运行签到");
-    // const raw = $prefs.valueForKey(ckKey);
-    const raw = $.getdata(ckKey);
-    if (!raw) {
-        // notifyDone('⚠️ 未抓到参数', '先打开 PingMe 触发一次 ');
-        // $done();
-        await sendMsg("❌ 请先获取PingMe签到参数", "先打开 PingMe 触发一次");
+startTasks().then(r => $.done());
+
+async function startTasks() {
+    if (typeof $request !== 'undefined' && $request) { // 抓包获取签到参数
+        console.log("开始获取签到参数");
+        const capture = {
+            url: $request.url,
+            paramsRaw: parseRawQuery($request.url),
+            headers: normalizeHeaderNameMap($request.headers || {})
+        };
+        // $prefs.setValueForKey(JSON.stringify(capture), ckKey);
+        $.write(JSON.stringify(capture), ckKey);
+        const keys = Object.keys(capture.paramsRaw).filter(k => k !== 'sign').join(', ');
+        // notifyDone('✅ 参数抓取成功', `已保存请求头+参数`);
+        $.notify('PingMe签到参数获取成功✅', '已保存请求头+参数', '');
+        console.log(`【${scriptName}】capture:\n${JSON.stringify(capture, null, 2)}`);
+        // $done({});
         $.done();
-    } else {
+    } else { // 签到
+        console.log("开始运行签到");
+        // const raw = $prefs.valueForKey(ckKey);
+        const raw = $.getdata(ckKey);
+        if (!raw) {
+            // notifyDone('⚠️ 未抓到参数', '先打开 PingMe 触发一次 ');
+            // $done();
+            await sendMsg("❌ 请先获取PingMe签到参数", "先打开PingMe触发一次");
+            $.done();
+        } 
         let capture;
         try {
             capture = JSON.parse(raw);
@@ -204,11 +207,12 @@ if (typeof $request !== 'undefined' && $request) { // 抓包获取签到参数
 
         function fetchApi(path) {
             // return $task.fetch({ url: buildUrl(path, capture), method: 'GET', headers });
-            return $.http.get({ url: buildUrl(path, capture), headers: headers });
+            return $.http.get({url: buildUrl(path, capture), headers: headers});
         }
 
         function doVideoLoop(count) {
             let i = 0;
+
             function next() {
                 if (i >= count) return Promise.resolve();
                 return new Promise(resolve => {
@@ -235,6 +239,7 @@ if (typeof $request !== 'undefined' && $request) { // 抓包获取签到参数
                     }, i === 0 ? 1500 : VIDEO_DELAY);
                 });
             }
+
             return next();
         }
 
@@ -258,30 +263,36 @@ if (typeof $request !== 'undefined' && $request) { // 抓包获取签到参数
             return doVideoLoop(MAX_VIDEO);
         }).then(() => {
             return fetchApi('queryBalanceAndBonus');
-        }).then(res => {
+        }).then(async res => {
             try {
                 const d = JSON.parse(res.body);
                 if (d.retcode === 0) msgs.push(`💰 最新余额：${d.result.balance} Coins`);
-            } catch (e) {}
+            } catch (e) {
+            }
             // notifyDone('🎉 任务完成', msgs.join('\n'));
             if (!isNode) {
-                $.msg($.name + '🎉 任务完成', msgs.join('\n'), '', {'open-url': '', 'media-url': 'https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/PingMe.png'});
+                $.msg($.name + '🎉 任务完成', msgs.join('\n'), '', {
+                    'open-url': '',
+                    'media-url': 'https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/PingMe.png'
+                });
             } else {
-                sendMsg(msgs.join('\n'), "").then(r => console.log("通知发送完成"));
+                await sendMsg(msgs.join('\n'), "").then(r => console.log("通知发送完成"));
             }
             $.done();
-        }).catch(err => {
+        }).catch(async err => {
             // notifyDone('❌ 任务失败', msgs.join('\n') + '\n' + (err.error || String(err)));
             if (!isNode) {
-                $.msg($.name + '❌ 任务失败', msgs.join('\n') + '\n' + (err.error || String(err)), '', {'open-url': '', 'media-url': 'https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/PingMe.png'});
+                $.msg($.name + '❌ 任务失败', msgs.join('\n') + '\n' + (err.error || String(err)), '', {
+                    'open-url': '',
+                    'media-url': 'https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/PingMe.png'
+                });
             } else {
-                sendMsg(msgs.join('\n'), "").then(r => console.log("通知发送完成"));
+                await sendMsg(msgs.join('\n'), "").then(r => console.log("通知发送完成"));
             }
             $.done();
         });
     }
 }
-
 
 // API start
 async function sendMsg(desc, opts) { $.isNode() ? await notify.sendNotify($.name, desc) : $.msg($.name, $.subTitle || "", desc, opts) }
