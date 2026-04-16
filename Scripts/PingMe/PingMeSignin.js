@@ -165,6 +165,7 @@ function notifyDone(title, body) {
 
 // 执行开始
 if (typeof $request !== 'undefined' && $request) { // 抓包获取签到参数
+    console.log("开始获取签到参数");
     const capture = {
         url: $request.url,
         paramsRaw: parseRawQuery($request.url),
@@ -179,6 +180,7 @@ if (typeof $request !== 'undefined' && $request) { // 抓包获取签到参数
     // $done({});
     $.done();
 } else { // 签到
+    console.log("开始运行签到");
     // const raw = $prefs.valueForKey(ckKey);
     const raw = $.getdata(ckKey);
     if (!raw) {
