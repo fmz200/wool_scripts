@@ -6,7 +6,7 @@
   "repo": "https://github.com/fmz200/wool_scripts",
   "desc": "订阅大多都支持多账号，协定数据格式如下：有主键的用JSON，没有主键的拼接用#分割用@。\n例如{\"uid1\": \"token1\", \"uid2\": \"token2\",\"uid3\": \"token3\"}和uid1#token1@uid2#token2@uid3#token3",
   "raw": "https://raw.githubusercontent.com/fmz200/wool_scripts/refs/heads/main/boxjs/fmz200_boxjs.json",
-  "date": "更新日期：2025-08-10 10:00:00",
+  "date": "更新日期：2026-04-17 14:00:00",
   "apps": [
     {
       "id": "fmz200_xiaohongshu",
@@ -390,6 +390,38 @@
       "icons": [
         "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/chery.png",
         "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/chery.png"
+      ]
+    },{
+      "id": "fmz200_PingMe",
+      "name": "PingMe每日签到",
+      "keys": [
+        "pingme_capture_v3"
+      ],
+      "descs_html": [
+        "打开APP获取，可到代理工具脚本日志中查看获取到的数据"
+      ],
+      "settings": [
+        {
+          "id": "pingme_capture_v3",
+          "name": "",
+          "val": "",
+          "desc": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 8
+        }
+      ],
+      "author": "@ZenmoFeiShi, @fmz200",
+      "repo": "https://github.com/fmz200/wool_scripts",
+      "scripts": [
+        {
+          "name": "PingMe每日签到",
+          "script": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PingMe/PingMeSignin.js"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/PingMe.png",
+        "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/PingMe.png"
       ]
     },
     {

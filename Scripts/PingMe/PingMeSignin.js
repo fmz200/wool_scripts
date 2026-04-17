@@ -2,11 +2,11 @@
 @Name：PingMe 自动化签到+视频奖励
 @Author：怎么肥事 https://raw.githubusercontent.com/ZenmoFeiShi/Qx/refs/heads/main/PingMe.js
 @modify 奶思做了修改，理论支持 Qx,Loon,Surge,Egern,ShadowRocket,青龙
-@date 2026-04-16 14:00:00
+@date 2026-04-17 14:00:00
 
 ============QuanX============
 [rewrite_local]
-^https:\/\/api\.pingmeapp\.net\/app\/queryBalanceAndBonus url script-request-header https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PingMe/PingMeSignin.js
+^https:\/\/api\.pingmeapp\.net\/app\/queryBalanceAndBonus url script-request-header https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cookie/get_cookie.js
 
 [task_local]
 30 8,20 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PingMe/PingMeSignin.js, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/PingMe.png, tag=PingMe签到, enabled=true
@@ -167,7 +167,7 @@ function notifyDone(title, body) {
 startTasks().then(r => $.done());
 
 async function startTasks() {
-    if (typeof $request !== 'undefined' && $request) { // 抓包获取签到参数
+    /*if (typeof $request !== 'undefined' && $request) { // 抓包获取签到参数
         console.log("开始获取签到参数");
         const capture = {
             url: $request.url,
@@ -182,7 +182,7 @@ async function startTasks() {
         console.log(`【${scriptName}】capture:\n${JSON.stringify(capture, null, 2)}`);
         // $done({});
         $.done();
-    } else { // 签到
+    } else {*/ // 签到
         console.log("开始运行签到");
         // const raw = $prefs.valueForKey(ckKey);
         const raw = $.getdata(ckKey);
@@ -291,7 +291,7 @@ async function startTasks() {
             }
             $.done();
         });
-    }
+    /*}*/
 }
 
 // API start

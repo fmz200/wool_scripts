@@ -1,7 +1,7 @@
 /**
  * @author fmz200
  * @function 获取应用的cookie或token通用脚本
- * @date 2024-11-10 15:00:00
+ * @date 2026-04-17 14:00:00
  */
 
 ////////////////////////////////
@@ -260,6 +260,20 @@ try {
     }
   }
 
+  /**
+   * PingMe
+   */
+  if (req_url.includes("/app/queryBalanceAndBonus")) {
+    console.log('PingMe 开始');
+    const capture = {
+      url: req_url,
+      paramsRaw: parseRawQuery(req_url),
+      headers: normalizeHeaderNameMap(req_headers || {})
+    };
+    $.write(JSON.stringify(capture), 'pingme_capture_v3');
+    $.notify('PingMe 获取成功✅', req_url, req_url);
+    console.log('PingMe 获取到的内容为：' + req_url);
+  }
 } catch (e) {
   console.log('脚本运行出现错误：' + e.message);
   $.notify('获取Cookie脚本运行出现错误❗️', "", "");
@@ -337,6 +351,26 @@ function convertDataToString(data) {
   // 移除末尾的 '@' 符号
   result = result.slice(0, -1);
   return result;
+}
+
+function normalizeHeaderNameMap(headers) {
+  const out = {};
+  Object.keys(headers || {}).forEach(k => out[k] = headers[k]);
+  return out;
+}
+
+function parseRawQuery(url) {
+  const query = (url.split('?')[1] || '').split('#')[0];
+  const rawMap = {};
+  query.split('&').forEach(pair => {
+    if (!pair) return;
+    const idx = pair.indexOf('=');
+    if (idx < 0) return;
+    const k = pair.slice(0, idx);
+    const v = pair.slice(idx + 1);
+    rawMap[k] = v;
+  });
+  return rawMap;
 }
 
 /*********************************** API *************************************/
