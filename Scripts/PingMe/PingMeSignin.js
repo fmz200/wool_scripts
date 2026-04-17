@@ -278,7 +278,7 @@ async function startTasks() {
             } else {
                 await sendMsg(msgs.join('\n'), "").then(r => console.log("通知发送完成"));
             }
-            $.done();
+            // $.done();
         }).catch(async err => {
             // notifyDone('❌ 任务失败', msgs.join('\n') + '\n' + (err.error || String(err)));
             if (!isNode) {
@@ -289,7 +289,7 @@ async function startTasks() {
             } else {
                 await sendMsg(msgs.join('\n'), "").then(r => console.log("通知发送完成"));
             }
-            $.done();
+            // $.done();
         });
     /*}*/
 }
