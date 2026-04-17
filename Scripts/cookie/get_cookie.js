@@ -270,7 +270,7 @@ try {
       paramsRaw: parseRawQuery(req_url),
       headers: normalizeHeaderNameMap(req_headers || {})
     };
-    $.write(JSON.stringify(capture), 'pingme_capture_v3');
+    $.write(JSON.stringify(capture), '#pingme_capture_v3');
     $.notify('PingMe 获取成功✅', req_url, req_url);
     console.log('PingMe 获取到的内容为：' + req_url);
   }
