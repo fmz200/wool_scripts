@@ -178,7 +178,7 @@ async function startTasks() {
         $.write(JSON.stringify(capture), ckKey);
         const keys = Object.keys(capture.paramsRaw).filter(k => k !== 'sign').join(', ');
         // notifyDone('✅ 参数抓取成功', `已保存请求头+参数`);
-        $.notify('PingMe签到参数获取成功✅', '已保存请求头+参数', '');
+        await sendMsg('PingMe签到参数获取成功✅', '已保存请求头+参数');
         console.log(`【${scriptName}】capture:\n${JSON.stringify(capture, null, 2)}`);
         // $done({});
         $.done();
