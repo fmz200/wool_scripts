@@ -22,11 +22,125 @@ const isNode = $.isNode();
 const notify = isNode ? require('./sendNotify') : '';
 $.nodeNotifyMsg = []; // nodeJS合并通知
 
-const scriptName = 'PingMe';
 const ckKey = 'pingme_capture_v3';
 const SECRET = '0fOiukQq7jXZV2GRi9LGlO';
 const MAX_VIDEO = 5;
 const VIDEO_DELAY = 8000;
+
+// 执行开始
+startTasks().then(r => $.done());
+
+async function startTasks() {
+    console.log("开始运行签到");
+    // const raw = $prefs.valueForKey(ckKey);
+    const raw = $.getdata(ckKey);
+    if (!raw) {
+        // notifyDone('⚠️ 未抓到参数', '先打开 PingMe 触发一次 ');
+        // $done();
+        await sendMsg("❌ 请先获取PingMe签到参数", "先打开PingMe触发一次");
+        $.done();
+    }
+    let capture;
+    try {
+        capture = JSON.parse(raw);
+    } catch (e) {
+        // notifyDone('⚠️ 参数损坏', '请重新打开 PingMe 抓参');
+        // $done();
+        await sendMsg("❌ PingMe签到参数损坏", "可打开PingMe再触发一次");
+        $.done();
+    }
+
+    console.log("组装请求头");
+    const headers = buildHeaders(capture);
+    const msgs = [];
+
+    function fetchApi(path) {
+        // return $task.fetch({ url: buildUrl(path, capture), method: 'GET', headers });
+        return $.http.get({url: buildUrl(path, capture), headers: headers});
+    }
+
+    function doVideoLoop(count) {
+        let i = 0;
+
+        function next() {
+            if (i >= count) return Promise.resolve();
+            return new Promise(resolve => {
+                setTimeout(() => {
+                    i++;
+                    fetchApi('videoBonus').then(res => {
+                        try {
+                            const d = JSON.parse(res.body);
+                            if (d.retcode === 0) {
+                                msgs.push(`🎬 视频${i}：+${d.result?.bonus || '?'} Coins`);
+                                resolve(next());
+                            } else {
+                                msgs.push(`⏸ 视频${i}：${d.retmsg}`);
+                                resolve();
+                            }
+                        } catch (e) {
+                            msgs.push(`❌ 视频${i}：解析失败`);
+                            resolve();
+                        }
+                    }).catch(err => {
+                        msgs.push(`❌ 视频${i}：${err.error || '请求失败'}`);
+                        resolve();
+                    });
+                }, i === 0 ? 1500 : VIDEO_DELAY);
+            });
+        }
+
+        return next();
+    }
+
+    fetchApi('queryBalanceAndBonus').then(res => {
+        try {
+            const d = JSON.parse(res.body);
+            if (d.retcode === 0) msgs.push(`💰 余额：${d.result.balance} Coins`); else msgs.push(`⚠️ 查询：${d.retmsg}`);
+        } catch (e) {
+            msgs.push('❌ 查询：解析失败');
+        }
+        return fetchApi('checkIn');
+    }).then(res => {
+        try {
+            const d = JSON.parse(res.body);
+            if (d.retcode === 0) msgs.push(`✅ 签到：${(d.result?.bonusHint || d.retmsg || '').replace(/\n/g, ' ')}`); else msgs.push(`⚠️ 签到：${d.retmsg}`);
+        } catch (e) {
+            msgs.push('❌ 签到：解析失败');
+        }
+        return doVideoLoop(MAX_VIDEO);
+    }).then(() => {
+        return fetchApi('queryBalanceAndBonus');
+    }).then(async res => {
+        try {
+            const d = JSON.parse(res.body);
+            if (d.retcode === 0) msgs.push(`💰 最新余额：${d.result.balance} Coins`);
+        } catch (e) {
+            console.log("查询最新余额失败！");
+        }
+        // notifyDone('🎉 任务完成', msgs.join('\n'));
+        if (!isNode) {
+            $.msg($.name + '🎉 任务完成', msgs.join('\n'), '', {
+                'open-url': '',
+                'media-url': 'https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/PingMe.png'
+            });
+        } else {
+            await sendMsg(msgs.join('\n'), "").then(r => console.log("通知发送完成"));
+        }
+        // $.done();
+    }).catch(async err => {
+        // notifyDone('❌ 任务失败', msgs.join('\n') + '\n' + (err.error || String(err)));
+        if (!isNode) {
+            $.msg($.name + '❌ 任务失败', msgs.join('\n') + '\n' + (err.error || String(err)), '', {
+                'open-url': '',
+                'media-url': 'https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/PingMe.png'
+            });
+        } else {
+            await sendMsg(msgs.join('\n'), "").then(r => console.log("通知发送完成"));
+        }
+        // $.done();
+    });
+    /*}*/
+}
 
 function MD5(string) {
     function RotateLeft(lValue, iShiftBits) { return (lValue << iShiftBits) | (lValue >>> (32 - iShiftBits)); }
@@ -157,141 +271,6 @@ function buildHeaders(capture) {
     headers['Host'] = 'api.pingmeapp.net';
     headers['Accept'] = headers['Accept'] || 'application/json';
     return headers;
-}
-
-function notifyDone(title, body) {
-    $notify(scriptName, title, body);
-}
-
-// 执行开始
-startTasks().then(r => $.done());
-
-async function startTasks() {
-    /*if (typeof $request !== 'undefined' && $request) { // 抓包获取签到参数
-        console.log("开始获取签到参数");
-        const capture = {
-            url: $request.url,
-            paramsRaw: parseRawQuery($request.url),
-            headers: normalizeHeaderNameMap($request.headers || {})
-        };
-        // $prefs.setValueForKey(JSON.stringify(capture), ckKey);
-        $.write(JSON.stringify(capture), ckKey);
-        const keys = Object.keys(capture.paramsRaw).filter(k => k !== 'sign').join(', ');
-        // notifyDone('✅ 参数抓取成功', `已保存请求头+参数`);
-        await sendMsg('PingMe签到参数获取成功✅', '已保存请求头+参数');
-        console.log(`【${scriptName}】capture:\n${JSON.stringify(capture, null, 2)}`);
-        // $done({});
-        $.done();
-    } else {*/ // 签到
-        console.log("开始运行签到");
-        // const raw = $prefs.valueForKey(ckKey);
-        const raw = $.getdata(ckKey);
-        if (!raw) {
-            // notifyDone('⚠️ 未抓到参数', '先打开 PingMe 触发一次 ');
-            // $done();
-            await sendMsg("❌ 请先获取PingMe签到参数", "先打开PingMe触发一次");
-            $.done();
-        } 
-        let capture;
-        try {
-            capture = JSON.parse(raw);
-        } catch (e) {
-            // notifyDone('⚠️ 参数损坏', '请重新打开 PingMe 抓参');
-            // $done();
-            await sendMsg("❌ PingMe签到参数损坏", "可打开PingMe再触发一次");
-            $.done();
-        }
-
-        const headers = buildHeaders(capture);
-        const msgs = [];
-
-        function fetchApi(path) {
-            // return $task.fetch({ url: buildUrl(path, capture), method: 'GET', headers });
-            return $.http.get({url: buildUrl(path, capture), headers: headers});
-        }
-
-        function doVideoLoop(count) {
-            let i = 0;
-
-            function next() {
-                if (i >= count) return Promise.resolve();
-                return new Promise(resolve => {
-                    setTimeout(() => {
-                        i++;
-                        fetchApi('videoBonus').then(res => {
-                            try {
-                                const d = JSON.parse(res.body);
-                                if (d.retcode === 0) {
-                                    msgs.push(`🎬 视频${i}：+${d.result?.bonus || '?'} Coins`);
-                                    resolve(next());
-                                } else {
-                                    msgs.push(`⏸ 视频${i}：${d.retmsg}`);
-                                    resolve();
-                                }
-                            } catch (e) {
-                                msgs.push(`❌ 视频${i}：解析失败`);
-                                resolve();
-                            }
-                        }).catch(err => {
-                            msgs.push(`❌ 视频${i}：${err.error || '请求失败'}`);
-                            resolve();
-                        });
-                    }, i === 0 ? 1500 : VIDEO_DELAY);
-                });
-            }
-
-            return next();
-        }
-
-        fetchApi('queryBalanceAndBonus').then(res => {
-            try {
-                const d = JSON.parse(res.body);
-                if (d.retcode === 0) msgs.push(`💰 余额：${d.result.balance} Coins`);
-                else msgs.push(`⚠️ 查询：${d.retmsg}`);
-            } catch (e) {
-                msgs.push('❌ 查询：解析失败');
-            }
-            return fetchApi('checkIn');
-        }).then(res => {
-            try {
-                const d = JSON.parse(res.body);
-                if (d.retcode === 0) msgs.push(`✅ 签到：${(d.result?.bonusHint || d.retmsg || '').replace(/\n/g, ' ')}`);
-                else msgs.push(`⚠️ 签到：${d.retmsg}`);
-            } catch (e) {
-                msgs.push('❌ 签到：解析失败');
-            }
-            return doVideoLoop(MAX_VIDEO);
-        }).then(() => {
-            return fetchApi('queryBalanceAndBonus');
-        }).then(async res => {
-            try {
-                const d = JSON.parse(res.body);
-                if (d.retcode === 0) msgs.push(`💰 最新余额：${d.result.balance} Coins`);
-            } catch (e) {
-            }
-            // notifyDone('🎉 任务完成', msgs.join('\n'));
-            if (!isNode) {
-                $.msg($.name + '🎉 任务完成', msgs.join('\n'), '', {
-                    'open-url': '',
-                    'media-url': 'https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/PingMe.png'
-                });
-            } else {
-                await sendMsg(msgs.join('\n'), "").then(r => console.log("通知发送完成"));
-            }
-            // $.done();
-        }).catch(async err => {
-            // notifyDone('❌ 任务失败', msgs.join('\n') + '\n' + (err.error || String(err)));
-            if (!isNode) {
-                $.msg($.name + '❌ 任务失败', msgs.join('\n') + '\n' + (err.error || String(err)), '', {
-                    'open-url': '',
-                    'media-url': 'https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/PingMe.png'
-                });
-            } else {
-                await sendMsg(msgs.join('\n'), "").then(r => console.log("通知发送完成"));
-            }
-            // $.done();
-        });
-    /*}*/
 }
 
 // API start
