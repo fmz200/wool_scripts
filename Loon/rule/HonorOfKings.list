@@ -1,0 +1,16 @@
+#!name=王者荣耀国际版
+#!desc=分流选择支持的地区
+#!author=奶思
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/wangzherongyao.png
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/HonorOfKings.list
+#!tg-channel=https://t.me/inaisi
+#!date=2026-04-21 16:16:55
+#############################################
+
+IP-CIDR, 183.192.65.101/16, no-resolve
+IP-CIDR, 43.132.55.55/16, no-resolve
+DOMAIN-SUFFIX, intlgame.com
+DOMAIN-SUFFIX, sgameglobal.com
+DOMAIN-SUFFIX, appsflyersdk.com
+DOMAIN-KEYWORD, sgameglobal.com
