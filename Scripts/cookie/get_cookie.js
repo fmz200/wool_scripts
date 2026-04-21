@@ -271,7 +271,7 @@ try {
       headers: normalizeHeaderNameMap(req_headers || {})
     };
     $.write(JSON.stringify(capture), '#pingme_capture_v3');
-    $.notify('PingMe 获取成功✅', req_url, req_url);
+    $.notify('PingMe 获取成功✅', '现在你可以禁用此配置了', '');
     console.log('PingMe 获取到的内容为：' + req_url);
   }
 } catch (e) {

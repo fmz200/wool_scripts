@@ -92,7 +92,7 @@ async function startTasks() {
         return next();
     }
 
-    fetchApi('queryBalanceAndBonus').then(res => {
+    return fetchApi('queryBalanceAndBonus').then(res => {
         try {
             const d = JSON.parse(res.body);
             if (d.retcode === 0) msgs.push(`💰 余额：${d.result.balance} Coins`); else msgs.push(`⚠️ 查询：${d.retmsg}`);
