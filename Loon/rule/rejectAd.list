@@ -3214,6 +3214,10 @@ DOMAIN-SUFFIX, tfogc.com
 #DOMAIN-KEYWORD, volc
 AND,((NOT,((DOMAIN,volcengine-kdocs-cache.wpscdn.cn))), (NOT,((DOMAIN,vod-settings.volcvod.com))), (NOT,((DOMAIN,volcengine-kdocs-cache.wpscdn.cn))), (OR,((DOMAIN-KEYWORD,volc))))
 DOMAIN-KEYWORD, umeng
+DOMAIN-SUFFIX, 1a-1791.com
+DOMAIN-SUFFIX, rumble.com
+
+
 # Ad-Stir
 DOMAIN-SUFFIX, ad-stir.com 
 
@@ -3808,5 +3812,6 @@ DOMAIN, zgsdk.zhugeio.com
 DOMAIN-SUFFIX, zedo.com
 DOMAIN-SUFFIX, d8.zedo.com
 DOMAIN-SUFFIX, z1.zedo.com
+
 
 # >>>>>>>>>>>>>>> ✅ 其他 ✅ <<<<<<<<<<<<<<
