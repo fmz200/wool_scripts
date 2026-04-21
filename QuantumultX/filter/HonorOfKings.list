@@ -8,9 +8,9 @@
 #!date=2026-04-21 16:16:55
 #############################################
 
-IP-CIDR, 183.192.65.101/16, no-resolve
-IP-CIDR, 43.132.55.55/16, no-resolve
-host-suffix, intlgame.com
-host-suffix, sgameglobal.com
-host-suffix, appsflyersdk.com
-host-keyword, sgameglobal.com
+IP-CIDR, 183.192.65.101/16, HonorOfKings
+IP-CIDR, 43.132.55.55/16, HonorOfKings
+host-suffix, intlgame.com, HonorOfKings
+host-suffix, sgameglobal.com, HonorOfKings
+host-suffix, appsflyersdk.com, HonorOfKings
+host-keyword, sgameglobal.com, HonorOfKings
