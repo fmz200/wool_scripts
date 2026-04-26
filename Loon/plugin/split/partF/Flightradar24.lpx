@@ -12,4 +12,4 @@
 flightradar24_enable = switch,true,false,tag=Flightradar24-脚本开关
 
 [Script]
-http-response ^https?:\/\/mobile\.flightradar24\.com\/mobile\/(user-session|subscribe) script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/Flightradar24.js, requires-body=true, timeout=60, tag=Flightradar24解锁, enable={flightradar24_enable}
+# http-response ^https?:\/\/mobile\.flightradar24\.com\/mobile\/(user-session|subscribe) script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/Flightradar24.js, requires-body=true, timeout=60, tag=Flightradar24解锁, enable={flightradar24_enable}

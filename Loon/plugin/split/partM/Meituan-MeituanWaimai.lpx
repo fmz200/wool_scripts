@@ -16,8 +16,6 @@
 ^https?:\/\/s3plus\.meituan\.net\/ocean-blk-index\/index\/blk_conf_73\.json reject-dict
 ^https?:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\.zip$ reject-dict
 ^http:\/\/59\.82\.113\.10\/amdc\/mobileDispatch\?appkey=213807& reject-dict
-# 美团订单详情页更多推荐
-^https?:\/\/apimobile\.meituan\.com\/group\/v1\/recommend\/unity\/recommends reject-dict
 
 
 [MITM]

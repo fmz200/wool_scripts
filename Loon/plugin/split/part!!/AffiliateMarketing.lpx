@@ -29,6 +29,10 @@ DOMAIN-SUFFIX, tfogc.com, REJECT
 #DOMAIN-KEYWORD, volc, REJECT
 AND,((NOT,((DOMAIN,volcengine-kdocs-cache.wpscdn.cn))), (NOT,((DOMAIN,vod-settings.volcvod.com))), (NOT,((DOMAIN,volcengine-kdocs-cache.wpscdn.cn))), (OR,((DOMAIN-KEYWORD,volc)))), REJECT
 DOMAIN-KEYWORD, umeng, REJECT
+DOMAIN-SUFFIX, 1a-1791.com, REJECT
+DOMAIN-SUFFIX, rumble.com, REJECT
+
+
 # Ad-Stir, REJECT
 DOMAIN-SUFFIX, ad-stir.com , REJECT
 

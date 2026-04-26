@@ -9,7 +9,7 @@
 #############################################
 
 [Rewrite]
-^https?:\/\/gateway\.36kr\.com\/api\/adx\/ad\/show reject
+# ^https?:\/\/gateway\.36kr\.com\/api\/adx\/ad\/show reject
 
 
 

@@ -10,6 +10,8 @@
 
 [Rule]
 DOMAIN, i-lq.snssdk.com, REJECT
+DOMAIN, is-lq.snssdk.com, REJECT
+DOMAIN, ug-sinfonlinea.bytedance.com, REJECT
 DOMAIN, dig.bdurl.net, REJECT
 DOMAIN, activity-ag.awemeughun.com, REJECT
 DOMAIN, mcs.snssdk.com, REJECT

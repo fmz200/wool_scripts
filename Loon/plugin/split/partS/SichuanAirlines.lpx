@@ -9,7 +9,7 @@
 #############################################
 
 [Rewrite]
-^https?:\/\/mapi\.sichuanair\.com\/zt\/tribeport\/encrypt_translate_key reject-200
+# ^https?:\/\/mapi\.sichuanair\.com\/zt\/tribeport\/encrypt_translate_key reject-200
 
 
 [MITM]
