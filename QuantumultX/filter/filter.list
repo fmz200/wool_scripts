@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/filter.list
 #!tg-channel=https://t.me/inaisi
-#!date=2026-03-31 23:00:00
+#!date=2026-04-26 09:30:00
 #!support=约9760行
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
@@ -2320,6 +2320,9 @@ host-suffix, kkpgv2.kankan.com, reject
 host-suffix, cpm.cm.kankan.com, reject
 host-suffix, count.cpm.cm.kankan.com, reject
 
+# > 途虎养车
+host, analytics.tuhu.com, reject
+host, ta.tuhu.cn, reject
 
 
 # >>>>>>>>>>>>>>> ✅ U ✅ <<<<<<<<<<<<<<
