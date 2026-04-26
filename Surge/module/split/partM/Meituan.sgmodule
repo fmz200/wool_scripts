@@ -7,12 +7,11 @@
 #!tg-channel=https://t.me/inaisi
 
 [Rule]
-DOMAIN,flowplus.meituan.net,REJECT
-DOMAIN-SUFFIX,analytics.meituan.net,REJECT
 DOMAIN-SUFFIX,meituan.xn,REJECT
 DOMAIN-SUFFIX,meituan.yoga,REJECT
 DOMAIN-SUFFIX,meituangov.cn,REJECT
 DOMAIN-SUFFIX,report.meituan.com,REJECT
+DOMAIN-SUFFIX,analytics.meituan.net,REJECT
 DOMAIN-SUFFIX,wmlog.meituan.com,REJECT
 DOMAIN-SUFFIX,ad.e.waimai.sankuai.com,REJECT
 DOMAIN-SUFFIX,mads.meituan.com,REJECT

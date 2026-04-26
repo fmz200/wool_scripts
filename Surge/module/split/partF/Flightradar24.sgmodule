@@ -7,6 +7,3 @@
 #!tg-channel=https://t.me/inaisi
 #!arguments=flightradar24_enable:true
 
-[Script]
-Flightradar24解锁 = type=http-response, pattern=^https?:\/\/mobile\.flightradar24\.com\/mobile\/(user-session|subscribe), script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/Flightradar24.js, requires-body=true, timeout=60
-

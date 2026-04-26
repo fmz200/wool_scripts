@@ -21,9 +21,6 @@
 
 ^http:\/\/59\.82\.113\.10\/amdc\/mobileDispatch\?appkey=213807& data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
-# 美团订单详情页更多推荐
-^https?:\/\/apimobile\.meituan\.com\/group\/v1\/recommend\/unity\/recommends data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-
 [MITM]
 hostname = %APPEND% img.meituan.net, s3plus.meituan.net, flowplus.meituan.net
 
