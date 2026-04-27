@@ -57,6 +57,9 @@ try {
               entry.content.items = entry.content.items.filter((item) => {
                 const itemContent = item.item?.itemContent || item.itemContent;
                 const isItemAd = item.entryId?.includes("promoted") || itemContent?.promotedMetadata;
+                if (isItemAd) {
+                  console.log(`❌TweetDetail去除广告条目2：${item.entryId}`);
+                }
                 return !isItemAd;
               });
 
