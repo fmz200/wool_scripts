@@ -16,7 +16,7 @@
 # http-response-jq ^https?:\/\/x\.com\/i\/api\/graphql\/[^\/]+\/HomeTimeline '.data.home.home_timeline_urt.instructions[]?.entries |= map(select(.content.itemContent.promotedMetadata == null and (.entryId | startswith("promoted-tweet-") | not)))'
 
 [Script]
-X网页版去广告 = type=http-response,pattern=^https?:\/\/x\.com\/i\/api\/graphql\/[^\/]+\/(HomeTimeline|TweetDetail),requires-body=1,max-size=0,binary-body-mode=0,script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/X/X_ads.js
+X网页版去广告 = type=http-response, pattern=^https?:\/\/x\.com\/i\/api\/graphql\/[^\/]+\/(HomeTimeline|TweetDetail), script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/X/X_ads.js, requires-body=true
 
 [MITM]
 hostname = %APPEND% x.com
