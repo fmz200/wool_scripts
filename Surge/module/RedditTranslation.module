@@ -1,0 +1,9 @@
+#!name=Reddit 自动翻译
+#!desc=自动注入 x-reddit-translations 开启 Reddit App 翻译功能
+#!author=RavelloH
+
+[Script]
+Reddit自动翻译 = type=http-request, pattern=^https?:\/\/gql(-fed)?\.reddit\.com, script-path=https://gist.github.com/RavelloH/68ed0626dae69a1ce7c8ad6887087ea1/raw/c008127260bc4dcd550fcd98285048cf6176f602/main.js
+
+[MITM]
+hostname = %APPEND% gql.reddit.com, gql-fed.reddit.com
