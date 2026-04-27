@@ -11,7 +11,7 @@
 #!date=2026-04-26 09:30:00
 
 
-[Body Rewrite]
+# [Body Rewrite]
 # 首页信息流中的推广
 # http-response-jq ^https?:\/\/x\.com\/i\/api\/graphql\/[^\/]+\/HomeTimeline '.data.home.home_timeline_urt.instructions[]?.entries |= map(select(.content.itemContent.promotedMetadata == null and (.entryId | startswith("promoted-tweet-") | not)))'
 
