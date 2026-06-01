@@ -1,0 +1,593 @@
+{
+  "data": {
+    "pinned_timelines": {
+      "pinned_timelines": [
+        {
+          "__typename": "TagPinnedTimeline",
+          "description": "Politics, Government, Elections, Policy, Congress",
+          "icon_name": "topic_politics",
+          "name": "政治",
+          "scribe": "1925952771733262336",
+          "tab_label": "政治",
+          "tag": "1925952771733262336"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "description": "Interest Rates, Federal Reserve, Bonds, Options, Futures, Employment, Energy, Oil, Stocks, Macroeconomics, Economy",
+          "icon_name": "topic_business",
+          "name": "股票与经济",
+          "scribe": "1925952876284727296",
+          "tab_label": "股票",
+          "tag": "1925952876284727296"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "description": "Business \u0026 Finance, Economy, Markets, Investing, Corporate",
+          "icon_name": "topic_business",
+          "name": "商业与金融",
+          "scribe": "1925949659857530880",
+          "tab_label": "商业",
+          "tag": "1925949659857530880"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "description": "Science, Research, Discovery, Biology, Physics",
+          "icon_name": "topic_science",
+          "name": "科学",
+          "scribe": "1925949744683114496",
+          "tab_label": "科学",
+          "tag": "1925949744683114496"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "description": "Artificial Intelligence, AI, Machine Learning, ChatGPT, LLM",
+          "icon_name": "topic_ai",
+          "name": "人工智能",
+          "scribe": "1925953013547450368",
+          "tab_label": "AI",
+          "tag": "1925953013547450368"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "description": "Cryptocurrency, Crypto, Bitcoin, Ethereum, Blockchain",
+          "icon_name": "topic_crypto",
+          "name": "加密货币",
+          "scribe": "1925949693290295298",
+          "tab_label": "加密",
+          "tag": "1925949693290295298"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "description": "News, Breaking News, Headlines, Journalism, Current Events",
+          "icon_name": "topic_news",
+          "name": "新闻",
+          "scribe": "1925949634972626944",
+          "tab_label": "新闻",
+          "tag": "1925949634972626944"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "description": "Personal Finance, Budgeting, Saving, Money, Investing",
+          "icon_name": "topic_biz_finance",
+          "name": "个人理财",
+          "scribe": "1925952988486447104",
+          "tab_label": "金融",
+          "tag": "1925952988486447104"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "description": "Software Development, Programming, Coding, Developer, Open Source",
+          "icon_name": "topic_software",
+          "name": "软件开发",
+          "scribe": "1925953040130953216",
+          "tab_label": "软件",
+          "tag": "1925953040130953216"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_sports",
+          "name": "体育",
+          "scribe": "1925949452197478400",
+          "tab_label": "体育",
+          "tag": "1925949452197478400"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_technology",
+          "name": "科技",
+          "scribe": "1925949722688126976",
+          "tab_label": "科技",
+          "tag": "1925949722688126976"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_art",
+          "name": "艺术",
+          "scribe": "1925949898106540032",
+          "tab_label": "艺术",
+          "tag": "1925949898106540032"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_movies_tv",
+          "name": "电影与电视",
+          "scribe": "1925949788068909057",
+          "tab_label": "电影与电视",
+          "tag": "1925949788068909057"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_gaming",
+          "name": "游戏",
+          "scribe": "1925949766673797120",
+          "tab_label": "游戏",
+          "tag": "1925949766673797120"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_football",
+          "name": "美式橄榄球",
+          "scribe": "1925950554133446656",
+          "tab_label": "橄榄球",
+          "tag": "1925950554133446656"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_anime",
+          "name": "动漫",
+          "scribe": "1925949503837798401",
+          "tab_label": "动漫",
+          "tag": "1925949503837798401"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_travel",
+          "name": "旅行",
+          "scribe": "1925949812844769280",
+          "tab_label": "旅行",
+          "tag": "1925949812844769280"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_food",
+          "name": "美食与饮品",
+          "scribe": "1925949835649126400",
+          "tab_label": "美食",
+          "tag": "1925949835649126400"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_baseball",
+          "name": "棒球",
+          "scribe": "1925950576740675584",
+          "tab_label": "棒球",
+          "tag": "1925950576740675584"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_basketball",
+          "name": "篮球",
+          "scribe": "1925950530842464256",
+          "tab_label": "篮球",
+          "tag": "1925950530842464256"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_beauty",
+          "name": "美妆",
+          "scribe": "1925950199861538818",
+          "tab_label": "美妆",
+          "tag": "1925950199861538818"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_boxing",
+          "name": "拳击",
+          "scribe": "1925950713982537888",
+          "tab_label": "拳击",
+          "tag": "1925950713982537888"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_soccer",
+          "name": "足球",
+          "scribe": "1925950498420469760",
+          "tab_label": "足球",
+          "tag": "1925950498420469760"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_education",
+          "name": "职业",
+          "scribe": "1925950361245786112",
+          "tab_label": "职业",
+          "tag": "1925950361245786112"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_racing_car",
+          "name": "汽车",
+          "scribe": "1925950007624028160",
+          "tab_label": "汽车",
+          "tag": "1925950007624028160"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_pets",
+          "name": "宠物",
+          "scribe": "1925950249245282304",
+          "tab_label": "宠物",
+          "tag": "1925950249245282304"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_celebrity",
+          "name": "名人",
+          "scribe": "1925949555071176704",
+          "tab_label": "名人",
+          "tag": "1925949555071176704"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_music",
+          "name": "音乐",
+          "scribe": "1925949604224196608",
+          "tab_label": "音乐",
+          "tag": "1925949604224196608"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_music",
+          "name": "乡村音乐",
+          "scribe": "1925952353485602816",
+          "tab_label": "乡村音乐",
+          "tag": "1925952353485602816"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_dance",
+          "name": "舞蹈",
+          "scribe": "1925950383899267072",
+          "tab_label": "舞蹈",
+          "tag": "1925950383899267072"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_relationship",
+          "name": "恋爱与交友",
+          "scribe": "1925950276835454977",
+          "tab_label": "恋爱",
+          "tag": "1925950276835454977"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_design",
+          "name": "设计",
+          "scribe": "1925954681496322048",
+          "tab_label": "设计",
+          "tag": "1925954681496322048"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_education",
+          "name": "教育",
+          "scribe": "1925950405709631490",
+          "tab_label": "教育",
+          "tag": "1925950405709631490"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_music",
+          "name": "电子音乐",
+          "scribe": "1925952257893257217",
+          "tab_label": "电音",
+          "tag": "1925952257893257217"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_business",
+          "name": "创业公司",
+          "scribe": "1925952916411564032",
+          "tab_label": "创业公司",
+          "tag": "1925952916411564032"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_gaming",
+          "name": "电子竞技",
+          "scribe": "1925950783448576000",
+          "tab_label": "电子竞技",
+          "tag": "1925950783448576000"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_family",
+          "name": "婚姻与家庭",
+          "scribe": "1925954059338493952",
+          "tab_label": "家庭",
+          "tag": "1925954059338493952"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_fashion_beauty",
+          "name": "时尚",
+          "scribe": "1925949932181082112",
+          "tab_label": "时尚",
+          "tag": "1925949932181082112"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_music",
+          "name": "流行音乐",
+          "scribe": "1925952179791151105",
+          "tab_label": "流行音乐",
+          "tag": "1925952179791151105"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_golf",
+          "name": "高尔夫",
+          "scribe": "1925950690574180352",
+          "tab_label": "高尔夫",
+          "tag": "1925950690574180352"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_music",
+          "name": "韩流音乐",
+          "scribe": "1925952056088530944",
+          "tab_label": "韩流音乐",
+          "tag": "1925952056088530944"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_memes",
+          "name": "表情包",
+          "scribe": "1925949876694556672",
+          "tab_label": "表情包",
+          "tag": "1925949876694556672"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_health",
+          "name": "健康与健身",
+          "scribe": "1925949856834588672",
+          "tab_label": "健康",
+          "tag": "1925949856834588672"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_boxing",
+          "name": "综合格斗与摔跤",
+          "scribe": "1925950600140718080",
+          "tab_label": "摔跤",
+          "tag": "1925950600140718080"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_racing_car",
+          "name": "赛车与汽车运动",
+          "scribe": "1943810034309246976",
+          "tab_label": "赛车",
+          "tag": "1943810034309246976"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_racing_bike",
+          "name": "摩托车",
+          "scribe": "1925950100397793280",
+          "tab_label": "摩托车",
+          "tag": "1925950100397793280"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_nature",
+          "name": "自然与户外",
+          "scribe": "1925950228047216640",
+          "tab_label": "自然",
+          "tag": "1925950228047216640"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_hockey",
+          "name": "冰球",
+          "scribe": "1925950813043662848",
+          "tab_label": "曲棍球",
+          "tag": "1925950813043662848"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_sports",
+          "name": "奥运会",
+          "scribe": "1943811470724153345",
+          "tab_label": "奥运会",
+          "tag": "1943811470724153345"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_photography",
+          "name": "摄影",
+          "scribe": "1925954143472017408",
+          "tab_label": "照片",
+          "tag": "1925954143472017408"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_podcasts",
+          "name": "播客",
+          "scribe": "1925950433807175680",
+          "tab_label": "播客",
+          "tag": "1925950433807175680"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_realestate",
+          "name": "房地产",
+          "scribe": "1925952947197784064",
+          "tab_label": "房地产",
+          "tag": "1925952947197784064"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_technology",
+          "name": "机器人",
+          "scribe": "1925953169307189248",
+          "tab_label": "机器人",
+          "tag": "1925953169307189248"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_music",
+          "name": "摇滚",
+          "scribe": "1925952228818354177",
+          "tab_label": "摇滚",
+          "tag": "1925952228818354177"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_football",
+          "name": "橄榄球",
+          "scribe": "1925950895595876352",
+          "tab_label": "橄榄球",
+          "tag": "1925950895595876352"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_shopping",
+          "name": "购物",
+          "scribe": "1925949979966701568",
+          "tab_label": "购物",
+          "tag": "1925949979966701568"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_skiing",
+          "name": "冰雪运动",
+          "scribe": "1925950954962096130",
+          "tab_label": "冰雪运动",
+          "tag": "1925950954962096130"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_space",
+          "name": "太空",
+          "scribe": "1925953141452718081",
+          "tab_label": "太空",
+          "tag": "1925953141452718081"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_sports",
+          "name": "网球",
+          "scribe": "1925950625835008001",
+          "tab_label": "网球",
+          "tag": "1925950625835008001"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_home",
+          "name": "家居园艺",
+          "scribe": "1925950341452845057",
+          "tab_label": "首页",
+          "tag": "1925950341452845057"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_cricket",
+          "name": "板球",
+          "scribe": "1925950653035151360",
+          "tab_label": "板球",
+          "tag": "1925950653035151360"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_racing_car",
+          "name": "一级方程式",
+          "scribe": "1925950746756800513",
+          "tab_label": "F1",
+          "tag": "1925950746756800513"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_cycling",
+          "name": "骑行",
+          "scribe": "1925950926910582786",
+          "tab_label": "骑行",
+          "tag": "1925950926910582786"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_music",
+          "name": "J-Pop",
+          "scribe": "1925952123960709120",
+          "tab_label": "J-Pop",
+          "tag": "1925952123960709120"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_music",
+          "name": "音乐会",
+          "scribe": "1925952145615974400",
+          "tab_label": "音乐会",
+          "tag": "1925952145615974400"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_music",
+          "name": "嘻哈",
+          "scribe": "1925952203962896384",
+          "tab_label": "嘻哈",
+          "tag": "1925952203962896384"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_music",
+          "name": "爵士乐",
+          "scribe": "1925952300213768192",
+          "tab_label": "爵士乐",
+          "tag": "1925952300213768192"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_news",
+          "name": "犯罪",
+          "scribe": "1925952744239620096",
+          "tab_label": "犯罪",
+          "tag": "1925952744239620096"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_politics",
+          "name": "选举",
+          "scribe": "1925952820714332161",
+          "tab_label": "选举",
+          "tag": "1925952820714332161"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_science",
+          "name": "生物技术",
+          "scribe": "1925953107038519296",
+          "tab_label": "生物技术",
+          "tag": "1925953107038519296"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_health",
+          "name": "心理健康",
+          "scribe": "1925953421338726400",
+          "tab_label": "心理健康",
+          "tag": "1925953421338726400"
+        },
+        {
+          "__typename": "TagPinnedTimeline",
+          "icon_name": "topic_art",
+          "name": "数字艺术",
+          "scribe": "1925954197326831616",
+          "tab_label": "数字艺术",
+          "tag": "1925954197326831616"
+        }
+      ]
+    }
+  }
+}
