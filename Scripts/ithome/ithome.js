@@ -1,8 +1,14 @@
-// 2023-08-21 10:25
-
 /**
+ * IT之家去广告
+ * 
+ * @author 奶思
+ * @since 2026-06-01 18:17:00
+ * 
+ * 
+ * =========== QuanX ===========
  [rewrite_local]
  ^https:\/\/napi\.ithome\.com\/api\/(news\/index|topmenu\/getfeeds) url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ithome/ithome.js
+ ^https:\/\/napi\.ithome\.com\/api\/news\/indexv2\/iphone\/927 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ithome/ithome.js
 
  [mitm]
  hostname = napi.ithome.com
@@ -12,17 +18,12 @@ const url = $request.url;
 if (!$response.body) $done({});
 let obj = JSON.parse($response.body);
 
-if (
-    url.includes("/api/news/index") ||
-    url.includes("/api/topmenu/getfeeds")
-) {
+if (url.includes("/api/news/index") || url.includes("/api/topmenu/getfeeds")) {
   if (obj?.data?.list?.length > 0) {
     let list = obj.data.list;
     const newList = [];
     for (let item of list) {
-      if (item?.feedContent?.smallTags?.some((i) =>
-          i?.text?.includes("广告"))
-      ) {
+      if (item?.feedContent?.smallTags?.some((i) => i?.text?.includes("广告"))) {
         continue;
       }
       if ([10002, 10003].includes(item?.feedType)) {
@@ -34,4 +35,11 @@ if (
   }
 }
 
-$done({ body: JSON.stringify(obj) });
+// 信息流618广告
+if (url.includes("/api/news/indexv2/iphone/927")) {
+  if (obj?.data?.list?.length > 0) {
+    obj.data.list = obj.data.list.filter((item) => item?.feedType !== 10004);
+  }
+}
+
+$done({body: JSON.stringify(obj)});
