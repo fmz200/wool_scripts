@@ -17,41 +17,6 @@ let mod_rsp = rsp_body;
 try {
   mod_rsp = JSON.parse(rsp_body);
   
-  // 开启"翻译"按钮 - 仅处理首页信息流
-  if (req_url.includes("/HomeTimeline")) {
-    const processTweet = (node) => {
-      if (!node || typeof node !== 'object') return;
-
-      // 寻找推文主体（包含 __typename 且类型为 Tweet 的对象）
-      if (node.__typename === "Tweet" || node.__typename === "TweetWithVisibilityResults") {
-        let tweetData = node.tweet || node.result || node;
-
-        // 强制开启翻译开关
-        // 非中文 & 非未知语言 → 强制开启翻译
-        // zh = 中文, zxx = 未知/纯链接, und = 未确定
-        const lang = tweetData.legacy?.lang;
-        if (lang && lang !== "zh" && lang !== "zxx" && lang !== "und") {
-          tweetData.is_translatable = true;
-        }
-
-        // 开启 Grok 翻译可用性
-        if (tweetData.grok_translated_post_with_availability) {
-          tweetData.grok_translated_post_with_availability.is_available = true;
-        }
-      }
-
-      // 递归遍历所有属性（处理转发、引用、列表等）
-      for (let key in node) {
-        if (typeof node[key] === 'object') {
-          processTweet(node[key]);
-        }
-      }
-    };
-
-    processTweet(mod_rsp.data);
-    console.log(`✅HomeTimeline开启翻译按钮执行完成`);
-  }
-
   // "顶部标签页" - 返回固定的 PinnedTimelines 数据
   if (req_url.includes("/PinnedTimelines?")) {
     mod_rsp = {
