@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/author/NaiSi_01.png
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/script/tasks.scripts
 #!tg-channel=https://t.me/inaisi
-#!date=2025-04-26 22:10:00
+#!date=2026-06-02 16:10:00
 #############################################
 # 配置语法 脚本默认执行超时时间200s
 # cron "0 8 * * *" script-path=cron.js,tag = cronScript,timeout = 300,argument = "1234",enable=true
@@ -84,14 +84,14 @@ cron "0 2 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scri
 cron "10 2 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/neteasemusic.js, enable=false, tag=网易云音乐
 cron "30 2 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasenews/neteasenews.js, enable=false, tag=网易新闻
 cron "40 2 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qunar/qunar.js, enable=false, tag=去哪儿
-cron "50 2 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.js, enable=false, tag=人人视频
+#cron "50 2 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.js, enable=false, tag=人人视频
 cron "0 3 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js, enable=false, tag= 顺丰速运
 cron "10 3 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.js, enable=false, tag=什么值得买
 cron "20 3 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/v2ex/v2ex.js, enable=false, tag=V2EX
 cron "30 3 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/videoqq/videoqq.js, enable=false, tag=腾讯视频
 cron "40 3 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ximalaya/ximalaya.js, enable=false, tag=喜马拉雅
 cron "50 3 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/yanxuan/yanxuan.js, enable=false, tag=网易严选
-cron "0 4 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zimuzu/zimuzu.js, enable=false, tag=字幕组
+#cron "0 4 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zimuzu/zimuzu.js, enable=false, tag=字幕组
 cron "12 4 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qqmusic/qqmusic.js, enable=false, tag=QQ音乐
 cron "12 4 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/csdn/csdn.js, enable=false, tag=CSDN
 cron "33 4 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/gdoil/gdoil.js, enable=false, tag=加油广东
@@ -117,7 +117,7 @@ cron "40 7 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scr
 cron "50 7 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zxhc/zxhc.js, enable=false, tag=智行火车
 cron "0 8 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/suning/suning.js, enable=false, tag=苏宁易购
 cron "10 8 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zaker/zaker.js, enable=false, tag=Zaker
-cron "20 8 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bubei/bubei.js, enable=false, tag=不背单词
+#cron "20 8 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bubei/bubei.js, enable=false, tag=不背单词
 ;cron "30 8 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/dbsj/dbsj.js, enable=false, tag=豆瓣时间
 cron "40 8 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/hellobike/hellobike.js, enable=false, tag=哈啰出行
 cron "50 8 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zsfc/zsfc.js, enable=false, tag=掌上飞车
