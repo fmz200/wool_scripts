@@ -8,7 +8,7 @@
 #!tg-channel=https://t.me/inaisi
 #!tag=去广告, fmz200, 奶思
 #!system=ios
-#!date=2026-06-01 18:17:00
+#!date=2026-06-04 17:17:00
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 #!arguments=12306_enable:true
 
@@ -277,6 +277,11 @@ DOMAIN,httpdns.music.163.com,REJECT
 
 # > 小红书
 # hostname = edith.xiaohongshu.com, www.xiaohongshu.com, ci.xiaohongshu.com, rec.xiaohongshu.com, so.xiaohongshu.com
+DOMAIN, ads-img-qc.xhscdn.com, REJECT
+DOMAIN, ads-img-al.xhscdn.com, REJECT
+DOMAIN, ads-video-al.xhscdn.com, REJECT
+DOMAIN, ads-video-qc.xhscdn.com, REJECT
+DOMAIN, t-ads.xiaohongshu.com, REJECT
 AND,((PROTOCOL,QUIC),(DOMAIN-SUFFIX,xiaohongshu.com)),REJECT
 
 # > 闲鱼

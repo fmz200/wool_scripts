@@ -5,7 +5,7 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/filter/filter.list
 #!tg-channel=https://t.me/inaisi
-#!date=2026-04-26 09:30:00
+#!date=2026-06-04 17:17:00
 #!support=约9760行
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
@@ -2631,6 +2631,7 @@ host-suffix, upos-app.ximalaya.com, reject
 
 # > 小红书
 host, ads-img-qc.xhscdn.com, reject
+host, ads-img-al.xhscdn.com, reject
 host, ads-video-al.xhscdn.com, reject
 host, ads-video-qc.xhscdn.com, reject
 host, t-ads.xiaohongshu.com, reject

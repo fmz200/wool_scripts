@@ -1,8 +1,7 @@
 /**
- * @author fmz200，Baby
+ * @author fmz200
  * @function 小红书去广告、净化、解除下载限制、画质增强等
- * @date 2026-01-18 23:10:00
- * @quote @RuCu6
+ * @date 2026-06-04 17:17:00
  */
 
 const $ = new Env('小红书');
@@ -329,6 +328,7 @@ if (url.includes("/v6/homefeed")) {
 if (url.includes("/api/sns/v5/note/comment/list?") || url.includes("/api/sns/v3/note/comment/sub_comments?")) {
   replaceRedIdWithFmz200(obj.data);
   let livePhotos = [];
+  let commentVideos = [];
   let note_id = "";
   if (obj.data?.comments?.length > 0) {
     note_id = obj.data.comments[0].note_id;
@@ -342,6 +342,8 @@ if (url.includes("/api/sns/v5/note/comment/list?") || url.includes("/api/sns/v3/
         comment.media_source_type = 0;
         console.log(`修改媒体类型：1->0`);
       }
+
+      // 主评论live照片处理
       if (comment.pictures?.length > 0) {
         console.log("comment_id: " + comment.id);
         for (const picture of comment.pictures) {
@@ -349,15 +351,16 @@ if (url.includes("/api/sns/v5/note/comment/list?") || url.includes("/api/sns/v3/
             const picObj = JSON.parse(picture.video_info);
             if (picObj.stream?.h265?.[0]?.master_url) {
               console.log("video_id：" + picture.video_id);
-              const videoData = {
+              livePhotos.push({
                 videId: picture.video_id,
                 videoUrl: picObj.stream.h265[0].master_url
-              };
-              livePhotos.push(videoData);
+              });
             }
           }
         }
       }
+
+      // 子评论live图处理
       if (comment.sub_comments?.length > 0) {
         for (const sub_comment of comment.sub_comments) {
           if (sub_comment.comment_type === 3) {
@@ -375,20 +378,53 @@ if (url.includes("/api/sns/v5/note/comment/list?") || url.includes("/api/sns/v3/
                 const picObj = JSON.parse(picture.video_info);
                 if (picObj.stream?.h265?.[0]?.master_url) {
                   console.log("video_id1：" + picture.video_id);
-                  const videoData = {
+                  livePhotos.push({
                     videId: picture.video_id,
                     videoUrl: picObj.stream.h265[0].master_url
-                  };
-                  livePhotos.push(videoData);
+                  });
                 }
               }
             }
           }
         }
       }
+
+      // 评论视频处理 
+      if (comment?.videos?.length > 0) {
+        for (const video of comment.videos) {
+          if (video?.video_id && video?.video_info) {
+            try {
+              const videoObj = JSON.parse(video.video_info);
+              const streams = videoObj?.stream?.h265;
+
+              if (streams?.length > 0) {
+                // 这里的流选择函数忽略 按脚本实际情况修改
+                // const bestStream = selectBestStream(streams);
+
+                if (streams[0].master_url) {
+                  commentVideos.push({
+                    videId: video.video_id,
+                    videoUrl: bestStream.master_url,
+                    commentId: comment.id,
+                    noteId: note_id,
+                    width: bestStream.width,
+                    height: bestStream.height,
+                    bitrate: bestStream.video_bitrate,
+                    hdr: bestStream.hdr_type === 1
+                  });
+                }
+              }
+            } catch (e) {
+              
+            }
+          }
+        }
+      }
+      
     }
   }
   console.log("本次note_id：" + note_id);
+  // 存储评论实况照片
   if (livePhotos.length > 0) {
     let commitsRsp;
     const commitsCache = $.getdata("fmz200.xiaohongshu.comments.rsp");
@@ -409,11 +445,33 @@ if (url.includes("/api/sns/v5/note/comment/list?") || url.includes("/api/sns/v3/
     console.log("写入缓存val：" + JSON.stringify(commitsRsp));
     $.setdata(JSON.stringify(commitsRsp), "fmz200.xiaohongshu.comments.rsp");
   }
+
+  // 存储评论视频信息
+  if (commentVideos.length > 0) {
+    let videosCache;
+    const commitsCache = $.getdata("fmz200.xiaohongshu.comments.videos.rsp");
+    if (!commitsCache) {
+      videosCache = {noteId: note_id, videos: commentVideos};
+    } else {
+      videosCache = JSON.parse(commitsCache);
+      console.log("[commentVideos]缓存note_id：" + videosCache.noteId);
+      if (videosCache.noteId === note_id) {
+        console.log("[commentVideos]增量数据");
+        videosCache.videos = deduplicateLivePhotos(videosCache.videos.concat(commentVideos));
+      } else {
+        console.log("[commentVideos]更换数据");
+        videosCache = {noteId: note_id, videos: commentVideos};
+      }
+    }
+    console.log("[commentVideos]写入缓存val：" + JSON.stringify(videosCache));
+    $.setdata(JSON.stringify(videosCache), "fmz200.xiaohongshu.comments.videos.rsp");
+  }
 }
 
-// 下载评论区live图
+// 下载评论区live图/评论区视频
 if (url.includes("/api/sns/v1/interaction/comment/video/download?")) {
   const commitsCache = $.getdata("fmz200.xiaohongshu.comments.rsp");
+  const commitsVideoCache = $.getdata("fmz200.xiaohongshu.comments.videos.rsp");
   console.log("读取缓存val：" + commitsCache);
   console.log("目标video_id：" + obj.data.video.video_id);
   if (commitsCache) {
@@ -423,6 +481,18 @@ if (url.includes("/api/sns/v1/interaction/comment/video/download?")) {
         // console.log("缓存video_id：" + item.videId);
         if (item.videId === obj.data.video.video_id) {
           console.log("匹配到无水印链接：" + item.videoUrl);
+          obj.data.video.video_url = item.videoUrl;
+          break;
+        }
+      }
+    }
+  } else if (commitsVideoCache){
+    let commitsVideoRsp = JSON.parse(commitsVideoCache);
+    if (commitsVideoRsp.videos.length > 0 && obj.data?.video) {
+      for (const item of commitsVideoRsp.videos) {
+        // console.log("缓存video_id：" + item.videId);
+        if (item.videId === obj.data.video.video_id) {
+          console.log("[commentVideos]匹配到无水印链接：" + item.videoUrl);
           obj.data.video.video_url = item.videoUrl;
           break;
         }
@@ -470,6 +540,7 @@ function replaceUrlContent(collectionA, collectionB) {
   collectionA.forEach(itemA => {
     const itemB = collectionB.find(itemB => itemB.file_id === itemA.file_id);
     if (itemB) {
+      // TODO 这里的匹配条件有点问题，不一定是mp4格式
       itemA.url = itemA.url !== "" ? itemA.url.replace(/^https?:\/\/.*\.mp4(\?[^"]*)?/g, `${itemB.url.match(/(.*)\.mp4/)[1]}.mp4`) : itemB.url;
       itemA.author = "@fmz200"
     }
