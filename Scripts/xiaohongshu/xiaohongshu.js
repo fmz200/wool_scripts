@@ -395,27 +395,23 @@ if (url.includes("/api/sns/v5/note/comment/list?") || url.includes("/api/sns/v3/
           if (video?.video_id && video?.video_info) {
             try {
               const videoObj = JSON.parse(video.video_info);
-              const streams = videoObj?.stream?.h265;
-
-              if (streams?.length > 0) {
-                // 这里的流选择函数忽略 按脚本实际情况修改
-                // const bestStream = selectBestStream(streams);
-
-                if (streams[0].master_url) {
-                  commentVideos.push({
-                    videId: video.video_id,
-                    videoUrl: bestStream.master_url,
-                    commentId: comment.id,
-                    noteId: note_id,
-                    width: bestStream.width,
-                    height: bestStream.height,
-                    bitrate: bestStream.video_bitrate,
-                    hdr: bestStream.hdr_type === 1
-                  });
-                }
+              // 这里的流选择函数忽略 按脚本实际情况修改
+              // const bestStream = selectBestStream(streams);
+              const streams = videoObj?.stream?.h265.length > 1 ? videoObj?.stream?.h265[1] : videoObj?.stream?.h265[0];
+              if (streams.master_url) {
+                commentVideos.push({
+                  videId: video.video_id,
+                  videoUrl: streams.master_url,
+                  commentId: comment.id,
+                  noteId: note_id,
+                  width: streams.width,
+                  height: streams.height,
+                  bitrate: streams.video_bitrate,
+                  hdr: streams.hdr_type === 1
+                });
               }
             } catch (e) {
-              
+              console.log("评论视频处理出错", e);
             }
           }
         }
