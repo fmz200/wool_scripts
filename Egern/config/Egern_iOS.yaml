@@ -1,0 +1,465 @@
+# Egern自用配置
+# 注意事项: 以下内容中，带“#”开头的行都是注释，去掉注释符号该行才有效
+# 文件地址：https://raw.githubusercontent.com/fmz200/wool_scripts/main/Egern/config/Egern_iOS.yaml
+# 发布频道：https://t.me/inaisi
+# 更新时间: 2026-06-16 20:00:00
+# 配置作者: 奶思
+
+ipv6: true
+vif_only: true
+block_quic: true
+hijack_dns:
+- '*:53'
+geoip_db_url: https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country.mmdb
+asn_db_url: https://raw.githubusercontent.com/Loyalsoldier/geoip/release/GeoLite2-ASN.mmdb
+proxy_latency_test_url: http://www.google.com/generate_204
+direct_latency_test_url: http://taobao.com/
+dns:
+  bootstrap:
+  - 223.5.5.5
+  - 119.29.29.29
+  upstreams:
+    SecureDNS:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  forward:
+  - domain_wildcard:
+      match: '*'
+      value: SecureDNS
+  hosts:
+    iosapps.itunes.apple.com:
+    - iosapps.itunes.apple.com.download.ks-cdn.com
+  public_ip_lookup_url: https://ifconfig.me/ip
+bypass_tunnel_proxy:
+- 192.168.0.0/16
+- 10.0.0.0/8
+- 172.16.0.0/12
+- localhost
+- '*.local'
+- e.crashlynatics.com
+real_ip_domains:
+- '*.battle.net'
+- '*.blzstatic.cn'
+- '*.battlenet.com'
+- '*.battlenet.com.cn'
+- '*.xboxlive.com'
+- xbox.*.microsoft.com
+- '*.stun.playstation.net'
+- '*.srv.nintendo.net'
+- '*.msftncsi.com'
+- '*.msftconnecttest.com'
+- msftncsi.com
+- msftconnecttest.com
+policy_groups:
+- select:
+    name: 大陆网址
+    policies:
+    - DIRECT
+    - 美国节点
+    - 狮城节点
+    - 香港节点
+    - 日本节点
+    - 台湾节点
+    - 韩国节点
+    flatten: false
+    icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/flag/CN_02.png
+    hidden: false
+- select:
+    name: 兜底策略
+    policies:
+    - 香港节点
+    - 日本节点
+    - 美国节点
+    - 狮城节点
+    - 台湾节点
+    - DIRECT
+    flatten: false
+    icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Egern_00.png
+    hidden: false
+- auto_test:
+    name: 代理节点
+    policies:
+    - 我的机场
+    flatten: true
+    icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Proxy.png
+    hidden: false
+- select:
+    name: 电报消息
+    policies:
+    - 美国节点
+    - 狮城节点
+    - 香港节点
+    flatten: false
+    icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Telegram_01.png
+    hidden: false
+- select:
+    name: 微信消息
+    policies:
+    - DIRECT
+    - 香港节点
+    - 台湾节点
+    - 狮城节点
+    - 美国节点
+    flatten: false
+    icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/wechat.png
+    hidden: false
+- select:
+    name: 微博服务
+    policies:
+    - 香港节点
+    - 台湾节点
+    - 日本节点
+    - 狮城节点
+    - 韩国节点
+    - 美国节点
+    - DIRECT
+    flatten: false
+    icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Weibo-01.png
+    hidden: false
+- select:
+    name: 大陆抖音
+    policies:
+    - 台湾节点
+    - 日本节点
+    - 韩国节点
+    - 狮城节点
+    - 美国节点
+    - DIRECT
+    flatten: false
+    icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Tiktok_09.png
+    hidden: false
+- select:
+    name: 海外抖音
+    policies:
+    - 香港节点
+    - 台湾节点
+    - 日本节点
+    - 韩国节点
+    - 狮城节点
+    - 美国节点
+    flatten: false
+    icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Tiktok_06.png
+    hidden: false
+- select:
+    name: 人工智能
+    policies:
+    - 美国节点
+    - 日本节点
+    - 台湾节点
+    - 韩国节点
+    - 狮城节点
+    - 香港节点
+    flatten: false
+    icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ChatGPT7.png
+    hidden: false
+- select:
+    name: 苹果服务
+    policies:
+    - DIRECT
+    - 香港节点
+    - 狮城节点
+    - 美国节点
+    flatten: false
+    icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Apple_02.png
+    hidden: false
+- select:
+    name: 谷歌服务
+    policies:
+    - 美国节点
+    - 香港节点
+    - 台湾节点
+    - 日本节点
+    - 韩国节点
+    - 狮城节点
+    flatten: false
+    icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Google.png
+    hidden: false
+- select:
+    name: 油管视频
+    policies:
+    - 香港节点
+    - 台湾节点
+    - 日本节点
+    - 韩国节点
+    - 狮城节点
+    - 美国节点
+    flatten: false
+    icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/YouTube_01.png
+    hidden: false
+- smart:
+    name: 香港节点
+    policies:
+    - 代理节点
+    flatten: true
+    filter: (?i)🇭🇰|香港|(\b(HK|Hong)\b)
+    icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/flag/HK_03.png
+    hidden: false
+- smart:
+    name: 台湾节点
+    policies:
+    - 代理节点
+    flatten: true
+    filter: (?i)🇨🇳|🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)
+    icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/flag/TW_02.png
+    hidden: false
+- smart:
+    name: 狮城节点
+    policies:
+    - 代理节点
+    flatten: true
+    filter: (?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)
+    icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/flag/SG_02.png
+    hidden: false
+- smart:
+    name: 美国节点
+    policies:
+    - 代理节点
+    flatten: true
+    filter: (?i)🇺🇸|美国|洛杉矶|圣何塞|(\b(US|United States)\b)
+    icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/flag/US_02.png
+    hidden: false
+- smart:
+    name: 日本节点
+    policies:
+    - 代理节点
+    flatten: true
+    filter: (?i)🇯🇵|日本|东京|(\b(JP|Japan)\b)
+    icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/flag/JP_02.png
+    hidden: false
+- smart:
+    name: 韩国节点
+    policies:
+    - 代理节点
+    flatten: true
+    filter: (?i)🇰🇷|韩国|首尔|(\b(KR|Korea)\b)
+    icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/flag/KR_02.png
+    hidden: false
+- external:
+    name: 我的机场
+    type: auto_test
+    urls:
+    - https://sub.store/download/local
+    icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/SubStore.png
+    hidden: false
+rules:
+- rule_set:
+    name: 腾讯视频去广告@奶思
+    match: https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/TencentVideo.list
+    policy: REJECT
+    disabled: false
+- rule_set:
+    name: 广告拦截合集@奶思
+    match: https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/rejectAd.list
+    policy: REJECT
+    disabled: false
+- domain_suffix:
+    match: boxjs.com
+    policy: 兜底策略
+    disabled: false
+- domain_suffix:
+    match: boxjs.net
+    policy: 兜底策略
+    disabled: false
+- rule_set:
+    name: AI分流合集@奶思
+    match: https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/AI.list
+    policy: 人工智能
+    disabled: false
+- rule_set:
+    name: 抖音IP@奶思
+    match: https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/Douyin.list
+    policy: 大陆抖音
+    disabled: false
+- rule_set:
+    name: 小红书IP@奶思
+    match: https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/RedBook.list
+    policy: 狮城节点
+    disabled: false
+- rule_set:
+    name: 快手IP@奶思
+    match: https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/KuaiShou.list
+    policy: 狮城节点
+    disabled: false
+- rule_set:
+    match: https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Loon/WeChat/WeChat.list
+    policy: 微信消息
+    disabled: false
+- rule_set:
+    match: https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Loon/Weibo/Weibo.list
+    policy: 微博服务
+    disabled: false
+- rule_set:
+    match: https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Loon/BiliBili/BiliBili.list
+    policy: 香港节点
+    disabled: false
+- rule_set:
+    match: https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/Soul.list
+    policy: 台湾节点
+    disabled: false
+- rule_set:
+    match: https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Loon/TikTok/TikTok.list
+    policy: 海外抖音
+    disabled: false
+- rule_set:
+    match: https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Loon/Telegram/Telegram.list
+    policy: 电报消息
+    disabled: false
+- rule_set:
+    match: https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Loon/TestFlight/TestFlight.list
+    policy: 苹果服务
+    disabled: false
+- rule_set:
+    name: Apple合集
+    match: https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/AppleAll.list
+    policy: 苹果服务
+    disabled: false
+- rule_set:
+    match: https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Loon/Spotify/Spotify.list
+    policy: 狮城节点
+    disabled: false
+- rule_set:
+    name: Twitter
+    match: https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/Twitter.list
+    policy: 美国节点
+    disabled: false
+- rule_set:
+    match: https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Loon/YouTube/YouTube.list
+    policy: 油管视频
+    disabled: false
+- rule_set:
+    match: https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Loon/GoogleVoice/GoogleVoice.list
+    policy: 美国节点
+    disabled: false
+- rule_set:
+    match: https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Loon/Google/Google.list
+    policy: 谷歌服务
+    disabled: false
+- rule_set:
+    name: Facebook
+    match: https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/Facebook.list
+    policy: 香港节点
+    disabled: false
+- rule_set:
+    match: https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Loon/Line/Line.list
+    policy: 香港节点
+    disabled: false
+- rule_set:
+    match: https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Loon/KakaoTalk/KakaoTalk.list
+    policy: 台湾节点
+    disabled: false
+- rule_set:
+    match: https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/Talkatone.list
+    policy: 美国自建
+    disabled: false
+- rule_set:
+    name: LinkedIn@bm7
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/LinkedIn/LinkedIn.list
+    policy: 美国节点
+    disabled: false
+- rule_set:
+    name: GitHub@bm7
+    match: https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Loon/GitHub/GitHub.list
+    policy: 兜底策略
+    disabled: false
+- rule_set:
+    name: 欧易分流@奶思
+    match: https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/OKX.list
+    policy: 美国节点
+    disabled: false
+- rule_set:
+    name: 币安分流@奶思
+    match: https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/Binance.list
+    policy: 美国节点
+    disabled: false
+- rule_set:
+    name: LAN@奶思
+    match: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/rule/LAN.list
+    policy: 大陆网址
+    disabled: false
+- rule_set:
+    name: GeoIP_CN@奶思
+    match: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/rule/GeoIP_CN.list
+    policy: 大陆网址
+    disabled: false
+- default:
+    policy: 兜底策略
+url_rewrites:
+- match: ^https?:\/\/(www.)?(g|google)\.cn
+  location: https://www.google.com
+  status_code: 302
+header_rewrites:
+- replace:
+    match: ^(https:\/\/(raw|gist)\.githubusercontent\.com\/|https:\/\/github\.com\/)
+    name: Accept-Language
+    value: en-us
+    type: request
+    disabled: true
+body_rewrites:
+- request_jq:
+    match: ^https?://testflight\.apple\.com/v\d/accounts/.+?/install$
+    filter: .storefrontId = "143441-19,29"
+    disabled: true
+scriptings:
+- schedule:
+    name: gist备份
+    cron: 10 0/8 * * *
+    script_url: https://raw.githubusercontent.com/dompling/Script/master/gist/backup.js
+    timeout: 60
+    disabled: true
+- schedule:
+    name: gist恢复
+    cron: 10 0,22 * * *
+    script_url: https://raw.githubusercontent.com/dompling/Script/master/gist/restore.js
+    timeout: 60
+    disabled: true
+mitm:
+  ca_p12: egern.p12
+  ca_passphrase: egern
+  hostnames:
+    includes:
+    - raw.githubusercontent.com
+    - gist.githubusercontent.com
+    - github.com
+  hostnames_disabled:
+    includes:
+    - raw.githubusercontent.com
+    - gist.githubusercontent.com
+    - github.com
+modules:
+- url: https://raw.githubusercontent.com/fmz200/wool_scripts/refs/heads/main/Surge/module/XWebAds.module
+  enabled: true
+- name: 微博去广告&净化
+  url: https://github.com/fmz200/wool_scripts/raw/main/Surge/module/weibo.module
+  enabled: true
+- name: 广告拦截&净化合集
+  url: https://github.com/fmz200/wool_scripts/raw/main/Surge/module/blockAds.module
+  enabled: true
+- url: https://github.com/fmz200/wool_scripts/raw/main/Surge/module/RedditTranslation.module
+  enabled: true
+- name: 获取cookie&token合集
+  url: https://github.com/fmz200/wool_scripts/raw/main/Surge/module/cookies.module
+  enabled: false
+- url: http://script.hub/file/_start_/https://raw.githubusercontent.com/Tartarus2014/Loon-Script/refs/heads/master/Plugin/skip-proxy.lpx/_end_/skip-proxy.sgmodule?type=loon-plugin&target=surge-module&del=true&jqEnabled=true
+  enabled: true
+- name: 'Script Hub: 重写 & 规则集转换'
+  url: https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/refs/heads/main/modules/script-hub.beta.egern.yaml
+  enabled: true
+- name: Sub-Store
+  url: https://raw.githubusercontent.com/sub-store-org/Sub-Store/refs/heads/master/config/Egern.yaml
+  enabled: true
+- name: BoxJs
+  url: https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.surge.sgmodule
+  enabled: true
+- name: 节假日信息
+  url: https://raw.githubusercontent.com/Rabbit-Spec/Surge/Master/Module/Panel/Timecard/Moore/Timecard.sgmodule
+  enabled: true
+- url: https://raw.githubusercontent.com/Rabbit-Spec/Surge/Master/Module/Panel/Flush-DNS/Moore/Flush-DNS.sgmodule
+  enabled: false
+- url: https://raw.githubusercontent.com/getsomecat/GetSomeCats/Surge/modules/Panel/Net_Speed/Net_Speed.sgmodule
+  enabled: true
+- url: https://raw.githubusercontent.com/ptntp/self-rule/main/Panel/streamcheck.sgmodule
+  enabled: true
+- url: https://raw.githubusercontent.com/Rabbit-Spec/Surge/Master/Module/Panel/IP-Check/Moore/IP-Check.sgmodule
+  enabled: true
+- url: https://raw.githubusercontent.com/Rabbit-Spec/Surge/Master/Module/Panel/Network-Info/Moore/Network-Info.sgmodule
+  enabled: true
