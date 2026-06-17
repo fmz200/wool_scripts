@@ -1,7 +1,8 @@
 /**
  * @author fmz200
  * @function X(Twitter)网页版去广告
- * @date 2026-04-26 09:30:00
+ * @since 2026-04-26 09:30:00
+ * @date 2026-06-17 15:00:00
  */
 
 const $ = new Env("X(Twitter)网页版去广告");
@@ -17,8 +18,8 @@ let mod_rsp = rsp_body;
 try {
   mod_rsp = JSON.parse(rsp_body);
 
-  // "为你推荐"页面
-  if (req_url.includes("/HomeTimeline")) {
+  // "为你推荐"页面，"正在关注"页面
+  if (req_url.includes("/HomeTimeline") || req_url.includes("/HomeLatestTimeline")) {
     if (mod_rsp.data && mod_rsp.data.home && mod_rsp.data.home.home_timeline_urt) {
       let instructions = mod_rsp.data.home.home_timeline_urt.instructions;
 
