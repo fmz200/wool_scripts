@@ -2,7 +2,7 @@
  * @author fmz200
  * @function 微博去广告
  * @since 2025-12-08 20:15:00
- * @date 2026-06-22 22:15:00
+ * @date 2026-06-24 10:50:00
  */
 
 let url = $request.url;
@@ -273,7 +273,7 @@ function removeHotSearchAds(groups) {
   console.log('移除发现页热搜广告开始💕');
   for (let i = groups.length - 1; i >= 0; i--) {
     const group = groups[i];
-    if (group.itemid?.includes("is_ad_pos") || group.itemid?.includes("cate_type:tongcheng") || group.promotion) {
+    if (group.itemid?.includes("is_ad_pos") || group.itemid?.includes("city_code") || group.promotion) {
       groups.splice(i, 1);
     }
   }
