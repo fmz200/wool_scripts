@@ -1,15 +1,23 @@
 /**********
+ 微博超话签到 - 抓包脚本
+ 适配新版微博客户端 (16.x+)
+ 更新时间：2026-09-08
+
+⚠️ 若从旧版升级，请先在BoxJS或代理工具中清空旧cookie（wb_delete_cookie=true），再重新获取。
+⚠️ 新版列表请求为POST，必须配置 requires-body=true（QX用script-request-body），否则无法捕获POST body。
+
 🐬作者
 @Evilbutcher。 https://github.com/evilbutcher
 @toulanboy。https://github.com/toulanboy/scripts
+@fmz200 重构代码，支持多账号和青龙环境
 
 📌不定期更新各种签到、有趣的脚本，欢迎star🌟
 
 ***********************************
 【配置步骤，请认真阅读，每一个细节都很重要】
 ***********************************
-1. 根据你当前的软件，配置好srcipt。由于是远程文件，记得顺便更新文件。
-2. 打开微博APP --> 底部栏“我的“  -->  中间的”超话社区“  --> 底部栏"我的" --> ”关注“， 弹出通知，提示获取已关注超话链接成功。
+1. 根据你当前的软件，配置好script。由于是远程文件，记得顺便更新文件。
+2. 打开微博APP --> 底部栏"我的"  -->  中间的"超话社区"  --> 底部栏"我的" --> "关注"， 弹出通知，提示获取已关注超话链接成功。
 3. 点进一个超话页面，手动签到一次。弹出通知，提示获取超话签到链接成功。 若之前所有已经签到，请关注一个新超话进行签到。
 4. 回到quanx等软件，关掉获取cookie的rewrite。（loon是关掉获取cookie的脚本）
 
@@ -24,80 +32,107 @@ box订阅链接：https://raw.githubusercontent.com/toulanboy/scripts/master/tou
 *************************
 【Surge 4.2+ 脚本配置】
 *************************
-微博超话cookie获取 = type=http-request,pattern=^https?://m?api\.weibo\.c(n|om)\/2\/(cardlist|page\/button),script-path=https://raw.githubusercontent.com/toulanboy/scripts/master/weibo/weibotalk.cookie.js
-微博超话 = type=cron,cronexp="5 0  * * *",script-path=https://raw.githubusercontent.com/toulanboy/scripts/master/weibo/weibotalk.js,wake-system=true,timeout=600
+微博超话cookie获取 = type=http-request,pattern=^https?://m?api\.weibo\.c(n|om)\/2\/(statuses\/container_timeline_topicsub|page\/button),requires-body=true,script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibotalk.cookie.js
+微博超话 = type=cron,cronexp="5 0  * * *",script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibotalk_signin.js,wake-system=true,timeout=600
 
 *************************
 【Loon 2.1+ 脚本配置】
 *************************
 [script]
-cron "5 0 * * *" script-path=https://raw.githubusercontent.com/toulanboy/scripts/master/weibo/weibotalk.js, timeout=600, tag=微博超话
-http-request ^https?://m?api\.weibo\.c(n|om)\/2\/(cardlist|page\/button) script-path=https://raw.githubusercontent.com/toulanboy/scripts/master/weibo/weibotalk.cookie.js,requires-body=false, tag=微博超话cookie获取
+cron "5 0 * * *" script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibotalk_signin.js, timeout=600, tag=微博超话
+http-request ^https?://m?api\.weibo\.c(n|om)\/2\/(statuses\/container_timeline_topicsub|page\/button) script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibotalk.cookie.js,requires-body=true, tag=微博超话cookie获取
 
 *************************
-【 QX 1.0.10+ 脚本配置 】 
+【 QX 1.0.10+ 脚本配置 】
 *************************
 [rewrite_local]
-^https?://m?api\.weibo\.c(n|om)\/2\/(cardlist|page\/button) url script-request-header https://raw.githubusercontent.com/toulanboy/scripts/master/weibo/weibotalk.cookie.js
+^https?://m?api\.weibo\.c(n|om)\/2\/(statuses\/container_timeline_topicsub|page\/button) url script-request-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibotalk.cookie.js
 [task]
-5 0 * * * https://raw.githubusercontent.com/toulanboy/scripts/master/weibo/weibotalk.js, tag=微博超话
+5 0 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibotalk_signin.js, tag=微博超话
 
 
 [MITM]
-hostname = api.weibo.cn
+hostname = api.weibo.cn, mapi.weibo.com
+
+*************************
+【Shadowrocket 脚本配置】
+*************************
+[Script]
+微博超话cookie获取 = type=http-request,pattern=^https?://m?api\.weibo\.c(n|om)\/2\/(statuses\/container_timeline_topicsub|page\/button),requires-body=true,script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibotalk.cookie.js
+微博超话 = type=cron,cronexp="5 0  * * *",script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibotalk_signin.js,wake-system=true,timeout=600
+
+[MITM]
+hostname = api.weibo.cn, mapi.weibo.com
 
 *********/
 $ = new Env("微博超话")
-//账号1
-const tokenurl = 'evil_tokenurl';
-const tokencheckinurl = 'evil_tokencheckinurl'
-const tokenheaders = 'evil_tokenheaders'
-const tokencheckinheaders = 'evil_tokencheckinheaders'
-//账号2
-const tokenurl2 = 'evil_tokenurl2';
-const tokencheckinurl2 = 'evil_tokencheckinurl2'
-const tokenheaders2= 'evil_tokenheaders2'
-const tokencheckinheaders2 = 'evil_tokencheckinheaders2'
+const TOKEN_KEY = "fmz200_weibotalk_token"
 
-if ($request && $request.method != 'OPTIONS' && $request.url.match(/\_\-\_myfollow.*?need\_head\_cards/) && $request.url.match(/cardlist/)){
-  const listurl = $request.url
-  const listheaders = JSON.stringify($request.headers)
-  if ($.getdata(tokenurl) == undefined || $.getdata(tokenurl) == "") {
-    console.log(listurl)
-    $.setdata(listurl, tokenurl)
-    $.setdata(listheaders, tokenheaders)
-    $.msg("微博超话 [账号一]", "✅获取已关注超话列表成功", "✨接下来，请点进一个超话进行签到\n如果没有签到的超话，请关注新的进行签到。")
-  }
-  else {
-    if (!($.getdata(tokencheckinurl) == undefined || $.getdata(tokencheckinurl) == "") && listurl != $.getdata(tokenurl)) {
-      console.log(listurl)
-      $.setdata(listurl, tokenurl2)
-      $.setdata(listheaders, tokenheaders2)
-      $.msg("微博超话 [账号二]", "✅获取已关注超话列表成功", "✨接下来，请点进一个超话进行签到\n如果没有签到的超话，请关注新的进行签到。")
-    }
-  }
-} else if ($request && $request.method != 'OPTIONS' && $request.url.match(/active\_checkin/) && $request.url.match(/page\/button/)){
-  const checkinurl = $request.url
-  
-  const checkinheaders = JSON.stringify($request.headers)
-  if (($.getdata(tokenurl) != undefined && $.getdata(tokenurl) != "") && ($.getdata(tokencheckinurl) == undefined || $.getdata(tokencheckinurl) == "")) {
-    console.log(checkinurl)
-    $.setdata(checkinurl, tokencheckinurl)
-    $.setdata(checkinheaders, tokencheckinheaders)
-    $.msg("微博超话 [账号一]", "🎉获取超话签到链接成功", `若之前已弹出【获取已关注列表成功】的通知，那么已完成当前账号cookie获取。\n🚨若你只需要签到1个账号，请现在去关闭获取cookie的脚本或重写。`)
+if ($request && $request.method != 'OPTIONS') {
+  const url = $request.url
 
+  // 拦截超话列表请求: POST container_timeline_topicsub, body含 fid=232478_-_mine_topic 且 taskType=refresh
+  if (url.includes('container_timeline_topicsub') && $request.body &&
+      $request.body.includes('fid=232478_-_mine_topic') && $request.body.includes('taskType=refresh')) {
+    handleListCapture(url, $request.headers, $request.body)
   }
-  else {
-    if (!($.getdata(tokenurl2) == undefined || $.getdata(tokenurl2) == "")) {
-      console.log(checkinurl)
-      $.setdata(checkinurl, tokencheckinurl2)
-      $.setdata(checkinheaders, tokencheckinheaders2)
-      $.msg("微博超话 [账号二]", "🎉获取超话签到链接成功", `若之前已弹出【获取已关注列表成功】的通知，那么已完成当前账号cookie获取。\n🚨请关闭获取cookie的脚本或重写，然后可以愉快使用了。`)
-    }
+  // 拦截签到请求: GET page/button, URL含 active_checkin
+  else if (url.includes('page/button') && url.includes('active_checkin')) {
+    handleCheckinCapture(url, $request.headers)
   }
 }
 
 $.done()
+
+function handleListCapture(url, headers, body) {
+  const userId = getHeader(headers, 'x-log-uid') || 'unknown'
+  let tokens = JSON.parse($.getdata(TOKEN_KEY) || "[]")
+
+  let token = tokens.find(t => t.userId === userId)
+  if (token) {
+    // 已有该账号的token，更新列表数据，保留已有签到数据
+    token.tokenUrl = url
+    token.tokenHeaders = JSON.stringify(headers)
+    token.tokenBody = body
+  } else {
+    tokens.push({
+      userId: userId,
+      tokenUrl: url,
+      tokenHeaders: JSON.stringify(headers),
+      tokenBody: body,
+      checkinurl: "",
+      checkinHeaders: ""
+    })
+  }
+
+  $.setdata(JSON.stringify(tokens), TOKEN_KEY)
+  $.msg("微博超话", `✅获取已关注超话列表成功 [${userId}]`, "✨接下来，请点进一个超话进行签到\n如果没有签到的超话，请关注新的进行签到。")
+}
+
+function handleCheckinCapture(url, headers) {
+  const userId = getHeader(headers, 'x-log-uid') || 'unknown'
+  let tokens = JSON.parse($.getdata(TOKEN_KEY) || "[]")
+
+  let token = tokens.find(t => t.userId === userId && !t.checkinurl)
+  if (token) {
+    // 找到该账号且尚未获取签到链接
+    token.checkinurl = url
+    token.checkinHeaders = JSON.stringify(headers)
+    $.setdata(JSON.stringify(tokens), TOKEN_KEY)
+    $.msg("微博超话", `🎉获取超话签到链接成功 [${userId}]`, `若之前已弹出【获取已关注列表成功】的通知，那么已完成当前账号cookie获取。\n🚨若你只需要签到1个账号，请现在去关闭获取cookie的脚本或重写。`)
+  } else {
+    $.msg("微博超话", "❌请先获取超话列表链接", "请先打开微博 → 我的 → 超话社区 → 我的 → 关注")
+  }
+}
+
+function getHeader(headers, name) {
+  if (!headers) return ''
+  const lower = name.toLowerCase()
+  for (const key in headers) {
+    if (key.toLowerCase() === lower) return headers[key]
+  }
+  return ''
+}
 
 //@Chavy
 function Env(s) {

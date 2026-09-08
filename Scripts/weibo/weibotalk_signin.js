@@ -1,7 +1,10 @@
 /**********
  微博超话签到修改版
- 需要12.2.1以下版本抓包
- 更新时间：2025-05-27 22:00:00
+ 适配新版微博客户端 (16.x+)
+ 更新时间：2026-09-08
+
+⚠️ 若从旧版升级，请先在BoxJS或代理工具中清空旧cookie（wb_delete_cookie=true），再重新获取。
+⚠️ 新版列表请求为POST，必须配置 requires-body=true（QX用script-request-body），否则无法捕获POST body。
 
 🐬作者
 @Evilbutcher。 https://github.com/evilbutcher
@@ -14,7 +17,7 @@
 【配置步骤，请认真阅读，每一个细节都很重要】
 ***********************************
 1. 根据你当前的软件，配置好script。由于是远程文件，记得顺便更新文件。
-2. 打开微博APP --> 底部栏“我的“  -->  中间的”超话社区“  --> 底部栏"我的" --> ”关注“， 弹出通知，提示获取已关注超话链接成功。
+2. 打开微博APP --> 底部栏"我的"  -->  中间的"超话社区"  --> 底部栏"我的" --> "关注"， 弹出通知，提示获取已关注超话链接成功。
 3. 点进一个超话页面，手动签到一次。弹出通知，提示获取超话签到链接成功。 若之前所有已经签到，请关注一个新超话进行签到。
 4. 回到quanx等软件，关掉获取cookie的rewrite。（loon是关掉获取cookie的脚本）
 
@@ -29,27 +32,37 @@ box订阅链接：https://raw.githubusercontent.com/toulanboy/scripts/master/tou
 *************************
 【Surge 4.2+ 脚本配置】
 *************************
-微博超话cookie获取 = type=http-request,pattern=^https?://m?api\.weibo\.c(n|om)\/2\/(cardlist|page\/button),script-path=https://raw.githubusercontent.com/toulanboy/scripts/master/weibo/weibotalk.cookie.js
-微博超话 = type=cron,cronexp="5 0  * * *",script-path=https://raw.githubusercontent.com/toulanboy/scripts/master/weibo/weibotalk.js,wake-system=true,timeout=600
+微博超话cookie获取 = type=http-request,pattern=^https?://m?api\.weibo\.c(n|om)\/2\/(statuses\/container_timeline_topicsub|page\/button),requires-body=true,script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibotalk.cookie.js
+微博超话 = type=cron,cronexp="5 0  * * *",script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibotalk_signin.js,wake-system=true,timeout=600
 
 *************************
 【Loon 2.1+ 脚本配置】
 *************************
 [script]
-cron "5 0 * * *" script-path=https://raw.githubusercontent.com/toulanboy/scripts/master/weibo/weibotalk.js, timeout=600, tag=微博超话
-http-request ^https?://m?api\.weibo\.c(n|om)\/2\/(cardlist|page\/button) script-path=https://raw.githubusercontent.com/toulanboy/scripts/master/weibo/weibotalk.cookie.js,requires-body=false, tag=微博超话cookie获取
+cron "5 0 * * *" script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibotalk_signin.js, timeout=600, tag=微博超话
+http-request ^https?://m?api\.weibo\.c(n|om)\/2\/(statuses\/container_timeline_topicsub|page\/button) script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibotalk.cookie.js,requires-body=true, tag=微博超话cookie获取
 
 *************************
-【 QX 1.0.10+ 脚本配置 】 
+【 QX 1.0.10+ 脚本配置 】
 *************************
 [rewrite_local]
-^https?://m?api\.weibo\.c(n|om)\/2\/(cardlist|page\/button) url script-request-header https://raw.githubusercontent.com/toulanboy/scripts/master/weibo/weibotalk.cookie.js
+^https?://m?api\.weibo\.c(n|om)\/2\/(statuses\/container_timeline_topicsub|page\/button) url script-request-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibotalk.cookie.js
 [task]
-5 0 * * * https://raw.githubusercontent.com/toulanboy/scripts/master/weibo/weibotalk.js, tag=微博超话
+5 0 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibotalk_signin.js, tag=微博超话
 
 
 [MITM]
-hostname = api.weibo.cn
+hostname = api.weibo.cn, mapi.weibo.com
+
+*************************
+【Shadowrocket 脚本配置】
+*************************
+[Script]
+微博超话cookie获取 = type=http-request,pattern=^https?://m?api\.weibo\.c(n|om)\/2\/(statuses\/container_timeline_topicsub|page\/button),requires-body=true,script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibotalk.cookie.js
+微博超话 = type=cron,cronexp="5 0  * * *",script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibotalk_signin.js,wake-system=true,timeout=600
+
+[MITM]
+hostname = api.weibo.cn, mapi.weibo.com
 
 *********/
 
@@ -81,31 +94,72 @@ $.interval_time = wb_request_time * 1 || 3000; //【签到间隔，单位ms】�
   }
   const jsonTokenList = JSON.parse(tokenList);
   console.log(`🌟 账号数 = ${jsonTokenList.length}`);
-  for (const token of jsonTokenList) {
+  for (let i = 0; i < jsonTokenList.length; i++) {
+    const token = jsonTokenList[i];
     $.currentToken = token;
     $.userId = token.userId;
-    if (!validateObject(token)) {
-      const subMsg = `[${$.userId}]cookie数据不完整，请重新获取！！`;
-      if (isNode) {
-        $.nodeNotifyMsg.push(subMsg);
-      } else {
-        $.msg($.name, subMsg, '', {'open-url': '', 'media-url': "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/weibo.png"});
+    try {
+      if (!validateObject(token)) {
+        const subMsg = `[${$.userId}]cookie数据不完整，请重新获取！！`;
+        if (isNode) {
+          $.nodeNotifyMsg.push(subMsg);
+        } else {
+          $.msg($.name, subMsg, '', {'open-url': '', 'media-url': "https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/weibo.png"});
+        }
+        continue;
       }
-      continue;
+      if (!token.tokenBody) {
+        const subMsg = `[${$.userId}]缺少tokenBody(POST请求体)，请重新获取cookie！！`;
+        if (isNode) {
+          $.nodeNotifyMsg.push(subMsg);
+        } else {
+          $.msg($.name, subMsg, '');
+        }
+        continue;
+      }
+      init_env();
+      await get_all_topics();
+      console.log(`🌟 get_all_topics 执行完成，共 ${$.name_list.length} 个超话`);
+      if ($.name_list.length === 0) {
+        const subMsg = `[${$.userId}]未获取到关注的超话，可能token已过期`;
+        if (isNode) {
+          $.nodeNotifyMsg.push(subMsg);
+        } else {
+          $.msg($.name, subMsg, '');
+        }
+        continue;
+      }
+      for (let j = 0; j < $.name_list.length; j++) {
+        await checkin($.id_list[j], $.name_list[j]);
+        await $.wait($.interval_time);
+      }
+      output();
+    } catch (e) {
+      const errMsg = `[${$.userId}]执行异常: ${e.message || e}`;
+      console.log(`❌ ${errMsg}`);
+      if (isNode) {
+        $.nodeNotifyMsg.push(errMsg);
+      } else {
+        $.msg($.name, errMsg, '');
+      }
     }
-    init_env();
-    await get_page_number();
-    console.log(`🌟 get_page_number 执行完成`);
-    for (let i = 1; i <= $.pagenumber; i++) {
-      await get_talk_id(i);
-    }
-    for (let i in $.name_list) {
-      await checkin($.id_list[i], $.name_list[i]);
+    // 账号间延迟，避免请求过快
+    if (i < jsonTokenList.length - 1) {
+      console.log(`⏳ 账号间延迟 ${$.interval_time}ms...`);
       await $.wait($.interval_time);
     }
-    output();
   }
-  if (isNode) await sendMsg($.nodeNotifyMsg.join("\n"), "");
+  // 汇总通知
+  if (isNode) {
+    let totalSuccess = 0, totalFail = 0;
+    for (const msg of $.nodeNotifyMsg) {
+      const m = msg.match(/成功(\d+)个，失败(\d+)个/);
+      if (m) { totalSuccess += parseInt(m[1]); totalFail += parseInt(m[2]); }
+    }
+    const summary = `📊 汇总: ${jsonTokenList.length}个账号, 成功${totalSuccess}个, 失败${totalFail}个`;
+    $.nodeNotifyMsg.unshift(summary);
+    await sendMsg($.nodeNotifyMsg.join("\n"), "");
+  }
 })()
   .catch((e) => {
     $.log('', `❌ ${$.name}, 失败! 原因: ${e}!`, '')
@@ -120,19 +174,25 @@ function init_env() {
   $.name_list = [];
   $.id_list = [];
   $.val_list = [];
+  $.seenIds = new Set();
   $.successNum = 0;
   $.failNum = 0;
   $.allnumber = 0;
-  $.pagenumber = 0;
-  $.stopNum = 0;
 }
 
 function output() {
   if (isNode) {
-    // 带序号版本
+    if ($.message.length === 0) {
+      $.nodeNotifyMsg.push(`${$.userId}: 成功0个，失败${$.failNum}\n（无签到结果）\n-------------------------`);
+      return;
+    }
     const numberedResult = $.message.map((msg, index) => `${index + 1}. ${msg}`).join('\n');
     $.nodeNotifyMsg.push(`${$.userId}: 成功${$.successNum}个，失败${$.failNum}\n${numberedResult}\n-------------------------`);
   } else {
+    if ($.message.length === 0) {
+      $.msg(`${$.name} [${$.userId}]`, `成功0个，失败${$.failNum}`, '该账号没有签到结果');
+      return;
+    }
     $.this_msg = "";
     for (let i = 1; i <= $.message.length; ++i) {
       if (i % ($.msg_max_num) === 0) {
@@ -141,96 +201,248 @@ function output() {
       }
       $.this_msg += `${$.message[i - 1]}\n`;
     }
-    if ($.message.length % $.msg_max_num !== 0) {
-      $.msg(`${$.name}${$.userId}: 成功${$.successNum}个，失败${$.failNum}`, `当前第${Math.ceil((i - 1) / $.msg_max_num)}页 ，共${Math.ceil($.message.length / $.msg_max_num)}页`, $.this_msg);
+    if ($.message.length % ($.msg_max_num) !== 0) {
+      $.msg(`${$.name}${$.userId}: 成功${$.successNum}个，失败${$.failNum}`, `当前第${Math.ceil($.message.length / $.msg_max_num)}页 ，共${Math.ceil($.message.length / $.msg_max_num)}页`, $.this_msg);
     }
   }
 }
 
-function get_page_number() {
+// 获取所有关注的超话（新版API: POST container_timeline_topicsub）
+async function get_all_topics() {
+  let page = 1;
+  let sinceId = '';
+  let maxId = '';
+  let hasMore = true;
+  const maxPages = 10; // 安全限制
+
+  while (hasMore && page <= maxPages) {
+    let body = $.currentToken.tokenBody;
+    if (page > 1) {
+      body = modifyBodyForPagination(body, page, sinceId, maxId);
+    }
+
+    console.log(`🌟 获取超话列表，第${page}页`);
+    let response = await postRequest($.currentToken.tokenUrl, $.currentToken.tokenHeaders, body);
+    if (!response || !response.body) {
+      console.log("❌ 获取超话列表失败，无响应");
+      break;
+    }
+
+    let obj;
+    try {
+      obj = JSON.parse(response.body);
+    } catch (e) {
+      console.log("❌ 解析超话列表响应失败");
+      break;
+    }
+
+    if (obj.errmsg) {
+      const errMsg = `🚨获取超话列表错误，⚠️微博原话：${obj.errmsg}\n🧑账号可能过期了，清空cookie重新获取吧`;
+      if (isNode) {
+        $.nodeNotifyMsg.push(errMsg);
+      } else {
+        $.msg($.name, "🚨获取超话列表错误", `⚠️微博原话：${obj.errmsg}\n🧑账号可能过期了，清空cookie重新获取吧`);
+      }
+      break;
+    }
+
+    // 从响应中提取 card_type=8 的超话卡片
+    let foundCount = extractTopics(obj);
+    console.log(`🌟 第${page}页找到 ${foundCount} 个超话`);
+
+    if (foundCount === 0) {
+      if (page === 1) {
+        console.log("❌ 第1页未找到超话，可能无关注超话或token已过期");
+      }
+      hasMore = false;
+      break;
+    }
+
+    // 检查是否有更多页
+    let moreInfo = obj.moreInfo || {};
+    if (moreInfo.params && moreInfo.params.page && moreInfo.params.since_id) {
+      page = parseInt(moreInfo.params.page);
+      sinceId = moreInfo.params.since_id;
+      maxId = moreInfo.params.max_id || '';
+    } else {
+      hasMore = false;
+    }
+  }
+
+  $.allnumber = $.name_list.length;
+  console.log(`🌟 共获取 ${$.allnumber} 个关注超话`);
+}
+
+// 从响应中提取超话信息（card_type=8 的卡片）
+function extractTopics(obj) {
+  let count = 0;
+  if (!obj.items) return count;
+  if (!$.seenIds) $.seenIds = new Set();
+
+  for (const item of obj.items) {
+    if (item.category !== 'group' || !item.items) continue;
+
+    for (const sub of item.items) {
+      if (sub.category !== 'card' || !sub.data) continue;
+      const data = sub.data;
+      if (data.card_type !== 8) continue;
+
+      // 从 scheme 中提取超话ID: sinaweibo://pageinfo?containerid=100808xxx
+      let match = (data.scheme || '').match(/containerid=([a-f0-9]+)/);
+      if (!match) continue;
+
+      let id = match[1];
+      // 去重：同一超话可能在不同分组中重复出现
+      if ($.seenIds.has(id)) {
+        console.log(`⏭️ 跳过重复超话: ${data.title_sub || id}`);
+        continue;
+      }
+      $.seenIds.add(id);
+
+      let name = data.title_sub || '';
+      let desc = data.desc1 || data.desc || '';
+
+      $.name_list.push(name);
+      $.id_list.push(id);
+      $.val_list.push(desc);
+      count++;
+      console.log(name, desc, id);
+    }
+  }
+  return count;
+}
+
+// 修改POST body用于分页请求
+function modifyBodyForPagination(body, page, sinceId, maxId) {
+  let pairs = body.split('&');
+  let result = [];
+  let foundTaskType = false;
+  let addedManualType = false;
+  let addedInvokeType = false;
+  let foundPage = false;
+  let foundSinceId = false;
+  let foundMaxId = false;
+  let foundPagingType = false;
+
+  for (let pair of pairs) {
+    let idx = pair.indexOf('=');
+    let key = idx > -1 ? pair.substring(0, idx) : pair;
+    let value = idx > -1 ? pair.substring(idx + 1) : '';
+
+    if (key === 'taskType') {
+      foundTaskType = true;
+      result.push('taskType=loadMore');
+      continue;
+    }
+    if (key === 'manualType') { addedManualType = true; result.push('manualType=scroll'); continue; }
+    if (key === 'invokeType') { addedInvokeType = true; result.push('invokeType=manual'); continue; }
+    if (key === 'page') { foundPage = true; result.push('page=' + page); continue; }
+    if (key === 'since_id') { foundSinceId = true; result.push('since_id=' + sinceId); continue; }
+    if (key === 'max_id') { foundMaxId = true; result.push('max_id=' + (maxId || '0')); continue; }
+    if (key === 'pagingType') { foundPagingType = true; result.push('pagingType=cursor'); continue; }
+    result.push(pair);
+  }
+
+  if (!foundTaskType) result.push('taskType=loadMore');
+  if (!addedManualType) result.push('manualType=scroll');
+  if (!addedInvokeType) result.push('invokeType=manual');
+  if (!foundPage) result.push('page=' + page);
+  if (!foundSinceId) result.push('since_id=' + sinceId);
+  if (!foundMaxId) result.push('max_id=' + (maxId || '0'));
+  if (!foundPagingType) result.push('pagingType=cursor');
+
+  return result.join('&');
+}
+
+// POST 请求封装
+const REQUEST_TIMEOUT = 15000; // 单次请求超时15秒
+
+function postRequest(url, headersStr, body) {
   return new Promise((resolve) => {
+    let headers;
+    try {
+      headers = JSON.parse(headersStr);
+    } catch (e) {
+      headers = {};
+    }
     let request = {
-      url: $.currentToken.tokenUrl, header: $.currentToken.tokenHeaders
+      url: url,
+      headers: headers,
+      body: body
     };
-    $.get(request, (error, response, data) => {
+    let done = false;
+    const timer = setTimeout(() => {
+      if (done) return;
+      done = true;
+      console.log(`❌ POST请求超时: ${url.slice(0, 80)}`);
+      resolve(null);
+    }, REQUEST_TIMEOUT);
+    $.post(request, (error, response, data) => {
+      if (done) return;
+      done = true;
+      clearTimeout(timer);
       if (error) {
-        throw new Error(error);
+        console.log(`❌ POST请求失败: ${error}`);
+        resolve(null);
+      } else {
+        resolve(response);
       }
-      let obj = JSON.parse(response.body);
-      if (obj.hasOwnProperty('errmsg') || obj.cardlistInfo.total == undefined) {
-        if (isNode) {
-          $.nodeNotifyMsg.push(`🚨获取页数出现错误，⚠️微博原话：${obj.errmsg}\n🧑账号可能过期了，清空cookie重新获取吧`);
-        } else {
-          $.msg($.name, "🚨获取页数出现错误", `⚠️微博原话：${obj.errmsg}\n🧑账号可能过期了，清空cookie重新获取吧`);
-        }
-        $.pagenumber = 0;
-        resolve();
-        return;
-      }
-      $.allnumber = obj.cardlistInfo.total;
-      console.log("当前已关注超话" + $.allnumber + "个");
-      $.pagenumber = Math.ceil($.allnumber / 25);
-      resolve();
     });
   });
 }
 
-// 获取超话签到id
-function get_talk_id(page) {
-  let getListUrl = $.currentToken.tokenUrl.replace(/&page=.*?&/, "&page=" + page + "&");
-  // console.log(getListUrl);
+// 签到
+function checkin(id, name) {
+  // 新版fid格式: 100808xxx_-_recommend，替换其中的超话ID部分
+  // request_url中的pageid也需同步替换
+  let sendCheckinUrl = $.currentToken.checkinurl
+    .replace(/fid=[a-f0-9]+/, "fid=" + id)
+    .replace(/pageid%3D[a-f0-9]+/, "pageid%3D" + id);
+
+  let headers;
+  try {
+    headers = JSON.parse($.currentToken.checkinHeaders);
+  } catch (e) {
+    headers = {};
+  }
   let request = {
-    url: getListUrl, header: $.currentToken.tokenHeaders
+    url: sendCheckinUrl,
+    headers: headers
   };
-  // console.log(request)
-  return new Promise((resolve) => {
+
+  return new Promise(resolve => {
+    let done = false;
+    const timer = setTimeout(() => {
+      if (done) return;
+      done = true;
+      $.failNum += 1;
+      $.message.push(`【${name}】：❌签到请求超时`);
+      console.log(`【${name}】：❌签到请求超时`);
+      resolve();
+    }, REQUEST_TIMEOUT);
     $.get(request, (error, response, data) => {
+      if (done) return;
+      done = true;
+      clearTimeout(timer);
       if (error) {
-        throw new Error(error);
-      }
-      let obj = JSON.parse(response.body);
-      if (obj.hasOwnProperty('errmsg') || obj.cards === undefined || obj.cards == null) {
-        if (isNode) {
-          $.nodeNotifyMsg.push(`🚨获取超话ID出现错误，⚠️微博原话：${obj.errmsg}`);
-        } else {
-          $.msg($.name, "🚨获取超话ID出现错误", `⚠️微博原话：${obj.errmsg}\n`);
-        }
+        $.failNum += 1;
+        $.message.push(`【${name}】：❌请求失败 ${error}`);
+        console.log(`【${name}】：❌请求失败 ${error}`);
         resolve();
         return;
       }
-      let group = obj.cards[0]["card_group"];
-      let number = group.length;
-      for (let i = 0; i < number; i++) {
-        let name = group[i]["title_sub"];
-        $.name_list.push(name);
-        let val = group[i].desc;
-        $.val_list.push(val);
-        let id = group[i].scheme.slice(33, 71);
-        $.id_list.push(id);
-
-        console.log(name, val, id);
-      }
-      resolve();
-    })
-  })
-}
-
-// 签到
-function checkin(id, name) {
-  let sendCheckinUrl = $.currentToken.checkinurl
-    .replace(/&fid=.*?&/, "&fid=" + id + "&")
-    .replace(/pageid%3D.*?%26/, "pageid%3D" + id + "%26");
-  let request = {
-    url: sendCheckinUrl, header: $.currentToken.checkinHeaders
-  };
-  return new Promise(resolve => {
-    $.get(request, (error, response, data) => {
-      if (error) {
-        throw new Error(error);
-      }
       name = name.replace(/超话/, "")
       if (response.statusCode == 200) {
-        const msg_info = JSON.parse(response.body);
+        let msg_info;
+        try {
+          msg_info = JSON.parse(response.body);
+        } catch (e) {
+          $.failNum += 1;
+          $.message.push(`【${name}】：❌响应解析失败`);
+          console.log(`【${name}】：❌响应解析失败: ${e.message}`);
+          resolve();
+          return;
+        }
         console.log(response.body);
         if (msg_info.hasOwnProperty('errmsg')) {
           $.failNum += 1;
@@ -267,16 +479,16 @@ function checkin(id, name) {
       }
       resolve();
     })
-
   })
 }
 
 // 简单的判断对象的所有属性都不为空，所有属性都符合条件才返回 true
 function validateObject(obj) {
-  return Object.values(obj).every(value =>
-    value !== null &&
-    value !== undefined &&
-    (typeof value !== 'string' || value.trim() !== '')
+  const required = ['userId', 'tokenUrl', 'tokenHeaders', 'tokenBody', 'checkinurl', 'checkinHeaders'];
+  return required.every(key =>
+    obj[key] !== null &&
+    obj[key] !== undefined &&
+    (typeof obj[key] !== 'string' || obj[key].trim() !== '')
   );
 }
 
