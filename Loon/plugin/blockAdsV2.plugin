@@ -10,7 +10,7 @@
 #!system=iOS, iPadOS
 #!system_version = 
 #!loon_version = 3.5.1(978)
-#!date=2026-09-07 21:39:30
+#!date=2026-09-09 21:04:08
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 #!note=本文件由 blockAds.plugin 按官方语法转换：[Rewrite] 使用 Rewrite v2（request/response + 位置参数 Action），[Script] 使用 Script v2（if ... then script(...) with ...）。[Rule]/[MITM]/[Argument] 保持原样。
 #############################################
@@ -8443,6 +8443,10 @@ response if ${url} ~= /^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(brow
 # > 掌上公交
 # hostname = quanguo.mygolbs.com, wx.mygolbs.com
 response if ${url} ~= /^https?:\/\/wx\.mygolbs\.com\/WxBusServer\/ApiData\.do/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/zhangshanggongjiao.js") with enable=vhuhgsjn_enable, tag="掌上公交小程序广告", timeout=60, requires_body=true
+
+# > 招财猫直聘
+# hostname = beehiveapi.58.com
+^https?:\/\/beehiveapi\.58\.com\/adplace\/zcm reject-dict
 
 # > 招商证券
 # hostname = marketing.cmschina.com

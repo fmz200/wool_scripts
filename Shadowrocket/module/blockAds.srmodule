@@ -8,7 +8,7 @@
 #!tg-channel=https://t.me/inaisi
 #!tag=去广告, fmz200, 奶思
 #!system=ios
-#!date=2026-08-27 16:37:00
+#!date=2026-09-09 21:04:34
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 #!arguments=12306_enable:true
 
@@ -5580,7 +5580,6 @@ http-response ^https?:\/\/lcen\.xiaote\.net\/api\/graphql screenSplashAd fmz200
 # > 小宇宙
 # hostname = api.xiaoyuzhoufm.com
 http-response-jq ^https?:\/\/api\.xiaoyuzhoufm\.com\/v1\/discovery-feed\/list '.data |= map(select(.type != "DISCOVERY_HEADER" and .type != "DISCOVERY_BANNER"))'
-http-response-jq ^https?:\/\/api\.xiaoyuzhoufm\.com\/v1\/(related-episode|operation-resource)\/list '.data = []'
 
 # > 喜马拉雅
 # hostname = gslbali.ximalaya.com, search.ximalaya.com, searchwsa.ximalaya.com, mobile.ximalaya.com, mobilehera.ximalaya.com, mobwsa.ximalaya.com, m.ximalaya.com, mwsa.ximalaya.com

@@ -26,7 +26,7 @@ const fs = require('fs').promises;
 const path = require('path');
 
 // 定位项目根目录（tools/splitRules/ 往上两级）
-const baseDir = path.resolve(__dirname, '../..');
+const baseDir = process.env.WOOL_MERGE_BASE_DIR ? path.resolve(process.env.WOOL_MERGE_BASE_DIR) : path.resolve(__dirname, '../..');
 
 const CONFIG = {
   inputDir: path.join(baseDir, 'Surge', 'module', 'split'),

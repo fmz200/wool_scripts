@@ -25,7 +25,7 @@ const path = require('path');
 const { pinyin } = require('pinyin');
 
 // 定位项目根目录（tools/splitRules/ 往上两级）
-const baseDir = path.resolve(__dirname, '../..');
+const baseDir = process.env.WOOL_MERGE_BASE_DIR ? path.resolve(process.env.WOOL_MERGE_BASE_DIR) : path.resolve(__dirname, '../..');
 
 // --- 1. 配置区域 ---
 const CONFIG = {

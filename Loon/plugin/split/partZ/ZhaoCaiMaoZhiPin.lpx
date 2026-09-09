@@ -12,11 +12,5 @@
 ^https?:\/\/beehiveapi\.58\.com\/adplace\/zcm reject-dict
 
 
-
-# =====================================
-# 脚本
-# =====================================
-[Script]
-
 [MITM]
 hostname = beehiveapi.58.com
