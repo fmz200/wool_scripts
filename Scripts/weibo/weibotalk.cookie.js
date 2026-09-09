@@ -92,10 +92,9 @@ function handleListCapture(url, headers, body) {
   let token = tokens.find(t => t.userId === userId)
   let firstCapture = !token
   if (token) {
-    // 已有该账号的token，只刷新列表请求体，保留已有签到数据；不重复通知。
-    token.tokenUrl = url
-    token.tokenHeaders = JSON.stringify(headers)
-    token.tokenBody = body
+    // 已有该账号的列表请求参数；签到脚本每次运行时会实时请求最新列表，不覆盖、不重复通知。
+    console.log(`🔁已有超话列表参数 [${userId}]，跳过重复获取`)
+    return
   } else {
     tokens.push({
       userId: userId,
