@@ -17,7 +17,8 @@
 【配置步骤，请认真阅读，每一个细节都很重要】
 ***********************************
 1. 根据你当前的软件，配置好script。由于是远程文件，记得顺便更新文件。
-2. 打开微博APP --> 底部栏"我的"  -->  中间的"超话社区"  --> 底部栏"我的" --> "关注"， 弹出通知，提示获取已关注超话链接成功。
+2. 打开微博APP --> 底部栏"我的" --> 中间的"超话社区" --> 底部栏"我的" --> "关注"，弹出通知，提示获取已关注超话列表成功。
+   注意：需要点击"关注"标签页，等待列表加载完成后才会触发抓包。
 3. 点进一个超话页面，手动签到一次。弹出通知，提示获取超话签到链接成功。 若之前所有已经签到，请关注一个新超话进行签到。
 4. 回到quanx等软件，关掉获取cookie的rewrite。（loon是关掉获取cookie的脚本）
 
@@ -32,7 +33,7 @@ box订阅链接：https://raw.githubusercontent.com/toulanboy/scripts/master/tou
 *************************
 【Surge 4.2+ 脚本配置】
 *************************
-微博超话cookie获取 = type=http-request,pattern=^https?://m?api\.weibo\.c(n|om)\/2\/(statuses\/container_timeline_topicsub|page\/button),requires-body=true,script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibotalk.cookie.js
+微博超话cookie获取 = type=http-request,pattern=^https?://m?api\.weibo\.c(n|om)\/2\/(flowlist|page\/button),requires-body=true,script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibotalk.cookie.js
 微博超话 = type=cron,cronexp="5 0  * * *",script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibotalk_signin.js,wake-system=true,timeout=600
 
 *************************
@@ -40,13 +41,13 @@ box订阅链接：https://raw.githubusercontent.com/toulanboy/scripts/master/tou
 *************************
 [script]
 cron "5 0 * * *" script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibotalk_signin.js, timeout=600, tag=微博超话
-http-request ^https?://m?api\.weibo\.c(n|om)\/2\/(statuses\/container_timeline_topicsub|page\/button) script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibotalk.cookie.js,requires-body=true, tag=微博超话cookie获取
+http-request ^https?://m?api\.weibo\.c(n|om)\/2\/(flowlist|page\/button) script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibotalk.cookie.js,requires-body=true, tag=微博超话cookie获取
 
 *************************
 【 QX 1.0.10+ 脚本配置 】
 *************************
 [rewrite_local]
-^https?://m?api\.weibo\.c(n|om)\/2\/(statuses\/container_timeline_topicsub|page\/button) url script-request-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibotalk.cookie.js
+^https?://m?api\.weibo\.c(n|om)\/2\/(flowlist|page\/button) url script-request-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibotalk.cookie.js
 [task]
 5 0 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibotalk_signin.js, tag=微博超话
 
@@ -58,7 +59,7 @@ hostname = api.weibo.cn, mapi.weibo.com
 【Shadowrocket 脚本配置】
 *************************
 [Script]
-微博超话cookie获取 = type=http-request,pattern=^https?://m?api\.weibo\.c(n|om)\/2\/(statuses\/container_timeline_topicsub|page\/button),requires-body=true,script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibotalk.cookie.js
+微博超话cookie获取 = type=http-request,pattern=^https?://m?api\.weibo\.c(n|om)\/2\/(flowlist|page\/button),requires-body=true,script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibotalk.cookie.js
 微博超话 = type=cron,cronexp="5 0  * * *",script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibotalk_signin.js,wake-system=true,timeout=600
 
 [MITM]
@@ -71,9 +72,9 @@ const TOKEN_KEY = "fmz200_weibotalk_token"
 if ($request && $request.method != 'OPTIONS') {
   const url = $request.url
 
-  // 拦截超话列表请求: POST container_timeline_topicsub, body含 fid=232478_-_mine_topic 且 taskType=refresh
-  if (url.includes('container_timeline_topicsub') && $request.body &&
-      $request.body.includes('fid=232478_-_mine_topic') && $request.body.includes('taskType=refresh')) {
+  // 拦截超话关注列表请求: POST flowlist, body含 fid=232478_-_super_topic_followed
+  if (url.includes('/2/flowlist') && $request.body &&
+      $request.body.includes('fid=232478_-_super_topic_followed')) {
     handleListCapture(url, $request.headers, $request.body)
   }
   // 拦截签到请求: GET page/button, URL含 active_checkin
@@ -90,7 +91,7 @@ function handleListCapture(url, headers, body) {
 
   let token = tokens.find(t => t.userId === userId)
   if (token) {
-    // 已有该账号的token，更新列表数据，保留已有签到数据
+    // 已有该账号的token，更新列表数据，保留已有签到数据（不重复获取）
     token.tokenUrl = url
     token.tokenHeaders = JSON.stringify(headers)
     token.tokenBody = body
