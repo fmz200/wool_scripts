@@ -76,6 +76,8 @@ const wb_msg_max_num = isNode ? process.env["wb_msg_max_num"] : $.getdata("wb_ms
 const wb_request_time = isNode ? process.env["wb_request_time"] : $.getdata("wb_request_time");
 const tokenList = isNode ? process.env["fmz200_weibotalk_token"] : $.getdata("fmz200_weibotalk_token");
 
+const REQUEST_TIMEOUT = 15000; // 单次请求超时15秒
+
 $.delete_cookie = JSON.parse(wb_delete_cookie || false); // 若需要清空cookie，请把它置为true。清空完毕后，请重新置为false.
 $.msg_max_num = wb_msg_max_num * 1 || 50; // 一个通知显示30个超话的签到情况
 $.interval_time = wb_request_time * 1 || 3000; //【签到间隔，单位ms】，若超话过多，建议填1000ms以上。
@@ -207,7 +209,7 @@ function output() {
   }
 }
 
-// 获取所有关注的超话（新版API: POST container_timeline_topicsub）
+// 获取所有关注的超话（新版API: POST /2/flowlist）
 async function get_all_topics() {
   let page = 1;
   let sinceId = '';
@@ -219,6 +221,10 @@ async function get_all_topics() {
     let body = $.currentToken.tokenBody;
     if (page > 1) {
       body = modifyBodyForPagination(body, page, sinceId, maxId);
+    }
+    if (page > 1 && body === $.currentToken.tokenBody) {
+      console.log("❌ 分页body未变化，停止获取后续超话列表");
+      break;
     }
 
     console.log(`🌟 获取超话列表，第${page}页`);
@@ -264,8 +270,11 @@ async function get_all_topics() {
       // 兼容两种分页机制：
       // - flowlist: 无 page 参数，仅 since_id 递增
       // - container_timeline_topicsub: page + since_id 同时递增
-      if (moreInfo.params.page) {
-        page = parseInt(moreInfo.params.page);
+      const nextPage = parseInt(moreInfo.params.page || '0');
+      if (nextPage && nextPage !== page) {
+        page = nextPage;
+      } else {
+        page = page + 1;
       }
       sinceId = moreInfo.params.since_id;
       maxId = moreInfo.params.max_id || '';
@@ -360,8 +369,6 @@ function modifyBodyForPagination(body, page, sinceId, maxId) {
 }
 
 // POST 请求封装
-const REQUEST_TIMEOUT = 15000; // 单次请求超时15秒
-
 function postRequest(url, headersStr, body) {
   return new Promise((resolve) => {
     let headers;

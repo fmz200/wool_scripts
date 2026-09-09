@@ -90,8 +90,9 @@ function handleListCapture(url, headers, body) {
   let tokens = JSON.parse($.getdata(TOKEN_KEY) || "[]")
 
   let token = tokens.find(t => t.userId === userId)
+  let firstCapture = !token
   if (token) {
-    // 已有该账号的token，更新列表数据，保留已有签到数据（不重复获取）
+    // 已有该账号的token，只刷新列表请求体，保留已有签到数据；不重复通知。
     token.tokenUrl = url
     token.tokenHeaders = JSON.stringify(headers)
     token.tokenBody = body
@@ -107,7 +108,11 @@ function handleListCapture(url, headers, body) {
   }
 
   $.setdata(JSON.stringify(tokens), TOKEN_KEY)
-  $.msg("微博超话", `✅获取已关注超话列表成功 [${userId}]`, "✨接下来，请点进一个超话进行签到\n如果没有签到的超话，请关注新的进行签到。")
+  if (firstCapture) {
+    $.msg("微博超话", `✅获取已关注超话列表成功 [${userId}]`, "✨接下来，请点进一个超话进行签到\n如果没有签到的超话，请关注新的进行签到。")
+  } else {
+    console.log(`🔁刷新超话列表请求 [${userId}]，不重复通知`)
+  }
 }
 
 function handleCheckinCapture(url, headers) {
