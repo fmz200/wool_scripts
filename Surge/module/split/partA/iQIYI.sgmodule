@@ -95,8 +95,8 @@ IP-CIDR,124.192.153.42/32,REJECT,no-resolve
 # 通用控制,各tab页二楼
 爱奇艺通用控制,各tab页二楼 = type=http-response, pattern=^https?:\/\/iface2\.iqiyi\.com\/fusion\/3\.0\/common_switch\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60
 
-# 底部tab,顶部tab
-爱奇艺底部tab,顶部tab = type=http-response, pattern=^https?:\/\/iface2\.iqiyi\.com\/views\/3\.0\/(bottom_theme|home_top_menu)\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60
+# 底部tab、顶部tab
+爱奇艺底部tab、顶部tab = type=http-response, pattern=^https?:\/\/iface2\.iqiyi\.com\/views\/3\.0\/(bottom_theme|home_top_menu)\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60
 
 # 搜索框填充词
 爱奇艺搜索框填充词 = type=http-response, pattern=^https?:\/\/search\.video\.iqiyi\.com\/q\?, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60

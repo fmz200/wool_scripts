@@ -89,8 +89,8 @@ http-response ^https?:\/\/iface2\.iqiyi\.com\/aggregate\/3\.0\/getMyMenus\? scri
 http-response ^https?:\/\/iface2\.iqiyi\.com\/control\/3\.0\/init_proxy\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=爱奇艺首页左上角天气, enable={aiqiyi_enable}
 # 通用控制,各tab页二楼
 http-response ^https?:\/\/iface2\.iqiyi\.com\/fusion\/3\.0\/common_switch\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=爱奇艺通用控制,各tab页二楼, enable={aiqiyi_enable}
-# 底部tab,顶部tab
-http-response ^https?:\/\/iface2\.iqiyi\.com\/views\/3\.0\/(bottom_theme|home_top_menu)\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=爱奇艺底部tab,顶部tab, enable={aiqiyi_enable}
+# 底部tab、顶部tab
+http-response ^https?:\/\/iface2\.iqiyi\.com\/views\/3\.0\/(bottom_theme|home_top_menu)\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=爱奇艺底部tab、顶部tab, enable={aiqiyi_enable}
 # 搜索框填充词
 http-response ^https?:\/\/search\.video\.iqiyi\.com\/q\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js, requires-body=true, timeout=60, tag=爱奇艺搜索框填充词, enable={aiqiyi_enable}
 # 开屏广告,播放广告

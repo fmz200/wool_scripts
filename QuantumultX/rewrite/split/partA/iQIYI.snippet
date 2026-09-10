@@ -78,7 +78,7 @@ IP-CIDR, 124.192.153.42/32, reject
 ^https?:\/\/iface2\.iqiyi\.com\/ivos\/interact\/video\/data\? url reject-dict
 # 播放页升级白金会员按钮
 ^https?:\/\/iface2\.iqiyi\.com\/video\/3\.0\/v_interface_proxy\? url reject-dict
-# 底部tab,顶部tab
+# 底部tab、顶部tab
 ^https?:\/\/iface2\.iqiyi\.com\/views\/3\.0\/(bottom_theme|home_top_menu)\? url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js
 # 青少年弹窗
 ^https?:\/\/iface2\.iqiyi\.com\/views_pop\/3\.0\/pop_control\? url reject-dict

@@ -9,7 +9,6 @@
 #############################################
 
 [Argument]
-51job_enable = switch,true,false,tag=51job-脚本开关
 51job_enable = switch,true,false,tag=前程无忧-脚本开关
 
 [Rewrite]

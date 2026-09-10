@@ -11,6 +11,8 @@
 
 # 首页净化
 ^https?:\/\/api\.xiaoyuzhoufm\.com\/v1\/discovery-feed\/list url jsonjq-response-body '.data |= map(select(.type == "DISCOVERY_EPISODE_RECOMMEND" or .type == "EDITOR_PICK"))'
+#
+^https?:\/\/api\.xiaoyuzhoufm\.com\/v1\/(related-episode|operation-resource)\/list url jsonjq-response-body '.data = []'
 # 移除开屏广告
 ^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/flash url reject-dict
 # 移除单集总结和ai总结

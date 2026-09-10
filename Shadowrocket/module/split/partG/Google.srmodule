@@ -71,5 +71,5 @@ DOMAIN-SUFFIX,adclick.g.doublecklick.net,REJECT
 ^https?:\/\/pagead2\.googlesyndication\.com\/pagead\/ data-type=tiny-gif
 
 [MITM]
-hostname = %APPEND% *.googleapis.com, pagead2.googlesyndication.com
+hostname = %APPEND%  pagead2.googlesyndication.com
 

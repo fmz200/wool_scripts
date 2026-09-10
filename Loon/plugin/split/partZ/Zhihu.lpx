@@ -19,26 +19,14 @@ DOMAIN, mqtt.zhihu.com, REJECT
 DOMAIN, sugar.zhihu.com, REJECT
 DOMAIN, crash2.zhihu.com, REJECT
 DOMAIN, 118.89.204.198, REJECT
-IP-CIDR, 118.89.204.198/32, REJECT, no-resolve
-IP-CIDR6,2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT, no-resolve
-
-
-[Rewrite]
-DOMAIN, appcloud.zhihu.com, REJECT
-DOMAIN, appcloud2.in.zhihu.com, REJECT
-DOMAIN, crash2.zhihu.com, REJECT
-DOMAIN, mqtt.zhihu.com, REJECT
-DOMAIN, sugar.zhihu.com, REJECT
 DOMAIN, zxid-m.mobileservice.cn, REJECT
-IP-CIDR, 103.41.167.237/32, REJECT, no-resolve
 IP-CIDR, 118.89.204.198/32, REJECT, no-resolve
+IP-CIDR, 103.41.167.237/32, REJECT, no-resolve
 IP-CIDR6, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT, no-resolve
 
 
 
 [Rewrite]
-
-
 # 首页 - 悬浮图标、顶部横幅、开屏广告、关注页推荐、推荐信息流、热榜信息流、热榜直播、回答底部卡片
 ^https:\/\/api\.zhihu\.com\/commercial_api\/(?:answer\/\d+\/bottom-v2|article\/\d+\/bottom-v2|banners_v3\/app_topstory_banner|launch_v2|real_time_launch_v2) reject-dict
 ^https:\/\/api\.zhihu\.com\/content-distribution-core\/bubble\/common\/settings reject-dict
