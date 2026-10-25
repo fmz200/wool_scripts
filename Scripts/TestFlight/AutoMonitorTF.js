@@ -1,7 +1,7 @@
 /**
  @author fmz200
  @function 监控TF是否可加入，支持大部分代理工具包括 QX，Loon，Surge，Egern，Stash，ShadowRocket，青龙
- @date 2026-02-17 14:50:00
+ @date 2026-10-25 22:20:00
 
  定时任务
  30 * * * * ? https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/TestFlight/AutoMonitorTF.js
@@ -12,6 +12,7 @@ const isNode = $.isNode();
 const notify = isNode ? require('../qinglong/sendNotify') : '';
 $.nodeNotifyMsg = []; // nodeJS合并通知
 
+const TF_TIMEOUT = 10; // 请求超时时间（秒）
 const TF_APP_ID = isNode ? process.env["fmz200_TF_APP_ID"] : $.getdata("fmz200_TF_APP_ID");
 const userAgents = [
   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
@@ -71,7 +72,7 @@ function autoPost(appId, appName, appIdInfo) {
   }
   console.log(`[${appIdInfo}]请求URL: ${url}`);
   return new Promise(function (resolve) {
-    $.get({url: url, headers: header}, async function (error, resp, data) {
+    $.get({url: url, headers: header, timeout: TF_TIMEOUT * 1000}, async function (error, resp, data) {
       console.log("❤️ 查询appId情况响应");
       // console.log("1、打印error");
       // console.log(error);
