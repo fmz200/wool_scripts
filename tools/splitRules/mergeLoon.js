@@ -28,6 +28,7 @@
 
 const fs = require('fs').promises;
 const path = require('path');
+const { syncDb } = require('./syncDb.js');
 
 // 定位项目根目录（tools/splitRules/ 往上两级；可用环境变量覆盖，便于无破坏性测试）
 const baseDir = process.env.WOOL_MERGE_BASE_DIR
@@ -38,6 +39,11 @@ const CONFIG = {
   inputDir: path.join(baseDir, 'Loon', 'plugin', 'split'),
   outputFile: path.join(baseDir, 'Loon', 'plugin', 'blockAds.plugin'),
   outputV2File: path.join(baseDir, 'Loon', 'plugin', 'blockAdsV2.plugin'),
+  dbPath: path.join(baseDir, 'db', 'inaisi.db'),
+  repoRawBase: 'https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split',
+  splitRelPath: 'Loon/plugin/split',
+  rawCol: 'loon_raw_url',
+  importCol: 'loon_import_url',
   // 段落固定顺序（与现有总文件一致）
   sectionOrder: ['Argument', 'Rule', 'Rewrite', 'Script', 'MITM'],
   // 分类固定顺序（与现有总文件一致：0~9 -> A~Z -> #）
@@ -586,6 +592,18 @@ async function main() {
   console.log(`[INFO] 输出文件: ${CONFIG.outputFile}（共 ${v1Out.length} 行）`);
   console.log(`[INFO] 输出文件: ${CONFIG.outputV2File}（共 ${v2Out.length} 行）`);
   console.log('[SUCCESS] 聚合完成！');
+  // 聚合完成后同步数据库：split 目录 -> rule_details 表
+  await syncDb({
+    inputDir: CONFIG.inputDir,
+    outputExt: '.lpx',
+    dbPath: CONFIG.dbPath,
+    rawCol: CONFIG.rawCol,
+    importCol: CONFIG.importCol,
+    repoRawBase: CONFIG.repoRawBase,
+    splitRelPath: CONFIG.splitRelPath,
+    buildImportUrl: (rawUrl) =>
+      `https://www.nsloon.com/openloon/import?plugin=${encodeURIComponent(rawUrl)}`
+  });
 }
 
 // 执行主函数

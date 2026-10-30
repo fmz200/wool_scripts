@@ -22,6 +22,7 @@
 
 const fs = require('fs').promises;
 const path = require('path');
+const { syncDb } = require('./syncDb.js');
 const { pinyin } = require('pinyin');
 
 // 定位项目根目录（tools/splitRules/ 往上两级）
@@ -34,7 +35,12 @@ const CONFIG = {
   // 输出文件
   outputPath: path.join(baseDir, 'Shadowrocket', 'module', 'blockAds.srmodule'),
   // 聚合文件提交到远端后的 raw 链接（写入文件头）
-  rawUrl: 'https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/blockAds.srmodule'
+  rawUrl: 'https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/blockAds.srmodule',
+  dbPath: path.join(baseDir, 'db', 'inaisi.db'),
+  repoRawBase: 'https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split',
+  splitRelPath: 'Shadowrocket/module/split',
+  rawCol: 'shadowrocket_url',
+  importCol: 'shadowrocket_import_url'
 };
 
 // 段落固定顺序
@@ -302,6 +308,18 @@ async function main() {
     console.log(`[INFO] 共聚合 APP 块 ${totalBlocks} 个（覆盖 ${allFiles.length} 个文件）`);
     console.log(`[INFO] 去重后主机名 ${allHosts.length} 个`);
     console.log(`[SUCCESS] 已生成: ${CONFIG.outputPath}`);
+    // 聚合完成后同步数据库：split 目录 -> rule_details 表
+    await syncDb({
+      inputDir: CONFIG.inputDir,
+      outputExt: '.srmodule',
+      dbPath: CONFIG.dbPath,
+      rawCol: CONFIG.rawCol,
+      importCol: CONFIG.importCol,
+      repoRawBase: CONFIG.repoRawBase,
+      splitRelPath: CONFIG.splitRelPath,
+      buildImportUrl: (rawUrl) =>
+        `shadowrocket://install?module=${encodeURIComponent(rawUrl)}`
+    });
   } catch (error) {
     console.error('[FATAL] 脚本执行过程中发生错误:', error);
     process.exit(1);

@@ -25,6 +25,7 @@
 
 const fs = require('fs').promises;
 const path = require('path');
+const { syncDb } = require('./syncDb.js');
 
 // 定位项目根目录（tools/splitRules/ 往上两级；可用环境变量覆盖，便于无破坏性测试）
 const baseDir = process.env.WOOL_MERGE_BASE_DIR
@@ -35,6 +36,11 @@ const CONFIG = {
   inputDir: path.join(baseDir, 'QuantumultX', 'rewrite', 'split'),
   // 唯一目标文件：重写与分流统一写入 rewrite.snippet
   outputFile: path.join(baseDir, 'QuantumultX', 'rewrite', 'rewrite.snippet'),
+  dbPath: path.join(baseDir, 'db', 'inaisi.db'),
+  repoRawBase: 'https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split',
+  splitRelPath: 'QuantumultX/rewrite/split',
+  rawCol: 'quanx_raw_url',
+  importCol: 'quanx_import_url',
   // 分类固定顺序（与现有总文件一致：0~9 -> A~Z -> #）
   categoryOrder: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'].concat(
     Array.from({ length: 26 }, (_, i) => String.fromCharCode(65 + i)),
@@ -282,7 +288,6 @@ function compareApps(a, b) {
 async function buildOutput(appsByCategory, allHosts, usedCategories) {
   const out = [];
   out.push(...(await getHeaderLines()));
-  out.push('#############################################');
   out.push('');
   out.push('');
 
@@ -380,6 +385,20 @@ async function main() {
   console.log(`[INFO] 汇总 MITM hostname 数量（去重后）: ${allHosts.length}`);
   console.log(`[INFO] 输出文件: ${CONFIG.outputFile}`);
   console.log('[SUCCESS] 聚合完成！');
+  // 聚合完成后同步数据库：split 目录 -> rule_details 表
+  await syncDb({
+    inputDir: CONFIG.inputDir,
+    outputExt: '.snippet',
+    dbPath: CONFIG.dbPath,
+    rawCol: CONFIG.rawCol,
+    importCol: CONFIG.importCol,
+    repoRawBase: CONFIG.repoRawBase,
+    splitRelPath: CONFIG.splitRelPath,
+    buildImportUrl: (rawUrl, appName) => {
+      const item = `${rawUrl}, tag=${appName}@奶思, update-interval=172800, opt-parser=false, inserted-resource=false, enabled=true`;
+      return `https://quantumult.app/x/open-app/add-resource?remote-resource=${encodeURIComponent(JSON.stringify({ rewrite_remote: [item] }))}`;
+    }
+  });
 }
 
 // 执行主函数

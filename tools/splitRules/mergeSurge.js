@@ -24,6 +24,7 @@
 
 const fs = require('fs').promises;
 const path = require('path');
+const { syncDb } = require('./syncDb.js');
 
 // 定位项目根目录（tools/splitRules/ 往上两级）
 const baseDir = process.env.WOOL_MERGE_BASE_DIR ? path.resolve(process.env.WOOL_MERGE_BASE_DIR) : path.resolve(__dirname, '../..');
@@ -31,6 +32,13 @@ const baseDir = process.env.WOOL_MERGE_BASE_DIR ? path.resolve(process.env.WOOL_
 const CONFIG = {
   inputDir: path.join(baseDir, 'Surge', 'module', 'split'),
   outputFile: path.join(baseDir, 'Surge', 'module', 'blockAds.module'),
+  dbPath: path.join(baseDir, 'db', 'inaisi.db'),
+  repoRawBase: 'https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split',
+  splitRelPath: 'Surge/module/split',
+  rawCol: 'surge_raw_url',
+  importCol: 'surge_import_url',
+  extraRawCol: 'egern_raw_url',
+  extraImportCol: 'egern_import_url',
   // 段落固定顺序（拆分文件中出现的全部段落）
   sectionOrder: [
     'Rule',
@@ -314,6 +322,20 @@ async function main() {
   console.log(`[INFO] 汇总 MITM hostname 数量（去重后）: ${allHosts.length}`);
   console.log(`[INFO] 输出文件: ${CONFIG.outputFile}（共 ${out.length} 行）`);
   console.log('[SUCCESS] 聚合完成！');
+  // 聚合完成后同步数据库：split 目录 -> rule_details 表
+  await syncDb({
+    inputDir: CONFIG.inputDir,
+    outputExt: '.sgmodule',
+    dbPath: CONFIG.dbPath,
+    rawCol: CONFIG.rawCol,
+    importCol: CONFIG.importCol,
+    extraRawCol: CONFIG.extraRawCol,
+    extraImportCol: CONFIG.extraImportCol,
+    repoRawBase: CONFIG.repoRawBase,
+    splitRelPath: CONFIG.splitRelPath,
+    buildImportUrl: (rawUrl) =>
+      `https://api.boxjs.app/surge/install-module?url=${encodeURIComponent(rawUrl)}`
+  });
 }
 
 // 执行主函数

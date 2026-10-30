@@ -2,6 +2,7 @@
 #!desc=移除开屏广告、弹窗，以及首页、服务和发现页的无用内容
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!homepage=https://hub.kelee.one
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partL/LianTongMenHu.sgmodule
 
 [General]
 # HTTP 5090 端口也需要进入 HTTP 引擎才能匹配 Map Local。
