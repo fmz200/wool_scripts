@@ -1,7 +1,7 @@
 /**********
  微博超话签到修改版
  适配新版微博客户端 (16.x+)
- 更新时间：2026-09-08
+ 更新时间：2026-11-09
 
 ⚠️ 若从旧版升级，请先在BoxJS或代理工具中清空旧cookie（wb_delete_cookie=true），再重新获取。
 ⚠️ 新版列表请求为POST，必须配置 requires-body=true（QX用script-request-body），否则无法捕获POST body。
@@ -77,6 +77,11 @@ const wb_request_time = isNode ? process.env["wb_request_time"] : $.getdata("wb_
 const tokenList = isNode ? process.env["fmz200_weibotalk_token"] : $.getdata("fmz200_weibotalk_token");
 
 const REQUEST_TIMEOUT = 15000; // 单次请求超时15秒
+// 对照试验：重放时只保留会话内不变的字段（gsid、aid、s、WB-SUT）。
+// 去掉每次请求都变的 x-validator、x-shanhai-pass、x-sessionid，并把 ul_ctime 改成当前时间。
+// 若列表接口立刻被拒，把这里改成 false，即恢复整包重放。
+const REPLAY_STABLE_ONLY = true;
+const DROP_REPLAY_HEADERS = ["x-validator", "x-shanhai-pass", "x-sessionid"];
 
 $.delete_cookie = JSON.parse(wb_delete_cookie || false); // 若需要清空cookie，请把它置为true。清空完毕后，请重新置为false.
 $.msg_max_num = wb_msg_max_num * 1 || 50; // 一个通知显示30个超话的签到情况
@@ -377,9 +382,10 @@ function postRequest(url, headersStr, body) {
     } catch (e) {
       headers = {};
     }
+    const replay = prepareReplay(url, headers);
     let request = {
-      url: url,
-      headers: headers,
+      url: replay.url,
+      headers: replay.headers,
       body: body
     };
     let done = false;
@@ -417,9 +423,10 @@ function checkin(id, name) {
   } catch (e) {
     headers = {};
   }
+  const replay = prepareReplay(sendCheckinUrl, headers);
   let request = {
-    url: sendCheckinUrl,
-    headers: headers
+    url: replay.url,
+    headers: replay.headers
   };
 
   return new Promise(resolve => {
@@ -456,6 +463,7 @@ function checkin(id, name) {
           return;
         }
         console.log(response.body);
+        const checkinText = describeCheckin(msg_info);
         if (msg_info.hasOwnProperty('errmsg')) {
           $.failNum += 1;
           if (msg_info.errcode == 382004) {
@@ -465,10 +473,10 @@ function checkin(id, name) {
             $.message.push(`【${name}】：${msg_info.errmsg}`);
             console.log(`【${name}】："发生错误⚠️ 该请求的返回情况如下"`);
           }
-        } else if (msg_info.hasOwnProperty('result') && msg_info.result == 1) {
+        } else if (checkinText) {
           $.successNum += 1
-          $.message.push(`【${name}】：✅${msg_info.button.name}`)
-          console.log(`【${name}】：${msg_info.button.name}`);
+          $.message.push(`【${name}】：✅${checkinText}`)
+          console.log(`【${name}】：${checkinText}`);
         } else {
           $.failNum += 1
           $.message.push(`【${name}】：发生错误⚠️`);
@@ -492,6 +500,66 @@ function checkin(id, name) {
       resolve();
     })
   })
+}
+
+let replayPreparedLogged = false;
+
+// 对照试验用的重放整理：不改已保存的凭证，只改本次发出的请求。
+function prepareReplay(url, headers) {
+  if (!REPLAY_STABLE_ONLY) return { url: url, headers: headers || {} };
+  const nextHeaders = {};
+  headers = headers || {};
+  for (const key of Object.keys(headers)) {
+    if (DROP_REPLAY_HEADERS.indexOf(String(key).toLowerCase()) !== -1) continue;
+    nextHeaders[key] = headers[key];
+  }
+  let nextUrl = url;
+  if (/[?&]ul_ctime=\d+/.test(url)) {
+    nextUrl = url.replace(/([?&]ul_ctime=)\d+/, "$1" + Date.now());
+  }
+  if (!replayPreparedLogged) {
+    replayPreparedLogged = true;
+    console.log("对照试验：已去掉 x-validator、x-shanhai-pass、x-sessionid，并刷新 ul_ctime");
+  }
+  return { url: nextUrl, headers: nextHeaders };
+}
+
+// 16.9 签到成功体同时带 result=1、button.name（如「连签1天」）、ext_button.name（已签），
+// 以及 scheme 里的 check_count。button 缺失时仍按 scheme 里的签到弹层判断成功。
+function describeCheckin(msg) {
+  if (!msg || msg.errmsg) return "";
+  const buttonName = msg.button && msg.button.name;
+  const extName = msg.ext_button && msg.ext_button.name;
+  const params = schemeParams(msg.scheme);
+  const signedByScheme = params.check_int === "1" || (msg.scheme || "").indexOf("pagesigndialog") >= 0;
+  if (msg.result != 1 && !signedByScheme) return "";
+  let text = buttonName || (extName === "已签" ? "已签到" : extName) || "签到成功";
+  if (extName && buttonName && extName !== buttonName) text += `（${extName}）`;
+  if (params.check_count) text += `，累计${params.check_count}`;
+  return text;
+}
+
+function schemeParams(scheme) {
+  const params = {};
+  if (!scheme) return params;
+  let text = scheme;
+  try { text = decodeURIComponent(scheme); } catch (e) {}
+  const mark = "scheme=";
+  const at = text.indexOf(mark);
+  if (at >= 0) {
+    let inner = text.slice(at + mark.length);
+    try { inner = decodeURIComponent(inner); } catch (e) {}
+    text += "&" + inner;
+  }
+  for (const part of text.split(/[?&]/)) {
+    const eq = part.indexOf("=");
+    if (eq < 0) continue;
+    const key = part.slice(0, eq);
+    let value = part.slice(eq + 1);
+    try { value = decodeURIComponent(value); } catch (e) {}
+    if (params[key] == null) params[key] = value;
+  }
+  return params;
 }
 
 // 简单的判断对象的所有属性都不为空，所有属性都符合条件才返回 true
