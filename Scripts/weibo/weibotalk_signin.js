@@ -82,6 +82,7 @@ const REQUEST_TIMEOUT = 15000; // 单次请求超时15秒
 // 若列表接口立刻被拒，把这里改成 false，即恢复整包重放。
 const REPLAY_STABLE_ONLY = true;
 const DROP_REPLAY_HEADERS = ["x-validator", "x-shanhai-pass", "x-sessionid"];
+let replayPreparedLogged = false;
 
 $.delete_cookie = JSON.parse(wb_delete_cookie || false); // 若需要清空cookie，请把它置为true。清空完毕后，请重新置为false.
 $.msg_max_num = wb_msg_max_num * 1 || 50; // 一个通知显示30个超话的签到情况
@@ -501,8 +502,6 @@ function checkin(id, name) {
     })
   })
 }
-
-let replayPreparedLogged = false;
 
 // 对照试验用的重放整理：不改已保存的凭证，只改本次发出的请求。
 function prepareReplay(url, headers) {
