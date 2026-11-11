@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partC/ChaoJiKeChengBiao.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [URL Rewrite]
 http:\/\/ad\.myfriday\.cn\/d\/json\/1\.1 - reject
@@ -15,4 +18,3 @@ http:\/\/ad\.myfriday\.cn\/d\/json\/1\.1 - reject
 
 [MITM]
 hostname = %APPEND% 182.92.244.70, ad.myfriday.cn
-

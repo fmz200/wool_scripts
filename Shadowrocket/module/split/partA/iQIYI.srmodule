@@ -5,6 +5,10 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partA/iQIYI.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
+
 #!arguments=aiqiyi_enable:true
 #!arguments-desc=aiqiyi_enable: aiqiyi_enable
 
@@ -107,4 +111,3 @@ IP-CIDR,124.192.153.42/32,REJECT,no-resolve
 
 [MITM]
 hostname = %APPEND% -i.vip.iqiyi.com, *.iqiyi.com
-

@@ -5,10 +5,12 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partK/OSChina.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Map Local]
 ^https?:\/\/www\.oschina\.net\/action\/apiv2\/get_launcher data-type=tiny-gif
 
 [MITM]
 hostname = %APPEND% www.oschina.net
-

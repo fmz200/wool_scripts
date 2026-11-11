@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partS/ShuQiNovel.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,ut2.shuqistat.com,REJECT
@@ -27,4 +30,3 @@ DOMAIN-SUFFIX,ut2.shuqistat.com,REJECT
 
 [MITM]
 hostname = %APPEND% ut2.shuqistat.com, dsp.toutiao.com, sf3-be-pack.pglstatp-toutiao.com, api-access.pangolin-sdk-toutiao.com, sq.sljkj.com, ocean.shuqireader.com, img-tailor.11222.cn, message.shuqireader.com, feedback.uc.cn, *.shuqireader.com, 101.91.69.26
-

@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partS/ShanDongXiaoYuan.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Map Local]
 # 去除ai视频
@@ -26,4 +29,3 @@
 
 [MITM]
 hostname = %APPEND% api.huachenjie.com, open.e.kuaishou.cn, ad.shunchangzhixing.com, zlsdk.1rtb.net
-

@@ -5,9 +5,11 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partY/UUSee.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,g.uusee.com,REJECT
 DOMAIN-SUFFIX,pop.uusee.com,REJECT
 DOMAIN-SUFFIX,traffic.uusee.com,REJECT
-

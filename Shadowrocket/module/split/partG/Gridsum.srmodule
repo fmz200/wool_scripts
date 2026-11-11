@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partG/Gridsum.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,gridsumdissector.cn,REJECT
@@ -19,4 +22,3 @@ DOMAIN-SUFFIX,impression.gridsumdissector.com,REJECT
 DOMAIN-SUFFIX,recv-wd.gridsumdissector.com,REJECT
 DOMAIN-SUFFIX,sso-cas.gridsumdissector.com,REJECT
 DOMAIN-SUFFIX,g.gridsum.com,REJECT
-

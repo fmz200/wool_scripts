@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partA/AOL.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,adinfo.aol.com,REJECT
@@ -12,4 +15,3 @@ DOMAIN-SUFFIX,dynamic.aol.com,REJECT
 DOMAIN-SUFFIX,free.aol.com,REJECT
 DOMAIN-SUFFIX,mads.aol.com,REJECT
 DOMAIN-SUFFIX,cdn.komentary.aol.com,REJECT
-

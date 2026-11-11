@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partD/DeWu.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [URL Rewrite]
 # 开屏广告 【Runestoner】分享
@@ -13,3 +16,6 @@
 [Map Local]
 ^https?:\/\/cdn\.poizon\.com\/node-common\/.*.jpg data-type=text data=" " status-code=200
 
+
+[MITM]
+hostname = %APPEND% app.dewu.com, cdn.poizon.com

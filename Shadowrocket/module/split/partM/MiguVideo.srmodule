@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partM/MiguVideo.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,ad.cmvideo.cn,REJECT
@@ -37,4 +40,3 @@ DOMAIN,ggadoffline.miguvideo.com,REJECT
 
 [MITM]
 hostname = %APPEND% ggc.miguvideo.com, public-deliver9.miguvideo.com, display*-sc.miguvideo.com, recommend-dy.miguvideo.com, app-sc.miguvideo.com, common-sc.miguvideo.com, ggx*.miguvideo.com, ggic*.miguvideo.com
-

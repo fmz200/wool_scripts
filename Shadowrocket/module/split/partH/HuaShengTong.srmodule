@@ -1,4 +1,19 @@
-#!name=HuaShengTong
-#!desc=HuaShengTong
-#!error=404: Not Found
+#!name=华盛通
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partH/HuaShengTong.srmodule
+#!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
 
+
+[Map Local]
+# 横幅广告
+^https:\/\/interface\.hstong\.com\/pdp\/ad\/images\/v2 data-type=text data=" "
+^https:\/\/interface\.hstong\.com\/ad\/images\/v2 data-type=text data=" "
+
+[MITM]
+hostname = %APPEND% interface.hstong.com

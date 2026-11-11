@@ -5,10 +5,12 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partD/DianEBao.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Map Local]
 ^https?:\/\/app\.95598pay\.com\/debapi\/adsite\/ data-type=text data=" "
 
 [MITM]
 hostname = %APPEND% app.95598pay.com
-

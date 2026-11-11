@@ -5,9 +5,16 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partX/XiaomiMall.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
+
 #!arguments=xnmiuhig_enable:true
 #!arguments-desc=xnmiuhig_enable: xnmiuhig_enable
 
 [Script]
 小米商城 = type=http-response, pattern=^https?:\/\/api\.m\.mi\.com\/v1\/app\/start, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/myBlockAds.js, requires-body=true, timeout=60
 
+
+[MITM]
+hostname = %APPEND% api.m.mi.com

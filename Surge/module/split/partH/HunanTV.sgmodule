@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partH/HunanTV.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,da.hunantv.com,REJECT
@@ -18,4 +21,3 @@ DOMAIN-SUFFIX,x1.da.hunantv.com,REJECT
 DOMAIN-SUFFIX,y.da.hunantv.com,REJECT
 DOMAIN-SUFFIX,log.v2.hunantv.com,REJECT
 DOMAIN-SUFFIX,v2.log.hunantv.com,REJECT
-

@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partW/NetEase.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,dsp.youdao.com,REJECT
@@ -100,4 +103,3 @@ DOMAIN-SUFFIX,impservicetest.dictapp.youdao.com,REJECT
 DOMAIN-SUFFIX,clkservice.mail.youdao.com,REJECT
 DOMAIN-SUFFIX,clkservice.union.youdao.com,REJECT
 DOMAIN-SUFFIX,log.yex.youdao.com,REJECT
-

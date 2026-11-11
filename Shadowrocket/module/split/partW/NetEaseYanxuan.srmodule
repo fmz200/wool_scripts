@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partW/NetEaseYanxuan.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [URL Rewrite]
 https://support.you.163.com/appversync/check.do - reject
@@ -13,4 +16,3 @@ https://support.you.163.com/appversync/check.do - reject
 
 [MITM]
 hostname = %APPEND% support.you.163.com, m.you.163.com, yanxuan.nosdn.127.net
-

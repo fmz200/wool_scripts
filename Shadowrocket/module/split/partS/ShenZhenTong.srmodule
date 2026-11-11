@@ -1,4 +1,20 @@
-#!name=ShenZhenTong
-#!desc=ShenZhenTong
-#!error=404: Not Found
+#!name=深圳通
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partS/ShenZhenTong.srmodule
+#!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
 
+
+[Rule]
+# 微信小程序, REJECT
+DOMAIN-SUFFIX,wxsnsdythumb.wxs.qq.com,REJECT
+
+[Map Local]
+^https?:\/\/ecard\.shenzhentong\.com\/wxweb\/bwxppub2\/QryAdvertList\.do data-type=text data=" "
+
+[MITM]
+hostname = %APPEND% ecard.shenzhentong.com

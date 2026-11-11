@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partD/DiDiBike.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 #DOMAIN-KEYWORD, pt-starimg.didistatic.com, REJECT
@@ -17,4 +20,3 @@ IP-CIDR,203.107.1.1/24,REJECT,no-resolve
 
 [MITM]
 hostname = %APPEND% pt-starimg.didistatic.com, omgup*.xiaojukeji.com
-

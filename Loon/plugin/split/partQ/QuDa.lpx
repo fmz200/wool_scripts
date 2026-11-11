@@ -5,8 +5,9 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partQ/QuDa.lpx
 #!tg-channel=https://t.me/inaisi
-#!date=
+#!date=2026-11-11 21:17:23
 #############################################
+
 
 [Argument]
 quda_enable = switch,true,false,tag=去哒-脚本开关
@@ -14,3 +15,6 @@ quda_enable = switch,true,false,tag=去哒-脚本开关
 [Script]
 # 首页开屏广告 感谢【德克萨斯】分享
 http-response ^https?:\/\/iqushangwang\.8quan\.com\/index\.php\/i\/index\/index script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/QuDa.js, requires-body=true, timeout=60, tag=去哒, enable={quda_enable}
+
+[MITM]
+hostname = iqushangwang.8quan.com

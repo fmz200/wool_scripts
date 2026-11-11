@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partX/XiaoAiSpeaker.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN,mistat.xiaomi.com,REJECT
@@ -18,4 +21,3 @@ DOMAIN,mistat.xiaomi.com,REJECT
 
 [MITM]
 hostname = %APPEND% info.mina.xiaoaisound.com, marketing-aibox.v.mitvos.com
-

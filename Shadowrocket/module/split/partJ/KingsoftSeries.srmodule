@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partJ/KingsoftSeries.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,an.m.liebao.cn,REJECT
@@ -40,4 +43,3 @@ DOMAIN-SUFFIX,bu1.duba.com,REJECT
 DOMAIN-SUFFIX,bu2.duba.com,REJECT
 DOMAIN-SUFFIX,docer.com,REJECT
 DOMAIN-SUFFIX,iciba.com,REJECT
-

@@ -5,6 +5,10 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partM/Meiyou.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
+
 #!arguments=meiyou_enable:true
 #!arguments-desc=meiyou_enable: meiyou_enable
 
@@ -25,4 +29,3 @@ DOMAIN,ad.seeyouyima.com,REJECT
 
 [MITM]
 hostname = %APPEND% x.seeyouyima.com, axxd.xmseeyouyima.com, config-service.seeyouyima.com
-

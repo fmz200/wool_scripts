@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partX/XunYiWenYao.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,a.xywy.com,REJECT
@@ -15,4 +18,3 @@ DOMAIN-SUFFIX,hao123.xywy.com,REJECT
 DOMAIN-SUFFIX,page.xywy.com,REJECT
 DOMAIN-SUFFIX,stat-y.xywy.com,REJECT
 DOMAIN-SUFFIX,stat-z.xywy.com,REJECT
-

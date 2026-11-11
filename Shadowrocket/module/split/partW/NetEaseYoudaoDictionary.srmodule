@@ -5,6 +5,10 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partW/NetEaseYoudaoDictionary.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
+
 #!arguments=whyiyzdccidm_enable:true
 #!arguments-desc=whyiyzdccidm_enable: whyiyzdccidm_enable
 
@@ -48,4 +52,3 @@
 
 [MITM]
 hostname = %APPEND% dict.youdao.com, api-overmind.youdao.com, cdke.youdao.com, dictvip-business.youdao.com, dsp-impr2.youdao.com, impservice.dictapp.youdao.com, oral.youdao.com, oimage*.ydstatic.com
-

@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partX/XiaoCanBaWangCan.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Map Local]
 # 去广告（这个域名其实已经在分流中拒绝）
@@ -21,4 +24,3 @@
 
 [MITM]
 hostname = %APPEND% zlsdk.1rtb.net, web2.realtech-inc.com, sdk.1rtb.net, gw.xiaocantech.com
-

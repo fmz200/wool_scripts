@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partL/LeEco.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN,emma-414870e223.huodonghezi.com,REJECT
@@ -26,4 +29,3 @@ DOMAIN-SUFFIX,api.game.letvstore.com,REJECT
 DOMAIN-SUFFIX,api.push.le.com,REJECT
 DOMAIN-SUFFIX,cn.api.push.le.com,REJECT
 DOMAIN-SUFFIX,guang.lesports.com,REJECT
-

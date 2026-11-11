@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partQ/Autohome.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-KEYWORD,adm3.autoimg.cn,REJECT
@@ -48,4 +51,3 @@ DOMAIN-SUFFIX,h.pcd.autohome.com.cn,REJECT
 
 [MITM]
 hostname = %APPEND% adproxy.autohome.com.cn, app2.autoimg.cn
-

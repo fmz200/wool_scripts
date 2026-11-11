@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partY/CCTV.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN,galaxy.bjcathay.com,REJECT
@@ -34,4 +37,3 @@ DOMAIN-SUFFIX,vdapprecv.app.cntvwb.cn,REJECT
 
 [MITM]
 hostname = %APPEND% www.cntv.cn
-

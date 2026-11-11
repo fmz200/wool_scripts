@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partA/Adobe.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,3dns-2.adobe.com,REJECT
@@ -34,4 +37,3 @@ DOMAIN-SUFFIX,asia.marketo.com,REJECT
 DOMAIN-SUFFIX,pages2.marketo.com,REJECT
 DOMAIN-SUFFIX,marketo.net,REJECT
 DOMAIN-SUFFIX,munchkin.marketo.net,REJECT
-

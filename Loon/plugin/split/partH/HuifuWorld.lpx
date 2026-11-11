@@ -5,8 +5,9 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partH/HuifuWorld.lpx
 #!tg-channel=https://t.me/inaisi
-#!date=
+#!date=2026-11-11 21:17:23
 #############################################
+
 
 [Argument]
 hftx_enable = switch,true,false,tag=汇付天下-脚本开关
@@ -15,3 +16,6 @@ hftx_enable = switch,true,false,tag=汇付天下-脚本开关
 # 感谢【可莉】分享
 http-response ^https:\/\/mcsp\.cloudpnr\.com\/api\/miniapp\/popular\/T_MINIAPP$ script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/huifutianxia_ads.js, requires-body=true, timeout=60, tag=汇付天下, enable={hftx_enable}
 http-response ^https:\/\/saas-ad\.cloudpnr\.com\/huifuad-base-api\/api\/tactics\/ad script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/huifutianxia_ads.js, requires-body=true, timeout=60, tag=汇付天下, enable={hftx_enable}
+
+[MITM]
+hostname = mcsp.cloudpnr.com, saas-ad.cloudpnr.com

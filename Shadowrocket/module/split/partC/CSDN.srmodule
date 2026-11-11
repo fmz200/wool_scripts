@@ -1,4 +1,26 @@
 #!name=CSDN
-#!desc=CSDN
-#!error=404: Not Found
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partC/CSDN.srmodule
+#!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
 
+
+[Rule]
+DOMAIN-SUFFIX,ad.csdn.net,REJECT
+DOMAIN-SUFFIX,counter.csdn.net,REJECT
+DOMAIN-SUFFIX,dc.csdn.net,REJECT
+DOMAIN-SUFFIX,dc2.csdn.net,REJECT
+DOMAIN-SUFFIX,medal.blog.csdn.net,REJECT
+
+[URL Rewrite]
+# 感谢【Jörgen Frecht】分享
+^https?:\/\/app-gw\.csdn\.net\/silkroad-api\/api\/v\d\/assemble\/list\/pub\/channel\/app_open_screen_ad - reject
+^https?:\/\/app-gw\.csdn\.net\/abtesting\/v2\/getList? - reject
+^https?:\/\/gw\.csdn\.net\/cms-app\/v\d+\/home_page\/open_advertisement - reject
+
+[MITM]
+hostname = %APPEND% app-gw.csdn.net, gw.csdn.net

@@ -5,6 +5,10 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partA/Alibaba.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
+
 #!arguments=albb_enable:true
 #!arguments-desc=albb_enable: albb_enable
 
@@ -42,4 +46,3 @@ myBlockAds = type=http-response, pattern=^https:\/\/poplayer\.template\.alibaba\
 
 [MITM]
 hostname = %APPEND% acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com
-

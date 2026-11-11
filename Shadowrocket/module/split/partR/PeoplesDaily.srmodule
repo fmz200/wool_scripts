@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partR/PeoplesDaily.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [URL Rewrite]
 ^https?:\/\/app\.peopleapp\.com\/Api\/\d+/HomeApi\/(adv|getAdvertImage) - reject
@@ -15,4 +18,3 @@
 
 [MITM]
 hostname = %APPEND% app.peopleapp.com, stat.peopleapp.com, adstatic.peopleapp.com
-

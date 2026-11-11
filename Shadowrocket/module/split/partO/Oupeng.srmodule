@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partO/Oupeng.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,ezine.oupeng.com,REJECT
@@ -13,4 +16,3 @@ DOMAIN-SUFFIX,notify.oupeng.com,REJECT
 DOMAIN-SUFFIX,startup.oupeng.com,REJECT
 DOMAIN-SUFFIX,c.bxb.oupeng.com,REJECT
 DOMAIN-SUFFIX,r.bxb.oupeng.com,REJECT
-

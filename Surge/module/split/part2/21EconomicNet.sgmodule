@@ -5,10 +5,12 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/part2/21EconomicNet.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [URL Rewrite]
 ^https?:\/\/api\.21jingji\.com\/ad\/ - reject
 
 [MITM]
 hostname = %APPEND% api.21jingji.com
-

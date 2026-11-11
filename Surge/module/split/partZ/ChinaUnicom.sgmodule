@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partZ/ChinaUnicom.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,m1.ad.10010.com,REJECT
@@ -24,4 +27,3 @@ DOMAIN-SUFFIX,m1.ad.10010.com,REJECT
 
 [MITM]
 hostname = %APPEND% m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn
-

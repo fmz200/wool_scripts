@@ -5,6 +5,10 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partJ/JD.com.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
+
 #!arguments=jkds_enable:true
 #!arguments-desc=jkds_enable: jkds_enable
 
@@ -36,4 +40,3 @@ IP-CIDR6,2402:db40:5100:1011::5/128,REJECT,no-resolve
 
 [MITM]
 hostname = %APPEND% api.m.jd.com, dns.jd.com
-

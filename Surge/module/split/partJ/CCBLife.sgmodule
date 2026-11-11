@@ -5,6 +5,10 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partJ/CCBLife.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
+
 #!arguments=jhsh_enable:true
 
 [Rule]
@@ -38,4 +42,3 @@ http-response ^https?:\/\/waimai-guide\.ele\.me\/\w+\/mtop\.venus\.shopresources
 
 [MITM]
 hostname = %APPEND% yunbusiness.ccb.com, g.alicdn.com, waimai-guide.ele.me
-

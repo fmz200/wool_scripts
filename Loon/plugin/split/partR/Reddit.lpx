@@ -5,8 +5,9 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partR/Reddit.lpx
 #!tg-channel=https://t.me/inaisi
-#!date=
+#!date=2026-11-11 21:17:23
 #############################################
+
 
 [Argument]
 reddit_enable = switch,true,false,tag=Reddit-脚本开关
@@ -14,3 +15,6 @@ reddit_enable = switch,true,false,tag=Reddit-脚本开关
 [Script]
 # 过滤推广 关NSFW提示 感谢【xream】分享
 http-response ^https?:\/\/gql(-fed)?\.reddit\.com script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/reddit.js, requires-body=true, timeout=60, tag=reddit, enable={reddit_enable}
+
+[MITM]
+hostname = gql.reddit.com, gql-fed.reddit.com

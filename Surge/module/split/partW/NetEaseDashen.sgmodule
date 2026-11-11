@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partW/NetEaseDashen.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 # 拦截HTTPDNS
@@ -32,4 +35,3 @@ http-response-jq ^https:\/\/app-conf\.ds\.163\.com\/v\d\/app\/base\/conf\/static
 
 [MITM]
 hostname = %APPEND% god.gameyw.netease.com, app-conf.ds.163.com
-

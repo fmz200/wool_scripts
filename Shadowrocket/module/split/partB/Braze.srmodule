@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partB/Braze.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,iad.appboy.com,REJECT
@@ -16,4 +19,3 @@ DOMAIN-SUFFIX,iad-04.braze.com,REJECT
 DOMAIN-SUFFIX,iad-05.braze.com,REJECT
 DOMAIN-SUFFIX,iad-06.braze.com,REJECT
 DOMAIN-SUFFIX,iad-08.braze.com,REJECT
-

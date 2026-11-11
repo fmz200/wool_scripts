@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partF/FengChao.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [URL Rewrite]
 ^https:\/\/dsp\.fcbox\.com\/adSearch\/get\? - reject
@@ -15,4 +18,3 @@
 
 [MITM]
 hostname = %APPEND% external.fcbox.com, dsp.fcbox.com, consumer.fcbox.com, rtm.fcbox.com
-

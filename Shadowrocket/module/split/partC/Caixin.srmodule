@@ -1,4 +1,24 @@
-#!name=Caixin
-#!desc=Caixin
-#!error=404: Not Found
+#!name=财新网
+#!desc=某些APP要清除缓存或者重新安装拦截广告才会生效！
+#!author=奶思
+#!category=奶思的模块
+#!homepage=https://github.com/fmz200/wool_scripts
+#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partC/Caixin.srmodule
+#!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
 
+
+#!arguments=cdxb_enable:true
+#!arguments-desc=cdxb_enable: cdxb_enable
+
+[Rule]
+DOMAIN-SUFFIX,apollo.caixin.com,REJECT
+DOMAIN-SUFFIX,logstat.caixin.com,REJECT
+DOMAIN-SUFFIX,promote.caixin.com,REJECT
+
+[Script]
+财新广告 = type=http-response, pattern=^https?:\/\/gg\.caixin\.com\/s\?z=caixin&op=1&c=3362, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/caixin/caixinAd.js, requires-body=true, timeout=60
+
+[MITM]
+hostname = %APPEND% gg.caixin.com

@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partW/Waps.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,waps.cn,REJECT
@@ -16,4 +19,3 @@ DOMAIN-SUFFIX,imgcdn.wapx.cn,REJECT
 DOMAIN-SUFFIX,push.wapx.cn,REJECT
 DOMAIN-SUFFIX,wapscdn.wapx.cn,REJECT
 DOMAIN-SUFFIX,wapx.com,REJECT
-

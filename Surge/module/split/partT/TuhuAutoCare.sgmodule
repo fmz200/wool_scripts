@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partT/TuhuAutoCare.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN,analytics.tuhu.com,REJECT
@@ -32,4 +35,3 @@ DOMAIN,ta.tuhu.cn,REJECT
 
 [MITM]
 hostname = %APPEND% mkt-gateway.tuhu.cn, cl-gateway.tuhu.cn, gateway.tuhu.cn
-

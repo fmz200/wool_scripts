@@ -5,6 +5,10 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partM/MangoTV.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
+
 #!arguments=mhgotv_enable:true
 #!arguments-desc=mhgotv_enable: mhgotv_enable
 
@@ -81,4 +85,3 @@ DOMAIN-SUFFIX,da.mgtv.com,REJECT
 
 [MITM]
 hostname = %APPEND% *.mgtv.com
-

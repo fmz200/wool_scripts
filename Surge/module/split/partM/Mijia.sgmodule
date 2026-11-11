@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partM/Mijia.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN,sdkconfig.ad.xiaomi.com,REJECT
@@ -16,4 +19,3 @@ DOMAIN,sdkconfig.ad.xiaomi.com,REJECT
 
 [MITM]
 hostname = %APPEND% home.mi.com
-

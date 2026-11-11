@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partY/PSBC.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [URL Rewrite]
 # 屏蔽升级弹窗 感谢@jinlvei分享 影响软件运行，如开启可自行添加主机名
@@ -21,4 +24,3 @@
 
 [MITM]
 hostname = %APPEND% static.psbc.com, mcc.psbc.com, static.mobile-bank.psbc.com, d.psbc.com
-

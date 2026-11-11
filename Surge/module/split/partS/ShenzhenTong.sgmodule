@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partS/ShenZhenTong.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 # 微信小程序, REJECT
@@ -15,4 +18,3 @@ DOMAIN-SUFFIX,wxsnsdythumb.wxs.qq.com,REJECT
 
 [MITM]
 hostname = %APPEND% ecard.shenzhentong.com
-

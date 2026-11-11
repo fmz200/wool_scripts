@@ -5,6 +5,10 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partK/KuwoMusic.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
+
 #!arguments=kuwoybyt_enable:true
 
 [Rule]
@@ -44,4 +48,3 @@ DOMAIN-SUFFIX,ad.kuwo.cn,REJECT
 
 [MITM]
 hostname = %APPEND% audiobookpay.kuwo.cn, mgxhtj.kuwo.cn, nmobi.kuwo.cn, searchrecterm.kuwo.cn, musicpay.kuwo.cn, vip1.kuwo.cn
-

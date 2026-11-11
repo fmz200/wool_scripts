@@ -5,6 +5,10 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partB/Blued.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
+
 #!arguments=blued_enable:true
 
 [Map Local]
@@ -20,4 +24,3 @@ blued登录后个人界面广告 = type=http-response, pattern=^https?:\/\/socia
 
 [MITM]
 hostname = %APPEND% social.blued.cn
-

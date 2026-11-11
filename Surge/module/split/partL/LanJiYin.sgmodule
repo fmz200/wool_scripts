@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partL/LanJiYin.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 # 弹窗还在，需要手动关闭, REJECT
@@ -16,4 +19,3 @@ DOMAIN-KEYWORD,medicine.lanjiyin.com.cn,REJECT
 
 [MITM]
 hostname = %APPEND% tk.lanjiyin.com.cn
-

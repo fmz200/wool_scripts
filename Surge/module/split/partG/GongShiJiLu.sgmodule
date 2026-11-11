@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partG/GongShiJiLu.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [URL Rewrite]
 ^https?:\/\/mi\.gdt\.qq\.com\/gdt_mview\.fcg - reject
@@ -15,4 +18,3 @@
 
 [MITM]
 hostname = %APPEND% yun.tuitiger.com, mi.gdt.qq.com, open.e.kuaishou.com
-

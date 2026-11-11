@@ -5,11 +5,15 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/QuantumultX/rewrite/split/partC/CaiYunWeather.snippet
 #!tg-group=https://t.me/QuantumultXCommunity
-#!date=undefined
+#!date=2026-11-11 20:00:51
 #############################################
 
 
 ^https?:\/\/wrapper\.cyapi\.cn\/v1\/activity\? url echo-response application/json echo-response https://raw.githubusercontent.com/Keywos/rule/main/mocks/caiyun.json
 ^https?:\/\/api\.caiyunapp\.com\/v1\/activity url reject-dict
 
-hostname = wrapper.cyapi.cn, api.caiyunapp.com
+# 2026双十一活动弹窗广告
+^https:\/\/starplucker\.cyapi\.cn\/v3\/config\/cypage\/(home|home_activity)\/conditions\/local url reject-dict
+
+
+hostname = wrapper.cyapi.cn, api.caiyunapp.com, starplucker.cyapi.cn

@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partM/ChinaMinshengBank.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-KEYWORD,cm-10-134.getui.com,REJECT
@@ -20,4 +23,3 @@ DOMAIN-SUFFIX,sdk.open.talk.igexin.com,REJECT
 
 [MITM]
 hostname = %APPEND% www.cmbc.com.cn, rs.creditcard.cmbc.com.cn
-

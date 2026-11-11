@@ -5,8 +5,10 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partG/GuangzhouMetroQRCode.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 # 多个广告 感谢CtrlMusic🐓分享, REJECT
 DOMAIN,apis.alenable.com,REJECT
-

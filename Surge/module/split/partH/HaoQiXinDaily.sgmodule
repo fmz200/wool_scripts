@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partH/HaoQiXinDaily.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [URL Rewrite]
 ^https?:\/\/notch\.qdaily\.com\/api\/v\d\/boot_ad - reject
@@ -12,4 +15,3 @@
 
 [MITM]
 hostname = %APPEND% notch.qdaily.com, app3.qdaily.com
-

@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partD/DaDaRiderVersion.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Map Local]
 # 开屏广告，弹窗广告，首页置顶轮播广告 感谢【T大G】分享
@@ -16,4 +19,3 @@
 
 [MITM]
 hostname = %APPEND% delivery-api.imdada.cn
-

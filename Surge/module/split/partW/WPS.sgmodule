@@ -5,10 +5,12 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partW/WPS.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [URL Rewrite]
 ^https?:\/\/ios\.wps\.cn\/ad-statistics-service - reject
 
 [MITM]
 hostname = %APPEND% ios.wps.cn, mobile-pic.cache.iciba.com
-

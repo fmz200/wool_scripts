@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partM/MojiWeather.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-KEYWORD,me.api.moji.com,REJECT
@@ -21,4 +24,3 @@ DOMAIN-SUFFIX,app.moji001.com,REJECT
 DOMAIN-SUFFIX,ugc.moji001.com,REJECT
 DOMAIN-SUFFIX,cdn.moji002.com,REJECT
 DOMAIN-SUFFIX,cdn2.moji002.com,REJECT
-

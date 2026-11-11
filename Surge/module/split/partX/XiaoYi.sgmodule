@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partX/XiaoYi.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [URL Rewrite]
 ^https?://api.xiaoyi.com\/v5\/app\/mobile\/ads - reject
@@ -12,4 +15,3 @@
 
 [MITM]
 hostname = %APPEND% api.xiaoyi.com
-

@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partQ/QQMusic.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN,adstats.tencentmusic.com,REJECT
@@ -54,4 +57,3 @@ IP-CIDR,120.222.240.171/32,REJECT,no-resolve
 
 [MITM]
 hostname = %APPEND% us.l.qq.com, y.gtimg.cn, music.y.qq.com
-

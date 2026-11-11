@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partZ/ChinaMerchantsSecurities.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Script]
 # 首页和理财页面横幅广告
@@ -12,4 +15,3 @@
 
 [MITM]
 hostname = %APPEND% marketing.cmschina.com
-

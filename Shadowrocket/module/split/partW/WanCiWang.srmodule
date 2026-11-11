@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partW/WanCiWang.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [URL Rewrite]
 # 移除开屏
@@ -22,4 +25,3 @@
 
 [MITM]
 hostname = %APPEND% wanciwangdata.oss-cn-beijing.aliyuncs.com, recite.perfectlingo.com
-

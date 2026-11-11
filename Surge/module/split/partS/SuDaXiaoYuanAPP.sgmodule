@@ -5,6 +5,10 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partS/SuDaXiaoYuanAPP.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
+
 #!arguments=sudaxnyr_enable:true
 
 [Map Local]
@@ -23,4 +27,3 @@
 
 [MITM]
 hostname = %APPEND% api.sodalife.xyz
-

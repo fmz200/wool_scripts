@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/part3/360.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,pjogndc8ixoidna.360doc.cn,REJECT
@@ -32,4 +35,3 @@ DOMAIN-SUFFIX,s.sh.qihoo.com,REJECT
 DOMAIN-SUFFIX,spro.so.com,REJECT
 DOMAIN-SUFFIX,mbrowser.news.so.com,REJECT
 DOMAIN-SUFFIX,tran.news.so.com,REJECT
-

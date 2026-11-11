@@ -5,6 +5,10 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partB/Blued.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
+
 #!arguments=blued_enable:true
 #!arguments-desc=blued_enable: blued_enable
 
@@ -21,4 +25,3 @@ blued登录后个人界面广告 = type=http-response, pattern=^https?:\/\/socia
 
 [MITM]
 hostname = %APPEND% social.blued.cn
-

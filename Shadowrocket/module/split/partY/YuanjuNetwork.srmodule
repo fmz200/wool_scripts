@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partY/YuanjuNetwork.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,d.1391.com,REJECT
@@ -16,4 +19,3 @@ DOMAIN-SUFFIX,mhdtestks3.1391.com,REJECT
 DOMAIN-SUFFIX,mhdufile.1391.com,REJECT
 DOMAIN-SUFFIX,mhjk.1391.com,REJECT
 DOMAIN-SUFFIX,sqtpks3.1391.com,REJECT
-

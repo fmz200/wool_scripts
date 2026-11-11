@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partM/MeiRiYouXian.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [URL Rewrite]
 ^https?:\/\/j-image\.missfresh\.cn\/img_(.+)\.gif$ - reject
@@ -12,4 +15,3 @@
 
 [MITM]
 hostname = %APPEND% j-image.missfresh.cn
-

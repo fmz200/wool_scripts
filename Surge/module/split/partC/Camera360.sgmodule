@@ -5,9 +5,11 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partC/Camera360.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN,dispatcher.360in.com,REJECT
 DOMAIN,ad.360in.com,REJECT
 DOMAIN,exp.360in.com,REJECT
-

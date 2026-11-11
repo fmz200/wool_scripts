@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partD/DongFangCaiFu.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,bduserlog.eastmoney.com,REJECT
@@ -22,4 +25,3 @@ DOMAIN-SUFFIX,same.eastmoney.com,REJECT
 
 [MITM]
 hostname = %APPEND% app.ceair.com
-

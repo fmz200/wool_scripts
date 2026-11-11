@@ -5,6 +5,10 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partT/Taobao.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
+
 #!arguments=tcbc_enable:true
 #!arguments-desc=tcbc_enable: tcbc_enable
 
@@ -68,4 +72,3 @@ DOMAIN-SUFFIX,adashbc.m.taobao.com,REJECT
 
 [MITM]
 hostname = %APPEND% acs.m.taobao.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com
-

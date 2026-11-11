@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partW/WandaCinema.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Body Rewrite]
 http-response-jq ^https:\/\/misc-api-prd-mx\.wandafilm\.com\/commend\/common_banner_batch\.api '.data.objects["OpenAPP-&-FlashAD"] = [] | .data.objects["InTheaters-&-BoxAD"] = []'
@@ -12,4 +15,3 @@ http-response ^https?:\/\/misc-api-prd-mx\.wandafilm\.com\/commend\/common_banne
 
 [MITM]
 hostname = %APPEND% misc-api-prd-mx.wandafilm.com
-

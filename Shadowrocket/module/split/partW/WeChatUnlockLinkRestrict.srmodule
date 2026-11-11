@@ -5,6 +5,10 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partW/WeChatUnlockLinkRestrict.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
+
 #!arguments=lmjpxmvi_enable:true
 #!arguments-desc=lmjpxmvi_enable: lmjpxmvi_enable
 
@@ -14,4 +18,3 @@ UnblockURLinWeChat-解除微信链接限制 = type=http-response, pattern=^https
 
 [MITM]
 hostname = %APPEND% weixin110.qq.com, security.wechat.com
-

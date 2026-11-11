@@ -5,10 +5,12 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/part1/1905MovieNetwork.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,mlog.m1905.cn,REJECT
 DOMAIN-SUFFIX,vodlog.m1905.cn,REJECT
 DOMAIN-SUFFIX,afp.m1905.com,REJECT
 DOMAIN-SUFFIX,counter.m1905.com,REJECT
-

@@ -5,6 +5,10 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partD/DianYingLieShou.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
+
 #!arguments=dyls_enable:true
 #!arguments-desc=dyls_enable: dyls_enable
 
@@ -13,4 +17,3 @@
 
 [MITM]
 hostname = %APPEND% app-v1.ecoliving168.com
-

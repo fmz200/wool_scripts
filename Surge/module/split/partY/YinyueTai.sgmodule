@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partY/YinyueTai.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,shop.yinyuetai.com,REJECT
@@ -12,4 +15,3 @@ DOMAIN-SUFFIX,statisticsv2.yinyuetai.com,REJECT
 DOMAIN-SUFFIX,shop.admin.yinyuetai.com,REJECT
 DOMAIN-SUFFIX,t.collect.yinyuetai.com,REJECT
 DOMAIN-SUFFIX,client.stats.yinyuetai.com,REJECT
-

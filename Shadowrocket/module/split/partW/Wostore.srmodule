@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partW/Wostore.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,appspromote.wostore.cn,REJECT
@@ -12,4 +15,3 @@ DOMAIN-SUFFIX,secpay.wostore.cn,REJECT
 DOMAIN-SUFFIX,unilog.wostore.cn,REJECT
 DOMAIN-SUFFIX,unipaydl.wostore.cn,REJECT
 DOMAIN-SUFFIX,unipayupg.wostore.cn,REJECT
-

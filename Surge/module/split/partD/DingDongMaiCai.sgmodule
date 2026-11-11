@@ -5,6 +5,10 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partD/DingDongMaiCai.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
+
 #!arguments=ddmc_enable:true
 
 [Rule]
@@ -51,4 +55,3 @@ http-response ^https?:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/newDetails suspensio
 
 [MITM]
 hostname = %APPEND% maicai.api.ddxq.mobi, gw.api.ddxq.mobi, user.api.ddxq.mobi
-

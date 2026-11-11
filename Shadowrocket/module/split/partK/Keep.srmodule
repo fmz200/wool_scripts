@@ -5,6 +5,10 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partK/Keep.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
+
 #!arguments=keep_enable:true
 #!arguments-desc=keep_enable: keep_enable
 
@@ -62,4 +66,3 @@ keep = type=http-response, pattern=^https?:\/\/api\.gotokeep\.com\/sportpage\/sp
 
 [MITM]
 hostname = %APPEND% api.gotokeep.com, kad.gotokeep.com, static1.keepcdn.com
-

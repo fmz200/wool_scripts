@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partT/iFinD.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN,adm.10jqka.com.cn,REJECT
@@ -22,4 +25,3 @@ DOMAIN-SUFFIX,ad.thsi.cn,REJECT
 
 [MITM]
 hostname = %APPEND% adm.10jqka.com.cn, iphone.ac.qq.com, stat.10jqka.com.cn
-

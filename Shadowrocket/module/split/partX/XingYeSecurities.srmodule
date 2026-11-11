@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partX/XingYeSecurities.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Map Local]
 # 优理宝（3秒倒计时,任意位置点一下即可跳过）
@@ -12,4 +15,3 @@
 
 [MITM]
 hostname = %APPEND% static.xyzq.cn
-

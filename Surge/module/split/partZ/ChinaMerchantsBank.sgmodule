@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partZ/ChinaMerchantsBank.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Map Local]
 # 开屏广告
@@ -15,4 +18,3 @@
 
 [MITM]
 hostname = %APPEND% webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com
-

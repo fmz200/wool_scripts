@@ -5,6 +5,10 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partR/RenRenVideo.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
+
 #!arguments=rfrfuipk_enable:true
 #!arguments-desc=rfrfuipk_enable: rfrfuipk_enable
 
@@ -55,4 +59,3 @@ rrtv_json = type=http-response, pattern=https://api.rr.tv/user/profile, script-p
 
 [MITM]
 hostname = %APPEND% api.rr.tv
-

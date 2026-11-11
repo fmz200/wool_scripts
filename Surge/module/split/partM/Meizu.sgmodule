@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partM/Meizu.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,api-flow.flyme.cn,REJECT
@@ -28,4 +31,3 @@ DOMAIN-SUFFIX,push.res.meizu.com,REJECT
 DOMAIN-SUFFIX,reader.res.meizu.com,REJECT
 DOMAIN-SUFFIX,upush.res.meizu.com,REJECT
 DOMAIN-SUFFIX,aries.mzres.com,REJECT
-

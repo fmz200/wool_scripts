@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partT/Talkatone.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,tappx.com,REJECT
@@ -49,4 +52,3 @@ DOMAIN-SUFFIX,smadex.com,REJECT
 
 [MITM]
 hostname = %APPEND% alt-r.my.com, imgx.jampp.com
-

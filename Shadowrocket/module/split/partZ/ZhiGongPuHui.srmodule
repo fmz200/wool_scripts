@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partZ/ZhiGongPuHui.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Map Local]
 # 需卸载重装 感谢【zyu0090】分享
@@ -12,4 +15,3 @@
 
 [MITM]
 hostname = %APPEND% preprod.cdzghome.com
-

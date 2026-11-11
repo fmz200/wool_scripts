@@ -5,6 +5,10 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partH/HangLvZongHeng.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
+
 #!arguments=hlzh_enable:true
 
 [URL Rewrite]
@@ -17,4 +21,3 @@
 
 [MITM]
 hostname = %APPEND% home.umetrip.com, discardrp.umetrip.com, startup.umetrip.com, oss.umetrip.com
-

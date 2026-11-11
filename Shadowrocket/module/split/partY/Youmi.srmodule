@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partY/Youmi.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,wumii.cn,REJECT
@@ -17,4 +20,3 @@ DOMAIN-SUFFIX,r.youmi.net,REJECT
 DOMAIN-SUFFIX,s.youmi.net,REJECT
 DOMAIN-SUFFIX,t.youmi.net,REJECT
 DOMAIN-SUFFIX,aos.wall.youmi.net,REJECT
-

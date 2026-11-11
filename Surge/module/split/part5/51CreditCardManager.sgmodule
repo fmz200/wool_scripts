@@ -5,6 +5,10 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/part5/51CreditCardManager.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
+
 #!arguments=51xyk_enable:true
 
 [Map Local]
@@ -17,4 +21,3 @@
 
 [MITM]
 hostname = %APPEND% api.u51.com
-

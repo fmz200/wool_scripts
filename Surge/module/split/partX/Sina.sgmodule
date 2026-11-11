@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partX/Sina.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,ad.sina.com.cn,REJECT
@@ -123,4 +126,3 @@ DOMAIN-SUFFIX,s3.pfp.sina.net,REJECT
 DOMAIN-SUFFIX,adimages.sina.com.hk,REJECT
 DOMAIN-SUFFIX,oascentral.sina.com.hk,REJECT
 DOMAIN-SUFFIX,dd.iask.cn,REJECT
-

@@ -3,6 +3,10 @@
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!homepage=https://hub.kelee.one
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partL/LianTongMenHu.sgmodule
+#!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [General]
 # HTTP 5090 端口也需要进入 HTTP 引擎才能匹配 Map Local。
@@ -28,4 +32,3 @@ http-response-jq (?i)^https://lzmh\.lz-qs\.com:6025/lzmh_app_api/api/v2/user/get
 
 [MITM]
 hostname = %APPEND% lzmh.lz-qs.com:6025, yuudnn.lz-qs.com:9220, yuudnn.lz-qs.com
-

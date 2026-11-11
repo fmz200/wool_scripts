@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partJ/JRJ.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,same.jrj.com.cn,REJECT
@@ -12,4 +15,3 @@ DOMAIN-SUFFIX,same01.jrj.com.cn,REJECT
 DOMAIN-SUFFIX,same02.jrj.com.cn,REJECT
 DOMAIN-SUFFIX,same03.jrj.com.cn,REJECT
 DOMAIN-SUFFIX,8.jrj.com,REJECT
-

@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partZ/ByteDance.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN,ad.zijieapi.com,REJECT
@@ -46,4 +49,3 @@ DOMAIN-SUFFIX,s3a.pstatp.com,REJECT
 
 [MITM]
 hostname = %APPEND% *.pstatp.com, amemv.com, musical.com, snssdk.com, tiktokv.com, dsp.toutiao.com
-

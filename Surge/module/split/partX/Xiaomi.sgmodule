@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partX/Xiaomi.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-KEYWORD,XiaoQiang,REJECT
@@ -64,4 +67,3 @@ DOMAIN-SUFFIX,mivideo.g.mi.com,REJECT
 DOMAIN-SUFFIX,a.hl.mi.com,REJECT
 DOMAIN-SUFFIX,api.jr.mi.com,REJECT
 DOMAIN-SUFFIX,a.union.mi.com,REJECT
-

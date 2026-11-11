@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partX/XiaoXiaoYouXuan.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,adintl.cn,REJECT
@@ -45,4 +48,3 @@ IP-CIDR,114.132.165.205/32,REJECT,no-resolve
 
 [MITM]
 hostname = %APPEND% xxyx-client-api.xiaoxiaoyouxuan.com, statistic.live.126.net
-

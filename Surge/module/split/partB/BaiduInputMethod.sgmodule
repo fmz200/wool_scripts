@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partB/BaiduInputMethod.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [URL Rewrite]
 ^https?:\/\/r6\.mo\.baidu\.com\/res\/file/advertisement\/files\/.+\.jpg - reject
@@ -29,4 +32,3 @@
 
 [MITM]
 hostname = %APPEND% r6.mo.baidu.com, res.mi.baidu.com, mime.baidu.com, mbd.baidu.com
-

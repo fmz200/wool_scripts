@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partY/YidianNews.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,imagelx.yidianzixun.com,REJECT
@@ -12,4 +15,3 @@ DOMAIN-SUFFIX,l.yidianzixun.com,REJECT
 DOMAIN-SUFFIX,lx-upload-log.yidianzixun.com,REJECT
 DOMAIN-SUFFIX,oppo.yidianzixun.com,REJECT
 DOMAIN-SUFFIX,s.yidianzixun.com,REJECT
-

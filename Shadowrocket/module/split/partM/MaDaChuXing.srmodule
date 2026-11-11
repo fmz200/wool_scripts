@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partM/MaDaChuXing.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Map Local]
 # 开屏广告
@@ -21,4 +24,3 @@
 
 [MITM]
 hostname = %APPEND% mada-travel.17u.cn, ebk.17u.cn
-

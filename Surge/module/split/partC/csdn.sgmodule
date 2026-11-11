@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partC/CSDN.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,ad.csdn.net,REJECT
@@ -21,4 +24,3 @@ DOMAIN-SUFFIX,medal.blog.csdn.net,REJECT
 
 [MITM]
 hostname = %APPEND% app-gw.csdn.net, gw.csdn.net
-

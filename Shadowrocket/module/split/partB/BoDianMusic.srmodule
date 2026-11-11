@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partB/BoDianMusic.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Map Local]
 # 开屏广告 感谢【林夕】分享
@@ -24,4 +27,3 @@
 
 [MITM]
 hostname = %APPEND% bd-api.kuwo.cn, h5app.kuwo.cn, bodianimgcdn.kuwo.cn
-

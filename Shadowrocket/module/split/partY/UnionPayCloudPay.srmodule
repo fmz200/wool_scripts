@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partY/UnionPayCloudPay.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN,ads.95516.com,REJECT
@@ -14,4 +17,3 @@ DOMAIN,sdk-conf.getui.com,REJECT
 DOMAIN,switch.cup.com.cn,REJECT
 DOMAIN,tysdk.95516.com,REJECT
 DOMAIN,ads.cup.com.cn,REJECT
-

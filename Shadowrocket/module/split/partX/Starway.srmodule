@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partX/Starway.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Map Local]
 # 开屏广告 感谢【打豆豆】分享
@@ -14,4 +17,3 @@
 
 [MITM]
 hostname = %APPEND% app.chinahxzq.com.cn
-

@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partO/ONE.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [URL Rewrite]
 ^https?:\/\/app\.api\.d3yuiw4\.com\/api\/app\/ad - reject
@@ -16,4 +19,3 @@
 
 [MITM]
 hostname = %APPEND% v3.wufazhuce.com, app.api.d3yuiw4.com, api.21ec74.com
-

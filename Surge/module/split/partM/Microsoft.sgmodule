@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partM/Microsoft.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,c.msn.com.cn,REJECT
@@ -45,4 +48,3 @@ DOMAIN-SUFFIX,ads1.msn.com,REJECT
 DOMAIN-SUFFIX,ads2.msn.com,REJECT
 DOMAIN-SUFFIX,bingads.microsoft.com,REJECT
 DOMAIN-SUFFIX,rads.msn.com,REJECT
-

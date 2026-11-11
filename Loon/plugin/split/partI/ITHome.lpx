@@ -5,8 +5,9 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partI/ITHome.lpx
 #!tg-channel=https://t.me/inaisi
-#!date=
+#!date=2026-11-11 21:17:23
 #############################################
+
 
 [Argument]
 itzj_enable = switch,true,false,tag=IT之家-脚本开关
@@ -14,3 +15,6 @@ itzj_enable = switch,true,false,tag=IT之家-脚本开关
 [Script]
 # 移除 轮播图 置顶文章 信息流广告
 http-response ^https?:\/\/napi\.ithome\.com\/api\/(news\/index|topmenu\/getfeeds) script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ithome/ithome.js, requires-body=true, timeout=60, tag=ithome, enable={itzj_enable}
+
+[MITM]
+hostname = napi.ithome.com

@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partL/Lycos.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,adbuyer3.lycos.com,REJECT
@@ -17,4 +20,3 @@ DOMAIN-SUFFIX,guestworld.tripod.lycos.com,REJECT
 DOMAIN-SUFFIX,titan.guestworld.tripod.lycos.com,REJECT
 DOMAIN-SUFFIX,fe.lea.lycos.co.uk,REJECT
 DOMAIN-SUFFIX,hit.webcentre.lycos.co.uk,REJECT
-

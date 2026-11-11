@@ -5,6 +5,10 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partW/NetEaseCloudMusic.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
+
 #!arguments=DT:false,FX:true,MY:true,whyiyyybyt_enable:true
 
 [Rule]
@@ -50,4 +54,3 @@ NetEaseCloudMusic_foll = type=http-response, pattern=^https?:\/\/(ipv4|interface
 
 [MITM]
 hostname = %APPEND% ipv4.music.163.com, interface.music.163.com, interface3.music.163.com, interface9.music.163.com
-

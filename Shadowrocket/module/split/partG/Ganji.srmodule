@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partG/Ganji.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,jiaoben.ganji.cn,REJECT
@@ -13,4 +16,3 @@ DOMAIN-SUFFIX,ad.ganji.com,REJECT
 DOMAIN-SUFFIX,ganjituiguang.ganji.com,REJECT
 DOMAIN-SUFFIX,sta.ganji.com,REJECT
 DOMAIN-SUFFIX,tralog.ganji.com,REJECT
-

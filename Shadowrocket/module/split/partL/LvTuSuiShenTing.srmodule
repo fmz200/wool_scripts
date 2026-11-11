@@ -5,6 +5,10 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partL/LvTuSuiShenTing.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
+
 #!arguments=lvtusvuftk_enable:true
 #!arguments-desc=lvtusvuftk_enable: lvtusvuftk_enable
 
@@ -17,4 +21,3 @@
 
 [MITM]
 hostname = %APPEND% www.1314zhilv.com
-

@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/part2/2345WebNavigation.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,dl.2345.com,REJECT
@@ -18,4 +21,3 @@ DOMAIN-SUFFIX,zhushou.2345.com,REJECT
 DOMAIN-SUFFIX,tg.jifen.2345.com,REJECT
 DOMAIN-SUFFIX,update.minipage.2345.com,REJECT
 DOMAIN-SUFFIX,g.wan.2345.com,REJECT
-

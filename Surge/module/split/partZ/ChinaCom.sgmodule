@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partZ/ChinaCom.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,union.china.com.cn,REJECT
@@ -14,4 +17,3 @@ DOMAIN-SUFFIX,dvser.china.com,REJECT
 DOMAIN-SUFFIX,dvser02.china.com,REJECT
 DOMAIN-SUFFIX,sssvd.china.com,REJECT
 DOMAIN-SUFFIX,rank.hit.china.com,REJECT
-

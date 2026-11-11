@@ -5,6 +5,10 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partB/BaiduMaps.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
+
 #!arguments=bdduditu_enable:true
 #!arguments-desc=bdduditu_enable: bdduditu_enable
 
@@ -32,4 +36,3 @@ DOMAIN,lc.map.baidu.com,REJECT
 
 [MITM]
 hostname = %APPEND% dss0.bdstatic.com, tb1.bdstatic.com, tb2.bdstatic.com, ss0.bdstatic.com, gss0.bdstatic.com, newclient.map.baidu.com
-

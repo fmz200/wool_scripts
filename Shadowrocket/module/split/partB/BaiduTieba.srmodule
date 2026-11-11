@@ -5,6 +5,10 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partB/BaiduTieba.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
+
 #!arguments=per_filter_video_thread:"0"
 #!arguments-desc=per_filter_video_thread: per_filter_video_thread
 
@@ -20,4 +24,3 @@ IP-CIDR,180.76.76.200/32,REJECT,no-resolve
 
 [MITM]
 hostname = %APPEND% tiebac.baidu.com
-

@@ -5,9 +5,11 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partS/PhoneChina.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,pic.cnmo-img.com.cn,REJECT
 DOMAIN-SUFFIX,icon.cnmo.com,REJECT
 DOMAIN-SUFFIX,js.cnmo.com,REJECT
-

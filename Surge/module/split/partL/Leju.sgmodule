@@ -5,9 +5,11 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partL/Leju.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,adm.leju.com,REJECT
 DOMAIN-SUFFIX,src.leju.com,REJECT
 DOMAIN-SUFFIX,staticadm.leju.com,REJECT
-

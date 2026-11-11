@@ -5,10 +5,12 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/part3/39Health.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,app-g.39.net,REJECT
 DOMAIN-SUFFIX,d.39.net,REJECT
 DOMAIN-SUFFIX,dpvc.39.net,REJECT
 DOMAIN-SUFFIX,thetestpage.39.net,REJECT
-

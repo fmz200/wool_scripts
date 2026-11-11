@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partY/Yahoo.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,adss.yahoo.com,REJECT
@@ -54,4 +57,3 @@ DOMAIN,ads.yahoo.de,REJECT
 
 [MITM]
 hostname = %APPEND% m.yap.yahoo.com
-

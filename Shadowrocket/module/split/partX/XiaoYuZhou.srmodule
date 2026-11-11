@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partX/XiaoYuZhou.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Body Rewrite]
 http-response-jq ^https?:\/\/api\.xiaoyuzhoufm\.com\/v1\/discovery-feed\/list '.data |= map(select(.type != "DISCOVERY_HEADER" and .type != "DISCOVERY_BANNER"))'
@@ -24,4 +27,3 @@ http-response-jq ^https?:\/\/api\.xiaoyuzhoufm\.com\/v1\/(related-episode|operat
 
 [MITM]
 hostname = %APPEND% api.xiaoyuzhoufm.com
-

@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partZ/ChinaMobile.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 IP-CIDR,120.240.95.37/32,REJECT,no-resolve
@@ -19,4 +22,3 @@ IP-CIDR,120.240.95.37/32,REJECT,no-resolve
 
 [MITM]
 hostname = %APPEND% client.app.coc.10086.cn, app.10086.cn
-

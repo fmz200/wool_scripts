@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partT/Tanwan.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,mytanwan.com,REJECT
@@ -19,4 +22,3 @@ DOMAIN-SUFFIX,sy.flash.mytanwan.com,REJECT
 DOMAIN-SUFFIX,b.code.tanwanyx.com,REJECT
 DOMAIN-SUFFIX,hv.code.tanwanyx.com,REJECT
 DOMAIN-SUFFIX,xd.code.tanwanyx.com,REJECT
-

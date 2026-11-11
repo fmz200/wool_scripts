@@ -5,10 +5,12 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partX/iFlytekInputMethod.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-KEYWORD,ossp.voicecloud.cn,REJECT
 DOMAIN-KEYWORD,bj.imp.voiceads.cn,REJECT
 DOMAIN-KEYWORD,m.panda.voiceads.cn,REJECT
 DOMAIN-KEYWORD,iflyad.bj.openstorage.cn,REJECT
-

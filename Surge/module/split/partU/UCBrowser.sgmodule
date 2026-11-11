@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partU/UCBrowser.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN,safe.ucweb.com,REJECT
@@ -95,4 +98,3 @@ DOMAIN-SUFFIX,vs2.gzcu.u3.ucweb.com,REJECT
 DOMAIN-SUFFIX,vs7.gzcu.u3.ucweb.com,REJECT
 DOMAIN-SUFFIX,vs8.gzcu.u3.ucweb.com,REJECT
 DOMAIN-SUFFIX,slot.union.ucweb.com,REJECT
-

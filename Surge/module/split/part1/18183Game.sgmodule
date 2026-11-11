@@ -5,9 +5,11 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/part1/18183Game.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN-SUFFIX,img1.18183.com,REJECT
 DOMAIN-SUFFIX,eezdx.erc.18183.com,REJECT
 DOMAIN-SUFFIX,zpe.klre.18183.com,REJECT
-

@@ -5,9 +5,14 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partC/CaiYunWeather.lpx
 #!tg-channel=https://t.me/inaisi
-#!date=
+#!date=2026-11-11 20:00:51
 #############################################
+
 
 [Rewrite]
 ^https?:\/\/api\.caiyunapp\.com\/v1\/activity reject-dict
 ^https?:\/\/wrapper\.cyapi\.cn\/v1\/activity\? mock-response-body data-type=json data-path="https://raw.githubusercontent.com/Keywos/rule/main/mocks/caiyun.json" status-code=200
+
+
+[MITM]
+hostname = wrapper.cyapi.cn, api.caiyunapp.com, starplucker.cyapi.cn

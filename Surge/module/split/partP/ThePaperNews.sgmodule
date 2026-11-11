@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partP/ThePaperNews.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN,admonitor.thepaper.cn,REJECT
@@ -18,4 +21,3 @@ DOMAIN-SUFFIX,imgad.thepaper.cn,REJECT
 
 [MITM]
 hostname = %APPEND% adpai.thepaper.cn
-

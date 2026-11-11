@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partD/DaShiXiong.sgmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Body Rewrite]
 http-response ^https?:\/\/adservice\.sigmob\.cn\/extconfig false true
@@ -20,4 +23,3 @@ http-response ^https?:\/\/adservice\.sigmob\.cn\/extconfig false true
 
 [MITM]
 hostname = %APPEND% sdk.alibaba.com.ailbaba.me, adservice.sigmob.cn
-

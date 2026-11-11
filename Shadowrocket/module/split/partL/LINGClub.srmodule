@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partL/LINGClub.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Map Local]
 # (第一条一劳永逸,误杀很多,后面几条没有误杀,需要频繁更新规则)
@@ -18,3 +21,6 @@
 
 ^https?:\/\/api\.00bang\.cn\/llb\/baseinfo\/advertise\/getAdvertiseByPageCode data-type=text data=" "
 
+
+[MITM]
+hostname = %APPEND% cdn-oss.00bang.cn, api.00bang.cn

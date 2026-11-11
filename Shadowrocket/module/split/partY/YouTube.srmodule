@@ -5,6 +5,10 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partY/YouTube.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
+
 #!arguments=youtube_enable:true
 #!arguments-desc=youtube_enable: youtube_enable
 
@@ -18,4 +22,3 @@ YouTube响应体 = type=http-response, pattern=^https:\/\/youtubei\.googleapis\.
 
 [MITM]
 hostname = %APPEND% rr*.googlevideo.com, youtubei.googleapis.com
-

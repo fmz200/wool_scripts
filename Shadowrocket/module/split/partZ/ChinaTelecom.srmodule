@@ -5,6 +5,9 @@
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Shadowrocket/module/split/partZ/ChinaTelecom.srmodule
 #!tg-channel=https://t.me/inaisi
+#!date=2026-11-11 21:17:23
+#############################################
+
 
 [Rule]
 DOMAIN,ad.21cn.com,REJECT
@@ -22,4 +25,3 @@ IP-CIDR,122.229.29.89/32,REJECT,no-resolve
 
 [MITM]
 hostname = %APPEND% cloud.189.cn, zt-app.go189.cn
-
