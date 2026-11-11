@@ -5,7 +5,7 @@
  * 1. 递归读取 Surge/module/split 下的所有 .sgmodule 拆分文件
  * 2. 按照 blockAds.module 的既有规律重新聚合：
  *    - 文件头沿用当前 blockAds.module 的 #! 元数据，仅刷新 #!date（不存在时使用内置模板）
- *    - 段落固定顺序：Rule -> Header Rewrite -> URL Rewrite -> Body Rewrite -> Map Local -> Script -> MITM
+ *    - 段落固定顺序：General -> Rule -> Header Rewrite -> URL Rewrite -> Body Rewrite -> Map Local -> Script -> MITM
  *    - 段内按分类（part!!、part1..part5、partA..partZ）输出 ✅ X ✅ 标记，
  *      固定顺序：!!、1、2、3、5、A~Z；空分类也保留标记行
  *    - 每个 APP 输出 # > 显示名 + # hostname 注释 + 规则内容，同分类内按显示名排序
@@ -39,8 +39,9 @@ const CONFIG = {
   importCol: 'surge_import_url',
   extraRawCol: 'egern_raw_url',
   extraImportCol: 'egern_import_url',
-  // 段落固定顺序（拆分文件中出现的全部段落）
+  // 段落固定顺序。[General] 必须在规则段落之前，未知段落仍追加在 MITM 之后。
   sectionOrder: [
+    'General',
     'Rule',
     'Header Rewrite',
     'URL Rewrite',

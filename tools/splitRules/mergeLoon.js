@@ -316,6 +316,13 @@ function compareApps(a, b) {
 }
 
 /**
+ * 套进 /.../ 之前，只转义前面不是反斜杠的 /。已经写成 \/ 的保持原样。
+ */
+function escapeRegexDelimiter(pattern) {
+  return String(pattern).replace(/\\?\//g, (match) => (match === '\\/' ? match : '\\/'));
+}
+
+/**
  * 将 Loon Rewrite V1 规则行转换为 Rewrite V2 语法
  * 官方映射：
  *   reject       -> reject(404)
@@ -361,7 +368,7 @@ function convertRewriteV1ToV2(line) {
  * 在已知 pattern / action / actionArgs 的情况下执行 V1→V2 转换
  */
 function convertRewriteV1ToV2With(pattern, action, actionArgs) {
-  const wrap = (stage, expr) => `${stage} if ${'${url}'} ~= /${pattern}/ then ${expr}`;
+  const wrap = (stage, expr) => `${stage} if ${'${url}'} ~= /${escapeRegexDelimiter(pattern)}/ then ${expr}`;
 
   switch (action) {
     case 'reject':
@@ -397,7 +404,7 @@ function convertRewriteV1ToV2With(pattern, action, actionArgs) {
       const oldPattern = actionArgs[0] || '';
       const newValue = actionArgs.slice(1).join(' ') || '';
       const newFormatted = /^["']/.test(newValue) ? newValue : `"${newValue}"`;
-      return wrap('response', `response.body.replace(/${oldPattern}/, ${newFormatted})`);
+      return wrap('response', `response.body.replace(/${escapeRegexDelimiter(oldPattern)}/, ${newFormatted})`);
     }
     case 'mock-response-body': {
       const argMap = {};
@@ -459,7 +466,7 @@ function convertScriptV1ToV2(line) {
   if (String(params['requires-body']).trim() === 'true') opts.push('requires_body=true');
 
   const withClause = opts.length ? ` with ${opts.join(', ')}` : '';
-  return `${stage} if ${'${url}'} ~= /${pattern}/i then script("${scriptUrl}")${withClause}`;
+  return `${stage} if ${'${url}'} ~= /${escapeRegexDelimiter(pattern)}/i then script("${scriptUrl}")${withClause}`;
 }
 
 /**

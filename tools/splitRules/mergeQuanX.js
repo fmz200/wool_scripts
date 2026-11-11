@@ -4,7 +4,7 @@
  * 功能说明：
  * 1. 递归读取 QuantumultX/rewrite/split 下的所有 .snippet 拆分文件
  * 2. 每个拆分文件包含两类规则和一个 hostname：
- *    - filter 规则（host 系列、IP-CIDR 等）
+ *    - filter 规则（host 系列、IP-CIDR、USER-AGENT 等）
  *    - rewrite 规则（以 URL 正则开头的行）
  *    - hostname = ...（仅用于汇总到各合集的 [MITM] 注释，不单独输出）
  * 3. 按 blockAds 合集的既有规律重新聚合，目标只有一个文件 QuantumultX/rewrite/rewrite.snippet：
@@ -105,11 +105,19 @@ function isRewriteLine(line) {
 }
 
 /**
- * 判断一行是否为 filter 规则（host / IP / geoip / DOMAIN 系列）
+ * 判断一行是否为 filter 规则（host / IP / geoip / DOMAIN / USER-AGENT）
  */
 function isFilterLine(line) {
   const t = line.trim().replace(/^[;#-]+\s*/, '');
-  return /^(host|ip|geoip|domain)/i.test(t) || /^IP-CIDR/.test(t);
+  return /^(host|ip|geoip|domain|user-agent)/i.test(t) || /^IP-CIDR/.test(t);
+}
+
+/**
+ * filter 块里是否有真实分流行，或“广告联盟已包含”占位。
+ */
+function isRealFilterText(text) {
+  const t = text.trim().replace(/^[;#-]+\s*/, '');
+  return /^(host|ip|geoip|domain|user-agent)/i.test(t) || /^IP-CIDR/.test(t) || t.includes('广告联盟已包含');
 }
 
 /**
@@ -122,11 +130,18 @@ function parseSplitFile(content, relativeDir) {
   const filterLines = [];
   const rewriteLines = [];
   let hosts = [];
-  // 注释/空行暂存，等遇到下一条规则行时按规则类型归属；
-  // 若文件完全无规则行，暂存内容默认归 filter（最终由 hasRealLine 过滤掉）
-  let leadingPending = []; // 文件头/首个规则前的普通注释，归 filter（与现有合集“广告联盟已包含”等占位一致）
-  let bodyPending = [];   // 已确定规则类型后的普通注释，跟随当前类型
+  // 注释/空行先暂存，遇到下一条规则时归到那条规则前面。
+  // 文件末尾没有下一条规则时，跟随最后一种规则；完全没有规则则归 filter，再由 hasFilterContent 丢掉纯说明。
+  let leadingPending = []; // 还没有规则时的说明和空行
+  let bodyPending = [];   // 已经出现规则之后的说明和空行
   let lastKind = null; // 'filter' | 'rewrite' | null
+
+  const takePending = () => {
+    const pending = lastKind ? bodyPending : leadingPending;
+    if (lastKind) bodyPending = [];
+    else leadingPending = [];
+    return pending;
+  };
 
   for (const line of lines) {
     const trimmed = line.trim();
@@ -149,9 +164,10 @@ function parseSplitFile(content, relativeDir) {
     if (line.includes('this-is-an-example')) continue;
 
     // “广告联盟已包含”占位注释：即使没有 filter 规则也要保留为 filter 占位块
-    // （与现有 filter.list 中盯盯拍/酷安/一刻相册/招钱进宝等占位块一致）
+    // （与现有合集中盯盯拍/酷安/一刻相册/招钱进宝等占位块一致）
     if (trimmed.includes('广告联盟已包含')) {
-      filterLines.push(line);
+      filterLines.push(...takePending(), line);
+      lastKind = 'filter';
       continue;
     }
 
@@ -163,25 +179,13 @@ function parseSplitFile(content, relativeDir) {
     }
 
     if (isRewriteLine(line)) {
-      if (bodyPending.length && lastKind === 'rewrite') {
-        rewriteLines.push(...bodyPending);
-        bodyPending = [];
-      }
+      rewriteLines.push(...takePending(), line);
       lastKind = 'rewrite';
-      rewriteLines.push(line);
     } else if (isFilterLine(trimmed)) {
-      if (leadingPending.length) {
-        filterLines.push(...leadingPending);
-        leadingPending = [];
-      }
-      if (bodyPending.length) {
-        filterLines.push(...bodyPending);
-        bodyPending = [];
-      }
+      filterLines.push(...takePending(), line);
       lastKind = 'filter';
-      filterLines.push(line);
     } else {
-      // 普通注释行：规则类型已定则跟随，未定则留给 filter
+      // 普通注释行：等下一条规则再决定放进 filter 还是 rewrite
       (lastKind ? bodyPending : leadingPending).push(line);
     }
   }
@@ -202,11 +206,7 @@ function parseSplitFile(content, relativeDir) {
   // 过滤“只有纯说明注释、没有规则行”的伪块：
   // - filter 块必须含真实规则行（含分号/注释禁用的 filter 规则）或“广告联盟已包含”占位
   // - rewrite 块必须含真实规则行
-  const hasFilterContent = (arr) =>
-    arr.some((l) => {
-      const t = l.trim().replace(/^[;#-]+\s*/, '');
-      return /^(host|ip|geoip|domain|IP-CIDR)/i.test(t) || t.includes('广告联盟已包含');
-    });
+  const hasFilterContent = (arr) => arr.some((l) => isRealFilterText(l));
   // rewrite 块允许纯注释：被 # 注释掉的 rewrite 规则（如 `#^https?:... url reject`）也是有效内容
   const hasAnyNonEmpty = (arr) => arr.some((l) => l.trim());
   const realFilter = (hasFilterContent(filterLines) || filterLines.some((l) => l.includes('广告联盟已包含')))
