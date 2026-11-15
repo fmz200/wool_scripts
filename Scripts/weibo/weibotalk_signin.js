@@ -77,10 +77,9 @@ const wb_request_time = isNode ? process.env["wb_request_time"] : $.getdata("wb_
 const tokenList = isNode ? process.env["fmz200_weibotalk_token"] : $.getdata("fmz200_weibotalk_token");
 
 const REQUEST_TIMEOUT = 15000; // 单次请求超时15秒
-// 对照试验：重放时只保留会话内不变的字段（gsid、aid、s、WB-SUT）。
-// 去掉每次请求都变的 x-validator、x-shanhai-pass、x-sessionid，并把 ul_ctime 改成当前时间。
-// 若列表接口立刻被拒，把这里改成 false，即恢复整包重放。
-const REPLAY_STABLE_ONLY = true;
+// 2026-11 对照试验已结束：只重放 gsid/aid/s/WB-SUT 并去掉山海头，几天后仍被登录保护拒绝，短于整包重放。
+// 保持 false，按抓到的整包请求重放。
+const REPLAY_STABLE_ONLY = false;
 const DROP_REPLAY_HEADERS = ["x-validator", "x-shanhai-pass", "x-sessionid"];
 let replayPreparedLogged = false;
 

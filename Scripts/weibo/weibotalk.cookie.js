@@ -91,26 +91,33 @@ function handleListCapture(url, headers, body) {
 
   let token = tokens.find(t => t.userId === userId)
   let firstCapture = !token
-  if (token) {
-    // 已有该账号的列表请求参数；签到脚本每次运行时会实时请求最新列表，不覆盖、不重复通知。
-    console.log(`🔁已有超话列表参数 [${userId}]，跳过重复获取`)
-    return
-  } else {
-    tokens.push({
+  if (!token) {
+    token = {
       userId: userId,
-      tokenUrl: url,
-      tokenHeaders: JSON.stringify(headers),
-      tokenBody: body,
+      tokenUrl: "",
+      tokenHeaders: "",
+      tokenBody: "",
       checkinurl: "",
       checkinHeaders: ""
-    })
+    }
+    tokens.push(token)
   }
+  // 已有第一页时，不拿上拉加载的 loadMore 覆盖。
+  const incomingFirstPage = isTopicListFirstPage(body)
+  const storedFirstPage = isTopicListFirstPage(token.tokenBody)
+  if (token.tokenBody && storedFirstPage && !incomingFirstPage) {
+    console.log(`🔁已有超话列表第一页 [${userId}]，跳过 loadMore`)
+    return
+  }
+  token.tokenUrl = url
+  token.tokenHeaders = JSON.stringify(headers)
+  token.tokenBody = body
 
   $.setdata(JSON.stringify(tokens), TOKEN_KEY)
   if (firstCapture) {
     $.msg("微博超话", `✅获取已关注超话列表成功 [${userId}]`, "✨接下来，请点进一个超话进行签到\n如果没有签到的超话，请关注新的进行签到。")
   } else {
-    console.log(`🔁刷新超话列表请求 [${userId}]，不重复通知`)
+    console.log(`🔁已用最新超话列表请求覆盖 [${userId}]`)
   }
 }
 
@@ -118,16 +125,25 @@ function handleCheckinCapture(url, headers) {
   const userId = getHeader(headers, 'x-log-uid') || 'unknown'
   let tokens = JSON.parse($.getdata(TOKEN_KEY) || "[]")
 
-  let token = tokens.find(t => t.userId === userId && !t.checkinurl)
+  let token = tokens.find(t => t.userId === userId)
   if (token) {
-    // 找到该账号且尚未获取签到链接
+    const firstCheckin = !token.checkinurl
     token.checkinurl = url
     token.checkinHeaders = JSON.stringify(headers)
     $.setdata(JSON.stringify(tokens), TOKEN_KEY)
-    $.msg("微博超话", `🎉获取超话签到链接成功 [${userId}]`, `若之前已弹出【获取已关注列表成功】的通知，那么已完成当前账号cookie获取。\n🚨若你只需要签到1个账号，请现在去关闭获取cookie的脚本或重写。`)
+    if (firstCheckin) {
+      $.msg("微博超话", `🎉获取超话签到链接成功 [${userId}]`, `若之前已弹出【获取已关注列表成功】的通知，那么已完成当前账号cookie获取。\n🚨若你只需要签到1个账号，请现在去关闭获取cookie的脚本或重写。`)
+    } else {
+      console.log(`🔁已用最新签到请求覆盖 [${userId}]`)
+    }
   } else {
     $.msg("微博超话", "❌请先获取超话列表链接", "请先打开微博 → 我的 → 超话社区 → 我的 → 关注")
   }
+}
+
+function isTopicListFirstPage(body) {
+  if (!body) return false
+  return /(?:^|&)taskType=refresh(?:&|$)/.test(body) || /(?:^|&)invokeType=init(?:&|$)/.test(body)
 }
 
 function getHeader(headers, name) {
