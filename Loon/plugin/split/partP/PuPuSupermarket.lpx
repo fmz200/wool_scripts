@@ -10,11 +10,11 @@
 
 
 [Argument]
-pupuicui_enable = switch,true,false,tag=朴朴超市-脚本开关
+pupuicui_enable = switch,true,tag=朴朴超市-脚本开关
 
 [Rewrite]
 # 开屏广告 感谢【树先生, 可莉】分享
-^https:\/\/j1\.pupuapi\.com\/client\/notification\/message_center\/unread_number response-body-json-jq .data = []
+^https:\/\/j1\.pupuapi\.com\/client\/notification\/message_center\/unread_number response-body-json-jq '.data = []'
 # 广告下发
 ^http:\/\/139\.196\.12\.179:8053\/httpdns\/ reject
 ^http:\/\/106\.55\.220\.18:8053\/httpdns\/ reject
@@ -37,7 +37,7 @@ pupuicui_enable = switch,true,false,tag=朴朴超市-脚本开关
 [Script]
 http-response ^https:\/\/j1\.pupuapi\.com\/client\/search\/hot_keywords\/v3 script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js, requires-body=true, timeout=60, tag=朴朴超市, enable={pupuicui_enable}
 
-http-response ^https:\/\/j1\.pupuapi\.com\/client\/a朴朴超市, enable={pupuicui_enable}_resource\/resource_preload\/list_h5_resource script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js, requires-body=true, timeout=60, tag=朴朴超市, enable={pupuicui_enable}
+http-response ^https:\/\/j1\.pupuapi\.com\/client\/app_resource\/resource_preload\/list_h5_resource script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js, requires-body=true, timeout=60, tag=朴朴超市, enable={pupuicui_enable}
 
 http-response ^https:\/\/j1\.pupuapi\.com\/client\/marketing\/advertisement\/v1 script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js, requires-body=true, timeout=60, tag=朴朴超市, enable={pupuicui_enable}
 

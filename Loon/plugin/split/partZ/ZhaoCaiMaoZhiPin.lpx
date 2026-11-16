@@ -9,7 +9,7 @@
 #############################################
 
 
-[Script]
+[Rewrite]
 ^https?:\/\/beehiveapi\.58\.com\/adplace\/zcm reject-dict
 
 

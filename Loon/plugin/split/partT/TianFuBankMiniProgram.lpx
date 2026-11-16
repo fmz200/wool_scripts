@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 缴费弹窗广告
-^https?:\/\/chl\.tf\.cn\/channelmg\/sys\/socso\/order\/queryOrderInfo response-body-replace-regex "imgUrl" response-body "fmz200"
+response if ${url} ~= /^https?:\/\/chl\.tf\.cn\/channelmg\/sys\/socso\/order\/queryOrderInfo/ then response.body.replace(/imgUrl/, "fmz200")
 ^https?:\/\/chl\.tf\.cn\/channelmg\/sys\/socso\/socsonew\/queryIsRealNameAdertInfo reject-dict
 # 首页弹窗广告
 ^https?:\/\/wechat\.tf\.cn\/mini-financial\/model\/queryPopup reject-dict
