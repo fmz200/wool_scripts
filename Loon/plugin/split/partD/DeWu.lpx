@@ -11,8 +11,8 @@
 
 [Rewrite]
 # 开屏广告 【Runestoner】分享
-^https?:\/\/app\.dewu\.com\/api\/v1\/app\/advertisement reject
-^https?:\/\/cdn\.poizon\.com\/node-common\/.*.jpg reject-200
+request if ${url} ~= /^https?:\/\/app\.dewu\.com\/api\/v1\/app\/advertisement/i then reject(404)
+request if ${url} ~= /^https?:\/\/cdn\.poizon\.com\/node-common\/.*.jpg/i then reject(200)
 
 [MITM]
 hostname = app.dewu.com, cdn.poizon.com

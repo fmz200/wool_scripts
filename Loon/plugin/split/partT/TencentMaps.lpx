@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/4gimg\.map\.qq\.com\/mwaSplash\/ reject-200
+request if ${url} ~= /^https?:\/\/4gimg\.map\.qq\.com\/mwaSplash\//i then reject(200)
 
 
 [MITM]

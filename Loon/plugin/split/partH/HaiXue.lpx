@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 屏蔽开屏广告
-^https:\/\/www\.haixue\.com\/advert\/app\/adInfo\/v1\/queryAdByPositionCode reject-dict
+request if ${url} ~= /^https:\/\/www\.haixue\.com\/advert\/app\/adInfo\/v1\/queryAdByPositionCode/i then reject_dict(200)
 
 
 

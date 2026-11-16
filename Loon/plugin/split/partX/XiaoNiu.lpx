@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/app-api\.niu\.com\/v\d\/advertisement\/ reject
+request if ${url} ~= /^https?:\/\/app-api\.niu\.com\/v\d\/advertisement\//i then reject(404)
 
 
 [MITM]

@@ -11,11 +11,11 @@
 
 [Rewrite]
 # 开屏广告 感谢【企鹅】分享
-^https?:\/\/appdmkj\.5idream\.net\/appPic\/homepage reject-dict
+request if ${url} ~= /^https?:\/\/appdmkj\.5idream\.net\/appPic\/homepage/i then reject_dict(200)
 # 更新弹窗 感谢【企鹅】分享
-^https?:\/\/appdmkj\.5idream\.net\/v2\/login\/message\/tip reject-dict
+request if ${url} ~= /^https?:\/\/appdmkj\.5idream\.net\/v2\/login\/message\/tip/i then reject_dict(200)
 # 我的页面广告
-^https?:\/\/appdmkj\.5idream\.net\/v3\/user\/advertising\/list reject-dict
+request if ${url} ~= /^https?:\/\/appdmkj\.5idream\.net\/v3\/user\/advertising\/list/i then reject_dict(200)
 
 
 [MITM]

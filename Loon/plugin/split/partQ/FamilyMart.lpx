@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/fmapp\.chinafamilymart\.com\.cn\/api\/app\/biz\/base\/appversion\/latest reject
+request if ${url} ~= /^https?:\/\/fmapp\.chinafamilymart\.com\.cn\/api\/app\/biz\/base\/appversion\/latest/i then reject(404)
 
 
 [MITM]

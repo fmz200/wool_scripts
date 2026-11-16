@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/app\.10099\.com\.cn\/contact-web\/api\/version\/getFlashScreenPage reject-200
+request if ${url} ~= /^https?:\/\/app\.10099\.com\.cn\/contact-web\/api\/version\/getFlashScreenPage/i then reject(200)
 
 
 [MITM]

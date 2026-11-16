@@ -13,12 +13,12 @@
 51xyk_enable = switch,true,false,tag=51信用卡管家-脚本开关
 
 [Rewrite]
-^https?:\/\/api\.u51\.com\/(generic-config-gateway|rs-resys)\/api\/v\d\/(creditpage-config|recommend) reject-200
+request if ${url} ~= /^https?:\/\/api\.u51\.com\/(generic-config-gateway|rs-resys)\/api\/v\d\/(creditpage-config|recommend)/i then reject(200)
 
 
 [Script]
-http-response ^https?:\/\/api\.u51\.com\/liabilitygateway\/api\/v\d\/homepage\/liabilityline script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/51card.js, requires-body=true, timeout=60, tag=51信用卡管家, enable={51xyk_enable}
-http-response ^https?:\/\/api\.u51\.com\/generic-config-gateway\/api\/v\d\/guanjia\/me-tab2\/config script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/51card.js, requires-body=true, timeout=60, tag=51信用卡管家, enable={51xyk_enable}
+response if ${url} ~= /^https?:\/\/api\.u51\.com\/liabilitygateway\/api\/v\d\/homepage\/liabilityline/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/51card.js") with enable=${51xyk_enable}, tag="51信用卡管家", timeout=60, requires_body=true
+response if ${url} ~= /^https?:\/\/api\.u51\.com\/generic-config-gateway\/api\/v\d\/guanjia\/me-tab2\/config/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/51card.js") with enable=${51xyk_enable}, tag="51信用卡管家", timeout=60, requires_body=true
 
 
 [MITM]

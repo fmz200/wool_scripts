@@ -16,10 +16,10 @@ DOMAIN-SUFFIX, ad.thsi.cn, REJECT
 
 
 [Rewrite]
-^https?:\/\/adm\.10jqka\.com\.cn\/interface\/ad\/recommend reject-200
-^https?:\/\/iphone\.ac\.qq\.com\/.*\/Support\/(getSystemConf|bootScreen) reject
+request if ${url} ~= /^https?:\/\/adm\.10jqka\.com\.cn\/interface\/ad\/recommend/i then reject(200)
+request if ${url} ~= /^https?:\/\/iphone\.ac\.qq\.com\/.*\/Support\/(getSystemConf|bootScreen)/i then reject(404)
 # 同花顺至尊版 感谢【梭哈 All in】分享
-^https?:\/\/stat\.10jqka\.com\.cn\/q\?ld=mobile&id=ad reject-dict
+request if ${url} ~= /^https?:\/\/stat\.10jqka\.com\.cn\/q\?ld=mobile&id=ad/i then reject_dict(200)
 
 
 [MITM]

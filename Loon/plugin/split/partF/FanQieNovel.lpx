@@ -41,19 +41,19 @@ IP-CIDR, 180.96.2.114/32, REJECT, no-resolve
 
 [Rewrite]
 # 去章末广告
-^https?:\/\/.+\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/(get_ads|stats|settings)\/ reject
-^https?:\/\/.+\.pglstatp-toutiao\.com\/.+\/toutiao\.mp4 reject
-^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(obj|img)\/(ad-app-package|ad)\/.+ reject
-^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(obj|img)\/web\.business\.image\/.+ reject
-^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/obj\/ad-pattern\/renderer reject
-^https?:\/\/gurd\.snssdk\.com\/src\/server\/v3\/package reject
-^https?:\/\/.+\.byteimg.com/tos-cn-i-1yzifmftcy\/(.+)-jpeg\.jpeg reject
-^https?:\/\/.+\.pstatp\.com\/obj\/mosaic-legacy\/.+\?from\=ad reject
-^https?:\/\/.+\.pstatp\.com\/bytecom\/resource\/track_log\/src\/.+ reject
-^https?:\/\/.+\.snssdk\.com\/video\/play\/1\/toutiao\/.+\/mp4 reject
-^https?:\/\/.+\.snssdk.com\/api\/ad\/.+ reject
-^https?:\/\/.+\.byteimg\.com\/ad-app-package reject
-^https?:\/\/.+\.byteimg\.com\/web\.business\.image reject
+request if ${url} ~= /^https?:\/\/.+\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/(get_ads|stats|settings)\//i then reject(404)
+request if ${url} ~= /^https?:\/\/.+\.pglstatp-toutiao\.com\/.+\/toutiao\.mp4/i then reject(404)
+request if ${url} ~= /^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(obj|img)\/(ad-app-package|ad)\/.+/i then reject(404)
+request if ${url} ~= /^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(obj|img)\/web\.business\.image\/.+/i then reject(404)
+request if ${url} ~= /^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/obj\/ad-pattern\/renderer/i then reject(404)
+request if ${url} ~= /^https?:\/\/gurd\.snssdk\.com\/src\/server\/v3\/package/i then reject(404)
+request if ${url} ~= /^https?:\/\/.+\.byteimg.com\/tos-cn-i-1yzifmftcy\/(.+)-jpeg\.jpeg/i then reject(404)
+request if ${url} ~= /^https?:\/\/.+\.pstatp\.com\/obj\/mosaic-legacy\/.+\?from\=ad/i then reject(404)
+request if ${url} ~= /^https?:\/\/.+\.pstatp\.com\/bytecom\/resource\/track_log\/src\/.+/i then reject(404)
+request if ${url} ~= /^https?:\/\/.+\.snssdk\.com\/video\/play\/1\/toutiao\/.+\/mp4/i then reject(404)
+request if ${url} ~= /^https?:\/\/.+\.snssdk.com\/api\/ad\/.+/i then reject(404)
+request if ${url} ~= /^https?:\/\/.+\.byteimg\.com\/ad-app-package/i then reject(404)
+request if ${url} ~= /^https?:\/\/.+\.byteimg\.com\/web\.business\.image/i then reject(404)
 
 
 [MITM]

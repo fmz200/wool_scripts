@@ -10,8 +10,8 @@
 
 
 [Rewrite]
-^https?:\/\/news\.ssp\.qq\.com\/app reject
-^https?:\/\/sports3\.gtimg\.com\/community\/20cf93884470434eaf38b2e77ab7796a\.png reject
+request if ${url} ~= /^https?:\/\/news\.ssp\.qq\.com\/app/i then reject(404)
+request if ${url} ~= /^https?:\/\/sports3\.gtimg\.com\/community\/20cf93884470434eaf38b2e77ab7796a\.png/i then reject(404)
 
 
 [MITM]

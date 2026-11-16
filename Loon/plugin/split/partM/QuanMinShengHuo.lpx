@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?://rs.creditcard.cmbc.com.cn/mmc/img/126f35586ece469aa2daf2e451ba7b4d.jpg reject-200
+request if ${url} ~= /^https?:\/\/rs.creditcard.cmbc.com.cn\/mmc\/img\/126f35586ece469aa2daf2e451ba7b4d.jpg/i then reject(200)
 
 [MITM]
 hostname = rs.creditcard.cmbc.com.cn

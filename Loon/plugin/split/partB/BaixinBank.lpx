@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/mres\.aibank\.com\/app\/resource\/cim\/cim0000001\/.+\.jpg reject-200
+request if ${url} ~= /^https?:\/\/mres\.aibank\.com\/app\/resource\/cim\/cim0000001\/.+\.jpg/i then reject(200)
 
 
 [MITM]

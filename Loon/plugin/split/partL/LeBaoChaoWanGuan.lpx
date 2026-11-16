@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 开屏广告+弹窗广告
-^https?:\/\/tbgapplet\.carlsberg\.asia\/tuborg\/banner\/(loading|index) reject-dict
+request if ${url} ~= /^https?:\/\/tbgapplet\.carlsberg\.asia\/tuborg\/banner\/(loading|index)/i then reject_dict(200)
 
 [MITM]
 hostname = tbgapplet.carlsberg.asia

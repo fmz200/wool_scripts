@@ -10,9 +10,9 @@
 
 
 [Rewrite]
-^https?:\/\/j5\.dfcfw\.com\/WG\/conf\/202[0-9]{5}/.*.(jpg|png) reject-200
-^https?:\/\/j5\.dfcfw\.com\/WG\/appconf\/202[0-9]{5}/.*.(jpg|png) reject-200
-^https?:\/\/appactive\.1234567\.com\.cn\/AppoperationApi\/OperationService\/GetAppStartImg reject
+request if ${url} ~= /^https?:\/\/j5\.dfcfw\.com\/WG\/conf\/202[0-9]{5}\/.*.(jpg|png)/i then reject(200)
+request if ${url} ~= /^https?:\/\/j5\.dfcfw\.com\/WG\/appconf\/202[0-9]{5}\/.*.(jpg|png)/i then reject(200)
+request if ${url} ~= /^https?:\/\/appactive\.1234567\.com\.cn\/AppoperationApi\/OperationService\/GetAppStartImg/i then reject(404)
 
 
 [MITM]

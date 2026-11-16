@@ -11,11 +11,11 @@
 
 [Rewrite]
 # 广告下发
-^https?:\/\/portal-portm\.meituan\.com\/horn_ios\/mergeRequest reject-dict
+request if ${url} ~= /^https?:\/\/portal-portm\.meituan\.com\/horn_ios\/mergeRequest/i then reject_dict(200)
 # 开屏广告
-^https?:\/\/mall\.meituan\.com\/api\/c\/homepage\/splash reject-dict
+request if ${url} ~= /^https?:\/\/mall\.meituan\.com\/api\/c\/homepage\/splash/i then reject_dict(200)
 # 首页领券悬浮红包
-^https?:\/\/mall\.meituan\.com\/api\/c\/homepage\/bubble\/operate\/info mock-response-body data-type=json data="{"code": 0}"
+response if ${url} ~= /^https?:\/\/mall\.meituan\.com\/api\/c\/homepage\/bubble\/operate\/info/i then response.body.mock("json", "{\"code\": 0}")
 
 
 [MITM]

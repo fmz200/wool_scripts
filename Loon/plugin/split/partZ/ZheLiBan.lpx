@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/portal\.zjzwfw\.gov\.cn\/app_api\/appHome\/selectStartPic response-body-json-replace data {}
+response if ${url} ~= /^https?:\/\/portal\.zjzwfw\.gov\.cn\/app_api\/appHome\/selectStartPic/i then response.json.replace("data", "{}")
 
 
 [MITM]

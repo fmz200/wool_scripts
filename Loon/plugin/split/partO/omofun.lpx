@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/103\.91\.210\.141\:2515\/xgapp\.php\/v2\/top_notice reject
+request if ${url} ~= /^https?:\/\/103\.91\.210\.141\:2515\/xgapp\.php\/v2\/top_notice/i then reject(404)
 
 
 [MITM]

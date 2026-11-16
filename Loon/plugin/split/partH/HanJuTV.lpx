@@ -23,8 +23,8 @@ DOMAIN,mobads.baidu.com,REJECT
 
 
 [Rewrite]
-^https?:\/\/gfp\.veta\.naver\.com\/adcall\? reject
-^https?:\/\/api\.hanju\.koudaibaobao\.com\/api\/carp\/kp\? reject
+request if ${url} ~= /^https?:\/\/gfp\.veta\.naver\.com\/adcall\?/i then reject(404)
+request if ${url} ~= /^https?:\/\/api\.hanju\.koudaibaobao\.com\/api\/carp\/kp\?/i then reject(404)
 
 
 [MITM]

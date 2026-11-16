@@ -19,9 +19,9 @@ DOMAIN-SUFFIX, medal.blog.csdn.net, REJECT
 
 [Rewrite]
 # 感谢【Jörgen Frecht】分享
-^https?:\/\/app-gw\.csdn\.net\/silkroad-api\/api\/v\d\/assemble\/list\/pub\/channel\/app_open_screen_ad reject
-^https?:\/\/app-gw\.csdn\.net\/abtesting\/v2\/getList? reject
-^https?:\/\/gw\.csdn\.net\/cms-app\/v\d+\/home_page\/open_advertisement reject
+request if ${url} ~= /^https?:\/\/app-gw\.csdn\.net\/silkroad-api\/api\/v\d\/assemble\/list\/pub\/channel\/app_open_screen_ad/i then reject(404)
+request if ${url} ~= /^https?:\/\/app-gw\.csdn\.net\/abtesting\/v2\/getList?/i then reject(404)
+request if ${url} ~= /^https?:\/\/gw\.csdn\.net\/cms-app\/v\d+\/home_page\/open_advertisement/i then reject(404)
 
 
 [MITM]

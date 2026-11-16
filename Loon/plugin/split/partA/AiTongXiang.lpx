@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 开屏广告
-^https?:\/\/mapi\.txcmapp\.com\/api\/open\/atx2\/ad\.php reject-200
+request if ${url} ~= /^https?:\/\/mapi\.txcmapp\.com\/api\/open\/atx2\/ad\.php/i then reject(200)
 
 
 [MITM]

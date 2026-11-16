@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 开屏广告
-^https?:\/\/qimg\.cdnmama\.com\/rd reject-dict
+request if ${url} ~= /^https?:\/\/qimg\.cdnmama\.com\/rd/i then reject_dict(200)
 
 
 [MITM]

@@ -12,7 +12,7 @@
 [Rewrite]
 # 开屏广告
 # 捕获试卷脚本：https://raw.githubusercontent.com/Yu9191/Script/main/shijuan.js
-^https?:\/\/api\.xbxxhz\.com\/big_data\/v1\/home_pages reject
+request if ${url} ~= /^https?:\/\/api\.xbxxhz\.com\/big_data\/v1\/home_pages/i then reject(404)
 
 
 [MITM]

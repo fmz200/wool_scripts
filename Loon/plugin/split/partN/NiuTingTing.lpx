@@ -10,8 +10,8 @@
 
 
 [Rewrite]
-^https:\/\/gateway\.benewtech\.cn\/resources-app\/app\/startup\/prepage reject-dict
-^https:\/\/ntt-app\.benewtech\.cn\/v6\/user\/\d+\/messages\/event reject-dict
+request if ${url} ~= /^https:\/\/gateway\.benewtech\.cn\/resources-app\/app\/startup\/prepage/i then reject_dict(200)
+request if ${url} ~= /^https:\/\/ntt-app\.benewtech\.cn\/v6\/user\/\d+\/messages\/event/i then reject_dict(200)
 
 
 

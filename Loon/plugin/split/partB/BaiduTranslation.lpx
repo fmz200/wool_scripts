@@ -10,8 +10,8 @@
 
 
 [Rewrite]
-^https?:\/\/mime\.baidu\.com\/v\d\/IosStart\/getStartInfo reject
-^https?:\/\/mime\.baidu\.com\/v\d\/activity\/advertisement reject
+request if ${url} ~= /^https?:\/\/mime\.baidu\.com\/v\d\/IosStart\/getStartInfo/i then reject(404)
+request if ${url} ~= /^https?:\/\/mime\.baidu\.com\/v\d\/activity\/advertisement/i then reject(404)
 
 
 [MITM]

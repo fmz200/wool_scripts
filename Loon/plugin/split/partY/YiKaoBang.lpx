@@ -10,10 +10,10 @@
 
 
 [Rewrite]
-^https?:\/\/api\.yikaobang\.com\.cn\/client\/main\/homePageSmallAd reject
-^https?:\/\/api\.yikaobang\.com\.cn\/index\.php\/Client\/main\/startPage reject
+request if ${url} ~= /^https?:\/\/api\.yikaobang\.com\.cn\/client\/main\/homePageSmallAd/i then reject(404)
+request if ${url} ~= /^https?:\/\/api\.yikaobang\.com\.cn\/index\.php\/Client\/main\/startPage/i then reject(404)
 # 去强制更新 感谢【SH DDDDD】分享
-^https?:\/\/api\.yikaobang\.com\.cn\/index\.php\/version\/version\/check reject
+request if ${url} ~= /^https?:\/\/api\.yikaobang\.com\.cn\/index\.php\/version\/version\/check/i then reject(404)
 
 
 [MITM]

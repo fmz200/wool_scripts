@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 开屏广告
-^https://www\.tailgdd\.com/v8/smart/app/config/get$ response-body-json-replace data {}
+response if ${url} ~= /^https:\/\/www\.tailgdd\.com\/v8\/smart\/app\/config\/get$/i then response.json.replace("data", "{}")
 
 
 [MITM]

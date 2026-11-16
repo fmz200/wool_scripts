@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 开屏广告
-^https?:\/\/zua\.zhidiantianxia\.cn\/api\/adverts reject
+request if ${url} ~= /^https?:\/\/zua\.zhidiantianxia\.cn\/api\/adverts/i then reject(404)
 
 
 [MITM]

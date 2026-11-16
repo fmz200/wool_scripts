@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 开屏广告
-^https?:\/\/www\.(binance|yingwangtech)\.(com|info|net)\/bapi\/composite\/v1\/public\/market\/holiday-atmosphere reject-dict
+request if ${url} ~= /^https?:\/\/www\.(binance|yingwangtech)\.(com|info|net)\/bapi\/composite\/v1\/public\/market\/holiday-atmosphere/i then reject_dict(200)
 
 
 [MITM]

@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https:\/\/dl-cu-hz\.lechange\.cn\/oms-online\/advertisementPush reject
+request if ${url} ~= /^https:\/\/dl-cu-hz\.lechange\.cn\/oms-online\/advertisementPush/i then reject(404)
 
 
 [MITM]

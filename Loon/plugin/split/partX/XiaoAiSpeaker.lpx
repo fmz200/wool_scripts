@@ -14,9 +14,9 @@ DOMAIN, mistat.xiaomi.com, REJECT
 
 
 [Rewrite]
-^https?:\/\/(info\.mina\.xiaoaisound|marketing-aibox\.v\.mitvos)\.com\/advertise(?!\/banner) reject
-^https?:\/\/(info\.mina\.xiaoaisound|marketing-aibox\.v\.mitvos)\.com\/payGuide\/userCenter reject
-^https?:\/\/(info\.mina\.xiaoaisound|marketing-aibox\.v\.mitvos)\.com\/popup reject-dict
+request if ${url} ~= /^https?:\/\/(info\.mina\.xiaoaisound|marketing-aibox\.v\.mitvos)\.com\/advertise(?!\/banner)/i then reject(404)
+request if ${url} ~= /^https?:\/\/(info\.mina\.xiaoaisound|marketing-aibox\.v\.mitvos)\.com\/payGuide\/userCenter/i then reject(404)
+request if ${url} ~= /^https?:\/\/(info\.mina\.xiaoaisound|marketing-aibox\.v\.mitvos)\.com\/popup/i then reject_dict(200)
 
 
 [MITM]

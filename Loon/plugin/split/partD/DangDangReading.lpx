@@ -10,10 +10,10 @@
 
 
 [Rewrite]
-^https?:\/\/e\.dangdang\.com\/media\/api.+\?action=getDeviceStartPage reject
-^https?:\/\/e\.dangdang\.com\/.+?getDeviceStartPage reject
-^https?:\/\/api\.dangdang\.com\/mapi\d\/mobile\/init reject
-^https?:\/\/mapi\.dangdang\.com\/index\.php\?action=init reject
+request if ${url} ~= /^https?:\/\/e\.dangdang\.com\/media\/api.+\?action=getDeviceStartPage/i then reject(404)
+request if ${url} ~= /^https?:\/\/e\.dangdang\.com\/.+?getDeviceStartPage/i then reject(404)
+request if ${url} ~= /^https?:\/\/api\.dangdang\.com\/mapi\d\/mobile\/init/i then reject(404)
+request if ${url} ~= /^https?:\/\/mapi\.dangdang\.com\/index\.php\?action=init/i then reject(404)
 
 
 [MITM]

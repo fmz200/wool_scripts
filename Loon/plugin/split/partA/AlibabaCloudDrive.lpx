@@ -13,13 +13,13 @@
 alyp_enable = switch,true,false,tag=阿里云盘-脚本开关
 
 [Rewrite]
-^https:\/\/api\.alipan\.com\/adrive\/v1\/file\/getTopFolders reject-dict
-^https:\/\/member\.alipan\.com\/v2\/activity\/sign_in_luckyBottle reject-dict
+request if ${url} ~= /^https:\/\/api\.alipan\.com\/adrive\/v1\/file\/getTopFolders/i then reject_dict(200)
+request if ${url} ~= /^https:\/\/member\.alipan\.com\/v2\/activity\/sign_in_luckyBottle/i then reject_dict(200)
 
 
 [Script]
-http-response ^https:\/\/api\.alipan\.com\/apps\/v2\/users\/home\/(news|widgets) script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/adrive/adrive.js, requires-body=true, timeout=60, tag=阿里云盘, enable={alyp_enable}
-http-response ^https:\/\/member\.alipan\.com\/v1\/users\/onboard_list script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/adrive/adrive.js, requires-body=true, timeout=60, tag=阿里云盘, enable={alyp_enable}
+response if ${url} ~= /^https:\/\/api\.alipan\.com\/apps\/v2\/users\/home\/(news|widgets)/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/adrive/adrive.js") with enable=${alyp_enable}, tag="阿里云盘", timeout=60, requires_body=true
+response if ${url} ~= /^https:\/\/member\.alipan\.com\/v1\/users\/onboard_list/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/adrive/adrive.js") with enable=${alyp_enable}, tag="阿里云盘", timeout=60, requires_body=true
 
 
 [MITM]

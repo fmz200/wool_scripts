@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 开屏广告
-^https?:\/\/www\.banyuetanapp\.com\/byt-api\/ad\/getAdvertList\?adSpaceId=100000002 reject-200
+request if ${url} ~= /^https?:\/\/www\.banyuetanapp\.com\/byt-api\/ad\/getAdvertList\?adSpaceId=100000002/i then reject(200)
 
 
 [MITM]

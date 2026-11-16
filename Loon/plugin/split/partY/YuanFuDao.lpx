@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/xyst\.yuanfudao\.com\/iphone\/splashesV\d reject-200
+request if ${url} ~= /^https?:\/\/xyst\.yuanfudao\.com\/iphone\/splashesV\d/i then reject(200)
 
 
 [MITM]

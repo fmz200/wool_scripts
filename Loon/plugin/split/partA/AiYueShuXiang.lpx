@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/icc\.one\/iFreeTime\/xid32uxaoecnfv2\/ reject
+request if ${url} ~= /^https?:\/\/icc\.one\/iFreeTime\/xid32uxaoecnfv2\//i then reject(404)
 
 
 [MITM]

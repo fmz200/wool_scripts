@@ -21,10 +21,10 @@ DOMAIN-SUFFIX, 3dm.huya.com, REJECT
 
 
 [Rewrite]
-^https?:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns$ reject
-^https?:\/\/business\.msstatic\.com\/advertiser\/material reject
-^https?:\/\/cdnfile1\.msstatic\.com\/cdnfile\/appad\/ reject-img
-^https?://live-ads\.huya\.com/live/getAllEntrance.*$ reject-dict
+request if ${url} ~= /^https?:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns$/i then reject(404)
+request if ${url} ~= /^https?:\/\/business\.msstatic\.com\/advertiser\/material/i then reject(404)
+request if ${url} ~= /^https?:\/\/cdnfile1\.msstatic\.com\/cdnfile\/appad\//i then reject_img(200)
+request if ${url} ~= /^https?:\/\/live-ads\.huya\.com\/live\/getAllEntrance.*$/i then reject_dict(200)
 
 
 [MITM]

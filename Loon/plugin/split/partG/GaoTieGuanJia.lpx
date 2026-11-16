@@ -10,8 +10,8 @@
 
 
 [Rewrite]
-^https?:\/\/cdn\.133\.cn\/md\/gtgj\/.+\/.+720x1280 reject-dict
-^https?:\/\/[a-z]*\.rsscc\.com\/[a-z]*\/adver reject
+request if ${url} ~= /^https?:\/\/cdn\.133\.cn\/md\/gtgj\/.+\/.+720x1280/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/[a-z]*\.rsscc\.com\/[a-z]*\/adver/i then reject(404)
 
 
 [MITM]

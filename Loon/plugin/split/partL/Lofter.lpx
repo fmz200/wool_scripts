@@ -11,9 +11,9 @@
 
 [Rewrite]
 # 开屏广告 感谢@林夕分享
-^https?:\/\/ad\.lofter.com\/v1\.1\/yitou\/madr reject-200
-^https?:\/\/images\.pinduoduo\.com\/marketing\_api reject-200
-^https?:\/\/lofter\.lf127\.net\/ad\-material reject-200
+request if ${url} ~= /^https?:\/\/ad\.lofter.com\/v1\.1\/yitou\/madr/i then reject(200)
+request if ${url} ~= /^https?:\/\/images\.pinduoduo\.com\/marketing\_api/i then reject(200)
+request if ${url} ~= /^https?:\/\/lofter\.lf127\.net\/ad\-material/i then reject(200)
 
 
 [MITM]

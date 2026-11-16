@@ -45,13 +45,13 @@ IP-CIDR, 120.222.240.171/32, REJECT, no-resolve
 
 
 [Rewrite]
-^https?:\/\/us\.l\.qq\.com\/exapp reject
-^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/t_splash_info\/ reject
-^https?:\/\/.+?\/music\/common\/upload\/t_splash_info\/ reject
-^https?:\/\/y\.gtimg\.cn\/music\/common\/\/upload\/kg_ad/.*?\d{4}\.jpg reject-img
-^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/targeted_ads reject-img
-^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/music\/common\/upload\/t_splash_info\/ reject
-^https:\/\/music\.y\.qq\.com\/maproxy\/getPbCompressAd reject
+request if ${url} ~= /^https?:\/\/us\.l\.qq\.com\/exapp/i then reject(404)
+request if ${url} ~= /^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/t_splash_info\//i then reject(404)
+request if ${url} ~= /^https?:\/\/.+?\/music\/common\/upload\/t_splash_info\//i then reject(404)
+request if ${url} ~= /^https?:\/\/y\.gtimg\.cn\/music\/common\/\/upload\/kg_ad\/.*?\d{4}\.jpg/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/targeted_ads/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/music\/common\/upload\/t_splash_info\//i then reject(404)
+request if ${url} ~= /^https:\/\/music\.y\.qq\.com\/maproxy\/getPbCompressAd/i then reject(404)
 
 
 [MITM]

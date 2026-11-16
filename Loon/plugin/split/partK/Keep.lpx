@@ -24,42 +24,42 @@ DOMAIN, kad.gotokeep.com, REJECT
 
 
 [Rewrite]
-^https?:\/\/static1\.keepcdn\.com\/ark_optimus\/202\d\/*\/*\/.*.(png|jpg) reject-200
+request if ${url} ~= /^https?:\/\/static1\.keepcdn\.com\/ark_optimus\/202\d\/*\/*\/.*.(png|jpg)/i then reject(200)
 # 屏蔽应用内弹窗
-^https?:\/\/api\.gotokeep\.com\/guide-webapp\/v\d\/popup\/getPopUp reject
+request if ${url} ~= /^https?:\/\/api\.gotokeep\.com\/guide-webapp\/v\d\/popup\/getPopUp/i then reject(404)
 # 屏蔽部分启动弹窗
-^https?:\/\/api\.gotokeep\.com\/kprime\/v\d\/popups\/primeGuide reject
+request if ${url} ~= /^https?:\/\/api\.gotokeep\.com\/kprime\/v\d\/popups\/primeGuide/i then reject(404)
 # 屏蔽开屏广告请求
-^https?:\/\/kad\.gotokeep\.com\/op-engine-webapp\/v\d\/ad reject
+request if ${url} ~= /^https?:\/\/kad\.gotokeep\.com\/op-engine-webapp\/v\d\/ad/i then reject(404)
 # 屏蔽青少年弹窗
-^https?:\/\/api.gotokeep.com/cauchy/growth/init reject
+request if ${url} ~= /^https?:\/\/api.gotokeep.com\/cauchy\/growth\/init/i then reject(404)
 # 屏蔽搜索栏自动填充词
-^https?:\/\/api\.gotokeep\.com\/search\/v\d\/default\/keyword\/list reject
+request if ${url} ~= /^https?:\/\/api\.gotokeep\.com\/search\/v\d\/default\/keyword\/list/i then reject(404)
 # 屏蔽热词
-^https?:\/\/api\.gotokeep\.com\/search\/v\d\/hotword\/list reject
+request if ${url} ~= /^https?:\/\/api\.gotokeep\.com\/search\/v\d\/hotword\/list/i then reject(404)
 # 屏蔽hotCourse
-^https?:\/\/api\.gotokeep\.com\/search\/v\d\/hotCourse\/list reject
+request if ${url} ~= /^https?:\/\/api\.gotokeep\.com\/search\/v\d\/hotCourse\/list/i then reject(404)
 # 屏蔽adwebapp
-^https?:\/\/api\.gotokeep\.com\/op-engine-webapp\/v\d\/ad reject
+request if ${url} ~= /^https?:\/\/api\.gotokeep\.com\/op-engine-webapp\/v\d\/ad/i then reject(404)
 # 屏蔽广告预加载
-^https?:\/\/api\.gotokeep\.com\/ads\/v\d\/ads\/preload reject
+request if ${url} ~= /^https?:\/\/api\.gotokeep\.com\/ads\/v\d\/ads\/preload/i then reject(404)
 # 屏蔽adbox
-^https?:\/\/api\.gotokeep\.com\/training\/box\/config reject
+request if ${url} ~= /^https?:\/\/api\.gotokeep\.com\/training\/box\/config/i then reject(404)
 # 屏蔽更新
-^https?:\/\/api\.gotokeep\.com\/anno\/v\d\/upgrade\/check reject
+request if ${url} ~= /^https?:\/\/api\.gotokeep\.com\/anno\/v\d\/upgrade\/check/i then reject(404)
 
 
 [Script]
 # 我的页面去推广
-http-response ^https?:\/\/api\.gotokeep\.com\/athena\/v\d\/people\/my$ script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js, requires-body=true, timeout=60, tag=keep, enable={keep_enable}
+response if ${url} ~= /^https?:\/\/api\.gotokeep\.com\/athena\/v\d\/people\/my$/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js") with enable=${keep_enable}, tag="keep", timeout=60, requires_body=true
 # 应用底部栏净化
-http-response ^https?:\/\/api\.gotokeep\.com\/config\/v\d\/basic script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js, requires-body=true, timeout=60, tag=keep, enable={keep_enable}
+response if ${url} ~= /^https?:\/\/api\.gotokeep\.com\/config\/v\d\/basic/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js") with enable=${keep_enable}, tag="keep", timeout=60, requires_body=true
 # 发现页处理
-http-response ^https?:\/\/api\.gotokeep\.com\/homepage\/v\d\/tab script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js, requires-body=true, timeout=60, tag=keep, enable={keep_enable}
+response if ${url} ~= /^https?:\/\/api\.gotokeep\.com\/homepage\/v\d\/tab/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js") with enable=${keep_enable}, tag="keep", timeout=60, requires_body=true
 # 课程预览页广告
-http-response ^https?:\/\/api\.gotokeep\.com\/nuocha\/course\/v\d/\w+\/preview script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js, requires-body=true, timeout=60, tag=keep, enable={keep_enable}
+response if ${url} ~= /^https?:\/\/api\.gotokeep\.com\/nuocha\/course\/v\d\/\w+\/preview/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js") with enable=${keep_enable}, tag="keep", timeout=60, requires_body=true
 # 我的运动页面去除下方推荐
-http-response ^https?:\/\/api\.gotokeep\.com\/sportpage\/sport\/v\d\/mysport script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js, requires-body=true, timeout=60, tag=keep, enable={keep_enable}
+response if ${url} ~= /^https?:\/\/api\.gotokeep\.com\/sportpage\/sport\/v\d\/mysport/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js") with enable=${keep_enable}, tag="keep", timeout=60, requires_body=true
 
 
 [MITM]

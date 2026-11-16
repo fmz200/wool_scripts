@@ -34,13 +34,13 @@ DOMAIN-SUFFIX, s3a.pstatp.com, REJECT
 
 [Rewrite]
 #^https?:\/\/.+\.pstatp\.com\/img\/ad reject-200
-^https?:\/\/.+\.(amemv|musical|snssdk|tiktokv)\.com\/(api|motor)\/ad\/ reject-200
-^https?:\/\/.+\.snssdk\.com\/motor\/operation\/activity\/display\/config\/V2\/ reject-200
-^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/ad\/ reject
-^https?:\/\/[\w-]+\.snssdk\.com\/.+_ad\/ reject
-^https?:\/\/.+\.amemv\.com\/.+app_log reject-img
-^https?:\/\/.+\.amemv\.com\/.+report reject-img
-^https?:\/\/.+\.amemv\.com\/.+stats reject-img
+request if ${url} ~= /^https?:\/\/.+\.(amemv|musical|snssdk|tiktokv)\.com\/(api|motor)\/ad\//i then reject(200)
+request if ${url} ~= /^https?:\/\/.+\.snssdk\.com\/motor\/operation\/activity\/display\/config\/V2\//i then reject(200)
+request if ${url} ~= /^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/ad\//i then reject(404)
+request if ${url} ~= /^https?:\/\/[\w-]+\.snssdk\.com\/.+_ad\//i then reject(404)
+request if ${url} ~= /^https?:\/\/.+\.amemv\.com\/.+app_log/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/.+\.amemv\.com\/.+report/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/.+\.amemv\.com\/.+stats/i then reject_img(200)
 
 
 [MITM]

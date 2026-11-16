@@ -11,8 +11,8 @@
 
 [Rewrite]
 # 横幅广告
-^https:\/\/interface\.hstong\.com\/pdp\/ad\/images\/v2 reject-200
-^https:\/\/interface\.hstong\.com\/ad\/images\/v2 reject-200
+request if ${url} ~= /^https:\/\/interface\.hstong\.com\/pdp\/ad\/images\/v2/i then reject(200)
+request if ${url} ~= /^https:\/\/interface\.hstong\.com\/ad\/images\/v2/i then reject(200)
 
 
 [MITM]

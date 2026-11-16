@@ -13,12 +13,12 @@
 lawson_enable = switch,true,false,tag=罗森点点-脚本开关
 
 [Rewrite]
-^https:\/\/plt\.yorentown\.com\/pltapp\/v1\/banner reject-dict
+request if ${url} ~= /^https:\/\/plt\.yorentown\.com\/pltapp\/v1\/banner/i then reject_dict(200)
 
 
 [Script]
-http-response ^https:\/\/lawsonapi\.yorentown\.com\/area\/sh-lawson\/app\/v1\/ script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/lawson.js, requires-body=true, timeout=60, tag=罗森点点, enable={lawson_enable}
-http-response ^https:\/\/lawsonapi\.yorentown\.com\/portal\/app\/globalLaunch\/listAdvert script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/lawson.js, requires-body=true, timeout=60, tag=罗森点点, enable={lawson_enable}
+response if ${url} ~= /^https:\/\/lawsonapi\.yorentown\.com\/area\/sh-lawson\/app\/v1\//i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/lawson.js") with enable=${lawson_enable}, tag="罗森点点", timeout=60, requires_body=true
+response if ${url} ~= /^https:\/\/lawsonapi\.yorentown\.com\/portal\/app\/globalLaunch\/listAdvert/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/lawson.js") with enable=${lawson_enable}, tag="罗森点点", timeout=60, requires_body=true
 
 
 [MITM]

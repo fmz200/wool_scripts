@@ -10,8 +10,8 @@
 
 
 [Rewrite]
-^https?:\/\/app\.api\.versa-ai\.com\/launch\/ads\? reject-200
-^https?:\/\/static01\.versa-ai\.com\/upload\/ec0ba51d68f9\/.*.jpg reject-200
+request if ${url} ~= /^https?:\/\/app\.api\.versa-ai\.com\/launch\/ads\?/i then reject(200)
+request if ${url} ~= /^https?:\/\/static01\.versa-ai\.com\/upload\/ec0ba51d68f9\/.*.jpg/i then reject(200)
 
 
 [MITM]

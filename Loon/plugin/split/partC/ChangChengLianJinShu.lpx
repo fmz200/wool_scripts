@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 感谢【Joe Joy】分享
-^https?:\/\/fintechappdr\.cgws\.com\/api\/business-operation\/app\/a\/flash\/window\/get\?type=2 reject-dict
+request if ${url} ~= /^https?:\/\/fintechappdr\.cgws\.com\/api\/business-operation\/app\/a\/flash\/window\/get\?type=2/i then reject_dict(200)
 
 
 [MITM]

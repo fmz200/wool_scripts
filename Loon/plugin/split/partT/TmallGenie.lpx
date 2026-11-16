@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/ossgw.alicdn.com\/creatives-assets\/image\/ reject-200
+request if ${url} ~= /^https?:\/\/ossgw.alicdn.com\/creatives-assets\/image\//i then reject(200)
 # 这一条规则会影响淘宝正常运行，需要增加headers判断 user-agent: %E6%B7%98%E5%AE%9D/40491997
 #^https?:\/\/zconfig\.alibabausercontent\.com\/zconfig reject
 

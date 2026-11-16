@@ -10,9 +10,9 @@
 
 
 [Rewrite]
-^https?:\/\/api-marketing\.zhinengxiyifang\.cn\/api\/v2\/cloudcode\/wechat\/bid reject
-^https?:\/\/adsoss\.zhinengxiyifang\.cn\/ads reject
-^https?:\/\/ads\.zhinengxiyifang\.cn\/api\/v1\.1\/ads\/* reject-200
+request if ${url} ~= /^https?:\/\/api-marketing\.zhinengxiyifang\.cn\/api\/v2\/cloudcode\/wechat\/bid/i then reject(404)
+request if ${url} ~= /^https?:\/\/adsoss\.zhinengxiyifang\.cn\/ads/i then reject(404)
+request if ${url} ~= /^https?:\/\/ads\.zhinengxiyifang\.cn\/api\/v1\.1\/ads\/*/i then reject(200)
 
 
 [MITM]

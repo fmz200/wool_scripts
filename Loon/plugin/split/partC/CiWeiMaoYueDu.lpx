@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/app\.hbooker\.com\/setting\/get_startpage_url_list reject
+request if ${url} ~= /^https?:\/\/app\.hbooker\.com\/setting\/get_startpage_url_list/i then reject(404)
 
 
 [MITM]

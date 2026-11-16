@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 开屏广告
-^https:\/\/mobileapi\.xiamenair\.com\/mobile-starter reject
+request if ${url} ~= /^https:\/\/mobileapi\.xiamenair\.com\/mobile-starter/i then reject(404)
 
 
 [MITM]

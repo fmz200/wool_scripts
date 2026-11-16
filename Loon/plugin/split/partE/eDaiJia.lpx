@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/pic\.edaijia\.cn\/adsplash\/ reject-200
+request if ${url} ~= /^https?:\/\/pic\.edaijia\.cn\/adsplash\//i then reject(200)
 
 
 [MITM]

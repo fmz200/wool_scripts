@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 感谢【Baby】分享
-^https?:\/\/bid\.adview\.cn\/agent\/getAd reject
+request if ${url} ~= /^https?:\/\/bid\.adview\.cn\/agent\/getAd/i then reject(404)
 
 
 [MITM]

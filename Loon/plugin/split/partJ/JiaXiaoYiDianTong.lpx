@@ -17,11 +17,11 @@ DOMAIN, richmanrules.jxedt.com, REJECT
 
 [Rewrite]
 # 开屏广告 感谢【jinlvei】分享
-^https?:\/\/richmanrules\.ksedt\.com\/intellectWaterfall(Bidding)?\/find reject
-^https?:\/\/richmanapi\.jxedt\.com\/api\/(ad|adplus|banadplus)\/ reject-200
-^https?:\/\/api\.jxedt\.com\/ad\/ reject
-^https?:\/\/api\.jxedt\.com\/jump\/EMiCcDNp reject-img
-^https?:\/\/richmanmain\.jxedt\.com\/advertisement\/fallback reject-img
+request if ${url} ~= /^https?:\/\/richmanrules\.ksedt\.com\/intellectWaterfall(Bidding)?\/find/i then reject(404)
+request if ${url} ~= /^https?:\/\/richmanapi\.jxedt\.com\/api\/(ad|adplus|banadplus)\//i then reject(200)
+request if ${url} ~= /^https?:\/\/api\.jxedt\.com\/ad\//i then reject(404)
+request if ${url} ~= /^https?:\/\/api\.jxedt\.com\/jump\/EMiCcDNp/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/richmanmain\.jxedt\.com\/advertisement\/fallback/i then reject_img(200)
 
 
 [MITM]

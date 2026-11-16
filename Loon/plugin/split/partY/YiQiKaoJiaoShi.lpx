@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 开屏广告及题库广告 感谢【Jessire】分享
-^https?:\/\/api\.17kjs\.com\/meta\/ads_targets reject
+request if ${url} ~= /^https?:\/\/api\.17kjs\.com\/meta\/ads_targets/i then reject(404)
 
 
 [MITM]

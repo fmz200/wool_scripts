@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/api\.sogaha\.cn\/ssp\/ad\/get\?ip reject-dict
+request if ${url} ~= /^https?:\/\/api\.sogaha\.cn\/ssp\/ad\/get\?ip/i then reject_dict(200)
 
 
 [MITM]

@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/cdn\.jlbank\.com\.cn\/jlstaticresource\/APPSTART reject-200
+request if ${url} ~= /^https?:\/\/cdn\.jlbank\.com\.cn\/jlstaticresource\/APPSTART/i then reject(200)
 
 
 [MITM]

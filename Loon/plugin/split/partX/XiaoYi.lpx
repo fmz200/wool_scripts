@@ -10,8 +10,8 @@
 
 
 [Rewrite]
-^https?://api.xiaoyi.com\/v5\/app\/mobile\/ads reject
-^https?://api.xiaoyi.com\/v5\/app\/config\?userid=.* reject
+request if ${url} ~= /^https?:\/\/api.xiaoyi.com\/v5\/app\/mobile\/ads/i then reject(404)
+request if ${url} ~= /^https?:\/\/api.xiaoyi.com\/v5\/app\/config\?userid=.*/i then reject(404)
 
 
 [MITM]

@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 弹窗
-^https?:\/\/3g\.csair\.com\/CSMBP\/bookProcess\/homepopup\/queryAdvertisement reject-200
+request if ${url} ~= /^https?:\/\/3g\.csair\.com\/CSMBP\/bookProcess\/homepopup\/queryAdvertisement/i then reject(200)
 
 
 [MITM]

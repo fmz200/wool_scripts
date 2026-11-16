@@ -11,9 +11,9 @@
 
 [Rewrite]
 # APP开屏广告
-^https:\/\/misc-api-prd-mx\.wandafilm\.com\/commend\/common_banner_batch\.api response-body-json-jq '.data.objects["OpenAPP-&-FlashAD"] = [] | .data.objects["InTheaters-&-BoxAD"] = []'
+response if ${url} ~= /^https:\/\/misc-api-prd-mx\.wandafilm\.com\/commend\/common_banner_batch\.api/i then response.json.jq(".data.objects[\"OpenAPP-&-FlashAD\"] = [] | .data.objects[\"InTheaters-&-BoxAD\"] = []")
 # 小程序弹窗广告
-^https?:\/\/misc-api-prd-mx\.wandafilm\.com\/commend\/common_banner_batch\.api\?bannerInfos=%5B%7B%22cinemaI response-body-replace-regex "WX_index_mp-&-boxAD" "fmz200"
+response if ${url} ~= /^https?:\/\/misc-api-prd-mx\.wandafilm\.com\/commend\/common_banner_batch\.api\?bannerInfos=%5B%7B%22cinemaI/i then response.body.replace(/"WX_index_mp-&-boxAD"/, "\"fmz200\"")
 
 
 [MITM]

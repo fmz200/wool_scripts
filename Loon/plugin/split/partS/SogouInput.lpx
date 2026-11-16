@@ -17,9 +17,9 @@ DOMAIN-SUFFIX, push-service-ios.sginput.qq.com, REJECT
 [Rewrite]
 #^https?:\/\/business-cdn\.shouji\.sogou\.com\/wapdl\/hole\/.+?\.jpg reject-200
 # 开屏广告
-^https?://(ios|android)\.sogou\.com/[^/]+/sogou_input_[^/]+/[^/]+/index\.html reject
+request if ${url} ~= /^https?:\/\/(ios|android)\.sogou\.com\/[^\/]+\/sogou_input_[^\/]+\/[^\/]+\/index\.html/i then reject(404)
 # 屏蔽游戏中心
-^https?:\/\/h5api\.sginput\.qq\.com\/v1\/gcenter\/ios\/homepage reject-dict
+request if ${url} ~= /^https?:\/\/h5api\.sginput\.qq\.com\/v1\/gcenter\/ios\/homepage/i then reject_dict(200)
 
 
 [MITM]

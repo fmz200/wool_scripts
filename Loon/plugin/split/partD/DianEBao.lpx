@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/app\.95598pay\.com\/debapi\/adsite\/ reject-200
+request if ${url} ~= /^https?:\/\/app\.95598pay\.com\/debapi\/adsite\//i then reject(200)
 
 
 [MITM]

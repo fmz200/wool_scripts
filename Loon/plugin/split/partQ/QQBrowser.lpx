@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/us\.l\.qq\.com\/exapp\?spsa=\d reject
+request if ${url} ~= /^https?:\/\/us\.l\.qq\.com\/exapp\?spsa=\d/i then reject(404)
 
 
 [MITM]

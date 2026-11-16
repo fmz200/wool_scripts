@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 微信小程序
-^https?:\/\/s\.jiediankeji\.com\/adv reject-dict
+request if ${url} ~= /^https?:\/\/s\.jiediankeji\.com\/adv/i then reject_dict(200)
 
 
 [MITM]

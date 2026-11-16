@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/lcen\.xiaote\.net\/api\/graphql response-body-replace-regex screenSplashAd fmz200
+response if ${url} ~= /^https?:\/\/lcen\.xiaote\.net\/api\/graphql/i then response.body.replace(/screenSplashAd/, "fmz200")
 
 
 [MITM]

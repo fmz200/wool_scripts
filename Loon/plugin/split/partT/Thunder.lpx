@@ -29,8 +29,8 @@ DOMAIN-SUFFIX, pre.api.tw06.xlmc.sandai.net, REJECT
 
 
 [Rewrite]
-^https?:\/\/images\.client\.vip\.xunlei\.com\/.+?\/advert\/ reject-200
-^https?:\/\/api-shoulei-ssl\.xunlei\.com\/flowhub\/v\d\/slots:batchGet reject-200
+request if ${url} ~= /^https?:\/\/images\.client\.vip\.xunlei\.com\/.+?\/advert\//i then reject(200)
+request if ${url} ~= /^https?:\/\/api-shoulei-ssl\.xunlei\.com\/flowhub\/v\d\/slots:batchGet/i then reject(200)
 
 
 [MITM]

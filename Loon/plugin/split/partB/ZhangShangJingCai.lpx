@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/cdn-xyk-app\.bankofbeijing\.com\.cn\/cdn\/resource\/image\/advertise reject-200
+request if ${url} ~= /^https?:\/\/cdn-xyk-app\.bankofbeijing\.com\.cn\/cdn\/resource\/image\/advertise/i then reject(200)
 
 
 [MITM]

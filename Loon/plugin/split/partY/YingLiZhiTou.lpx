@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 我的横幅广告
-^https?:\/\/hz\.yxzq\.com\/news-configserver\/api\/v1\/query\/banner_advertisement reject-dict
+request if ${url} ~= /^https?:\/\/hz\.yxzq\.com\/news-configserver\/api\/v1\/query\/banner_advertisement/i then reject_dict(200)
 
 
 [MITM]

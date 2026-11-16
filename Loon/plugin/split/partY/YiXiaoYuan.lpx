@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 开屏广告
-^https?:\/\/compus\.xiaofubao\.com\/compus\/advertising\/getStartupAdvertising reject-dict
+request if ${url} ~= /^https?:\/\/compus\.xiaofubao\.com\/compus\/advertising\/getStartupAdvertising/i then reject_dict(200)
 
 
 [MITM]

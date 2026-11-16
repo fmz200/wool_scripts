@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 需要重装
-^https?:\/\/apicloud\.zol\.com\.cn\/Article\/WapLaunchLogo reject-dict
+request if ${url} ~= /^https?:\/\/apicloud\.zol\.com\.cn\/Article\/WapLaunchLogo/i then reject_dict(200)
 
 
 [MITM]

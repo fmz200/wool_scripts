@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/zone\.guiderank-app\.com\/guiderank-web\/app\/ad\/listLaunchADByCity\.do reject
+request if ${url} ~= /^https?:\/\/zone\.guiderank-app\.com\/guiderank-web\/app\/ad\/listLaunchADByCity\.do/i then reject(404)
 
 
 [MITM]

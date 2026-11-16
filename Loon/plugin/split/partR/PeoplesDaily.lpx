@@ -10,9 +10,9 @@
 
 
 [Rewrite]
-^https?:\/\/app\.peopleapp\.com\/Api\/\d+/HomeApi\/(adv|getAdvertImage) reject
-^https?:\/\/stat\.peopleapp\.com\/ reject
-^https?:\/\/adstatic\.peopleapp\.com\/upload\/AppLoad\/.*.(jpg|png) reject-200
+request if ${url} ~= /^https?:\/\/app\.peopleapp\.com\/Api\/\d+\/HomeApi\/(adv|getAdvertImage)/i then reject(404)
+request if ${url} ~= /^https?:\/\/stat\.peopleapp\.com\//i then reject(404)
+request if ${url} ~= /^https?:\/\/adstatic\.peopleapp\.com\/upload\/AppLoad\/.*.(jpg|png)/i then reject(200)
 
 
 [MITM]

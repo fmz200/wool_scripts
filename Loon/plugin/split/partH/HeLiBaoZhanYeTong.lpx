@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/promote-trx\.helipay\.com\/promote-business-client\/pos\/appAdvertisement\/appAdvertisementList reject-200
+request if ${url} ~= /^https?:\/\/promote-trx\.helipay\.com\/promote-business-client\/pos\/appAdvertisement\/appAdvertisementList/i then reject(200)
 
 
 [MITM]

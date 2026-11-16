@@ -10,9 +10,9 @@
 
 
 [Rewrite]
-^https?:\/\/\w+\.kakamobi\.cn\/api\/open\/v\d\/advert-sdk\/ reject
-^https?:\/\/789\.kakamobi\.cn\/.+adver reject-img
-^https?:\/\/smart\.789\.image\.mucang\.cn\/advert reject-img
+request if ${url} ~= /^https?:\/\/\w+\.kakamobi\.cn\/api\/open\/v\d\/advert-sdk\//i then reject(404)
+request if ${url} ~= /^https?:\/\/789\.kakamobi\.cn\/.+adver/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/smart\.789\.image\.mucang\.cn\/advert/i then reject_img(200)
 
 
 [MITM]

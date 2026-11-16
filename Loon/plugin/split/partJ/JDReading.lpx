@@ -10,8 +10,8 @@
 
 
 [Rewrite]
-^https?:\/\/jdread-api\.jd\.com\/jdread\/api\/channel\/module\/opens reject-200
-^https?:\/\/jdread-api\.jd\.com\/jdread\/api\/popup reject-200
+request if ${url} ~= /^https?:\/\/jdread-api\.jd\.com\/jdread\/api\/channel\/module\/opens/i then reject(200)
+request if ${url} ~= /^https?:\/\/jdread-api\.jd\.com\/jdread\/api\/popup/i then reject(200)
 
 
 [MITM]

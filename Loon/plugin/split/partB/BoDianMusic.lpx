@@ -11,13 +11,13 @@
 
 [Rewrite]
 # 开屏广告 感谢【林夕】分享
-^https?:\/\/bd-api\.kuwo\.cn\/api\/service\/finds\/module\?moduleId reject-dict
-^https?:\/\/bd-api\.kuwo\.cn\/api\/service\/banner\/myPage\?uid reject-dict
-^https?:\/\/bd-api\.kuwo\.cn\/api\/play\/listening\/entrance\/music\?musicId reject-dict
-^https?:\/\/h5app\.kuwo\.cn\/m\/kwtemplatePage\/index\.html\?id=1157&app=bodianhdzx reject-dict
-^https?:\/\/h5app\.kuwo\.cn\/m\/bdvipact2205\/index\.html\?fromsrc=huodong reject-dict
-^https?:\/\/bodianimgcdn\.kuwo\.cn\/images\/0e83c1821cd2681de08e20bec73d1e75 reject-dict
-^https?:\/\/bodianimgcdn\.kuwo\.cn\/images\/198c0b313fe9e53b03240c7b30b4acc9 reject-dict
+request if ${url} ~= /^https?:\/\/bd-api\.kuwo\.cn\/api\/service\/finds\/module\?moduleId/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/bd-api\.kuwo\.cn\/api\/service\/banner\/myPage\?uid/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/bd-api\.kuwo\.cn\/api\/play\/listening\/entrance\/music\?musicId/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/h5app\.kuwo\.cn\/m\/kwtemplatePage\/index\.html\?id=1157&app=bodianhdzx/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/h5app\.kuwo\.cn\/m\/bdvipact2205\/index\.html\?fromsrc=huodong/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/bodianimgcdn\.kuwo\.cn\/images\/0e83c1821cd2681de08e20bec73d1e75/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/bodianimgcdn\.kuwo\.cn\/images\/198c0b313fe9e53b03240c7b30b4acc9/i then reject_dict(200)
 
 
 [MITM]

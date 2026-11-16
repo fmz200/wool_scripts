@@ -13,7 +13,7 @@
 12306_enable = switch,true,false,tag=12306-脚本开关
 
 [Script]
-http-request ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/12306.js, requires-body=true, timeout=60, tag=12306, enable={12306_enable}
+request if ${url} ~= /^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList/i then script("https://raw.githubusercontent.com/kokoryh/Script/master/js/12306.js") with enable=${12306_enable}, tag="12306", timeout=60, requires_body=true
 
 
 

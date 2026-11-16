@@ -14,41 +14,41 @@ pupuicui_enable = switch,true,tag=朴朴超市-脚本开关
 
 [Rewrite]
 # 开屏广告 感谢【树先生, 可莉】分享
-^https:\/\/j1\.pupuapi\.com\/client\/notification\/message_center\/unread_number response-body-json-jq '.data = []'
+response if ${url} ~= /^https:\/\/j1\.pupuapi\.com\/client\/notification\/message_center\/unread_number/i then response.json.jq(".data = []")
 # 广告下发
-^http:\/\/139\.196\.12\.179:8053\/httpdns\/ reject
-^http:\/\/106\.55\.220\.18:8053\/httpdns\/ reject
-^http:\/\/54\.222\.159\.138:8053\/httpdns\/ reject
-^http:\/\/101\.42\.130\.147\/httpdns\/resolve\/ reject
+request if ${url} ~= /^http:\/\/139\.196\.12\.179:8053\/httpdns\//i then reject(404)
+request if ${url} ~= /^http:\/\/106\.55\.220\.18:8053\/httpdns\//i then reject(404)
+request if ${url} ~= /^http:\/\/54\.222\.159\.138:8053\/httpdns\//i then reject(404)
+request if ${url} ~= /^http:\/\/101\.42\.130\.147\/httpdns\/resolve\//i then reject(404)
 # 主页实惠卡横幅
-^https:\/\/j1\.pupuapi\.com\/client\/member_card\/index\/my reject
+request if ${url} ~= /^https:\/\/j1\.pupuapi\.com\/client\/member_card\/index\/my/i then reject(404)
 # 搜索框页面热榜
-^https:\/\/j1\.pupuapi\.com\/client\/marketing\/advertisement\/search_input_ranking reject-dict
+request if ${url} ~= /^https:\/\/j1\.pupuapi\.com\/client\/marketing\/advertisement\/search_input_ranking/i then reject_dict(200)
 # 朴朴超市订单待收货页右下角悬浮广告
-^https:\/\/j1\.pupuapi\.com\/client\/assets\/discount\/order reject-dict
+request if ${url} ~= /^https:\/\/j1\.pupuapi\.com\/client\/assets\/discount\/order/i then reject_dict(200)
 # 购物车页去换购推荐
-^https:\/\/j1\.pupuapi\.com\/client\/marketing\/channel\/global_redeem\/top_tip\/v2 reject-dict
+request if ${url} ~= /^https:\/\/j1\.pupuapi\.com\/client\/marketing\/channel\/global_redeem\/top_tip\/v2/i then reject_dict(200)
 # 各种页面的商品推荐
-^https:\/\/j1\.pupuapi\.com\/client\/recommendation\/hub\/interests\/products\/v2 reject-dict
+request if ${url} ~= /^https:\/\/j1\.pupuapi\.com\/client\/recommendation\/hub\/interests\/products\/v2/i then reject_dict(200)
 # 个人主页会员标识
-^https:\/\/j1\.pupuapi\.com\/client\/member_card\/premium\/user_center reject-dict
+request if ${url} ~= /^https:\/\/j1\.pupuapi\.com\/client\/member_card\/premium\/user_center/i then reject_dict(200)
 
 
 [Script]
-http-response ^https:\/\/j1\.pupuapi\.com\/client\/search\/hot_keywords\/v3 script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js, requires-body=true, timeout=60, tag=朴朴超市, enable={pupuicui_enable}
+response if ${url} ~= /^https:\/\/j1\.pupuapi\.com\/client\/search\/hot_keywords\/v3/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js") with enable=${pupuicui_enable}, tag="朴朴超市", timeout=60, requires_body=true
 
-http-response ^https:\/\/j1\.pupuapi\.com\/client\/app_resource\/resource_preload\/list_h5_resource script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js, requires-body=true, timeout=60, tag=朴朴超市, enable={pupuicui_enable}
+response if ${url} ~= /^https:\/\/j1\.pupuapi\.com\/client\/app_resource\/resource_preload\/list_h5_resource/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js") with enable=${pupuicui_enable}, tag="朴朴超市", timeout=60, requires_body=true
 
-http-response ^https:\/\/j1\.pupuapi\.com\/client\/marketing\/advertisement\/v1 script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js, requires-body=true, timeout=60, tag=朴朴超市, enable={pupuicui_enable}
+response if ${url} ~= /^https:\/\/j1\.pupuapi\.com\/client\/marketing\/advertisement\/v1/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js") with enable=${pupuicui_enable}, tag="朴朴超市", timeout=60, requires_body=true
 
 # 搜索结果页信息流横幅广告
-http-response ^https:\/\/j1\.pupuapi\.com\/client\/search\/hub\/search_box\/products\/v6 script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js, requires-body=true, timeout=60, tag=朴朴超市, enable={pupuicui_enable}
+response if ${url} ~= /^https:\/\/j1\.pupuapi\.com\/client\/search\/hub\/search_box\/products\/v6/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js") with enable=${pupuicui_enable}, tag="朴朴超市", timeout=60, requires_body=true
 
 # 下单页实惠卡开通推荐
-http-response ^https:\/\/j1\.pupuapi\.com\/client\/order_settlement\/detail script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js, requires-body=true, timeout=60, tag=朴朴超市, enable={pupuicui_enable}
+response if ${url} ~= /^https:\/\/j1\.pupuapi\.com\/client\/order_settlement\/detail/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js") with enable=${pupuicui_enable}, tag="朴朴超市", timeout=60, requires_body=true
 
 # 订单列表骑手反馈问题推荐
-http-response ^https:\/\/j1\.pupuapi\.com\/client\/order\/orders\/list\/v4 script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js, requires-body=true, timeout=60, tag=朴朴超市, enable={pupuicui_enable}
+response if ${url} ~= /^https:\/\/j1\.pupuapi\.com\/client\/order\/orders\/list\/v4/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js") with enable=${pupuicui_enable}, tag="朴朴超市", timeout=60, requires_body=true
 
 
 

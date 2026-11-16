@@ -10,8 +10,8 @@
 
 
 [Rewrite]
-^https?:\/\/ads\.iconntech\.com\/resource-delivery\/*\/.*.(jpg|png) reject-200
-^https?:\/\/smkmp\.96225\.com\/smkcenter\/ad/ reject
+request if ${url} ~= /^https?:\/\/ads\.iconntech\.com\/resource-delivery\/*\/.*.(jpg|png)/i then reject(200)
+request if ${url} ~= /^https?:\/\/smkmp\.96225\.com\/smkcenter\/ad\//i then reject(404)
 
 
 [MITM]

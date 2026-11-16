@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/channel\.beitaichufang\.com\/channel\/api\/v\d\/promote\/ios\/start\/page reject
+request if ${url} ~= /^https?:\/\/channel\.beitaichufang\.com\/channel\/api\/v\d\/promote\/ios\/start\/page/i then reject(404)
 
 
 [MITM]

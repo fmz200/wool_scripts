@@ -161,20 +161,20 @@ DOMAIN, hmma.baidu.com, REJECT
 
 
 [Rewrite]
-^https?:\/\/fcvbjbcebos\.baidu\.com\/.+.mp4 reject
-^https?:\/\/fcvbjbcebos\.baidu\.com\/.+?\.mp4 reject-img
-^https?:\/\/cover\.baidu\.com\/cover\/page\/dspSwitchAds\/ reject
-^https?:\/\/baichuan\.baidu\.com\/rs\/adpmobile\/launch reject
-^https?:\/\/api\d\.tuisong\.baidu\.com reject-img
-^https?:\/\/afd\.baidu\.com\/afd\/entry reject
-^https?:\/\/als\.baidu\.com\/clog\/clog reject
-^https?:\/\/mobads\.baidu\.com\/cpro\/ui\/mads.+ reject
-^https?:\/\/issuecdn\.baidupcs\.com\/issue\/netdisk\/guanggao\/ reject-200
-^https?:\/\/[\s\S]*\.baidu\.com/.*?ad[xs]\.php reject-img
-^https?:\/\/t\d{2}\.baidu\.com reject-img
-^https?:\/\/log.+?baidu\.com reject
-^https?:\/\/sa\d\.tuisong\.baidu\.com reject-img
-^https?:\/\/www.baidu.com\/?action=static&ms=1&version=css_page_2@0.*? reject
+request if ${url} ~= /^https?:\/\/fcvbjbcebos\.baidu\.com\/.+.mp4/i then reject(404)
+request if ${url} ~= /^https?:\/\/fcvbjbcebos\.baidu\.com\/.+?\.mp4/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/cover\.baidu\.com\/cover\/page\/dspSwitchAds\//i then reject(404)
+request if ${url} ~= /^https?:\/\/baichuan\.baidu\.com\/rs\/adpmobile\/launch/i then reject(404)
+request if ${url} ~= /^https?:\/\/api\d\.tuisong\.baidu\.com/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/afd\.baidu\.com\/afd\/entry/i then reject(404)
+request if ${url} ~= /^https?:\/\/als\.baidu\.com\/clog\/clog/i then reject(404)
+request if ${url} ~= /^https?:\/\/mobads\.baidu\.com\/cpro\/ui\/mads.+/i then reject(404)
+request if ${url} ~= /^https?:\/\/issuecdn\.baidupcs\.com\/issue\/netdisk\/guanggao\//i then reject(200)
+request if ${url} ~= /^https?:\/\/[\s\S]*\.baidu\.com\/.*?ad[xs]\.php/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/t\d{2}\.baidu\.com/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/log.+?baidu\.com/i then reject(404)
+request if ${url} ~= /^https?:\/\/sa\d\.tuisong\.baidu\.com/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/www.baidu.com\/?action=static&ms=1&version=css_page_2@0.*?/i then reject(404)
 
 
 [MITM]

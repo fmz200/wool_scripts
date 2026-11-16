@@ -14,7 +14,7 @@ DOMAIN-KEYWORD,talk.bz.getui.com, REJECT
 
 
 [Rewrite]
-^https?:\/\/yghsh\.cebbank\.com\/static\/picture\/.*.jpg reject-200
+request if ${url} ~= /^https?:\/\/yghsh\.cebbank\.com\/static\/picture\/.*.jpg/i then reject(200)
 
 
 [MITM]

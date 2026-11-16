@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/api\.huomao\.com\/channels\/loginAd reject
+request if ${url} ~= /^https?:\/\/api\.huomao\.com\/channels\/loginAd/i then reject(404)
 
 
 [MITM]

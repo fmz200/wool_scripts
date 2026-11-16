@@ -146,17 +146,17 @@ DOMAIN-SUFFIX,lnk0.com,REJECT
 
 
 [Rewrite]
-^https?:\/\/cdn\.kuaidi100\.com\/images\/open\/appads reject-img
-^https?:\/\/p\.kuaidi100\.com\/mobile\/mobileapi\.do reject
-^https?:\/\/p\.kuaidi100\.com\/mobile\/mobileapi\.do$ response-body-json-del adsplash adIsConsumable adProductId nologin_tips index_banner me_banner index_banner_shadow adshongbao adsapp_homepage_ticket_pop adsoptimizationsend adsapp_activity_ad_array adbanner adposition adShowAgainTime
-^https?:\/\/p\.kuaidi100\.com\/apicenter\/xcx\.dox response-body-json-del data.secondMenuList
-^https?:\/\/p\.kuaidi100\.com\/advertisement\/ reject-dict
-^https?:\/\/p\.kuaidi100\.com\/e-commerce\/act\/actInfo\? reject-dict
-^https?:\/\/p\.kuaidi100\.com\/apicenter\/card\.dox reject-dict
-^https:\/\/video-dsp\.pddpic\.com\/market-dsp-video\/ reject
-^https:\/\/t-dsp\.pinduoduo\.com\/dspcb\/i\/mrk_union reject
-^https:\/\/images\.pinduoduo\.com\/mrk\/ reject
-^https:\/\/images\.pinduoduo\.com\/marketing_api\/ reject
+request if ${url} ~= /^https?:\/\/cdn\.kuaidi100\.com\/images\/open\/appads/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/p\.kuaidi100\.com\/mobile\/mobileapi\.do/i then reject(404)
+response if ${url} ~= /^https?:\/\/p\.kuaidi100\.com\/mobile\/mobileapi\.do$/i then response.json.delete(["adsplash", "adIsConsumable", "adProductId", "nologin_tips", "index_banner", "me_banner", "index_banner_shadow", "adshongbao", "adsapp_homepage_ticket_pop", "adsoptimizationsend", "adsapp_activity_ad_array", "adbanner", "adposition", "adShowAgainTime"])
+response if ${url} ~= /^https?:\/\/p\.kuaidi100\.com\/apicenter\/xcx\.dox/i then response.json.delete("data.secondMenuList")
+request if ${url} ~= /^https?:\/\/p\.kuaidi100\.com\/advertisement\//i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/p\.kuaidi100\.com\/e-commerce\/act\/actInfo\?/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/p\.kuaidi100\.com\/apicenter\/card\.dox/i then reject_dict(200)
+request if ${url} ~= /^https:\/\/video-dsp\.pddpic\.com\/market-dsp-video\//i then reject(404)
+request if ${url} ~= /^https:\/\/t-dsp\.pinduoduo\.com\/dspcb\/i\/mrk_union/i then reject(404)
+request if ${url} ~= /^https:\/\/images\.pinduoduo\.com\/mrk\//i then reject(404)
+request if ${url} ~= /^https:\/\/images\.pinduoduo\.com\/marketing_api\//i then reject(404)
 
 
 [MITM]

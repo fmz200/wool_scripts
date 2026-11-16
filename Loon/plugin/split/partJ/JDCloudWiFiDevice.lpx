@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/router-app-api\.jdcloud\.com\/v\d\/board\/routerAppSplash reject-200
+request if ${url} ~= /^https?:\/\/router-app-api\.jdcloud\.com\/v\d\/board\/routerAppSplash/i then reject(200)
 
 
 [MITM]

@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-https://ios.sspai.com/api/v3/recommend/page/get\?ad.*ios_home_modal reject
+request if ${url} ~= /https:\/\/ios.sspai.com\/api\/v3\/recommend\/page\/get\?ad.*ios_home_modal/i then reject(404)
 
 
 [MITM]

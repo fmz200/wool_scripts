@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/edit\.sinaapp\.com\/ua\?t=adv reject-200
+request if ${url} ~= /^https?:\/\/edit\.sinaapp\.com\/ua\?t=adv/i then reject(200)
 
 
 [MITM]

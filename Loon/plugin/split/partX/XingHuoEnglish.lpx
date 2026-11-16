@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 开屏广告
-^https?:\/\/api\d\.sparke\.cn\/admodel\/list\?adspace=spgg&flag=\d$ reject
+request if ${url} ~= /^https?:\/\/api\d\.sparke\.cn\/admodel\/list\?adspace=spgg&flag=\d$/i then reject(404)
 
 
 [MITM]

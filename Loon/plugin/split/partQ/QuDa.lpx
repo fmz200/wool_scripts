@@ -14,7 +14,7 @@ quda_enable = switch,true,false,tag=去哒-脚本开关
 
 [Script]
 # 首页开屏广告 感谢【德克萨斯】分享
-http-response ^https?:\/\/iqushangwang\.8quan\.com\/index\.php\/i\/index\/index script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/QuDa.js, requires-body=true, timeout=60, tag=去哒, enable={quda_enable}
+response if ${url} ~= /^https?:\/\/iqushangwang\.8quan\.com\/index\.php\/i\/index\/index/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/QuDa.js") with enable=${quda_enable}, tag="去哒", timeout=60, requires_body=true
 
 [MITM]
 hostname = iqushangwang.8quan.com

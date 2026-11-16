@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/api\.sfacg\.com\/ioscfg reject
+request if ${url} ~= /^https?:\/\/api\.sfacg\.com\/ioscfg/i then reject(404)
 
 
 [MITM]

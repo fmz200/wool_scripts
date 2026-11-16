@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 开屏广告
-^https?:\/\/ios-api\.lucklyworld\.com\/v6\/api\/config\/startup reject-dict
+request if ${url} ~= /^https?:\/\/ios-api\.lucklyworld\.com\/v6\/api\/config\/startup/i then reject_dict(200)
 
 
 [MITM]

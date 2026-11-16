@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 如开启可自行添加主机名
-^https?:\/\/www\.i3zh\.com response-body-replace-regex cm-pop-up-banners fmz200
+response if ${url} ~= /^https?:\/\/www\.i3zh\.com/i then response.body.replace(/cm-pop-up-banners/, "fmz200")
 
 
 

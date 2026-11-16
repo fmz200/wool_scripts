@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 底下百家号广告 感谢【 🐈‍⬛👮】分享
-^http?:\/\/tianqi\.2345\.com\/api\/content\/getContentFeeds\.php reject-dict
+request if ${url} ~= /^http?:\/\/tianqi\.2345\.com\/api\/content\/getContentFeeds\.php/i then reject_dict(200)
 
 
 

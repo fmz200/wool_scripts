@@ -10,8 +10,8 @@
 
 
 [Rewrite]
-^https?:\/\/dsa-mfp\.fengshows\.cn\/mfp\/mfpMultipleDelivery\.do\?.+?adunitid reject
-^https?:\/\/api\.fengshows\.com\/api\/launchAD reject-img
+request if ${url} ~= /^https?:\/\/dsa-mfp\.fengshows\.cn\/mfp\/mfpMultipleDelivery\.do\?.+?adunitid/i then reject(404)
+request if ${url} ~= /^https?:\/\/api\.fengshows\.com\/api\/launchAD/i then reject_img(200)
 
 
 [MITM]

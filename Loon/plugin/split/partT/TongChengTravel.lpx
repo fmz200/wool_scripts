@@ -11,17 +11,17 @@
 
 [Rewrite]
 # 开屏广告
-^https?:\/\/wx\.17u\.cn\/xcxhomeapi\/((aggregator\/index)|(home\/(screen|banner|converge)))$ reject
-^https?:\/\/wx\.17u\.cn\/crapi\/query\/getAdImgUrlByCode reject-dict
-^https:\/\/tcmobileapi\.17usoft\.com\/appindexnew\/index\/openscreen reject-dict
-^https:\/\/tcmobileapi\.17usoft\.com\/appindexnew\/index\/getindexlayoutcelllist reject-dict
-^https:\/\/tcmobileapi\.17usoft\.com\/appindexnew\/index\/gethotrecommend reject-dict
+request if ${url} ~= /^https?:\/\/wx\.17u\.cn\/xcxhomeapi\/((aggregator\/index)|(home\/(screen|banner|converge)))$/i then reject(404)
+request if ${url} ~= /^https?:\/\/wx\.17u\.cn\/crapi\/query\/getAdImgUrlByCode/i then reject_dict(200)
+request if ${url} ~= /^https:\/\/tcmobileapi\.17usoft\.com\/appindexnew\/index\/openscreen/i then reject_dict(200)
+request if ${url} ~= /^https:\/\/tcmobileapi\.17usoft\.com\/appindexnew\/index\/getindexlayoutcelllist/i then reject_dict(200)
+request if ${url} ~= /^https:\/\/tcmobileapi\.17usoft\.com\/appindexnew\/index\/gethotrecommend/i then reject_dict(200)
 # 景点界面轮播图和右下角悬浮窗
-^https:\/\/mobileapi\.ly\.com\/wlfrontend\/app\/scenicMain reject-dict
+request if ${url} ~= /^https:\/\/mobileapi\.ly\.com\/wlfrontend\/app\/scenicMain/i then reject_dict(200)
 # 租车界面 广告
-^https:\/\/wx\.17u\.cn\/crapi\/query\/ad reject-dict
+request if ${url} ~= /^https:\/\/wx\.17u\.cn\/crapi\/query\/ad/i then reject_dict(200)
 # 酒店界面广告
-^https:\/\/mobilehotelapi\.elong\.com\/appHotel\/adx\/advert\/getAdvert reject-dict
+request if ${url} ~= /^https:\/\/mobilehotelapi\.elong\.com\/appHotel\/adx\/advert\/getAdvert/i then reject_dict(200)
 
 
 [MITM]

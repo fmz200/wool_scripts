@@ -19,9 +19,9 @@ DOMAIN-SUFFIX, gstat.bitauto.com, REJECT
 
 
 [Rewrite]
-^https?:\/\/api\.ycapp\.yiche\.com\/appnews\/getadlist reject-img
-^https?:\/\/api\.ycapp\.yiche\.com\/yicheapp\/getadlist reject-img
-^https?:\/\/cheyouapi\.ycapp\.yiche\.com\/appforum\/getusermessagecount reject-img
+request if ${url} ~= /^https?:\/\/api\.ycapp\.yiche\.com\/appnews\/getadlist/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/api\.ycapp\.yiche\.com\/yicheapp\/getadlist/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/cheyouapi\.ycapp\.yiche\.com\/appforum\/getusermessagecount/i then reject_img(200)
 
 
 [MITM]

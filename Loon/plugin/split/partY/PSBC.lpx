@@ -11,12 +11,12 @@
 
 [Rewrite]
 # 添加主机名后影响APP正常运行
-^https?:\/\/static.psbc.com:8090\/mbank_f\/images\/[0-9]+\.png reject-200
-^https?:\/\/mcc.psbc.com:9090\/mcc\/resources\/[0-9]+\.(jpg|png) reject-200
+request if ${url} ~= /^https?:\/\/static.psbc.com:8090\/mbank_f\/images\/[0-9]+\.png/i then reject(200)
+request if ${url} ~= /^https?:\/\/mcc.psbc.com:9090\/mcc\/resources\/[0-9]+\.(jpg|png)/i then reject(200)
 # 邮储信用卡
-^https?:\/\/d\.psbc\.com:9091\/mcc\/resources\/[0-9]+\.(jpg|png|jpeg) reject-200
+request if ${url} ~= /^https?:\/\/d\.psbc\.com:9091\/mcc\/resources\/[0-9]+\.(jpg|png|jpeg)/i then reject(200)
 # 屏蔽升级弹窗 感谢@jinlvei分享 影响软件运行，如开启可自行添加主机名
-^https?:\/\/static\.mobile-bank\.psbc\.com\/mgs reject
+request if ${url} ~= /^https?:\/\/static\.mobile-bank\.psbc\.com\/mgs/i then reject(404)
 
 
 [MITM]

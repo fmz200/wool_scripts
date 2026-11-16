@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/img\.gdoil\.cn\/upload\/ad\/.*.(jpg|png) reject-200
+request if ${url} ~= /^https?:\/\/img\.gdoil\.cn\/upload\/ad\/.*.(jpg|png)/i then reject(200)
 
 
 [MITM]

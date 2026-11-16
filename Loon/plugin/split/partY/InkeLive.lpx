@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/service\.busi\.inke\.cn\/api\/flash\/screen reject
+request if ${url} ~= /^https?:\/\/service\.busi\.inke\.cn\/api\/flash\/screen/i then reject(404)
 
 
 [MITM]

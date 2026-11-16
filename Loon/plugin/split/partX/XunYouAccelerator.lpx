@@ -10,8 +10,8 @@
 
 
 [Rewrite]
-^https?:\/\/portal-xunyou\.qingcdn\.com\/api\/v\d\/ios\/ads\/ reject-200
-^https?:\/\/portal-xunyou\.qingcdn\.com\/api\/v\d\/ios\/configs\/(?>splash_ad|ad_urls) reject-200
+request if ${url} ~= /^https?:\/\/portal-xunyou\.qingcdn\.com\/api\/v\d\/ios\/ads\//i then reject(200)
+request if ${url} ~= /^https?:\/\/portal-xunyou\.qingcdn\.com\/api\/v\d\/ios\/configs\/(?>splash_ad|ad_urls)/i then reject(200)
 
 
 [MITM]

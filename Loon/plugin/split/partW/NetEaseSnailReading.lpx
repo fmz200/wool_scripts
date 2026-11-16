@@ -10,8 +10,8 @@
 
 
 [Rewrite]
-^https?:\/\/easyreadfs\.nosdn\.127\.net\/ad-material\/ reject-200
-^https?:\/\/p\.du\.163\.com\/ad\/ reject-200
+request if ${url} ~= /^https?:\/\/easyreadfs\.nosdn\.127\.net\/ad-material\//i then reject(200)
+request if ${url} ~= /^https?:\/\/p\.du\.163\.com\/ad\//i then reject(200)
 
 
 [MITM]

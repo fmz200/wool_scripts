@@ -14,7 +14,7 @@ reddit_enable = switch,true,false,tag=Reddit-脚本开关
 
 [Script]
 # 过滤推广 关NSFW提示 感谢【xream】分享
-http-response ^https?:\/\/gql(-fed)?\.reddit\.com script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/reddit.js, requires-body=true, timeout=60, tag=reddit, enable={reddit_enable}
+response if ${url} ~= /^https?:\/\/gql(-fed)?\.reddit\.com/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/reddit.js") with enable=${reddit_enable}, tag="reddit", timeout=60, requires_body=true
 
 [MITM]
 hostname = gql.reddit.com, gql-fed.reddit.com

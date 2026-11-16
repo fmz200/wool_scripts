@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/xhtz.oss-cn-guangzhou\.aliyuncs\.com\/home\/member\/.+\.png$ reject-200
+request if ${url} ~= /^https?:\/\/xhtz.oss-cn-guangzhou\.aliyuncs\.com\/home\/member\/.+\.png$/i then reject(200)
 
 
 [MITM]

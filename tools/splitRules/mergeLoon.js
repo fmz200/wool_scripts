@@ -1,5 +1,5 @@
 /**
- * mergeLoon.js - 将 Loon/plugin/split 拆分插件聚合为 blockAds.plugin（V1）与 blockAdsV2.plugin（V2）
+ * mergeLoon.js - 将 Loon/plugin/split 拆分插件聚合为 blockAds.plugin
  *
  * 功能说明：
  * 1. 递归读取 Loon/plugin/split 下的所有 .lpx 拆分文件
@@ -12,9 +12,7 @@
  *    - 每个 APP 输出 # > 显示名 + # hostname 注释 + 规则内容，同分类内按显示名排序
  *    - [MITM] 汇总全部拆分文件的 hostname（去重、按首次出现顺序）为一行
  *      hostname = *.svg, hostname = ...（沿用现有合集的 %APPEND% 形式）
- * 3. 同时输出两个合集：
- *    - Loon/plugin/blockAds.plugin（Rewrite V1 / Script V1）
- *    - Loon/plugin/blockAdsV2.plugin（Rewrite V2 / Script V2，由 V1 语法按官方映射转换）
+ * 3. 只输出 Loon/plugin/blockAds.plugin。拆分文件里的 Rewrite / Script 已是新语法，
  *
  * 注意：
  * - 拆分文件各自的 #!desc/#!author/#!raw-url/#!tg-channel/#!arguments 不参与聚合，
@@ -38,7 +36,6 @@ const baseDir = process.env.WOOL_MERGE_BASE_DIR
 const CONFIG = {
   inputDir: path.join(baseDir, 'Loon', 'plugin', 'split'),
   outputFile: path.join(baseDir, 'Loon', 'plugin', 'blockAds.plugin'),
-  outputV2File: path.join(baseDir, 'Loon', 'plugin', 'blockAdsV2.plugin'),
   dbPath: path.join(baseDir, 'db', 'inaisi.db'),
   repoRawBase: 'https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split',
   splitRelPath: 'Loon/plugin/split',
@@ -66,24 +63,6 @@ const CONFIG = {
     '#!loon_version =',
     '#!date={date}',
     '#!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。'
-  ],
-  // V2 文件头模板（仅当目标文件不存在时使用）
-  headerTemplateV2: [
-    '#!name=广告拦截&净化合集(Rewrite V2)',
-    '#!desc=(支持约730款APP/小程序)针对部分APP和小程序广告进行拦截，某些APP要清除缓存或者重新安装拦截广告才会生效！规则明细可以查看本插件的注释',
-    '#!author=奶思[https://github.com/fmz200]',
-    '#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/AdblockPlus.png',
-    '#!homepage=https://github.com/fmz200/wool_scripts',
-    '#!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/blockAdsV2.plugin',
-    '#!tg-channel=https://t.me/inaisi',
-    '#!category=奶思的模块',
-    '#!tag=去广告, fmz200, 奶思',
-    '#!system=iOS, iPadOS',
-    '#!system_version =',
-    '#!loon_version = 3.5.1(978)',
-    '#!date={date}',
-    '#!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。',
-    '#!note=本文件由 blockAds.plugin 按官方语法转换：[Rewrite] 使用 Rewrite v2（request/response + 位置参数 Action），[Script] 使用 Script v2（if ... then script(...) with ...）。[Rule]/[MITM]/[Argument] 保持原样。'
   ],
   // 段落前装饰注释（与现有 blockAds.plugin 的分隔风格一致）
   sectionDecoration: {
@@ -211,7 +190,7 @@ async function getHeaderLines(headerConfig) {
 }
 
 /**
- * 组装一版插件的完整文本（V1 或 V2）
+ * 组装插件全文。规则行按拆分文件原文抄入，不改写语法。
  * @param {object} args
  * @param {Map<string, Map<string, Map<string, object>>>} args.sectionsData
  * @param {Map<string, Map<string, object>>} args.argumentData
@@ -219,7 +198,6 @@ async function getHeaderLines(headerConfig) {
  * @param {string[]} args.orderedSections
  * @param {string[]} args.orderedCategories
  * @param {{file: string, template: string[]}} args.headerConfig
- * @param {(sectionKey: string, line: string) => string} [args.lineTransform]
  * @returns {Promise<string[]>}
  */
 async function buildPluginText({
@@ -228,8 +206,7 @@ async function buildPluginText({
   allHosts,
   orderedSections,
   orderedCategories,
-  headerConfig,
-  lineTransform
+  headerConfig
 }) {
   const out = [];
   out.push(...(await getHeaderLines(headerConfig)));
@@ -282,10 +259,7 @@ async function buildPluginText({
           if (app.hosts.length) {
             out.push(`# hostname = ${app.hosts.join(', ')}`);
           }
-          const lines = lineTransform
-            ? app.lines.map((l) => lineTransform(secKey, l))
-            : app.lines;
-          out.push(...lines);
+          out.push(...app.lines);
           out.push('');
         }
       }
@@ -316,164 +290,10 @@ function compareApps(a, b) {
 }
 
 /**
- * 套进 /.../ 之前，只转义前面不是反斜杠的 /。已经写成 \/ 的保持原样。
- */
-function escapeRegexDelimiter(pattern) {
-  return String(pattern).replace(/\\?\//g, (match) => (match === '\\/' ? match : '\\/'));
-}
-
-/**
- * 将 Loon Rewrite V1 规则行转换为 Rewrite V2 语法
- * 官方映射：
- *   reject       -> reject(404)
- *   reject-200   -> reject(200)
- *   reject-img   -> reject_img(200)
- *   reject-dict  -> reject_dict(200)
- *   reject-array -> reject_array(200)
- *   reject-video -> reject_video(200)
- *   response-body-json-jq / -del / -replace / mock-response-body / response-header-add 等
- *   均转换为 `response if ${url} ~= /.../ then response.xxx(...)`（请求类为 request）
- * 注释行（#）与无法识别的动作原样保留，便于人工检查。
- */
-function convertRewriteV1ToV2(line) {
-  const trimmed = line.trim();
-  if (!trimmed || trimmed.startsWith('#')) return line;
-
-  const firstSpace = trimmed.indexOf(' ');
-  if (firstSpace <= 0) return line;
-  let pattern = trimmed.slice(0, firstSpace).trim();
-  // 占位/非法行（pattern 为空或仅 "-"）不转换，原样保留
-  if (!pattern || pattern === '-') return line;
-  const rest = trimmed.slice(firstSpace + 1).trim();
-  const parts = rest.split(/\s+/);
-  const action = parts[0] || '';
-  let actionArgs = parts.slice(1);
-
-  // 兼容 `pattern - reject-200` 写法：`-` 不是动作，而是要把 `-` 并入 pattern
-  // 尾部再按真正的动作（reject/reject-dict/...）转换，与现有 blockAdsV2.plugin 一致
-  if (action === '-') {
-    pattern = `${pattern} -`;
-    const nextAction = actionArgs[0] || '';
-    if (!nextAction) return line;
-    actionArgs = actionArgs.slice(1);
-    const converted = convertRewriteV1ToV2With(pattern, nextAction, actionArgs);
-    return converted === null ? trimmed : converted;
-  }
-
-  const converted = convertRewriteV1ToV2With(pattern, action, actionArgs);
-  return converted === null ? trimmed : converted;
-}
-
-/**
- * 在已知 pattern / action / actionArgs 的情况下执行 V1→V2 转换
- */
-function convertRewriteV1ToV2With(pattern, action, actionArgs) {
-  const wrap = (stage, expr) => `${stage} if ${'${url}'} ~= /${escapeRegexDelimiter(pattern)}/ then ${expr}`;
-
-  switch (action) {
-    case 'reject':
-      return wrap('request', 'reject(404)');
-    case 'reject-200':
-      return wrap('request', 'reject(200)');
-    case 'reject-dict':
-      return wrap('request', 'reject_dict(200)');
-    case 'reject-img':
-      return wrap('request', 'reject_img(200)');
-    case 'reject-array':
-      return wrap('request', 'reject_array(200)');
-    case 'reject-video':
-      return wrap('request', 'reject_video(200)');
-    case 'response-body-json-jq': {
-      if (actionArgs[0] && actionArgs[0].startsWith('jq-path=')) {
-        const url = actionArgs[0].replace(/^jq-path="?/, '').replace(/"$/, '');
-        return wrap('response', `response.json.jq_file("${url}")`);
-      }
-      const jq = actionArgs.join(' ').replace(/^'/, '').replace(/'$/, '');
-      return wrap('response', `response.json.jq(\`${jq}\`)`);
-    }
-    case 'response-body-json-del':
-      return wrap('response', actionArgs.map((k) => `response.json.delete("${k}")`).join(' | '));
-    case 'response-body-json-replace': {
-      const pairs = [];
-      for (let i = 0; i + 1 < actionArgs.length; i += 2) {
-        pairs.push(`response.json.replace("${actionArgs[i]}", ${actionArgs[i + 1]})`);
-      }
-      return wrap('response', pairs.join(' | ') || 'response.json.replace("", null)');
-    }
-    case 'response-body-replace-regex': {
-      const oldPattern = actionArgs[0] || '';
-      const newValue = actionArgs.slice(1).join(' ') || '';
-      const newFormatted = /^["']/.test(newValue) ? newValue : `"${newValue}"`;
-      return wrap('response', `response.body.replace(/${escapeRegexDelimiter(oldPattern)}/, ${newFormatted})`);
-    }
-    case 'mock-response-body': {
-      const argMap = {};
-      for (const a of actionArgs) {
-        const m = a.match(/^([^=]+)=(.*)$/);
-        if (!m) continue;
-        argMap[m[1].trim()] = m[2].trim().replace(/^"|"$/g, '');
-      }
-      const dataType = argMap['data-type'] || 'text';
-      const statusCode = argMap['status-code'] || '200';
-      if (argMap['data-path']) {
-        return wrap('response', `response.body.mock_file("${dataType}", "${argMap['data-path']}", ${statusCode})`);
-      }
-      const data = argMap['data'] || '';
-      const isBase64 = argMap['mock-data-is-base64'] === 'true' ? ', true' : '';
-      return wrap('response', `response.body.mock("${dataType}", \`${data}\`, ${statusCode}${isBase64})`);
-    }
-    case 'response-header-add':
-      return wrap('response', `response.header.add("${actionArgs[0] || ''}", "${actionArgs[1] || ''}")`);
-    default:
-      // 未识别动作：由调用方原样保留
-      return null;
-  }
-}
-
-/**
- * 将 Loon Script V1 规则行转换为 Script V2 语法
- * http-request  -> request，http-response -> response
- * enable={xx}   -> enable=${xx}
- * tag=xx        -> tag="xx"
- * requires-body -> requires_body=true（位置/命名与现有 V2 文件一致）
- */
-function convertScriptV1ToV2(line) {
-  const trimmed = line.trim();
-  if (!trimmed || trimmed.startsWith('#')) return line;
-
-  // 兼容 `script-path = X`、`enable = {x}`、`requires-body = true` 等带空格写法
-  const m = trimmed.match(
-    /^(http-request|http-response)\s+(\S+)\s+script-path\s*=\s*(.+?),\s*(.*)$/
-  );
-  if (!m) return line;
-
-  const stage = m[1] === 'http-request' ? 'request' : 'response';
-  const pattern = m[2];
-  let scriptUrl = m[3].trim();
-  if (scriptUrl.startsWith('"') && scriptUrl.endsWith('"')) scriptUrl = scriptUrl.slice(1, -1);
-
-  const params = {};
-  for (const p of (m[4] || '').split(',')) {
-    const idx = p.indexOf('=');
-    if (idx < 0) continue;
-    params[p.slice(0, idx).trim()] = p.slice(idx + 1).trim();
-  }
-
-  const opts = [];
-  if (params.enable) opts.push(`enable=${params.enable.trim().replace(/^\{|\}$/g, '')}`);
-  if (params.tag) opts.push(`tag="${params.tag.trim().replace(/^"|"$/g, '')}"`);
-  if (params.timeout) opts.push(`timeout=${params.timeout}`);
-  if (String(params['requires-body']).trim() === 'true') opts.push('requires_body=true');
-
-  const withClause = opts.length ? ` with ${opts.join(', ')}` : '';
-  return `${stage} if ${'${url}'} ~= /${escapeRegexDelimiter(pattern)}/i then script("${scriptUrl}")${withClause}`;
-}
-
-/**
  * 主函数
  */
 async function main() {
-  console.log('[INFO] 开始聚合 Loon/plugin/split -> blockAds.plugin + blockAdsV2.plugin');
+  console.log('[INFO] 开始聚合 Loon/plugin/split -> blockAds.plugin');
 
   const files = await getFilesInDir(CONFIG.inputDir);
   if (files.length === 0) {
@@ -550,8 +370,7 @@ async function main() {
   const extraCategories = [...usedCategories].filter((c) => !CONFIG.categoryOrder.includes(c)).sort();
   orderedCategories.push(...extraCategories);
 
-  // V1：原样聚合
-  const v1Out = await buildPluginText({
+  const out = await buildPluginText({
     sectionsData,
     argumentData,
     allHosts,
@@ -560,28 +379,8 @@ async function main() {
     headerConfig: { file: CONFIG.outputFile, template: CONFIG.headerTemplate }
   });
 
-  // V2：Rewrite/Script 行按官方语法转换，其余段落原样
-  const v2Out = await buildPluginText({
-    sectionsData,
-    argumentData,
-    allHosts,
-    orderedSections,
-    orderedCategories,
-    headerConfig: { file: CONFIG.outputV2File, template: CONFIG.headerTemplateV2 },
-    lineTransform: (secKey, line) => {
-      if (secKey === '[Rewrite]') return convertRewriteV1ToV2(line);
-      if (secKey === '[Script]') return convertScriptV1ToV2(line);
-      return line;
-    }
-  });
-
-  for (const [file, lines] of [
-    [CONFIG.outputFile, v1Out],
-    [CONFIG.outputV2File, v2Out]
-  ]) {
-    await fs.mkdir(path.dirname(file), { recursive: true });
-    await fs.writeFile(file, lines.join('\n') + '\n', 'utf-8');
-  }
+  await fs.mkdir(path.dirname(CONFIG.outputFile), { recursive: true });
+  await fs.writeFile(CONFIG.outputFile, out.join('\n') + '\n', 'utf-8');
 
   // 汇总输出
   console.log('[INFO] 各段落 APP 块数量:');
@@ -596,8 +395,7 @@ async function main() {
   }
   console.log(`[INFO] [Argument] 参数行数: ${new Set([...argumentData.values()].flatMap((m) => [...m.keys()])).size}`);
   console.log(`[INFO] 汇总 MITM hostname 数量（去重后）: ${allHosts.length}`);
-  console.log(`[INFO] 输出文件: ${CONFIG.outputFile}（共 ${v1Out.length} 行）`);
-  console.log(`[INFO] 输出文件: ${CONFIG.outputV2File}（共 ${v2Out.length} 行）`);
+  console.log(`[INFO] 输出文件: ${CONFIG.outputFile}（共 ${out.length} 行）`);
   console.log('[SUCCESS] 聚合完成！');
   // 聚合完成后同步数据库：split 目录 -> rule_details 表
   await syncDb({

@@ -27,10 +27,10 @@ DOMAIN-SUFFIX,u51.me, REJECT
 
 
 [Rewrite]
-^https?:\/\/m5\.amap\.com\/ws\/shield\/dsp\/app\/startup\/init\? reject-dict
-^https?:\/\/m5\.amap\.com\/ws\/valueadded\/ reject
-^https?:\/\/optimus-ads\.amap\.com\/uploadimg\/[a-zA-Z0-9]+.gif reject-200
-^https?:\/\/amap-aos-info-nogw\.amap\.com\/ws\/aos\/alimama\/splash_screen_rt reject
+request if ${url} ~= /^https?:\/\/m5\.amap\.com\/ws\/shield\/dsp\/app\/startup\/init\?/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/m5\.amap\.com\/ws\/valueadded\//i then reject(404)
+request if ${url} ~= /^https?:\/\/optimus-ads\.amap\.com\/uploadimg\/[a-zA-Z0-9]+.gif/i then reject(200)
+request if ${url} ~= /^https?:\/\/amap-aos-info-nogw\.amap\.com\/ws\/aos\/alimama\/splash_screen_rt/i then reject(404)
 
 
 [MITM]

@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 需卸载重装 感谢【zyu0090】分享
-^https?:\/\/preprod\.cdzghome\.com:8100\/banner\/bootUp reject-200
+request if ${url} ~= /^https?:\/\/preprod\.cdzghome\.com:8100\/banner\/bootUp/i then reject(200)
 
 
 [MITM]

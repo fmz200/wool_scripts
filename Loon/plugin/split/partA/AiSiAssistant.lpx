@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/list-app-m\.i4\.cn\/(adclickcb|getHotSearchList|getopfstadinfo)\.xhtml reject
+request if ${url} ~= /^https?:\/\/list-app-m\.i4\.cn\/(adclickcb|getHotSearchList|getopfstadinfo)\.xhtml/i then reject(404)
 
 
 [MITM]

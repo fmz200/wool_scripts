@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/api-ad-product\.huxiu\.com\/Api\/Product\/SDK\/Advert\/Query\/queryAdvertListInfo reject
+request if ${url} ~= /^https?:\/\/api-ad-product\.huxiu\.com\/Api\/Product\/SDK\/Advert\/Query\/queryAdvertListInfo/i then reject(404)
 
 
 [MITM]

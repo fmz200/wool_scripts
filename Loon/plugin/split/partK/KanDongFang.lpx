@@ -11,10 +11,10 @@
 
 [Rewrite]
 # 开屏广告 感谢【树先生】分享
-^https:\/\/bp-api\.bestv\.com\.cn\/cms\/api\/free\/open\/advertisingV2 reject-dict
+request if ${url} ~= /^https:\/\/bp-api\.bestv\.com\.cn\/cms\/api\/free\/open\/advertisingV2/i then reject_dict(200)
 # 开屏广告 感谢【Wish】分享
-^https:\/\/bp-api\.bestv\.cn\/cms\/api\/free\/open\/advertisingV2 response-body-json-jq '.dt = []'
-^https:\/\/bp-api\.bestv\.cn\/cms\/api\/c\/search\/hot\/v(2|4) response-body-json-jq '.dt.hot = [] | .dt.recommand = [] | .dt.bannerList = []'
+response if ${url} ~= /^https:\/\/bp-api\.bestv\.cn\/cms\/api\/free\/open\/advertisingV2/i then response.json.jq(".dt = []")
+response if ${url} ~= /^https:\/\/bp-api\.bestv\.cn\/cms\/api\/c\/search\/hot\/v(2|4)/i then response.json.jq(".dt.hot = [] | .dt.recommand = [] | .dt.bannerList = []")
 
 
 [MITM]

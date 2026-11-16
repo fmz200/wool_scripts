@@ -20,7 +20,7 @@ DOMAIN-SUFFIX, imgad.thepaper.cn, REJECT
 
 
 [Rewrite]
-^https?:\/\/adpai\.thepaper\.cn\/.+&ad= reject
+request if ${url} ~= /^https?:\/\/adpai\.thepaper\.cn\/.+&ad=/i then reject(404)
 
 
 [MITM]

@@ -12,9 +12,9 @@
 [Rewrite]
 # 缴费弹窗广告
 response if ${url} ~= /^https?:\/\/chl\.tf\.cn\/channelmg\/sys\/socso\/order\/queryOrderInfo/ then response.body.replace(/imgUrl/, "fmz200")
-^https?:\/\/chl\.tf\.cn\/channelmg\/sys\/socso\/socsonew\/queryIsRealNameAdertInfo reject-dict
+request if ${url} ~= /^https?:\/\/chl\.tf\.cn\/channelmg\/sys\/socso\/socsonew\/queryIsRealNameAdertInfo/i then reject_dict(200)
 # 首页弹窗广告
-^https?:\/\/wechat\.tf\.cn\/mini-financial\/model\/queryPopup reject-dict
+request if ${url} ~= /^https?:\/\/wechat\.tf\.cn\/mini-financial\/model\/queryPopup/i then reject_dict(200)
 
 
 [MITM]

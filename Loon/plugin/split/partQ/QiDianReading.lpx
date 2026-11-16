@@ -10,22 +10,22 @@
 
 
 [Rewrite]
-^https?:\/\/qidian\.qpic\.cn\/qidian_common reject-img
-^https?:\/\/mage\.if\.qidian\.com\/Atom\.axd\/Api\/Client\/GetConfIOS reject-img
-^https?:\/\/mage\.if\.qidian\.com\/argus\/api\/v\d\/client\/getsplashscreen reject
-^https?://magev6.if.qidian.com/argus/api/v1/client/iosad reject
-^https?://magev6.if.qidian.com/argus/api/v1/bookshelf/getad reject
-^https?://magev6.if.qidian.com/argus/api/v4/client/getsplashscreen? reject
+request if ${url} ~= /^https?:\/\/qidian\.qpic\.cn\/qidian_common/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/mage\.if\.qidian\.com\/Atom\.axd\/Api\/Client\/GetConfIOS/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/mage\.if\.qidian\.com\/argus\/api\/v\d\/client\/getsplashscreen/i then reject(404)
+request if ${url} ~= /^https?:\/\/magev6.if.qidian.com\/argus\/api\/v1\/client\/iosad/i then reject(404)
+request if ${url} ~= /^https?:\/\/magev6.if.qidian.com\/argus\/api\/v1\/bookshelf\/getad/i then reject(404)
+request if ${url} ~= /^https?:\/\/magev6.if.qidian.com\/argus\/api\/v4\/client\/getsplashscreen?/i then reject(404)
 # 起点读书投票、章末免费领取章节卡等
-^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/adv reject-dict
-^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/followsubscribe reject-dict
+request if ${url} ~= /^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/adv/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/followsubscribe/i then reject_dict(200)
 # 我的界面内测推广
-^http[s]?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/bookshelf\/refresh reject-dict
-^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/adv\/getadvlistbatch reject
+request if ${url} ~= /^http[s]?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/bookshelf\/refresh/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/adv\/getadvlistbatch/i then reject(404)
 # 书架置顶推广(保留签到移除花哨背景)
-^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/bookshelf\/getTopOperation reject-dict
+request if ${url} ~= /^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/bookshelf\/getTopOperation/i then reject_dict(200)
 # 发现上面的图标屏蔽
-^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v2\/adv\/getadvlistbatch reject-dict
+request if ${url} ~= /^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v2\/adv\/getadvlistbatch/i then reject_dict(200)
 
 
 [Script]

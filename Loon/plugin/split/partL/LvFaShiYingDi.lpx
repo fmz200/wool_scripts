@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/www\.iyingdi\.cn\/ad reject-200
+request if ${url} ~= /^https?:\/\/www\.iyingdi\.cn\/ad/i then reject(200)
 
 
 [MITM]

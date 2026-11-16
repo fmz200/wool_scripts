@@ -12,13 +12,13 @@
 [Rewrite]
 # 感谢【sliverkiss】分享
 # 移除开屏
-^https?:\/\/wanciwangdata\.oss-cn-beijing\.aliyuncs\.com\/startup\/resource\/content.+ reject
+request if ${url} ~= /^https?:\/\/wanciwangdata\.oss-cn-beijing\.aliyuncs\.com\/startup\/resource\/content.+/i then reject(404)
 # 移除banner广告
-^https?:\/\/recite\.perfectlingo\.com\/api\/recite\/app-act\/act-list.+ reject-dict
+request if ${url} ~= /^https?:\/\/recite\.perfectlingo\.com\/api\/recite\/app-act\/act-list.+/i then reject_dict(200)
 # 移除底部广告
-^https?:\/\/recite\.perfectlingo\.com\/api\/recite\/content-recommend\/v\d\/get-by-uid.+ reject-dict
+request if ${url} ~= /^https?:\/\/recite\.perfectlingo\.com\/api\/recite\/content-recommend\/v\d\/get-by-uid.+/i then reject_dict(200)
 # 移除悬浮广告
-^https?:\/\/recite\.perfectlingo\.com\/api\/recite\/floating-window\/v\d\/get-show.+ reject-dict
+request if ${url} ~= /^https?:\/\/recite\.perfectlingo\.com\/api\/recite\/floating-window\/v\d\/get-show.+/i then reject_dict(200)
 
 
 [MITM]

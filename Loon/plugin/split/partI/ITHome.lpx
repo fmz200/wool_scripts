@@ -14,7 +14,7 @@ itzj_enable = switch,true,false,tag=IT之家-脚本开关
 
 [Script]
 # 移除 轮播图 置顶文章 信息流广告
-http-response ^https?:\/\/napi\.ithome\.com\/api\/(news\/index|topmenu\/getfeeds) script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ithome/ithome.js, requires-body=true, timeout=60, tag=ithome, enable={itzj_enable}
+response if ${url} ~= /^https?:\/\/napi\.ithome\.com\/api\/(news\/index|topmenu\/getfeeds)/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ithome/ithome.js") with enable=${itzj_enable}, tag="ithome", timeout=60, requires_body=true
 
 [MITM]
 hostname = napi.ithome.com

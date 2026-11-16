@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 开屏广告
-^https:\/\/ads\.ysepay\.com\/ads\/ctrl\/getAdvertisingInfo reject-dict
+request if ${url} ~= /^https:\/\/ads\.ysepay\.com\/ads\/ctrl\/getAdvertisingInfo/i then reject_dict(200)
 
 
 [MITM]

@@ -46,8 +46,8 @@ DOMAIN-SUFFIX, h.pcd.autohome.com.cn, REJECT
 
 
 [Rewrite]
-^https?:\/\/adproxy\.autohome\.com\.cn\/AdvertiseService\/ reject-img
-^https?:\/\/app2\.autoimg\.cn\/apppdfs\/ reject-img
+request if ${url} ~= /^https?:\/\/adproxy\.autohome\.com\.cn\/AdvertiseService\//i then reject_img(200)
+request if ${url} ~= /^https?:\/\/app2\.autoimg\.cn\/apppdfs\//i then reject_img(200)
 
 
 [MITM]

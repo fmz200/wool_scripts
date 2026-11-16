@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 荣誉客会
-^https?:\/\/wcprd\.hilton\.com\.cn\/app-middleware\/graphql\?type=splashAd reject-200
+request if ${url} ~= /^https?:\/\/wcprd\.hilton\.com\.cn\/app-middleware\/graphql\?type=splashAd/i then reject(200)
 
 
 [MITM]

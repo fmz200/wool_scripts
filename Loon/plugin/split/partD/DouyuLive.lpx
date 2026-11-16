@@ -16,16 +16,16 @@ DOMAIN-SUFFIX, dotcounter.douyutv.com, REJECT
 
 
 [Rewrite]
-^https?:\/\/daoyu\.sdo\.com\/api\/userCommon\/getAppStartAd reject
-^https?:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo reject-dict
-^https?:\/\/staticlive\.douyucdn\.cn\/upload\/signs\/ reject
-^https?:\/\/staticlive\.douyucdn\.cn\/.+\/getStartSend reject
-^https?:\/\/staticlive\.douyucdn\.cn\/.+?\/getStartSend reject-img
-^https?:\/\/capi\.douyucdn\.cn\/lapi\/sign\/app(api)?\/getinfo\?client_sys=ios reject
-^https?:\/\/capi\.douyucdn\.cn\/api\/ios_app\/check_update reject-img
-^https?:\/\/capi\.douyucdn\.cn\/api\/v1\/getStartSend?client_sys=ios reject-img
-^https?:\/\/douyucdn\.cn\/.+\/appapi\/getinfo reject
-^https?:\/\/douyucdn\.cn\/.+?\/appapi\/getinfo reject-img
+request if ${url} ~= /^https?:\/\/daoyu\.sdo\.com\/api\/userCommon\/getAppStartAd/i then reject(404)
+request if ${url} ~= /^https?:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/staticlive\.douyucdn\.cn\/upload\/signs\//i then reject(404)
+request if ${url} ~= /^https?:\/\/staticlive\.douyucdn\.cn\/.+\/getStartSend/i then reject(404)
+request if ${url} ~= /^https?:\/\/staticlive\.douyucdn\.cn\/.+?\/getStartSend/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/capi\.douyucdn\.cn\/lapi\/sign\/app(api)?\/getinfo\?client_sys=ios/i then reject(404)
+request if ${url} ~= /^https?:\/\/capi\.douyucdn\.cn\/api\/ios_app\/check_update/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/capi\.douyucdn\.cn\/api\/v1\/getStartSend?client_sys=ios/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/douyucdn\.cn\/.+\/appapi\/getinfo/i then reject(404)
+request if ${url} ~= /^https?:\/\/douyucdn\.cn\/.+?\/appapi\/getinfo/i then reject_img(200)
 
 
 [MITM]

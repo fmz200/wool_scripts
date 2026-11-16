@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 开屏广告 个别图片误杀 如开启可自行添加主机名
-^https?:\/\/ga-album-cdnqn\.52tt\.com\/prod-yunying\/.+.jpg reject-dict
+request if ${url} ~= /^https?:\/\/ga-album-cdnqn\.52tt\.com\/prod-yunying\/.+.jpg/i then reject_dict(200)
 
 
 [MITM]

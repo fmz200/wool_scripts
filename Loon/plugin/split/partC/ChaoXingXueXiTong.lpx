@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/learn\.chaoxing\.com\/apis\/service\/appConfig\? reject
+request if ${url} ~= /^https?:\/\/learn\.chaoxing\.com\/apis\/service\/appConfig\?/i then reject(404)
 
 
 [MITM]

@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 去开屏广告
-^https:\/\/se-api\.djiits\.com\/api\/components\/launch_ad\.json\?abbrv_url=1&country=cn&language=zh-CN reject-dict
+request if ${url} ~= /^https:\/\/se-api\.djiits\.com\/api\/components\/launch_ad\.json\?abbrv_url=1&country=cn&language=zh-CN/i then reject_dict(200)
 
 
 [MITM]

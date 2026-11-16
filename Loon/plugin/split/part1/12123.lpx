@@ -19,7 +19,7 @@ DOMAIN-KEYWORD, in-page-push, REJECT
 
 [Rewrite]
 #^https?:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery reject
-^https?:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$ reject
+request if ${url} ~= /^https?:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$/i then reject(404)
 
 
 

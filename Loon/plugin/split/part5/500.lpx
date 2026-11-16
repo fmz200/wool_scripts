@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/evs\.500\.com\/esinfo\/loading\/loading reject
+request if ${url} ~= /^https?:\/\/evs\.500\.com\/esinfo\/loading\/loading/i then reject(404)
 
 
 [MITM]

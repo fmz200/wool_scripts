@@ -10,10 +10,10 @@
 
 
 [Rewrite]
-^https?:\/\/qde\.qunar\.com\/preload reject-200
+request if ${url} ~= /^https?:\/\/qde\.qunar\.com\/preload/i then reject(200)
 # 开屏广告
-^https?:\/\/homefront\.qunar\.com\/front\/splash\/ad reject-dict
-^https?:\/\/client\.qunar\.com\/pitcher-proxy\?qrt=p_splashAd reject
+request if ${url} ~= /^https?:\/\/homefront\.qunar\.com\/front\/splash\/ad/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/client\.qunar\.com\/pitcher-proxy\?qrt=p_splashAd/i then reject(404)
 
 
 [MITM]

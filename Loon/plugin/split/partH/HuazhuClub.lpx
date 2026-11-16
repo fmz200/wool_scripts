@@ -11,17 +11,17 @@
 
 [Rewrite]
 # 开屏广告
-^https?:\/\/appapi\.huazhu\.com:\d+\/client\/app\/getAppStartPage\/ reject
+request if ${url} ~= /^https?:\/\/appapi\.huazhu\.com:\d+\/client\/app\/getAppStartPage\//i then reject(404)
 # 推荐信息
-^https?:\/\/hweb-hotel\.huazhu\.com\/home\/queryRecommond reject-dict
+request if ${url} ~= /^https?:\/\/hweb-hotel\.huazhu\.com\/home\/queryRecommond/i then reject_dict(200)
 # 新客专享: queryNewNotice | 天天特惠四方格: querySelectHotel | 华住品牌: queryHotelBrand | 华住商城: queryMall | 华住世界: huazhuWorld
-^https?:\/\/hweb-hotel\.huazhu\.com\/{1,2}home\/(?>queryNewNotice|querySelectHotel|queryHotelBrand|queryMall|huazhuWorld) reject-200
+request if ${url} ~= /^https?:\/\/hweb-hotel\.huazhu\.com\/{1,2}home\/(?>queryNewNotice|querySelectHotel|queryHotelBrand|queryMall|huazhuWorld)/i then reject(200)
 # 弹窗广告
-^https?:\/\/hweb-manager\.huazhu\.com\/notice\/getAppPopupNotifyAlert reject-dict
+request if ${url} ~= /^https?:\/\/hweb-manager\.huazhu\.com\/notice\/getAppPopupNotifyAlert/i then reject_dict(200)
 # 更新屏蔽
-^https?:\/\/hweb-manager\.huazhu\.com\/bundle\/upgrade\/check reject-dict
+request if ${url} ~= /^https?:\/\/hweb-manager\.huazhu\.com\/bundle\/upgrade\/check/i then reject_dict(200)
 # 搜索酒店上方Banner
-^https?:\/\/hweb-manager\.huazhu\.com\/hotels\/ad\/ reject-dict
+request if ${url} ~= /^https?:\/\/hweb-manager\.huazhu\.com\/hotels\/ad\//i then reject_dict(200)
 
 
 [MITM]

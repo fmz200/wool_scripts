@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 去升级弹窗 【Hua alex】分享
-^https?:\/\/blog\.nilbt\.com\/static\/api\/update reject-200
+request if ${url} ~= /^https?:\/\/blog\.nilbt\.com\/static\/api\/update/i then reject(200)
 
 
 [MITM]

@@ -11,8 +11,8 @@
 
 [Rewrite]
 # 注意：生活圈,社区打不开 需要的自己添加主机名
-^https?:\/\/tfsmy\.chengdu\.gov\.cn\/api\/v5\/core\/version reject-200
-^https?:\/\/tft-app\.cdtft\.cn\/gateway-customer\/tftapp\/tft-ams\/api\/appAd response-body-replace-regex officialAdvertResultVo fmz200
+request if ${url} ~= /^https?:\/\/tfsmy\.chengdu\.gov\.cn\/api\/v5\/core\/version/i then reject(200)
+response if ${url} ~= /^https?:\/\/tft-app\.cdtft\.cn\/gateway-customer\/tftapp\/tft-ams\/api\/appAd/i then response.body.replace(/officialAdvertResultVo/, "fmz200")
 
 
 [MITM]

@@ -10,8 +10,8 @@
 
 
 [Rewrite]
-^https?:\/\/ztoread\.ziroom\.com\/foka-card-api\/popup\/v2\/get reject-dict
-^https?:\/\/ztoread\.ziroom\.com\/ymerApi\/v\d\/index\/open reject-dict
+request if ${url} ~= /^https?:\/\/ztoread\.ziroom\.com\/foka-card-api\/popup\/v2\/get/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/ztoread\.ziroom\.com\/ymerApi\/v\d\/index\/open/i then reject_dict(200)
 
 
 [MITM]

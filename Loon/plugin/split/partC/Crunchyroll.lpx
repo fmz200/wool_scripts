@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/beta-api\.crunchyroll\.com\/cms response-body-replace-regex offset_ms":\d+ offset_ms":99999999999999
+response if ${url} ~= /^https?:\/\/beta-api\.crunchyroll\.com\/cms/i then response.body.replace(/offset_ms":\d+/, "offset_ms\":99999999999999")
 
 
 [MITM]

@@ -11,8 +11,8 @@
 
 [Rewrite]
 # 微信小程序
-^https?:\/\/smarket\.dian\.so reject-dict
-^https?:\/\/file\.dian\.so\/c\/leto reject-dict
+request if ${url} ~= /^https?:\/\/smarket\.dian\.so/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/file\.dian\.so\/c\/leto/i then reject_dict(200)
 
 
 [MITM]

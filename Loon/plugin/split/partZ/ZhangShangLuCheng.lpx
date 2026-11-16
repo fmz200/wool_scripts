@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 开屏广告
-^https?:\/\/vapp\.tmuyun\.com\/api\/app_start_page\/list\/new reject-dict
+request if ${url} ~= /^https?:\/\/vapp\.tmuyun\.com\/api\/app_start_page\/list\/new/i then reject_dict(200)
 
 
 [MITM]

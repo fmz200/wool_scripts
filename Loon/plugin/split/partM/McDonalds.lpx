@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/api\.mcd\.cn\/bff\/portal\/home\/splash reject-200
+request if ${url} ~= /^https?:\/\/api\.mcd\.cn\/bff\/portal\/home\/splash/i then reject(200)
 
 
 

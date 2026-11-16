@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/dl\.app\.gtja\.com\/dzswem\/kvController reject-200
+request if ${url} ~= /^https?:\/\/dl\.app\.gtja\.com\/dzswem\/kvController/i then reject(200)
 #^https?:\/\/dl[0-9]{1}\.app\.gtja\.com\/dzswem\/kvController reject-200
 
 

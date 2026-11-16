@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/app\.homeinns\.com\/api\/landing reject
+request if ${url} ~= /^https?:\/\/app\.homeinns\.com\/api\/landing/i then reject(404)
 
 
 [MITM]

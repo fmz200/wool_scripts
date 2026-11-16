@@ -25,8 +25,8 @@ DOMAIN-SUFFIX, rabbit.meitustat.com, REJECT
 
 
 [Rewrite]
-^https?:\/\/mea\.meitudata\.com\/kaiping reject
-^https?:\/\/adui\.tg\.meitu\.com reject-dict
+request if ${url} ~= /^https?:\/\/mea\.meitudata\.com\/kaiping/i then reject(404)
+request if ${url} ~= /^https?:\/\/adui\.tg\.meitu\.com/i then reject_dict(200)
 
 
 [MITM]

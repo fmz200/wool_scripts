@@ -23,8 +23,8 @@ DOMAIN-SUFFIX, whistleout.s3.amazonaws.com, REJECT
 
 
 [Rewrite]
-^https?:\/\/api-cslp-emt\.amazon\.cn\/gateway\/content\/widget\/popup reject-200
-^https?:\/\/api-cslp-emt\.amazon\.cn\/gateway\/recommend reject-dict
+request if ${url} ~= /^https?:\/\/api-cslp-emt\.amazon\.cn\/gateway\/content\/widget\/popup/i then reject(200)
+request if ${url} ~= /^https?:\/\/api-cslp-emt\.amazon\.cn\/gateway\/recommend/i then reject_dict(200)
 
 
 [MITM]

@@ -11,10 +11,10 @@
 
 [Rewrite]
 # 开屏广告 感谢【Kook】分享
-^https?:\/\/facade-api\.black-unique\.com\/app\/v1\/startScreen\?cityId=102923&channelId=0&width=1170&height=2532 reject-dict
-^https?:\/\/facade-api\.black-unique\.com\/app\/v1\/startScreen\?.* reject-dict
-^https?:\/\/facade-api\.black-unique\.com\/advertise\/v1\/get\?cityId=102923&positions=mine_popup reject-dict
-^https?:\/\/facade-api\.black-unique\.com\/advertise\/v1\/get\?.* reject-dict
+request if ${url} ~= /^https?:\/\/facade-api\.black-unique\.com\/app\/v1\/startScreen\?cityId=102923&channelId=0&width=1170&height=2532/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/facade-api\.black-unique\.com\/app\/v1\/startScreen\?.*/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/facade-api\.black-unique\.com\/advertise\/v1\/get\?cityId=102923&positions=mine_popup/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/facade-api\.black-unique\.com\/advertise\/v1\/get\?.*/i then reject_dict(200)
 
 
 [MITM]

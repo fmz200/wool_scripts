@@ -10,11 +10,11 @@
 
 
 [Rewrite]
-^https:\/\/dsp\.fcbox\.com\/adSearch\/get\? reject
-^https:\/\/external\.fcbox\.com\/wxgw\/post\/suggestion\/query reject
-^https:\/\/rtm\.fcbox\.com\/rtsWeb\/api\/resource\/ad\/queryAd reject
+request if ${url} ~= /^https:\/\/dsp\.fcbox\.com\/adSearch\/get\?/i then reject(404)
+request if ${url} ~= /^https:\/\/external\.fcbox\.com\/wxgw\/post\/suggestion\/query/i then reject(404)
+request if ${url} ~= /^https:\/\/rtm\.fcbox\.com\/rtsWeb\/api\/resource\/ad\/queryAd/i then reject(404)
 # 已无法MITM
-^https?:\/\/consumer\.fcbox\.com\/v\d\/ad\/ reject
+request if ${url} ~= /^https?:\/\/consumer\.fcbox\.com\/v\d\/ad\//i then reject(404)
 
 
 [MITM]

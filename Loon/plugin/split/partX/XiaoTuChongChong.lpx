@@ -14,11 +14,11 @@ xntuisis_enable = switch,true,false,tag=小兔充充-脚本开关
 
 [Rewrite]
 # 小程序净化
-^https?:\/\/ad\.xiaotucc\.com\/advert reject
+request if ${url} ~= /^https?:\/\/ad\.xiaotucc\.com\/advert/i then reject(404)
 
 
 [Script]
-http-response ^https?:\/\/mapi\.xiaotucc\.com\/(mall\/main|main_page\/index\/getActivity) script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaotucc.js, requires-body=true, timeout=60, tag=小兔充充, enable={xntuisis_enable}
+response if ${url} ~= /^https?:\/\/mapi\.xiaotucc\.com\/(mall\/main|main_page\/index\/getActivity)/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaotucc.js") with enable=${xntuisis_enable}, tag="小兔充充", timeout=60, requires_body=true
 
 
 [MITM]

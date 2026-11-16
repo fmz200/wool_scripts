@@ -11,9 +11,9 @@
 
 [Rewrite]
 # 去开屏 感谢【别怕我又不乱来】分享
-^https?:\/\/api-miprint\.hannto\.com\/v1\/c\/res\/app\/ad\/\?app_version reject-dict
+request if ${url} ~= /^https?:\/\/api-miprint\.hannto\.com\/v1\/c\/res\/app\/ad\/\?app_version/i then reject_dict(200)
 # 主页上方广告
-^https?:\/\/api\.indeedpower\.com\/v1\/m\/edu\/module\/homepage_banner\/\?randomStr reject-dict
+request if ${url} ~= /^https?:\/\/api\.indeedpower\.com\/v1\/m\/edu\/module\/homepage_banner\/\?randomStr/i then reject_dict(200)
 
 
 [MITM]

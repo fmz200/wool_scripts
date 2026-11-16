@@ -10,14 +10,14 @@
 
 
 [Rewrite]
-^https?:\/\/mob\.mddcloud\.com\.cn\/adApi\/advert\/(first|third)part\/advertList reject-dict
-^https?:\/\/t-dsp\.pinduoduo\.com reject-200
-^https?:\/\/mobads-pre-config\.cdn\.bcebos\.com\/preload\.php reject-200
-^https?:\/\/sfo\.mddcloud\.com\.cn\/api\/v\d\/sfo\/popup_displays? reject-dict
-^https?:\/\/tower\.ubixioe\.com\/mob\/mediation reject
-^https?:\/\/toblog\.ctobsnssdk\.com reject-200
-^https?:\/\/conf-darwin\.xycdn\.com reject-dict
-^https?:\/\/sdk1xyajs\.data\.kuiniuca\.com reject
+request if ${url} ~= /^https?:\/\/mob\.mddcloud\.com\.cn\/adApi\/advert\/(first|third)part\/advertList/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/t-dsp\.pinduoduo\.com/i then reject(200)
+request if ${url} ~= /^https?:\/\/mobads-pre-config\.cdn\.bcebos\.com\/preload\.php/i then reject(200)
+request if ${url} ~= /^https?:\/\/sfo\.mddcloud\.com\.cn\/api\/v\d\/sfo\/popup_displays?/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/tower\.ubixioe\.com\/mob\/mediation/i then reject(404)
+request if ${url} ~= /^https?:\/\/toblog\.ctobsnssdk\.com/i then reject(200)
+request if ${url} ~= /^https?:\/\/conf-darwin\.xycdn\.com/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/sdk1xyajs\.data\.kuiniuca\.com/i then reject(404)
 
 
 [MITM]

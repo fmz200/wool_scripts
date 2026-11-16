@@ -14,8 +14,8 @@ hftx_enable = switch,true,false,tag=汇付天下-脚本开关
 
 [Script]
 # 感谢【可莉】分享
-http-response ^https:\/\/mcsp\.cloudpnr\.com\/api\/miniapp\/popular\/T_MINIAPP$ script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/huifutianxia_ads.js, requires-body=true, timeout=60, tag=汇付天下, enable={hftx_enable}
-http-response ^https:\/\/saas-ad\.cloudpnr\.com\/huifuad-base-api\/api\/tactics\/ad script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/huifutianxia_ads.js, requires-body=true, timeout=60, tag=汇付天下, enable={hftx_enable}
+response if ${url} ~= /^https:\/\/mcsp\.cloudpnr\.com\/api\/miniapp\/popular\/T_MINIAPP$/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/huifutianxia_ads.js") with enable=${hftx_enable}, tag="汇付天下", timeout=60, requires_body=true
+response if ${url} ~= /^https:\/\/saas-ad\.cloudpnr\.com\/huifuad-base-api\/api\/tactics\/ad/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/huifutianxia_ads.js") with enable=${hftx_enable}, tag="汇付天下", timeout=60, requires_body=true
 
 [MITM]
 hostname = mcsp.cloudpnr.com, saas-ad.cloudpnr.com

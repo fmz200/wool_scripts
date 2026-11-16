@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/client\.mail\.163\.com\/apptrack\/confinfo\/searchMultiAds reject-200
+request if ${url} ~= /^https?:\/\/client\.mail\.163\.com\/apptrack\/confinfo\/searchMultiAds/i then reject(200)
 
 
 [MITM]

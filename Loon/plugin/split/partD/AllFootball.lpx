@@ -15,7 +15,7 @@ DOMAIN-KEYWORD,apimg.qunliao.info, REJECT
 
 [Rewrite]
 #^https?:\/\/ap\.dongqiudi\.com\/plat\/v reject
-^https?:\/\/ap\.dongdianqiu\.com\/plat\/v4 reject
+request if ${url} ~= /^https?:\/\/ap\.dongdianqiu\.com\/plat\/v4/i then reject(404)
 
 
 [MITM]

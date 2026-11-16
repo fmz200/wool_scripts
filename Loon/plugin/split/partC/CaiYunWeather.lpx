@@ -10,8 +10,8 @@
 
 
 [Rewrite]
-^https?:\/\/api\.caiyunapp\.com\/v1\/activity reject-dict
-^https?:\/\/wrapper\.cyapi\.cn\/v1\/activity\? mock-response-body data-type=json data-path="https://raw.githubusercontent.com/Keywos/rule/main/mocks/caiyun.json" status-code=200
+request if ${url} ~= /^https?:\/\/api\.caiyunapp\.com\/v1\/activity/i then reject_dict(200)
+response if ${url} ~= /^https?:\/\/wrapper\.cyapi\.cn\/v1\/activity\?/i then response.body.mock_file("json", "https://raw.githubusercontent.com/Keywos/rule/main/mocks/caiyun.json", 200)
 
 
 [MITM]

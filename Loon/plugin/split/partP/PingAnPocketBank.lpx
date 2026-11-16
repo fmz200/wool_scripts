@@ -10,9 +10,9 @@
 
 
 [Rewrite]
-^https?:\/\/cdn\.sdb\.com\.cn\/widget\/magic-module-sprite\/general-banner reject-200
-^https?:\/\/cdn\.sdb\.com\.cn\/widget\/magic-module-sprite\/dialog-normal reject-dict
-^https?:\/\/cdn\.sdb\.com\.cn\/widget\/pb\/pb-plugins-recomend-content reject-dict
+request if ${url} ~= /^https?:\/\/cdn\.sdb\.com\.cn\/widget\/magic-module-sprite\/general-banner/i then reject(200)
+request if ${url} ~= /^https?:\/\/cdn\.sdb\.com\.cn\/widget\/magic-module-sprite\/dialog-normal/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/cdn\.sdb\.com\.cn\/widget\/pb\/pb-plugins-recomend-content/i then reject_dict(200)
 # 信用卡-精彩活动模块
 #^https?:\/\/cdn\.sdb\.com\.cn\/widget\/magic-module-sprite\/four-rectangle-grid reject-dict
 

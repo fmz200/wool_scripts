@@ -13,12 +13,12 @@
 lvtusvuftk_enable = switch,true,false,tag=旅途随身听-脚本开关
 
 [Rewrite]
-^https?:\/\/www\.1314zhilv\.com\/ltsstnew\/(guideScenic\/getRecentlyUpdatedScenic|city\/getWeatherByCityName) reject-dict
+request if ${url} ~= /^https?:\/\/www\.1314zhilv\.com\/ltsstnew\/(guideScenic\/getRecentlyUpdatedScenic|city\/getWeatherByCityName)/i then reject_dict(200)
   
 
 [Script]
 # 首页北京城市导览图片,首页上方轮播图片净化
-http-response ^https?:\/\/www\.1314zhilv\.com\/ltsstnew\/(common\/getJGQIconNew|city\/getAllBannelByCity) script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/lvtusuishenting/ltsst-ad.js, requires-body=true, timeout=60, tag=旅途随身听, enable={lvtusvuftk_enable}
+response if ${url} ~= /^https?:\/\/www\.1314zhilv\.com\/ltsstnew\/(common\/getJGQIconNew|city\/getAllBannelByCity)/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/lvtusuishenting/ltsst-ad.js") with enable=${lvtusvuftk_enable}, tag="旅途随身听", timeout=60, requires_body=true
   
 
 [MITM]

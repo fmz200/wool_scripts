@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/e-static\.aia\.com\.cn\/kyh\/resourcefolder\/ads reject-dict
+request if ${url} ~= /^https?:\/\/e-static\.aia\.com\.cn\/kyh\/resourcefolder\/ads/i then reject_dict(200)
 
 
 [MITM]

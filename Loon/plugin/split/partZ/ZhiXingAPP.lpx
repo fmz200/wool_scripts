@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 开屏广告 影响携程部分功能正常运行，携程8.40.0以下的版本不受影响。如开启可自行添加主机名
-^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/13916\/scjson\/tripAds reject-dict
+request if ${url} ~= /^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/13916\/scjson\/tripAds/i then reject_dict(200)
 
 
 [MITM]

@@ -16,11 +16,11 @@ DOMAIN-SUFFIX, ad.doubanio.com, REJECT
 
 [Rewrite]
 # 如开启可自行添加主机名 img*.douban.com, frodo.douban.com, erebor.douban.com
-^https?:\/\/api\.douban\.com\/v\d\/app_ads\/ reject-dict
-^https?:\/\/api\.douban\.com\/b.*\/common_ads\?.* reject-dict
-^https?:\/\/img\d\.doubanio\.com\/view\/dale-online\/dale_ad\/ reject
-^https?:\/\/frodo\.douban\.com\/api\/v2\/movie\/banner reject
-^https?:\/\/erebor\.douban\.com\/count\/\?ad= reject
+request if ${url} ~= /^https?:\/\/api\.douban\.com\/v\d\/app_ads\//i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/api\.douban\.com\/b.*\/common_ads\?.*/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/img\d\.doubanio\.com\/view\/dale-online\/dale_ad\//i then reject(404)
+request if ${url} ~= /^https?:\/\/frodo\.douban\.com\/api\/v2\/movie\/banner/i then reject(404)
+request if ${url} ~= /^https?:\/\/erebor\.douban\.com\/count\/\?ad=/i then reject(404)
 
 
 [MITM]

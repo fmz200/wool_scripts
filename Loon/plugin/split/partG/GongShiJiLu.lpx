@@ -10,9 +10,9 @@
 
 
 [Rewrite]
-^https?:\/\/yun\.tuitiger\.com\/mami-media reject-200
-^https?:\/\/mi\.gdt\.qq\.com\/gdt_mview\.fcg reject
-^https?:\/\/open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ reject
+request if ${url} ~= /^https?:\/\/yun\.tuitiger\.com\/mami-media/i then reject(200)
+request if ${url} ~= /^https?:\/\/mi\.gdt\.qq\.com\/gdt_mview\.fcg/i then reject(404)
+request if ${url} ~= /^https?:\/\/open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ/i then reject(404)
 
 
 [MITM]

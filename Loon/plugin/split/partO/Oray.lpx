@@ -10,8 +10,8 @@
 
 
 [Rewrite]
-^https?:\/\/slapi\.oray\.net\/client\/ad reject
-^https?:\/\/slapi\.oray\.net\/adver reject
+request if ${url} ~= /^https?:\/\/slapi\.oray\.net\/client\/ad/i then reject(404)
+request if ${url} ~= /^https?:\/\/slapi\.oray\.net\/adver/i then reject(404)
 
 
 

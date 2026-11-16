@@ -16,20 +16,20 @@ DOMAIN-SUFFIX, ut2.shuqistat.com, REJECT
 
 
 [Rewrite]
-^https?:\/\/ut2\.shuqistat\.com\/.+\.gif reject
-^https?:\/\/dsp\.toutiao\.com\/api\/xunfei\/ads\/ reject
-^https?:\/\/sf3-be-pack\.pglstatp-toutiao\.com\/img\/ad\.union\.api reject
-^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/.+ reject
-^https?:\/\/sq\.sljkj\.com\/api\/sdk\/ads2 reject
-^https?:\/\/ocean\.shuqireader\.com\/api\/ad\/adserver\/.+ reject
-^https?:\/\/ocean\.shuqireader\.com\/api\/route\/iosReadPage\/ad.+ reject
-^https?:\/\/.+\.pglstatp-toutiao\.com reject
-^https?:\/\/img-tailor\.11222\.cn\/pm\/app\/.+\.gif reject
-^https?:\/\/img-tailor\.11222\.cn\/cms\/upload\/img\/.+ reject
-^https?:\/\/message\.shuqireader\.com\/message\/.+ reject
-^https?:\/\/101\.91\.69\.26:8080\/.+ reject
-^https?:\/\/feedback\.uc\.cn\/feedback\/api\/get_unread_status reject
-^https?:\/\/.+\.shuqireader\.com\/sapi\/.+ reject
+request if ${url} ~= /^https?:\/\/ut2\.shuqistat\.com\/.+\.gif/i then reject(404)
+request if ${url} ~= /^https?:\/\/dsp\.toutiao\.com\/api\/xunfei\/ads\//i then reject(404)
+request if ${url} ~= /^https?:\/\/sf3-be-pack\.pglstatp-toutiao\.com\/img\/ad\.union\.api/i then reject(404)
+request if ${url} ~= /^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/.+/i then reject(404)
+request if ${url} ~= /^https?:\/\/sq\.sljkj\.com\/api\/sdk\/ads2/i then reject(404)
+request if ${url} ~= /^https?:\/\/ocean\.shuqireader\.com\/api\/ad\/adserver\/.+/i then reject(404)
+request if ${url} ~= /^https?:\/\/ocean\.shuqireader\.com\/api\/route\/iosReadPage\/ad.+/i then reject(404)
+request if ${url} ~= /^https?:\/\/.+\.pglstatp-toutiao\.com/i then reject(404)
+request if ${url} ~= /^https?:\/\/img-tailor\.11222\.cn\/pm\/app\/.+\.gif/i then reject(404)
+request if ${url} ~= /^https?:\/\/img-tailor\.11222\.cn\/cms\/upload\/img\/.+/i then reject(404)
+request if ${url} ~= /^https?:\/\/message\.shuqireader\.com\/message\/.+/i then reject(404)
+request if ${url} ~= /^https?:\/\/101\.91\.69\.26:8080\/.+/i then reject(404)
+request if ${url} ~= /^https?:\/\/feedback\.uc\.cn\/feedback\/api\/get_unread_status/i then reject(404)
+request if ${url} ~= /^https?:\/\/.+\.shuqireader\.com\/sapi\/.+/i then reject(404)
 
 
 [MITM]

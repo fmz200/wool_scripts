@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 去开屏广告 需要重装
-^https?:\/\/m\.pvp\.xoyo\.com\/conf\/server-mapping reject-dict
+request if ${url} ~= /^https?:\/\/m\.pvp\.xoyo\.com\/conf\/server-mapping/i then reject_dict(200)
 
 
 

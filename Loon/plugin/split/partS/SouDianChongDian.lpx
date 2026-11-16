@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 微信小程序
-^https?:\/\/wxs-weixin\.sd\.zhumanggroup\.com\/api\/v2\/ad reject-dict
+request if ${url} ~= /^https?:\/\/wxs-weixin\.sd\.zhumanggroup\.com\/api\/v2\/ad/i then reject_dict(200)
 
 
 [MITM]

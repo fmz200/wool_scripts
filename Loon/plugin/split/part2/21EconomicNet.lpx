@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/api\.21jingji\.com\/ad\/ reject
+request if ${url} ~= /^https?:\/\/api\.21jingji\.com\/ad\//i then reject(404)
 
 
 [MITM]

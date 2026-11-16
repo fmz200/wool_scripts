@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/cdn-evone-ceph\.echargenet\.com\/gw-emas-cdn\/63c4e3b558bb610008969f89 reject-200
+request if ${url} ~= /^https?:\/\/cdn-evone-ceph\.echargenet\.com\/gw-emas-cdn\/63c4e3b558bb610008969f89/i then reject(200)
 
 
 [MITM]

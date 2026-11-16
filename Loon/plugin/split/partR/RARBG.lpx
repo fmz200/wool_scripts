@@ -11,8 +11,8 @@
 
 [Rewrite]
 # https://rarbgmirror.org/torrents.php
-^https?:\/\/dyncdn\.me\/static\/\d{0,2}\/js\/expla\d{0,4}\.js$ reject-200
-^https?:\/\/dyncdn\.me\/static\/\d{0,2}\/js\/showads\.js$ response-body-replace-regex true false
+request if ${url} ~= /^https?:\/\/dyncdn\.me\/static\/\d{0,2}\/js\/expla\d{0,4}\.js$/i then reject(200)
+response if ${url} ~= /^https?:\/\/dyncdn\.me\/static\/\d{0,2}\/js\/showads\.js$/i then response.body.replace(/true/, "false")
 
 
 [MITM]

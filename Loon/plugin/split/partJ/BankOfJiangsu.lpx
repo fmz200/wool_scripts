@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 可能导致登录验证码不显示
-^https?:\/\/mbank5\.jsbchina\.cn:443 reject-dict
+request if ${url} ~= /^https?:\/\/mbank5\.jsbchina\.cn:443/i then reject_dict(200)
 
 
 [MITM]

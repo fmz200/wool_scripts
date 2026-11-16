@@ -10,8 +10,8 @@
 
 
 [Rewrite]
-^https?:\/\/nnapp\.cloudbae\.cn:\d+\/mc\/api\/advert/ reject
-^https?:\/\/nnapp\.cloudbae\.cn\/mc\/api\/advert/ reject
+request if ${url} ~= /^https?:\/\/nnapp\.cloudbae\.cn:\d+\/mc\/api\/advert\//i then reject(404)
+request if ${url} ~= /^https?:\/\/nnapp\.cloudbae\.cn\/mc\/api\/advert\//i then reject(404)
 
 
 [MITM]

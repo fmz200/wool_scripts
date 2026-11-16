@@ -13,43 +13,43 @@
 51job_enable = switch,true,false,tag=前程无忧-脚本开关
 
 [Rewrite]
-^https?:\/\/appapi\.51job(app)?\.com\/api\/market\/(adtrace|get_launch|get_prompt) reject
-^https?:\/\/cupid\.51job(app)?\.com\/open\/index\/recommend-infos reject
+request if ${url} ~= /^https?:\/\/appapi\.51job(app)?\.com\/api\/market\/(adtrace|get_launch|get_prompt)/i then reject(404)
+request if ${url} ~= /^https?:\/\/cupid\.51job(app)?\.com\/open\/index\/recommend-infos/i then reject(404)
 
 
 
 
 
 # 去广告 (需卸载App重装) img01.51jobcdn.com
-^https:\/\/img01\.51jobcdn\.com\/im\/mkt/(?:tg/((19|20)\d{2})banner/(?!jcgz2/)|\d{4}/bd/\d{4}/).*\.jpg reject
+request if ${url} ~= /^https:\/\/img01\.51jobcdn\.com\/im\/mkt\/(?:tg\/((19|20)\d{2})banner\/(?!jcgz2\/)|\d{4}\/bd\/\d{4}\/).*\.jpg/i then reject(404)
 # 屏蔽更新
-^https?:\/\/appapi\.51job(app)?\.com\/api\/util\/get_version reject-dict
-^https?:\/\/cupid\.51job(app)?\.com\/open\/noauth\/index\/last-version reject-dict
+request if ${url} ~= /^https?:\/\/appapi\.51job(app)?\.com\/api\/util\/get_version/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/cupid\.51job(app)?\.com\/open\/noauth\/index\/last-version/i then reject_dict(200)
 # 开屏及营销广告
-^https?:\/\/appapi\.51job(app)?\.com\/api\/market\/(?>adtrace|get_launch|get_prompt) reject
+request if ${url} ~= /^https?:\/\/appapi\.51job(app)?\.com\/api\/market\/(?>adtrace|get_launch|get_prompt)/i then reject(404)
 # 顶部弹窗
-^https?:\/\/cupid\.51job(app)?\.com\/open\/guide\/home-page-top reject
+request if ${url} ~= /^https?:\/\/cupid\.51job(app)?\.com\/open\/guide\/home-page-top/i then reject(404)
 # 首页右上角浮窗及右边浮标
-^https?:\/\/cupid\.51job(app)?\.com\/open\/user-task\/user\/task\/init reject
+request if ${url} ~= /^https?:\/\/cupid\.51job(app)?\.com\/open\/user-task\/user\/task\/init/i then reject(404)
 # 底栏中央活动标
-^https?:\/\/cupid\.51job(app)?\.com\/open\/index\/notice-infos reject-dict
+request if ${url} ~= /^https?:\/\/cupid\.51job(app)?\.com\/open\/index\/notice-infos/i then reject_dict(200)
 # 弹窗广告
-^https?:\/\/cupid\.51job(app)?\.com\/launch-hub\/open\/noauth\/popUp reject
+request if ${url} ~= /^https?:\/\/cupid\.51job(app)?\.com\/launch-hub\/open\/noauth\/popUp/i then reject(404)
 # 推荐流信息广告
-^https?:\/\/cupid\.51job(app)?\.com\/open\/index\/recommend-infos reject
+request if ${url} ~= /^https?:\/\/cupid\.51job(app)?\.com\/open\/index\/recommend-infos/i then reject(404)
 
 
 [Script]
-http-response ^https?:\/\/cupid\.51job(app)?\.com\/open\/noauth\/recommend\/job-tab-dynamic script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/51job.js, requires-body=true, timeout=60, tag=51job, enable={51job_enable}
+response if ${url} ~= /^https?:\/\/cupid\.51job(app)?\.com\/open\/noauth\/recommend\/job-tab-dynamic/i then script("https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/51job.js") with enable=${51job_enable}, tag="51job", timeout=60, requires_body=true
 
 
 
 
 
 # 推荐流信息广告
-http-response ^https?:\/\/cupid\.51job(app)?\.com\/open\/noauth\/recommend\/job-tab-dynamic script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/51job.js, requires-body=true, timeout=60, tag=去哒, enable={51job_enable}
+response if ${url} ~= /^https?:\/\/cupid\.51job(app)?\.com\/open\/noauth\/recommend\/job-tab-dynamic/i then script("https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/51job.js") with enable=${51job_enable}, tag="去哒", timeout=60, requires_body=true
 # 我的页净化
-http-response ^https?:\/\/cupid\.51job(app)?\.com\/open\/my-page\/ script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/51job.js, requires-body=true, timeout=60, tag=去哒, enable={51job_enable}
+response if ${url} ~= /^https?:\/\/cupid\.51job(app)?\.com\/open\/my-page\//i then script("https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/51job.js") with enable=${51job_enable}, tag="去哒", timeout=60, requires_body=true
 
 
 [MITM]

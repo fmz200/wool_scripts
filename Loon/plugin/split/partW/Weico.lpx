@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/overseas\.weico\.cc\/portal\.php\?a=get_coopen_ads reject-200
+request if ${url} ~= /^https?:\/\/overseas\.weico\.cc\/portal\.php\?a=get_coopen_ads/i then reject(200)
 
 
 [MITM]

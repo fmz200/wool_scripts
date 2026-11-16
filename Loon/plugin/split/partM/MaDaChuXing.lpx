@@ -11,13 +11,13 @@
 
 [Rewrite]
 # 开屏广告
-^https:\/\/mada-travel\.17u\.cn\/mdapi\/config\/ads reject-dict
+request if ${url} ~= /^https:\/\/mada-travel\.17u\.cn\/mdapi\/config\/ads/i then reject_dict(200)
 # 我的会员中心
-^https:\/\/mada-travel\.17u\.cn\/mdapi\/config\/mine reject-dict
+request if ${url} ~= /^https:\/\/mada-travel\.17u\.cn\/mdapi\/config\/mine/i then reject_dict(200)
 # 首页下方推广
-^https:\/\/mada-travel\.17u\.cn\/mdapi\/config\/tabAct reject-dict
+request if ${url} ~= /^https:\/\/mada-travel\.17u\.cn\/mdapi\/config\/tabAct/i then reject_dict(200)
 # 屏蔽更新
-^http:\/\/ebk\.17u\.cn\/tctrafficappversionadmin\/api\/getLatestVersionApp reject-dict
+request if ${url} ~= /^http:\/\/ebk\.17u\.cn\/tctrafficappversionadmin\/api\/getLatestVersionApp/i then reject_dict(200)
 
 
 [MITM]

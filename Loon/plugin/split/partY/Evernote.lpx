@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/app\.yinxiang\.com\/ads\/ reject-200
+request if ${url} ~= /^https?:\/\/app\.yinxiang\.com\/ads\//i then reject(200)
 
 
 [MITM]

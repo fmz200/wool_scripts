@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 开屏广告和应用内弹窗
-^https?:\/\/jad-api\.jin10\.com\/ad reject
+request if ${url} ~= /^https?:\/\/jad-api\.jin10\.com\/ad/i then reject(404)
 
 
 [MITM]

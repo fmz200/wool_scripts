@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/app\.xinpianchang\.com\/open_screen\? reject
+request if ${url} ~= /^https?:\/\/app\.xinpianchang\.com\/open_screen\?/i then reject(404)
 
 
 [MITM]

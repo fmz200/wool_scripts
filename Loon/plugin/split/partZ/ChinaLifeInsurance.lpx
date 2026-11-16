@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 屏蔽开屏广告
-^https:\/\/ecssmobile\.e-chinalife\.com:8082\/ecss\/web\/appupdate\/customization\/getFlashScreenInfo reject-dict
+request if ${url} ~= /^https:\/\/ecssmobile\.e-chinalife\.com:8082\/ecss\/web\/appupdate\/customization\/getFlashScreenInfo/i then reject_dict(200)
 
 
 [MITM]

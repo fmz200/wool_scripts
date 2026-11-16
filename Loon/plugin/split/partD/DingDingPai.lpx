@@ -14,11 +14,11 @@
 
 
 [Rewrite]
-^https?:\/\/.*\.pglstatp-toutiao\.com\/.*ad.* reject
-^https?:\/\/api\.htp\.ad-scope\.com\.cn.* reject
-^https?:\/\/appgw\.ddpai\.com.*\/ad\/list.* reject
-^https?:\/\/init\.sms\.mob\.com\/.*sdk\/init.* reject
-^https?:\/\/apphw\.ddpai\.com:\d+\/onroad\/api\/v\d\/\w+\/list reject-dict
+request if ${url} ~= /^https?:\/\/.*\.pglstatp-toutiao\.com\/.*ad.*/i then reject(404)
+request if ${url} ~= /^https?:\/\/api\.htp\.ad-scope\.com\.cn.*/i then reject(404)
+request if ${url} ~= /^https?:\/\/appgw\.ddpai\.com.*\/ad\/list.*/i then reject(404)
+request if ${url} ~= /^https?:\/\/init\.sms\.mob\.com\/.*sdk\/init.*/i then reject(404)
+request if ${url} ~= /^https?:\/\/apphw\.ddpai\.com:\d+\/onroad\/api\/v\d\/\w+\/list/i then reject_dict(200)
 
 
 

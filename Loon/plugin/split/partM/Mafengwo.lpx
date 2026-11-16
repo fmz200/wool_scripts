@@ -13,15 +13,15 @@
 mafgwo_enable = switch,true,false,tag=马蜂窝-脚本开关
 
 [Rewrite]
-^https?:\/\/mapi\.mafengwo\.cn\/(travelguide\/)?ad reject
-^https?:\/\/mapi\.mafengwo\.cn\/widget\/note\/get_widget_note reject
-^https?:\/\/mapi\.mafengwo\.cn\/system\/update\/check_update reject-dict
-^https?:\/\/mapi\.mafengwo\.cn\/system\/config\/(get|mark)_(push|alert)_config reject-dict
-^https?:\/\/mapi\.mafengwo\.cn\/system\/push\/get_local_push_config reject
+request if ${url} ~= /^https?:\/\/mapi\.mafengwo\.cn\/(travelguide\/)?ad/i then reject(404)
+request if ${url} ~= /^https?:\/\/mapi\.mafengwo\.cn\/widget\/note\/get_widget_note/i then reject(404)
+request if ${url} ~= /^https?:\/\/mapi\.mafengwo\.cn\/system\/update\/check_update/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/mapi\.mafengwo\.cn\/system\/config\/(get|mark)_(push|alert)_config/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/mapi\.mafengwo\.cn\/system\/push\/get_local_push_config/i then reject(404)
 
 
 [Script]
-http-response ^https?:\/\/mapi\.mafengwo\.cn\/user\/profile\/get_(list|profile) script-path=https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/mafengwo.js, requires-body=true, timeout=60, tag=马蜂窝, enable={mafgwo_enable}
+response if ${url} ~= /^https?:\/\/mapi\.mafengwo\.cn\/user\/profile\/get_(list|profile)/i then script("https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/mafengwo.js") with enable=${mafgwo_enable}, tag="马蜂窝", timeout=60, requires_body=true
 
 
 [MITM]

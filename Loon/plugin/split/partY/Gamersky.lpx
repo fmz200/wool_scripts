@@ -16,9 +16,9 @@ DOMAIN-SUFFIX, ja1.gamersky.com, REJECT
 
 [Rewrite]
 # 移除开屏广告、列表广告
-^http:\/\/.+\.gamersky\.com\/.+\/adSystem\/ad\/.+ reject-dict
-https://.+\.gamersky.com/v1/statisticAd reject-dict
-http:\/\/.+\.gamersky.com/.+/lists/getListElements response-body-json-jq '.listElements |= map(select(has("adCategory") | not))'
+request if ${url} ~= /^http:\/\/.+\.gamersky\.com\/.+\/adSystem\/ad\/.+/i then reject_dict(200)
+request if ${url} ~= /https:\/\/.+\.gamersky.com\/v1\/statisticAd/i then reject_dict(200)
+response if ${url} ~= /http:\/\/.+\.gamersky.com\/.+\/lists\/getListElements/i then response.json.jq(".listElements |= map(select(has(\"adCategory\") | not))")
 
 
 

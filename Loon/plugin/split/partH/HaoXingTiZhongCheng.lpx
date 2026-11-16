@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/open\.fitdays\.cn\/uploads\/ad\/ reject
+request if ${url} ~= /^https?:\/\/open\.fitdays\.cn\/uploads\/ad\//i then reject(404)
 
 
 [MITM]

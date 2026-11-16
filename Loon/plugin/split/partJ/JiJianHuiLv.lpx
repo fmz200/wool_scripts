@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/explorer\.tratao\.com\/api\/client\/v4\/xtransfer\/ad\/ reject
+request if ${url} ~= /^https?:\/\/explorer\.tratao\.com\/api\/client\/v4\/xtransfer\/ad\//i then reject(404)
 
 
 

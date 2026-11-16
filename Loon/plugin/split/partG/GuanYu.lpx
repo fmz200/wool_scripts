@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 开屏广告
-^https?:\/\/guanyu\.longfor\.com\/app-server\/api\/v1\/main\/start reject
+request if ${url} ~= /^https?:\/\/guanyu\.longfor\.com\/app-server\/api\/v1\/main\/start/i then reject(404)
 
 
 [MITM]

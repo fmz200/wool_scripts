@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/sso\.ifanr\.com\/jiong\/IOS\/appso\/splash\/ reject
+request if ${url} ~= /^https?:\/\/sso\.ifanr\.com\/jiong\/IOS\/appso\/splash\//i then reject(404)
 
 
 [MITM]

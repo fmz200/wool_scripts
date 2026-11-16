@@ -11,8 +11,8 @@
 
 [Rewrite]
 # 开屏广告 感谢【打豆豆】分享
-^https?:\/\/app\.chinahxzq\.com\.cn:9302\/starway-api\/ad reject-dict
-^https?:\/\/app\.chinahxzq\.com\.cn\/starway\/adShow reject-dict
+request if ${url} ~= /^https?:\/\/app\.chinahxzq\.com\.cn:9302\/starway-api\/ad/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/app\.chinahxzq\.com\.cn\/starway\/adShow/i then reject_dict(200)
 
 
 [MITM]

@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/api\.tipsoon\.com\/api\/v1\/top\/ad reject-img
+request if ${url} ~= /^https?:\/\/api\.tipsoon\.com\/api\/v1\/top\/ad/i then reject_img(200)
 
 
 [MITM]

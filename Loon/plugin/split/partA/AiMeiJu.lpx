@@ -10,9 +10,9 @@
 
 
 [Rewrite]
-^https?:\/\/api\.bjxkhc\.com\/index\.php\/app\/ios\/ver/index_ios$ reject
-^https?:\/\/api\.bjxkhc\.com\/index\.php\/app\/ios\/pay/ok$ reject-dict
-^https?:\/\/api\.bjxkhc\.com\/index\.php\/app\/ios\/ads\/ reject
+request if ${url} ~= /^https?:\/\/api\.bjxkhc\.com\/index\.php\/app\/ios\/ver\/index_ios$/i then reject(404)
+request if ${url} ~= /^https?:\/\/api\.bjxkhc\.com\/index\.php\/app\/ios\/pay\/ok$/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/api\.bjxkhc\.com\/index\.php\/app\/ios\/ads\//i then reject(404)
 
 
 [MITM]

@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 去开屏，感谢【也許】投稿
-^https?:\/\/manager\.aiqiangua\.com:8080\/AqgNews\/api\/start_ad\.do reject-dict
+request if ${url} ~= /^https?:\/\/manager\.aiqiangua\.com:8080\/AqgNews\/api\/start_ad\.do/i then reject_dict(200)
 
 
 [MITM]

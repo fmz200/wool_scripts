@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 开屏广告 感谢【TEXAS】分享
-^https?:\/\/api\.taptapdada\.com\/startup-logo\/v\d\/combo\? reject-dict
+request if ${url} ~= /^https?:\/\/api\.taptapdada\.com\/startup-logo\/v\d\/combo\?/i then reject_dict(200)
 
 
 [MITM]

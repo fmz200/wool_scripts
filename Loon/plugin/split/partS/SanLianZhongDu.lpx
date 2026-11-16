@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-https://apis.lifeweek.com.cn/api/baseConfig/getIosNewConfig reject
+request if ${url} ~= /https:\/\/apis.lifeweek.com.cn\/api\/baseConfig\/getIosNewConfig/i then reject(404)
 
 
 [MITM]

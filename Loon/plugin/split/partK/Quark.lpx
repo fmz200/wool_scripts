@@ -13,7 +13,7 @@
 kxke_enable = switch,true,false,tag=夸克-脚本开关
 
 [Script]
-http-response ^https?:\/\/open-cms-api\.(uc|quark)\.cn\/open-cms script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/quark.js, requires-body=true, timeout=60, tag=夸克, enable={kxke_enable}
+response if ${url} ~= /^https?:\/\/open-cms-api\.(uc|quark)\.cn\/open-cms/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/quark.js") with enable=${kxke_enable}, tag="夸克", timeout=60, requires_body=true
 
 [MITM]
 hostname = open-cms-api.uc.cn, open-cms-api.quark.cn

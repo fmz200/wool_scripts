@@ -10,9 +10,9 @@
 
 
 [Rewrite]
-https://support.you.163.com/appversync/check.do reject
-^https?:\/\/m\.you\.163\.com\/activity\/popWindow reject
-^https?:\/\/yanxuan\.nosdn\.127\.net\/.*\.mp4 reject
+request if ${url} ~= /https:\/\/support.you.163.com\/appversync\/check.do/i then reject(404)
+request if ${url} ~= /^https?:\/\/m\.you\.163\.com\/activity\/popWindow/i then reject(404)
+request if ${url} ~= /^https?:\/\/yanxuan\.nosdn\.127\.net\/.*\.mp4/i then reject(404)
 
 
 [MITM]

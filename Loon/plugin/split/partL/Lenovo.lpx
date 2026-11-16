@@ -30,7 +30,7 @@ DOMAIN-SUFFIX, yx.lenovomm.com, REJECT
 
 
 [Rewrite]
-^https?:\/\/api\.club\.lenovo\.cn\/common\/open_ad reject
+request if ${url} ~= /^https?:\/\/api\.club\.lenovo\.cn\/common\/open_ad/i then reject(404)
 
 
 [MITM]

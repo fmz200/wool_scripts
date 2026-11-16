@@ -16,8 +16,8 @@ IP-CIDR, 203.107.1.1/24, REJECT, no-resolve
 
 
 [Rewrite]
-^https?:\/\/pt-starimg\.didistatic\.com\/static\/starimg\/node\/.*.(jpg|png|gif) reject-200
-^https?:\/\/omgup[0-9]{1}\.xiaojukeji\.com\/api reject-200
+request if ${url} ~= /^https?:\/\/pt-starimg\.didistatic\.com\/static\/starimg\/node\/.*.(jpg|png|gif)/i then reject(200)
+request if ${url} ~= /^https?:\/\/omgup[0-9]{1}\.xiaojukeji\.com\/api/i then reject(200)
 
 
 [MITM]

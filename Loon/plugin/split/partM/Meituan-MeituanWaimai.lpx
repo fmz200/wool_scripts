@@ -10,13 +10,13 @@
 
 
 [Rewrite]
-^https?:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\? reject-dict
-^https?:\/\/(s3plus|flowplus)\.meituan\.net\/v\d\/\w+\/linglong\/\w+\.(gif|jpg|mp4) reject-img
-^https?:\/\/img\.meituan\.net\/bizad\/bizad_brandCpt_\d+\.jpg reject-img
-^https?:\/\/img\.meituan\.net\/goodsawardpic\/[a-f0-9]+\.png\.webp reject-img
-^https?:\/\/s3plus\.meituan\.net\/ocean-blk-index\/index\/blk_conf_73\.json reject-dict
-^https?:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\.zip$ reject-dict
-^http:\/\/59\.82\.113\.10\/amdc\/mobileDispatch\?appkey=213807& reject-dict
+request if ${url} ~= /^https?:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\?/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/(s3plus|flowplus)\.meituan\.net\/v\d\/\w+\/linglong\/\w+\.(gif|jpg|mp4)/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/img\.meituan\.net\/bizad\/bizad_brandCpt_\d+\.jpg/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/img\.meituan\.net\/goodsawardpic\/[a-f0-9]+\.png\.webp/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/s3plus\.meituan\.net\/ocean-blk-index\/index\/blk_conf_73\.json/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\.zip$/i then reject_dict(200)
+request if ${url} ~= /^http:\/\/59\.82\.113\.10\/amdc\/mobileDispatch\?appkey=213807&/i then reject_dict(200)
 
 
 [MITM]

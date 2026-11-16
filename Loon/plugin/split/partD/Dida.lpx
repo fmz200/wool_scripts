@@ -14,8 +14,8 @@ DOMAIN-KEYWORD,image.bianxianmao.com, REJECT
 
 
 [Rewrite]
-^https?:\/\/img\.admobile\.top\/admobile-adRequest\/.*.(jpg|png) reject-200
-^https?:\/\/webcdn\.m\.qq\.com\/qiantu\/upload\/202[0-9]{5}\/.*.(jpg|png) reject-200
+request if ${url} ~= /^https?:\/\/img\.admobile\.top\/admobile-adRequest\/.*.(jpg|png)/i then reject(200)
+request if ${url} ~= /^https?:\/\/webcdn\.m\.qq\.com\/qiantu\/upload\/202[0-9]{5}\/.*.(jpg|png)/i then reject(200)
 
 
 [MITM]

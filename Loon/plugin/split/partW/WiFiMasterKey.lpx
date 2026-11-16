@@ -37,7 +37,7 @@ DOMAIN, taichi.51y5.net, REJECT
 
 [Rewrite]
 # 首页弹窗广告
-^https?:\/\/cds\.wifi188\.com\/feeds\.sec reject-dict
+request if ${url} ~= /^https?:\/\/cds\.wifi188\.com\/feeds\.sec/i then reject_dict(200)
 
 
 [MITM]

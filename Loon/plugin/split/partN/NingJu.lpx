@@ -11,9 +11,9 @@
 
 [Rewrite]
 # 开屏广告
-^https?:\/\/api\.nj\.nbtv\.cn\/v2\/advertise\/advertise-r1\/get-list\?data=u8obKDIrIWt2NR9wBuMwQ5O61eEsP reject-200
+request if ${url} ~= /^https?:\/\/api\.nj\.nbtv\.cn\/v2\/advertise\/advertise-r1\/get-list\?data=u8obKDIrIWt2NR9wBuMwQ5O61eEsP/i then reject(200)
 # 弹窗广告
-^https?:\/\/api\.nj\.nbtv\.cn\/v\d\/common\/system-boot-inform\/detail reject-200
+request if ${url} ~= /^https?:\/\/api\.nj\.nbtv\.cn\/v\d\/common\/system-boot-inform\/detail/i then reject(200)
 
 
 [MITM]

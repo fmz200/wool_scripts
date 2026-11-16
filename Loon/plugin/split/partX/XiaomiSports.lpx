@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/api-mifit.+?\.huami\.com\/discovery\/mi\/discovery\/.+?_ad\? reject-200
+request if ${url} ~= /^https?:\/\/api-mifit.+?\.huami\.com\/discovery\/mi\/discovery\/.+?_ad\?/i then reject(200)
 
 
 [MITM]

@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/api\.internetofcity\.cn\/api\/resource\/anon\/popups\/(getSplashList|getList) reject
+request if ${url} ~= /^https?:\/\/api\.internetofcity\.cn\/api\/resource\/anon\/popups\/(getSplashList|getList)/i then reject(404)
 
 
 [MITM]

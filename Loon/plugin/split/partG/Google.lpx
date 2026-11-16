@@ -67,10 +67,10 @@ DOMAIN-SUFFIX, adclick.g.doublecklick.net, REJECT
 
 [Rewrite]
 # 如开启可自行添加主机名，但似乎已不可MITM
-^https?:\/\/.+\.googleapis.com/.+ad_break reject-img
-^https?:\/\/.+\.googleapis.com/.+log_event reject-img
-^https?:\/\/.+\.googleapis.com/adsmeasurement reject-img
-^https?:\/\/pagead2\.googlesyndication\.com\/pagead\/ reject-img
+request if ${url} ~= /^https?:\/\/.+\.googleapis.com\/.+ad_break/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/.+\.googleapis.com\/.+log_event/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/.+\.googleapis.com\/adsmeasurement/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/pagead2\.googlesyndication\.com\/pagead\//i then reject_img(200)
 
 
 [MITM]

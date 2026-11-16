@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https:\/\/gw\.chuangkit\.com\/team\/app\/common\/ad\/ reject-dict
+request if ${url} ~= /^https:\/\/gw\.chuangkit\.com\/team\/app\/common\/ad\//i then reject_dict(200)
 
 
 

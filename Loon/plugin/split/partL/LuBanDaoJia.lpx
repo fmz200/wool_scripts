@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 去开屏广告
-^https:\/\/order-app-api\.lbdj\.com\/lbdj\/apporder\/ad\/ reject-dict
+request if ${url} ~= /^https:\/\/order-app-api\.lbdj\.com\/lbdj\/apporder\/ad\//i then reject_dict(200)
 
 
 [MITM]

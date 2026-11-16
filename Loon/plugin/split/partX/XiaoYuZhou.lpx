@@ -11,16 +11,16 @@
 
 [Rewrite]
 # 首页净化
-^https?:\/\/api\.xiaoyuzhoufm\.com\/v1\/discovery-feed\/list response-body-json-jq '.data |= map(select(.type != "DISCOVERY_HEADER" and .type != "DISCOVERY_BANNER"))'
+response if ${url} ~= /^https?:\/\/api\.xiaoyuzhoufm\.com\/v1\/discovery-feed\/list/i then response.json.jq(".data |= map(select(.type != \"DISCOVERY_HEADER\" and .type != \"DISCOVERY_BANNER\"))")
 #
-^https?:\/\/api\.xiaoyuzhoufm\.com\/v1\/(related-episode|operation-resource)\/list response-body-json-jq '.data = []'
+response if ${url} ~= /^https?:\/\/api\.xiaoyuzhoufm\.com\/v1\/(related-episode|operation-resource)\/list/i then response.json.jq(".data = []")
 # 移除开屏广告
-^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/flash reject-dict
+request if ${url} ~= /^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/flash/i then reject_dict(200)
 # 移除单集总结和ai总结
-^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/ai reject-dict
+request if ${url} ~= /^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/ai/i then reject_dict(200)
 # 移除搜索框内容
-^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/search\/get reject-dict
-^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/category reject-dict
+request if ${url} ~= /^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/search\/get/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/category/i then reject_dict(200)
 
 
 [MITM]

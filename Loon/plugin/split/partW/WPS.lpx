@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/ios\.wps\.cn\/ad-statistics-service reject
+request if ${url} ~= /^https?:\/\/ios\.wps\.cn\/ad-statistics-service/i then reject(404)
 
 
 [MITM]

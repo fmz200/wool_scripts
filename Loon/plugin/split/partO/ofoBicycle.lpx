@@ -10,10 +10,10 @@
 
 
 [Rewrite]
-^https?:\/\/supportda\.ofo\.com\/adaction\? reject
-^https?:\/\/ma\.ofo\.com\/adImage\/ reject
-^https?:\/\/ma\.ofo\.com\/ads reject
-^https?:\/\/activity2\.api\.ofo\.com\/ofo\/Api\/v2\/ads reject
+request if ${url} ~= /^https?:\/\/supportda\.ofo\.com\/adaction\?/i then reject(404)
+request if ${url} ~= /^https?:\/\/ma\.ofo\.com\/adImage\//i then reject(404)
+request if ${url} ~= /^https?:\/\/ma\.ofo\.com\/ads/i then reject(404)
+request if ${url} ~= /^https?:\/\/activity2\.api\.ofo\.com\/ofo\/Api\/v2\/ads/i then reject(404)
 
 
 [MITM]

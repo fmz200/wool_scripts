@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/api\.petkit\.cn\/6\/\/device\/relatedProductsInfo reject-dict
+request if ${url} ~= /^https?:\/\/api\.petkit\.cn\/6\/\/device\/relatedProductsInfo/i then reject_dict(200)
 
 
 [MITM]

@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/apps\.api\.ke\.com\/config\/config\/(bootpage|getactivityconfig) reject
+request if ${url} ~= /^https?:\/\/apps\.api\.ke\.com\/config\/config\/(bootpage|getactivityconfig)/i then reject(404)
 
 
 [MITM]

@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/gateway-api\.dushu365\.com\/chief-orch\/config\/config\/v100\/appConfig reject
+request if ${url} ~= /^https?:\/\/gateway-api\.dushu365\.com\/chief-orch\/config\/config\/v100\/appConfig/i then reject(404)
 
 
 [MITM]

@@ -10,9 +10,9 @@
 
 
 [Rewrite]
-^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome5\/apphome reject-200
-^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome6\/\w+\.json\? reject-dict
-^https?:\/\/res\.kfc\.com.\cn\/advertisement\/ reject
+request if ${url} ~= /^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome5\/apphome/i then reject(200)
+request if ${url} ~= /^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome6\/\w+\.json\?/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/res\.kfc\.com.\cn\/advertisement\//i then reject(404)
 
 
 

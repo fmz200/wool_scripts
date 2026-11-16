@@ -13,7 +13,7 @@
 wfnibovj_enable = switch,true,false,tag=温尼伯站-脚本开关
 
 [Script]
-http-response ^https:\/\/vue3-api\.zhixiny\.cn\/v1\/initui\?key=index script-path=https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/AdBlock/xmApp/wnbz.js, requires-body=true, timeout=60, tag=温尼伯站, enable={wfnibovj_enable}
+response if ${url} ~= /^https:\/\/vue3-api\.zhixiny\.cn\/v1\/initui\?key=index/i then script("https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/AdBlock/xmApp/wnbz.js") with enable=${wfnibovj_enable}, tag="温尼伯站", timeout=60, requires_body=true
 
 [MITM]
 hostname = vue3-api.zhixiny.cn

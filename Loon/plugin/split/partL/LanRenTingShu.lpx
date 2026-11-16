@@ -10,10 +10,10 @@
 
 
 [Rewrite]
-^https?:\/\/118\.178\.214\.118\/yyting\/advertclient\/ClientAdvertList\.action reject-img
-^https?:\/\/dapis\.mting\.info\/yyting\/advertclient\/ClientAdvertList\.action reject-img
-^https?:\/\/.*\/yyting\/advertclient\/ClientAdvertList.action reject
-^https?:\/\/display\.wting\.info\/.*.jpeg reject-200
+request if ${url} ~= /^https?:\/\/118\.178\.214\.118\/yyting\/advertclient\/ClientAdvertList\.action/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/dapis\.mting\.info\/yyting\/advertclient\/ClientAdvertList\.action/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/.*\/yyting\/advertclient\/ClientAdvertList.action/i then reject(404)
+request if ${url} ~= /^https?:\/\/display\.wting\.info\/.*.jpeg/i then reject(200)
 
 
 [MITM]

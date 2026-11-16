@@ -11,8 +11,8 @@
 
 [Rewrite]
 # 开屏广告 感谢【Joe Joy】分享
-^https?:\/\/api-one-wscn\.awtmt\.com\/apiv1\/advertising\/ads\/[0-9]+\/materials reject-dict
-^https?:\/\/api\.wallstreetcn\.com\/apiv\d\/advertising\/ reject
+request if ${url} ~= /^https?:\/\/api-one-wscn\.awtmt\.com\/apiv1\/advertising\/ads\/[0-9]+\/materials/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/api\.wallstreetcn\.com\/apiv\d\/advertising\//i then reject(404)
 
 
 [MITM]

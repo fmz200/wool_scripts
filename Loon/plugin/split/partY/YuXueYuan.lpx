@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/.*\.yuxueyuan\.cn\/yxy-api-gateway\/api\/json\/advert\/getsAdStartScreen reject-200
+request if ${url} ~= /^https?:\/\/.*\.yuxueyuan\.cn\/yxy-api-gateway\/api\/json\/advert\/getsAdStartScreen/i then reject(200)
 
 
 [MITM]

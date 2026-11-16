@@ -27,26 +27,26 @@ URL-REGEX, "^https:\/\/uts-front\.line-apps\.com\/settings$", REJECT-DROP
 
 
 [Rewrite]
-^https:\/\/a\.line\.me\/er\/lads\/v\d\/ei\? reject-img
-^https:\/\/a\.line\.me\/er\/l.*\/v\d\/event\/image reject-img
-^https:\/\/ad\.line-scdn\.net\/0h reject
-^https:\/\/ec-bot-obs\.line-scdn\.net\/0h[-0-9a-zA-Z_]{50,} reject-img
-^https:\/\/gw\.line\.naver\.jp\/ext\/lgfp\/lad\/v1$ reject
-^https:\/\/gw\.line\.naver\.jp\/lass\/api\/v1\/ads$ reject
-^https:\/\/gw\.line\.naver\.jp\/tr\/event$ reject
-^https:\/\/lan\.line\.me\/v1\/line\/ios reject
-^https:\/\/legy\.line-apps\.com:443\/ext\/lgfp\/lad\/v1$ reject
-^https:\/\/legy\.line-apps\.com:443\/ext\/smartch\/banner\/sch\/v1$ reject
-^https:\/\/legy\.line-apps\.com\/line\.gcs\.GcsModuleService\/GetModulesByModuleIds$ reject
-^https:\/\/legy\.line-apps\.com:443\/tr\/event$ reject
-^https:\/\/web-mmap-pay\.line-apps\.com\/tw\/liff\/campaign\/v1\/aggregate\/ad\/banner\/ reject-img
-^https:\/\/buy\.line\.me\/api\/graphql\?variables reject
-^https:\/\/obs\.line-scdn\.net\/r\/linecrs\/.+\/m180x180$ reject-img
-^https:\/\/d\.line-scdn\.net\/lcp-prod-photo\/20.+\.(jpg|jpeg|png) reject-img
-^https:\/\/cix\.line-apps\.com\/R4\? reject
-^https:\/\/scdn\.line-apps\.com\/appresources\/moretab\/list\.json reject
-^https:\/\/static\.line-scdn\.net\/ad-sdk\/ reject
-^https:\/\/nelo2-col\.linecorp\.com\/_store$ reject
+request if ${url} ~= /^https:\/\/a\.line\.me\/er\/lads\/v\d\/ei\?/i then reject_img(200)
+request if ${url} ~= /^https:\/\/a\.line\.me\/er\/l.*\/v\d\/event\/image/i then reject_img(200)
+request if ${url} ~= /^https:\/\/ad\.line-scdn\.net\/0h/i then reject(404)
+request if ${url} ~= /^https:\/\/ec-bot-obs\.line-scdn\.net\/0h[-0-9a-zA-Z_]{50,}/i then reject_img(200)
+request if ${url} ~= /^https:\/\/gw\.line\.naver\.jp\/ext\/lgfp\/lad\/v1$/i then reject(404)
+request if ${url} ~= /^https:\/\/gw\.line\.naver\.jp\/lass\/api\/v1\/ads$/i then reject(404)
+request if ${url} ~= /^https:\/\/gw\.line\.naver\.jp\/tr\/event$/i then reject(404)
+request if ${url} ~= /^https:\/\/lan\.line\.me\/v1\/line\/ios/i then reject(404)
+request if ${url} ~= /^https:\/\/legy\.line-apps\.com:443\/ext\/lgfp\/lad\/v1$/i then reject(404)
+request if ${url} ~= /^https:\/\/legy\.line-apps\.com:443\/ext\/smartch\/banner\/sch\/v1$/i then reject(404)
+request if ${url} ~= /^https:\/\/legy\.line-apps\.com\/line\.gcs\.GcsModuleService\/GetModulesByModuleIds$/i then reject(404)
+request if ${url} ~= /^https:\/\/legy\.line-apps\.com:443\/tr\/event$/i then reject(404)
+request if ${url} ~= /^https:\/\/web-mmap-pay\.line-apps\.com\/tw\/liff\/campaign\/v1\/aggregate\/ad\/banner\//i then reject_img(200)
+request if ${url} ~= /^https:\/\/buy\.line\.me\/api\/graphql\?variables/i then reject(404)
+request if ${url} ~= /^https:\/\/obs\.line-scdn\.net\/r\/linecrs\/.+\/m180x180$/i then reject_img(200)
+request if ${url} ~= /^https:\/\/d\.line-scdn\.net\/lcp-prod-photo\/20.+\.(jpg|jpeg|png)/i then reject_img(200)
+request if ${url} ~= /^https:\/\/cix\.line-apps\.com\/R4\?/i then reject(404)
+request if ${url} ~= /^https:\/\/scdn\.line-apps\.com\/appresources\/moretab\/list\.json/i then reject(404)
+request if ${url} ~= /^https:\/\/static\.line-scdn\.net\/ad-sdk\//i then reject(404)
+request if ${url} ~= /^https:\/\/nelo2-col\.linecorp\.com\/_store$/i then reject(404)
 
 
 [MITM]

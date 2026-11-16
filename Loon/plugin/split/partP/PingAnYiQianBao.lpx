@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/mobile\.1qianbao\.com\/mtp-web\/ui\/op_common_query_business_yqb\.json reject-200
+request if ${url} ~= /^https?:\/\/mobile\.1qianbao\.com\/mtp-web\/ui\/op_common_query_business_yqb\.json/i then reject(200)
 
 
 [MITM]

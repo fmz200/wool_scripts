@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/pipi\.4kya\.com\/\/xgapp\.php\/v3\/advert\.position=[^2]+ reject
+request if ${url} ~= /^https?:\/\/pipi\.4kya\.com\/\/xgapp\.php\/v3\/advert\.position=[^2]+/i then reject(404)
 
 
 [MITM]

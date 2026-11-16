@@ -10,8 +10,8 @@
 
 
 [Rewrite]
-^https?:\/\/a\.qiumibao\.com\/activities\/config\.php reject
-^https?:\/\/a\.qiumibao\.com\/ios\/config\/\?version_code= reject
+request if ${url} ~= /^https?:\/\/a\.qiumibao\.com\/activities\/config\.php/i then reject(404)
+request if ${url} ~= /^https?:\/\/a\.qiumibao\.com\/ios\/config\/\?version_code=/i then reject(404)
 
 
 [MITM]

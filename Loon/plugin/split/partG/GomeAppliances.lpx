@@ -14,8 +14,8 @@ DOMAIN-SUFFIX, prom.gome.com.cn, REJECT
 
 
 [Rewrite]
-^https?:\/\/prom\.mobile\.gome\.com\.cn\/mobile\/promotion\/promscms\/\w+\.jsp reject
-^https?:\/\/prom\.mobile\.gome\.com\.cn\/mobile\/promotion\/promscms\/sale\w+\.jsp reject
+request if ${url} ~= /^https?:\/\/prom\.mobile\.gome\.com\.cn\/mobile\/promotion\/promscms\/\w+\.jsp/i then reject(404)
+request if ${url} ~= /^https?:\/\/prom\.mobile\.gome\.com\.cn\/mobile\/promotion\/promscms\/sale\w+\.jsp/i then reject(404)
 
 
 [MITM]

@@ -26,30 +26,30 @@ IP-CIDR, 121.196.197.147/32, REJECT, no-resolve
 
 [Rewrite]
 # 信息流，帖子详情页等各种广告
-^https?:\/\/ssp\.soulapp\.cn\/api\/q reject-dict
-^https?:\/\/ssp\.soulapp\.cn\/api\/ad\/config reject-dict
-^https?:\/\/chat-live\.soulapp\.cn\/live\/planet\/recListV2 reject-200
-^https?:\/\/api-chat\.soulapp\.cn\/chat\/entrance\/first reject-dict
+request if ${url} ~= /^https?:\/\/ssp\.soulapp\.cn\/api\/q/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/ssp\.soulapp\.cn\/api\/ad\/config/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/chat-live\.soulapp\.cn\/live\/planet\/recListV2/i then reject(200)
+request if ${url} ~= /^https?:\/\/api-chat\.soulapp\.cn\/chat\/entrance\/first/i then reject_dict(200)
 # 国际版Soul去广告
-^https?:\/\/api-global\.soulapp\.me\/app\/open\/get reject
+request if ${url} ~= /^https?:\/\/api-global\.soulapp\.me\/app\/open\/get/i then reject(404)
 
 
 [Script]
 # 替换信息收集
-http-request ^https:\/\/data-collector\.soulapp\.cn\/api\/data\/report\/v\d script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/template/req_replace_body.js, requires-body=true, timeout=60, tag=req_replace_body, enable={soul_enable}
+request if ${url} ~= /^https:\/\/data-collector\.soulapp\.cn\/api\/data\/report\/v\d/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/template/req_replace_body.js") with enable=${soul_enable}, tag="req_replace_body", timeout=60, requires_body=true
 # 青少年模式弹窗
-http-response ^https?:\/\/api-account\.soulapp\.cn\/teenager\/config script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js, requires-body=true, timeout=60, tag=soul_ads, enable={soul_enable}
-http-response ^https?:\/\/api-a\.soulapp\.cn\/v2\/post\/gift\/list script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js, requires-body=true, timeout=60, tag=soul_ads, enable={soul_enable}
-http-response ^https?:\/\/api-a\.soulapp\.cn\/official\/scene\/module script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js, requires-body=true, timeout=60, tag=soul_ads, enable={soul_enable}
-http-response ^https?:\/\/api-user\.soulapp\.cn\/furion\/position\/content script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js, requires-body=true, timeout=60, tag=soul_ads, enable={soul_enable}
-http-response ^https?:\/\/api-user\.soulapp\.cn\/v\d\/planet\/config script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js, requires-body=true, timeout=60, tag=soul_ads, enable={soul_enable}
-http-response ^https?:\/\/api-chat\.soulapp\.cn\/chat\/limitInfo script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js, requires-body=true, timeout=60, tag=soul_ads, enable={soul_enable}
-http-response ^https?:\/\/post\.soulapp\.cn\/hot\/soul\/rank script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js, requires-body=true, timeout=60, tag=soul_ads, enable={soul_enable}
-http-response ^https?:\/\/post\.soulapp\.cn\/v\d\/post\/homepage\/guide\/card script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js, requires-body=true, timeout=60, tag=soul_ads, enable={soul_enable}
-http-response ^https?:\/\/post\.soulapp\.cn\/v\d\/post\/recSquare\/subTabs script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js, requires-body=true, timeout=60, tag=soul_ads, enable={soul_enable}
-http-response ^https?:\/\/chat-live\.soulapp\.cn\/chatroom\/chatClassifyRoomList script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js, requires-body=true, timeout=60, tag=soul_ads, enable={soul_enable}
-http-response ^https?:\/\/gateway-mobile-gray\.soulapp\.cn\/mobile\/app\/version\/queryIos script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js, requires-body=true, timeout=60, tag=soul_ads, enable={soul_enable}
-http-response ^https?:\/\/47\.110\.187\.87\/winterfell\/v2\/getIpByDomain script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js, requires-body=true, timeout=60, tag=soul_ads, enable={soul_enable}
+response if ${url} ~= /^https?:\/\/api-account\.soulapp\.cn\/teenager\/config/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js") with enable=${soul_enable}, tag="soul_ads", timeout=60, requires_body=true
+response if ${url} ~= /^https?:\/\/api-a\.soulapp\.cn\/v2\/post\/gift\/list/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js") with enable=${soul_enable}, tag="soul_ads", timeout=60, requires_body=true
+response if ${url} ~= /^https?:\/\/api-a\.soulapp\.cn\/official\/scene\/module/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js") with enable=${soul_enable}, tag="soul_ads", timeout=60, requires_body=true
+response if ${url} ~= /^https?:\/\/api-user\.soulapp\.cn\/furion\/position\/content/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js") with enable=${soul_enable}, tag="soul_ads", timeout=60, requires_body=true
+response if ${url} ~= /^https?:\/\/api-user\.soulapp\.cn\/v\d\/planet\/config/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js") with enable=${soul_enable}, tag="soul_ads", timeout=60, requires_body=true
+response if ${url} ~= /^https?:\/\/api-chat\.soulapp\.cn\/chat\/limitInfo/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js") with enable=${soul_enable}, tag="soul_ads", timeout=60, requires_body=true
+response if ${url} ~= /^https?:\/\/post\.soulapp\.cn\/hot\/soul\/rank/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js") with enable=${soul_enable}, tag="soul_ads", timeout=60, requires_body=true
+response if ${url} ~= /^https?:\/\/post\.soulapp\.cn\/v\d\/post\/homepage\/guide\/card/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js") with enable=${soul_enable}, tag="soul_ads", timeout=60, requires_body=true
+response if ${url} ~= /^https?:\/\/post\.soulapp\.cn\/v\d\/post\/recSquare\/subTabs/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js") with enable=${soul_enable}, tag="soul_ads", timeout=60, requires_body=true
+response if ${url} ~= /^https?:\/\/chat-live\.soulapp\.cn\/chatroom\/chatClassifyRoomList/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js") with enable=${soul_enable}, tag="soul_ads", timeout=60, requires_body=true
+response if ${url} ~= /^https?:\/\/gateway-mobile-gray\.soulapp\.cn\/mobile\/app\/version\/queryIos/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js") with enable=${soul_enable}, tag="soul_ads", timeout=60, requires_body=true
+response if ${url} ~= /^https?:\/\/47\.110\.187\.87\/winterfell\/v2\/getIpByDomain/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js") with enable=${soul_enable}, tag="soul_ads", timeout=60, requires_body=true
 
 
 [MITM]

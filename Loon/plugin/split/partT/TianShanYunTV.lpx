@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/www\.tsytv\.com\.cn\/api\/app\/ios\/ads reject-img
+request if ${url} ~= /^https?:\/\/www\.tsytv\.com\.cn\/api\/app\/ios\/ads/i then reject_img(200)
 
 
 [MITM]

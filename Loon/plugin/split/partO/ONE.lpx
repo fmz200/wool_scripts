@@ -11,9 +11,9 @@
 
 [Rewrite]
 # 开屏广告
-^https?:\/\/v3\.wufazhuce\.com:8000\/api\/adpreloadlist reject-dict
-^https?:\/\/app\.api\.d3yuiw4\.com\/api\/app\/ad reject
-^https?:\/\/api\.21ec74\.com\/v2\.5\/ad reject
+request if ${url} ~= /^https?:\/\/v3\.wufazhuce\.com:8000\/api\/adpreloadlist/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/app\.api\.d3yuiw4\.com\/api\/app\/ad/i then reject(404)
+request if ${url} ~= /^https?:\/\/api\.21ec74\.com\/v2\.5\/ad/i then reject(404)
 
 
 [MITM]

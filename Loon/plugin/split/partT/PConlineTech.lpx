@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/mrobot\.pconline\.com\.cn\/s-900\/onlineinfo\/cms\/launch reject-200
+request if ${url} ~= /^https?:\/\/mrobot\.pconline\.com\.cn\/s-900\/onlineinfo\/cms\/launch/i then reject(200)
 
 
 [MITM]

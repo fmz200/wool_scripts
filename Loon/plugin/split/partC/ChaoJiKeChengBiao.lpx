@@ -11,8 +11,8 @@
 
 [Rewrite]
 # 开屏广告 由【jinlvei】分享
-^https?:\/\/182\.92\.244\.70\/d\/json reject-dict
-http:\/\/ad\.myfriday\.cn\/d\/json\/1\.1 reject
+request if ${url} ~= /^https?:\/\/182\.92\.244\.70\/d\/json/i then reject_dict(200)
+request if ${url} ~= /http:\/\/ad\.myfriday\.cn\/d\/json\/1\.1/i then reject(404)
 
 
 [MITM]

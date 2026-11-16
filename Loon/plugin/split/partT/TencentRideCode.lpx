@@ -12,7 +12,7 @@
 [Rewrite]
 # 微信小程序
 # 感谢【jinlvei】分享
-^https?:\/\/ccmsupport-sz\.tenpay\.com\/cgi-bin\/common\/ccm_page_element.cgi reject
+request if ${url} ~= /^https?:\/\/ccmsupport-sz\.tenpay\.com\/cgi-bin\/common\/ccm_page_element.cgi/i then reject(404)
 
 
 [MITM]

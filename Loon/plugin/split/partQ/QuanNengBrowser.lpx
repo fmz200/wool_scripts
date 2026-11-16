@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 感谢【梭哈 All in】分享
-^https?:\/\/mi\.gdt\.qq\.com\/gdt_mview\.fcg\?posid= reject-dict
+request if ${url} ~= /^https?:\/\/mi\.gdt\.qq\.com\/gdt_mview\.fcg\?posid=/i then reject_dict(200)
 
 
 [MITM]

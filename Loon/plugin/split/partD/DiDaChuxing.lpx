@@ -11,11 +11,11 @@
 
 [Rewrite]
 # 小程序净化
-^https?:\/\/capis(-\d)?\.didapinche\.com\/adbase reject
-^https?:\/\/capis(-\d)?\.didapinche\.com\/ad\/ reject
-^https?:\/\/adx-cn\.anythinktech\.com\/bid reject-dict
-^https?:\/\/capis(-?\w*)?\.didapinche\.com\/publish\/api\/upgrade reject-dict
-^https?:\/\/www\.didapinche\.com\/app\/adstat\/ reject-200
+request if ${url} ~= /^https?:\/\/capis(-\d)?\.didapinche\.com\/adbase/i then reject(404)
+request if ${url} ~= /^https?:\/\/capis(-\d)?\.didapinche\.com\/ad\//i then reject(404)
+request if ${url} ~= /^https?:\/\/adx-cn\.anythinktech\.com\/bid/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/capis(-?\w*)?\.didapinche\.com\/publish\/api\/upgrade/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/www\.didapinche\.com\/app\/adstat\//i then reject(200)
 
 
 [MITM]

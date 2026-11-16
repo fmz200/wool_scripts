@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/service\.4gtv\.tv\/4gtv\/Data\/(?>GetAD|ADLog) reject-200
+request if ${url} ~= /^https?:\/\/service\.4gtv\.tv\/4gtv\/Data\/(?>GetAD|ADLog)/i then reject(200)
 
 
 [MITM]

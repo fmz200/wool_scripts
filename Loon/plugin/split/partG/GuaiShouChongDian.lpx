@@ -10,9 +10,9 @@
 
 
 [Rewrite]
-https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert\/skin) reject-dict
+request if ${url} ~= /https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert\/skin)/i then reject_dict(200)
 # 微信小程序
-^https?:\/\/aag\.enmonster\.com\/apa\/index\/advert\/skin reject
+request if ${url} ~= /^https?:\/\/aag\.enmonster\.com\/apa\/index\/advert\/skin/i then reject(404)
 
 
 [MITM]

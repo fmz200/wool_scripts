@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/imeclient\.openspeech\.cn\/adservice\/ reject-200
+request if ${url} ~= /^https?:\/\/imeclient\.openspeech\.cn\/adservice\//i then reject(200)
 
 
 [MITM]

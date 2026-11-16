@@ -10,13 +10,13 @@
 
 
 [Rewrite]
-^https?:\/\/aimg\.babytreeimg\.com\/group1\/M00\/*\/*\/.*.jpg reject-200
+request if ${url} ~= /^https?:\/\/aimg\.babytreeimg\.com\/group1\/M00\/*\/*\/.*.jpg/i then reject(200)
 # 开屏广告 感谢【alist.choc.ga】分享
-^https?:\/\/plough\.babytree\.com\/plough\.do reject-200
+request if ${url} ~= /^https?:\/\/plough\.babytree\.com\/plough\.do/i then reject(200)
 # 弹窗广告 感谢【Ron】分享
-^https?:\/\/mapiweb\.babytree\.com\/newapi\/luban\/behavior\/receive reject-200
-^https?:\/\/go\.babytree\.com\/go_pregnancy\/api\/index_activity\/get_app_index_activity reject-200
-^https?:\/\/go\.babytree\.com\/go_tool\/api\/feeding_record\/get_home_banner_info reject-dict
+request if ${url} ~= /^https?:\/\/mapiweb\.babytree\.com\/newapi\/luban\/behavior\/receive/i then reject(200)
+request if ${url} ~= /^https?:\/\/go\.babytree\.com\/go_pregnancy\/api\/index_activity\/get_app_index_activity/i then reject(200)
+request if ${url} ~= /^https?:\/\/go\.babytree\.com\/go_tool\/api\/feeding_record\/get_home_banner_info/i then reject_dict(200)
 
 
 [MITM]

@@ -13,15 +13,15 @@
 sudaxnyr_enable = switch,true,false,tag=苏打校园APP-脚本开关
 
 [Rewrite]
-^https?:\/\/api\.sodalife\.xyz\/v1\/posters\?location=SODA_APP%3AHOME%3ABOTTOM reject-dict
-^https?:\/\/api\.sodalife\.xyz\/v1\/posters\?location=SODA_APP%3AHOME%3ACENTER reject-dict
-^https?:\/\/api\.sodalife\.xyz\/v1\/posters\?location=SODA_APP%3AMINE%3ABOTTOM reject-dict
-^https?:\/\/api\.sodalife\.xyz\/v1\/posters\?location=SODA_APP%3AREWARDS%3ACENTER reject-dict
-^https?:\/\/api\.sodalife\.xyz\/v1\/goods reject-dict
+request if ${url} ~= /^https?:\/\/api\.sodalife\.xyz\/v1\/posters\?location=SODA_APP%3AHOME%3ABOTTOM/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/api\.sodalife\.xyz\/v1\/posters\?location=SODA_APP%3AHOME%3ACENTER/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/api\.sodalife\.xyz\/v1\/posters\?location=SODA_APP%3AMINE%3ABOTTOM/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/api\.sodalife\.xyz\/v1\/posters\?location=SODA_APP%3AREWARDS%3ACENTER/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/api\.sodalife\.xyz\/v1\/goods/i then reject_dict(200)
 
 
 [Script]
-http-response ^https?:\/\/api\.sodalife\.xyz\/v1\/posters\?location=SODA_APP%3AHOME%3ATOP script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soda.js, requires-body=true, timeout=60, tag=苏打校园APP, enable={sudaxnyr_enable}
+response if ${url} ~= /^https?:\/\/api\.sodalife\.xyz\/v1\/posters\?location=SODA_APP%3AHOME%3ATOP/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soda.js") with enable=${sudaxnyr_enable}, tag="苏打校园APP", timeout=60, requires_body=true
 
 
 [MITM]

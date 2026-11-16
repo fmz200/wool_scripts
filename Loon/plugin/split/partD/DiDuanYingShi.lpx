@@ -10,10 +10,10 @@
 
 
 [Rewrite]
-^https?:\/\/img\.ddrk\.me\/ad190824 reject-img
-^https?:\/\/img\.ddrk\.me\/cover\.png reject-img
-^https?:\/\/ddrk\.me\/image\/logo_footer\.png reject-img
-^https?:\/\/ddrk\.me\/wp-content\/plugins\/advanced-floating-content-lite\/public\/images\/close\.png reject-img
+request if ${url} ~= /^https?:\/\/img\.ddrk\.me\/ad190824/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/img\.ddrk\.me\/cover\.png/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/ddrk\.me\/image\/logo_footer\.png/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/ddrk\.me\/wp-content\/plugins\/advanced-floating-content-lite\/public\/images\/close\.png/i then reject_img(200)
 
 
 [MITM]

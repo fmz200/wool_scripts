@@ -15,7 +15,7 @@ DOMAIN-SUFFIX, bu02.zybang.com, REJECT
 
 
 [Rewrite]
-^https?:\/\/(syh|www)\.zybang\.com\/adx\/ reject-200
+request if ${url} ~= /^https?:\/\/(syh|www)\.zybang\.com\/adx\//i then reject(200)
 
 
 [MITM]

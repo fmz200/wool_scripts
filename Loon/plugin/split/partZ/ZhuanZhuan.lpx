@@ -13,19 +13,19 @@
 vrvr_enable = switch,true,false,tag=转转-脚本开关
 
 [Rewrite]
-^https?:\/\/app\.zhuanzhuan\.com\/zzx\/transfer\/getConfigInfo reject-dict
-^https?:\/\/app\.zhuanzhuan\.com\/zzopen\/popwindow\/getallpopwin\? reject-dict
-^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzlogic\/getOpenScreen reject-dict
+request if ${url} ~= /^https?:\/\/app\.zhuanzhuan\.com\/zzx\/transfer\/getConfigInfo/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/app\.zhuanzhuan\.com\/zzopen\/popwindow\/getallpopwin\?/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzlogic\/getOpenScreen/i then reject_dict(200)
 # 转转右下角悬浮广告
-^https?:\/\/app\.zhuanzhuan\.com\/zz\/transfer\/userred\?scene=homePage reject-dict
-^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getfeedflowinfo\? response-body-replace-regex userRed fmz200
+request if ${url} ~= /^https?:\/\/app\.zhuanzhuan\.com\/zz\/transfer\/userred\?scene=homePage/i then reject_dict(200)
+response if ${url} ~= /^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getfeedflowinfo\?/i then response.body.replace(/userRed/, "fmz200")
 # “我的”页面去除冗余的模块
-^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getchoicegoodsinfos response-body-replace-regex infoData fmz200
+response if ${url} ~= /^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getchoicegoodsinfos/i then response.body.replace(/infoData/, "fmz200")
 
 
 [Script]
 # “我的”页面去除冗余的模块
-http-response ^https?:\/\/app\.zhuanzhuan\.com\/zz\/transfer\/getmyprofilev3 script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/zhuanzhuan/zhuanzhuan.js, requires-body=true, timeout=60, tag=转转, enable={vrvr_enable}
+response if ${url} ~= /^https?:\/\/app\.zhuanzhuan\.com\/zz\/transfer\/getmyprofilev3/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/zhuanzhuan/zhuanzhuan.js") with enable=${vrvr_enable}, tag="转转", timeout=60, requires_body=true
 
 
 [MITM]

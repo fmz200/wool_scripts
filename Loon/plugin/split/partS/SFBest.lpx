@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/mapi\.sfbest\.com\/brokerservice-server\/cms\/getPositionById.* reject
+request if ${url} ~= /^https?:\/\/mapi\.sfbest\.com\/brokerservice-server\/cms\/getPositionById.*/i then reject(404)
 
 
 [MITM]

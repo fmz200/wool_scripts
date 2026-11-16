@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/capi\.mwee\.cn\/app-api\/V\d{2}\/app\/(ad|getstartad) reject
+request if ${url} ~= /^https?:\/\/capi\.mwee\.cn\/app-api\/V\d{2}\/app\/(ad|getstartad)/i then reject(404)
 
 
 [MITM]

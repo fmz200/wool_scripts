@@ -10,9 +10,9 @@
 
 
 [Rewrite]
-^https?:\/\/kano\.guahao\.cn\/[a-zA-Z0-9]{12} reject-200
-^https?:\/\/kano\.guahao\.cn\/.+?\?resize=\d{3}-\d{4} reject-img
-^https?:\/\/app\.wy\.guahao\.com\/json\/white\/dayquestion\/getpopad reject
+request if ${url} ~= /^https?:\/\/kano\.guahao\.cn\/[a-zA-Z0-9]{12}/i then reject(200)
+request if ${url} ~= /^https?:\/\/kano\.guahao\.cn\/.+?\?resize=\d{3}-\d{4}/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/app\.wy\.guahao\.com\/json\/white\/dayquestion\/getpopad/i then reject(404)
 
 
 [MITM]

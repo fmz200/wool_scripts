@@ -10,5 +10,5 @@
 
 
 [Rewrite]
-http:\/\/dili.sqcosmos.com\/jiekou\/mains\/p\d+.html response-body-json-jq '.album |= map(select(.id != "4154" and .id != "4165"))'
-http:\/\/dili.sqcosmos.com\/jiekou\/endpage\/ad reject-dict
+response if ${url} ~= /http:\/\/dili.sqcosmos.com\/jiekou\/mains\/p\d+.html/i then response.json.jq(".album |= map(select(.id != \"4154\" and .id != \"4165\"))")
+request if ${url} ~= /http:\/\/dili.sqcosmos.com\/jiekou\/endpage\/ad/i then reject_dict(200)

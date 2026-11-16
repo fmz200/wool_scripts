@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/t1\.market\.xiaomi\.com\/thumbnail\/webp\/w1170q100\/ reject
+request if ${url} ~= /^https?:\/\/t1\.market\.xiaomi\.com\/thumbnail\/webp\/w1170q100\//i then reject(404)
 
 
 [MITM]

@@ -14,8 +14,8 @@ DOMAIN, sdkconfig.ad.xiaomi.com, REJECT
 
 
 [Rewrite]
-^https?:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|carousel\/banners|myTab|openingBanner) reject-dict
-^https?:\/\/home\.mi\.com\/cgi-op\/api\/v1\/resource\/realtime\/openingBanner reject-dict
+request if ${url} ~= /^https?:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|carousel\/banners|myTab|openingBanner)/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/home\.mi\.com\/cgi-op\/api\/v1\/resource\/realtime\/openingBanner/i then reject_dict(200)
 
 
 [MITM]

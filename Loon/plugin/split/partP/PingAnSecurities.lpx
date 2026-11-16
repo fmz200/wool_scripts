@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 开屏广告 感谢【umie】分享
-^https?:\/\/pacdn\.m\.stock\.pingan\.com\/images\/ reject-dict
+request if ${url} ~= /^https?:\/\/pacdn\.m\.stock\.pingan\.com\/images\//i then reject_dict(200)
 
 
 [MITM]

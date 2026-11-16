@@ -19,8 +19,8 @@ IP-CIDR, 122.229.29.89/32, REJECT, no-resolve
 
 
 [Rewrite]
-^https?:\/\/cloud\.189\.cn\/include\/splash\/ reject
-^https?:\/\/zt-app\.go189\.cn\/zt-app\/welcome\/.*?Animation reject-img
+request if ${url} ~= /^https?:\/\/cloud\.189\.cn\/include\/splash\//i then reject(404)
+request if ${url} ~= /^https?:\/\/zt-app\.go189\.cn\/zt-app\/welcome\/.*?Animation/i then reject_img(200)
 
 
 [MITM]

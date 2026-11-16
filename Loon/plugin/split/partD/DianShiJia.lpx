@@ -10,8 +10,8 @@
 
 
 [Rewrite]
-^https?:\/\/api\.gaoqingdianshi\.com\/api\/v\d\/ad\/ reject
-^https?:\/\/cdn\.dianshihome\.com\/static\/ad\/ reject
+request if ${url} ~= /^https?:\/\/api\.gaoqingdianshi\.com\/api\/v\d\/ad\//i then reject(404)
+request if ${url} ~= /^https?:\/\/cdn\.dianshihome\.com\/static\/ad\//i then reject(404)
 
 
 [MITM]

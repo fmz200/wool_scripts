@@ -14,15 +14,15 @@ yzxiapp_enable = switch,true,false,tag=悠洗APP-脚本开关
 
 [Rewrite]
 # 净化 感谢【TEXAS】分享
-^https?:\/\/api\.ulife\.group\/signintask\/adServing reject-dict
-^https?:\/\/api\.ulife\.group\/auth\/account\/getUpgradeStrategy reject-dict
-^https?:\/\/api\.ulife\.group\/market\/frontEntrance\/getThirdAdvertising\?displayPort=1&type=15 reject-dict
-^https?:\/\/api\.ulife\.group\/market\/memberCard\/listMemberCard\?isShowSecondaryCard=1 reject-dict
-^https?:\/\/api\.ulife\.group\/auth\/account\/entrance reject-dict
+request if ${url} ~= /^https?:\/\/api\.ulife\.group\/signintask\/adServing/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/api\.ulife\.group\/auth\/account\/getUpgradeStrategy/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/api\.ulife\.group\/market\/frontEntrance\/getThirdAdvertising\?displayPort=1&type=15/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/api\.ulife\.group\/market\/memberCard\/listMemberCard\?isShowSecondaryCard=1/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/api\.ulife\.group\/auth\/account\/entrance/i then reject_dict(200)
 
 
 [Script]
-http-response ^https?:\/\/api\.ulife\.group\/market\/homeIconDetail\/list\/v7 script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/yx.js, requires-body=true, timeout=60, tag=悠洗APP, enable={yzxiapp_enable}
+response if ${url} ~= /^https?:\/\/api\.ulife\.group\/market\/homeIconDetail\/list\/v7/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/yx.js") with enable=${yzxiapp_enable}, tag="悠洗APP", timeout=60, requires_body=true
 
 
 

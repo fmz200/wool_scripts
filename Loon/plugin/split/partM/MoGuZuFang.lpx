@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/api\.mgzf\.com\/renter-operation\/home\/startHomePage reject
+request if ${url} ~= /^https?:\/\/api\.mgzf\.com\/renter-operation\/home\/startHomePage/i then reject(404)
 
 
 [MITM]

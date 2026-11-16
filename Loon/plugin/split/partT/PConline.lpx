@@ -25,10 +25,10 @@ DOMAIN-SUFFIX, ivy.pconline.com.cn, REJECT
 
 
 [Rewrite]
-^https?:\/\/mrobot\.pconline\.com\.cn\/s\/onlineinfo\/ad\/ reject-200
-^https?:\/\/agent-count\.pconline\.com\.cn\/counter\/adAnalyse\/ reject
-^https?:\/\/mrobot\.(pcauto|pconline)\.com\.cn\/v\d\/ad\dp reject
-^https?:\/\/mrobot\.pcauto\.com\.cn\/xsp\/s\/auto\/info\/(ad|preload) reject
+request if ${url} ~= /^https?:\/\/mrobot\.pconline\.com\.cn\/s\/onlineinfo\/ad\//i then reject(200)
+request if ${url} ~= /^https?:\/\/agent-count\.pconline\.com\.cn\/counter\/adAnalyse\//i then reject(404)
+request if ${url} ~= /^https?:\/\/mrobot\.(pcauto|pconline)\.com\.cn\/v\d\/ad\dp/i then reject(404)
+request if ${url} ~= /^https?:\/\/mrobot\.pcauto\.com\.cn\/xsp\/s\/auto\/info\/(ad|preload)/i then reject(404)
 
 
 [MITM]

@@ -87,18 +87,18 @@ DOMAIN-KEYWORD, asiad.byteactivity, REJECT
 [Rewrite]
 # 感谢【可莉】分享
 # 发现页面 正在直播
-^https:\/\/webcast-open\.douyin\.com\/webcast\/openapi\/feed\/\? reject-dict
+request if ${url} ~= /^https:\/\/webcast-open\.douyin\.com\/webcast\/openapi\/feed\/\?/i then reject_dict(200)
 # 播放器界面 - 关联提示语及你关注的人喜欢了
-^https:\/\/beta-luna\.douyin\.com\/luna\/card\? response-body-json-replace card_items[0].priority_display false card_items[0].is_show false preview_guide null
+response if ${url} ~= /^https:\/\/beta-luna\.douyin\.com\/luna\/card\?/i then response.json.replace(["card_items[0].priority_display", "card_items[0].is_show", "preview_guide"], [false, false, null])
 # 歌曲详情 - 热门视频
-^https:\/\/beta-luna\.douyin\.com\/luna\/more-panel\? response-body-json-del blocks[1]
+response if ${url} ~= /^https:\/\/beta-luna\.douyin\.com\/luna\/more-panel\?/i then response.json.delete("blocks[1]")
 # 邀请开通会员弹窗
-^https:\/\/beta-luna\.douyin\.com\/luna\/commerce\/v2\/commerce_info\? reject-dict
+request if ${url} ~= /^https:\/\/beta-luna\.douyin\.com\/luna\/commerce\/v2\/commerce_info\?/i then reject_dict(200)
 # 字节跳动广告
-^https:\/\/ether-pack\.pangolin-sdk-toutiao\.com\/union\/endcard\/ reject
-^https:\/\/api-access\.pangolin-sdk-toutiao\d?\.com\/api\/ad\/ reject
-^https:\/\/sf\d+-fe-tos\.pglstatp-toutiao\.com\/obj\/ad-pattern\/ reject
-^https:\/\/lf-cdn-tos\.bytescm\.com\/obj\/static\/ad\/ reject
+request if ${url} ~= /^https:\/\/ether-pack\.pangolin-sdk-toutiao\.com\/union\/endcard\//i then reject(404)
+request if ${url} ~= /^https:\/\/api-access\.pangolin-sdk-toutiao\d?\.com\/api\/ad\//i then reject(404)
+request if ${url} ~= /^https:\/\/sf\d+-fe-tos\.pglstatp-toutiao\.com\/obj\/ad-pattern\//i then reject(404)
+request if ${url} ~= /^https:\/\/lf-cdn-tos\.bytescm\.com\/obj\/static\/ad\//i then reject(404)
 
 
 [MITM]

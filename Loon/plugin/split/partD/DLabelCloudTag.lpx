@@ -11,8 +11,8 @@
 
 [Rewrite]
 # 去开屏广告
-^https:\/\/imagepc\.ctaiot\.com\/dlabel\/0\/startpage reject
-^https:\/\/dudian-oss\.oss-cn-shenzhen\.aliyuncs\.com\/dlabel\/1\/startpage reject
+request if ${url} ~= /^https:\/\/imagepc\.ctaiot\.com\/dlabel\/0\/startpage/i then reject(404)
+request if ${url} ~= /^https:\/\/dudian-oss\.oss-cn-shenzhen\.aliyuncs\.com\/dlabel\/1\/startpage/i then reject(404)
 
 
 [MITM]

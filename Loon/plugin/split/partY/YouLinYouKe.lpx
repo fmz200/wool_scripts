@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/new-app-api\.ylyk\.com\/v\d\/user\/myinfo\/adviser reject
+request if ${url} ~= /^https?:\/\/new-app-api\.ylyk\.com\/v\d\/user\/myinfo\/adviser/i then reject(404)
 
 
 [MITM]

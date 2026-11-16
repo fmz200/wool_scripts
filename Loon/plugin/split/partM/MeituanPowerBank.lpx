@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/cdb\.meituan\.com\/marketing\/source\/getPageSlotList reject-dict
+request if ${url} ~= /^https?:\/\/cdb\.meituan\.com\/marketing\/source\/getPageSlotList/i then reject_dict(200)
 
 
 [MITM]

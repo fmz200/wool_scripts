@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 开屏广告 感谢【Mozart】分享
-^https?:\/\/z\.onewo\.com\/passer\/api\/ads\/v1\/8\/list reject-200
+request if ${url} ~= /^https?:\/\/z\.onewo\.com\/passer\/api\/ads\/v1\/8\/list/i then reject(200)
 
 
 [MITM]

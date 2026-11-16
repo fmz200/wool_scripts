@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 开屏广告 感谢【Ava阿檬】分享
-^https?:\/\/www\.gcores\.com\/gapi\/v1\/app-start-pages\?page reject-dict
+request if ${url} ~= /^https?:\/\/www\.gcores\.com\/gapi\/v1\/app-start-pages\?page/i then reject_dict(200)
 
 
 [MITM]

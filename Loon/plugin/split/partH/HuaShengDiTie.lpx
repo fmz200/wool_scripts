@@ -10,8 +10,8 @@
 
 
 [Rewrite]
-^https?:\/\/cmsapi\.wifi8\.com\/v\d\/(emptyAd|adNew)\/ reject
-^https?:\/\/cmsfile\.wifi8\.com\/uploads\/png\/ reject-img
+request if ${url} ~= /^https?:\/\/cmsapi\.wifi8\.com\/v\d\/(emptyAd|adNew)\//i then reject(404)
+request if ${url} ~= /^https?:\/\/cmsfile\.wifi8\.com\/uploads\/png\//i then reject_img(200)
 
 
 [MITM]

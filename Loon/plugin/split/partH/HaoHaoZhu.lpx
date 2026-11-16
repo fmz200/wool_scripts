@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/api\.haohaozhu\.cn\/index\.php\/home\/AppInit\/getStartPhoto reject
+request if ${url} ~= /^https?:\/\/api\.haohaozhu\.cn\/index\.php\/home\/AppInit\/getStartPhoto/i then reject(404)
 
 
 [MITM]

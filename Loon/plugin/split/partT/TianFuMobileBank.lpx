@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/cgbank\.oss-cn-shenzhen\.aliyuncs\.com\/visual\/advertisingImg\/.+.jpg reject-200
+request if ${url} ~= /^https?:\/\/cgbank\.oss-cn-shenzhen\.aliyuncs\.com\/visual\/advertisingImg\/.+.jpg/i then reject(200)
 
 
 [MITM]

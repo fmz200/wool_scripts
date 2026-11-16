@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/open3\.vistastory\.com\/v\d\/api\/inde/loading_ad reject-200
+request if ${url} ~= /^https?:\/\/open3\.vistastory\.com\/v\d\/api\/inde\/loading_ad/i then reject(200)
 
 
 

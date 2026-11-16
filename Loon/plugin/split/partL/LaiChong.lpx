@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/(mobile|shop)\.laichon\.com\/api\/(v1\/goods\/goodsList|exposureAdvStatistics|getWebAdvList) reject
+request if ${url} ~= /^https?:\/\/(mobile|shop)\.laichon\.com\/api\/(v1\/goods\/goodsList|exposureAdvStatistics|getWebAdvList)/i then reject(404)
 
 
 [MITM]

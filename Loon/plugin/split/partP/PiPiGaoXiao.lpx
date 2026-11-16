@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/adapi\.izuiyou\.com\/ad\/fetch_api_ads\? reject-dict
+request if ${url} ~= /^https?:\/\/adapi\.izuiyou\.com\/ad\/fetch_api_ads\?/i then reject_dict(200)
 
 
 

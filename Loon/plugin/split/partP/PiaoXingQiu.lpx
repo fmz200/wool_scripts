@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https:\/\/appapi\.caiyicloud\.com\/cyy_gatewayapi\/home\/pub\/v3\/banners\/app_start_page reject-dict
+request if ${url} ~= /^https:\/\/appapi\.caiyicloud\.com\/cyy_gatewayapi\/home\/pub\/v3\/banners\/app_start_page/i then reject_dict(200)
 
 
 [MITM]

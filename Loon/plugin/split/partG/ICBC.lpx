@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 如开启可自行添加主机名
-^https?:\/\/v\.icbc\.com\.cn\/userfiles\/Resources\/WAP\/advertisement\/ reject-200
+request if ${url} ~= /^https?:\/\/v\.icbc\.com\.cn\/userfiles\/Resources\/WAP\/advertisement\//i then reject(200)
 
 
 [MITM]

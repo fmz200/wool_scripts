@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 更新提示 感谢【alist.choc.ga】分享
-^https?:\/\/szdmobile\.suzhou\.gov\.cn\/thirdapp-center\/appUpdate\/update reject-dict
+request if ${url} ~= /^https?:\/\/szdmobile\.suzhou\.gov\.cn\/thirdapp-center\/appUpdate\/update/i then reject_dict(200)
 
 
 [MITM]

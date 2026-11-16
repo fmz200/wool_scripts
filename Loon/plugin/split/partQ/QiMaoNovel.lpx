@@ -21,13 +21,13 @@ DOMAIN, pgdt.ugdtimg.com, REJECT
 
 [Rewrite]
 # 删除了域名lf-cdn-tos.bytescm.com，原因是无法MITM
-^https?:\/\/open\.e\.kuaishou\.cn\/rest\/e\/v3\/open\/univ reject
-^https?:\/\/api-access\.pangolin-sdk-toutiao-b\.com\/api\/ad\/union\/sdk\/get_ads reject
-^https?:\/\/api-access\.(pangolin-sdk-toutiao|pangolin-sdk-toutiao1)\.com\/api\/ad reject
-^https?:\/\/dsp\-x\.jd\.com\/adx\/sdk reject
-^https?:\/\/api\-cfg\.wtzw\.com\/v1\/(adv|reward|operation) reject
-^https?:\/\/p1\-lm\.adukwai\.com\/bs2\/adUnionVideo reject
-^https?:\/\/lf\-cdn\-tos\.bytescm\.com\/obj\/static\/ad reject
+request if ${url} ~= /^https?:\/\/open\.e\.kuaishou\.cn\/rest\/e\/v3\/open\/univ/i then reject(404)
+request if ${url} ~= /^https?:\/\/api-access\.pangolin-sdk-toutiao-b\.com\/api\/ad\/union\/sdk\/get_ads/i then reject(404)
+request if ${url} ~= /^https?:\/\/api-access\.(pangolin-sdk-toutiao|pangolin-sdk-toutiao1)\.com\/api\/ad/i then reject(404)
+request if ${url} ~= /^https?:\/\/dsp\-x\.jd\.com\/adx\/sdk/i then reject(404)
+request if ${url} ~= /^https?:\/\/api\-cfg\.wtzw\.com\/v1\/(adv|reward|operation)/i then reject(404)
+request if ${url} ~= /^https?:\/\/p1\-lm\.adukwai\.com\/bs2\/adUnionVideo/i then reject(404)
+request if ${url} ~= /^https?:\/\/lf\-cdn\-tos\.bytescm\.com\/obj\/static\/ad/i then reject(404)
 
 
 [MITM]

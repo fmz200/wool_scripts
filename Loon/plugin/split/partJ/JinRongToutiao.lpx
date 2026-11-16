@@ -35,8 +35,8 @@ DOMAIN-SUFFIX, s3a.pstatp.com, REJECT
 
 [Rewrite]
 # 感谢【Jörgen Frecht】分享
-^https?:\/\/p\d\.pstatp.com\/origin reject
-^https?:\/\/pb\d\.pstatp.com\/origin reject
+request if ${url} ~= /^https?:\/\/p\d\.pstatp.com\/origin/i then reject(404)
+request if ${url} ~= /^https?:\/\/pb\d\.pstatp.com\/origin/i then reject(404)
 
 
 [MITM]

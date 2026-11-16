@@ -11,9 +11,9 @@
 
 [Rewrite]
 # 弹窗广告（APP降级10.66.80版本） 如开启可自行添加主机名 
-^https?:\/\/mapi-app\.bestpay\.com\.cn\/gapi\/appclient\/noEnc\/getAppPopup reject-dict
+request if ${url} ~= /^https?:\/\/mapi-app\.bestpay\.com\.cn\/gapi\/appclient\/noEnc\/getAppPopup/i then reject_dict(200)
 # 开屏广告（APP降级10.66.80版本）
-^https?:\/\/mapi-app\.bestpay\.com\.cn\/gapi\/appClient\/noEnc\/getHomePageAds reject-dict
+request if ${url} ~= /^https?:\/\/mapi-app\.bestpay\.com\.cn\/gapi\/appClient\/noEnc\/getHomePageAds/i then reject_dict(200)
 
 
 [MITM]

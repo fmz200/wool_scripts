@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/peisongapi\.meituan\.com\/client\/getInitiateImage reject-200
+request if ${url} ~= /^https?:\/\/peisongapi\.meituan\.com\/client\/getInitiateImage/i then reject(200)
 
 
 [MITM]

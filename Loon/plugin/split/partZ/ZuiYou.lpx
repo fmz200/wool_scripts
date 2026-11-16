@@ -10,8 +10,8 @@
 
 
 [Rewrite]
-^https?:\/\/api\.izuiyou\.com\/ad\/ reject
-^https?:\/\/adapi\.izuiyou\.com\/ reject
+request if ${url} ~= /^https?:\/\/api\.izuiyou\.com\/ad\//i then reject(404)
+request if ${url} ~= /^https?:\/\/adapi\.izuiyou\.com\//i then reject(404)
 
 
 [MITM]

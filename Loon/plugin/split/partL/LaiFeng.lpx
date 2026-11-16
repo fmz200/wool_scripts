@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/api\.laifeng\.com\/v\d\/start\/ads reject
+request if ${url} ~= /^https?:\/\/api\.laifeng\.com\/v\d\/start\/ads/i then reject(404)
 
 
 [MITM]

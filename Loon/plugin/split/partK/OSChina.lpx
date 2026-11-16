@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/www\.oschina\.net\/action\/apiv2\/get_launcher reject-img
+request if ${url} ~= /^https?:\/\/www\.oschina\.net\/action\/apiv2\/get_launcher/i then reject_img(200)
 
 
 [MITM]

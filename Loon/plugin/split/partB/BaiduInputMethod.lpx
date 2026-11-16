@@ -10,19 +10,19 @@
 
 
 [Rewrite]
-^https?:\/\/r6\.mo\.baidu\.com\/res\/file/advertisement\/files\/.+\.jpg reject
-^https?:\/\/res\.mi\.baidu\.com\/imeres\/ime-res\/advertisement\/files\/.+\.jpg reject
-^https?:\/\/mime\.baidu\.com\/v5\/activity\/advertisementnonrealtime reject
-^https?:\/\/mime\.baidu\.com\/v5\/start_screen_ads\/list reject
-^https?:\/\/mime\.baidu\.com\/v5\/hotpatch\/check\?hotpatch reject
+request if ${url} ~= /^https?:\/\/r6\.mo\.baidu\.com\/res\/file\/advertisement\/files\/.+\.jpg/i then reject(404)
+request if ${url} ~= /^https?:\/\/res\.mi\.baidu\.com\/imeres\/ime-res\/advertisement\/files\/.+\.jpg/i then reject(404)
+request if ${url} ~= /^https?:\/\/mime\.baidu\.com\/v5\/activity\/advertisementnonrealtime/i then reject(404)
+request if ${url} ~= /^https?:\/\/mime\.baidu\.com\/v5\/start_screen_ads\/list/i then reject(404)
+request if ${url} ~= /^https?:\/\/mime\.baidu\.com\/v5\/hotpatch\/check\?hotpatch/i then reject(404)
 # 百度输入法开屏
-^https?:\/\/mime\.baidu\.com\/v5\/start_screen_ads/list reject-dict
+request if ${url} ~= /^https?:\/\/mime\.baidu\.com\/v5\/start_screen_ads\/list/i then reject_dict(200)
 # 应用内灵感语录 输入页面推荐里语录
-^https?:\/\/mime\.baidu\.com\/sapi\/v1\/lccorpus\/(applist|pannellist) reject-dict
+request if ${url} ~= /^https?:\/\/mime\.baidu\.com\/sapi\/v1\/lccorpus\/(applist|pannellist)/i then reject_dict(200)
 # 输入法点击图标
-^https?:\/\/mime\.baidu\.com\/sapi\/v1\/circle\/joinedlist reject-dict
-^https?:\/\/mime\.baidu\.com\/commer\/pocket_api\/enterprise_list reject-dict
-^https?:\/\/mbd\.baidu\.com\/ccs\/v1\/start\/confsync\?appname=baidu_input reject-dict
+request if ${url} ~= /^https?:\/\/mime\.baidu\.com\/sapi\/v1\/circle\/joinedlist/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/mime\.baidu\.com\/commer\/pocket_api\/enterprise_list/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/mbd\.baidu\.com\/ccs\/v1\/start\/confsync\?appname=baidu_input/i then reject_dict(200)
 
 
 [MITM]

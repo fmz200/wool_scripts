@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/app\.badmintoncn\.com\/mag\/operative\/v\d\/ad\/listNotEndByPlace\?place=first_page reject-200
+request if ${url} ~= /^https?:\/\/app\.badmintoncn\.com\/mag\/operative\/v\d\/ad\/listNotEndByPlace\?place=first_page/i then reject(200)
 
 
 [MITM]

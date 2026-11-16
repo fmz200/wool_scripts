@@ -10,17 +10,17 @@
 
 
 [Rewrite]
-^https?:\/\/p[^4](c)?\.music\.126\.net\/\w+==\/10995\d{13}\.jpg$ reject-img
-^https?:\/\/p\.c\.music\.126.net\/.*?jpg$ reject
-^https?:\/\/img1.126.net\/.+dpi=\w{7,8} reject
-^https?:\/\/img1.126.net\/channel14\/ reject
-^https?:\/\/iadmusicmat\.music.126.net\/.*?jpg$ reject
-^https?:\/\/p\d\.music\.126\.net\/\w+==\/\d+\.jpg$ reject
-^https?:\/\/www.icourse163.org\/.*?(Advertisement) reject-img
-^https?:\/\/nex.163.com\/q reject
-^https?:\/\/g1.163.com\/madfeedback reject
-^https?:\/\/www\.icourse163\.org\/mob\/j\/v1\/mobRecommendRPCBean\.getMaxWeightAdvertisement\.rpc reject-200
-^https?:\/\/interface3?\.music\.163\.com/eapi/(ad|abtest|sp|hot|store|mlog|search/(specialkeyword|defaultkeyword|hot)) reject-img
+request if ${url} ~= /^https?:\/\/p[^4](c)?\.music\.126\.net\/\w+==\/10995\d{13}\.jpg$/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/p\.c\.music\.126.net\/.*?jpg$/i then reject(404)
+request if ${url} ~= /^https?:\/\/img1.126.net\/.+dpi=\w{7,8}/i then reject(404)
+request if ${url} ~= /^https?:\/\/img1.126.net\/channel14\//i then reject(404)
+request if ${url} ~= /^https?:\/\/iadmusicmat\.music.126.net\/.*?jpg$/i then reject(404)
+request if ${url} ~= /^https?:\/\/p\d\.music\.126\.net\/\w+==\/\d+\.jpg$/i then reject(404)
+request if ${url} ~= /^https?:\/\/www.icourse163.org\/.*?(Advertisement)/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/nex.163.com\/q/i then reject(404)
+request if ${url} ~= /^https?:\/\/g1.163.com\/madfeedback/i then reject(404)
+request if ${url} ~= /^https?:\/\/www\.icourse163\.org\/mob\/j\/v1\/mobRecommendRPCBean\.getMaxWeightAdvertisement\.rpc/i then reject(200)
+request if ${url} ~= /^https?:\/\/interface3?\.music\.163\.com\/eapi\/(ad|abtest|sp|hot|store|mlog|search\/(specialkeyword|defaultkeyword|hot))/i then reject_img(200)
 
 
 [MITM]

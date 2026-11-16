@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/appwk\.baidu\.com\/xpage\/interface\/wknaad reject-200
+request if ${url} ~= /^https?:\/\/appwk\.baidu\.com\/xpage\/interface\/wknaad/i then reject(200)
 
 
 [MITM]

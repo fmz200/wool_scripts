@@ -17,16 +17,16 @@ DOMAIN, ad.seeyouyima.com, REJECT
 
 
 [Rewrite]
-^http:\/\/x\.seeyouyima\.com\/adx\/staticstics\? reject
-^https:\/\/axxd\.xmseeyouyima\.com\/ad\/ reject
-^https:\/\/axxd\.xmseeyouyima\.com\/ad_statistics\? reject
-^https:\/\/axxd\.xmseeyouyima\.com\/v1\/getad\? reject
-^https:\/\/axxd\.xmseeyouyima\.com\/pregetad\? reject
+request if ${url} ~= /^http:\/\/x\.seeyouyima\.com\/adx\/staticstics\?/i then reject(404)
+request if ${url} ~= /^https:\/\/axxd\.xmseeyouyima\.com\/ad\//i then reject(404)
+request if ${url} ~= /^https:\/\/axxd\.xmseeyouyima\.com\/ad_statistics\?/i then reject(404)
+request if ${url} ~= /^https:\/\/axxd\.xmseeyouyima\.com\/v1\/getad\?/i then reject(404)
+request if ${url} ~= /^https:\/\/axxd\.xmseeyouyima\.com\/pregetad\?/i then reject(404)
 
 
 [Script]
-http-response ^https:\/\/config-service\.seeyouyima\.com\/api\/configs\/batch\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/meiyou/meiyou_ads.js, requires-body=true, timeout=60, tag=美柚App净化, enable={meiyou_enable}
-http-response ^https:\/\/config-service\.seeyouyima\.com\/api\/configs\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/meiyou/meiyou_ads.js, requires-body=true, timeout=60, tag=美柚App净化, enable={meiyou_enable}
+response if ${url} ~= /^https:\/\/config-service\.seeyouyima\.com\/api\/configs\/batch\?/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/meiyou/meiyou_ads.js") with enable=${meiyou_enable}, tag="美柚App净化", timeout=60, requires_body=true
+response if ${url} ~= /^https:\/\/config-service\.seeyouyima\.com\/api\/configs\?/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/meiyou/meiyou_ads.js") with enable=${meiyou_enable}, tag="美柚App净化", timeout=60, requires_body=true
 
 
 [MITM]

@@ -10,10 +10,10 @@
 
 
 [Rewrite]
-^https?:\/\/lban\.spdb\.com\.cn\/mspmk-web-component\/getAdvList\.ah$ reject
-^https?:\/\/lban\.spdb\.com\.cn\/mspmk-web-component\/getAdvertisementList\.ah reject
-^https?:\/\/lban\.spdb\.com\.cn\/mspmk-web-component\/prefetchAdvList\.ah reject
-^https?:\/\/wap\.spdb\.com\.cn\/mspmk-web-homeassist\/OpenScreenAdv\.ah$ reject
+request if ${url} ~= /^https?:\/\/lban\.spdb\.com\.cn\/mspmk-web-component\/getAdvList\.ah$/i then reject(404)
+request if ${url} ~= /^https?:\/\/lban\.spdb\.com\.cn\/mspmk-web-component\/getAdvertisementList\.ah/i then reject(404)
+request if ${url} ~= /^https?:\/\/lban\.spdb\.com\.cn\/mspmk-web-component\/prefetchAdvList\.ah/i then reject(404)
+request if ${url} ~= /^https?:\/\/wap\.spdb\.com\.cn\/mspmk-web-homeassist\/OpenScreenAdv\.ah$/i then reject(404)
 
 
 [MITM]

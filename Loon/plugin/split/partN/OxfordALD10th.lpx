@@ -11,8 +11,8 @@
 
 [Rewrite]
 # 首页下方广告
-^https?:\/\/oxadmin\.cp\.com\.cn\/api\/hot\/index reject-dict
-^https?:\/\/oxadmin\.cp\.com\.cn\/api\/advertise\/banner reject-dict
+request if ${url} ~= /^https?:\/\/oxadmin\.cp\.com\.cn\/api\/hot\/index/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/oxadmin\.cp\.com\.cn\/api\/advertise\/banner/i then reject_dict(200)
 
 
 [MITM]

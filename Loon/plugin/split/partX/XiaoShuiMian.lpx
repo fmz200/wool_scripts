@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/api\.psy-1\.com\/cosleep\/startup reject
+request if ${url} ~= /^https?:\/\/api\.psy-1\.com\/cosleep\/startup/i then reject(404)
 
 
 [MITM]

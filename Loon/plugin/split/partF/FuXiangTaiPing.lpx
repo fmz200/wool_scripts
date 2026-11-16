@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 去开屏广告
-^https:\/\/ecloud\.tppension\.cntaiping\.com\/fxtpplatform\/common\/anonymous\/common\/page\/queryStartPageNew\?language=zh-CN reject-dict
+request if ${url} ~= /^https:\/\/ecloud\.tppension\.cntaiping\.com\/fxtpplatform\/common\/anonymous\/common\/page\/queryStartPageNew\?language=zh-CN/i then reject_dict(200)
 
 
 

@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/b2baifanfan\.baidu\.com\/crm\/web\/b2b\/im\/common\/getConfigByDeviceNum reject-200
+request if ${url} ~= /^https?:\/\/b2baifanfan\.baidu\.com\/crm\/web\/b2b\/im\/common\/getConfigByDeviceNum/i then reject(200)
 
 
 [MITM]

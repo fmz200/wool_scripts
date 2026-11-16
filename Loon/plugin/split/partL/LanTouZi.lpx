@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/ios\.lantouzi\.com\/api\/startpage reject
+request if ${url} ~= /^https?:\/\/ios\.lantouzi\.com\/api\/startpage/i then reject(404)
 
 
 [MITM]

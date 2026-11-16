@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/img0[1-9]{1}\.benlailife\.com\/AppHomePageImage\/upload\/files\/.*.jpg reject-200
+request if ${url} ~= /^https?:\/\/img0[1-9]{1}\.benlailife\.com\/AppHomePageImage\/upload\/files\/.*.jpg/i then reject(200)
 
 
 [MITM]

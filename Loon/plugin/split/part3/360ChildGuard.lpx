@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 开屏广告 感谢【别怕我又不乱来】分享
-^https?:\/\/ad\.life\.360\.cn\/v2\/app\/advertisement\/config\?sdk_ver= reject-dict
+request if ${url} ~= /^https?:\/\/ad\.life\.360\.cn\/v2\/app\/advertisement\/config\?sdk_ver=/i then reject_dict(200)
 
 
 [MITM]

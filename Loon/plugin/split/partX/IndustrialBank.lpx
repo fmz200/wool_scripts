@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/file\.cibfintech\.com\/file\/M0[1-9]{1}\/*\/*\/.*.zip reject-img
+request if ${url} ~= /^https?:\/\/file\.cibfintech\.com\/file\/M0[1-9]{1}\/*\/*\/.*.zip/i then reject_img(200)
 
 
 [MITM]

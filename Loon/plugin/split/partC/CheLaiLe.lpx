@@ -18,13 +18,13 @@ DOMAIN, ad.chelaile.net.cn, REJECT
 
 
 [Rewrite]
-^https?:\/\/pic1\.chelaile\.net\.cn\/adv\/ reject
-^https?:\/\/(api|atrace)\.chelaile\.net\.cn\/adpub\/ reject
-^https?:\/\/api\.chelaile\.net\.cn\/goocity\/advert\/ reject
-^https?:\/\/atrace\.chelaile\.net\.cn\/adpub\/ reject-img
-^https?:\/\/atrace\.chelaile\.net\.cn\/exhibit\?&adv_image reject-img
-^https?:\/\/web\.chelaile\.net\.cn\/api\/adpub\/ad reject
-^https?:\/\/cdn\.\w{3}\.chelaileapp\.cn\/(api\/)?adpub reject
+request if ${url} ~= /^https?:\/\/pic1\.chelaile\.net\.cn\/adv\//i then reject(404)
+request if ${url} ~= /^https?:\/\/(api|atrace)\.chelaile\.net\.cn\/adpub\//i then reject(404)
+request if ${url} ~= /^https?:\/\/api\.chelaile\.net\.cn\/goocity\/advert\//i then reject(404)
+request if ${url} ~= /^https?:\/\/atrace\.chelaile\.net\.cn\/adpub\//i then reject_img(200)
+request if ${url} ~= /^https?:\/\/atrace\.chelaile\.net\.cn\/exhibit\?&adv_image/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/web\.chelaile\.net\.cn\/api\/adpub\/ad/i then reject(404)
+request if ${url} ~= /^https?:\/\/cdn\.\w{3}\.chelaileapp\.cn\/(api\/)?adpub/i then reject(404)
 
 
 [MITM]

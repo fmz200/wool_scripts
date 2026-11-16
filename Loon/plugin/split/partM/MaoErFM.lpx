@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 开屏广告 感谢【可莉🅥】分享
-^https?:\/\/app\.missevan\.com\/site\/launch\? reject
+request if ${url} ~= /^https?:\/\/app\.missevan\.com\/site\/launch\?/i then reject(404)
 
 
 [MITM]

@@ -47,8 +47,8 @@ DOMAIN-SUFFIX,smadex.com, REJECT
 
 
 [Rewrite]
-^https?:\/\/alt-r\.my\.com\/mobile reject-dict
-^https?:\/\/imgx\.jampp\.com\/imgsrv\/tn reject-img
+request if ${url} ~= /^https?:\/\/alt-r\.my\.com\/mobile/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/imgx\.jampp\.com\/imgsrv\/tn/i then reject_img(200)
 
 
 [MITM]

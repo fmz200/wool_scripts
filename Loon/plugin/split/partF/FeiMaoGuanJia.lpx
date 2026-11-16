@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 开屏
-^https:\/\/app\.flymodem\.com\.cn\/Appapi\/Public\/welecome reject
+request if ${url} ~= /^https:\/\/app\.flymodem\.com\.cn\/Appapi\/Public\/welecome/i then reject(404)
 
 
 [MITM]

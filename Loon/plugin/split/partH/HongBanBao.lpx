@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/fbchina\.flipchina\.cn\/v\d\/ad\/query reject
+request if ${url} ~= /^https?:\/\/fbchina\.flipchina\.cn\/v\d\/ad\/query/i then reject(404)
 
 
 [MITM]

@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 横幅广告
-^https:\/\/emisdatacenteraws\.hafoo\.com\/ad\/api\/v2\/appMarket reject-dict
+request if ${url} ~= /^https:\/\/emisdatacenteraws\.hafoo\.com\/ad\/api\/v2\/appMarket/i then reject_dict(200)
 
 
 [MITM]

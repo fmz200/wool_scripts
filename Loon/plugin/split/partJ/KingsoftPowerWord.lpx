@@ -21,11 +21,11 @@ DOMAIN, ws.ksmobile.net, REJECT
 
 
 [Rewrite]
-^https?:\/\/dict-mobile\.iciba\.com\/interface\/index\.php\?.+(c=ad|collectFeedsAdShowCount|KSFeedsAdCardViewController) reject
-^https?:\/\/mobile-pic\.cache\.iciba\.com\/feeds_ad\/ reject
-^https?:\/\/service\.iciba\.com\/popo\/open\/screens\/v\d\?adjson reject-200
-^https?:\/\/\w+?\.kingsoft-office-service\.com\/ad reject-200
-^https?:\/\/.+?\.kingsoft-office-service\.com reject
+request if ${url} ~= /^https?:\/\/dict-mobile\.iciba\.com\/interface\/index\.php\?.+(c=ad|collectFeedsAdShowCount|KSFeedsAdCardViewController)/i then reject(404)
+request if ${url} ~= /^https?:\/\/mobile-pic\.cache\.iciba\.com\/feeds_ad\//i then reject(404)
+request if ${url} ~= /^https?:\/\/service\.iciba\.com\/popo\/open\/screens\/v\d\?adjson/i then reject(200)
+request if ${url} ~= /^https?:\/\/\w+?\.kingsoft-office-service\.com\/ad/i then reject(200)
+request if ${url} ~= /^https?:\/\/.+?\.kingsoft-office-service\.com/i then reject(404)
 
 
 [MITM]

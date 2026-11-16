@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 开屏
-^https?:\/\/res\.hongyibo\.com\.cn\/os\/gs\/resapi\/activity\/mget\?_t reject-dict
+request if ${url} ~= /^https?:\/\/res\.hongyibo\.com\.cn\/os\/gs\/resapi\/activity\/mget\?_t/i then reject_dict(200)
 
 
 [MITM]

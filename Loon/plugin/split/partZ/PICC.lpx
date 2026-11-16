@@ -11,11 +11,11 @@
 
 [Rewrite]
 # 人保头条
-^https?:\/\/zgrb\.epicc\.com\.cn\/G-HAPP\/h\/headlines\/queryHeadlines reject
+request if ${url} ~= /^https?:\/\/zgrb\.epicc\.com\.cn\/G-HAPP\/h\/headlines\/queryHeadlines/i then reject(404)
 # 启动开屏
-^https?:\/\/zgrb\.epicc\.com\.cn\/G-HAPP\/a\/update\/startupPage\/v reject-dict
+request if ${url} ~= /^https?:\/\/zgrb\.epicc\.com\.cn\/G-HAPP\/a\/update\/startupPage\/v/i then reject_dict(200)
 # 猜你喜欢
-^https?:\/\/zgrb\.epicc\.com\.cn\/G-HAPP\/a\/config\/guessYouLike\/v reject-dict
+request if ${url} ~= /^https?:\/\/zgrb\.epicc\.com\.cn\/G-HAPP\/a\/config\/guessYouLike\/v/i then reject_dict(200)
 
 
 [MITM]

@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/m\.ibuscloud\.com\/v\d\/app\/getStartPage reject
+request if ${url} ~= /^https?:\/\/m\.ibuscloud\.com\/v\d\/app\/getStartPage/i then reject(404)
 
 
 [MITM]

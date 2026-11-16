@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/b-api\.ins\.miaopai\.com\/\d\/ad/ reject
+request if ${url} ~= /^https?:\/\/b-api\.ins\.miaopai\.com\/\d\/ad\//i then reject(404)
 
 
 [MITM]

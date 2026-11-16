@@ -36,19 +36,19 @@ DOMAIN-SUFFIX, 888.tv.sohu.com, REJECT
 
 
 [Rewrite]
-^https?:\/\/api\.k\.sohu\.com\/api\/news\/adsense reject-200
-^https?:\/\/pic\.k\.sohu\.com\/img8\/wb\/tj\/ reject-200
-^https?:\/\/s1\.api\.tv\.itc\.cn\/v4\/mobile\/control\/switch\.json reject-200
-^https?:\/\/(api|api-bk\d+)\.tv\.sohu\.com\/agg\/api\/app\/config\/bootstrap reject
-^https?:\/\/agn\.aty\.sohu\.com\/m? reject-img
-^https?:\/\/api\.k\.sohu\.com\/api\/channel\/ad\/ reject-img
-^https?:\/\/hui\.sohu\.com\/predownload2\/? reject-img
-^https?:\/\/m\.aty\.sohu\.com\/openload? reject-img
-^https?:\/\/mmg\.aty\.sohu\.com\/mqs? reject-img
-^https?:\/\/mmg\.aty\.sohu\.com\/pvlog? reject-img
-^https?:\/\/photocdn\.sohu\.com\/tvmobilemvms reject-img
-^https?:\/\/pic\.k\.sohu\.com\/img\d\/wb\/tj\/ reject
-^https?:\/\/s\.go\.sohu\.com\/adgtr\/\?gbcode= reject-img
+request if ${url} ~= /^https?:\/\/api\.k\.sohu\.com\/api\/news\/adsense/i then reject(200)
+request if ${url} ~= /^https?:\/\/pic\.k\.sohu\.com\/img8\/wb\/tj\//i then reject(200)
+request if ${url} ~= /^https?:\/\/s1\.api\.tv\.itc\.cn\/v4\/mobile\/control\/switch\.json/i then reject(200)
+request if ${url} ~= /^https?:\/\/(api|api-bk\d+)\.tv\.sohu\.com\/agg\/api\/app\/config\/bootstrap/i then reject(404)
+request if ${url} ~= /^https?:\/\/agn\.aty\.sohu\.com\/m?/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/api\.k\.sohu\.com\/api\/channel\/ad\//i then reject_img(200)
+request if ${url} ~= /^https?:\/\/hui\.sohu\.com\/predownload2\/?/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/m\.aty\.sohu\.com\/openload?/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/mmg\.aty\.sohu\.com\/mqs?/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/mmg\.aty\.sohu\.com\/pvlog?/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/photocdn\.sohu\.com\/tvmobilemvms/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/pic\.k\.sohu\.com\/img\d\/wb\/tj\//i then reject(404)
+request if ${url} ~= /^https?:\/\/s\.go\.sohu\.com\/adgtr\/\?gbcode=/i then reject_img(200)
 
 
 [MITM]

@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/interface\.aomiapp\.com\/aomi-ads reject
+request if ${url} ~= /^https?:\/\/interface\.aomiapp\.com\/aomi-ads/i then reject(404)
 
 
 

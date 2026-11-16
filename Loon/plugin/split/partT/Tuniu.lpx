@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/m\.tuniu\.com\/api\/operation\/splash\/ reject-200
+request if ${url} ~= /^https?:\/\/m\.tuniu\.com\/api\/operation\/splash\//i then reject(200)
 
 
 [MITM]

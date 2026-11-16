@@ -14,12 +14,12 @@ hlzh_enable = switch,true,false,tag=航旅纵横-脚本开关
 
 [Rewrite]
 # 此条存在首页横幅误杀，可以禁止MITM域名
-^https:\/\/oss\.umetrip\.com\/fs\/advert\/polite reject
-^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native reject
+request if ${url} ~= /^https:\/\/oss\.umetrip\.com\/fs\/advert\/polite/i then reject(404)
+request if ${url} ~= /^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native/i then reject(404)
 
 
 [Script]
-http-response ^http?:\/\/(114\.115\.217\.129)|(home\.umetrip\.com)\/gateway\/api\/umetrip\/native$ script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/umetrip/umetrip_ads.js, requires-body=true, timeout=60, tag=航旅纵横, enable={hlzh_enable}
+response if ${url} ~= /^http?:\/\/(114\.115\.217\.129)|(home\.umetrip\.com)\/gateway\/api\/umetrip\/native$/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/umetrip/umetrip_ads.js") with enable=${hlzh_enable}, tag="航旅纵横", timeout=60, requires_body=true
 
 
 [MITM]

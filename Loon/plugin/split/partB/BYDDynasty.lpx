@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 首页开屏
-^https:\/\/cache\.bydauto\.com\.cn\/dilink_user_upload\/20 reject-200
+request if ${url} ~= /^https:\/\/cache\.bydauto\.com\.cn\/dilink_user_upload\/20/i then reject(200)
 
 
 [MITM]

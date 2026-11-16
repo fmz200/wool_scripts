@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 开屏广告
-^https:\/\/mobile-consumer-sapp\.chery\.cn\/web\/position\/getShowList\?displayPlatform=1&tabType=0& reject-dict
+request if ${url} ~= /^https:\/\/mobile-consumer-sapp\.chery\.cn\/web\/position\/getShowList\?displayPlatform=1&tabType=0&/i then reject_dict(200)
 
 
 [MITM]

@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/sichuan\.95504\.net\/v\d\/gd\/index\/get reject-200
+request if ${url} ~= /^https?:\/\/sichuan\.95504\.net\/v\d\/gd\/index\/get/i then reject(200)
 
 
 [MITM]

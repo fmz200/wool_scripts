@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/mlife\.jf365\.boc\.cn\/AppPrj\/FirstPic\.do\?txnId=2PIC000001 reject-200
+request if ${url} ~= /^https?:\/\/mlife\.jf365\.boc\.cn\/AppPrj\/FirstPic\.do\?txnId=2PIC000001/i then reject(200)
 
 [MITM]
 hostname = mlife.jf365.boc.cn

@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 首页和我的横幅广告
-^https?:\/\/api\.winbull8\.com\/v1\/marketing\/(advert|activity)\/(list|page) reject-dict
+request if ${url} ~= /^https?:\/\/api\.winbull8\.com\/v1\/marketing\/(advert|activity)\/(list|page)/i then reject_dict(200)
 
 
 [MITM]

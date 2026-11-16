@@ -11,9 +11,9 @@
 
 [Rewrite]
 # 弹窗广告
-^https?:\/\/minipro\.95504\.net\/app\/json\/ad\/getPopAdData reject-dict
+request if ${url} ~= /^https?:\/\/minipro\.95504\.net\/app\/json\/ad\/getPopAdData/i then reject_dict(200)
 # 底部横幅广告
-^https?:\/\/minipro\.95504\.net\/app\/json\/ad\/getIndexAdData reject-dict
+request if ${url} ~= /^https?:\/\/minipro\.95504\.net\/app\/json\/ad\/getIndexAdData/i then reject_dict(200)
 
 
 [MITM]

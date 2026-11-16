@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/lchttpapi\.xczim\.com\/1\.1\/functions\/getLaunchImageForIOS reject
+request if ${url} ~= /^https?:\/\/lchttpapi\.xczim\.com\/1\.1\/functions\/getLaunchImageForIOS/i then reject(404)
 
 
 [MITM]

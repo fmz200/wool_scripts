@@ -10,9 +10,9 @@
 
 
 [Rewrite]
-^https?:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds reject
-^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNotices) reject
-^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget reject
+request if ${url} ~= /^https?:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds/i then reject(404)
+request if ${url} ~= /^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNotices)/i then reject(404)
+request if ${url} ~= /^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget/i then reject(404)
 
 
 [MITM]

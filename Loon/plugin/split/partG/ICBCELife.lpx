@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/pv\.elife\.icbc\.com\.cn\/OFSTPV\/utm\.gif reject-200
+request if ${url} ~= /^https?:\/\/pv\.elife\.icbc\.com\.cn\/OFSTPV\/utm\.gif/i then reject(200)
 
 
 [MITM]

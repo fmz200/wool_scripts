@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/fastbuyer\.zbj\.com\/configure\/screenAdConfig\/ reject-200
+request if ${url} ~= /^https?:\/\/fastbuyer\.zbj\.com\/configure\/screenAdConfig\//i then reject(200)
 
 
 [MITM]

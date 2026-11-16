@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/adx-cn\.anythinktech\.com\/bid reject-200
+request if ${url} ~= /^https?:\/\/adx-cn\.anythinktech\.com\/bid/i then reject(200)
 
 
 [MITM]

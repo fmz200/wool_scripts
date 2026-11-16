@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/api2\.yaduo\.com\/atourlife\/activity\/appLaunch reject-dict
+request if ${url} ~= /^https?:\/\/api2\.yaduo\.com\/atourlife\/activity\/appLaunch/i then reject_dict(200)
 
 
 [MITM]

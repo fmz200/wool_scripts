@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/venus\.yhd\.com\/memhome\/launchConfig reject
+request if ${url} ~= /^https?:\/\/venus\.yhd\.com\/memhome\/launchConfig/i then reject(404)
 
 
 [MITM]

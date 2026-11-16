@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 横幅广告
-^https?:\/\/e\.weather\.com\.cn\/weChat\/typhoonNull\.json reject-dict
+request if ${url} ~= /^https?:\/\/e\.weather\.com\.cn\/weChat\/typhoonNull\.json/i then reject_dict(200)
 
 
 [MITM]

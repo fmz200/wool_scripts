@@ -10,9 +10,9 @@
 
 
 [Rewrite]
-^https?:\/\/iobs\.pingan\.com\.cn\/download\/bweb-per-sf-prd\/bweb reject-200
-^https?:\/\/iobs\.pingan\.com\.cn\/download\/icore-aops-base-dmz-prd\/(YourSystemName|icore-apps-ad) reject-200
-^https?:\/\/hcz-member\.pingan\.com\.cn\/micro-api\/homepage\/do\/app\/popbox\/getTopPopBox reject
+request if ${url} ~= /^https?:\/\/iobs\.pingan\.com\.cn\/download\/bweb-per-sf-prd\/bweb/i then reject(200)
+request if ${url} ~= /^https?:\/\/iobs\.pingan\.com\.cn\/download\/icore-aops-base-dmz-prd\/(YourSystemName|icore-apps-ad)/i then reject(200)
+request if ${url} ~= /^https?:\/\/hcz-member\.pingan\.com\.cn\/micro-api\/homepage\/do\/app\/popbox\/getTopPopBox/i then reject(404)
 
 
 [MITM]

@@ -10,8 +10,8 @@
 
 
 [Rewrite]
-^https?:\/\/api\.kkmh\.com\/v\d\/ad\/show reject-200
-^https?:\/\/api\.kkmh\.com\/v\d\/advertisement\/ reject-200
+request if ${url} ~= /^https?:\/\/api\.kkmh\.com\/v\d\/ad\/show/i then reject(200)
+request if ${url} ~= /^https?:\/\/api\.kkmh\.com\/v\d\/advertisement\//i then reject(200)
 
 
 [MITM]

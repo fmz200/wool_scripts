@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?://ssp\.dzh\.com\.cn/v2api/adgroupjson reject
+request if ${url} ~= /^https?:\/\/ssp\.dzh\.com\.cn\/v2api\/adgroupjson/i then reject(404)
 
 
 [MITM]

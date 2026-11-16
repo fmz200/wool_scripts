@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-https://access.mypikpak.com/access_controller/v1/area_accessible reject
+request if ${url} ~= /https:\/\/access.mypikpak.com\/access_controller\/v1\/area_accessible/i then reject(404)
 
 
 [MITM]

@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 屏蔽升级弹窗 感谢【Charlie】分享
-^https?:\/\/m\.prod\.app\.hsbcfts\.com\.cn\/api\/sapp\/biz\/config\/open\/queryappversion\?channelCode= reject-dict
+request if ${url} ~= /^https?:\/\/m\.prod\.app\.hsbcfts\.com\.cn\/api\/sapp\/biz\/config\/open\/queryappversion\?channelCode=/i then reject_dict(200)
 
 
 [MITM]

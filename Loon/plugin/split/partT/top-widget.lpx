@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/top-widgets-api\.xiaozujian\.com\/api\/ad\/config reject
+request if ${url} ~= /^https?:\/\/top-widgets-api\.xiaozujian\.com\/api\/ad\/config/i then reject(404)
 
 
 [MITM]

@@ -11,9 +11,9 @@
 
 [Rewrite]
 # 开屏广告，弹窗广告，首页置顶轮播广告 感谢【T大G】分享
-^https?:\/\/delivery-api\.imdada\.cn\/v2_0\/dada\/promote\/imax\?privacyParam reject-dict
-^https?:\/\/delivery-api\.imdada\.cn\/v1_0\/transporter\/screen\/ads_list reject-dict
-^https?:\/\/delivery-api\.imdada\.cn\/v1_0\/transporter\/ad reject-dict
+request if ${url} ~= /^https?:\/\/delivery-api\.imdada\.cn\/v2_0\/dada\/promote\/imax\?privacyParam/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/delivery-api\.imdada\.cn\/v1_0\/transporter\/screen\/ads_list/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/delivery-api\.imdada\.cn\/v1_0\/transporter\/ad/i then reject_dict(200)
 
 
 [MITM]

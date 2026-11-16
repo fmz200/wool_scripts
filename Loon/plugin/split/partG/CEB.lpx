@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/mobile\.cebbank\.com\/cebclient\/ClientNoticeList reject-200
+request if ${url} ~= /^https?:\/\/mobile\.cebbank\.com\/cebclient\/ClientNoticeList/i then reject(200)
 
 
 [MITM]

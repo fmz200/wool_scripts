@@ -15,28 +15,28 @@ bohejmkh_enable = switch,true,false,tag=薄荷健康-脚本开关
 [Rewrite]
 # 感谢【可莉】分享
 # 记录 悬浮部件
-^https:\/\/api\.boohee\.com\/meta-interface\/v1\/index\/page_float_bubbles\? reject-dict
+request if ${url} ~= /^https:\/\/api\.boohee\.com\/meta-interface\/v1\/index\/page_float_bubbles\?/i then reject_dict(200)
 # 记录 发布
-^https:\/\/api\.boohee\.com\/meta-interface\/v1\/index\/tool_buttons\? reject-dict
+request if ${url} ~= /^https:\/\/api\.boohee\.com\/meta-interface\/v1\/index\/tool_buttons\?/i then reject_dict(200)
 # 记录 搜索发现
-^https:\/\/api\.boohee\.com\/app-interface\/v1\/search\/search\? reject-dict
+request if ${url} ~= /^https:\/\/api\.boohee\.com\/app-interface\/v1\/search\/search\?/i then reject_dict(200)
 # 记录 消息 通知 横幅推广
-^https:\/\/status\.boohee\.com\/api\/v1\/merged_messages$ reject-dict
+request if ${url} ~= /^https:\/\/status\.boohee\.com\/api\/v1\/merged_messages$/i then reject_dict(200)
 # 弹窗配置
-^https:\/\/bohe\.sfo-tx-shanghai-01\.saas\.sensorsdata\.cn\/api\/v2\/sfo\/user_popup_configs\? reject-dict
+request if ${url} ~= /^https:\/\/bohe\.sfo-tx-shanghai-01\.saas\.sensorsdata\.cn\/api\/v2\/sfo\/user_popup_configs\?/i then reject_dict(200)
 # 绑定设备 横幅推广
-^https:\/\/api\.boohee\.com\/meta-interface\/v1\/index\/sensor-banners\? reject-dict
+request if ${url} ~= /^https:\/\/api\.boohee\.com\/meta-interface\/v1\/index\/sensor-banners\?/i then reject_dict(200)
 
 
 
 
 [Script]
 # 记录 大家都在看data.recom_cards / 底部按钮data.recom_btns
-http-response ^https:\/\/api\.boohee\.com\/meta-interface\/v2\/index\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bohe/bohe_ads.js, requires-body=true, timeout=60, tag=薄荷健康, enable={bohejmkh_enable}
+response if ${url} ~= /^https:\/\/api\.boohee\.com\/meta-interface\/v2\/index\?/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bohe/bohe_ads.js") with enable=${bohejmkh_enable}, tag="薄荷健康", timeout=60, requires_body=true
 # 广场 推荐 红标data.tabs[1].badge /轮播图data.recommend_ads
-http-response ^https:\/\/api\.boohee\.com\/meta-interface\/v1\/index\/plaza\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bohe/bohe_ads.js, requires-body=true, timeout=60, tag=薄荷健康, enable={bohejmkh_enable}
+response if ${url} ~= /^https:\/\/api\.boohee\.com\/meta-interface\/v1\/index\/plaza\?/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bohe/bohe_ads.js") with enable=${bohejmkh_enable}, tag="薄荷健康", timeout=60, requires_body=true
 # 代谢中心 顶部轮播图top_banner / 免费问诊推广diagnos_config / 合作医疗机构partner_hospital / 医患问答question_answer / 热门商品product / 品牌大事件brand_story
-http-response ^https:\/\/api\.boohee\.com\/open-interface\/v1\/string\/market_page\?title=metabolism_config$ script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bohe/bohe_ads.js, requires-body=true, timeout=60, tag=薄荷健康, enable={bohejmkh_enable}
+response if ${url} ~= /^https:\/\/api\.boohee\.com\/open-interface\/v1\/string\/market_page\?title=metabolism_config$/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bohe/bohe_ads.js") with enable=${bohejmkh_enable}, tag="薄荷健康", timeout=60, requires_body=true
 
 
 

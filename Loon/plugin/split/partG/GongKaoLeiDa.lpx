@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/api\.gongkaoleida\.com\/api\/v2\/ad\/info reject-dict
+request if ${url} ~= /^https?:\/\/api\.gongkaoleida\.com\/api\/v2\/ad\/info/i then reject_dict(200)
 
 
 

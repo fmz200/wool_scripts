@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/iapi\.bishijie\.com\/actopen\/advertising\/ reject
+request if ${url} ~= /^https?:\/\/iapi\.bishijie\.com\/actopen\/advertising\//i then reject(404)
 
 
 [MITM]

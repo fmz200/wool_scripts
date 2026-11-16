@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/dispatcher\.camera360\.com\/api\/v\d\/list$ reject
+request if ${url} ~= /^https?:\/\/dispatcher\.camera360\.com\/api\/v\d\/list$/i then reject(404)
 
 
 [MITM]

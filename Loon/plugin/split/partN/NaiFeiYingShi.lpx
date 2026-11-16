@@ -10,9 +10,9 @@
 
 
 [Rewrite]
-^https?:\/\/www\.nfmovies\.com\/pic\/tu\/ reject-img
-^https?:\/\/www\.nfmovies\.com\/templets\/default\/images\/logos reject-img
-^https?:\/\/www\.nfmovies\.com\/uploads\/images\/play\.jpg reject-img
+request if ${url} ~= /^https?:\/\/www\.nfmovies\.com\/pic\/tu\//i then reject_img(200)
+request if ${url} ~= /^https?:\/\/www\.nfmovies\.com\/templets\/default\/images\/logos/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/www\.nfmovies\.com\/uploads\/images\/play\.jpg/i then reject_img(200)
 
 
 [MITM]

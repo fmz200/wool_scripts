@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/i\.ys7\.com\/api\/ads reject
+request if ${url} ~= /^https?:\/\/i\.ys7\.com\/api\/ads/i then reject(404)
 
 
 [MITM]

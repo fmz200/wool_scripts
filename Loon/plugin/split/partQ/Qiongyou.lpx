@@ -10,9 +10,9 @@
 
 
 [Rewrite]
-^https?:\/\/open\.qyer\.com\/qyer\/startpage\/ reject-200
-^https?:\/\/open\.qyer\.com\/qyer\/config\/get reject
-^https?:\/\/media\.qyer\.com\/ad\/ reject
+request if ${url} ~= /^https?:\/\/open\.qyer\.com\/qyer\/startpage\//i then reject(200)
+request if ${url} ~= /^https?:\/\/open\.qyer\.com\/qyer\/config\/get/i then reject(404)
+request if ${url} ~= /^https?:\/\/media\.qyer\.com\/ad\//i then reject(404)
 
 
 [MITM]

@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 倒计时还在，点击任意位置跳过开屏动画
-^https?:\/\/direct\.z-bank\.com\/portal\/AdvertImageDownLoad4Mobile\.do reject-200
+request if ${url} ~= /^https?:\/\/direct\.z-bank\.com\/portal\/AdvertImageDownLoad4Mobile\.do/i then reject(200)
 
 
 [MITM]

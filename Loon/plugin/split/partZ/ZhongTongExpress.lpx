@@ -11,10 +11,10 @@
 
 [Rewrite]
 # 微信小程序净化
-^https?:\/\/hdgateway\.zto\.com\/getApolloConfig reject-dict
-^https?:\/\/hdgateway\.zto\.com\/track reject-dict
-^https?:\/\/hdgateway\.zto\.com\/getAdInfo reject-dict
-^https?:\/\/hdgateway\.zto\.com\/listJumperShow reject-dict
+request if ${url} ~= /^https?:\/\/hdgateway\.zto\.com\/getApolloConfig/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/hdgateway\.zto\.com\/track/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/hdgateway\.zto\.com\/getAdInfo/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/hdgateway\.zto\.com\/listJumperShow/i then reject_dict(200)
 
 
 [MITM]

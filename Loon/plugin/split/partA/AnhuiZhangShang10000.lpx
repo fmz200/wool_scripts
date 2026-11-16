@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/www\.ahzs10000\.com\/palmhall\/client\/base\/newVerson_getStartUp\.action reject-200
+request if ${url} ~= /^https?:\/\/www\.ahzs10000\.com\/palmhall\/client\/base\/newVerson_getStartUp\.action/i then reject(200)
 
 
 [MITM]

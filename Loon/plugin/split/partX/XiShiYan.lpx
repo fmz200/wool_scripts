@@ -10,8 +10,8 @@
 
 
 [Rewrite]
-^https:\/\/vapp\.tmuyun\.com\/api\/app_start_page\/list\/new reject-dict
-^https:\/\/vapp\.tmuyun\.com\/api\/buoy\/list reject-dict
+request if ${url} ~= /^https:\/\/vapp\.tmuyun\.com\/api\/app_start_page\/list\/new/i then reject_dict(200)
+request if ${url} ~= /^https:\/\/vapp\.tmuyun\.com\/api\/buoy\/list/i then reject_dict(200)
 
 
 [MITM]

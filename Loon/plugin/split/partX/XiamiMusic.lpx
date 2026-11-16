@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit\/ reject
+request if ${url} ~= /^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit\//i then reject(404)
 
 
 [MITM]

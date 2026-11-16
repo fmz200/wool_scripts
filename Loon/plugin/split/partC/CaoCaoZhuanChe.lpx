@@ -10,8 +10,8 @@
 
 
 [Rewrite]
-^https?:\/\/ptmpcap\.caocaokeji\.cn\/advert-bss\/ reject-img
-^https?:\/\/cap\.caocaokeji\.cn\/advert-bss\/ reject
+request if ${url} ~= /^https?:\/\/ptmpcap\.caocaokeji\.cn\/advert-bss\//i then reject_img(200)
+request if ${url} ~= /^https?:\/\/cap\.caocaokeji\.cn\/advert-bss\//i then reject(404)
 
 
 [MITM]

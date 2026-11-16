@@ -18,14 +18,14 @@ DOMAIN-SUFFIX, cc.dace.hupu.com, REJECT
 
 
 [Rewrite]
-^https?:\/\/games\.mobileapi\.hupu\.com\/.+?\/(interfaceAdMonitor|interfaceAd)\/ reject
-^https?:\/\/games\.mobileapi\.hupu\.com\/.+?\/(search|interfaceAdMonitor|status|hupuBbsPm)/(hotkey|init|hupuBbsPm)\. reject-img
-^https?:\/\/games\.mobileapi\.hupu\.com\/.+?\/status\/init reject
-^https?:\/\/games\.mobileapi\.hupu\.com\/\d\/(?:\d\.){2}\d\/status\/init reject
-^https?:\/\/du\.hupucdn\.com\/\w+h\d{4} reject-img
-^https?:\/\/i\d\.hoopchina\.com\.cn/blogfile\//d+\//d+\/BbsImg\.(?<=(big.(png|jpg)))$ reject-img
-^https?:\/\/goblin\.hupu\.com\/.+\/interfaceAd\/getOther reject
-^https?:\/\/i1\.hoopchina\.com\.cn\/blogfile\/.+_\d{3}x\d{4} reject-img
+request if ${url} ~= /^https?:\/\/games\.mobileapi\.hupu\.com\/.+?\/(interfaceAdMonitor|interfaceAd)\//i then reject(404)
+request if ${url} ~= /^https?:\/\/games\.mobileapi\.hupu\.com\/.+?\/(search|interfaceAdMonitor|status|hupuBbsPm)\/(hotkey|init|hupuBbsPm)\./i then reject_img(200)
+request if ${url} ~= /^https?:\/\/games\.mobileapi\.hupu\.com\/.+?\/status\/init/i then reject(404)
+request if ${url} ~= /^https?:\/\/games\.mobileapi\.hupu\.com\/\d\/(?:\d\.){2}\d\/status\/init/i then reject(404)
+request if ${url} ~= /^https?:\/\/du\.hupucdn\.com\/\w+h\d{4}/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/i\d\.hoopchina\.com\.cn\/blogfile\/\/d+\/\/d+\/BbsImg\.(?<=(big.(png|jpg)))$/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/goblin\.hupu\.com\/.+\/interfaceAd\/getOther/i then reject(404)
+request if ${url} ~= /^https?:\/\/i1\.hoopchina\.com\.cn\/blogfile\/.+_\d{3}x\d{4}/i then reject_img(200)
 
 
 [MITM]

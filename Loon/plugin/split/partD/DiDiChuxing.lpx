@@ -13,22 +13,22 @@
 didiiuxk_enable = switch,true,false,tag=滴滴出行-脚本开关
 
 [Rewrite]
-^https?:\/\/hd\.xiaojukeji\.com\/d reject-dict
+request if ${url} ~= /^https?:\/\/hd\.xiaojukeji\.com\/d/i then reject_dict(200)
 
 
 [Script]
-http-response ^https?:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, timeout=60, tag=滴滴出行, enable={didiiuxk_enable}
-http-response ^https?:\/\/freight\.xiaojukeji\.com\/gateway script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, timeout=60, tag=滴滴出行, enable={didiiuxk_enable}
-http-response ^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/xpget script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, timeout=60, tag=滴滴出行, enable={didiiuxk_enable}
-http-response ^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, timeout=60, tag=滴滴出行, enable={didiiuxk_enable}
-http-response ^https?:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/other\/fast script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, timeout=60, tag=滴滴出行, enable={didiiuxk_enable}
+response if ${url} ~= /^https?:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js") with enable=${didiiuxk_enable}, tag="滴滴出行", timeout=60, requires_body=true
+response if ${url} ~= /^https?:\/\/freight\.xiaojukeji\.com\/gateway/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js") with enable=${didiiuxk_enable}, tag="滴滴出行", timeout=60, requires_body=true
+response if ${url} ~= /^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/xpget/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js") with enable=${didiiuxk_enable}, tag="滴滴出行", timeout=60, requires_body=true
+response if ${url} ~= /^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js") with enable=${didiiuxk_enable}, tag="滴滴出行", timeout=60, requires_body=true
+response if ${url} ~= /^https?:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/other\/fast/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js") with enable=${didiiuxk_enable}, tag="滴滴出行", timeout=60, requires_body=true
 #http-response ^https?:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/core script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, timeout=60, tag=滴滴出行
-http-response ^https?:\/\/conf\.diditaxi\.com\.cn\/dynamic\/conf script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, timeout=60, tag=滴滴出行, enable={didiiuxk_enable}
-http-response ^https?:\/\/common\.diditaxi\.com\.cn\/common\/v\d\/usercenter\/me script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, timeout=60, tag=滴滴出行, enable={didiiuxk_enable}
-http-response ^https?:\/\/daijia\.kuaidadi\.com\/gateway script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, timeout=60, tag=滴滴出行, enable={didiiuxk_enable}
-http-response ^https?:\/\/daijia\.kuaidadi\.com:443\/gateway script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, timeout=60, tag=滴滴出行, enable={didiiuxk_enable}
+response if ${url} ~= /^https?:\/\/conf\.diditaxi\.com\.cn\/dynamic\/conf/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js") with enable=${didiiuxk_enable}, tag="滴滴出行", timeout=60, requires_body=true
+response if ${url} ~= /^https?:\/\/common\.diditaxi\.com\.cn\/common\/v\d\/usercenter\/me/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js") with enable=${didiiuxk_enable}, tag="滴滴出行", timeout=60, requires_body=true
+response if ${url} ~= /^https?:\/\/daijia\.kuaidadi\.com\/gateway/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js") with enable=${didiiuxk_enable}, tag="滴滴出行", timeout=60, requires_body=true
+response if ${url} ~= /^https?:\/\/daijia\.kuaidadi\.com:443\/gateway/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js") with enable=${didiiuxk_enable}, tag="滴滴出行", timeout=60, requires_body=true
 # 微信小程序个人中心净化 感谢【TEXAS】分享
-http-response ^https?:\/\/common\.diditaxi\.com\.cn\/common\/v5 script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js, requires-body=true, timeout=60, tag=微信小程序个人中心净化, enable={didiiuxk_enable}
+response if ${url} ~= /^https?:\/\/common\.diditaxi\.com\.cn\/common\/v5/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js") with enable=${didiiuxk_enable}, tag="微信小程序个人中心净化", timeout=60, requires_body=true
 
 
 [MITM]

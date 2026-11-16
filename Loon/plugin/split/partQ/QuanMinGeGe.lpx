@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/y\.gtimg\.cn\/music\/common\/\/upload\/kg_ad\/.+?\d{3,4}x\d{4} reject-200
+request if ${url} ~= /^https?:\/\/y\.gtimg\.cn\/music\/common\/\/upload\/kg_ad\/.+?\d{3,4}x\d{4}/i then reject(200)
 
 
 [MITM]

@@ -11,8 +11,8 @@
 
 [Rewrite]
 # 去除更新弹窗
-^https:\/\/spamblocker-api\.zeekstudio\.com\/profile reject-dict
-^https:\/\/spamblocker-api\.zeekstudio\.com\/checkVersion reject-dict
+request if ${url} ~= /^https:\/\/spamblocker-api\.zeekstudio\.com\/profile/i then reject_dict(200)
+request if ${url} ~= /^https:\/\/spamblocker-api\.zeekstudio\.com\/checkVersion/i then reject_dict(200)
 
 
 [MITM]

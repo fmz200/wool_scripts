@@ -21,18 +21,18 @@ DOMAIN, ggadoffline.miguvideo.com, REJECT
 
 
 [Rewrite]
-^https?:\/\/ggc\.miguvideo\.com\/v1\/iflyad\/deliverysystem\/direct\/ reject-img
-^https?:\/\/public-deliver9\.miguvideo\.com\/deliver\/site\/batchMatch\/mergeSpot\/miguvideo\/ reject-dict
-^https?:\/\/recommend-dy\.miguvideo\.com\/recommend-dynamic\/dataSource\/v1\/recommend\/merge reject-dict
-^https?:\/\/app-sc\.miguvideo\.com\/app-management\/v1\/staticcache\/settings\/miguvideo\/SHARE_PIC reject-dict
-^https?:\/\/common-sc\.miguvideo\.com\/videoActivity\/activityList\/ reject-dict
+request if ${url} ~= /^https?:\/\/ggc\.miguvideo\.com\/v1\/iflyad\/deliverysystem\/direct\//i then reject_img(200)
+request if ${url} ~= /^https?:\/\/public-deliver9\.miguvideo\.com\/deliver\/site\/batchMatch\/mergeSpot\/miguvideo\//i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/recommend-dy\.miguvideo\.com\/recommend-dynamic\/dataSource\/v1\/recommend\/merge/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/app-sc\.miguvideo\.com\/app-management\/v1\/staticcache\/settings\/miguvideo\/SHARE_PIC/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/common-sc\.miguvideo\.com\/videoActivity\/activityList\//i then reject_dict(200)
 #^https?:\/\/display-sc\.miguvideo\.com\/display\/v3\/static\/PERSONAL_CENTER\/ reject-dict
-^https?:\/\/ggx.+\.miguvideo\.com\/request\/sdk.+[^?]*$ reject-dict
-^https?:\/\/ggic\d+.miguvideo\.com\/ad\/ reject-dict
+request if ${url} ~= /^https?:\/\/ggx.+\.miguvideo\.com\/request\/sdk.+[^?]*$/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/ggic\d+.miguvideo\.com\/ad\//i then reject_dict(200)
 
 
 [Script]
-http-response ^https?:\/\/display-sc\.miguvideo\.com\/display\/v3\/static\/PERSONAL_CENTER$ script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/refs/heads/main/Scripts/miguvideo/miguvideo_ads.js, requires-body=true, timeout=60, tag=咪咕视频个人中心去广告
+response if ${url} ~= /^https?:\/\/display-sc\.miguvideo\.com\/display\/v3\/static\/PERSONAL_CENTER$/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/refs/heads/main/Scripts/miguvideo/miguvideo_ads.js") with tag="咪咕视频个人中心去广告", timeout=60, requires_body=true
 
 
 

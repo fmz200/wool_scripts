@@ -19,7 +19,7 @@ DOMAIN-SUFFIX, promote.caixin.com, REJECT
 
 
 [Script]
-http-response ^https?:\/\/gg\.caixin\.com\/s\?z=caixin&op=1&c=3362 script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/caixin/caixinAd.js, requires-body=true, timeout=60, tag=财新广告, enable={cdxb_enable}
+response if ${url} ~= /^https?:\/\/gg\.caixin\.com\/s\?z=caixin&op=1&c=3362/i then script("https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/caixin/caixinAd.js") with enable=${cdxb_enable}, tag="财新广告", timeout=60, requires_body=true
 
 [MITM]
 hostname = gg.caixin.com

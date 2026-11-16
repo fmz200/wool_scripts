@@ -12,11 +12,11 @@
 [Rewrite]
 # ^https?:\/\/client-api-v2\.oray\.com\/materials reject-200
 # 开屏广告
-^https?:\/\/client-api-v2\.oray\.com\/materials\/SLCC_IOS_STARTUP reject-dict
+request if ${url} ~= /^https?:\/\/client-api-v2\.oray\.com\/materials\/SLCC_IOS_STARTUP/i then reject_dict(200)
 # 首页文字广告
-^https?:\/\/client-api-v2\.oray\.com\/materials\/SLCC_IOS_DEVICE reject-dict
+request if ${url} ~= /^https?:\/\/client-api-v2\.oray\.com\/materials\/SLCC_IOS_DEVICE/i then reject_dict(200)
 # 发现页广告
-^https?:\/\/client-api-v2\.oray\.com\/materials\/SUNLOGIN_CLIENT_IOS_PROMOTION reject-dict
+request if ${url} ~= /^https?:\/\/client-api-v2\.oray\.com\/materials\/SUNLOGIN_CLIENT_IOS_PROMOTION/i then reject_dict(200)
 
 
 [MITM]

@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 感谢【All in 梭哈】分享
-^https?:\/\/api\.cloud\.189\.cn\/guns\/(img\/recommendedPosition|getOpenscreenBanners) reject-dict
+request if ${url} ~= /^https?:\/\/api\.cloud\.189\.cn\/guns\/(img\/recommendedPosition|getOpenscreenBanners)/i then reject_dict(200)
 
 
 [MITM]

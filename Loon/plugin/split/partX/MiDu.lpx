@@ -10,9 +10,9 @@
 
 
 [Rewrite]
-^https?:\/\/apiwz\.midukanshu\.com\/advert\/getPopup$ reject
-^https?:\/\/apiwz\.midukanshu\.com\/advert\/treasureInfo$ reject
-^https?:\/\/apiwz\.midukanshu\.com\/config\/getAds$ reject
+request if ${url} ~= /^https?:\/\/apiwz\.midukanshu\.com\/advert\/getPopup$/i then reject(404)
+request if ${url} ~= /^https?:\/\/apiwz\.midukanshu\.com\/advert\/treasureInfo$/i then reject(404)
+request if ${url} ~= /^https?:\/\/apiwz\.midukanshu\.com\/config\/getAds$/i then reject(404)
 
 
 [MITM]

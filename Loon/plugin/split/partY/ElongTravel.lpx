@@ -10,9 +10,9 @@
 
 
 [Rewrite]
-^https?:\/\/mobile-api2011\.elong\.com\/ad(?>v|gateway) reject-200
-^https?:\/\/webboot\.zhangyue\.com\/zycl\/api\/ad\/ reject
-^https?:\/\/saad\.ms\.zhangyue\.net\/ad reject
+request if ${url} ~= /^https?:\/\/mobile-api2011\.elong\.com\/ad(?>v|gateway)/i then reject(200)
+request if ${url} ~= /^https?:\/\/webboot\.zhangyue\.com\/zycl\/api\/ad\//i then reject(404)
+request if ${url} ~= /^https?:\/\/saad\.ms\.zhangyue\.net\/ad/i then reject(404)
 
 
 [MITM]

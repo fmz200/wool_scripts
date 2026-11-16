@@ -10,8 +10,8 @@
 
 
 [Rewrite]
-^https?:\/\/res\.pizzahut\.com\.cn\/CRM\/phad\/member\/app\/member reject-200
-^https?:\/\/res\.pizzahut\.com\.cn\/CRM\/phad\/apphome\/apphome reject
+request if ${url} ~= /^https?:\/\/res\.pizzahut\.com\.cn\/CRM\/phad\/member\/app\/member/i then reject(200)
+request if ${url} ~= /^https?:\/\/res\.pizzahut\.com\.cn\/CRM\/phad\/apphome\/apphome/i then reject(404)
 
 
 [MITM]

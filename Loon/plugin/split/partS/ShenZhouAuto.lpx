@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/img01\.10101111cdn\.com\/adpos\/share\/ reject-img
+request if ${url} ~= /^https?:\/\/img01\.10101111cdn\.com\/adpos\/share\//i then reject_img(200)
 
 
 [MITM]

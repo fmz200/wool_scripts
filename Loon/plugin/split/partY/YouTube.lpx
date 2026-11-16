@@ -14,12 +14,12 @@ youtube_enable = switch,true,false,tag=YouTube-脚本开关
 
 [Rewrite]
 # 播放页广告
-^https:\/\/rr[\w-]+\.googlevideo\.com\/initplayback\? reject-dict
+request if ${url} ~= /^https:\/\/rr[\w-]+\.googlevideo\.com\/initplayback\?/i then reject_dict(200)
 
 
 [Script]
 # 响应体
-http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch) script-path=https://raw.githubusercontent.com/Maasea/sgmodule/refs/heads/master/Script/Youtube/youtube.response.js, requires-body=true, binary-body-mode=true, timeout=60, tag=YouTube响应体, enable={youtube_enable}
+response if ${url} ~= /^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch)/i then script("https://raw.githubusercontent.com/Maasea/sgmodule/refs/heads/master/Script/Youtube/youtube.response.js") with enable=${youtube_enable}, tag="YouTube响应体", timeout=60, requires_body=true, binary_body_mode=true
 
 
 [MITM]

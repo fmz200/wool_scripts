@@ -18,18 +18,18 @@ DOMAIN-SUFFIX, ad.xueqiu.com, REJECT
 
 
 [Rewrite]
-^https:\/\/api\.xueqiu\.com\/snowpard\/launch_strategy\/query\.json\?channel=1&height=932 reject-dict
-^https:\/\/open\.xueqiu\.com\/mpaas\/config\/content\?.+home_visitor_relation_config reject-dict
-^https:\/\/api\.xueqiu\.com\/snowpard\/launch_strategy\/query\.json\?channel=1&location=0&model=6&page=4 reject-dict
-^https:\/\/api\.xueqiu\.com\/snowpard\/launch_strategy\/query\.json\?channel=1&location=0&model=1&page=(4|6) reject-dict
-^https:\/\/api\.xueqiu\.com\/ucprofile\/api\/user\/batchGetUserBasicInfo\.json reject-dict
-^https:\/\/api\.xueqiu\.com\/lightsnow\/launch\/plan\/bee\/query\.json\?channel=1&ip_label=&label_json=.+new_customer=1 reject-dict
-^https:\/\/api\.xueqiu\.com\/lightsnow\/optional\/banner\/query\.json reject-dict
-^https:\/\/open\.xueqiu\.com\/mpaas\/config\/content\?.+cube_detail_bottom_operation_trade_button reject-dict
-^https:\/\/api\.xueqiu\.com\/recommend-proxy\/card\/zj_card\.json\?feed_id=207 reject-dict
-^https:\/\/api\.xueqiu\.com\/recommend-proxy\/card\/portfolio_tab_symbol\.json reject-dict
-^https:\/\/stock\.xueqiu\.com\/v5\/stock\/group\/recommend\/default\/list\.json reject-dict
-^https:\/\/api\.xueqiu\.com\/livestream\/structure\/live\/hotCard\.json reject-dict
+request if ${url} ~= /^https:\/\/api\.xueqiu\.com\/snowpard\/launch_strategy\/query\.json\?channel=1&height=932/i then reject_dict(200)
+request if ${url} ~= /^https:\/\/open\.xueqiu\.com\/mpaas\/config\/content\?.+home_visitor_relation_config/i then reject_dict(200)
+request if ${url} ~= /^https:\/\/api\.xueqiu\.com\/snowpard\/launch_strategy\/query\.json\?channel=1&location=0&model=6&page=4/i then reject_dict(200)
+request if ${url} ~= /^https:\/\/api\.xueqiu\.com\/snowpard\/launch_strategy\/query\.json\?channel=1&location=0&model=1&page=(4|6)/i then reject_dict(200)
+request if ${url} ~= /^https:\/\/api\.xueqiu\.com\/ucprofile\/api\/user\/batchGetUserBasicInfo\.json/i then reject_dict(200)
+request if ${url} ~= /^https:\/\/api\.xueqiu\.com\/lightsnow\/launch\/plan\/bee\/query\.json\?channel=1&ip_label=&label_json=.+new_customer=1/i then reject_dict(200)
+request if ${url} ~= /^https:\/\/api\.xueqiu\.com\/lightsnow\/optional\/banner\/query\.json/i then reject_dict(200)
+request if ${url} ~= /^https:\/\/open\.xueqiu\.com\/mpaas\/config\/content\?.+cube_detail_bottom_operation_trade_button/i then reject_dict(200)
+request if ${url} ~= /^https:\/\/api\.xueqiu\.com\/recommend-proxy\/card\/zj_card\.json\?feed_id=207/i then reject_dict(200)
+request if ${url} ~= /^https:\/\/api\.xueqiu\.com\/recommend-proxy\/card\/portfolio_tab_symbol\.json/i then reject_dict(200)
+request if ${url} ~= /^https:\/\/stock\.xueqiu\.com\/v5\/stock\/group\/recommend\/default\/list\.json/i then reject_dict(200)
+request if ${url} ~= /^https:\/\/api\.xueqiu\.com\/livestream\/structure\/live\/hotCard\.json/i then reject_dict(200)
 
 
 [MITM]

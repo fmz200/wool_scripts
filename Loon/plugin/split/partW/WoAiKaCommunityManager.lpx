@@ -10,9 +10,9 @@
 
 
 [Rewrite]
-^https?:\/\/api\.51credit\.com\/app\/popup\/appPopup reject-dict
-^https?:\/\/api\.51credit\.com\/ks\/a\/list\? reject-dict
-^https?:\/\/api\.51credit\.com\/bbs\/app\/api\/v\d\/topic\/chat reject-dict
+request if ${url} ~= /^https?:\/\/api\.51credit\.com\/app\/popup\/appPopup/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/api\.51credit\.com\/ks\/a\/list\?/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/api\.51credit\.com\/bbs\/app\/api\/v\d\/topic\/chat/i then reject_dict(200)
 
 
 

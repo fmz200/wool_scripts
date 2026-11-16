@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 开屏广告 感谢【别人别我】分享
-^https?:\/\/shcss\.suning\.com\/shcss-web\/api\/appImage\/queryAppImage\.do reject-200
+request if ${url} ~= /^https?:\/\/shcss\.suning\.com\/shcss-web\/api\/appImage\/queryAppImage\.do/i then reject(200)
 
 
 [MITM]

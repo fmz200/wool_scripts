@@ -11,8 +11,8 @@
 
 [Rewrite]
 # 开屏广告
-^https?:\/\/www\.onstar\.com\.cn\/mssos\/sos\/social\/v1\/community\/article\/page reject-dict
-^https?:\/\/api\.shanghaionstar\.com\/sos\/contentinfo\/v1\/public\/landingpage reject-dict
+request if ${url} ~= /^https?:\/\/www\.onstar\.com\.cn\/mssos\/sos\/social\/v1\/community\/article\/page/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/api\.shanghaionstar\.com\/sos\/contentinfo\/v1\/public\/landingpage/i then reject_dict(200)
 
 
 [MITM]

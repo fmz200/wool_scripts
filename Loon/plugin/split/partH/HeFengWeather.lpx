@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 感谢【可莉】分享
-^https?:\/\/hfapp-service\.qweather\.net\/v\d\.\d\/app\/ad\/list\? reject-dict
+request if ${url} ~= /^https?:\/\/hfapp-service\.qweather\.net\/v\d\.\d\/app\/ad\/list\?/i then reject_dict(200)
 
 
 [MITM]

@@ -14,7 +14,7 @@ DOMAIN-SUFFIX, adrs.sdo.com, REJECT
 
 
 [Rewrite]
-^https?:\/\/daoyu\.sdo\.com\/api\/userCommon\/getAppStartAd reject
+request if ${url} ~= /^https?:\/\/daoyu\.sdo\.com\/api\/userCommon\/getAppStartAd/i then reject(404)
 
 
 [MITM]

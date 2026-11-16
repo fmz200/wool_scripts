@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/api\.touker\.com\/v2\/IAdvertisementAPI\.queryStartAdvertisement reject-200
+request if ${url} ~= /^https?:\/\/api\.touker\.com\/v2\/IAdvertisementAPI\.queryStartAdvertisement/i then reject(200)
 
 
 [MITM]

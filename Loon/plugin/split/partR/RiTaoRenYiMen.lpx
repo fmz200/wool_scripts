@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 开屏广告 感谢【Ava阿檬】分享
-^https?:\/\/app\.meruki\.cn\/\?n=Sig\.Front\.AppFront\.GetOpenAdDoorzo reject-dict
+request if ${url} ~= /^https?:\/\/app\.meruki\.cn\/\?n=Sig\.Front\.AppFront\.GetOpenAdDoorzo/i then reject_dict(200)
 
 
 [MITM]

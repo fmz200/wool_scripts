@@ -14,7 +14,7 @@ DOMAIN-KEYWORD,mpos-pic.helipay.com, REJECT
 
 
 [Rewrite]
-^https?:\/\/mpos-pic\.helipay\.com\/upload\/images\/advertisment\/image reject
+request if ${url} ~= /^https?:\/\/mpos-pic\.helipay\.com\/upload\/images\/advertisment\/image/i then reject(404)
 
 
 [MITM]

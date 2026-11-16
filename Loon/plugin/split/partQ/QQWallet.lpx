@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/m\.qianbao\.qq\.com\/pages\/walletHome\?invisible reject
+request if ${url} ~= /^https?:\/\/m\.qianbao\.qq\.com\/pages\/walletHome\?invisible/i then reject(404)
 
 
 [MITM]

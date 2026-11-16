@@ -11,9 +11,9 @@
 
 [Rewrite]
 # 开屏广告
-^https?:\/\/a\.sinopecsales\.com\/app\/cms reject-dict
+request if ${url} ~= /^https?:\/\/a\.sinopecsales\.com\/app\/cms/i then reject_dict(200)
 # 小程序底部横幅广告
-^https?:\/\/ocrifs\.ejoy\.sinopec\.com\/advertitfs\/advert\/findAdvertInfo reject-dict
+request if ${url} ~= /^https?:\/\/ocrifs\.ejoy\.sinopec\.com\/advertitfs\/advert\/findAdvertInfo/i then reject_dict(200)
 
 
 [MITM]

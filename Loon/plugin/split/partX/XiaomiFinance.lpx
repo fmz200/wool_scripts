@@ -10,8 +10,8 @@
 
 
 [Rewrite]
-^https?:\/\/api\.jr\.mi\.com\/v\d\/adv\/ reject-200
-^https?:\/\/api\.jr\.mi\.com\/jr\/api\/playScreen reject-200
+request if ${url} ~= /^https?:\/\/api\.jr\.mi\.com\/v\d\/adv\//i then reject(200)
+request if ${url} ~= /^https?:\/\/api\.jr\.mi\.com\/jr\/api\/playScreen/i then reject(200)
 
 
 [MITM]

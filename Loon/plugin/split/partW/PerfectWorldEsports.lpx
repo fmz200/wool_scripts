@@ -11,7 +11,7 @@
 
 [Rewrite]
 # 开屏广告
-^https?:\/\/api\.wmpvp\.com\/api\/v\d\/config\/promote reject
+request if ${url} ~= /^https?:\/\/api\.wmpvp\.com\/api\/v\d\/config\/promote/i then reject(404)
 
 
 [MITM]

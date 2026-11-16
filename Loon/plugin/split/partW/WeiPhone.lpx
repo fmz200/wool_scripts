@@ -17,7 +17,7 @@
 
 
 [Rewrite]
-^https?:\/\/api\.wfdata\.club\/v\d\/yesfeng\/(infoCenterAd|yesList) reject
+request if ${url} ~= /^https?:\/\/api\.wfdata\.club\/v\d\/yesfeng\/(infoCenterAd|yesList)/i then reject(404)
 
 
 [MITM]

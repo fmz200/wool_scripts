@@ -11,10 +11,10 @@
 
 [Rewrite]
 # 开屏广告 弹窗广告
-^https?:\/\/c\.zhangle\.com\/pic\/mktg\/diversity\/.+\.jpg$ reject-dict
-^https?:\/\/live\.inst-service\.htsc\.com\/live reject-dict
-^https?:\/\/geetest\.htsc\.com:8888\/pre_get_token reject-200
-^https?:\/\/119\.29\.29\.\d+\/d reject-200
+request if ${url} ~= /^https?:\/\/c\.zhangle\.com\/pic\/mktg\/diversity\/.+\.jpg$/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/live\.inst-service\.htsc\.com\/live/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/geetest\.htsc\.com:8888\/pre_get_token/i then reject(200)
+request if ${url} ~= /^https?:\/\/119\.29\.29\.\d+\/d/i then reject(200)
 
 
 [MITM]

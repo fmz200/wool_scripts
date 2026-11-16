@@ -10,8 +10,8 @@
 
 
 [Rewrite]
-^https?://pubads.g.doubleclick.net/gampad/ads reject
-^https?://pagead2.googleadservices.com/pagead/adview reject
+request if ${url} ~= /^https?:\/\/pubads.g.doubleclick.net\/gampad\/ads/i then reject(404)
+request if ${url} ~= /^https?:\/\/pagead2.googleadservices.com\/pagead\/adview/i then reject(404)
 
 
 

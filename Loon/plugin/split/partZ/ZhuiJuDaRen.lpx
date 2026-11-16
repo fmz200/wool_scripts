@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/zjdr666\.com\/zjdr\.php\/v\d\/(version|top_notice\?|advert\?position=[^2]+) reject
+request if ${url} ~= /^https?:\/\/zjdr666\.com\/zjdr\.php\/v\d\/(version|top_notice\?|advert\?position=[^2]+)/i then reject(404)
 
 
 [MITM]

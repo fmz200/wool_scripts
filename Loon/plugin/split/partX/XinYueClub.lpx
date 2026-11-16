@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/bgw\.xinyue\.qq\.com\/xyapi\.PageService\/GetIndexPopFlash reject-200
+request if ${url} ~= /^https?:\/\/bgw\.xinyue\.qq\.com\/xyapi\.PageService\/GetIndexPopFlash/i then reject(200)
 
 
 [MITM]

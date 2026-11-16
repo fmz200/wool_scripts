@@ -34,7 +34,7 @@ DOMAIN-SUFFIX, vdapprecv.app.cntvwb.cn, REJECT
 
 
 [Rewrite]
-^https?:\/\/www\.cntv\.cn\/nettv\/adp\/ reject-200
+request if ${url} ~= /^https?:\/\/www\.cntv\.cn\/nettv\/adp\//i then reject(200)
 
 
 [MITM]

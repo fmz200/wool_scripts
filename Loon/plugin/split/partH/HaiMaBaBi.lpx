@@ -10,8 +10,8 @@
 
 
 [Rewrite]
-^https?:\/\/hmbaby\.simshine\.cn\/admin\/filter\/crowdFunding\/getNewProductData reject-dict
-^https?:\/\/hmbaby\.simshine\.cn\/admin\/filter\/advert\/getAdvertLists reject-dict
+request if ${url} ~= /^https?:\/\/hmbaby\.simshine\.cn\/admin\/filter\/crowdFunding\/getNewProductData/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/hmbaby\.simshine\.cn\/admin\/filter\/advert\/getAdvertLists/i then reject_dict(200)
 
 
 [MITM]

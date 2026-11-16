@@ -10,7 +10,7 @@
 
 
 [Rewrite]
-^https?:\/\/img\.wukongtv\.com\/wkremote\/AD\/iOS\/.*.(jpg|png|jpeg) reject-200
+request if ${url} ~= /^https?:\/\/img\.wukongtv\.com\/wkremote\/AD\/iOS\/.*.(jpg|png|jpeg)/i then reject(200)
 
 
 [MITM]
