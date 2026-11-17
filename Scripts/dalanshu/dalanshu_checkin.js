@@ -60,10 +60,12 @@ async function startTasks() {
   
   $.log(`🟢开始[${$.name}]...`);
   const body = await singIn(token);
-  if (body && body.code === 0) {
-    awarded_xp = body.data.awarded_xp;
-    total_xp = body.data.total_xp;
-    level = body.data.level;
+  if (body && body.code === 0 && body.already) {
+    msg = body.msg || "今日已签到";
+  } else if (body && body.code === 0) {
+    awarded_xp = body.data?.awarded_xp;
+    total_xp = body.data?.total_xp;
+    level = body.data?.level;
     msg = `签到成功，本次获取${awarded_xp}经验，总经验值${total_xp}，当前等级${level}`;
   } else {
     msg = body?.msg || "签到失败";
@@ -79,6 +81,11 @@ async function startTasks() {
   
   console.log(`脚本运行结束`);
   if (isNode) await sendMsg($.nodeNotifyMsg.join("\n"), "");
+}
+
+// 接口用 HTTP 400 + {"code":400,"msg":"今日已签到"} 表示当天已经签过，不是请求错误
+function isAlreadyCheckedIn(parsed) {
+  return /已签到/.test(`${parsed?.msg || parsed?.message || ""}`);
 }
 
 // 每日签到
@@ -112,6 +119,10 @@ function singIn(token) {
     } catch {
       parsed = null;
     }
+    if (parsed && isAlreadyCheckedIn(parsed)) {
+      $.log(`🟢${parsed.msg || "今日已签到"}`);
+      return { code: 0, already: true, msg: parsed.msg || "今日已签到" };
+    }
     if (status && Number(status) >= 400) {
       $.log(`🔴请求失败! HTTP ${status}`);
       const detail = parsed?.msg || parsed?.message || text.slice(0, 300);
@@ -126,6 +137,14 @@ function singIn(token) {
     const text = body == null ? "" : (typeof body === "string" ? body : JSON.stringify(body));
     $.log("🔴请求失败!", err?.message || err);
     if (text) $.log("响应体:", text.slice(0, 500));
+    try {
+      const parsed = JSON.parse(text);
+      if (isAlreadyCheckedIn(parsed)) {
+        $.log(`🟢${parsed.msg || "今日已签到"}`);
+        return { code: 0, already: true, msg: parsed.msg || "今日已签到" };
+      }
+    } catch {
+    }
     return { code: -1, msg: text ? `请求失败: ${text.slice(0, 300)}` : `请求失败: ${err?.message || err}` };
   });
 }
