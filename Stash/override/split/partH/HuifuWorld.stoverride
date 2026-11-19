@@ -1,0 +1,43 @@
+name: |-
+  汇付天下
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1012.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partH/HuifuWorld.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "mcsp.cloudpnr.com"
+    - "saas-ad.cloudpnr.com"
+
+  script:
+    - match: ^https:\/\/mcsp\.cloudpnr\.com\/api\/miniapp\/popular\/T_MINIAPP$
+      name: "汇付天下_12"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https:\/\/saas-ad\.cloudpnr\.com\/huifuad-base-api\/api\/tactics\/ad
+      name: "汇付天下_12"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "汇付天下_12":
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/huifutianxia_ads.js
+    interval: 86400
+

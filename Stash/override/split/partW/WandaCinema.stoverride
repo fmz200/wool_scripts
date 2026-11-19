@@ -1,0 +1,30 @@
+name: |-
+  万达电影
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1049.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partW/WandaCinema.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "misc-api-prd-mx.wandafilm.com"
+
+  body-rewrite:
+    - >-
+      ^https:\/\/misc-api-prd-mx\.wandafilm\.com\/commend\/common_banner_batch\.api response-jq .data.objects["OpenAPP-&-FlashAD"] = [] | .data.objects["InTheaters-&-BoxAD"] = []
+    - >-
+      ^https?:\/\/misc-api-prd-mx\.wandafilm\.com\/commend\/common_banner_batch\.api\?(?:[^#?&]+&)*bannerInfos=%5B%7B%22cinemaI response-replace-regex WX_index_mp-&-boxAD" "fmz200
+

@@ -1,0 +1,39 @@
+name: |-
+  中国电信
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1007.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partZ/ChinaTelecom.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN,ad.21cn.com,REJECT
+  - DOMAIN,ad.k.21cn.com,REJECT
+  - DOMAIN,admarket.21cn.com,REJECT
+  - DOMAIN,adshows.21cn.com,REJECT
+  - IP-CIDR,122.229.8.47/32,REJECT,no-resolve
+  - IP-CIDR,122.229.29.89/32,REJECT,no-resolve
+
+http:
+
+  mitm:
+    - "cloud.189.cn"
+    - "zt-app.go189.cn"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/cloud\.189\.cn\/include\/splash\/ - reject
+    - >-
+      ^https?:\/\/zt-app\.go189\.cn\/zt-app\/welcome\/.*?Animation - reject-200
+

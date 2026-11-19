@@ -1,0 +1,40 @@
+name: |-
+  华住会
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1069.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partH/HuazhuClub.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "appapi.huazhu.com"
+    - "hweb-hotel.huazhu.com"
+    - "hweb-manager.huazhu.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/appapi\.huazhu\.com:\d+\/client\/app\/getAppStartPage\/ - reject
+    - >-
+      ^https?:\/\/hweb-hotel\.huazhu\.com\/home\/queryRecommond - reject-dict
+    - >-
+      ^https?:\/\/hweb-hotel\.huazhu\.com\/{1,2}home\/(?>queryNewNotice|querySelectHotel|queryHotelBrand|queryMall|huazhuWorld) - reject-200
+    - >-
+      ^https?:\/\/hweb-manager\.huazhu\.com\/notice\/getAppPopupNotifyAlert - reject-dict
+    - >-
+      ^https?:\/\/hweb-manager\.huazhu\.com\/bundle\/upgrade\/check - reject-dict
+    - >-
+      ^https?:\/\/hweb-manager\.huazhu\.com\/hotels\/ad\/ - reject-dict
+

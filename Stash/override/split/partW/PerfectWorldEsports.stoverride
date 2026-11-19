@@ -1,0 +1,28 @@
+name: |-
+  完美世界电竞
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1079.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partW/PerfectWorldEsports.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "api.wmpvp.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/api\.wmpvp\.com\/api\/v\d\/config\/promote - reject
+

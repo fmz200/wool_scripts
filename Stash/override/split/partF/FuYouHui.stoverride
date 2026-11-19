@@ -1,0 +1,36 @@
+name: |-
+  复游会微信小程序
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1075.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partF/FuYouHui.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "apis.folidaymall.com"
+
+  script:
+    - match: ^https?:\/\/apis\.folidaymall\.com\/online\/capi\/component\/getPageComponents
+      name: "复游会微信小程序_10"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "复游会微信小程序_10":
+    url: https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/foliday.js
+    interval: 86400
+

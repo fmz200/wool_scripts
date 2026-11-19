@@ -1,0 +1,105 @@
+name: |-
+  喜马拉雅
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1098.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partX/Ximalaya.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN,adsehera.ximalaya.com,REJECT
+  - DOMAIN,adse.wsa.ximalaya.com,REJECT
+  - DOMAIN,adbehavior.ximalaya.com,REJECT
+  - DOMAIN,adbehavior.wsa.ximalaya.com,REJECT
+  - DOMAIN-SUFFIX,ad.ximalaya.com,REJECT
+  - DOMAIN-SUFFIX,adse.ximalaya.com,REJECT
+  - DOMAIN-SUFFIX,adse-v2.ximalaya.com,REJECT
+  - DOMAIN-SUFFIX,open.ximalaya.com,REJECT
+  - DOMAIN-SUFFIX,upos-app.ximalaya.com,REJECT
+
+http:
+
+  mitm:
+    - "gslbali.ximalaya.com"
+    - "search.ximalaya.com"
+    - "searchwsa.ximalaya.com"
+    - "mobile.ximalaya.com"
+    - "mobilehera.ximalaya.com"
+    - "mobwsa.ximalaya.com"
+    - "m.ximalaya.com"
+    - "mwsa.ximalaya.com"
+
+  url-rewrite:
+    - >-
+      ^https:\/\/(search|searchwsa)\.ximalaya\.com\/hub\/(guideWord|hotWord)V\d\/ - reject-dict
+    - >-
+      ^https:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/discovery-feed\/v\d\/scene\/listen\/refresh\? - reject-dict
+    - >-
+      ^https:\/\/(m|mwsa)\.ximalaya\.com\/x-web-activity\/signIn\/getHomePageSignInInfo\/ - reject-dict
+    - >-
+      ^https:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/subscribe\/v\d\/subscribe\/tagAlbumList$ - reject-dict
+    - >-
+      ^https:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/track-feed\/v\d\/chase\/recommend\/ - reject-dict
+    - >-
+      ^https:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/social-web\/follow-stream\/category\/\d+$ - reject-dict
+    - >-
+      ^https:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/mobile-playpage\/playpage\/recommendContentV\d\/ - reject-dict
+    - >-
+      ^https:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/mobile-playpage\/playpage\/recommend\/resource\/allocation\/ - reject-dict
+    - >-
+      ^https:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/firework-portal\/v\d+\/sync\? - reject-dict
+    - >-
+      ^https:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/business-sale-promotion-guide-mobile-web\/popup\/ - reject-dict
+    - >-
+      ^https:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/app-skin-service\/skin\/setting\/info\/ - reject-dict
+    - >-
+      ^https:\/\/(live|livewsa)\.ximalaya\.com\/lamia\/v1\/subscribe\/status$ - reject-dict
+    - >-
+      ^https:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/subscribe\/v\d\/subscribe\/recommend\? - reject-dict
+    - >-
+      ^https:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/mobile-user\/v\d\/purchased\/recommend\/ - reject-dict
+
+  body-rewrite:
+    - >-
+      ^https:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/discovery-feed\/v\d\/mix\/ response-jq .heData |= map(select(.item.list[].bizType != "SceneListenCard"))
+    - >-
+      ^https:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/discovery-category\/customCategories\/ response-jq .categoryList |= map(.itemList |= map(select(.title | test("直播|123狂欢节|SVIP"; "i") | not))) | .customCategoryList |= map(select(.title | test("直播|123狂欢节|SVIP"; "i") | not))
+    - >-
+      ^https:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/football-portal\/diff2\/batch\? response-jq delpaths([["json","ad"]])
+    - >-
+      ^https:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/football-portal\/diff2\/batch\? response-jq delpaths([["json","toc"]])
+    - >-
+      ^https:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/nexus-web\/v\d\/tabs\/customTabs\? response-jq .data.feedTabs |= map(select(.name != "大赛"))
+    - >-
+      ^https:\/\/mobwsa\.ximalaya\.com\/mobile-playpage\/playpage\/tabs\/v2\/ response-jq delpaths([["data","playpage","resourceMap","defaultResource"]])
+    - >-
+      ^https:\/\/mobwsa\.ximalaya\.com\/mobile-playpage\/playpage\/tabs\/v2\/ response-jq delpaths([["data","playpage","resourceMap","playPageTip"]])
+    - >-
+      ^https:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/mobile-user\/v\d\/homePage\/ response-jq delpaths([["data","freeListenV2"]])
+    - >-
+      ^https:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/mobile-user\/v\d\/homePage\/ response-jq .data.serviceModule.entrances |= map(select(.name == "全部服务"))
+
+  script:
+    - match: ^https:\/\/(m|mwsa)\.ximalaya\.com\/community\/square\/v\d\/stream\?
+      name: "echoResponse_44"
+      type: request
+      timeout: 60
+      argument: |-
+        text=%7B%22data%22%3A%7B%22cards%22%3A%5B%7B%22content%22%3A%7B%7D%2C%22type%22%3A%22RECOMMENDS%22%7D%5D%7D%2C%22ret%22%3A0%7D&status-code=200
+
+script-providers:
+  "echoResponse_44":
+    url: https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/echo-response.js
+    interval: 86400
+

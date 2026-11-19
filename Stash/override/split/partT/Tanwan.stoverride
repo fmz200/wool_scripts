@@ -1,0 +1,33 @@
+name: |-
+  Tanwan (贪玩)
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1075.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partT/Tanwan.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN-SUFFIX,mytanwan.com,REJECT
+  - DOMAIN-SUFFIX,tanwanyx.com,REJECT
+  - DOMAIN-SUFFIX,app.tanwan.com,REJECT
+  - DOMAIN-SUFFIX,wap.tanwan.com,REJECT
+  - DOMAIN-SUFFIX,gafxa.code.mytanwan.com,REJECT
+  - DOMAIN-SUFFIX,ldpgl.code.mytanwan.com,REJECT
+  - DOMAIN-SUFFIX,pop.code.mytanwan.com,REJECT
+  - DOMAIN-SUFFIX,sy.code.mytanwan.com,REJECT
+  - DOMAIN-SUFFIX,sy.flash.mytanwan.com,REJECT
+  - DOMAIN-SUFFIX,b.code.tanwanyx.com,REJECT
+  - DOMAIN-SUFFIX,hv.code.tanwanyx.com,REJECT
+  - DOMAIN-SUFFIX,xd.code.tanwanyx.com,REJECT
+

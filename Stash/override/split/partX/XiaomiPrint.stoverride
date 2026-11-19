@@ -1,0 +1,31 @@
+name: |-
+  小米打印
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1020.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partX/XiaomiPrint.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "api-miprint.hannto.com"
+    - "api.indeedpower.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/api-miprint\.hannto\.com\/v1\/c\/res\/app\/ad\/\?(?:[^#?&]+&)*app_version - reject-dict
+    - >-
+      ^https?:\/\/api\.indeedpower\.com\/v1\/m\/edu\/module\/homepage_banner\/\?(?:[^#?&]+&)*randomStr - reject-dict
+

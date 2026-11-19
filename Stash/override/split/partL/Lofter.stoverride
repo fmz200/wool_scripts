@@ -1,0 +1,34 @@
+name: |-
+  lofter
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1055.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partL/Lofter.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "ad.lofter.com"
+    - "images.pinduoduo.com"
+    - "lofter.lf127.net"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/ad\.lofter.com\/v1\.1\/yitou\/madr - reject-200
+    - >-
+      ^https?:\/\/images\.pinduoduo\.com\/marketing\_api - reject-200
+    - >-
+      ^https?:\/\/lofter\.lf127\.net\/ad\-material - reject-200
+

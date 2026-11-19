@@ -1,0 +1,43 @@
+name: |-
+  腾讯新闻
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1052.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partT/TencentNews.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "r.inews.qq.com"
+    - "news.ssp.qq.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/r\.inews\.qq\.com\/(adsBlacklist|getFullScreenPic|getQQNewsRemoteConfig) - reject
+    - >-
+      ^https?:\/\/r\.inews\.qq\.com\/(getBannerAds|getNewsRemoteConfig|getSplash|searchHotCatList|upLoadLoc) - reject
+
+  script:
+    - match: ^https?:\/\/(news\.ssp\.qq\.com\/app|r\.inews\.qq\.com\/(get(QQNewsUnreadList|TagFeedList)|gw\/page\/event_detail|news_feed\/hot_module_list))
+      name: "腾讯新闻_15"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "腾讯新闻_15":
+    url: https://raw.githubusercontent.com/app2smile/rules/master/js/qq-news.js
+    interval: 86400
+

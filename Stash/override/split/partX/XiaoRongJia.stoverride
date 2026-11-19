@@ -1,0 +1,46 @@
+name: |-
+  笑容加
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1012.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partX/XiaoRongJia.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "myusmile.online"
+    - "wemallh5.usmile.com"
+    - "www.myusmile.online"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/myusmile\.online\/user\/version\/requestFirmwareUpdate\/ - reject
+    - >-
+      ^https?:\/\/www\.myusmile\.online\/user\/userTagRecord\/popup - reject
+    - >-
+      ^https?:\/\/myusmile\.online\/user\/version\/requestAppUpdate - reject-dict
+    - >-
+      ^https?:\/\/wemallh5\.usmile\.com\/api\/sp-portal\/store\/usmile\/activity\/dayCheck\?(?:[^#?&]+&)*pop - reject-dict
+
+  script:
+    - match: ^https?:\/\/www\.myusmile\.online\/user\/plaqueTopic\/selectByType
+      name: "usmile_21"
+      type: response
+
+script-providers:
+  "usmile_21":
+    url: https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/usmile.js
+    interval: 86400
+

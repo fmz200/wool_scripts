@@ -1,0 +1,45 @@
+name: |-
+  航旅纵横
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1098.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partH/HangLvZongHeng.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "home.umetrip.com"
+    - "discardrp.umetrip.com"
+    - "startup.umetrip.com"
+    - "oss.umetrip.com"
+
+  url-rewrite:
+    - >-
+      ^https:\/\/oss\.umetrip\.com\/fs\/advert\/polite - reject
+    - >-
+      ^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native - reject
+
+  script:
+    - match: ^http?:\/\/(114\.115\.217\.129)|(home\.umetrip\.com)\/gateway\/api\/umetrip\/native$
+      name: "航旅纵横_15"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "航旅纵横_15":
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/umetrip/umetrip_ads.js
+    interval: 86400
+

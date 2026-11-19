@@ -1,0 +1,48 @@
+name: |-
+  苏打校园APP
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1084.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partS/SuDaXiaoYuanAPP.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "api.sodalife.xyz"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/api\.sodalife\.xyz\/v1\/posters\?(?:[^#?&]+&)*location=SODA_APP%3AHOME%3ABOTTOM - reject-dict
+    - >-
+      ^https?:\/\/api\.sodalife\.xyz\/v1\/posters\?(?:[^#?&]+&)*location=SODA_APP%3AHOME%3ACENTER - reject-dict
+    - >-
+      ^https?:\/\/api\.sodalife\.xyz\/v1\/posters\?(?:[^#?&]+&)*location=SODA_APP%3AMINE%3ABOTTOM - reject-dict
+    - >-
+      ^https?:\/\/api\.sodalife\.xyz\/v1\/posters\?(?:[^#?&]+&)*location=SODA_APP%3AREWARDS%3ACENTER - reject-dict
+    - >-
+      ^https?:\/\/api\.sodalife\.xyz\/v1\/goods - reject-dict
+
+  script:
+    - match: ^https?:\/\/api\.sodalife\.xyz\/v1\/posters\?location=SODA_APP%3AHOME%3ATOP
+      name: "苏打校园APP_17"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "苏打校园APP_17":
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soda.js
+    interval: 86400
+

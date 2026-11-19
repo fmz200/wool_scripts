@@ -1,0 +1,98 @@
+name: |-
+  淘宝
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1003.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partT/Taobao.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN-SUFFIX,apoll.m.taobao.com,REJECT
+  - DOMAIN-SUFFIX,h-adashx.ut.taobao.com,REJECT
+  - DOMAIN-SUFFIX,w.m.taobao.com,REJECT
+  - DOMAIN,tunion-api.m.taobao.com,REJECT
+  - DOMAIN-SUFFIX,re.m.taobao.com,REJECT
+  - DOMAIN-SUFFIX,agoodm.m.taobao.com,REJECT
+  - DOMAIN-SUFFIX,ai.taobao.com,REJECT
+  - DOMAIN-SUFFIX,api.waptest.taobao.com,REJECT
+  - DOMAIN-SUFFIX,dsp.simba.taobao.com,REJECT
+  - DOMAIN-SUFFIX,fav.simba.taobao.com,REJECT
+  - DOMAIN-SUFFIX,m.simba.taobao.com,REJECT
+  - DOMAIN-SUFFIX,mclick.simba.taobao.com,REJECT
+  - DOMAIN-SUFFIX,re.taobao.com,REJECT
+  - DOMAIN-SUFFIX,redirect.simba.taobao.com,REJECT
+  - DOMAIN-SUFFIX,simba.m.taobao.com,REJECT
+  - DOMAIN-SUFFIX,srd.simba.taobao.com,REJECT
+  - DOMAIN-SUFFIX,temai.taobao.com,REJECT
+  - DOMAIN-SUFFIX,textlink.simba.taobao.com,REJECT
+  - DOMAIN-SUFFIX,unitacs.m.taobao.com,REJECT
+  - DOMAIN-SUFFIX,acs4baichuan.m.taobao.com,REJECT
+  - DOMAIN-SUFFIX,adashbc.ut.taobao.com,REJECT
+  - DOMAIN-SUFFIX,adash-c.ut.taobao.com,REJECT
+  - DOMAIN-SUFFIX,adashxgc.ut.taobao.com,REJECT
+  - DOMAIN-SUFFIX,adashx4yt.m.taobao.com,REJECT
+  - DOMAIN-SUFFIX,tunion-api.m.taobao.com,REJECT
+  - DOMAIN-SUFFIX,tns.simba.taobao.com,REJECT
+  - DOMAIN-SUFFIX,click.mz.simba.taobao.com,REJECT
+  - DOMAIN-SUFFIX,click.simba.taobao.com,REJECT
+  - DOMAIN-SUFFIX,click.tz.simba.taobao.com,REJECT
+  - DOMAIN-SUFFIX,stat.simba.taobao.com,REJECT
+  - DOMAIN-SUFFIX,m-adash.m.taobao.com,REJECT
+  - DOMAIN-SUFFIX,adashbc.m.taobao.com,REJECT
+
+http:
+
+  mitm:
+    - "acs.m.taobao.com"
+    - "guide-acs.m.taobao.com"
+    - "poplayer.template.alibaba.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv - reject-dict
+    - >-
+      ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimama\.etao\.config\.query\/.+?etao_advertise - reject-dict
+    - >-
+      ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit - reject-dict
+    - >-
+      ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.etao\.noah\.query\/.+tao_splash - reject-dict
+    - >-
+      ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise - reject-dict
+    - >-
+      ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get - reject-dict
+    - >-
+      ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome - reject-dict
+    - >-
+      ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources - reject-dict
+    - >-
+      ^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(volvo\.secondfloor\.getconfig|wireless\.home\.newface\.awesome\.get) - reject-dict
+
+  script:
+    - match: ^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get)
+      name: "淘宝_54"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/poplayer\.template\.alibaba\.com\/\w+\.json
+      name: "淘宝_54"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "淘宝_54":
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/myBlockAds.js
+    interval: 86400
+

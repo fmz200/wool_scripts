@@ -1,0 +1,69 @@
+name: |-
+  网易有道词典
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1020.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partW/NetEaseYoudaoDictionary.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "dict.youdao.com"
+    - "api-overmind.youdao.com"
+    - "cdke.youdao.com"
+    - "dictvip-business.youdao.com"
+    - "dsp-impr2.youdao.com"
+    - "impservice.dictapp.youdao.com"
+    - "oral.youdao.com"
+    - "oimage*.ydstatic.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/oimage([a-z])([0-9])\.ydstatic\.com\/.+adpublish - reject
+    - >-
+      ^https?:\/\/dict\.youdao\.com\/course\/tab\/translateTab - reject-dict
+    - >-
+      ^https?:\/\/api-overmind\.youdao\.com\/openapi\/get\/luna\/dict\/dict-mobile\/prod\/dictCommonConfig - reject-dict
+    - >-
+      ^https?:\/\/cdke\.youdao\.com\/course3\/recommend\/dict\/startup - reject-dict
+    - >-
+      ^https?:\/\/dict\.youdao\.com\/commonsearch - reject-dict
+    - >-
+      ^https?:\/\/dict\.youdao\.com\/vip\/activity\/couponinfo - reject-dict
+    - >-
+      ^https?:\/\/dict\.youdao\.com\/dictusertask\/system - reject-dict
+    - >-
+      ^https?:\/\/dictvip-business\.youdao\.com\/home\/ad - reject-dict
+    - >-
+      ^https?:\/\/oimage\w\d\.ydstatic\.com\/image\?.+?=adpublish - reject-200
+    - >-
+      ^https?:\/\/dsp-impr2\.youdao\.com\/adload - reject-200
+    - >-
+      ^https?:\/\/impservice\.dictapp\.youdao\.com\/imp\/request - reject-200
+    - >-
+      ^https?:\/\/oral\.youdao\.com\/oral\/adInfo - reject-200
+
+  script:
+    - match: ^https?:\/\/dict\.youdao\.com\/(homepage\/promotion|course\/tab\/home|homepage\/tile)
+      name: "网易有道词典_34"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "网易有道词典_34":
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/youdao/dict-youdao-ad.js
+    interval: 86400
+

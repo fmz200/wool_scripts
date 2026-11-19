@@ -1,0 +1,37 @@
+name: |-
+  夸克
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1018.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partK/Quark.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "open-cms-api.uc.cn"
+    - "open-cms-api.quark.cn"
+
+  script:
+    - match: ^https?:\/\/open-cms-api\.(uc|quark)\.cn\/open-cms
+      name: "夸克_11"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "夸克_11":
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/quark.js
+    interval: 86400
+

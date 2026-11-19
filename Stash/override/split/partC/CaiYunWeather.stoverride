@@ -1,0 +1,42 @@
+name: |-
+  彩云天气
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1045.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partC/CaiYunWeather.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 20:00:51
+
+http:
+
+  mitm:
+    - "wrapper.cyapi.cn"
+    - "api.caiyunapp.com"
+    - "starplucker.cyapi.cn"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/api\.caiyunapp\.com\/v1\/activity - reject-dict
+
+  script:
+    - match: ^https?:\/\/wrapper\.cyapi\.cn\/v1\/activity\?
+      name: "caiyun_11"
+      type: request
+      binary-mode: true
+      timeout: 60
+
+script-providers:
+  "caiyun_11":
+    url: http://script.hub/convert/_start_/https://raw.githubusercontent.com/Keywos/rule/main/mocks/caiyun.json/_end_/caiyun.json?type=mock&target-app=stash-stoverride&headers=
+    interval: 86400
+

@@ -1,0 +1,32 @@
+name: |-
+  微信公众号
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1002.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partW/WeChatOfficialAccount.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "mp.weixin.qq.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/mp\.weixin\.qq\.com\/mp\/cps_product_info\?(?:[^#?&]+&)*action - reject-dict
+
+  body-rewrite:
+    - >-
+      ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad response-replace-regex advertisement fmz200
+

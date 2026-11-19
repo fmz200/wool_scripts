@@ -1,0 +1,41 @@
+name: |-
+  易车
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1020.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partY/Yiche.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN,adx.yiche.com,REJECT
+  - DOMAIN,log.ycapp.yiche.com,REJECT
+  - DOMAIN-SUFFIX,bglog.bitauto.com,REJECT
+  - DOMAIN-SUFFIX,g.bitauto.com,REJECT
+  - DOMAIN-SUFFIX,gimg.bitauto.com,REJECT
+  - DOMAIN-SUFFIX,gstat.bitauto.com,REJECT
+
+http:
+
+  mitm:
+    - "api.ycapp.yiche.com"
+    - "cheyouapi.ycapp.yiche.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/api\.ycapp\.yiche\.com\/appnews\/getadlist - reject-200
+    - >-
+      ^https?:\/\/api\.ycapp\.yiche\.com\/yicheapp\/getadlist - reject-200
+    - >-
+      ^https?:\/\/cheyouapi\.ycapp\.yiche\.com\/appforum\/getusermessagecount - reject-200
+

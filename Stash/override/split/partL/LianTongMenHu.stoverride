@@ -1,0 +1,53 @@
+name: |-
+  联掌门户去广告
+desc: |-
+  移除开屏广告、弹窗，以及首页、服务和发现页的无用内容
+author: |-
+  可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1002.png
+homepage: |-
+  https://hub.kelee.one
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partL/LianTongMenHu.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  force-http-engine:
+    - "lzmh.lz-qs.com:5090"
+
+  mitm:
+    - "lzmh.lz-qs.com:6025"
+    - "yuudnn.lz-qs.com:9220"
+    - "yuudnn.lz-qs.com"
+
+  url-rewrite:
+    - >-
+      (?i)^https://lzmh\.lz-qs\.com:6025/lzmh_app_api/api/v1/app3rd/getApp3rdGenreList\? - reject-dict
+    - >-
+      (?i)^https://lzmh\.lz-qs\.com:6025/lzmh_app_api/api/v1/ad/ - reject-dict
+    - >-
+      (?i)^https://yuudnn\.lz-qs\.com:9220/mssp-api/api/v1/mrtb/getAdSlotList$ - reject-dict
+    - >-
+      (?i)^https://yuudnn\.lz-qs\.com:9220/mssp-api/api/v1/mrtb/requestAd$ - reject-dict
+    - >-
+      (?i)^https://yuudnn\.lz-qs\.com:9220/mssp-api/api/v1/mrtb/getSdkStartConfigList$ - reject-dict
+    - >-
+      (?i)^https://lzmh\.lz-qs\.com:6025/lzmh_app_api/api/v1/index/getRecommendList\? - reject-dict
+    - >-
+      (?i)^https://yuudnn\.lz-qs\.com/lzmh_app_api/o2o/api/v2/o2o/homeInfo$ - reject-dict
+    - >-
+      (?i)^https://yuudnn\.lz-qs\.com/lzmh_app_api/o2o/api/v2/o2o/homeShopList$ - reject-dict
+    - >-
+      (?i)^https://yuudnn\.lz-qs\.com:9220/mssp-api/api/v1/mrtb/getSdkAdSlotList$ - reject-dict
+    - >-
+      (?i)^http://lzmh\.lz-qs\.com:5090/resource/download/ - reject-200
+
+  body-rewrite:
+    - >-
+      (?i)^https://lzmh\.lz-qs\.com:6025/lzmh_app_api/api/v2/user/getUserBaseInfoAndConfig\? response-jq del(.value.config)
+

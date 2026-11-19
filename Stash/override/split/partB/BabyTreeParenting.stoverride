@@ -1,0 +1,39 @@
+name: |-
+  宝宝树孕育
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1003.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partB/BabyTreeParenting.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "aimg.babytreeimg.com"
+    - "plough.babytree.com"
+    - "mapiweb.babytree.com"
+    - "go.babytree.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/aimg\.babytreeimg\.com\/group1\/M00\/*\/*\/.*.jpg - reject-200
+    - >-
+      ^https?:\/\/plough\.babytree\.com\/plough\.do - reject-200
+    - >-
+      ^https?:\/\/mapiweb\.babytree\.com\/newapi\/luban\/behavior\/receive - reject-200
+    - >-
+      ^https?:\/\/go\.babytree\.com\/go_pregnancy\/api\/index_activity\/get_app_index_activity - reject-200
+    - >-
+      ^https?:\/\/go\.babytree\.com\/go_tool\/api\/feeding_record\/get_home_banner_info - reject-dict
+

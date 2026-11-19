@@ -1,0 +1,37 @@
+name: |-
+  涨乐财富通
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1054.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partZ/ZhangLeCaiFuTong.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "c.zhangle.com"
+    - "live.inst-service.htsc.com"
+    - "geetest.htsc.com"
+    - "119.29.29.*"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/c\.zhangle\.com\/pic\/mktg\/diversity\/.+\.jpg$ - reject-dict
+    - >-
+      ^https?:\/\/live\.inst-service\.htsc\.com\/live - reject-dict
+    - >-
+      ^https?:\/\/geetest\.htsc\.com:8888\/pre_get_token - reject-200
+    - >-
+      ^https?:\/\/119\.29\.29\.\d+\/d - reject-200
+

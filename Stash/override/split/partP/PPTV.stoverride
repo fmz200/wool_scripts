@@ -1,0 +1,35 @@
+name: |-
+  PPTV
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1010.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partP/PPTV.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN,ads.aplus.pptv.com,REJECT
+  - DOMAIN,ads.aplusapi.pptv.com,REJECT
+  - DOMAIN,asimgs.pplive.cn,REJECT
+  - DOMAIN,de.as.pptv.com,REJECT
+  - DOMAIN-SUFFIX,afp.pplive.com,REJECT
+  - DOMAIN-SUFFIX,gas.data.pplive.com,REJECT
+  - DOMAIN-SUFFIX,plt.data.pplive.com,REJECT
+  - DOMAIN-SUFFIX,web.data.pplive.com,REJECT
+  - DOMAIN-SUFFIX,pp2.pptv.com,REJECT
+  - DOMAIN-SUFFIX,stat.pptv.com,REJECT
+  - DOMAIN-SUFFIX,app.aplus.pptv.com,REJECT
+  - DOMAIN-SUFFIX,as.aplus.pptv.com,REJECT
+  - DOMAIN-SUFFIX,jp.as.pptv.com,REJECT
+  - DOMAIN-SUFFIX,static.g.pptv.com,REJECT
+

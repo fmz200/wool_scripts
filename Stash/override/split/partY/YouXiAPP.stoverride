@@ -1,0 +1,48 @@
+name: |-
+  悠洗APP
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1043.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partY/YouXiAPP.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "api.ulife.group"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/api\.ulife\.group\/signintask\/adServing - reject-dict
+    - >-
+      ^https?:\/\/api\.ulife\.group\/auth\/account\/getUpgradeStrategy - reject-dict
+    - >-
+      ^https?:\/\/api\.ulife\.group\/market\/frontEntrance\/getThirdAdvertising\?(?:[^#?&]+&)*displayPort=1&type=15 - reject-dict
+    - >-
+      ^https?:\/\/api\.ulife\.group\/market\/memberCard\/listMemberCard\?(?:[^#?&]+&)*isShowSecondaryCard=1 - reject-dict
+    - >-
+      ^https?:\/\/api\.ulife\.group\/auth\/account\/entrance - reject-dict
+
+  script:
+    - match: ^https?:\/\/api\.ulife\.group\/market\/homeIconDetail\/list\/v7
+      name: "悠洗APP_18"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "悠洗APP_18":
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/yx.js
+    interval: 86400
+

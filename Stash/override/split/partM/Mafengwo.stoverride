@@ -1,0 +1,48 @@
+name: |-
+  马蜂窝
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1068.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partM/Mafengwo.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "mapi.mafengwo.cn"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/mapi\.mafengwo\.cn\/(travelguide\/)?ad - reject
+    - >-
+      ^https?:\/\/mapi\.mafengwo\.cn\/widget\/note\/get_widget_note - reject
+    - >-
+      ^https?:\/\/mapi\.mafengwo\.cn\/system\/push\/get_local_push_config - reject
+    - >-
+      ^https?:\/\/mapi\.mafengwo\.cn\/system\/update\/check_update - reject-dict
+    - >-
+      ^https?:\/\/mapi\.mafengwo\.cn\/system\/config\/(get|mark)_(push|alert)_config - reject-dict
+
+  script:
+    - match: ^https?:\/\/mapi\.mafengwo\.cn\/user\/profile\/get_(list|profile)
+      name: "马蜂窝_18"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "马蜂窝_18":
+    url: https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/mafengwo.js
+    interval: 86400
+

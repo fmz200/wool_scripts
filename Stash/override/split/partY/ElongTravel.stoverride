@@ -1,0 +1,34 @@
+name: |-
+  艺龙旅行网
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1029.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partY/ElongTravel.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "mobile-api2011.elong.com"
+    - "webboot.zhangyue.com"
+    - "saad.ms.zhangyue.net"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/webboot\.zhangyue\.com\/zycl\/api\/ad\/ - reject
+    - >-
+      ^https?:\/\/saad\.ms\.zhangyue\.net\/ad - reject
+    - >-
+      ^https?:\/\/mobile-api2011\.elong\.com\/ad(?>v|gateway) - reject-200
+

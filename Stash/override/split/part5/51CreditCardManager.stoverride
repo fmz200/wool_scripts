@@ -1,0 +1,46 @@
+name: |-
+  51信用卡管家
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1060.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/part5/51CreditCardManager.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "api.u51.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/api\.u51\.com\/(generic-config-gateway|rs-resys)\/api\/v\d\/(creditpage-config|recommend) - reject-200
+
+  script:
+    - match: ^https?:\/\/api\.u51\.com\/liabilitygateway\/api\/v\d\/homepage\/liabilityline
+      name: "51信用卡管家_13"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/api\.u51\.com\/generic-config-gateway\/api\/v\d\/guanjia\/me-tab2\/config
+      name: "51信用卡管家_13"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "51信用卡管家_13":
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/51card.js
+    interval: 86400
+

@@ -1,0 +1,49 @@
+name: |-
+  迅雷
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1087.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partT/Thunder.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN-SUFFIX,adsp.xunlei.com,REJECT
+  - DOMAIN-SUFFIX,static-xl9-ssl.xunlei.com,REJECT
+  - DOMAIN-SUFFIX,biz.live.xunlei.com,REJECT
+  - DOMAIN-SUFFIX,ct.niu.xunlei.com,REJECT
+  - DOMAIN-SUFFIX,mou.niu.xunlei.com,REJECT
+  - DOMAIN-SUFFIX,scene.vip.xunlei.com,REJECT
+  - DOMAIN-SUFFIX,tw13b093.sandai.net,REJECT
+  - DOMAIN-SUFFIX,xlmc.sandai.net,REJECT
+  - DOMAIN-SUFFIX,cpm.cm.sandai.net,REJECT
+  - DOMAIN-SUFFIX,master.wap.dphub.sandai.net,REJECT
+  - DOMAIN-SUFFIX,idx.m.hub.sandai.net,REJECT
+  - DOMAIN-SUFFIX,liveupdate.mac.sandai.net,REJECT
+  - DOMAIN-SUFFIX,hub5pn.wap.sandai.net,REJECT
+  - DOMAIN-SUFFIX,etl.xlmc.sandai.net,REJECT
+  - DOMAIN-SUFFIX,test.api.xlmc.sandai.net,REJECT
+  - DOMAIN-SUFFIX,pre.api.tw06.xlmc.sandai.net,REJECT
+
+http:
+
+  mitm:
+    - "images.client.vip.xunlei.com"
+    - "api-shoulei-ssl.xunlei.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/images\.client\.vip\.xunlei\.com\/.+?\/advert\/ - reject-200
+    - >-
+      ^https?:\/\/api-shoulei-ssl\.xunlei\.com\/flowhub\/v\d\/slots:batchGet - reject-200
+

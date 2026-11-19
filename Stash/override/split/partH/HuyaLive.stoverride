@@ -1,0 +1,46 @@
+name: |-
+  虎牙直播
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1089.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partH/HuyaLive.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN,pp-cdnfile2pcdn.msstatic.com,REJECT
+  - DOMAIN,livewebbs2pcdn.msstatic.com,REJECT
+  - DOMAIN,huyafile.msstatic.com,REJECT
+  - DOMAIN,livewebbs2.msstatic.com,REJECT
+  - DOMAIN,business.msstatic.com,REJECT
+  - DOMAIN-SUFFIX,v1d.szbdyd.com,REJECT
+  - DOMAIN-SUFFIX,3dm.huya.com,REJECT
+
+http:
+
+  mitm:
+    - "cdn.wup.huya.com"
+    - "business.msstatic.com"
+    - "cdnfile1.msstatic.com"
+    - "live-ads.huya.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns$ - reject
+    - >-
+      ^https?:\/\/business\.msstatic\.com\/advertiser\/material - reject
+    - >-
+      ^https?:\/\/cdnfile1\.msstatic\.com\/cdnfile\/appad\/ - reject-200
+    - >-
+      ^https?://live-ads\.huya\.com/live/getAllEntrance.*$ - reject-dict
+

@@ -1,0 +1,31 @@
+name: |-
+  懂球帝
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1084.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partD/AllFootball.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN-KEYWORD,apimg.qunliao.info,REJECT
+
+http:
+
+  mitm:
+    - "ap.dongdianqiu.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/ap\.dongdianqiu\.com\/plat\/v4 - reject
+

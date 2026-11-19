@@ -1,0 +1,57 @@
+name: |-
+  酷安
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1036.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partK/Coolapk.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "api.coolapk.com"
+    - "www.coolapk.com"
+
+  script:
+    - match: ^https?:\/\/api\.coolapk\.com\/v6\/feed\/(detail|replyList)\?
+      name: "酷安_11"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/api\.coolapk\.com\/v6\/main\/(dataList|indexV8|init)
+      name: "酷安_11"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/api\.coolapk\.com\/v6\/page\/dataList\?
+      name: "酷安_11"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https:\/\/www\.coolapk\.com\/link.*
+      name: "酷安URL重定向_14"
+      type: request
+      timeout: 10
+
+script-providers:
+  "酷安_11":
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/coolapk.js
+    interval: 86400
+  "酷安URL重定向_14":
+    url: https://raw.githubusercontent.com/VenenoSix24/Ivy-Script/refs/heads/main/Loon/script/Coolapk_Redirect.js
+    interval: 86400
+

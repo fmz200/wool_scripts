@@ -1,0 +1,33 @@
+name: |-
+  挂号网（微医）
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1086.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partG/GuahaoWangWeiyi.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "kano.guahao.cn"
+    - "app.wy.guahao.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/app\.wy\.guahao\.com\/json\/white\/dayquestion\/getpopad - reject
+    - >-
+      ^https?:\/\/kano\.guahao\.cn\/[a-zA-Z0-9]{12} - reject-200
+    - >-
+      ^https?:\/\/kano\.guahao\.cn\/.+?\?(?:[^#?&]+&)*resize=\d{3}-\d{4} - reject-200
+

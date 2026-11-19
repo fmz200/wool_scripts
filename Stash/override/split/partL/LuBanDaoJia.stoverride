@@ -1,0 +1,28 @@
+name: |-
+  鲁班到家用户版
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1058.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partL/LuBanDaoJia.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "order-app-api.lbdj.com"
+
+  url-rewrite:
+    - >-
+      ^https:\/\/order-app-api\.lbdj\.com\/lbdj\/apporder\/ad\/ - reject-dict
+

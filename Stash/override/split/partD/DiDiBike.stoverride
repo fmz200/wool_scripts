@@ -1,0 +1,34 @@
+name: |-
+  滴滴青桔
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1021.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partD/DiDiBike.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - IP-CIDR,203.107.1.1/24,REJECT,no-resolve
+
+http:
+
+  mitm:
+    - "pt-starimg.didistatic.com"
+    - "omgup*.xiaojukeji.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/pt-starimg\.didistatic\.com\/static\/starimg\/node\/.*.(jpg|png|gif) - reject-200
+    - >-
+      ^https?:\/\/omgup[0-9]{1}\.xiaojukeji\.com\/api - reject-200
+

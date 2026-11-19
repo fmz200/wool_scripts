@@ -1,0 +1,33 @@
+name: |-
+  驾考宝典
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1002.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partJ/JiaKaoBaoDian.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "*.kakamobi.cn"
+    - "smart.789.image.mucang.cn"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/\w+\.kakamobi\.cn\/api\/open\/v\d\/advert-sdk\/ - reject
+    - >-
+      ^https?:\/\/789\.kakamobi\.cn\/.+adver - reject-200
+    - >-
+      ^https?:\/\/smart\.789\.image\.mucang\.cn\/advert - reject-200
+

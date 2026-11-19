@@ -1,0 +1,50 @@
+name: |-
+  买单吧
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1025.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partM/MaiDanBa.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN-KEYWORD,c-hzgt2.getui.com,REJECT
+
+http:
+
+  mitm:
+    - "creditcardapp.bankcomm.cn"
+    - "creditcardapp.bankcomm.com"
+    - "creditcard.bankcomm.cn"
+    - "creditcard.bankcomm.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/creditcard\.bankcomm\.(com|cn)\/tfimg\/public00\/M00\/[a-zA-Z0-9]{2}\/[a-zA-Z0-9]{2}\/[a-zA-Z0-9-]{30}\.(jpg|jpeg) - reject
+    - >-
+      ^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/mappweb_interface\/common\/(qryPopAds|qryLaunchAds)\.do - reject-200
+    - >-
+      ^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/mappweb_interaction\/appInfo\/appNewestVersion - reject-200
+
+  script:
+    - match: ^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/rcg\/index\.html\?callbackurl=rcg\/index\.html&orclogin=1&
+      name: "mdb_18"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "mdb_18":
+    url: https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/mdb.js
+    interval: 86400
+

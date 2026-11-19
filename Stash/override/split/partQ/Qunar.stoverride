@@ -1,0 +1,34 @@
+name: |-
+  去哪儿
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1014.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partQ/Qunar.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "qde.qunar.com"
+    - "homefront.qunar.com"
+    - "client.qunar.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/client\.qunar\.com\/pitcher-proxy\?(?:[^#?&]+&)*qrt=p_splashAd - reject
+    - >-
+      ^https?:\/\/qde\.qunar\.com\/preload - reject-200
+    - >-
+      ^https?:\/\/homefront\.qunar\.com\/front\/splash\/ad - reject-dict
+

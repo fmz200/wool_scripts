@@ -1,0 +1,52 @@
+name: |-
+  起点读书
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1064.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partQ/QiDianReading.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "qidian.qpic.cn"
+    - "mage.if.qidian.com"
+    - "magev6.if.qidian.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/mage\.if\.qidian\.com\/argus\/api\/v\d\/client\/getsplashscreen - reject
+    - >-
+      ^https?://magev6.if.qidian.com/argus/api/v1/client/iosad - reject
+    - >-
+      ^https?://magev6.if.qidian.com/argus/api/v1/bookshelf/getad - reject
+    - >-
+      ^https?://magev6.if.qidian.com/argus/api/v4/client/getsplashscreen? - reject
+    - >-
+      ^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/adv\/getadvlistbatch - reject
+    - >-
+      ^https?:\/\/qidian\.qpic\.cn\/qidian_common - reject-200
+    - >-
+      ^https?:\/\/mage\.if\.qidian\.com\/Atom\.axd\/Api\/Client\/GetConfIOS - reject-200
+    - >-
+      ^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/adv - reject-dict
+    - >-
+      ^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/followsubscribe - reject-dict
+    - >-
+      ^http[s]?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/bookshelf\/refresh - reject-dict
+    - >-
+      ^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/bookshelf\/getTopOperation - reject-dict
+    - >-
+      ^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v2\/adv\/getadvlistbatch - reject-dict
+

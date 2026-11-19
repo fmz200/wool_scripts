@@ -1,0 +1,40 @@
+name: |-
+  小宇宙
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1034.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partX/XiaoYuZhou.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "api.xiaoyuzhoufm.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/flash - reject-dict
+    - >-
+      ^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/ai - reject-dict
+    - >-
+      ^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/search\/get - reject-dict
+    - >-
+      ^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/category - reject-dict
+
+  body-rewrite:
+    - >-
+      ^https?:\/\/api\.xiaoyuzhoufm\.com\/v1\/discovery-feed\/list response-jq .data |= map(select(.type != "DISCOVERY_HEADER" and .type != "DISCOVERY_BANNER"))
+    - >-
+      ^https?:\/\/api\.xiaoyuzhoufm\.com\/v1\/(related-episode|operation-resource)\/list response-jq .data = []
+

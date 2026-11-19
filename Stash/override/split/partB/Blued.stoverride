@@ -1,0 +1,42 @@
+name: |-
+  Blued
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1067.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partB/Blued.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "social.blued.cn"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/social\.blued\.cn\/users\/recommend - reject-dict
+    - >-
+      ^https?:\/\/social\.blued\.cn\/users\/no_auth\/benefit - reject-dict
+
+  script:
+    - match: ^https?:\/\/social\.blued\.cn\/users\/.+\/more\/ios\?v=2
+      name: "blued登录后个人界面广告_17"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "blued登录后个人界面广告_17":
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/blued.js
+    interval: 86400
+

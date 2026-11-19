@@ -1,0 +1,30 @@
+name: |-
+  牛津高阶词典第十版
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1086.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partN/OxfordALD10th.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "oxadmin.cp.com.cn"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/oxadmin\.cp\.com\.cn\/api\/hot\/index - reject-dict
+    - >-
+      ^https?:\/\/oxadmin\.cp\.com\.cn\/api\/advertise\/banner - reject-dict
+

@@ -1,0 +1,37 @@
+name: |-
+  苏e行
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1013.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partS/SuEHang.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "ad.shunchangzhixing.com"
+    - "api.bwton.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/ad\.shunchangzhixing\.com\/getAd - reject-dict
+    - >-
+      ^https?:\/\/api\.bwton\.com\/bff\/app\/h5\/v1\/station\/goods - reject-dict
+    - >-
+      ^https?:\/\/api\.bwton\.com\/bas\/ad - reject-200
+    - >-
+      ^https?:\/\/api\.bwton\.com\/bff\/app\/index\/goods - reject-dict
+    - >-
+      ^https?:\/\/api\.bwton\.com\/bff\/app\/index\/recommend - reject-dict
+

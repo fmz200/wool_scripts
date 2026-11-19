@@ -1,0 +1,35 @@
+name: |-
+  看东方（百视TV）
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1009.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partK/KanDongFang.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "bp-api.bestv.com.cn"
+    - "bp-api.bestv.cn"
+
+  url-rewrite:
+    - >-
+      ^https:\/\/bp-api\.bestv\.com\.cn\/cms\/api\/free\/open\/advertisingV2 - reject-dict
+
+  body-rewrite:
+    - >-
+      ^https:\/\/bp-api\.bestv\.cn\/cms\/api\/free\/open\/advertisingV2 response-jq .dt = []
+    - >-
+      ^https:\/\/bp-api\.bestv\.cn\/cms\/api\/c\/search\/hot\/v(2|4) response-jq .dt.hot = [] | .dt.recommand = [] | .dt.bannerList = []
+

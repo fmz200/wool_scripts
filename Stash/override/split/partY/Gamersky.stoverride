@@ -1,0 +1,38 @@
+name: |-
+  游民星空
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1027.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partY/Gamersky.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN-SUFFIX,ja.gamersky.com,REJECT
+  - DOMAIN-SUFFIX,ja1.gamersky.com,REJECT
+
+http:
+
+  mitm:
+    - "*.gamersky.com"
+
+  url-rewrite:
+    - >-
+      ^http:\/\/.+\.gamersky\.com\/.+\/adSystem\/ad\/.+ - reject-dict
+    - >-
+      https://.+\.gamersky.com/v1/statisticAd - reject-dict
+
+  body-rewrite:
+    - >-
+      http:\/\/.+\.gamersky.com/.+/lists/getListElements response-jq .listElements |= map(select(has("adCategory") | not))
+

@@ -1,0 +1,36 @@
+name: |-
+  招商证券
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1045.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partZ/ChinaMerchantsSecurities.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "marketing.cmschina.com"
+
+  script:
+    - match: ^https:\/\/marketing\.cmschina\.com\/mkt\/api\/v1\?.*
+      name: "招商证券去广告_11"
+      type: response
+      require-body: true
+      timeout: 20
+
+script-providers:
+  "招商证券去广告_11":
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cmschina/cmschina.js
+    interval: 86400
+

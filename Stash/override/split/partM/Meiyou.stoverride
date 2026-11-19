@@ -1,0 +1,59 @@
+name: |-
+  美柚
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1070.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partM/Meiyou.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN,ad.seeyouyima.com,REJECT
+
+http:
+
+  mitm:
+    - "x.seeyouyima.com"
+    - "axxd.xmseeyouyima.com"
+    - "config-service.seeyouyima.com"
+
+  url-rewrite:
+    - >-
+      ^http:\/\/x\.seeyouyima\.com\/adx\/staticstics\? - reject
+    - >-
+      ^https:\/\/axxd\.xmseeyouyima\.com\/ad\/ - reject
+    - >-
+      ^https:\/\/axxd\.xmseeyouyima\.com\/ad_statistics\? - reject
+    - >-
+      ^https:\/\/axxd\.xmseeyouyima\.com\/v1\/getad\? - reject
+    - >-
+      ^https:\/\/axxd\.xmseeyouyima\.com\/pregetad\? - reject
+
+  script:
+    - match: ^https:\/\/config-service\.seeyouyima\.com\/api\/configs\/batch\?
+      name: "美柚App净化_19"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https:\/\/config-service\.seeyouyima\.com\/api\/configs\?
+      name: "美柚App净化_19"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "美柚App净化_19":
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/meiyou/meiyou_ads.js
+    interval: 86400
+

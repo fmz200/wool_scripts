@@ -1,0 +1,30 @@
+name: |-
+  猫眼
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1059.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partM/MaoYan.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "p0.pipi.cn"
+
+  url-rewrite:
+    - >-
+      ^https:\/\/p0\.pipi\.cn\/adAdmin\/\w+\.jpg\?(?:[^#?&]+&)*imageMogr2\/quality\/ - reject-dict
+    - >-
+      ^https:\/\/p0\.pipi\.cn\/adAdmin\/\w+\.(jpg|png)\?(?:[^#?&]+&)*imageMogr2\/thumbnail\/(860x0|!165x165|!1049x1169) - reject-dict
+

@@ -1,0 +1,37 @@
+name: |-
+  丰巢
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1100.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partF/FengChao.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "external.fcbox.com"
+    - "dsp.fcbox.com"
+    - "consumer.fcbox.com"
+    - "rtm.fcbox.com"
+
+  url-rewrite:
+    - >-
+      ^https:\/\/dsp\.fcbox\.com\/adSearch\/get\? - reject
+    - >-
+      ^https:\/\/external\.fcbox\.com\/wxgw\/post\/suggestion\/query - reject
+    - >-
+      ^https:\/\/rtm\.fcbox\.com\/rtsWeb\/api\/resource\/ad\/queryAd - reject
+    - >-
+      ^https?:\/\/consumer\.fcbox\.com\/v\d\/ad\/ - reject
+

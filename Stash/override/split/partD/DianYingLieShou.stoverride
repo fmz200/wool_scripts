@@ -1,0 +1,36 @@
+name: |-
+  电影猎手
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1027.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partD/DianYingLieShou.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "app-v1.ecoliving168.com"
+
+  script:
+    - match: ^https:\/\/app-v1\.ecoliving168\.com\/api\/v1\/movie\/index_recommend\?
+      name: "电影猎手去广告_11"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "电影猎手去广告_11":
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/dianyinglieshou.js
+    interval: 86400
+

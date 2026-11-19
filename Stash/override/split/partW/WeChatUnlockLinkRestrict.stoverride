@@ -1,0 +1,37 @@
+name: |-
+  微信解除链接限制
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1009.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partW/WeChatUnlockLinkRestrict.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "weixin110.qq.com"
+    - "security.wechat.com"
+
+  script:
+    - match: ^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?
+      name: "UnblockURLinWeChat-解除微信链接限制_12"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "UnblockURLinWeChat-解除微信链接限制_12":
+    url: https://raw.githubusercontent.com/zZPiglet/Task/master/asset/UnblockURLinWeChat.js
+    interval: 86400
+

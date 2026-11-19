@@ -1,0 +1,95 @@
+name: |-
+  Keep
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1098.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partK/Keep.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN,httpdns.n.netease.com,REJECT
+  - DOMAIN,httpdns.calorietech.com,REJECT
+  - DOMAIN,hc-ssp.sm.cn,REJECT
+  - DOMAIN,apm.gotokeep.com,REJECT
+  - DOMAIN,kad.gotokeep.com,REJECT
+
+http:
+
+  mitm:
+    - "api.gotokeep.com"
+    - "kad.gotokeep.com"
+    - "static1.keepcdn.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/api\.gotokeep\.com\/guide-webapp\/v\d\/popup\/getPopUp - reject
+    - >-
+      ^https?:\/\/api\.gotokeep\.com\/kprime\/v\d\/popups\/primeGuide - reject
+    - >-
+      ^https?:\/\/kad\.gotokeep\.com\/op-engine-webapp\/v\d\/ad - reject
+    - >-
+      ^https?:\/\/api.gotokeep.com/cauchy/growth/init - reject
+    - >-
+      ^https?:\/\/api\.gotokeep\.com\/search\/v\d\/default\/keyword\/list - reject
+    - >-
+      ^https?:\/\/api\.gotokeep\.com\/search\/v\d\/hotword\/list - reject
+    - >-
+      ^https?:\/\/api\.gotokeep\.com\/search\/v\d\/hotCourse\/list - reject
+    - >-
+      ^https?:\/\/api\.gotokeep\.com\/op-engine-webapp\/v\d\/ad - reject
+    - >-
+      ^https?:\/\/api\.gotokeep\.com\/ads\/v\d\/ads\/preload - reject
+    - >-
+      ^https?:\/\/api\.gotokeep\.com\/training\/box\/config - reject
+    - >-
+      ^https?:\/\/api\.gotokeep\.com\/anno\/v\d\/upgrade\/check - reject
+    - >-
+      ^https?:\/\/static1\.keepcdn\.com\/ark_optimus\/202\d\/*\/*\/.*.(png|jpg) - reject-200
+
+  script:
+    - match: ^https?:\/\/api\.gotokeep\.com\/athena\/v\d\/people\/my$
+      name: "keep_45"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/api\.gotokeep\.com\/config\/v\d\/basic
+      name: "keep_45"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/api\.gotokeep\.com\/homepage\/v\d\/tab
+      name: "keep_45"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/api\.gotokeep\.com\/nuocha\/course\/v\d/\w+\/preview
+      name: "keep_45"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/api\.gotokeep\.com\/sportpage\/sport\/v\d\/mysport
+      name: "keep_45"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "keep_45":
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js
+    interval: 86400
+

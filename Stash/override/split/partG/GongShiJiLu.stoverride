@@ -1,0 +1,34 @@
+name: |-
+  工时记录
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1094.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partG/GongShiJiLu.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "yun.tuitiger.com"
+    - "mi.gdt.qq.com"
+    - "open.e.kuaishou.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/mi\.gdt\.qq\.com\/gdt_mview\.fcg - reject
+    - >-
+      ^https?:\/\/open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ - reject
+    - >-
+      ^https?:\/\/yun\.tuitiger\.com\/mami-media - reject-200
+

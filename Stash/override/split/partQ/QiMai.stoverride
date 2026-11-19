@@ -1,0 +1,41 @@
+name: |-
+  企迈 - QMAI(包含: 挪瓦咖啡、林里柠檬茶、霸王茶姬、陈香贵)
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1007.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partQ/QiMai.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "webapi.qmai.cn"
+    - "miniapp.qmai.cn"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/(?>webapi|miniapp)\.qmai\.cn\/web\/cmk-center\/marketing\/canvas\/advert - reject
+
+  script:
+    - match: ^https?:\/\/(?>webapi|miniapp)\.qmai\.cn\/web\/catering([0-9]-apiserver)?\/advertising\/ad\/advertiseInfo
+      name: "企迈（挪瓦咖啡、林里柠檬茶、霸王茶姬、陈香贵）_12"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "企迈（挪瓦咖啡、林里柠檬茶、霸王茶姬、陈香贵）_12":
+    url: https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/qmai.js
+    interval: 86400
+

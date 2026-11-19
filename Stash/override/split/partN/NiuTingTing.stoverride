@@ -1,0 +1,31 @@
+name: |-
+  牛听听
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1036.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partN/NiuTingTing.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "gateway.benewtech.cn"
+    - "ntt-app.benewtech.cn"
+
+  url-rewrite:
+    - >-
+      ^https:\/\/gateway\.benewtech\.cn\/resources-app\/app\/startup\/prepage - reject-dict
+    - >-
+      ^https:\/\/ntt-app\.benewtech\.cn\/v6\/user\/\d+\/messages\/event - reject-dict
+

@@ -1,0 +1,69 @@
+name: |-
+  咪咕视频
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1062.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partM/MiguVideo.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN-SUFFIX,ad.cmvideo.cn,REJECT
+  - DOMAIN,ggc.cmvideo.cn,REJECT
+  - DOMAIN,ggv.cmvideo.cn,REJECT
+  - DOMAIN,ggx.cmvideo.cn,REJECT
+  - DOMAIN,ggx03.miguvideo.com,REJECT
+  - DOMAIN,ggic03.miguvideo.com,REJECT
+  - DOMAIN,ggmk.miguvideo.com,REJECT
+  - DOMAIN,ggadoffline.miguvideo.com,REJECT
+
+http:
+
+  mitm:
+    - "ggc.miguvideo.com"
+    - "public-deliver9.miguvideo.com"
+    - "display*-sc.miguvideo.com"
+    - "recommend-dy.miguvideo.com"
+    - "app-sc.miguvideo.com"
+    - "common-sc.miguvideo.com"
+    - "ggx*.miguvideo.com"
+    - "ggic*.miguvideo.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/ggc\.miguvideo\.com\/v1\/iflyad\/deliverysystem\/direct\/ - reject-200
+    - >-
+      ^https?:\/\/public-deliver9\.miguvideo\.com\/deliver\/site\/batchMatch\/mergeSpot\/miguvideo\/ - reject-dict
+    - >-
+      ^https?:\/\/recommend-dy\.miguvideo\.com\/recommend-dynamic\/dataSource\/v1\/recommend\/merge - reject-dict
+    - >-
+      ^https?:\/\/app-sc\.miguvideo\.com\/app-management\/v1\/staticcache\/settings\/miguvideo\/SHARE_PIC - reject-dict
+    - >-
+      ^https?:\/\/common-sc\.miguvideo\.com\/videoActivity\/activityList\/ - reject-dict
+    - >-
+      ^https?:\/\/ggx.+\.miguvideo\.com\/request\/sdk.+[^?]*$ - reject-dict
+    - >-
+      ^https?:\/\/ggic\d+.miguvideo\.com\/ad\/ - reject-dict
+
+  script:
+    - match: ^https?:\/\/display-sc\.miguvideo\.com\/display\/v3\/static\/PERSONAL_CENTER$
+      name: "咪咕视频个人中心去广告_28"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "咪咕视频个人中心去广告_28":
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/refs/heads/main/Scripts/miguvideo/miguvideo_ads.js
+    interval: 86400
+

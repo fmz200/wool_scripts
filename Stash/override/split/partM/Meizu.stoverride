@@ -1,0 +1,42 @@
+name: |-
+  魅族 (Meizu)
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1035.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partM/Meizu.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN-SUFFIX,api-flow.flyme.cn,REJECT
+  - DOMAIN-SUFFIX,bro.flyme.cn,REJECT
+  - DOMAIN-SUFFIX,t-e.flyme.cn,REJECT
+  - DOMAIN-SUFFIX,t-flow.flyme.cn,REJECT
+  - DOMAIN-SUFFIX,aider-res.meizu.com,REJECT
+  - DOMAIN-SUFFIX,api-game.meizu.com,REJECT
+  - DOMAIN-SUFFIX,api-push.meizu.com,REJECT
+  - DOMAIN-SUFFIX,cal.meizu.com,REJECT
+  - DOMAIN-SUFFIX,game-res.meizu.com,REJECT
+  - DOMAIN-SUFFIX,infocenter.meizu.com,REJECT
+  - DOMAIN-SUFFIX,openapi-news.meizu.com,REJECT
+  - DOMAIN-SUFFIX,reader.meizu.com,REJECT
+  - DOMAIN-SUFFIX,tongji-res1.meizu.com,REJECT
+  - DOMAIN-SUFFIX,uxip.meizu.com,REJECT
+  - DOMAIN-SUFFIX,umid.orion.meizu.com,REJECT
+  - DOMAIN-SUFFIX,ebook.res.meizu.com,REJECT
+  - DOMAIN-SUFFIX,game.res.meizu.com,REJECT
+  - DOMAIN-SUFFIX,push.res.meizu.com,REJECT
+  - DOMAIN-SUFFIX,reader.res.meizu.com,REJECT
+  - DOMAIN-SUFFIX,upush.res.meizu.com,REJECT
+  - DOMAIN-SUFFIX,aries.mzres.com,REJECT
+

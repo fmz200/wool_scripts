@@ -1,0 +1,34 @@
+name: |-
+  叮嗒出行
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1008.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partD/Dida.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN-KEYWORD,image.bianxianmao.com,REJECT
+
+http:
+
+  mitm:
+    - "img.admobile.top"
+    - "webcdn.m.qq.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/img\.admobile\.top\/admobile-adRequest\/.*.(jpg|png) - reject-200
+    - >-
+      ^https?:\/\/webcdn\.m\.qq\.com\/qiantu\/upload\/202[0-9]{5}\/.*.(jpg|png) - reject-200
+

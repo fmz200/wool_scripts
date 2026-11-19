@@ -1,0 +1,92 @@
+name: |-
+  朴朴超市
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1100.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partP/PuPuSupermarket.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "j1.pupuapi.com"
+
+  url-rewrite:
+    - >-
+      ^http:\/\/139\.196\.12\.179:8053\/httpdns\/ - reject
+    - >-
+      ^http:\/\/106\.55\.220\.18:8053\/httpdns\/ - reject
+    - >-
+      ^http:\/\/54\.222\.159\.138:8053\/httpdns\/ - reject
+    - >-
+      ^http:\/\/101\.42\.130\.147\/httpdns\/resolve\/ - reject
+    - >-
+      ^https:\/\/j1\.pupuapi\.com\/client\/member_card\/index\/my - reject
+    - >-
+      ^https:\/\/j1\.pupuapi\.com\/client\/marketing\/advertisement\/search_input_ranking - reject-dict
+    - >-
+      ^https:\/\/j1\.pupuapi\.com\/client\/assets\/discount\/order - reject-dict
+    - >-
+      ^https:\/\/j1\.pupuapi\.com\/client\/marketing\/channel\/global_redeem\/top_tip\/v2 - reject-dict
+    - >-
+      ^https:\/\/j1\.pupuapi\.com\/client\/recommendation\/hub\/interests\/products\/v2 - reject-dict
+    - >-
+      ^https:\/\/j1\.pupuapi\.com\/client\/member_card\/premium\/user_center - reject-dict
+
+  body-rewrite:
+    - >-
+      ^https:\/\/j1\.pupuapi\.com\/client\/notification\/message_center\/unread_number response-jq .data = []
+
+  script:
+    - match: ^https:\/\/j1\.pupuapi\.com\/client\/search\/hot_keywords\/v3
+      name: "朴朴超市_32"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https:\/\/j1\.pupuapi\.com\/client\/app_resource\/resource_preload\/list_h5_resource
+      name: "朴朴超市_32"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https:\/\/j1\.pupuapi\.com\/client\/marketing\/advertisement\/v1
+      name: "朴朴超市_32"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https:\/\/j1\.pupuapi\.com\/client\/search\/hub\/search_box\/products\/v6
+      name: "朴朴超市_32"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https:\/\/j1\.pupuapi\.com\/client\/order_settlement\/detail
+      name: "朴朴超市_32"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https:\/\/j1\.pupuapi\.com\/client\/order\/orders\/list\/v4
+      name: "朴朴超市_32"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "朴朴超市_32":
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js
+    interval: 86400
+

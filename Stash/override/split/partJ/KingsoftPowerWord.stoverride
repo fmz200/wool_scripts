@@ -1,0 +1,49 @@
+name: |-
+  金山词霸
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1016.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partJ/KingsoftPowerWord.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN,ad-stat.ksosoft.com,REJECT
+  - DOMAIN,img.auction-ads.wpscdn.cn,REJECT
+  - DOMAIN,counter.kingsoft.com,REJECT
+  - DOMAIN,counter.ksosoft.com,REJECT
+  - DOMAIN,minfo.wps.cn,REJECT
+  - DOMAIN,mobad.ijinshan.com,REJECT
+  - DOMAIN,ups.ksmobile.net,REJECT
+  - DOMAIN,ws.ksmobile.net,REJECT
+
+http:
+
+  mitm:
+    - "dict-mobile.iciba.com"
+    - "mobile-pic.cache.iciba.com"
+    - "service.iciba.com"
+    - "*.kingsoft-office-service.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/dict-mobile\.iciba\.com\/interface\/index\.php\?.+(c=ad|collectFeedsAdShowCount|KSFeedsAdCardViewController) - reject
+    - >-
+      ^https?:\/\/mobile-pic\.cache\.iciba\.com\/feeds_ad\/ - reject
+    - >-
+      ^https?:\/\/.+?\.kingsoft-office-service\.com - reject
+    - >-
+      ^https?:\/\/service\.iciba\.com\/popo\/open\/screens\/v\d\?(?:[^#?&]+&)*adjson - reject-200
+    - >-
+      ^https?:\/\/\w+?\.kingsoft-office-service\.com\/ad - reject-200
+

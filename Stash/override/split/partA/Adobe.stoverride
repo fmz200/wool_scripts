@@ -1,0 +1,47 @@
+name: |-
+  Adobe
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1048.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partA/Adobe.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN-SUFFIX,3dns-2.adobe.com,REJECT
+  - DOMAIN-SUFFIX,3dns-3.adobe.com,REJECT
+  - DOMAIN-SUFFIX,activate.adobe.com,REJECT
+  - DOMAIN-SUFFIX,activate-sea.adobe.com,REJECT
+  - DOMAIN-SUFFIX,activate-sjc0.adobe.com,REJECT
+  - DOMAIN-SUFFIX,adobe-dns.adobe.com,REJECT
+  - DOMAIN-SUFFIX,adobe-dns-2.adobe.com,REJECT
+  - DOMAIN-SUFFIX,adobe-dns-3.adobe.com,REJECT
+  - DOMAIN-SUFFIX,ereg.adobe.com,REJECT
+  - DOMAIN-SUFFIX,get3.adobe.com,REJECT
+  - DOMAIN-SUFFIX,hl2rcv.adobe.com,REJECT
+  - DOMAIN-SUFFIX,practivate.adobe.com,REJECT
+  - DOMAIN-SUFFIX,wip3.adobe.com,REJECT
+  - DOMAIN-SUFFIX,wwis-dubc1-vip60.adobe.com,REJECT
+  - DOMAIN-SUFFIX,lm.licenses.adobe.com,REJECT
+  - DOMAIN-SUFFIX,na2m-pr.licenses.adobe.com,REJECT
+  - DOMAIN-SUFFIX,na1r.services.adobe.com,REJECT
+  - DOMAIN-SUFFIX,hlrcv.stage.adobe.com,REJECT
+  - DOMAIN-SUFFIX,activate.wip3.adobe.com,REJECT
+  - DOMAIN-SUFFIX,ereg.wip3.adobe.com,REJECT
+  - DOMAIN-SUFFIX,lmlicenses.wip4.adobe.com,REJECT
+  - DOMAIN-SUFFIX,marketo.com,REJECT
+  - DOMAIN-SUFFIX,asia.marketo.com,REJECT
+  - DOMAIN-SUFFIX,pages2.marketo.com,REJECT
+  - DOMAIN-SUFFIX,marketo.net,REJECT
+  - DOMAIN-SUFFIX,munchkin.marketo.net,REJECT
+

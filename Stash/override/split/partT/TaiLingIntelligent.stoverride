@@ -1,0 +1,28 @@
+name: |-
+  台铃智能
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1093.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partT/TaiLingIntelligent.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "www.tailgdd.com"
+
+  body-rewrite:
+    - >-
+      ^https://www\.tailgdd\.com/v8/smart/app/config/get$ response-jq if (getpath([]) | has("data")) then (setpath(["data"]; {})) else . end
+

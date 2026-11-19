@@ -1,0 +1,33 @@
+name: |-
+  国双 (Gridsum)
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1025.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partG/Gridsum.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN-SUFFIX,gridsumdissector.cn,REJECT
+  - DOMAIN-SUFFIX,recv-vd.gridsumdissector.cn,REJECT
+  - DOMAIN-SUFFIX,gridsumdissector.com,REJECT
+  - DOMAIN-SUFFIX,cfg-md.gridsumdissector.com,REJECT
+  - DOMAIN-SUFFIX,cfg-vd.gridsumdissector.com,REJECT
+  - DOMAIN-SUFFIX,diag-vd.gridsumdissector.com,REJECT
+  - DOMAIN-SUFFIX,diag-wd.gridsumdissector.com,REJECT
+  - DOMAIN-SUFFIX,geo.gridsumdissector.com,REJECT
+  - DOMAIN-SUFFIX,impression.gridsumdissector.com,REJECT
+  - DOMAIN-SUFFIX,recv-wd.gridsumdissector.com,REJECT
+  - DOMAIN-SUFFIX,sso-cas.gridsumdissector.com,REJECT
+  - DOMAIN-SUFFIX,g.gridsum.com,REJECT
+

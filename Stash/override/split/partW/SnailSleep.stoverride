@@ -1,0 +1,30 @@
+name: |-
+  蜗牛睡眠
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1016.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partW/SnailSleep.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "snailsleep.net"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/snailsleep\.net\/snail\/v\d\/adTask\/ - reject
+    - >-
+      ^https?:\/\/snailsleep\.net\/snail\/v\d\/screen\/qn\/get\? - reject
+

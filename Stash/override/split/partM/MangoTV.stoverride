@@ -1,0 +1,117 @@
+name: |-
+  芒果TV
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1003.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partM/MangoTV.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN,dflow.bz.mgtv.com,REJECT
+  - DOMAIN,encounter.bz.mgtv.com,REJECT
+  - DOMAIN,floor.bz.mgtv.com,REJECT
+  - DOMAIN,img.da.mgtv.com,REJECT
+  - DOMAIN,layer.bz.mgtv.com,REJECT
+  - DOMAIN,mob.bz.mgtv.com,REJECT
+  - DOMAIN,mobile.da.mgtv.com,REJECT
+  - DOMAIN,rc-topic-api.bz.mgtv.com,REJECT
+  - DOMAIN,v2.da.mgtv.com,REJECT
+  - DOMAIN,video.da.mgtv.com,REJECT
+  - DOMAIN,vip.bz.mgtv.com,REJECT
+  - DOMAIN,ys.da.mgtv.com,REJECT
+  - DOMAIN-SUFFIX,mobile2.da.mgtv.com,REJECT
+  - DOMAIN-SUFFIX,cdn.cmop.mgtv.com,REJECT
+  - DOMAIN-SUFFIX,cmop.mgtv.com,REJECT
+  - DOMAIN-SUFFIX,imgaliyun.da.mgtv.com,REJECT
+  - DOMAIN-SUFFIX,imgaliyun.res.mgtv.com,REJECT
+  - DOMAIN-SUFFIX,m2.da.mgtv.com,REJECT
+  - DOMAIN-SUFFIX,mobaliyun.res.mgtv.com,REJECT
+  - DOMAIN-SUFFIX,pc.da.mgtv.com,REJECT
+  - DOMAIN-SUFFIX,pc1.da.mgtv.com,REJECT
+  - DOMAIN-SUFFIX,pcvideoaliyun.titan.mgtv.com,REJECT
+  - DOMAIN-SUFFIX,pcvideoyd.titan.mgtv.com,REJECT
+  - DOMAIN-SUFFIX,pcweb.v1.mgtv.com,REJECT
+  - DOMAIN-SUFFIX,py.da.mgtv.com,REJECT
+  - DOMAIN-SUFFIX,web.da.mgtv.com,REJECT
+  - DOMAIN-SUFFIX,x.da.mgtv.com,REJECT
+  - DOMAIN-SUFFIX,y.da.mgtv.com,REJECT
+  - DOMAIN-SUFFIX,da.mgtv.com,REJECT
+
+http:
+
+  mitm:
+    - "*.mgtv.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/[\d\.]+:\d{5}\/\?(?:[^#?&]+&)*cmd=indexes - reject
+    - >-
+      ^https?:\/\/[\d\.]+\/odin\/c1\/(channel\/ads|skin\/config)\? - reject-dict
+    - >-
+      ^https?:\/\/damang\.api\.mgtv\.com\/station\/album\/red\/dot\? - reject-dict
+    - >-
+      ^https?:\/\/hb-boom\.api\.mgtv\.com\/release\/pullReleaseInfo - reject-dict
+    - >-
+      ^https?:\/\/mobile\.api\.mgtv\.com\/v2\/mobile\/checkUpdate\? - reject-dict
+    - >-
+      ^https?:\/\/mobileso\.bz\.mgtv\.com\/spotlight\/search\/v1\? - reject-dict
+
+  script:
+    - match: ^https?:\/\/me\.bz\.mgtv\.com\/v3\/module\/list\?
+      name: "芒果TV我的页面_56"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/mob-st\.bz\.mgtv\.com\/odin\/c1\/channel\/index\?
+      name: "芒果TV我的页面_56"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/dc2?\.bz\.mgtv\.com\/dynamic\/v1\/channel\/(index|vrsList)\/\w
+      name: "芒果TV我的页面_56"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/mobile\.api\.mgtv\.com\/mobile\/config\?
+      name: "芒果TV我的页面_56"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/mobile\.api\.mgtv\.com\/v10\/video\/info\?
+      name: "芒果TV我的页面_56"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/mobile-thor\.api\.mgtv\.com\/v1\/vod\/info\?
+      name: "芒果TV我的页面_56"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/mobileso\.bz\.mgtv\.com\/mobile\/recommend\/v2\?
+      name: "芒果TV我的页面_56"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "芒果TV我的页面_56":
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cnftp.js
+    interval: 86400
+

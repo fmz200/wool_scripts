@@ -1,0 +1,59 @@
+name: |-
+  京东
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1076.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partJ/JD.com.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN-SUFFIX,jzt.jd.com,REJECT
+  - DOMAIN-SUFFIX,img-x.jd.com,REJECT
+  - DOMAIN-SUFFIX,du.jd.com,REJECT
+  - DOMAIN-SUFFIX,c-nfa.jd.com,REJECT
+  - DOMAIN-SUFFIX,cm.jd.com,REJECT
+  - DOMAIN-SUFFIX,jddebug.com,REJECT
+  - DOMAIN-SUFFIX,policy.jd.com,REJECT
+  - DOMAIN-SUFFIX,kepler.jd.com,REJECT
+  - DOMAIN-SUFFIX,bdsp.x.jd.com,REJECT
+  - DOMAIN-SUFFIX,keplerapi.jd.com,REJECT
+  - DOMAIN-SUFFIX,mapi.m.jd.com,REJECT
+  - DOMAIN-SUFFIX,ad.3.cn,REJECT
+  - DOMAIN-SUFFIX,jd.c-ptsp.com.cn,REJECT
+  - DOMAIN,dns.jd.com,REJECT
+  - IP-CIDR,101.124.19.122/32,REJECT,no-resolve
+  - IP-CIDR6,2402:db40:5100:1011::5/128,REJECT,no-resolve
+
+http:
+
+  mitm:
+    - "api.m.jd.com"
+    - "dns.jd.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/api\.m\.jd\.com\/client\.action\?(?:[^#?&]+&)*functionId=getWidgetV1052 - reject
+
+  script:
+    - match: ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome)
+      name: "京东_32"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "京东_32":
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingdong/jingdong.js
+    interval: 86400
+

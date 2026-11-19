@@ -1,0 +1,77 @@
+name: |-
+  叮咚买菜
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1003.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partD/DingDongMaiCai.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN,trackercollect.ddxq.mobi,REJECT
+  - DOMAIN,ddfs-public.ddimg.mobi,REJECT
+  - DOMAIN,rttrack.ddxq.mobi,REJECT
+
+http:
+
+  mitm:
+    - "maicai.api.ddxq.mobi"
+    - "gw.api.ddxq.mobi"
+    - "user.api.ddxq.mobi"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/maicai\.api\.ddxq\.mobi\/advert\/ - reject
+    - >-
+      ^https?:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/getHomeAdPop - reject
+    - >-
+      ^https?:\/\/gw\.api\.ddxq\.mobi\/vip-app-service\/vip\/my\/page\/advertising - reject
+    - >-
+      ^https?:\/\/maicai\.api\.ddxq\.mobi\/vip\/getVipAd - reject-dict
+    - >-
+      ^https:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/queryMyPagePopup - reject-dict
+    - >-
+      ^https?:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/userLike - reject-dict
+    - >-
+      ^https?:\/\/maicai\.api\.ddxq\.mobi\/cart\/vipGuide - reject-dict
+    - >-
+      ^https?:\/\/maicai\.api\.ddxq\.mobi\/order\/getRecommend - reject-dict
+
+  body-rewrite:
+    - >-
+      ^https?:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/newDetails response-replace-regex suspension fmz200
+
+  script:
+    - match: ^https?:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/(?>bottomNavi|homeFlowDetail)
+      name: "叮咚买菜_36"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/maicai\.api\.ddxq\.mobi\/tool\/getConfig
+      name: "叮咚买菜_36"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/user\.api\.ddxq\.mobi\/userportal-service\/api\/v\d\/user\/queryMyPage
+      name: "叮咚买菜_36"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "叮咚买菜_36":
+    url: https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/ddxq.js
+    interval: 86400
+

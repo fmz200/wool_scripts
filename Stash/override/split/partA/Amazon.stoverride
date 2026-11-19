@@ -1,0 +1,42 @@
+name: |-
+  Amazon
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1021.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partA/Amazon.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN-SUFFIX,amazon-adsystem.com,REJECT
+  - DOMAIN-SUFFIX,mads.amazon.com,REJECT
+  - DOMAIN-SUFFIX,sdb.amazonaws.com,REJECT
+  - DOMAIN-SUFFIX,airpushmarketing.s3.amazonaws.com,REJECT
+  - DOMAIN-SUFFIX,epowernetworktrackerimages.s3.amazonaws.com,REJECT
+  - DOMAIN-SUFFIX,gateways.s3.amazonaws.com,REJECT
+  - DOMAIN-SUFFIX,kbnetworkz.s3.amazonaws.com,REJECT
+  - DOMAIN-SUFFIX,secretmedia.s3.amazonaws.com,REJECT
+  - DOMAIN-SUFFIX,smblock.s3.amazonaws.com,REJECT
+  - DOMAIN-SUFFIX,whistleout.s3.amazonaws.com,REJECT
+
+http:
+
+  mitm:
+    - "api-cslp-emt.amazon.cn"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/api-cslp-emt\.amazon\.cn\/gateway\/content\/widget\/popup - reject-200
+    - >-
+      ^https?:\/\/api-cslp-emt\.amazon\.cn\/gateway\/recommend - reject-dict
+

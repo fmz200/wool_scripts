@@ -1,0 +1,912 @@
+name: |-
+  获取cookie&token合集
+desc: |-
+  整合大部分获取cookie和token的配置Loon版，获取后禁用该配置
+author: |-
+  奶思[https://github.com/fmz200]
+icon: |-
+  https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/others/cookie.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/cookies.module
+tg-channel: |-
+  https://t.me/inaisi
+category: |-
+  fmz200
+system: |-
+  ios
+date: |-
+  2025-07-20 09:50:00
+
+http:
+
+  mitm:
+    - "wmapp-api.waimaimingtang.com"
+    - "www.flyert.com.cn"
+    - "mobile-consumer-sapp.chery.cn"
+    - "xxyx-client-api.xiaoxiaoyouxuan.com"
+    - "yunbusiness.ccb.com"
+    - "home.m.jd.com"
+    - "un.m.jd.com"
+    - "sec.m.jd.com"
+    - "api.m.jd.com"
+    - "ms.jr.jd.com"
+    - "jdread-api.jd.com"
+    - "me-api.jd.com"
+    - "wq.jd.com"
+    - "daojia.jd.com"
+    - "farm.api.ddxq.mobi"
+    - "user-api.smzdm.com"
+    - "luka-graphql.ling.cn"
+    - "fmapp.chinafamilymart.com.cn"
+    - "apph5.manmanbuy.com"
+    - "www.hifini.com"
+    - "cauth.pupuapi.com"
+    - "qqpet.jwetech.com"
+    - "rewards.bing.com"
+    - "auth.alipan.com"
+    - "auth.aliyundrive.com"
+    - "draw.jdfcloud.com"
+    - "api.momosyb.com"
+    - "passport.iqiyi.com"
+    - "account.huami.com"
+    - "api.dongqiudi.com"
+    - "act.10010.com"
+    - "wox2019.woxshare.com"
+    - "www.52pojie.cn"
+    - "api.prize.qq.com"
+    - "eventv3.reader.qq.com"
+    - "api.tuhu.cn"
+    - "gameapi.hellobike.com"
+    - "xiaoshuo.qm989.com"
+    - "passport.biligame.com"
+    - "cxdng.cpic.com.cn"
+    - "teacherapi.zmlearn.com"
+    - "luckman.suning.com"
+    - "api.dushu.io"
+    - "api.xiaoheihe.cn"
+    - "api.inews.qq.com"
+    - "zt.wps.cn"
+    - "m.client.10010.com"
+    - "m.ctrp.com"
+    - "activity.m.duiba.com.cn"
+    - "as.xiaojukeji.com"
+    - "www.maomicd.com"
+    - "h5.youzan.com"
+    - "node.kg.qq.com"
+    - "manga.bilibili.com"
+    - "ios.baertt.com"
+    - "www.mydigit.cn"
+    - "proxy.vac.qq.com"
+    - "wx-mini.pagoda.com.cn"
+    - "m.weibo.cn"
+    - "*.acfun.cn"
+    - "*.rrys2019.com"
+    - "*.bilibili.com"
+    - "club.yili.com"
+    - "marketappapi.biyao.com"
+    - "commontgw6.reader.qq.com"
+    - "*.ctrp.com"
+    - "*.csdn.net"
+    - "www.duokan.com"
+    - "ngabbs.com"
+    - "note.youdao.com"
+    - "h5.bianlifeng.com"
+    - "kd.youth.cn"
+    - "activity-1.m.duiba.com.cn"
+    - "cloud.umetrip.com"
+    - "hongbao.youzikuaibao.com"
+    - "air.tb.ele.me"
+    - "*.xmcimg.com"
+    - "m.ctrip.com"
+    - "user.qunar.com"
+    - "mcs-mimp-web.sf-express.com"
+    - "tb.ele.me"
+    - "dominos0724.shjimang.com"
+    - "h5.ele.me"
+    - "my.ruanmei.com"
+    - "promotion.waimai.meituan.com"
+    - "www.2xtj7.cn"
+    - "mall.oclean.com"
+    - "apk.tw"
+    - "user-api-prd-mx.wandafilm.com"
+    - "*.youth.cn"
+    - "wq.02gk.com"
+    - "iphone.myzaker.com"
+    - "apiwz.midukanshu.com"
+    - "api.1sapp.com"
+    - "nebula.kuaishou.com"
+    - "api.weibo.cn"
+    - "yuba.douyu.com"
+    - "*.ximalaya.com"
+    - "*.zhuishushenqi.com"
+    - "sf-integral-sign-in.weixinjia.net"
+    - "epassport.diditaxi.com.cn"
+    - "*.m.163.com"
+    - "e.dlife.cn"
+    - "open.e.189.cn"
+    - "e.189.cn"
+    - "wapside.189.cn"
+    - "api.kkmh.com"
+    - "*.rr.tv"
+    - "gameapi.suning.com"
+    - "*.you.163.com"
+    - "app.oscaches.com"
+    - "exp.angelalign.com"
+    - "getconfig-globalapi.zymk.cn"
+    - "mall.meituan.com"
+    - "game.xiaojukeji.com"
+    - "api.infzm.com"
+    - "*.v2ex.com"
+    - "*.rrys2020.com"
+    - "pay.sc.weibo.com"
+    - "app.nio.com"
+    - "music.163.com"
+    - "studygolang.com"
+    - "kandian.wkandian.com"
+    - "ifac*.iqiyi.com"
+    - "ug-fission.kuaishou.com"
+    - "passport.suning.com"
+    - "tncj.hortorgames.com"
+    - "credits.bz.mgtv.com"
+    - "c.tieba.baidu.com"
+    - "api.sdbao.com"
+    - "113.96.156.178"
+    - "wxavip-up.ezrpro.cn"
+    - "*.video.qq.com"
+    - "j1.pupuapi.com"
+    - "tieba.baidu.com"
+    - "wx.17u.cn"
+    - "www.baimaa.com"
+    - "frodo.douban.com"
+    - "m-bean.kaola.com"
+    - "110.43.90.61"
+    - "newsapi.sina.cn"
+    - "i.meituan.com"
+    - "wxprdapplet.gac-nio.com"
+    - "icbc1.wlphp.com:8444"
+    - "ios-fenqu11.lxsjgo.com"
+    - "sapi.beingfine.cn"
+    - "*.feng.com"
+    - "www.hnmiaosu.cc"
+    - "clientaccess.10086.cn"
+    - "mobile.app.autohome.com.cn"
+    - "ph0001.hezyq.com"
+    - "api.everphoto.cn"
+    - "api-takumi.mihoyo.com"
+    - "sports.lifesense.com"
+    - "superapp.kiwa-tech.com"
+    - "api.weather.com"
+    - "sign.suning.com"
+    - "m.elong.com"
+    - "webapi.qmai.cn"
+    - "mwegame.qq.com"
+    - "activity.m.kuaishou.com"
+    - "mobwsa.ximalaya.com"
+    - "proapi.115.com"
+    - "youhui.95516.com"
+    - "www.xiaodouzhuan.cn"
+    - "*.smzdm.com"
+    - "app.ymatou.com"
+    - "operation-api.jimistore.com"
+    - "www.flyertea.com"
+    - "api.cashtoutiao.com"
+    - "choujiang-server.deering.cn"
+    - "maicai.api.ddxq.mobi"
+    - "minigame.zijieapi.com"
+    - "appsmall.rtmap.com"
+    - "m.gdoil.cn"
+    - "weibo.com"
+    - "ios.zmzapi.com"
+
+  script:
+    - match: ^https:\/\/api\-new\.app\.acfun\.cn\/rest\/app\/user\/personalInfo
+      name: "AcFun_13"
+      type: request
+      timeout: 60
+
+    - match: ^https://apk.tw\/member.php(.*?)action=login
+      name: "APK.TW_15"
+      type: request
+      require-body: true
+      timeout: 60
+
+    - match: ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token
+      name: "阿里云盘@Sliverkiss_17"
+      type: request
+      require-body: true
+      timeout: 60
+
+    - match: ^https:\/\/auth.aliyundrive.com\/v2\/account\/token
+      name: "阿里云盘@lowking_18"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https:\/\/passport\.iqiyi\.com\/apis\/user\/
+      name: "爱奇艺_20"
+      type: request
+      timeout: 60
+
+    - match: ^https:\/\/rewards\.bing\.com
+      name: "bing获取积分cookie_22"
+      type: request
+      timeout: 60
+
+    - match: https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login
+      name: "百度贴吧@NobyDa_24"
+      type: request
+      timeout: 60
+
+    - match: ^https:\/\/passport\.biligame\.com\/api\/login\/sso.+?version%22%3A%22(3|4|5)
+      name: "哔哩哔哩漫画@NobyDa_26"
+      type: request
+      timeout: 60
+
+    - match: https:\/\/api.bilibili.com\/x\/vip\/privilege\/receive
+      name: "哔哩哔哩大会员特权获取cookie@lowking_28"
+      type: request
+      timeout: 60
+
+    - match: https?:\/\/app.bilibili.com\/x\/v2\/space\/bangumi
+      name: "哔哩哔哩番剧监控cookie@lowking_30"
+      type: request
+      timeout: 60
+
+    - match: ^https:\/\/(www|live)\.bilibili\.com\/?.?
+      name: "哔哩哔哩@chavyleung_32"
+      type: request
+      timeout: 60
+
+    - match: ^https:\/\/passport.csdn.net\/v2\/api\/app\/login\/checkAndRefreshToken
+      name: "CSDN_34"
+      type: request
+      timeout: 60
+
+    - match: ^https:\/\/gw.csdn.net\/mini-app\/v2\/lucky_draw\/login\/sign_in\?
+      name: "CSDN_34"
+      type: request
+      timeout: 60
+
+    - match: ^https?:\/\/api.weather\.com
+      name: "彩云_37"
+      type: request
+      timeout: 60
+
+    - match: ^https?:\/\/game\.xiaojukeji\.com\/api\/game\/plant\/newWatering\?
+      name: "滴滴果园获取token_39"
+      type: request
+      require-body: true
+      timeout: 60
+
+    - match: ^https:\/\/epassport\.diditaxi\.com\.cn\/passport\/login\/v5\/signInByOpenid
+      name: "滴滴果园获取token_39"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https://minigame.zijieapi.com/ttgame/game_orchard_ecom/polling_info
+      name: "抖音-抖抖果园_43"
+      type: request
+      timeout: 60
+
+    - match: ^https://yuba.douyu.com/wbapi/web/group/myFollow?
+      name: "斗鱼鱼吧_45"
+      type: request
+      timeout: 60
+
+    - match: ^https:\/\/api\.dongqiudi\.com\/v2\/user\/is_login
+      name: "懂球帝_47"
+      type: request
+      timeout: 60
+
+    - match: https:\/\/maicai\.api\.ddxq\.mobi\/user\/checkLogin
+      name: "叮咚农场_49"
+      type: request
+      timeout: 60
+
+    - match: https:\/\/farm\.api\.ddxq\.mobi\/api\/v2\/props\/feed
+      name: "叮咚果园获取Cookie_51"
+      type: request
+      timeout: 60
+
+    - match: ^https?:\/\/www\.flyert\.com\.cn\/api\/mobile\/index\.php\?module=getdata&.*
+      name: "飞客茶馆获取cookie_53"
+      type: request
+      timeout: 60
+
+    - match: ^https://api\.dushu\.io/CheckIn
+      name: "樊登读书_55"
+      type: request
+      require-body: true
+      timeout: 60
+
+    - match: https:\/\/www.hifini.com\/my.htm
+      name: "hifini-签到cookie_57"
+      type: request
+      timeout: 60
+
+    - match: ^https:\/\/wxprdapplet\.gac-nio\.com\/community\/userSignIn\/simpleAuth\/front\/v3\.1\.3\.5\/signV2$
+      name: "合创.cookie_59"
+      type: request
+      timeout: 60
+
+    - match: ^https:\/\/home\.m\.jd\.com\/myJd\/(newhome|home)\.action
+      name: "获取京东网页Cookie_61"
+      type: request
+      timeout: 60
+
+    - match: ^https:\/\/my\.m\.jd\.com
+      name: "获取京东网页Cookie_61"
+      type: request
+      timeout: 60
+
+    - match: ^https:\/\/jdread-api\.jd\.com\/*
+      name: "京东读书_64"
+      type: request
+      timeout: 60
+
+    - match: ^https:\/\/daojia.jd.com/client(.*?)functionId=signin(.*?)userSigninNew
+      name: "京东到家_66"
+      type: request
+      require-body: true
+      timeout: 60
+
+    - match: ^https:\/\/yunbusiness\.ccb\.com\/(clp_coupon|clp_service)\/txCtrl\?txcode=(A3341A038|autoLogin)
+      name: "建行生活-签到cookie_68"
+      type: request
+      require-body: true
+      timeout: 60
+
+    - match: ^http?:\/\/hongbao\.youzikuaibao\.com\/youzi\/*
+      name: "柚子快报_70"
+      type: request
+      require-body: true
+      timeout: 60
+
+    - match: ^https:\/\/m.gdoil.cn\/webapi\/usersign\/addusersign
+      name: "加油广东_72"
+      type: request
+      timeout: 60
+
+    - match: ^https://ug-fission.kuaishou.com/rest/n/darwin/orchard/water/watering
+      name: "快手果园-获取cookie_74"
+      type: request
+      timeout: 60
+
+    - match: ^https:\/\/api\.kkmh\.com\/v\d\/passport\/user
+      name: "快看漫画-cookie_76"
+      type: request
+      timeout: 60
+
+    - match: ^https?:\/\/luka\-graphql\.ling\.cn\/graphql\/mobile\?operation=UserInfoWithPendingRobotQuery
+      name: "Luka-获取cookie_78"
+      type: request
+      timeout: 60
+
+    - match: https://open.meituan.com/user/v1/info/auditting
+      name: "滴滴果园获取token_39"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: https://gaea.meituan.com/mapi/usercenter
+      name: "滴滴果园获取token_39"
+      type: request
+      timeout: 60
+
+    - match: ^https:\/\/promotion.waimai.meituan.com\/playcenter\/signIn\/(entry|doaction)
+      name: "美团外卖_84"
+      type: request
+      timeout: 60
+
+    - match: ^https:\/\/credits.bz.mgtv.com\/user\/creditsTake
+      name: "芒果TV_86"
+      type: request
+      timeout: 60
+
+    - match: ^https:\/\/api-takumi.mihoyo.com\/apihub\/api\/getGameList
+      name: "米游社_88"
+      type: request
+      timeout: 60
+
+    - match: https:\/\/www.maomicd.com\/plugin.php\?id=k_misign:sign&operation=qiandao
+      name: "猫咪音乐网_90"
+      type: request
+      timeout: 60
+
+    - match: ^https:\/\/ngabbs.com\/nuke.php\??
+      name: "nga.cookie_92"
+      type: request
+      require-body: true
+      timeout: 60
+
+    - match: https://m.pinduoduo.net/proxy/api/api/server/_stm
+      name: "拼多多果园_94"
+      type: request
+      timeout: 60
+
+    - match: https:\/\/cauth.pupuapi.com\/clientauth\/user\/verify_login
+      name: "朴朴签到cookie_96"
+      type: request
+      timeout: 60
+
+    - match: https:\/\/proxy.vac.qq.com\/cgi-bin\/srfentry.fcgi?
+      name: "QQ-VipCheckIn_98"
+      type: request
+      timeout: 60
+
+    - match: https:\/\/qqpet.jwetech.com\/api\/authorizations
+      name: "QQ萌宠cookie_100"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https:\/\/mobile\.app\.autohome\.com\.cn\/fasthome\/*
+      name: "汽车之家极速版_102"
+      type: request
+      require-body: true
+      timeout: 60
+
+    - match: ^http:\/\/mobile\.app\.autohome\.com\.cn\/fasthome\/coin\/*
+      name: "汽车之家极速版_102"
+      type: request
+      require-body: true
+      timeout: 60
+
+    - match: ^https:\/\/user.qunar.com\/webapi\/member\/signIndexV2.htm
+      name: "去哪儿.cookie_105"
+      type: request
+      timeout: 60
+
+    - match: ^https://node\.kg\.qq\.com/webapp/proxy?
+      name: "全民K歌.cookie_107"
+      type: request
+      require-body: true
+      timeout: 60
+
+    - match: ^https:\/\/mobile-consumer-sapp\.chery\.cn\/web\/user\/current\/details\?
+      name: "滴滴果园获取token_39"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https:\/\/user-api\.smzdm\.com\/users\/info
+      name: "滴滴果园获取token_39"
+      type: request
+      timeout: 60
+
+    - match: ^https:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/share\/weChat\/shareGiftReceiveRedirect
+      name: "滴滴果园获取token_39"
+      type: request
+      timeout: 60
+
+    - match: ^https:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/share\/app\/shareRedirect
+      name: "滴滴果园获取token_39"
+      type: request
+      timeout: 60
+
+    - match: ^https:\/\/api\.sdbao\.com\/*
+      name: "水滴筹_118"
+      type: request
+      require-body: true
+      timeout: 60
+
+    - match: ^http:\/\/app\.oscaches\.com\/*
+      name: "水晶DJ_120"
+      type: request
+      require-body: true
+      timeout: 60
+
+    - match: ^https:\/\/api.everphoto.cn\/users\/self\/checkin\/v2
+      name: "时光相册.cookie_122"
+      type: request
+      timeout: 60
+
+    - match: ^https:\/\/passport.suning.com\/ids\/login$
+      name: "苏宁易购.cookie_124"
+      type: request
+      require-body: true
+      timeout: 60
+
+    - match: ^https:\/\/luckman.suning.com\/luck-web\/sign\/api\/clock_sign.do
+      name: "苏宁易购.cookie_124"
+      type: request
+      timeout: 60
+
+    - match: ^https:\/\/sign.suning.com\/sign-web\/m\/promotion\/sign\/doSign.do
+      name: "苏宁易购.cookie_124"
+      type: request
+      timeout: 60
+
+    - match: ^https:\/\/gameapi.suning.com\/sngame-web\/(api\/signin\/private\/customerSignOperation.do|gateway\/api\/queryPrize.do)
+      name: "苏宁易购.cookie_124"
+      type: request
+      timeout: 60
+
+    - match: ^https:\/\/cxdng\.cpic\.com\.cn\/taieshop\/api\/CustomerFansInfo\/GetFansInfo
+      name: "太好购_129"
+      type: request
+      timeout: 60
+
+    - match: ^https:\/\/operation-api\.jimistore\.com\/*
+      name: "天天挖矿_131"
+      type: request
+      require-body: true
+      timeout: 60
+
+    - match: ^https:\/\/access.video.qq.com\/user\/auth_refresh
+      name: "腾讯视频.cookie_133"
+      type: request
+      timeout: 60
+
+    - match: ^https:\/\/www\.v2ex\.com\/mission\/daily
+      name: "v2ex.cookie_135"
+      type: request
+      timeout: 60
+
+    - match: ^https:\/\/zt.wps.cn\/2018\/docer_check_in\/api\/act_list
+      name: "wps.cookie_137"
+      type: request
+      timeout: 60
+
+    - match: ^https:\/\/wmapp-api\.waimaimingtang\.com\/api\/api\/v2\/user\/api_user_info_one
+      name: "歪麦霸王餐-获取token_139"
+      type: request
+      require-body: true
+      max-size: 0
+      binary-mode: false
+
+    - match: ^https:\/\/m?api\.weibo\.c(n|om)\/\d\/users\/show
+      name: "滴滴果园获取token_39"
+      type: request
+      timeout: 60
+
+    - match: ^https:\/\/api\.weibo\.cn\/\d\/users\/show
+      name: "微博-获取cookie_142"
+      type: request
+      timeout: 60
+
+    - match: ^https:\/\/api\.weibo\.cn\/2\/logservice\/attach
+      name: "微博-获取cookie_142"
+      type: request
+      timeout: 60
+
+    - match: https:\/\/weibo\.com\/p\/aj\/general\/button\?ajwvr=6&api=http:\/\/i\.huati\.weibo\.com\/aj\/super\/checkin
+      name: "微博-获取cookie_144"
+      type: request
+      timeout: 60
+
+    - match: https:\/\/www\.52pojie\.cn\/home\.php\?
+      name: "吾爱破解cookie_146"
+      type: request
+      timeout: 60
+
+    - match: ^https:\/\/music.163.com\/weapi\/user\/level
+      name: "网易云音乐.cookie_148"
+      type: request
+      require-body: true
+      timeout: 60
+
+    - match: ^https:\/\/(.*?)c\.m\.163\.com\/uc\/api\/sign\/v3\/commit
+      name: "网易新闻.cookie_150"
+      type: request
+      require-body: true
+      timeout: 60
+
+    - match: ^https:\/\/m-bean\.kaola\.com/m/point/sign\.html
+      name: "网易考拉.cookie_152"
+      type: request
+      require-body: true
+      timeout: 60
+
+    - match: ^https:\/\/api\.momosyb\.com\/(v6|v1)\/(fans|user)\/*
+      name: "微商星球_154"
+      type: request
+      require-body: true
+      timeout: 60
+
+    - match: ^https:\/\/app\.nio\.com\/api\/1\/app\/daily_checkin
+      name: "蔚来.cookie_156"
+      type: request
+      timeout: 60
+
+    - match: ^https:\/\/m\.ctrip\.com\/restapi\/soa2\/14946\/json\/userBaseInfo
+      name: "携程_158"
+      type: request
+      timeout: 60
+
+    - match: ^https?:\/\/.*\/mobile\-user\/(v1\/)?homePage\/.*
+      name: "喜马拉雅.cookie_160"
+      type: request
+      timeout: 60
+
+    - match: ^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/my
+      name: "滴滴果园获取token_39"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: https:\/\/club\.yili\.com\/MALLIFChe\/MCSWSIAPI\.asmx\/Call
+      name: "伊利.cookie_164"
+      type: request
+      require-body: true
+      timeout: 60
+
+    - match: ^https:\/\/(e\.189\.cn\/store\/user|open\.e\.189\.cn\/api\/logbox\/oauth2\/loginSubmit\.do)
+      name: "中国电信@FoKit_166"
+      type: request
+      timeout: 60
+
+    - match: ^https:\/\/wapside\.189\.cn:9001\/api\/home\/sign
+      name: "电信营业厅@chavyleung_167"
+      type: request
+      require-body: true
+      timeout: 60
+
+    - match: ^https:\/\/e\.dlife\.cn\/user\/loginMiddle
+      name: "电信登录地址@dompling_168"
+      type: request
+
+    - match: ^https:\/\/act.10010.com\/SigninApp\/signin\/querySigninActivity.htm
+      name: "中国联通.cookie_170"
+      type: request
+      timeout: 60
+
+    - match: ^https:\/\/act.10010.com\/SigninApp(.*?)\/signin\/daySign
+      name: "中国联通.cookie_170"
+      type: request
+      timeout: 60
+
+    - match: ^https:\/\/m.client.10010.com\/dailylottery\/static\/(textdl\/userLogin|active\/findActivityInfo)
+      name: "中国联通.cookie_170"
+      type: request
+      timeout: 60
+
+    - match: ^https?:\/\/m\.client\.10010\.com\/serviceimportantbusiness\/smart\/smartwisdomCommonNew
+      name: "中国联通.cookie@dompling_174"
+      type: request
+      timeout: 60
+
+    - match: ^https:\/\/.+zhuishushenqi\.com\/*
+      name: "追书畅读版_176"
+      type: request
+      require-body: true
+      timeout: 60
+
+    - match: ^https:\/\/getconfig-globalapi\.zymk\.cn\/app_api\/*
+      name: "知音漫客_178"
+      type: request
+      require-body: true
+      timeout: 60
+
+    - match: ^https:\/\/m\.ctrip\.com/restapi/soa2/14593/json/attendanceDay?
+      name: "智行火车.cookie_183"
+      type: request
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "AcFun_13":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/acfun/acfun.cookie.js
+    interval: 86400
+  "APK.TW_15":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/apktw/apktw.cookie.js
+    interval: 86400
+  "阿里云盘@Sliverkiss_17":
+    url: https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js
+    interval: 86400
+  "阿里云盘@lowking_18":
+    url: https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
+    interval: 86400
+  "爱奇艺_20":
+    url: https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
+    interval: 86400
+  "bing获取积分cookie_22":
+    url: https://raw.githubusercontent.com/lowking/Scripts/master/bing/bingPoint.js
+    interval: 86400
+  "百度贴吧@NobyDa_24":
+    url: https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js
+    interval: 86400
+  "哔哩哔哩漫画@NobyDa_26":
+    url: https://raw.githubusercontent.com/NobyDa/Script/master/Bilibili-DailyBonus/Manga.js
+    interval: 86400
+  "哔哩哔哩大会员特权获取cookie@lowking_28":
+    url: https://raw.githubusercontent.com/lowking/Scripts/master/bilibili/privilegeReceive.js
+    interval: 86400
+  "哔哩哔哩番剧监控cookie@lowking_30":
+    url: https://raw.githubusercontent.com/lowking/Scripts/master/bilibili/bangumiMonitor.js
+    interval: 86400
+  "哔哩哔哩@chavyleung_32":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.cookie.js
+    interval: 86400
+  "CSDN_34":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/csdn/csdn.cookie.js
+    interval: 86400
+  "彩云_37":
+    url: https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/caiyun.js
+    interval: 86400
+  "滴滴果园获取token_39":
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cookie/get_cookie.js
+    interval: 86400
+  "抖音-抖抖果园_43":
+    url: https://raw.githubusercontent.com/LinYuanovo/scripts/main/dygy.js
+    interval: 86400
+  "斗鱼鱼吧_45":
+    url: https://raw.githubusercontent.com/lowking/Scripts/master/douyu/yubaSign.js
+    interval: 86400
+  "懂球帝_47":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/dongqiudi/dongqiudi.cookie.js
+    interval: 86400
+  "叮咚农场_49":
+    url: https://raw.githubusercontent.com/iepngs/Script/master/dingdong/index.js
+    interval: 86400
+  "叮咚果园获取Cookie_51":
+    url: https://raw.githubusercontent.com/iepngs/Script/master/dingdong/ddgy.js
+    interval: 86400
+  "飞客茶馆获取cookie_53":
+    url: https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/CheckIn/flyert.js
+    interval: 86400
+  "樊登读书_55":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/fandeng/fandeng.cookie.js
+    interval: 86400
+  "hifini-签到cookie_57":
+    url: https://raw.githubusercontent.com/lowking/Scripts/master/hifini/hifiniSign.js
+    interval: 86400
+  "合创.cookie_59":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/hycan/hycan.cookie.js
+    interval: 86400
+  "获取京东网页Cookie_61":
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingdong/jd_cookie.js
+    interval: 86400
+  "京东读书_64":
+    url: https://raw.githubusercontent.com/XidNDD/2020scripts/master/jddsSign.js
+    interval: 86400
+  "京东到家_66":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/jddj/jddj.cookie.js
+    interval: 86400
+  "建行生活-签到cookie_68":
+    url: https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jhsh_checkIn.js
+    interval: 86400
+  "柚子快报_70":
+    url: https://raw.githubusercontent.com/XidNDD/2020scripts/master/yzkbSign.js
+    interval: 86400
+  "加油广东_72":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/gdoil/gdoil.cookie.js
+    interval: 86400
+  "快手果园-获取cookie_74":
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuaishou/ks_getCookie.js
+    interval: 86400
+  "快看漫画-cookie_76":
+    url: https://raw.githubusercontent.com/NobyDa/Script/master/KuaiKan-DailyBonus/KKMH.js
+    interval: 86400
+  "Luka-获取cookie_78":
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/luka/luka_signin.js
+    interval: 86400
+  "美团外卖_84":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/wmmeituan/wmmeituan.cookie.js
+    interval: 86400
+  "芒果TV_86":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/mgtv/mgtv.cookie.js
+    interval: 86400
+  "米游社_88":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/mihoyo/mihoyo.cookie.js
+    interval: 86400
+  "猫咪音乐网_90":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/maomicd/maomicd.cookie.js
+    interval: 86400
+  "nga.cookie_92":
+    url: https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/nga/nga.cookie.js
+    interval: 86400
+  "拼多多果园_94":
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/pinduoduo/pdd_getToken.js
+    interval: 86400
+  "朴朴签到cookie_96":
+    url: https://raw.githubusercontent.com/lowking/Scripts/master/pupu/pupuCheckIn.js
+    interval: 86400
+  "QQ-VipCheckIn_98":
+    url: https://raw.githubusercontent.com/lowking/Scripts/master/QQVip/qqVipCheckIn.js
+    interval: 86400
+  "QQ萌宠cookie_100":
+    url: https://raw.githubusercontent.com/lowking/Scripts/master/QQPet/lkQQPet.js
+    interval: 86400
+  "汽车之家极速版_102":
+    url: https://raw.githubusercontent.com/XidNDD/2020scripts/master/qczjSign.js
+    interval: 86400
+  "去哪儿.cookie_105":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/qunar/qunar.cookie.js
+    interval: 86400
+  "全民K歌.cookie_107":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/qmkg/qmkg.cookie.js
+    interval: 86400
+  "水滴筹_118":
+    url: https://raw.githubusercontent.com/XidNDD/2020scripts/master/sdcbxscSign.js
+    interval: 86400
+  "水晶DJ_120":
+    url: https://raw.githubusercontent.com/XidNDD/2020scripts/master/sjdjSign.js
+    interval: 86400
+  "时光相册.cookie_122":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/everphoto/everphoto.cookie.js
+    interval: 86400
+  "苏宁易购.cookie_124":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/suning/suning.cookie.js
+    interval: 86400
+  "太好购_129":
+    url: https://raw.githubusercontent.com/id77/QuantumultX/master/task/thg.cookie.js
+    interval: 86400
+  "天天挖矿_131":
+    url: https://raw.githubusercontent.com/XidNDD/2020scripts/master/ttwbxcxSign.js
+    interval: 86400
+  "腾讯视频.cookie_133":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/videoqq/videoqq.cookie.js
+    interval: 86400
+  "v2ex.cookie_135":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/v2ex/quanx/v2ex.cookie.js
+    interval: 86400
+  "wps.cookie_137":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/wps/wps.cookie.js
+    interval: 86400
+  "歪麦霸王餐-获取token_139":
+    url: https://gist.githubusercontent.com/Sliverkiss/49a9ffb2169a2becc33bf4fdbf6eb99a/raw/wmbwc.js
+    interval: 86400
+  "微博-获取cookie_142":
+    url: https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/weibo_sign.js
+    interval: 86400
+  "微博-获取cookie_144":
+    url: https://raw.githubusercontent.com/lowking/Scripts/master/weibo/weiboSTCookie.js
+    interval: 86400
+  "吾爱破解cookie_146":
+    url: https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
+    interval: 86400
+  "网易云音乐.cookie_148":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/quanx/neteasemusic.cookie.js
+    interval: 86400
+  "网易新闻.cookie_150":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/neteasenews/neteasenews.cookie.js
+    interval: 86400
+  "网易考拉.cookie_152":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/wykl/wykl.cookie.js
+    interval: 86400
+  "微商星球_154":
+    url: https://raw.githubusercontent.com/XidNDD/2020scripts/master/wsxqSign.js
+    interval: 86400
+  "蔚来.cookie_156":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/nio/nio.cookie.js
+    interval: 86400
+  "携程_158":
+    url: https://raw.githubusercontent.com/barrym-chen/Script/master/ctrip/ctrip_cookie.js
+    interval: 86400
+  "喜马拉雅.cookie_160":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/ximalaya/ximalaya.cookie.js
+    interval: 86400
+  "伊利.cookie_164":
+    url: https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.cookie.js
+    interval: 86400
+  "中国电信@FoKit_166":
+    url: https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/get_10000_cookie.js
+    interval: 86400
+  "电信营业厅@chavyleung_167":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.cookie.js
+    interval: 86400
+  "电信登录地址@dompling_168":
+    url: https://raw.githubusercontent.com/dompling/Script/master/10000/index.js
+    interval: 86400
+  "中国联通.cookie_170":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js
+    interval: 86400
+  "中国联通.cookie@dompling_174":
+    url: https://raw.githubusercontent.com/dompling/Script/master/10010/index.js
+    interval: 86400
+  "追书畅读版_176":
+    url: https://raw.githubusercontent.com/XidNDD/2020scripts/master/zscdbSign.js
+    interval: 86400
+  "知音漫客_178":
+    url: https://raw.githubusercontent.com/XidNDD/2020scripts/master/zymkSign.js
+    interval: 86400
+  "智行火车.cookie_183":
+    url: https://raw.githubusercontent.com/chavyleung/scripts/master/zxhc/zxhc.cookie.js
+    interval: 86400
+

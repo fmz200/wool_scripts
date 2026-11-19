@@ -1,0 +1,37 @@
+name: |-
+  下厨房
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1011.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partX/XiaChuFang.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "*.pglstatp-toutiao.com"
+    - "res1.hubcloud.com.cnhostname"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/api\.xiachufang\.com\/v\d\/ad/ - reject
+    - >-
+      ^https?:\/\/images\.cib\.com\.cn\/commons\/uploads\/commons\/[a-zA-Z0-9]{32}\.jpg\?(?:[^#?&]+&)*ver=20221[1-2]{1} - reject-200
+    - >-
+      ^https?:\/\/images\.cib\.com\.cn\/commons\/uploads\/commons\/[a-zA-Z0-9]{32}\.jpg\?(?:[^#?&]+&)*ver=20230[1-9]{1} - reject-200
+    - >-
+      ^http?:\/\/.*\.pglstatp-toutiao\.com - reject-200
+    - >-
+      ^http:\/\/res1\.hubcloud\.com\.cn - reject-200
+

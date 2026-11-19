@@ -1,0 +1,67 @@
+name: |-
+  字节跳动
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1040.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partZ/ByteDance.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN,ad.zijieapi.com,REJECT
+  - DOMAIN,applog.zijieapi.com,REJECT
+  - DOMAIN-SUFFIX,-normal-lq.zijieapi.com,REJECT
+  - DOMAIN-SUFFIX,dm.bytedance.com,REJECT
+  - DOMAIN-SUFFIX,xlog-va.byteoversea.com,REJECT
+  - DOMAIN-SUFFIX,tosv.byted.org,REJECT
+  - DOMAIN-SUFFIX,tosv.boe.byted.org,REJECT
+  - DOMAIN-SUFFIX,extlog.snssdk.com,REJECT
+  - DOMAIN-SUFFIX,sdfp.snssdk.com,REJECT
+  - DOMAIN-SUFFIX,temai.snssdk.com,REJECT
+  - DOMAIN-SUFFIX,xlog.snssdk.com,REJECT
+  - DOMAIN-SUFFIX,ad.toutiao.com,REJECT
+  - DOMAIN-SUFFIX,dm.toutiao.com,REJECT
+  - DOMAIN-SUFFIX,dsp.toutiao.com,REJECT
+  - DOMAIN-SUFFIX,nativeapp.toutiao.com,REJECT
+  - DOMAIN-SUFFIX,partner.toutiao.com,REJECT
+  - DOMAIN-SUFFIX,track.toutiao.com,REJECT
+  - DOMAIN-SUFFIX,dm.pstatp.com,REJECT
+  - DOMAIN-SUFFIX,pb3.pstatp.com,REJECT
+  - DOMAIN-SUFFIX,s3a.pstatp.com,REJECT
+
+http:
+
+  mitm:
+    - "*.pstatp.com"
+    - "amemv.com"
+    - "musical.com"
+    - "snssdk.com"
+    - "tiktokv.com"
+    - "dsp.toutiao.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/ad\/ - reject
+    - >-
+      ^https?:\/\/[\w-]+\.snssdk\.com\/.+_ad\/ - reject
+    - >-
+      ^https?:\/\/.+\.(amemv|musical|snssdk|tiktokv)\.com\/(api|motor)\/ad\/ - reject-200
+    - >-
+      ^https?:\/\/.+\.snssdk\.com\/motor\/operation\/activity\/display\/config\/V2\/ - reject-200
+    - >-
+      ^https?:\/\/.+\.amemv\.com\/.+app_log - reject-200
+    - >-
+      ^https?:\/\/.+\.amemv\.com\/.+report - reject-200
+    - >-
+      ^https?:\/\/.+\.amemv\.com\/.+stats - reject-200
+

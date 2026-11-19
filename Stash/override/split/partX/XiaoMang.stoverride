@@ -1,0 +1,47 @@
+name: |-
+  小芒
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1029.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partX/XiaoMang.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "mgesq.api.mgtv.com"
+    - "*.hitv.com"
+
+  url-rewrite:
+    - >-
+      ^https:\/\/mgesq\.api\.mgtv\.com\/v2\/goods\/guess_you_like - reject-dict
+    - >-
+      https://mgesq.api.mgtv.com/v2/user/center/icon - reject-dict
+    - >-
+      ^https:\/\/mgesq\.api\.mgtv\.com\/search\/goods\/rank - reject-dict
+    - >-
+      ^https:\/\/mgesq\.api\.mgtv\.com\/user\/center\/config - reject-dict
+
+  script:
+    - match: https://mgesq.api.mgtv.com/dsl/index.+
+      name: "小芒APP主页广告_20"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "小芒APP主页广告_20":
+    url: https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/AdBlock/xmApp/xmApp.js
+    interval: 86400
+

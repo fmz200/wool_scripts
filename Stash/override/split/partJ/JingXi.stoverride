@@ -1,0 +1,42 @@
+name: |-
+  京喜
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1089.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partJ/JingXi.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "api.m.jd.com"
+
+  body-rewrite:
+    - >-
+      ^https?:\/\/api\.m\.jd\.com\/client\.action\?(?:[^#?&]+&)*functionId=lite_advertising response-replace-regex jdLiteAdvertisingVO fmz200
+    - >-
+      ^https?:\/\/api\.m\.jd\.com\/client\.action\?(?:[^#?&]+&)*functionId=lite_SmartPush response-replace-regex pushData fmz200
+
+  script:
+    - match: ^https?:\/\/api\.m\.jd\.com\/api\?functionId=delivery_show
+      name: "京喜_14"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "京喜_14":
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingxiAd.js
+    interval: 86400
+

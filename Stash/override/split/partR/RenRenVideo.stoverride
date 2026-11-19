@@ -1,0 +1,99 @@
+name: |-
+  人人视频
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1083.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partR/RenRenVideo.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN-SUFFIX,ad.rr.tv,REJECT
+  - DOMAIN-SUFFIX,ebp.renren.com,REJECT
+  - DOMAIN-SUFFIX,jebe.renren.com,REJECT
+  - DOMAIN-SUFFIX,bolt.jebe.renren.com,REJECT
+  - DOMAIN-SUFFIX,cupid.jebe.renren.com,REJECT
+  - DOMAIN-SUFFIX,shaft.jebe.renren.com,REJECT
+  - DOMAIN-SUFFIX,xray.jebe.renren.com,REJECT
+
+http:
+
+  mitm:
+    - "api.rr.tv"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/api\.rr\.tv\/.*?Version - reject
+    - >-
+      https://api.rr.tv/storage/business/rootName/app/homePage\?(?:[^#?&]+&)*dataType=JSON - reject-dict
+
+  script:
+    - match: ^https?:\/\/api\.rr\.tv\/\w{3}\/level\/info
+      name: "rrtv_json_26"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: https://api.rr.tv/v3plus/index/channel\?pageNum=1&position=CHANNEL_INDEX
+      name: "rrtv_json_26"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/api\.rr\.tv\/app\/config\/h5NativeBar
+      name: "rrtv_json_26"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/api\.rr\.tv\/v3plus\/index\/channel\?pageNum=1&position=CHANNEL_MY
+      name: "rrtv_json_26"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/api\.rr\.tv\/user\/privilege\/list
+      name: "rrtv_json_26"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/api\.rr\.tv\/ad\/getAll
+      name: "rrtv_json_26"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/api\.rr\.tv\/drama\/app\/get_combined_drama_detail
+      name: "rrtv_json_26"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: https://api.rr.tv/watch/v4
+      name: "rrtv_json_26"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: https://api.rr.tv/user/profile
+      name: "rrtv_json_26"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "rrtv_json_26":
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js
+    interval: 86400
+

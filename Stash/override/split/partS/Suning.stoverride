@@ -1,0 +1,41 @@
+name: |-
+  苏宁易购
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1076.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partS/Suning.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN-SUFFIX,show.suning.beer,REJECT
+  - DOMAIN-SUFFIX,apm.suning.cn,REJECT
+  - DOMAIN-SUFFIX,mads.suning.com,REJECT
+  - DOMAIN-SUFFIX,ssac.suning.com,REJECT
+  - DOMAIN-SUFFIX,tad.suning.com,REJECT
+
+http:
+
+  mitm:
+    - "mpcs.suning.com"
+    - "image.suning.com"
+    - "luckman.suning.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/mpcs\.suning\.com\/mpcs\/dm\/getDmInfo - reject
+    - >-
+      ^https?:\/\/image\.suning\.cn\/uimg\/ma\/ad\/ - reject-200
+    - >-
+      ^https?:\/\/luckman\.suning\.com\/luck-web\/policy\/v\d\/msf\/index\.do - reject-200
+

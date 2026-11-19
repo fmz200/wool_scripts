@@ -1,0 +1,37 @@
+name: |-
+  东方财富
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1040.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partD/DongFangCaiFu.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN-SUFFIX,bduserlog.eastmoney.com,REJECT
+  - DOMAIN-SUFFIX,js4.eastmoney.com,REJECT
+  - DOMAIN-SUFFIX,same.eastmoney.com,REJECT
+
+http:
+
+  mitm:
+    - "app.ceair.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/emdcadvertise\.eastmoney\.com\/infoService\/v\d - reject
+    - >-
+      ^https?:\/\/app\.ceair\.com\/customize\/security\/update - reject-200
+    - >-
+      ^https?:\/\/app\.ceair\.com\/customize\/main\/adScreen - reject-dict
+

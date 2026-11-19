@@ -1,0 +1,52 @@
+name: |-
+  高德地图
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1084.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partG/AutoNavi.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN-SUFFIX,adiu.amap.com,REJECT
+  - DOMAIN,aboard.apilocate.amap.com,REJECT
+  - DOMAIN,apiinit.amap.com,REJECT
+  - DOMAIN,icloud-amap.com,REJECT
+  - DOMAIN,logs.amap.com,REJECT
+  - DOMAIN-SUFFIX,dualstack-logs.amap.com,REJECT
+  - DOMAIN-SUFFIX,logs.amap.com,REJECT
+  - DOMAIN-SUFFIX,optimus-ads.amap.com,REJECT
+  - DOMAIN-SUFFIX,page.amap.com,REJECT
+  - DOMAIN,optimus-ads.amap.com,REJECT
+  - DOMAIN,optimus-ads.amap.com.w.alikunlun.com,REJECT
+  - DOMAIN-SUFFIX,shouji.sougou.com,REJECT
+  - DOMAIN,u51.me,REJECT
+  - DOMAIN-SUFFIX,u51.me,REJECT
+
+http:
+
+  mitm:
+    - "m*.amap.com"
+    - "optimus-ads.amap.com"
+    - "amap-aos-info-nogw.amap.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/m5\.amap\.com\/ws\/valueadded\/ - reject
+    - >-
+      ^https?:\/\/amap-aos-info-nogw\.amap\.com\/ws\/aos\/alimama\/splash_screen_rt - reject
+    - >-
+      ^https?:\/\/m5\.amap\.com\/ws\/shield\/dsp\/app\/startup\/init\? - reject-dict
+    - >-
+      ^https?:\/\/optimus-ads\.amap\.com\/uploadimg\/[a-zA-Z0-9]+.gif - reject-200
+

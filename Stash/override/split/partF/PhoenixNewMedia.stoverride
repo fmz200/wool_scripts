@@ -1,0 +1,39 @@
+name: |-
+  凤凰新媒体
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1096.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partF/PhoenixNewMedia.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN-SUFFIX,deliver.ifeng.com,REJECT
+  - DOMAIN-SUFFIX,stadig.ifeng.com,REJECT
+  - DOMAIN-SUFFIX,stadig0.ifeng.com,REJECT
+  - DOMAIN-SUFFIX,exp.3g.ifeng.com,REJECT
+  - DOMAIN-SUFFIX,ifengad.3g.ifeng.com,REJECT
+  - DOMAIN-SUFFIX,dmpclick.deliver.ifeng.com,REJECT
+  - DOMAIN-SUFFIX,dol.deliver.ifeng.com,REJECT
+  - DOMAIN-SUFFIX,dolphin.deliver.ifeng.com,REJECT
+  - DOMAIN-SUFFIX,ids.deliver.ifeng.com,REJECT
+  - DOMAIN-SUFFIX,ids1.deliver.ifeng.com,REJECT
+  - DOMAIN-SUFFIX,iis1.deliver.ifeng.com,REJECT
+  - DOMAIN-SUFFIX,iis3g.deliver.ifeng.com,REJECT
+  - DOMAIN-SUFFIX,mfp.deliver.ifeng.com,REJECT
+  - DOMAIN-SUFFIX,api.iapps.ifeng.com,REJECT
+  - DOMAIN-SUFFIX,api.newad.ifeng.com,REJECT
+  - DOMAIN-SUFFIX,cz.ifeng0.com,REJECT
+  - DOMAIN-SUFFIX,c0.ifengimg.com,REJECT
+  - DOMAIN-SUFFIX,c1.ifengimg.com,REJECT
+

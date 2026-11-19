@@ -1,0 +1,34 @@
+name: |-
+  掌上英雄联盟
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1007.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partZ/ZhangShangLOL.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "us.l.qq.com"
+    - "ossweb-img.qq.com"
+    - "mlol.qt.qq.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/mlol\.qt\.qq\.com\/go\/recommend - reject
+    - >-
+      ^https?:\/\/us\.l\.qq\.com\/exapp - reject-200
+    - >-
+      ^https?:\/\/ossweb-img\.qq\.com\/upload\/adw\/image\/[0-9]{3}\/202[0-9]{5}\/[a-z0-9]{32}\.(jpg|jpeg) - reject-200
+

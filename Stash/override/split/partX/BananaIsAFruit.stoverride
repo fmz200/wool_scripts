@@ -1,0 +1,39 @@
+name: |-
+  香蕉是一种水果
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1079.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partX/BananaIsAFruit.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "*.pipiapps.com"
+    - "*.fuliapps.com"
+    - "*.xiangjiaoapps.com"
+    - "*.xiangxiangapps.com"
+
+  script:
+    - match: ^https?:\/\/.+?\.(pipi|fuli|xiang(jiao|xiang))apps\.com\/(ucp\/index|getGlobalData|(\/|)vod\/reqplay\/)
+      name: "香蕉是一种水果_11"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "香蕉是一种水果_11":
+    url: https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/xjsp.js
+    interval: 86400
+

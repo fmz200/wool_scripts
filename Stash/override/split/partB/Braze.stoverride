@@ -1,0 +1,30 @@
+name: |-
+  Braze
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1038.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partB/Braze.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN-SUFFIX,iad.appboy.com,REJECT
+  - DOMAIN-SUFFIX,iad-03.appboy.com,REJECT
+  - DOMAIN-SUFFIX,iad-01.braze.com,REJECT
+  - DOMAIN-SUFFIX,iad-02.braze.com,REJECT
+  - DOMAIN-SUFFIX,iad-03.braze.com,REJECT
+  - DOMAIN-SUFFIX,iad-04.braze.com,REJECT
+  - DOMAIN-SUFFIX,iad-05.braze.com,REJECT
+  - DOMAIN-SUFFIX,iad-06.braze.com,REJECT
+  - DOMAIN-SUFFIX,iad-08.braze.com,REJECT
+

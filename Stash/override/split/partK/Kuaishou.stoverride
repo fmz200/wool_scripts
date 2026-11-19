@@ -1,0 +1,59 @@
+name: |-
+  快手
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1040.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partK/Kuaishou.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN-SUFFIX,e.kuaishou.com,REJECT
+  - DOMAIN-SUFFIX,cm.downloader.commercial.kuaishou.com,REJECT
+  - DOMAIN-SUFFIX,cm.ad.gifshow.com,REJECT
+  - DOMAIN-SUFFIX,cm.kwad.com,REJECT
+
+http:
+
+  mitm:
+    - "az4-api.ksapisrv.com"
+    - "az4-api-idc.ksapisrv.com"
+    - "az2-api.ksapisrv.com"
+    - "az2-api-idc.ksapisrv.com"
+    - "apissl.gifshow.com"
+    - "apissl.ksapisrv.com"
+    - "az2-api-js.gifshow.com"
+    - "az2-live.ksapisrv.com"
+
+  url-rewrite:
+    - >-
+      ^https:\/\/az2-api\.ksapisrv\.com\/rest\/n\/taskCenter\/task\/report\? - reject-dict
+    - >-
+      ^https:\/\/az2-api\.ksapisrv\.com\/rest\/n\/ad\/ - reject-dict
+
+  body-rewrite:
+    - >-
+      ^https:\/\/(apissl|az2-api(-js|-idc)?)\.(gifshow|ksapisrv)\.com\/rest\/system\/startup\? response-jq delpaths([["reskinConfig"]])
+    - >-
+      ^https:\/\/(apissl|az2-api(-js|-idc)?)\.(gifshow|ksapisrv)\.com\/rest\/system\/startup\? response-jq delpaths([["sidebarExSquareStyle","moreList"]])
+    - >-
+      ^https:\/\/(apissl|az2-api(-js|-idc)?)\.(gifshow|ksapisrv)\.com\/rest\/system\/startup\? response-jq delpaths([["sidebarExSquareStyle","topList"]])
+    - >-
+      ^https:\/\/(apissl|az2-api(-js|-idc)?)\.(gifshow|ksapisrv)\.com\/rest\/system\/startup\? response-jq .sidebarExSquareStyle.commonlyUsedList |= map(select(.title == "设置" or .title == "历史记录" or .title == "草稿箱" or .title == "我的钱包" or .title == "小程序" or .title == "未成年人模式" or .title == "官方客服" or .title == "内容偏好" or .title == "离线模式" or .title == "稍后再看" or .title == "举报中心" or .title == "挂件"))
+    - >-
+      ^https:\/\/az2-live\.ksapisrv\.com\/rest\/n\/live\/feed\/square\/refresh\? response-jq delpaths([["data","banners"]])
+    - >-
+      ^https:\/\/az4-api(-idc)?\.ksapisrv\.com\/rest\/n\/feed\/selectionFast\? response-jq if (.feeds | type) == "array" then .feeds |= map(select(.ad | not)) else . end
+    - >-
+      ^https:\/\/az2-api-js\.gifshow\.com\/rest\/n\/user\/profile\/v2\? response-jq delpaths([["postRecommends"]])
+

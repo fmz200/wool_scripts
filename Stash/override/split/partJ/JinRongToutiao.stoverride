@@ -1,0 +1,53 @@
+name: |-
+  今日头条
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1085.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partJ/JinRongToutiao.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN-KEYWORD,clk.gentags.net,REJECT
+  - DOMAIN-KEYWORD,dm.pstatp.com,REJECT
+  - DOMAIN-KEYWORD,dm.bytedance.com,REJECT
+  - DOMAIN-KEYWORD,uop.umeng.com,REJECT
+  - DOMAIN-KEYWORD,m.suning.com,REJECT
+  - DOMAIN-KEYWORD,adshare.toutiao.com,REJECT
+  - DOMAIN-KEYWORD,tunion-api.m.taobao.com,REJECT
+  - DOMAIN-KEYWORD,s1.pstatp.com,REJECT
+  - DOMAIN-KEYWORD,s2.pstatp.com,REJECT
+  - DOMAIN-KEYWORD,s3.pstatp.com,REJECT
+  - DOMAIN-KEYWORD,a3.pstatp.com,REJECT
+  - DOMAIN-KEYWORD,a3.bytecdn.cn,REJECT
+  - DOMAIN-SUFFIX,ad.toutiao.com,REJECT
+  - DOMAIN-SUFFIX,dm.toutiao.com,REJECT
+  - DOMAIN-SUFFIX,dsp.toutiao.com,REJECT
+  - DOMAIN-SUFFIX,nativeapp.toutiao.com,REJECT
+  - DOMAIN-SUFFIX,partner.toutiao.com,REJECT
+  - DOMAIN-SUFFIX,track.toutiao.com,REJECT
+  - DOMAIN-SUFFIX,dm.pstatp.com,REJECT
+  - DOMAIN-SUFFIX,pb3.pstatp.com,REJECT
+  - DOMAIN-SUFFIX,s3a.pstatp.com,REJECT
+
+http:
+
+  mitm:
+    - "p*.pstatp.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/p\d\.pstatp.com\/origin - reject
+    - >-
+      ^https?:\/\/pb\d\.pstatp.com\/origin - reject
+

@@ -1,0 +1,34 @@
+name: |-
+  中通快递
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1011.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partZ/ZhongTongExpress.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "hdgateway.zto.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/hdgateway\.zto\.com\/getApolloConfig - reject-dict
+    - >-
+      ^https?:\/\/hdgateway\.zto\.com\/track - reject-dict
+    - >-
+      ^https?:\/\/hdgateway\.zto\.com\/getAdInfo - reject-dict
+    - >-
+      ^https?:\/\/hdgateway\.zto\.com\/listJumperShow - reject-dict
+

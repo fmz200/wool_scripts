@@ -1,0 +1,36 @@
+name: |-
+  携程
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1081.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partX/Ctrip.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "m.ctrip.com"
+    - "ma-adx.ctrip.com"
+    - "mbd.baidu.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/ma-adx\.ctrip\.com\/_ma\.gif - reject
+    - >-
+      ^https?:\/\/mbd\.baidu\.com\/newspage\/api\/getmobads\?(?:[^#?&]+&)*page\=landingshare - reject
+    - >-
+      ^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/[0-9]{5}\/json\/getTimeZoneServerIpList\?(?:[^#?&]+&)*__gw_os=IOS - reject-200
+    - >-
+      ^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/13916\/json\/tripAds - reject-200
+

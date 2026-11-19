@@ -1,0 +1,30 @@
+name: |-
+  分期乐
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1089.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partF/FenQiLe.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "fm.fenqile.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/fm\.fenqile\.com\/routev2\/other\/getfloatAd\.json - reject-200
+    - >-
+      ^https?:\/\/fm\.fenqile\.com\/routev2\/other\/startImg\.json - reject-200
+

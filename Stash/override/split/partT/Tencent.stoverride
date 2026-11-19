@@ -1,0 +1,60 @@
+name: |-
+  腾讯系
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1017.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partT/Tencent.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN-SUFFIX,activeqq.3g.qq.com,REJECT
+  - DOMAIN-SUFFIX,ad.qq.com,REJECT
+  - DOMAIN-SUFFIX,adping.qq.com,REJECT
+  - DOMAIN-SUFFIX,adpm.app.qq.com,REJECT
+  - DOMAIN-SUFFIX,adrdir.qq.com,REJECT
+  - DOMAIN-SUFFIX,adsclick.qq.com,REJECT
+  - DOMAIN-SUFFIX,adsense.html5.qq.com,REJECT
+  - DOMAIN-SUFFIX,adsfile.qq.com,REJECT
+  - DOMAIN-SUFFIX,adsgroup.qq.com,REJECT
+  - DOMAIN-SUFFIX,adshmct.qq.com,REJECT
+  - DOMAIN-SUFFIX,adshmmsg.qq.com,REJECT
+  - DOMAIN-SUFFIX,adslvfile.qq.com,REJECT
+  - DOMAIN-SUFFIX,adslvseed.qq.com,REJECT
+  - DOMAIN-SUFFIX,adsolution.imtt.qq.com,REJECT
+  - DOMAIN-SUFFIX,adsqqclick.qq.com,REJECT
+  - DOMAIN-SUFFIX,adstextview.qq.com,REJECT
+  - DOMAIN-SUFFIX,adsview.qq.com,REJECT
+  - DOMAIN-SUFFIX,adsview2.qq.com,REJECT
+  - DOMAIN-SUFFIX,adv.app.qq.com,REJECT
+  - DOMAIN-SUFFIX,adver.qq.com,REJECT
+  - DOMAIN-SUFFIX,aeventlog.beacon.qq.com,REJECT
+  - DOMAIN-SUFFIX,analy.qq.com,REJECT
+  - DOMAIN-SUFFIX,astrategy.beacon.qq.com,REJECT
+  - DOMAIN-SUFFIX,rp.crasheye.cn,REJECT
+  - DOMAIN-SUFFIX,cmshow.gtimg.cn,REJECT
+  - DOMAIN-SUFFIX,discuz.gtimg.cn,REJECT
+  - DOMAIN-SUFFIX,gu.qlogo.cn,REJECT
+  - DOMAIN-SUFFIX,py.qlogo.cn,REJECT
+  - DOMAIN-SUFFIX,py2.qlogo.cn,REJECT
+  - DOMAIN-SUFFIX,beacon.gtimg.com,REJECT
+  - DOMAIN-SUFFIX,bla.gtimg.com,REJECT
+  - DOMAIN-SUFFIX,lb.gtimg.com,REJECT
+  - DOMAIN-SUFFIX,pgdt.gtimg.com,REJECT
+  - DOMAIN-SUFFIX,ra.gtimg.com,REJECT
+  - DOMAIN-SUFFIX,splashqqlive.gtimg.com,REJECT
+  - DOMAIN-SUFFIX,swa.gtimg.com,REJECT
+  - DOMAIN-SUFFIX,tui.gtimg.com,REJECT
+  - DOMAIN-SUFFIX,wa.gtimg.com,REJECT
+  - DOMAIN-SUFFIX,wb.gtimg.com,REJECT
+

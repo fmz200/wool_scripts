@@ -1,0 +1,30 @@
+name: |-
+  每日优鲜
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1011.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partM/MeiRiYouXian.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "j-image.missfresh.cn"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/j-image\.missfresh\.cn\/img_(.+)\.gif$ - reject
+    - >-
+      ^https?:\/\/j-image\.missfresh\.cn\/img_(.+)\.(jpg|jpeg|gif|png)\?(?:[^#?&]+&)*iopcmd=convert&dst=webp&q=85$ - reject
+

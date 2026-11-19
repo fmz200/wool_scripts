@@ -1,0 +1,37 @@
+name: |-
+  小蚕霸王餐
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1057.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partX/XiaoCanBaWangCan.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "zlsdk.1rtb.net"
+    - "web2.realtech-inc.com"
+    - "sdk.1rtb.net"
+    - "gw.xiaocantech.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/zlsdk\.1rtb\.net\/sdk\/req_ad - reject-dict
+    - >-
+      ^https:\/\/web2\.realtech-inc\.com\/oss\/xc-app-assets\/configs\/common\/theme\.json - reject-dict
+    - >-
+      ^https:\/\/sdk\.1rtb\.net\/sdk\/req_ad\? - reject-dict
+    - >-
+      ^https:\/\/gw\.xiaocantech\.com\/g\/pa - reject-dict
+

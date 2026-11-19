@@ -1,0 +1,48 @@
+name: |-
+  Spotify
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1030.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partS/Spotify.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "*-spclient.spotify.com"
+    - "spclient.wg.spotify.com"
+
+  url-rewrite:
+    - >-
+      ^https:\/\/(?:\w+-spclient|spclient\.wg)\.spotify\.com(?::443)?\/artistview\/v1\/artist\/(.*)&platform=iphone https://spclient.wg.spotify.com/artistview/v1/artist/$1&platform=ipad transparent
+    - >-
+      ^https:\/\/gae2-spclient\.spotify\.com:443\/ad - reject
+    - >-
+      ^https:\/\/(?:\w+-spclient|spclient\.wg)\.spotify\.com(?::443)?\/pendragon\/ - reject-dict
+
+  script:
+    - match: ^https:\/\/(?:\w+-spclient|spclient\.wg)\.spotify\.com(?::443)?\/(?:bootstrap|user-customization-service)
+      name: "Protobuf_16"
+      type: response
+      require-body: true
+      binary-mode: true
+      timeout: 3
+      argument: |-
+        [true,true]
+
+script-providers:
+  "Protobuf_16":
+    url: https://raw.githubusercontent.com/001ProMax/Surge/refs/heads/main/Script/Spotify.Crack.Dev.js
+    interval: 86400
+

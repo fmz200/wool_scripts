@@ -1,0 +1,28 @@
+name: |-
+  神舟汽车
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1039.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partS/ShenZhouAuto.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "img01.10101111cdn.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/img01\.10101111cdn\.com\/adpos\/share\/ - reject-200
+

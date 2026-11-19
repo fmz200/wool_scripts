@@ -1,0 +1,43 @@
+name: |-
+  驾校一点通
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1095.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partJ/JiaXiaoYiDianTong.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN,richmanapi.jxedt.com,REJECT
+  - DOMAIN,richmanmain.jxedt.com,REJECT
+  - DOMAIN,richmanrules.jxedt.com,REJECT
+
+http:
+
+  mitm:
+    - "richmanrules.ksedt.com"
+    - "api.jxedt.com"
+    - "richmanapi.jxedt.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/richmanrules\.ksedt\.com\/intellectWaterfall(Bidding)?\/find - reject
+    - >-
+      ^https?:\/\/api\.jxedt\.com\/ad\/ - reject
+    - >-
+      ^https?:\/\/richmanapi\.jxedt\.com\/api\/(ad|adplus|banadplus)\/ - reject-200
+    - >-
+      ^https?:\/\/api\.jxedt\.com\/jump\/EMiCcDNp - reject-200
+    - >-
+      ^https?:\/\/richmanmain\.jxedt\.com\/advertisement\/fallback - reject-200
+

@@ -1,0 +1,42 @@
+name: |-
+  波点音乐
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1059.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partB/BoDianMusic.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "bd-api.kuwo.cn"
+    - "h5app.kuwo.cn"
+    - "bodianimgcdn.kuwo.cn"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/bd-api\.kuwo\.cn\/api\/service\/finds\/module\?(?:[^#?&]+&)*moduleId - reject-dict
+    - >-
+      ^https?:\/\/bd-api\.kuwo\.cn\/api\/service\/banner\/myPage\?(?:[^#?&]+&)*uid - reject-dict
+    - >-
+      ^https?:\/\/bd-api\.kuwo\.cn\/api\/play\/listening\/entrance\/music\?(?:[^#?&]+&)*musicId - reject-dict
+    - >-
+      ^https?:\/\/h5app\.kuwo\.cn\/m\/kwtemplatePage\/index\.html\?(?:[^#?&]+&)*id=1157&app=bodianhdzx - reject-dict
+    - >-
+      ^https?:\/\/h5app\.kuwo\.cn\/m\/bdvipact2205\/index\.html\?(?:[^#?&]+&)*fromsrc=huodong - reject-dict
+    - >-
+      ^https?:\/\/bodianimgcdn\.kuwo\.cn\/images\/0e83c1821cd2681de08e20bec73d1e75 - reject-dict
+    - >-
+      ^https?:\/\/bodianimgcdn\.kuwo\.cn\/images\/198c0b313fe9e53b03240c7b30b4acc9 - reject-dict
+

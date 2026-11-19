@@ -1,0 +1,134 @@
+name: |-
+  小红书
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1043.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partX/Xiaohongshu.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN,ads-img-qc.xhscdn.com,REJECT
+  - DOMAIN,ads-video-al.xhscdn.com,REJECT
+  - DOMAIN,ads-video-qc.xhscdn.com,REJECT
+  - DOMAIN,t-ads.xiaohongshu.com,REJECT
+  - AND,((PROTOCOL,QUIC),(DOMAIN-SUFFIX,xiaohongshu.com)),REJECT
+
+http:
+
+  mitm:
+    - "edith.xiaohongshu.com"
+    - "www.xiaohongshu.com"
+    - "ci.xiaohongshu.com"
+    - "rec.xiaohongshu.com"
+    - "so.xiaohongshu.com"
+    - "edith.rnote.com"
+    - "www.rnote.com"
+    - "ci.rnote.com"
+    - "so.rnote.com"
+    - "rec.rnote.com"
+
+  url-rewrite:
+    - >-
+      ^https:\/\/edith\.(xiaohongshu|rnote)\.com\/api\/sns\/v1\/surprisebox\/(?:get_style|open|submit_action) - reject-dict
+    - >-
+      ^https?:\/\/www\.(xiaohongshu|rnote)\.com\/api\/marketing\/box\/trigger\? - reject-dict
+    - >-
+      ^https?:\/\/edith\.(xiaohongshu|rnote)\.com\/api\/sns\/v\d+\/note\/guide\? - reject-dict
+    - >-
+      ^https?:\/\/edith\.(xiaohongshu|rnote)\.com\/api\/sns\/v\d+\/note\/detailfeed\/preload\? - reject-dict
+    - >-
+      ^https?:\/\/edith\.(xiaohongshu|rnote)\.com\/api\/sns\/v\d+\/guide\/user_banner - reject-dict
+    - >-
+      ^https?:\/\/www\.(xiaohongshu|rnote)\.com\/api\/sns\/(v\d+\/ads\/resource|v\d+\/hey\/\w+\/hey_gallery) - reject-dict
+    - >-
+      ^https?:\/\/ci\.(xiaohongshu|rnote)\.com\/system_config\/watermark - reject-200
+
+  script:
+    - match: ^https?:\/\/edith\.(xiaohongshu|rnote)\.com\/api\/sns\/v\d+\/search\/(banner|hot)_list
+      name: "小红书搜索页_29"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/edith\.(xiaohongshu|rnote)\.com\/api\/sns\/v\d+\/search\/(hint|trending)\?
+      name: "小红书搜索页_29"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/(so|edith)\.(xiaohongshu|rnote)\.com\/api\/sns\/v\d+\/search\/notes\?
+      name: "小红书搜索页_29"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/edith\.(xiaohongshu|rnote)\.com\/api\/sns\/v\d+\/system_service\/config\?
+      name: "小红书搜索页_29"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/edith\.(xiaohongshu|rnote)\.com\/api\/sns\/v\d+\/system_service\/splash_config
+      name: "小红书搜索页_29"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/edith\.(xiaohongshu|rnote)\.com\/api\/sns\/v\d+\/note\/widgets
+      name: "小红书搜索页_29"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/(edith|rec|www)\.(xiaohongshu|rnote)\.com\/api\/sns\/v\d+\/note\/(imagefeed|live_photo\/save)
+      name: "小红书搜索页_29"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/(edith|rec|www)\.(xiaohongshu|rnote)\.com\/api\/sns\/v\d+\/(followfeed|homefeed)\?
+      name: "小红书搜索页_29"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/(edith|rec|www)\.(xiaohongshu|rnote)\.com\/api\/sns\/(v2\/note\/feed|v3\/note\/videofeed)\?
+      name: "小红书搜索页_29"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/(edith|rec|www)\.(xiaohongshu|rnote)\.com\/api\/sns\/(v4\/note\/videofeed|v10\/note\/video\/save)\?
+      name: "小红书搜索页_29"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https:\/\/edith\.(xiaohongshu|rnote)\.com\/api\/sns\/(v5\/note\/comment\/list|v3\/note\/comment\/sub_comments)\?
+      name: "小红书搜索页_29"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https:\/\/edith\.(xiaohongshu|rnote)\.com\/api\/sns\/v1\/interaction\/comment\/video\/download\?
+      name: "小红书搜索页_29"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "小红书搜索页_29":
+    url: https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu.js
+    interval: 86400
+

@@ -1,0 +1,28 @@
+name: |-
+  天天看看
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1084.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partT/TianTianKanKan.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN-SUFFIX,biz5.kankan.com,REJECT
+  - DOMAIN-SUFFIX,distf.kankan.com,REJECT
+  - DOMAIN-SUFFIX,float.kankan.com,REJECT
+  - DOMAIN-SUFFIX,kkpgv.kankan.com,REJECT
+  - DOMAIN-SUFFIX,kkpgv2.kankan.com,REJECT
+  - DOMAIN-SUFFIX,cpm.cm.kankan.com,REJECT
+  - DOMAIN-SUFFIX,count.cpm.cm.kankan.com,REJECT
+

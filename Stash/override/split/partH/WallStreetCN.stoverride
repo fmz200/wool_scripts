@@ -1,0 +1,31 @@
+name: |-
+  华尔街见闻
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1075.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partH/WallStreetCN.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "api-one-wscn.awtmt.com"
+    - "api.wallstreetcn.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/api\.wallstreetcn\.com\/apiv\d\/advertising\/ - reject
+    - >-
+      ^https?:\/\/api-one-wscn\.awtmt\.com\/apiv1\/advertising\/ads\/[0-9]+\/materials - reject-dict
+

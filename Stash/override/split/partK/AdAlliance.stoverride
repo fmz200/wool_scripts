@@ -1,0 +1,38 @@
+name: |-
+  快手联盟,优量汇,穿山甲「广告联盟」
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1039.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partK/AdAlliance.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "api-access.pangolin-sdk-toutiao.com"
+    - "mi.gdt.qq.com"
+    - "open.e.kuaishou.com"
+
+  script:
+    - match: ^https:\/\/(api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/get_ads|open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ$|mi\.gdt\.qq\.com\/gdt_mview\.fcg\?)
+      name: "快手联盟,优量汇,穿山甲「广告联盟」_11"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "快手联盟,优量汇,穿山甲「广告联盟」_11":
+    url: https://raw.githubusercontent.com/app2smile/rules/master/js/adsense.js
+    interval: 86400
+

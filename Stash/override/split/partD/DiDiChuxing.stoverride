@@ -1,0 +1,100 @@
+name: |-
+  滴滴出行
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1036.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partD/DiDiChuxing.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "res.xiaojukeji.com"
+    - "common.diditaxi.com.cn"
+    - "hd.xiaojukeji.com"
+    - "freight.xiaojukeji.com"
+    - "daijia.kuaidadi.com"
+    - "ct.xiaojukeji.com"
+    - "conf.diditaxi.com.cn"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/hd\.xiaojukeji\.com\/d - reject-dict
+
+  script:
+    - match: ^https?:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds
+      name: "滴滴出行_13"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/freight\.xiaojukeji\.com\/gateway
+      name: "滴滴出行_13"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/xpget
+      name: "滴滴出行_13"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget
+      name: "滴滴出行_13"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/conf\.diditaxi\.com\.cn\/homepage\/v\d\/other\/fast
+      name: "滴滴出行_13"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/conf\.diditaxi\.com\.cn\/dynamic\/conf
+      name: "滴滴出行_13"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/common\.diditaxi\.com\.cn\/common\/v\d\/usercenter\/me
+      name: "滴滴出行_13"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/daijia\.kuaidadi\.com\/gateway
+      name: "滴滴出行_13"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/daijia\.kuaidadi\.com:443\/gateway
+      name: "滴滴出行_13"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/common\.diditaxi\.com\.cn\/common\/v5
+      name: "滴滴出行_13"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "滴滴出行_13":
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didiAds.js
+    interval: 86400
+

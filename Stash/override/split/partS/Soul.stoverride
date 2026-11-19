@@ -1,0 +1,144 @@
+name: |-
+  Soul
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1033.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partS/Soul.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN,soul-ad.soulapp.cn,REJECT
+  - DOMAIN,ad-r.soulapp.cn,REJECT
+  - DOMAIN,ad-reward.soulapp.cn,REJECT
+  - DOMAIN-SUFFIX,cdn.soulapp.cn,REJECT
+  - IP-CIDR,47.56.131.76/32,REJECT,no-resolve
+  - IP-CIDR,47.97.215.55/32,REJECT,no-resolve
+  - IP-CIDR,47.99.42.29/32,REJECT,no-resolve
+  - IP-CIDR,120.27.235.201/32,REJECT,no-resolve
+  - IP-CIDR,121.196.197.147/32,REJECT,no-resolve
+
+http:
+
+  mitm:
+    - "47.110.187.87"
+    - "ssp.soulapp.cn"
+    - "chat-live.soulapp.cn"
+    - "api-chat.soulapp.cn"
+    - "api-account.soulapp.cn"
+    - "api-global.soulapp.me"
+    - "api-a.soulapp.cn"
+    - "api-pay.soulapp.cn"
+    - "gateway-mobile-gray.soulapp.cn"
+    - "post.soulapp.cn"
+    - "api-user.soulapp.cn"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/api-global\.soulapp\.me\/app\/open\/get - reject
+    - >-
+      ^https?:\/\/ssp\.soulapp\.cn\/api\/q - reject-dict
+    - >-
+      ^https?:\/\/ssp\.soulapp\.cn\/api\/ad\/config - reject-dict
+    - >-
+      ^https?:\/\/chat-live\.soulapp\.cn\/live\/planet\/recListV2 - reject-200
+    - >-
+      ^https?:\/\/api-chat\.soulapp\.cn\/chat\/entrance\/first - reject-dict
+
+  script:
+    - match: ^https:\/\/data-collector\.soulapp\.cn\/api\/data\/report\/v\d
+      name: "req_replace_body_31"
+      type: request
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/api-account\.soulapp\.cn\/teenager\/config
+      name: "soul_ads_33"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/api-a\.soulapp\.cn\/v2\/post\/gift\/list
+      name: "soul_ads_33"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/api-a\.soulapp\.cn\/official\/scene\/module
+      name: "soul_ads_33"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/api-user\.soulapp\.cn\/furion\/position\/content
+      name: "soul_ads_33"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/api-user\.soulapp\.cn\/v\d\/planet\/config
+      name: "soul_ads_33"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/api-chat\.soulapp\.cn\/chat\/limitInfo
+      name: "soul_ads_33"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/post\.soulapp\.cn\/hot\/soul\/rank
+      name: "soul_ads_33"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/post\.soulapp\.cn\/v\d\/post\/homepage\/guide\/card
+      name: "soul_ads_33"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/post\.soulapp\.cn\/v\d\/post\/recSquare\/subTabs
+      name: "soul_ads_33"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/chat-live\.soulapp\.cn\/chatroom\/chatClassifyRoomList
+      name: "soul_ads_33"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/gateway-mobile-gray\.soulapp\.cn\/mobile\/app\/version\/queryIos
+      name: "soul_ads_33"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/47\.110\.187\.87\/winterfell\/v2\/getIpByDomain
+      name: "soul_ads_33"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "req_replace_body_31":
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/template/req_replace_body.js
+    interval: 86400
+  "soul_ads_33":
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js
+    interval: 86400
+

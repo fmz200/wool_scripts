@@ -1,0 +1,52 @@
+name: |-
+  转转
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1089.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partZ/ZhuanZhuan.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "app.zhuanzhuan.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/app\.zhuanzhuan\.com\/zzx\/transfer\/getConfigInfo - reject-dict
+    - >-
+      ^https?:\/\/app\.zhuanzhuan\.com\/zzopen\/popwindow\/getallpopwin\? - reject-dict
+    - >-
+      ^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzlogic\/getOpenScreen - reject-dict
+    - >-
+      ^https?:\/\/app\.zhuanzhuan\.com\/zz\/transfer\/userred\?(?:[^#?&]+&)*scene=homePage - reject-dict
+
+  body-rewrite:
+    - >-
+      ^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getfeedflowinfo\? response-replace-regex userRed fmz200
+    - >-
+      ^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getchoicegoodsinfos response-replace-regex infoData fmz200
+
+  script:
+    - match: ^https?:\/\/app\.zhuanzhuan\.com\/zz\/transfer\/getmyprofilev3
+      name: "转转_21"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "转转_21":
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/zhuanzhuan/zhuanzhuan.js
+    interval: 86400
+

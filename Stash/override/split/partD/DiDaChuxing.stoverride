@@ -1,0 +1,38 @@
+name: |-
+  嘀嗒出行
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1035.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partD/DiDaChuxing.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "capis*.didapinche.com"
+    - "adx-cn.anythinktech.com"
+    - "www.didapinche.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/capis(-\d)?\.didapinche\.com\/adbase - reject
+    - >-
+      ^https?:\/\/capis(-\d)?\.didapinche\.com\/ad\/ - reject
+    - >-
+      ^https?:\/\/adx-cn\.anythinktech\.com\/bid - reject-dict
+    - >-
+      ^https?:\/\/capis(-?\w*)?\.didapinche\.com\/publish\/api\/upgrade - reject-dict
+    - >-
+      ^https?:\/\/www\.didapinche\.com\/app\/adstat\/ - reject-200
+

@@ -1,0 +1,26 @@
+name: |-
+  金融界
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1084.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partJ/JRJ.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN-SUFFIX,same.jrj.com.cn,REJECT
+  - DOMAIN-SUFFIX,same01.jrj.com.cn,REJECT
+  - DOMAIN-SUFFIX,same02.jrj.com.cn,REJECT
+  - DOMAIN-SUFFIX,same03.jrj.com.cn,REJECT
+  - DOMAIN-SUFFIX,8.jrj.com,REJECT
+

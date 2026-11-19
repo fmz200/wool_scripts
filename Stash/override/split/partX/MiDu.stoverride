@@ -1,0 +1,32 @@
+name: |-
+  米读
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1003.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partX/MiDu.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "apiwz.midukanshu.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/apiwz\.midukanshu\.com\/advert\/getPopup$ - reject
+    - >-
+      ^https?:\/\/apiwz\.midukanshu\.com\/advert\/treasureInfo$ - reject
+    - >-
+      ^https?:\/\/apiwz\.midukanshu\.com\/config\/getAds$ - reject
+

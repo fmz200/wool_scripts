@@ -1,0 +1,49 @@
+name: |-
+  埋堆堆
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1067.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partM/MaiDuiDui.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "sfo.mddcloud.com.cn"
+    - "mob.mddcloud.com.cn"
+    - "toblog.ctobsnssdk.com"
+    - "t-dsp.pinduoduo.com"
+    - "mobads-pre-config.cdn.bcebos.com"
+    - "sdk1xyajs.data.kuiniuca.com"
+    - "conf-darwin.xycdn.com"
+    - "*.ubixioe.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/tower\.ubixioe\.com\/mob\/mediation - reject
+    - >-
+      ^https?:\/\/sdk1xyajs\.data\.kuiniuca\.com - reject
+    - >-
+      ^https?:\/\/mob\.mddcloud\.com\.cn\/adApi\/advert\/(first|third)part\/advertList - reject-dict
+    - >-
+      ^https?:\/\/t-dsp\.pinduoduo\.com - reject-200
+    - >-
+      ^https?:\/\/mobads-pre-config\.cdn\.bcebos\.com\/preload\.php - reject-200
+    - >-
+      ^https?:\/\/sfo\.mddcloud\.com\.cn\/api\/v\d\/sfo\/popup_displays? - reject-dict
+    - >-
+      ^https?:\/\/toblog\.ctobsnssdk\.com - reject-200
+    - >-
+      ^https?:\/\/conf-darwin\.xycdn\.com - reject-dict
+

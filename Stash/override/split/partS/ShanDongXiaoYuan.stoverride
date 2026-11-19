@@ -1,0 +1,41 @@
+name: |-
+  闪动校园
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1061.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partS/ShanDongXiaoYuan.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "api.huachenjie.com"
+    - "open.e.kuaishou.cn"
+    - "ad.shunchangzhixing.com"
+    - "zlsdk.1rtb.net"
+
+  url-rewrite:
+    - >-
+      ^https:\/\/api\.huachenjie\.com\/run-front\/ai\/getAICategory - reject-dict
+    - >-
+      ^https:\/\/api\.huachenjie\.com\/run-front\/home\/sports\/getPopup - reject-dict
+    - >-
+      ^https:\/\/api\.huachenjie\.com\/run-front\/ad - reject-dict
+    - >-
+      ^http:\/\/ad\.shunchangzhixing\.com\/getAd - reject-dict
+    - >-
+      ^https:\/\/open\.e\.kuaishou\.cn\/rest\/e\/v3\/open - reject-dict
+    - >-
+      ^https:\/\/zlsdk\.1rtb\.net\/sdk\/req_ad\?(?:[^#?&]+&)*sdk_version=\d+\.\d+\.\d+\.\d+&device_os=iOS&accept_ad_type=\d+&app_id=\d+&pid=\d+&sdk_version_code=\d+ - reject-dict
+

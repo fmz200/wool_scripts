@@ -1,0 +1,31 @@
+name: |-
+  中华万年历
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1057.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partZ/ZhongHuaWanNianLi.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN-KEYWORD,lkme.cc,REJECT
+  - DOMAIN-KEYWORD,api.freed.so,REJECT
+  - DOMAIN-KEYWORD,log-dmp.suishenyun.cn,REJECT
+  - DOMAIN-KEYWORD,client-dmp.suishenyun.cn,REJECT
+  - DOMAIN-KEYWORD,pc.suishenyun.net,REJECT
+  - DOMAIN-KEYWORD,v0-client-lz.rili.cn,REJECT
+  - DOMAIN-SUFFIX,ad.51wnl.com,REJECT
+  - DOMAIN-SUFFIX,ad-android.51wnl.com,REJECT
+  - DOMAIN-SUFFIX,ad.51wnl-cq.com,REJECT
+  - DOMAIN-SUFFIX,adextra.51wnl-cq.com,REJECT
+

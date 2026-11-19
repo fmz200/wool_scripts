@@ -1,0 +1,65 @@
+name: |-
+  前程无忧 51Job
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1019.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partQ/51Job.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "appapi.51job*.com"
+    - "cupid.51job*.comhostname"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/appapi\.51job(app)?\.com\/api\/market\/(adtrace|get_launch|get_prompt) - reject
+    - >-
+      ^https?:\/\/cupid\.51job(app)?\.com\/open\/index\/recommend-infos - reject
+    - >-
+      ^https:\/\/img01\.51jobcdn\.com\/im\/mkt/(?:tg/((19|20)\d{2})banner/(?!jcgz2/)|\d{4}/bd/\d{4}/).*\.jpg - reject
+    - >-
+      ^https?:\/\/appapi\.51job(app)?\.com\/api\/market\/(?>adtrace|get_launch|get_prompt) - reject
+    - >-
+      ^https?:\/\/cupid\.51job(app)?\.com\/open\/guide\/home-page-top - reject
+    - >-
+      ^https?:\/\/cupid\.51job(app)?\.com\/open\/user-task\/user\/task\/init - reject
+    - >-
+      ^https?:\/\/cupid\.51job(app)?\.com\/launch-hub\/open\/noauth\/popUp - reject
+    - >-
+      ^https?:\/\/appapi\.51job(app)?\.com\/api\/util\/get_version - reject-dict
+    - >-
+      ^https?:\/\/cupid\.51job(app)?\.com\/open\/noauth\/index\/last-version - reject-dict
+    - >-
+      ^https?:\/\/cupid\.51job(app)?\.com\/open\/index\/notice-infos - reject-dict
+
+  script:
+    - match: ^https?:\/\/cupid\.51job(app)?\.com\/open\/noauth\/recommend\/job-tab-dynamic
+      name: "51job_30"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/cupid\.51job(app)?\.com\/open\/my-page\/
+      name: "51job_30"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "51job_30":
+    url: https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/51job.js
+    interval: 86400
+

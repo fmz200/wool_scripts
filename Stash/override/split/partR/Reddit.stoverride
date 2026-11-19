@@ -1,0 +1,37 @@
+name: |-
+  Reddit
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1027.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partR/Reddit.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "gql.reddit.com"
+    - "gql-fed.reddit.com"
+
+  script:
+    - match: ^https?:\/\/gql(-fed)?\.reddit\.com
+      name: "reddit_12"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "reddit_12":
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/reddit.js
+    interval: 86400
+

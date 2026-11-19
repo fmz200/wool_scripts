@@ -1,0 +1,61 @@
+name: |-
+  百度地图
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1079.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partB/BaiduMaps.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN,afd.baidu.com,REJECT
+  - DOMAIN,afdconf.baidu.com,REJECT
+  - DOMAIN,httpdns.baidubce.com,REJECT
+  - DOMAIN,lc.map.baidu.com,REJECT
+
+http:
+
+  mitm:
+    - "dss0.bdstatic.com"
+    - "tb1.bdstatic.com"
+    - "tb2.bdstatic.com"
+    - "ss0.bdstatic.com"
+    - "gss0.bdstatic.com"
+    - "newclient.map.baidu.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/dss0\.bdstatic\.com\/.+/tam-ogel\/.+\.(jpg|mp4) - reject
+    - >-
+      ^https?:\/\/tb1\.bdstatic\.com\/tb\/cms\/ngmis\/adsense\/*.jpg - reject
+    - >-
+      ^https?:\/\/dss0\.bdstatic\.com\/-0U0bnSm1A5BphGlnYG\/ - reject-200
+    - >-
+      ^https?:\/\/tb2\.bdstatic\.com\/tb\/mobile\/spb\/widget\/jump - reject-200
+    - >-
+      ^https?:\/\/ss0\.bdstatic\.com/.+?_\d{3}_\d{4}\.jpg - reject-200
+    - >-
+      ^https?:\/\/gss0\.bdstatic\.com\/.+?\/static\/wiseindex\/img\/bd_red_packet\.png - reject-200
+
+  script:
+    - match: ^https?:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads
+      name: "百度地图广告_24"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "百度地图广告_24":
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/baidumap.js
+    interval: 86400
+

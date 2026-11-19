@@ -1,0 +1,34 @@
+name: |-
+  全球购骑士卡
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1092.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partQ/GlobalShoppingKnightCard.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "facade-api.black-unique.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/facade-api\.black-unique\.com\/app\/v1\/startScreen\?(?:[^#?&]+&)*cityId=102923&channelId=0&width=1170&height=2532 - reject-dict
+    - >-
+      ^https?:\/\/facade-api\.black-unique\.com\/app\/v1\/startScreen\?.* - reject-dict
+    - >-
+      ^https?:\/\/facade-api\.black-unique\.com\/advertise\/v1\/get\?(?:[^#?&]+&)*cityId=102923&positions=mine_popup - reject-dict
+    - >-
+      ^https?:\/\/facade-api\.black-unique\.com\/advertise\/v1\/get\?.* - reject-dict
+

@@ -1,0 +1,34 @@
+name: |-
+  网易考拉
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1088.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partW/NetEaseKaola.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "kaola-haitao.oss.kaolacdn.com"
+    - "sp.kaola.com"
+    - "gw.kaola.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/gw\.kaola\.com\/gw\/dgmobile\/newOpenAd - reject
+    - >-
+      ^https?:\/\/kaola-haitao\.oss\.kaolacdn.com\/.+?_\d{3,4}_\d{4}\.jpg\?(?:[^#?&]+&)*x-oss-process=image\/resize,m_mfit,w_\d{3,4},h_\d{4}\/format,webp\/quality,Q_85 - reject-200
+    - >-
+      ^https?:\/\/sp\.kaola\.com\/api\/openad - reject-200
+

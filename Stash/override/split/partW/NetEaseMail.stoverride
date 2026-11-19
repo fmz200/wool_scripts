@@ -1,0 +1,55 @@
+name: |-
+  网易邮箱
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1032.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partW/NetEaseMail.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "*.music.126.net"
+    - "img1.126.net"
+    - "www.icourse163.org"
+    - "nex.163.com"
+    - "g1.163.com"
+    - "client.mail.163.com"
+    - "c.m.163.com"
+    - "interface*.music.163.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/p\.c\.music\.126.net\/.*?jpg$ - reject
+    - >-
+      ^https?:\/\/img1.126.net\/.+dpi=\w{7,8} - reject
+    - >-
+      ^https?:\/\/img1.126.net\/channel14\/ - reject
+    - >-
+      ^https?:\/\/iadmusicmat\.music.126.net\/.*?jpg$ - reject
+    - >-
+      ^https?:\/\/p\d\.music\.126\.net\/\w+==\/\d+\.jpg$ - reject
+    - >-
+      ^https?:\/\/nex.163.com\/q - reject
+    - >-
+      ^https?:\/\/g1.163.com\/madfeedback - reject
+    - >-
+      ^https?:\/\/p[^4](c)?\.music\.126\.net\/\w+==\/10995\d{13}\.jpg$ - reject-200
+    - >-
+      ^https?:\/\/www.icourse163.org\/.*?(Advertisement) - reject-200
+    - >-
+      ^https?:\/\/www\.icourse163\.org\/mob\/j\/v1\/mobRecommendRPCBean\.getMaxWeightAdvertisement\.rpc - reject-200
+    - >-
+      ^https?:\/\/interface3?\.music\.163\.com/eapi/(ad|abtest|sp|hot|store|mlog|search/(specialkeyword|defaultkeyword|hot)) - reject-200
+

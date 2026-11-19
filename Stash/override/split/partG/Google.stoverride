@@ -1,0 +1,88 @@
+name: |-
+  Google
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1048.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partG/Google.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN-SUFFIX,google-analytics.com,REJECT
+  - DOMAIN,safebrowsing.googleapis.com,REJECT
+  - DOMAIN-SUFFIX,doubleclick.net,REJECT
+  - DOMAIN-SUFFIX,doubleclick.com,REJECT
+  - DOMAIN-SUFFIX,googleadservices.com,REJECT
+  - DOMAIN-SUFFIX,googleadsserving.cn,REJECT
+  - DOMAIN-SUFFIX,googlesyndication.com,REJECT
+  - DOMAIN-SUFFIX,googletagservices.com,REJECT
+  - DOMAIN-SUFFIX,googletagmanager.com,REJECT
+  - DOMAIN-SUFFIX,video-ad-stats.googlesyndication.com,REJECT
+  - DOMAIN-SUFFIX,tpc.googlesyndication.com,REJECT
+  - DOMAIN-SUFFIX,pagead.google.com,REJECT
+  - DOMAIN-SUFFIX,pagead.l.google.com,REJECT
+  - DOMAIN-SUFFIX,pagead2.googlesyndication.com,REJECT
+  - DOMAIN-SUFFIX,pagead-tpc.l.google.com,REJECT
+  - DOMAIN-SUFFIX,mobileads.google.com,REJECT
+  - DOMAIN-SUFFIX,googlecommerce.com,REJECT
+  - DOMAIN-SUFFIX,blaaaa12.googlecode.com,REJECT
+  - DOMAIN-SUFFIX,badad.googleplex.com,REJECT
+  - DOMAIN-SUFFIX,afs.googlesyndication.com,REJECT
+  - DOMAIN-SUFFIX,afd.l.google.com,REJECT
+  - DOMAIN-SUFFIX,www.googleadservices.com,REJECT
+  - DOMAIN-SUFFIX,www.google-analytics.com,REJECT
+  - DOMAIN,ads.youtube.com,REJECT
+  - DOMAIN-SUFFIX,cmshow.gtimg.cn,REJECT
+  - DOMAIN-SUFFIX,discuz.gtimg.cn,REJECT
+  - DOMAIN-SUFFIX,gu.qlogo.cn,REJECT
+  - DOMAIN-SUFFIX,py.qlogo.cn,REJECT
+  - DOMAIN-SUFFIX,py2.qlogo.cn,REJECT
+  - DOMAIN-SUFFIX,app-measurement.com,REJECT
+  - DOMAIN-SUFFIX,admob.com,REJECT
+  - DOMAIN-SUFFIX,crashlytics.com,REJECT
+  - DOMAIN-SUFFIX,pagespeed-mod,REJECT
+  - DOMAIN-SUFFIX,csi.gstatic.com,REJECT
+  - DOMAIN-SUFFIX,beacon.gtimg.com,REJECT
+  - DOMAIN-SUFFIX,bla.gtimg.com,REJECT
+  - DOMAIN-SUFFIX,lb.gtimg.com,REJECT
+  - DOMAIN-SUFFIX,pgdt.gtimg.com,REJECT
+  - DOMAIN-SUFFIX,ra.gtimg.com,REJECT
+  - DOMAIN-SUFFIX,splashqqlive.gtimg.com,REJECT
+  - DOMAIN-SUFFIX,swa.gtimg.com,REJECT
+  - DOMAIN-SUFFIX,tui.gtimg.com,REJECT
+  - DOMAIN-SUFFIX,wa.gtimg.com,REJECT
+  - DOMAIN-SUFFIX,wb.gtimg.com,REJECT
+  - DOMAIN-SUFFIX,e.crashlytics.com,REJECT
+  - DOMAIN-SUFFIX,setting.crashlytics.com,REJECT
+  - DOMAIN-SUFFIX,settings.crashlytics.com,REJECT
+  - DOMAIN-SUFFIX,gcdn.2mdn.net,REJECT
+  - DOMAIN-SUFFIX,s0.2mdn.net,REJECT
+  - DOMAIN-SUFFIX,s1.2mdn.net,REJECT
+  - DOMAIN-SUFFIX,pgdt.ugdtimg.com,REJECT
+  - DOMAIN-SUFFIX,adclick.g.doublecklick.net,REJECT
+
+http:
+
+  mitm:
+    - "pagead2.googlesyndication.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/.+\.googleapis.com/.+ad_break - reject-200
+    - >-
+      ^https?:\/\/.+\.googleapis.com/.+log_event - reject-200
+    - >-
+      ^https?:\/\/.+\.googleapis.com/adsmeasurement - reject-200
+    - >-
+      ^https?:\/\/pagead2\.googlesyndication\.com\/pagead\/ - reject-200
+

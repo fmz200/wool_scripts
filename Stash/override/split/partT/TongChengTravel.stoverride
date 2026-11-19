@@ -1,0 +1,46 @@
+name: |-
+  同程旅行
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1042.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partT/TongChengTravel.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "*.ly.com"
+    - "*.17usoft.com"
+    - "*.17u.cn"
+    - "mobilehotelapi.elong.com"
+    - "quic-tcmapi.elong.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/wx\.17u\.cn\/xcxhomeapi\/((aggregator\/index)|(home\/(screen|banner|converge)))$ - reject
+    - >-
+      ^https?:\/\/wx\.17u\.cn\/crapi\/query\/getAdImgUrlByCode - reject-dict
+    - >-
+      ^https:\/\/tcmobileapi\.17usoft\.com\/appindexnew\/index\/openscreen - reject-dict
+    - >-
+      ^https:\/\/tcmobileapi\.17usoft\.com\/appindexnew\/index\/getindexlayoutcelllist - reject-dict
+    - >-
+      ^https:\/\/tcmobileapi\.17usoft\.com\/appindexnew\/index\/gethotrecommend - reject-dict
+    - >-
+      ^https:\/\/mobileapi\.ly\.com\/wlfrontend\/app\/scenicMain - reject-dict
+    - >-
+      ^https:\/\/wx\.17u\.cn\/crapi\/query\/ad - reject-dict
+    - >-
+      ^https:\/\/mobilehotelapi\.elong\.com\/appHotel\/adx\/advert\/getAdvert - reject-dict
+

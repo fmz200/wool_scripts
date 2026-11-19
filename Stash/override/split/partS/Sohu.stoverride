@@ -1,0 +1,77 @@
+name: |-
+  搜狐
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1019.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partS/Sohu.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN-SUFFIX,ad.sohu.com,REJECT
+  - DOMAIN-SUFFIX,ads.sohu.com,REJECT
+  - DOMAIN-SUFFIX,aty.sohu.com,REJECT
+  - DOMAIN,hui.sohu.com,REJECT
+  - DOMAIN-SUFFIX,adnet.sohu.com,REJECT
+  - DOMAIN-SUFFIX,corp.sohu.com,REJECT
+  - DOMAIN-SUFFIX,cpc.sohu.com,REJECT
+  - DOMAIN-SUFFIX,go.sohu.com,REJECT
+  - DOMAIN-SUFFIX,hui.sohu.com,REJECT
+  - DOMAIN-SUFFIX,images.sohu.com,REJECT
+  - DOMAIN-SUFFIX,suvset.sohu.com,REJECT
+  - DOMAIN-SUFFIX,track.sohu.com,REJECT
+  - DOMAIN-SUFFIX,doc.go.sohu.com,REJECT
+  - DOMAIN-SUFFIX,i.go.sohu.com,REJECT
+  - DOMAIN-SUFFIX,imp.go.sohu.com,REJECT
+  - DOMAIN-SUFFIX,s.go.sohu.com,REJECT
+  - DOMAIN-SUFFIX,t.go.sohu.com,REJECT
+  - DOMAIN-SUFFIX,txt.go.sohu.com,REJECT
+  - DOMAIN-SUFFIX,x1.go.sohu.com,REJECT
+  - DOMAIN-SUFFIX,xls.go.sohu.com,REJECT
+  - DOMAIN-SUFFIX,ad.mail.sohu.com,REJECT
+  - DOMAIN-SUFFIX,3rd.t.sohu.com,REJECT
+  - DOMAIN-SUFFIX,888.tv.sohu.com,REJECT
+
+http:
+
+  mitm:
+    - "*.souhu.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/(api|api-bk\d+)\.tv\.sohu\.com\/agg\/api\/app\/config\/bootstrap - reject
+    - >-
+      ^https?:\/\/pic\.k\.sohu\.com\/img\d\/wb\/tj\/ - reject
+    - >-
+      ^https?:\/\/api\.k\.sohu\.com\/api\/news\/adsense - reject-200
+    - >-
+      ^https?:\/\/pic\.k\.sohu\.com\/img8\/wb\/tj\/ - reject-200
+    - >-
+      ^https?:\/\/s1\.api\.tv\.itc\.cn\/v4\/mobile\/control\/switch\.json - reject-200
+    - >-
+      ^https?:\/\/agn\.aty\.sohu\.com\/m? - reject-200
+    - >-
+      ^https?:\/\/api\.k\.sohu\.com\/api\/channel\/ad\/ - reject-200
+    - >-
+      ^https?:\/\/hui\.sohu\.com\/predownload2\/? - reject-200
+    - >-
+      ^https?:\/\/m\.aty\.sohu\.com\/openload? - reject-200
+    - >-
+      ^https?:\/\/mmg\.aty\.sohu\.com\/mqs? - reject-200
+    - >-
+      ^https?:\/\/mmg\.aty\.sohu\.com\/pvlog? - reject-200
+    - >-
+      ^https?:\/\/photocdn\.sohu\.com\/tvmobilemvms - reject-200
+    - >-
+      ^https?:\/\/s\.go\.sohu\.com\/adgtr\/\?(?:[^#?&]+&)*gbcode= - reject-200
+

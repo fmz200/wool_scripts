@@ -1,0 +1,41 @@
+name: |-
+  小兔充充
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1093.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partX/XiaoTuChongChong.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "ad.xiaotucc.com"
+    - "mapi.xiaotucc.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/ad\.xiaotucc\.com\/advert - reject
+
+  script:
+    - match: ^https?:\/\/mapi\.xiaotucc\.com\/(mall\/main|main_page\/index\/getActivity)
+      name: "小兔充充_14"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "小兔充充_14":
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaotucc.js
+    interval: 86400
+

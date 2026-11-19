@@ -1,0 +1,65 @@
+name: |-
+  薄荷健康
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1014.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partB/BoHeHealth.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "api.boohee.com"
+    - "bohe.sfo-tx-shanghai-01.saas.sensorsdata.cn"
+    - "lego.boohee.com"
+    - "status.boohee.com"
+
+  url-rewrite:
+    - >-
+      ^https:\/\/api\.boohee\.com\/meta-interface\/v1\/index\/page_float_bubbles\? - reject-dict
+    - >-
+      ^https:\/\/api\.boohee\.com\/meta-interface\/v1\/index\/tool_buttons\? - reject-dict
+    - >-
+      ^https:\/\/api\.boohee\.com\/app-interface\/v1\/search\/search\? - reject-dict
+    - >-
+      ^https:\/\/status\.boohee\.com\/api\/v1\/merged_messages$ - reject-dict
+    - >-
+      ^https:\/\/bohe\.sfo-tx-shanghai-01\.saas\.sensorsdata\.cn\/api\/v2\/sfo\/user_popup_configs\? - reject-dict
+    - >-
+      ^https:\/\/api\.boohee\.com\/meta-interface\/v1\/index\/sensor-banners\? - reject-dict
+
+  script:
+    - match: ^https:\/\/api\.boohee\.com\/meta-interface\/v2\/index\?
+      name: "薄荷健康_25"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https:\/\/api\.boohee\.com\/meta-interface\/v1\/index\/plaza\?
+      name: "薄荷健康_25"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https:\/\/api\.boohee\.com\/open-interface\/v1\/string\/market_page\?title=metabolism_config$
+      name: "薄荷健康_25"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "薄荷健康_25":
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bohe/bohe_ads.js
+    interval: 86400
+

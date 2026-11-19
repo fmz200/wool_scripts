@@ -1,0 +1,31 @@
+name: |-
+  曜影医疗
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1082.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partY/YaoyingMedical.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "patient-api.suh.cn"
+    - "userpms-api.suh.cn"
+
+  url-rewrite:
+    - >-
+      ^https:\/\/userpms-api\.suh\.cn\/apt\/api\/bannar\/PageList\?(?:[^#?&]+&)*sysSearchKey=sysPat&showSearchKey=advertising&pageIndex=1&pagesize=100&lanSearchValue=1&locationSearchKey=&status=1& - reject-dict
+    - >-
+      ^https:\/\/patient-api\.suh\.cn\/apt\/api\/userinfo\/GetNotice\?(?:[^#?&]+&)*appname=pmsys&channel=6&device=ios&language=1&source=2&version= - reject-dict
+

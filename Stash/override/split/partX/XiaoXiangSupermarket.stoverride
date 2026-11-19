@@ -1,0 +1,44 @@
+name: |-
+  小象超市
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1046.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partX/XiaoXiangSupermarket.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "portal-portm.meituan.com"
+    - "mall.meituan.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/portal-portm\.meituan\.com\/horn_ios\/mergeRequest - reject-dict
+    - >-
+      ^https?:\/\/mall\.meituan\.com\/api\/c\/homepage\/splash - reject-dict
+
+  script:
+    - match: ^https?:\/\/mall\.meituan\.com\/api\/c\/homepage\/bubble\/operate\/info
+      name: "echoResponse_15"
+      type: request
+      timeout: 60
+      argument: |-
+        text=%7B%22code%22%3A%200%7D
+
+script-providers:
+  "echoResponse_15":
+    url: https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/echo-response.js
+    interval: 86400
+

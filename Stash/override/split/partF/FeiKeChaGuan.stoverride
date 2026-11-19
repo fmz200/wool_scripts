@@ -1,0 +1,61 @@
+name: |-
+  飞客茶馆
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1078.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partF/FeiKeChaGuan.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "api.flydigi.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?(?:[^#?&]+&)*module=advis - reject
+    - >-
+      ^https?:\/\/ptf\.flyertrip\.com\/common\/cf\/.*.jpg - reject-200
+    - >-
+      ^https?:\/\/www\.flyert\.com\/.*\.php\?(?:[^#?&]+&)*module=advis - reject-dict
+    - >-
+      ^https?:\/\/www\.flyert\.com(\.cn)?\/.*\.php\?(?:[^#?&]+&)*module=advis - reject-dict
+    - >-
+      ^https:\/\/api\.flydigi\.com\/android\/v2\/ad - reject-dict
+
+  body-rewrite:
+    - >-
+      ^https?:\/\/47\.100\.65\.202\/api\/mobile\/index\.php\?(?:[^#?&]+&)*version=\d&mobile=yes&module=basicdata&type=forumlist response-replace-regex adv fmz200
+
+  script:
+    - match: ^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=threadpost&.+?&page=1
+      name: "飞客茶馆_21"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https?:\/\/www\.flyert\.com(\.cn)?\/.*plugin
+      name: "飞客茶馆_22"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "飞客茶馆_21":
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/fly.js
+    interval: 86400
+  "飞客茶馆_22":
+    url: https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/flyert.js
+    interval: 86400
+

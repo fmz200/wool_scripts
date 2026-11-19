@@ -1,0 +1,47 @@
+name: |-
+  罗森点点
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1012.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partL/LuoSenDianDian.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "plt.yorentown.com"
+    - "lawsonapi.yorentown.com"
+
+  url-rewrite:
+    - >-
+      ^https:\/\/plt\.yorentown\.com\/pltapp\/v1\/banner - reject-dict
+
+  script:
+    - match: ^https:\/\/lawsonapi\.yorentown\.com\/area\/sh-lawson\/app\/v1\/
+      name: "罗森点点_13"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https:\/\/lawsonapi\.yorentown\.com\/portal\/app\/globalLaunch\/listAdvert
+      name: "罗森点点_13"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "罗森点点_13":
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/lawson.js
+    interval: 86400
+

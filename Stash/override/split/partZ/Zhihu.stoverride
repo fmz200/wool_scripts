@@ -1,0 +1,167 @@
+name: |-
+  知乎
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1009.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partZ/Zhihu.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - USER-AGENT,AVOS*,REJECT
+  - DOMAIN,appcloud.zhihu.com,REJECT
+  - DOMAIN,appcloud2.in.zhihu.com,REJECT
+  - DOMAIN,mqtt.zhihu.com,REJECT
+  - DOMAIN,sugar.zhihu.com,REJECT
+  - DOMAIN,crash2.zhihu.com,REJECT
+  - DOMAIN,118.89.204.198,REJECT
+  - IP-CIDR,118.89.204.198/32,REJECT,no-resolve
+  - IP-CIDR6,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,REJECT,no-resolve
+  - DOMAIN,appcloud.zhihu.com,REJECT
+  - DOMAIN,appcloud2.in.zhihu.com,REJECT
+  - DOMAIN,crash2.zhihu.com,REJECT
+  - DOMAIN,mqtt.zhihu.com,REJECT
+  - DOMAIN,sugar.zhihu.com,REJECT
+  - DOMAIN,zxid-m.mobileservice.cn,REJECT
+  - IP-CIDR,103.41.167.237/32,REJECT,no-resolve
+  - IP-CIDR,118.89.204.198/32,REJECT,no-resolve
+  - IP-CIDR6,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,REJECT,no-resolve
+
+http:
+
+  mitm:
+    - "api.zhihu.com"
+    - "www.zhihu.com"
+    - "appcloud2.zhihu.com"
+    - "m-cloud.zhihu.com"
+    - "zhuanlan.zhihu.com"
+    - "link.zhihu.com"
+
+  url-rewrite:
+    - >-
+      ^https:\/\/api\.zhihu\.com\/unlimited\/go\/my_card - reject
+    - >-
+      ^https:\/\/api\.zhihu\.com\/ab\/api\/v1\/products\/zhihu\/platforms\/ios\/config - reject
+    - >-
+      ^https:\/\/link\.zhihu\.com\/\?(?:[^#?&]+&)*target=(?:https?)?(?:%3A|:)?(?:\/\/|%2F%2F)?(.*) http://$1 302
+    - >-
+      ^https:\/\/www\.zhihu\.com\/api\/v4\/hot_recommendation - reject
+    - >-
+      ^https:\/\/www\.zhihu\.com\/api\/v4\/mcn\/v2\/linkcards\? - reject
+    - >-
+      ^https:\/\/www\.zhihu\.com\/api\/v4/(?:answers|questions)\/\d+/related-readings - reject
+    - >-
+      ^https:\/\/www\.zhihu\.com\/commercial_api\/banners_v3\/mobile_banner - reject
+    - >-
+      ^https:\/\/zhuanlan\.zhihu\.com\/api\/articles\/\d+\/recommendation - reject
+    - >-
+      ^https:\/\/zhstatic\.zhihu\.com\/brand-ad - reject
+    - >-
+      ^https:\/\/api\.zhihu\.com\/commercial_api\/(?:answer\/\d+\/bottom-v2|article\/\d+\/bottom-v2|banners_v3\/app_topstory_banner|launch_v2|real_time_launch_v2) - reject-dict
+    - >-
+      ^https:\/\/api\.zhihu\.com\/content-distribution-core\/bubble\/common\/settings - reject-dict
+    - >-
+      ^https:\/\/api\.zhihu\.com\/(?:moments\/lastread|drama\/hot-drama-list) - reject-dict
+    - >-
+      ^https:\/\/api\.zhihu\.com\/root\/window - reject-dict
+    - >-
+      ^https:\/\/api\.zhihu\.com\/(?:bazaar\/float_window|market\/popovers_v2) - reject-dict
+    - >-
+      ^https:\/\/api\.zhihu\.com\/me\/guides - reject-dict
+    - >-
+      ^https:\/\/api\.zhihu\.com\/search\/(hot_search|preset_words) - reject-dict
+    - >-
+      ^https:\/\/www\.zhihu\.com\/api\/v4\/search\/related_queries\/(?:article|answer)\/\d+ - reject-dict
+    - >-
+      ^https:\/\/api\.zhihu\.com\/comment_v5\/(?:articles|answers)\/\d+\/list-headers - reject-dict
+    - >-
+      ^https:\/\/api\.zhihu\.com\/prague\/related_suggestion_native\/feed\? - reject-dict
+    - >-
+      ^https:\/\/api\.zhihu\.com\/v5\.1\/topics\/answer\/\d+\/relation - reject-dict
+    - >-
+      ^https:\/\/api\.zhihu\.com\/ad-style-service\/request - reject-dict
+    - >-
+      ^https:\/\/appcloud2\.zhihu\.com\/v3\/resource\?(?:[^#?&]+&)*group_name=mp - reject-dict
+    - >-
+      ^https:\/\/api\.zhihu\.com\/distribute\/rhea\/qa_ad_card\/h5\/recommendation\? - reject-dict
+
+  body-rewrite:
+    - >-
+      ^https:\/\/api\.zhihu\.com\/search\/recommend_query\/v2\? response-replace-regex "recommend_queries":\{.+\} "recommend_queries":{}
+
+  script:
+    - match: ^https:\/\/(?:api|page-info)\.zhihu\.com\/(?:answers|articles)\/v2\/\d+
+      name: "知乎移除首页推广_65"
+      type: response
+      require-body: true
+
+    - match: ^https:\/\/api\.zhihu\.com\/commercial_api\/app_float_layer
+      name: "知乎移除首页推广_65"
+      type: response
+      require-body: true
+
+    - match: ^https:\/\/api\.zhihu\.com\/feed\/render\/tab\/config\?
+      name: "知乎移除首页推广_65"
+      type: response
+      require-body: true
+
+    - match: ^https:\/\/api\.zhihu\.com\/(?:moments_v3|topstory\/hot-lists\/total|topstory\/recommend)
+      name: "知乎移除首页推广_65"
+      type: response
+      require-body: true
+
+    - match: ^https:\/\/api\.zhihu\.com\/root\/tab
+      name: "知乎移除首页推广_65"
+      type: response
+      require-body: true
+
+    - match: ^https:\/\/api\.zhihu\.com\/v2\/topstory\/hot-lists\/everyone-seeing\?
+      name: "知乎移除首页推广_65"
+      type: response
+      require-body: true
+
+    - match: ^https:\/\/api\.zhihu\.com\/bazaar\/vip_tab\/header\?
+      name: "知乎移除首页推广_65"
+      type: response
+      require-body: true
+
+    - match: ^https:\/\/api\.zhihu\.com\/next-(?:bff|data|render)
+      name: "知乎移除首页推广_65"
+      type: response
+      require-body: true
+
+    - match: ^https:\/\/api\.zhihu\.com\/questions\/\d+(?:\/answers|\/feeds|\?include=)
+      name: "知乎移除首页推广_65"
+      type: response
+      require-body: true
+
+    - match: ^https:\/\/www\.zhihu\.com\/api\/v4\/(?:articles|answers)\/\d+\/recommendations?\?
+      name: "知乎移除首页推广_65"
+      type: response
+      require-body: true
+
+    - match: ^https:\/\/appcloud2\.zhihu\.com\/v3\/config
+      name: "知乎移除首页推广_65"
+      type: response
+      require-body: true
+
+    - match: ^https:\/\/m-cloud\.zhihu\.com\/api\/cloud\/config\/all\?
+      name: "知乎移除首页推广_65"
+      type: response
+      require-body: true
+
+script-providers:
+  "知乎移除首页推广_65":
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/zhihu/zhihu.js
+    interval: 86400
+

@@ -1,0 +1,42 @@
+name: |-
+  唯品会
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1073.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partW/Vipshop.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN-SUFFIX,n-st.vip.com,REJECT
+  - DOMAIN-SUFFIX,api.union.vip.com,REJECT
+  - DOMAIN-SUFFIX,ms.vipstatic.com,REJECT
+
+http:
+
+  mitm:
+    - "b.appsimg.com"
+    - "mapi.appvipshop.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/b\.appsimg\.com\/upload\/momin - reject
+    - >-
+      ^https?:\/\/mapi\.appvipshop\.com\/vips-mobile\/rest\/iosAdInfo\/report - reject
+    - >-
+      ^https?:\/\/mapi\.appvipshop\.com\/vips-mobile\/rest\/activity\/advertisement\/get - reject-200
+    - >-
+      ^https?:\/\/mapi\.appvipshop\.com\/vips-mobile\/rest\/layout\/productList\/eventData\/v - reject-200
+    - >-
+      ^https?:\/\/mapi\.appvipshop\.com\/vips-mobile\/rest\/activity\/coupon\/float_entrance\/get\?(?:[^#?&]+&)*api_key - reject-200
+

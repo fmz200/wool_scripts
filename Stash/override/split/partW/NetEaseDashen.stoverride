@@ -1,0 +1,47 @@
+name: |-
+  网易大神
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1075.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partW/NetEaseDashen.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN,httpdns.music.163.com,REJECT
+  - DOMAIN,httpdns.n.netease.com,REJECT
+  - DOMAIN,httpdns-sdk.n.netease.com,REJECT
+  - DOMAIN,httpdns.yunxindns.com,REJECT
+  - DOMAIN,lofter.httpdns.c.163.com,REJECT
+  - DOMAIN,music.httpdns.c.163.com,REJECT
+  - IP-CIDR,59.111.239.61/32,REJECT,no-resolve
+  - IP-CIDR,59.111.239.62/32,REJECT,no-resolve
+  - IP-CIDR,115.236.121.51/32,REJECT,no-resolve
+  - IP-CIDR,115.236.121.195/32,REJECT,no-resolve
+
+http:
+
+  mitm:
+    - "god.gameyw.netease.com"
+    - "app-conf.ds.163.com"
+
+  url-rewrite:
+    - >-
+      ^https:\/\/god\.gameyw\.netease\.com\/v\d\/ad - reject
+    - >-
+      ^https:\/\/god\.gameyw\.netease\.com\/v\d\/app\/static\/conf\/getByModuleNameList$ - reject-dict
+
+  body-rewrite:
+    - >-
+      ^https:\/\/app-conf\.ds\.163\.com\/v\d\/app\/base\/conf\/static\/start-config\? response-jq delpaths([["result","updateConfig",2,"itemList",94,"itemList",2]])
+

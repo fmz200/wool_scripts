@@ -1,0 +1,98 @@
+name: |-
+  网易云音乐
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1063.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partW/NetEaseCloudMusic.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN,iadmusicmat.music.126.net,REJECT
+  - DOMAIN,iadmat.nosdn.127.net,REJECT
+  - DOMAIN,iadmatapk.nosdn.127.net,REJECT
+  - DOMAIN,httpdns.n.netease.com,REJECT
+  - DOMAIN,httpdns.music.163.com,REJECT
+
+http:
+
+  mitm:
+    - "ipv4.music.163.com"
+    - "interface.music.163.com"
+    - "interface3.music.163.com"
+    - "interface9.music.163.com"
+
+  url-rewrite:
+    - >-
+      https?:\/\/(ipv4|interface\d?)\.music\.163.com\/e?api\/ad - reject-dict
+    - >-
+      ^https?:\/\/interface\d?\.music\.163\.com\/w?e?api\/(side-bar\/mini-program\/music-service\/account|delivery\/(batch-deliver|deliver)|moment\/tab\/info\/get|yunbei\/account\/entrance\/get) - reject-dict
+    - >-
+      ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/(resource\/comments?\/musiciansaid|community\/friends\/fans-group\/artist\/group\/get|user\/sub\/artist|music\/songshare\/text\/recommend\/get|mine\/applet\/redpoint|resniche\/position\/play\/new\/get) - reject-dict
+    - >-
+      ^https?:\/\/interface\d?\.music\.163.com\/w?e?api\/(search\/(chart|default|rcmd\/keyword|specialkeyword)|resource-exposure\/|activity\/bonus\/playpage\/time\/query) - reject-dict
+    - >-
+      ^https?:\/\/interface\d?\.music\.163.com\/eapi\/(mlivestream\/entrance\/playpage|link\/(position\/show\/strategy|scene\/show)|ios\/version|v\d\/content\/exposure\/comment\/banner) - reject-dict
+
+  script:
+    - match: ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/(batch|v\d\/resource\/comment\/floor\/get)
+      name: "NetEaseCloudMusic_mian_28"
+      type: response
+      require-body: true
+      binary-mode: true
+      timeout: 20
+
+    - match: ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/link\/home\/framework\/tab
+      name: "NetEaseCloudMusic_mian_28"
+      type: response
+      require-body: true
+      binary-mode: true
+      timeout: 20
+      argument: |-
+        [true,false,true]
+
+    - match: ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/(homepage\/block\/page|link\/page\/rcmd\/(resource\/show|block\/resource\/multi\/refresh))
+      name: "NetEaseCloudMusic_mian_28"
+      type: response
+      require-body: true
+      binary-mode: true
+      timeout: 20
+      argument: |-
+        [{PRGG},{PRRK},{PRDRD},{PRSCVPT},{PRST},{PRRR},{HMPR},{PRMST},{PRCN}]
+
+    - match: ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/link\/page\/discovery\/resource\/show
+      name: "NetEaseCloudMusic_mian_28"
+      type: response
+      require-body: true
+      binary-mode: true
+      timeout: 20
+
+    - match: ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/link\/position\/show\/resource
+      name: "NetEaseCloudMusic_mian_28"
+      type: response
+      require-body: true
+      binary-mode: true
+      timeout: 20
+
+    - match: ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/user\/follow\/users\/mixed\/get
+      name: "NetEaseCloudMusic_mian_28"
+      type: response
+      require-body: true
+      binary-mode: true
+      timeout: 20
+
+script-providers:
+  "NetEaseCloudMusic_mian_28":
+    url: https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js
+    interval: 86400
+

@@ -1,0 +1,40 @@
+name: |-
+  盯盯拍
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1019.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partD/DingDingPai.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "*.pglstatp-toutiao.com"
+    - "api.htp.ad-scope.com.cn"
+    - "appgw.ddpai.com"
+    - "init.sms.mob.com"
+    - "apphw.ddpai.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/.*\.pglstatp-toutiao\.com\/.*ad.* - reject
+    - >-
+      ^https?:\/\/api\.htp\.ad-scope\.com\.cn.* - reject
+    - >-
+      ^https?:\/\/appgw\.ddpai\.com.*\/ad\/list.* - reject
+    - >-
+      ^https?:\/\/init\.sms\.mob\.com\/.*sdk\/init.* - reject
+    - >-
+      ^https?:\/\/apphw\.ddpai\.com:\d+\/onroad\/api\/v\d\/\w+\/list - reject-dict
+

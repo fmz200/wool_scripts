@@ -1,0 +1,51 @@
+name: |-
+  脉脉
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1096.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partM/Maimai.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "open.taou.com"
+    - "h3.open.taou.com"
+
+  url-rewrite:
+    - >-
+      ^https:\/\/(h3\.)?open\.taou\.com\/maimai\/adshow\? - reject-dict
+    - >-
+      ^https:\/\/(h3\.)?open\.taou\.com\/maimai\/pay\/v5\/check_gift\? - reject-dict
+    - >-
+      ^https:\/\/(h3\.)?open\.taou\.com\/maimai\/go_gossip_darwin\/external\/v2\/query_flow_cards\? - reject-dict
+
+  script:
+    - match: ^https:\/\/(h3\.)?open\.taou\.com\/maimai\/feed\/v6\/detail_recommend_feeds\?
+      name: "脉脉帖子末尾_19"
+      type: response
+      require-body: true
+      timeout: 60
+
+    - match: ^https:\/\/(h3\.)?open\.taou\.com\/maimai\/(feed|gossip)\/v\d\/(focus_feed|gossip_detail_comment|feed_detail_comment?)\?
+      name: "脉脉帖子末尾_19"
+      type: response
+      require-body: true
+      timeout: 60
+
+script-providers:
+  "脉脉帖子末尾_19":
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/maimai/maimai_ads.js
+    interval: 86400
+

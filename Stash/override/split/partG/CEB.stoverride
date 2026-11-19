@@ -1,0 +1,29 @@
+name: |-
+  光大银行
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1057.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partG/CEB.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "mobile.cebbank.com"
+    - "yghsh.cebbank.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/mobile\.cebbank\.com\/cebclient\/ClientNoticeList - reject-200
+

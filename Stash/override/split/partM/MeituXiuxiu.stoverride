@@ -1,0 +1,45 @@
+name: |-
+  美图秀秀
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1052.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partM/MeituXiuxiu.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+rules:
+  - DOMAIN-SUFFIX,corp.meitu.com,REJECT
+  - DOMAIN-SUFFIX,gg.meitu.com,REJECT
+  - DOMAIN-SUFFIX,message.meitu.com,REJECT
+  - DOMAIN-SUFFIX,tuiguang.meitu.com,REJECT
+  - DOMAIN-SUFFIX,xiuxiu.android.dl.meitu.com,REJECT
+  - DOMAIN-SUFFIX,adui.tg.meitu.com,REJECT
+  - DOMAIN-SUFFIX,rabbit.tg.meitu.com,REJECT
+  - DOMAIN-SUFFIX,meitubeauty.meitudata.com,REJECT
+  - DOMAIN-SUFFIX,xiuxiu.mobile.meitudata.com,REJECT
+  - DOMAIN-SUFFIX,dc.meitustat.com,REJECT
+  - DOMAIN-SUFFIX,mdc.meitustat.com,REJECT
+  - DOMAIN-SUFFIX,rabbit.meitustat.com,REJECT
+
+http:
+
+  mitm:
+    - "mea.meitudata.com"
+    - "adui.tg.meitu.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/mea\.meitudata\.com\/kaiping - reject
+    - >-
+      ^https?:\/\/adui\.tg\.meitu\.com - reject-dict
+

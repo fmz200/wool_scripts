@@ -1,0 +1,37 @@
+name: |-
+  邮储银行
+desc: |-
+  某些APP要清除缓存或者重新安装拦截广告才会生效！
+author: |-
+  奶思
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1100.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partY/PSBC.sgmodule
+tg-channel: |-
+  https://t.me/inaisi
+date: |-
+  2026-11-11 21:17:23
+
+http:
+
+  mitm:
+    - "static.psbc.com"
+    - "mcc.psbc.com"
+    - "static.mobile-bank.psbc.com"
+    - "d.psbc.com"
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/static\.mobile-bank\.psbc\.com\/mgs - reject
+    - >-
+      ^https?:\/\/static.psbc.com:8090\/mbank_f\/images\/[0-9]+\.png - reject-200
+    - >-
+      ^https?:\/\/mcc.psbc.com:9090\/mcc\/resources\/[0-9]+\.(jpg|png) - reject-200
+    - >-
+      ^https?:\/\/d\.psbc\.com:9091\/mcc\/resources\/[0-9]+\.(jpg|png|jpeg) - reject-200
+

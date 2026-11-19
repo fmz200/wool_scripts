@@ -1,0 +1,37 @@
+name: |-
+  X(Twitter)网页版去广告
+desc: |-
+  移除网页版 X (Twitter) 广告。
+author: |-
+  奶思[https://github.com/fmz200]
+icon: |-
+  https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/X.png
+category: |-
+  奶思的模块
+homepage: |-
+  https://github.com/fmz200/wool_scripts
+raw-url: |-
+  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/XWebAds.module
+tg-channel: |-
+  https://t.me/inaisi
+category: |-
+  去广告, X, 奶思
+date: |-
+  2026-04-26 09:30:00
+
+http:
+
+  mitm:
+    - "x.com"
+
+  script:
+    - match: ^https?:\/\/x\.com\/i\/api\/graphql\/[^\/]+\/(HomeTimeline|HomeLatestTimeline|TweetDetail)
+      name: "X网页版去广告_14"
+      type: response
+      require-body: true
+
+script-providers:
+  "X网页版去广告_14":
+    url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/X/X_ads.js
+    interval: 86400
+
