@@ -19,7 +19,6 @@ DOMAIN, appcloud2.in.zhihu.com, REJECT
 DOMAIN, mqtt.zhihu.com, REJECT
 DOMAIN, sugar.zhihu.com, REJECT
 DOMAIN, crash2.zhihu.com, REJECT
-DOMAIN, 118.89.204.198, REJECT
 DOMAIN, zxid-m.mobileservice.cn, REJECT
 IP-CIDR, 118.89.204.198/32, REJECT, no-resolve
 IP-CIDR, 103.41.167.237/32, REJECT, no-resolve
