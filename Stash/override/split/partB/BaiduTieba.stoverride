@@ -18,7 +18,6 @@ date: |-
   2026-11-11 21:17:23
 
 rules:
-  - DOMAIN,180.76.76.200,REJECT
   - IP-CIDR,180.76.76.200/32,REJECT,no-resolve
 
 http:

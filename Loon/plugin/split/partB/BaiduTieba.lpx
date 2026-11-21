@@ -13,7 +13,6 @@
 per_filter_video_thread = select,"0","1",tag=百度贴吧-推荐页不展示视频贴,desc=设置为1则推荐页不展示视频贴
 
 [Rule]
-DOMAIN, 180.76.76.200, REJECT
 # 屏蔽域名dns查询, REJECT
 IP-CIDR, 180.76.76.200/32, REJECT, no-resolve
 

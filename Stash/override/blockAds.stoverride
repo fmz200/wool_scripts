@@ -11,10 +11,10 @@ category: |-
 homepage: |-
   https://github.com/fmz200/wool_scripts
 raw-url: |-
-  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/blockAds.module
+  https://github.com/fmz200/wool_scripts/raw/main/Stash/override/blockAds.stoverride
 tg-channel: |-
   https://t.me/inaisi
-category: |-
+tag: |-
   去广告, fmz200, 奶思
 system: |-
   ios
@@ -774,7 +774,6 @@ rules:
   - DOMAIN,afdconf.baidu.com,REJECT
   - DOMAIN,httpdns.baidubce.com,REJECT
   - DOMAIN,lc.map.baidu.com,REJECT
-  - DOMAIN,180.76.76.200,REJECT
   - IP-CIDR,180.76.76.200/32,REJECT,no-resolve
   - DOMAIN-SUFFIX,admx.baixing.com,REJECT
   - DOMAIN-SUFFIX,tu.baixing.com,REJECT

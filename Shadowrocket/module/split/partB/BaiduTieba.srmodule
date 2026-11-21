@@ -13,7 +13,6 @@
 #!arguments-desc=per_filter_video_thread: per_filter_video_thread
 
 [Rule]
-DOMAIN,180.76.76.200,REJECT
 # 屏蔽域名dns查询, REJECT
 IP-CIDR,180.76.76.200/32,REJECT,no-resolve
 
