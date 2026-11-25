@@ -5,22 +5,23 @@
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
 #!raw-url=https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partY/YouTube.lpx
 #!tg-channel=https://t.me/inaisi
-#!date=2026-11-11 21:17:23
+#!date=2026-11-25 21:17:23
 #############################################
 
 
 [Argument]
 youtube_enable = switch,true,false,tag=YouTube-脚本开关
-
-[Rewrite]
-# 播放页广告
-request if ${url} ~= /^https:\/\/rr[\w-]+\.googlevideo\.com\/initplayback\?/i then reject_dict(200)
+blockUpload=switch,true,false,tag=屏蔽上传按钮, desc=屏蔽上传按钮
+blockImmersive=switch,true,false,tag=屏蔽选段按钮, desc=屏蔽选段按钮
+blockShorts=switch,false,true,tag=屏蔽Shorts按钮, desc=屏蔽Shorts按钮
+captionLang=input,"off",tag=字幕翻译语言, desc=字幕翻译语言
+debug=switch,false,true,tag=启用调试模式, desc=启用调试模式
 
 
 [Script]
-# 响应体
-response if ${url} ~= /^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch)/i then script("https://raw.githubusercontent.com/Maasea/sgmodule/refs/heads/master/Script/Youtube/youtube.response.js") with enable=${youtube_enable}, tag="YouTube响应体", timeout=60, requires_body=true, binary_body_mode=true
-
+response if ${url} ~= /^https:\/\/youtubei\.googleapis\.com\/(youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch|log_event|config))(\?(.*))?$/i then script("https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js", {${captionLang}, ${blockUpload}, ${blockImmersive}, ${blockShorts}, ${debug}}) with tag="youtube.response", requires_body=true, binary_body_mode=true
+request if ${url} ~= /^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&ack.*/i then script("https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.request.js", {${captionLang}}) with tag="youtube.request.init", requires_body=true, binary_body_mode=true
+request if ${url} ~= /^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/log_event/i then script("https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.request.js") with tag="youtube.request.log_event", requires_body=true, binary_body_mode=true
 
 [MITM]
-hostname = rr*.googlevideo.com, youtubei.googleapis.com
+hostname = *.googlevideo.com, youtubei.googleapis.com

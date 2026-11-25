@@ -1,42 +1,60 @@
 name: |-
-  YouTube
+  Youtube (Music) Enhance
 desc: |-
-  某些APP要清除缓存或者重新安装拦截广告才会生效！
+  适用于 Youtube & Youtube Music
 author: |-
   奶思
 icon: |-
-  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1073.png
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1060.png
 category: |-
   奶思的模块
 homepage: |-
   https://github.com/fmz200/wool_scripts
 raw-url: |-
-  https://github.com/fmz200/wool_scripts/raw/main/Surge/module/split/partY/YouTube.sgmodule
+  https://github.com/fmz200/wool_scripts/raw/main/Stash/override/split/partY/YouTube.stoverride
 tg-channel: |-
   https://t.me/inaisi
 date: |-
-  2026-11-11 21:17:23
+  2026-11-25 21:17:23
+arguments-desc: |-
+  - 屏蔽参数：[true, false] \n- 翻译参数：[语言代码, off] \n\n1. 语言代码遵循 Google Translate Languages Codes, 当填入 off 时关闭翻译\n2. 开启调试模式用于输出更多日志
 
 http:
 
   mitm:
-    - "rr*.googlevideo.com"
+    - "*.googlevideo.com"
     - "youtubei.googleapis.com"
 
-  url-rewrite:
-    - >-
-      ^https:\/\/rr[\w-]+\.googlevideo\.com\/initplayback\? - reject-dict
-
   script:
-    - match: ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch)
-      name: "YouTube响应体_15"
+    - match: ^https:\/\/youtubei\.googleapis\.com\/(youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch|log_event|config))(\?(.*))?$
+      name: "youtube.response_13"
       type: response
       require-body: true
+      max-size: -1
       binary-mode: true
-      timeout: 60
+      argument: |-
+        {"captionLang":"off","blockUpload":true,"blockImmersive":true,"blockShorts":false,"debug":false}
+
+    - match: ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&ack.*
+      name: "youtube.request.init_14"
+      type: request
+      require-body: true
+      max-size: -1
+      binary-mode: true
+      argument: |-
+        {"captionLang":"off"}
+
+    - match: ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/log_event
+      name: "youtube.request.init_14"
+      type: request
+      require-body: true
+      max-size: -1
+      binary-mode: true
 
 script-providers:
-  "YouTube响应体_15":
-    url: https://raw.githubusercontent.com/Maasea/sgmodule/refs/heads/master/Script/Youtube/youtube.response.js
+  "youtube.response_13":
+    url: https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js
     interval: 86400
-
+  "youtube.request.init_14":
+    url: https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.request.js
+    interval: 86400
